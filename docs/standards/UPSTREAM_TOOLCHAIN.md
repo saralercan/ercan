@@ -28,6 +28,17 @@ Legacy `Shopify/theme-check` is historical/superseded by Theme Tools.
 - `Automattic/VIP-Coding-Standards` (selective/justified rules)
 - `Automattic/vip-go-skeleton` as enterprise architecture reference
 
+### Mail / email delivery
+- `PHPMailer/PHPMailer` — maintained PHP mail composition/SMTP reference used by many PHP projects including WordPress. WordPress projects still use WordPress APIs/hooks rather than editing or replacing bundled PHPMailer internals.
+- `resend/react-email` — MIT-licensed React/TypeScript email component/template reference; useful for deterministic provider-neutral HTML/plain-text rendering.
+- `mjmlio/mjml` — responsive email markup/compiler reference when a provider-neutral template DSL is a better fit than React.
+- `axllent/mailpit` — preferred local/staging SMTP capture and integration-test candidate; includes REST API, HTML/link checks, screenshots and SMTP chaos testing. Its upstream explicitly notes MailHog is no longer actively maintained, so MailHog is legacy reference rather than new default.
+- `knadh/listmonk` — self-hosted newsletter/mailing-list manager reference; AGPLv3 and operational requirements must be reviewed before adoption.
+- `postalserver/postal` — self-hosted application mail/MTA reference; use only after explicit operations/deliverability decision.
+- `stalwartlabs/stalwart` — modern full mail/collaboration server reference with SMTP/IMAP/JMAP and extensive authentication/deliverability/observability features; AGPL/enterprise-license and substantial operations surface mean it is not a default application-mail dependency.
+
+Mailbox/user operations, application mail events, templates, transport, campaign/list management and MTA/mail-server infrastructure remain separate concerns. Managed transactional delivery is the default candidate unless self-hosting is deliberately justified.
+
 ### Mapping / geospatial
 - `maplibre/maplibre-gl-js` — preferred modern open-source vector-map renderer candidate for rich web maps; GPU-accelerated vector tiles, data layers, heatmaps/3D and vendor-neutral tile sources.
 - `maplibre/maplibre-native` — native open-source map engine.
@@ -94,6 +105,8 @@ For generated brand/social creative, add reference-fidelity, design-evaluator, c
 
 For map/location products, add representative dense-POI tests, list↔pin synchronization, geocoder/routing failure states, attribution, mobile permission fallback, provider/network failures and real viewport/device evidence.
 
+For application mail, add template/render checks, captured safe-recipient integration tests, duplicate/idempotency checks, retry/failure-path evidence, link/environment checks, provider-event/webhook tests and sender/deliverability verification when relevant. Never let CI send to production lists.
+
 ## Social-source verification
 When a social post recommends a repo/tool/skill:
 - resolve the exact post if possible;
@@ -130,4 +143,4 @@ Provider implementations need idempotency, retry/backoff, rate-limit awareness, 
 ## Upstream change intelligence
 When a tool behaves unexpectedly, check current version, changelog/releases and upstream issues before assuming user code is wrong. Linter/test false positives are possible; create minimal reproduction when needed.
 
-For provider agent platforms, creative model APIs and map/geospatial dependencies, inspect current product stage, docs, capabilities, license/usage policies and release notes before upgrade/production automation. Learned command/model/limit/provider assumptions must not be treated as permanent.
+For provider agent platforms, creative model APIs, map/geospatial dependencies and mail delivery/template/server tooling, inspect current product stage, docs, capabilities, license/usage policies and release notes before upgrade/production automation. Learned command/model/limit/provider assumptions must not be treated as permanent.
