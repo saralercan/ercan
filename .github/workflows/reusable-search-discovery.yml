@@ -1,0 +1,147 @@
+name: Reusable Search & AI Discovery Audit
+
+on:
+  workflow_call:
+    inputs:
+      base_url:
+        description: Public canonical origin, e.g. https://example.com
+        required: true
+        type: string
+      require_llms_txt:
+        description: Optional experimental llms.txt requirement; false by default because it is not a Google ranking requirement
+        required: false
+        type: boolean
+        default: false
+      extra_audit_command:
+        description: Optional project-specific schema/meta/crawler audit command
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  discovery:
+    name: Crawl / index / AI discovery baseline
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Audit public discovery surfaces
+        env:
+          BASE_URL: ${{ inputs.base_url }}
+          REQUIRE_LLMS: ${{ inputs.require_llms_txt }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import re
+          import sys
+          import urllib.error
+          import urllib.parse
+          import urllib.request
+          import urllib.robotparser
+
+          base = os.environ['BASE_URL'].rstrip('/')
+          require_llms = os.environ.get('REQUIRE_LLMS', 'false').lower() == 'true'
+          errors = []
+          warnings = []
+
+          def fetch(path, timeout=20):
+              url = path if path.startswith('http') else base + path
+              req = urllib.request.Request(url, headers={'User-Agent': 'ErcanOS-SearchAudit/1.0'})
+              try:
+                  with urllib.request.urlopen(req, timeout=timeout) as r:
+                      body = r.read().decode('utf-8', 'replace')
+                      return r.status, r.geturl(), dict(r.headers), body
+              except urllib.error.HTTPError as e:
+                  return e.code, url, dict(e.headers), e.read().decode('utf-8', 'replace')
+              except Exception as e:
+                  errors.append(f'Fetch failed {url}: {e}')
+                  return 0, url, {}, ''
+
+          home_status, home_url, home_headers, home = fetch('/')
+          if not 200 <= home_status < 300:
+              errors.append(f'Homepage returned HTTP {home_status}')
+
+          robots_status, robots_url, robots_headers, robots = fetch('/robots.txt')
+          if not 200 <= robots_status < 300:
+              errors.append(f'robots.txt returned HTTP {robots_status}')
+          else:
+              rp = urllib.robotparser.RobotFileParser()
+              rp.set_url(robots_url)
+              rp.parse(robots.splitlines())
+              for ua in ['Googlebot', 'Bingbot', 'OAI-SearchBot', 'PerplexityBot']:
+                  allowed = rp.can_fetch(ua, base + '/')
+                  print(f'{ua}: {"ALLOW" if allowed else "BLOCK"}')
+                  if not allowed:
+                      errors.append(f'{ua} is blocked from homepage by robots.txt')
+
+          sitemap_candidates = ['/sitemap.xml', '/sitemap_index.xml']
+          sitemap_ok = False
+          for path in sitemap_candidates:
+              status, url, headers, body = fetch(path)
+              if 200 <= status < 300 and ('<urlset' in body or '<sitemapindex' in body):
+                  sitemap_ok = True
+                  print(f'Sitemap: {url}')
+                  break
+          if not sitemap_ok:
+              errors.append('No valid /sitemap.xml or /sitemap_index.xml found')
+
+          title = re.search(r'<title[^>]*>(.*?)</title>', home, re.I | re.S)
+          if not title or not re.sub(r'\s+', ' ', title.group(1)).strip():
+              errors.append('Homepage title is missing/empty')
+
+          meta_desc = re.search(r'<meta[^>]+name=["\']description["\'][^>]+content=["\']([^"\']+)', home, re.I)
+          if not meta_desc:
+              meta_desc = re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']description["\']', home, re.I)
+          if not meta_desc:
+              warnings.append('Homepage meta description not detected')
+
+          canonical = re.search(r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)', home, re.I)
+          if not canonical:
+              canonical = re.search(r'<link[^>]+href=["\']([^"\']+)["\'][^>]+rel=["\']canonical["\']', home, re.I)
+          if not canonical:
+              warnings.append('Homepage canonical link not detected')
+
+          h1s = re.findall(r'<h1\b[^>]*>(.*?)</h1>', home, re.I | re.S)
+          if len(h1s) == 0:
+              warnings.append('Homepage H1 not detected')
+          elif len(h1s) > 1:
+              warnings.append(f'Homepage contains {len(h1s)} H1 elements; review page semantics')
+
+          jsonld_blocks = re.findall(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', home, re.I | re.S)
+          if not jsonld_blocks:
+              warnings.append('No JSON-LD detected on homepage')
+          else:
+              parsed = 0
+              for block in jsonld_blocks:
+                  try:
+                      json.loads(block.strip())
+                      parsed += 1
+                  except Exception:
+                      warnings.append('At least one JSON-LD block is not strict JSON; validate schema output')
+              print(f'JSON-LD blocks: {len(jsonld_blocks)}; strict JSON parsed: {parsed}')
+
+          llms_status, llms_url, llms_headers, llms_body = fetch('/llms.txt')
+          if require_llms and not (200 <= llms_status < 300 and llms_body.strip()):
+              errors.append('llms.txt required by project policy but missing/unreadable')
+          elif 200 <= llms_status < 300 and llms_body.strip():
+              print(f'Optional llms.txt present: {llms_url}')
+
+          print('\nWarnings:')
+          for item in warnings:
+              print(f'- {item}')
+          print('\nErrors:')
+          for item in errors:
+              print(f'- {item}')
+
+          if errors:
+              sys.exit(1)
+          PY
+
+      - name: Project-specific search/schema audit
+        if: ${{ inputs.extra_audit_command != '' }}
+        run: ${{ inputs.extra_audit_command }}
