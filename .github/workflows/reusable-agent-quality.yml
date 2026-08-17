@@ -1,0 +1,84 @@
+name: Reusable Agent Quality
+
+on:
+  workflow_call:
+    inputs:
+      working_directory:
+        required: false
+        type: string
+        default: '.'
+      node_version:
+        required: false
+        type: string
+        default: '22'
+      install_command:
+        required: false
+        type: string
+        default: 'npm ci'
+      lint_command:
+        required: false
+        type: string
+        default: 'npm run lint --if-present'
+      test_command:
+        required: false
+        type: string
+        default: 'npm test --if-present'
+      eval_command:
+        description: Representative agent/tool/trajectory eval command
+        required: false
+        type: string
+        default: ''
+      regression_command:
+        description: Ercan OS / Promptfoo-class regression command
+        required: false
+        type: string
+        default: ''
+      security_command:
+        description: Optional provider/tool security or policy checks
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  agent-quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4 reviewed pin
+
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4 reviewed pin
+        with:
+          node-version: ${{ inputs.node_version }}
+          cache: npm
+          cache-dependency-path: ${{ inputs.working_directory }}/package-lock.json
+
+      - name: Install
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.install_command }}
+
+      - name: Lint
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.lint_command }}
+
+      - name: Unit / integration tests
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.test_command }}
+
+      - name: Agent evaluations
+        if: ${{ inputs.eval_command != '' }}
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.eval_command }}
+
+      - name: Regression suite
+        if: ${{ inputs.regression_command != '' }}
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.regression_command }}
+
+      - name: Security / policy checks
+        if: ${{ inputs.security_command != '' }}
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.security_command }}

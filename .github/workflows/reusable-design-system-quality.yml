@@ -1,0 +1,91 @@
+name: Reusable Design System Quality
+
+on:
+  workflow_call:
+    inputs:
+      working_directory:
+        required: false
+        type: string
+        default: '.'
+      node_version:
+        required: false
+        type: string
+        default: '22'
+      install_command:
+        required: false
+        type: string
+        default: 'npm ci'
+      token_validate_command:
+        required: false
+        type: string
+        default: ''
+      token_build_command:
+        required: false
+        type: string
+        default: ''
+      component_test_command:
+        required: false
+        type: string
+        default: 'npm test --if-present'
+      storybook_build_command:
+        required: false
+        type: string
+        default: ''
+      accessibility_command:
+        required: false
+        type: string
+        default: ''
+      visual_command:
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  design-system-quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4 reviewed pin
+
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4 reviewed pin
+        with:
+          node-version: ${{ inputs.node_version }}
+          cache: npm
+          cache-dependency-path: ${{ inputs.working_directory }}/package-lock.json
+
+      - name: Install
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.install_command }}
+
+      - name: Validate token source
+        if: ${{ inputs.token_validate_command != '' }}
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.token_validate_command }}
+
+      - name: Build generated tokens
+        if: ${{ inputs.token_build_command != '' }}
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.token_build_command }}
+
+      - name: Component tests
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.component_test_command }}
+
+      - name: Build component workshop
+        if: ${{ inputs.storybook_build_command != '' }}
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.storybook_build_command }}
+
+      - name: Accessibility checks
+        if: ${{ inputs.accessibility_command != '' }}
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.accessibility_command }}
+
+      - name: Visual regression
+        if: ${{ inputs.visual_command != '' }}
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.visual_command }}
