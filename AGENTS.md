@@ -1,6 +1,6 @@
 # Ercan OS — Shared Agent Contract
 
-Version: 3.9 (2026-08-18)
+Version: 4.0 (2026-08-18)
 
 This repository is the shared control-plane reference for Ercan AI Agency / Ercan OS agents. Every project agent and specialist must load this file first, then the shared registry, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
 
@@ -21,6 +21,7 @@ Future specialist agents inherit this contract automatically. Stable routing ide
 5. Domain standard(s):
    - Shopify/WordPress/web: `PLATFORM_ENGINEERING.md`
    - Hostinger-hosted WordPress/PHP: `HOSTINGER_WORDPRESS_DEPLOYMENT.md`
+   - application email/forms/SMTP/API/newsletters/deliverability: `MAIL_ENGINEERING.md` and relevant mail skills under `.agents/skills/`
    - maps/POI/geocoding/clustering/offline/routing/location UX: `MAP_ENGINEERING.md` and `.agents/skills/map-platform-selection/SKILL.md` when relevant
    - branding/graphics/social: `BRAND_SOCIAL.md`
    - X/Twitter/social-post research or viral technical claims: `SOCIAL_RESEARCH.md` and the relevant portable skills under `.agents/skills/`
@@ -44,6 +45,8 @@ Future specialist agents inherit this contract automatically. Stable routing ide
 - Provider-specific skills/adapters enrich workers but never override Ercan OS safety, scope, memory, brand, QA/eval or completion contracts.
 - Generative creative providers are production engines, not final art directors or approvers. Approved brand references, do-not-touch constraints and independent design QA remain authoritative.
 - Map engines, tile sources, geocoders, clustering and routing are separate concerns. Do not let one vendor/library silently become the whole location data architecture.
+- Mailbox operations, application mail events, template rendering, SMTP/API transport, campaign/list management, deliverability and mail-server infrastructure are separate concerns. Do not solve a contact-form problem by silently creating mail-server operations.
+- Production application mail must be idempotent where duplicate sends would harm users, use safe staging/test recipients, and preserve critical leads/orders independently of notification delivery.
 - Implementation agents do not self-certify. Run the required independent QA/eval gates.
 - Never report work as done unless it was actually performed and required verification passed.
 - Completion vocabulary: `VERIFIED`, `PARTIAL`, `BLOCKED`, `NOT VERIFIED`. Do not blur these states.
@@ -71,6 +74,23 @@ For material UI changes, select risk-appropriate checks from:
 - preview/staging validation
 - post-deploy smoke
 - known rollback point
+
+## Mail completion baseline
+For material application/email changes, select risk-appropriate checks from:
+- correct trigger/event and canonical recipient source
+- sender/from/reply-to identity
+- template version, locale, HTML + meaningful plain-text output
+- idempotency/duplicate-send behavior
+- durable queue/retry/reconciliation for critical asynchronous sends
+- safe staging capture or approved test recipient; never production lists
+- CTA/image/unsubscribe/preferences links and environment hostnames
+- provider/transport authentication without secret leakage
+- delivery/bounce/complaint/suppression/unsubscribe event handling when relevant
+- current SPF/DKIM/DMARC/provider-domain configuration when sender infrastructure changes
+- webhook authenticity + event deduplication where provider callbacks are used
+- mobile/client rendering appropriate to risk
+- important lead/order data persisted independently of notification delivery
+- production smoke through a safe test mechanism
 
 ## Map/location completion baseline
 For material map/location changes, select risk-appropriate checks from:
@@ -136,7 +156,7 @@ For generative creative work also verify source/reference fidelity, product/pers
 Use trusted upstream hierarchy: official platform org → official sample/reference → maintained established infrastructure → vetted community reference. Never adopt a repo solely because of stars. Check owner, archive/deprecation status, maintenance, license, security posture and current docs. Archived repos are historical references only unless no maintained successor exists.
 
 ## Runtime facts
-Do not hardcode fast-changing model names, pricing, rate limits, platform dimensions, API versions, crawler IP ranges, cloud command flags, creative-provider limits, map-provider quotas or feature availability into this contract. Verify them from current official sources when needed.
+Do not hardcode fast-changing model names, pricing, rate limits, platform dimensions, API versions, crawler IP ranges, cloud command flags, creative-provider limits, map-provider quotas, mail-provider quotas, DNS/bulk-sender requirements or feature availability into this contract. Verify them from current official sources when needed.
 
 ## Portable Agent Skills
 Ercan OS skills use the open Agent Skills `SKILL.md` pattern where practical. Skills are JIT/progressive-disclosure capabilities, not a second constitution. Current shared skills include:
@@ -145,8 +165,10 @@ Ercan OS skills use the open Agent Skills `SKILL.md` pattern where practical. Sk
 - `.agents/skills/review-architecture/SKILL.md`
 - `.agents/skills/visual-qa-evidence/SKILL.md`
 - `.agents/skills/map-platform-selection/SKILL.md`
+- `.agents/skills/mail-platform-selection/SKILL.md`
+- `.agents/skills/email-delivery-qa/SKILL.md`
 
 A public/community skill is a software/instruction supply-chain dependency. Review provenance, scripts, permissions and network/credential behavior before installation or execution.
 
 ## Central reusable CI
-Projects may call the reusable workflows in `.github/workflows/` as a baseline, including `reusable-search-discovery.yml` for public crawl/index/AI-discovery smoke checks, then add project-specific checks. Required status checks/rulesets should protect production branches when the repository supports them.
+Projects may call the reusable workflows in `.github/workflows/` as a baseline, including `reusable-search-discovery.yml` for public crawl/index/AI-discovery smoke checks and `reusable-email-quality.yml` for mail template/integration QA, then add project-specific checks. Required status checks/rulesets should protect production branches when the repository supports them.
