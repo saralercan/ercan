@@ -23,6 +23,13 @@ Legacy `Shopify/theme-check` is historical/superseded by Theme Tools.
 - `Automattic/VIP-Coding-Standards` (selective/justified rules)
 - `Automattic/vip-go-skeleton` as enterprise architecture reference
 
+### Google agent platform
+- `google/agents-cli` — official optional CLI + Skills layer for coding agents building, evaluating, deploying, publishing and observing Google ADK agents.
+- Current Google Agents CLI docs and current Google ADK docs are authoritative for lifecycle, commands, deployment targets, auth, eval and observability behavior.
+- Treat Agents CLI as a provider adapter, not a replacement for Codex/Claude/Orchestrator or the Ercan OS constitution.
+- Do not auto-install it across unrelated projects. Activate only for a task/repo that actually uses Google ADK / Gemini Enterprise Agent Platform / supported Google Cloud agent deployment surfaces.
+- Product stage, commands and supported targets are volatile; check releases/changelog/docs at runtime and regression-test upgrades before production adoption.
+
 ### Web quality/security
 - Playwright
 - Lighthouse / Lighthouse CI
@@ -49,9 +56,13 @@ Third-party schedulers such as `gitroomhq/postiz-app` may provide architecture i
 ## Adoption-not-copy
 Extract the useful pattern first. Adopt through a narrow adapter/skill/tool after evaluating license, dependency footprint, security surface, maintenance burden and lock-in. Do not add unused dependencies. Stars are not evidence of fitness.
 
+Provider CLIs/skill bundles receive the same treatment: installing a skill suite is not permission to let it override project scope, security policy, existing architecture, test or deployment contracts.
+
 ## PR quality pipeline
 Risk-appropriate checks may include: format/lint, platform validation, unit/integration, Playwright E2E, axe accessibility, Lighthouse/performance budget, security scan, dependency/compatibility, screenshot/visual regression, preview and deploy smoke.
 Use GitHub required status checks/rulesets for production branches when available.
+
+For deployable AI-agent services, add representative agent evals, tool/trajectory checks, real outcome verification, observability/trace review and deployment rollback smoke as relevant. Provider-native evals complement rather than replace project-level regression suites.
 
 ## GitHub Actions security
 - Explicit least-privilege `permissions`.
@@ -77,3 +88,5 @@ Provider implementations need idempotency, retry/backoff, rate-limit awareness, 
 
 ## Upstream change intelligence
 When a tool behaves unexpectedly, check current version, changelog/releases and upstream issues before assuming user code is wrong. Linter/test false positives are possible; create minimal reproduction when needed.
+
+For provider agent platforms, also inspect product stage and release notes before upgrade/deploy. A command or skill learned from an older Agents CLI/ADK version must not be assumed current without verification.
