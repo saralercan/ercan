@@ -30,6 +30,12 @@ Legacy `Shopify/theme-check` is historical/superseded by Theme Tools.
 - Do not auto-install it across unrelated projects. Activate only for a task/repo that actually uses Google ADK / Gemini Enterprise Agent Platform / supported Google Cloud agent deployment surfaces.
 - Product stage, commands and supported targets are volatile; check releases/changelog/docs at runtime and regression-test upgrades before production adoption.
 
+### Creative model providers
+- Current Luma Agents API documentation is the authoritative upstream for Luma image/video generation and editing behavior.
+- Luma is an optional provider adapter used for reference-guided creative generation/editing or generative video; it does not replace Ercan OS brand/art-direction/QA rules.
+- Current API exposes image-generation/editing tiers and video generation/editing/reframing, supports multiple image references for style/content guidance, and allows chaining from prior generation IDs; exact model names, reference limits, aspect ratios, prices and rate limits are volatile and must be checked at runtime.
+- Web-search grounding, when offered, is untrusted external reference discovery and must not silently become final brand source material.
+
 ### Web quality/security
 - Playwright
 - Lighthouse / Lighthouse CI
@@ -56,13 +62,15 @@ Third-party schedulers such as `gitroomhq/postiz-app` may provide architecture i
 ## Adoption-not-copy
 Extract the useful pattern first. Adopt through a narrow adapter/skill/tool after evaluating license, dependency footprint, security surface, maintenance burden and lock-in. Do not add unused dependencies. Stars are not evidence of fitness.
 
-Provider CLIs/skill bundles receive the same treatment: installing a skill suite is not permission to let it override project scope, security policy, existing architecture, test or deployment contracts.
+Provider CLIs/skill bundles/model APIs receive the same treatment: enabling a provider is not permission to override project scope, security policy, existing architecture, brand source of truth, tests or deployment contracts.
 
 ## PR quality pipeline
 Risk-appropriate checks may include: format/lint, platform validation, unit/integration, Playwright E2E, axe accessibility, Lighthouse/performance budget, security scan, dependency/compatibility, screenshot/visual regression, preview and deploy smoke.
 Use GitHub required status checks/rulesets for production branches when available.
 
 For deployable AI-agent services, add representative agent evals, tool/trajectory checks, real outcome verification, observability/trace review and deployment rollback smoke as relevant. Provider-native evals complement rather than replace project-level regression suites.
+
+For generated brand/social creative, add reference-fidelity, design-evaluator, channel preview and export checks; a completed provider job is not a final asset pass.
 
 ## GitHub Actions security
 - Explicit least-privilege `permissions`.
@@ -83,10 +91,12 @@ Provider implementations need idempotency, retry/backoff, rate-limit awareness, 
 
 ## Programmatic creative/export
 - Code-driven video can generate data-driven channel variants, but every placement still gets art-direction and visual QA.
+- Generative model outputs may feed the creative pipeline, but exact typography/layout/branding and repeatable exports should be deterministic where precision matters.
 - Raster/vector batch pipelines should retain source master, dimensions, aspect, format, alpha, file size, version/checksum and intended channel metadata.
 - SVG optimization must not alter logo geometry/masks/gradients/accessibility behavior without visual regression review.
+- Generated candidates should retain provider/model/job/reference-pack metadata when useful for reproducibility and evaluation.
 
 ## Upstream change intelligence
 When a tool behaves unexpectedly, check current version, changelog/releases and upstream issues before assuming user code is wrong. Linter/test false positives are possible; create minimal reproduction when needed.
 
-For provider agent platforms, also inspect product stage and release notes before upgrade/deploy. A command or skill learned from an older Agents CLI/ADK version must not be assumed current without verification.
+For provider agent platforms and creative model APIs, inspect current product stage, docs, capabilities and release notes before upgrade/production automation. Learned command/model/limit assumptions must not be treated as permanent.

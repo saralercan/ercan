@@ -19,6 +19,14 @@ Approved assets are authoritative; deprecated assets are not reused.
 - A design should still feel brand-owned when the logo is mentally removed.
 - Imagery must share coherent lighting/crop/perspective/color treatment; generated humans/products require anatomy, geometry, label/material and shadow QA.
 
+## Creative provider routing
+Generative providers are optional production tools, not a replacement for the brand system or art direction.
+- Load `LUMA_CREATIVE_PROVIDER.md` only when multi-reference generation/editing or generative video materially benefits the task.
+- Prefer approved project references over open-web inspiration for final brand production.
+- Exact typography, logo geometry, layout, tokenized color/type and deterministic exports should remain in Figma/Canva/code/graphics tooling when precision matters.
+- A generated image/video is a candidate artifact until independent evaluator + channel QA pass.
+- Provider choice should follow task fit, not novelty. Keep the creative system provider-agnostic so another model can replace Luma without changing the brand contract.
+
 ## Design evaluator
 Separate generator and evaluator where material. Evaluate:
 1. Brand fit
@@ -32,6 +40,8 @@ Separate generator and evaluator where material. Evaluate:
 9. Campaign cohesion
 10. Production/export readiness
 Evaluator returns actionable findings; it does not replace browser/interaction QA.
+
+For generative output also evaluate reference fidelity, product/person integrity, unintended layout/logo/text drift and whether a concept/mockup is being misrepresented as a real product/customer asset.
 
 ## Instagram operating model
 Instagram work is a system: profile identity → content pillars → feed → static/carousel → Reels → Stories → copy → calendar → paid creative → Insights → learning loop.
@@ -67,6 +77,8 @@ Test genuinely different angles (problem, outcome, demo, proof, comparison, obje
 Evaluate hook, offer clarity, relevance, brand recognition, proof, hierarchy, CTA, placement-native composition, safe zone, landing-page match, policy risk, testable hypothesis and differentiation.
 A/B tests should isolate the main variable where practical; judge by objective-relevant downstream metrics, not CTR alone.
 
+Generative-provider variants must still preserve brand/product truth and be distinguishable by creative hypothesis, not just random visual drift.
+
 ## Measurement loop
 `publish/run → collect Insights/reporting → segment by format/pillar/angle → diagnose winners/losers → hypothesis → variant → test → update playbook`.
 Store learnings as audience/offer/angle/format/KPI relationships, not “this design looked nice.” Treat small samples and estimated metrics with uncertainty.
@@ -75,8 +87,12 @@ Store learnings as audience/offer/angle/format/KPI relationships, not “this de
 brief → brand/audience/competitor research → positioning/personality → references/mood → genuinely different rough concepts → black/white test → type/geometry/optical refinement → small-size/scalability → monochrome/reversed/background tests → social/web/print mockups → evaluator → vector master → responsive variants → clear-space/min-size/usage guide → export kit.
 First generated mark is never automatically final. Check obvious competitor similarity, generic stock/icon marks, meaningless geometry and licensing/trademark risk; design review is not legal clearance.
 
+Generative models may assist concept exploration, but final logo geometry, typography and vector master require deterministic refinement and uniqueness/originality review.
+
 ## Programmatic creative production
 For scalable campaigns, templates may be code-driven (e.g. Remotion-class video, Sharp-class raster pipeline, SVGO-class SVG optimization) but templates never replace art direction. Generated outputs must pass channel-specific visual/export QA.
+
+Generative and deterministic pipelines are complementary: use a generative provider for concept/reference-guided imagery or motion, then deterministic tooling for exact type, CTA, brand-token layout, resize/crop, export manifest and repeatable delivery.
 
 ## Social publishing QA
 Before publish where relevant: current aspect/export spec, profile/feed/Reel/Story preview, mobile readability, avatar/logo integrity, crop/safe zone, spelling, CTA/destination, tags/partner permissions, audio/ad eligibility, policy, schedule/account, correct asset/version, high-quality upload and duplicate/stale asset check.
