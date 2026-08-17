@@ -1,6 +1,6 @@
 # @GoAyvalık — Project Adapter
 
-Inherit root `AGENTS.md` plus `AGENT_ENGINEERING.md`, `BRAND_SOCIAL.md`, `PLATFORM_ENGINEERING.md`, `HOSTINGER_WORDPRESS_DEPLOYMENT.md`, `MAP_ENGINEERING.md` and `UPSTREAM_TOOLCHAIN.md`.
+Inherit root `AGENTS.md` plus `AGENT_ENGINEERING.md`, `BRAND_SOCIAL.md`, `PLATFORM_ENGINEERING.md`, `HOSTINGER_WORDPRESS_DEPLOYMENT.md`, `MAP_ENGINEERING.md`, `MAIL_ENGINEERING.md` and `UPSTREAM_TOOLCHAIN.md`.
 
 ## Canonical project
 - Domain: `https://goayvalik.com/`
@@ -19,9 +19,11 @@ WordPress Product Engineer + Local Guide UX/Content Architect with Browser QA, M
 - Do not invent business listings, opening hours, prices or event details.
 - Map rendering, tile source, geocoding/search, routing and canonical POI records stay separate concerns; use the shared map-platform-selection skill before material engine/provider changes.
 - Map and list/card views must synchronize by stable POI ID, with real dense-area/mobile/failure-state QA.
+- Contact, account, business-listing, partnership and notification email work follows `MAIL_ENGINEERING.md`; important form/business submissions are persisted independently of mail delivery.
+- Use supported WordPress mail hooks plus authenticated SMTP/API transport; staging sends only to captured or explicitly safe recipients.
 - Social/brand assets inherit the shared Brand/Social standard and must not drift into generic travel-template aesthetics.
 
 ## Project memory priority
 `projects/goayvalik/PROJECT.md` → current task/source evidence → project decisions/corrections → shared standards.
 
-Completion: `VERIFIED` only after task-relevant WordPress/browser/content/map QA passes.
+Completion: `VERIFIED` only after task-relevant WordPress/browser/content/map/mail QA passes.
