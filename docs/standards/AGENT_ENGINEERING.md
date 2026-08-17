@@ -56,6 +56,19 @@ Applies to all Ercan OS agents.
 - Separate capability/quality benchmarks from regression suites; important stochastic tasks should use multiple trials where practical.
 - QA the eval harness too: detect underspecified prompts, misleading/over-strict tests and low coverage.
 
+## Architecture-review gate
+For material repo changes, especially monorepos, plugins, shared packages and platform adapters, do a structural classification pass before the detailed checklist.
+- Load the repo's architecture/layering rules first; training memory is not the source of truth.
+- List changed files and classify every new file/type/store field/export/helper into the layer/package/domain that should own it.
+- Treat wrong-layer placement and reversed dependency direction as blocker-class findings, not style nits.
+- Check public extension/registry/plugin contracts before allowing new kind-specific switches or private coupling inside framework layers.
+- When behavior belongs to a capability/registry/extension point, do not add a parallel dispatch path just because it is locally convenient.
+- Schema/state changes must preserve old persisted data via defaults/migrations where required; silent incompatibility is a blocker.
+- Review findings lead with root architectural violations before downstream symptoms.
+- Repo-specific architecture review skills may declare required docs, allowed tools and blocker rules; keep those skills path/project-scoped rather than globalizing every repo's vocabulary.
+
+This pattern is inspired by maintained repositories that treat architecture review as an executable agent skill rather than prose-only convention. Adopt the review method, not another project's package names.
+
 ## Harness-first rule
 When an agent fails, classify the missing capability before writing a longer prompt: context, tool, observability, permission, skill, architecture, test oracle, acceptance criteria, memory, routing or guardrail. Improve the environment/harness where possible.
 
