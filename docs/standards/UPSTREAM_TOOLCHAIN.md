@@ -8,6 +8,13 @@
 
 Before adoption check owner identity, archive/deprecation status, recent maintenance/releases, license, security posture, current docs and material open issues. Forks/gists/high-star boilerplates are not source-of-truth.
 
+## Discovery convergence
+- Check `DISCOVERY_ADOPTION_LEDGER.md` before creating a new tool/skill/provider adapter.
+- Use `.agents/skills/upstream-adoption-audit/SKILL.md` for material repo/tool adoption or replacement decisions.
+- Every material discovery ends in `ADOPT`, `ADOPT_PATTERN_ONLY`, `WATCHLIST`, `REJECT` or `SUPERSEDED`.
+- Prefer the narrowest useful integration unit: reference/pattern → JIT skill → provider adapter → dependency → infrastructure only when the requirement truly warrants it.
+- If adoption changes agent routing/tool behavior, add representative coverage with `.agents/skills/agent-eval-regression/SKILL.md` and the reusable agent-quality workflow when appropriate.
+
 ## Canonical watchlist (verify current status at runtime)
 ### Agent Skills / social research
 - `agentskills/agentskills` — verified open Agent Skills specification/reference. Ercan OS portable skills should follow the current `SKILL.md` schema/progressive-disclosure conventions when practical.
@@ -68,25 +75,27 @@ Renderer, tile source, geocoder, routing and canonical POI database are separate
 ### Web quality/security
 - Playwright
 - Lighthouse / Lighthouse CI
-- `dequelabs/axe-core`
+- `dequelabs/axe-core` — automated accessibility detection; pair with manual keyboard/focus/semantic review through `accessibility-regression`.
 - GitHub CodeQL/code scanning
 - Dependabot
 - secret-scanning/Gitleaks-class tooling when appropriate
 
-### Design systems/creative
-- `figma/code-connect`, `figma/sds`
-- `adobe/spectrum-design-data`
-- `style-dictionary/style-dictionary`
-- `storybookjs/storybook`
-- `remotion-dev/remotion` (license/commercial terms verified before adoption)
-- `lovell/sharp`
-- `svg/svgo`
+### Design systems / creative production
+- `figma/code-connect`, `figma/sds` — official Figma reference family for connecting Variables, Styles, Components and production code; use `DESIGN_SYSTEM_ENGINEERING.md` + `design-system-bridge` rather than copying SDS vocabulary.
+- `adobe/spectrum-design-data` — token schema/version/diff/deprecation/migration reference.
+- `style-dictionary/style-dictionary` — cross-platform design-token build candidate; source tokens remain authoritative and generated outputs are derivatives.
+- `storybookjs/storybook` — component workshop/documentation/testing candidate for isolated UI states.
+- `remotion-dev/remotion` — programmatic React video candidate; current license/commercial terms must be verified before use.
+- `lovell/sharp` — deterministic raster resize/crop/composite/format/ICC-alpha processing candidate.
+- `svg/svgo` — SVG optimization candidate; geometry/mask/gradient/accessibility visual regression required.
+- Use `.agents/skills/creative-export-pipeline/SKILL.md` for repeatable batch/export systems.
 
-### Meta/social
+### Meta / social publishing
 - Current Meta Business SDK repositories
 - `fbsamples/marketing-api-samples`
 - `fbsamples/reels_publishing_apis`
-Third-party schedulers such as `gitroomhq/postiz-app` may provide architecture ideas, never Meta policy/API authority.
+- `gitroomhq/postiz-app` may provide provider-adapter/scheduler state architecture ideas, never Meta policy/API authority; AGPL/ops fit must be reviewed before any direct adoption.
+- Use `.agents/skills/social-publisher-architecture/SKILL.md` for internal publishing systems.
 
 ## Adoption-not-copy
 Extract the useful pattern first. Adopt through a narrow adapter/skill/tool after evaluating license, dependency footprint, security surface, maintenance burden and lock-in. Do not add unused dependencies. Stars are not evidence of fitness.
@@ -99,7 +108,9 @@ For public Agent Skills, inspect routing metadata, scripts, references, install 
 Risk-appropriate checks may include: format/lint, platform validation, unit/integration, Playwright E2E, axe accessibility, Lighthouse/performance budget, security scan, dependency/compatibility, screenshot/visual regression, preview and deploy smoke.
 Use GitHub required status checks/rulesets for production branches when available.
 
-For deployable AI-agent services, add representative agent evals, tool/trajectory checks, real outcome verification, observability/trace review and deployment rollback smoke as relevant. Provider-native evals complement rather than replace project-level regression suites.
+For deployable AI-agent services, add representative agent evals, tool/trajectory checks, real outcome verification, observability/trace review and deployment rollback smoke as relevant. Provider-native evals complement rather than replace project-level regression suites. The central `reusable-agent-quality.yml` may provide a common shell while project eval commands remain explicit.
+
+For design systems/shared components, add token validation/build, component tests, Storybook/workshop build, accessibility checks and visual regression as applicable; `reusable-design-system-quality.yml` provides a common shell.
 
 For generated brand/social creative, add reference-fidelity, design-evaluator, channel preview and export checks; a completed provider job is not a final asset pass.
 
