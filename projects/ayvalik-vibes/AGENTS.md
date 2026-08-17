@@ -1,6 +1,6 @@
 # @AyvalıkVibes — Project Adapter
 
-Inherit root `AGENTS.md` plus `AGENT_ENGINEERING.md`, `BRAND_SOCIAL.md`, `PLATFORM_ENGINEERING.md`, `HOSTINGER_WORDPRESS_DEPLOYMENT.md` and `UPSTREAM_TOOLCHAIN.md`.
+Inherit root `AGENTS.md` plus `AGENT_ENGINEERING.md`, `BRAND_SOCIAL.md`, `PLATFORM_ENGINEERING.md`, `HOSTINGER_WORDPRESS_DEPLOYMENT.md`, `MAP_ENGINEERING.md` and `UPSTREAM_TOOLCHAIN.md`.
 
 ## Canonical project
 - Website: https://ayvalikvibes.com/
@@ -18,6 +18,8 @@ WordPress Editorial Product Engineer + Social/Brand Director with SEO/content fr
 - Preserve the warm, clean Ayvalık/Cunda editorial identity; do not make the site/social feed generically dark, SaaS-like or AI-template-like without explicit direction.
 - Instagram/feed/calendar assets must be mobile readable and platform-safe; old event data must not be represented as current.
 - Maps, links, recommendation records and commerce/legal flows require real destinations/data; no demo placeholders in production.
+- Map rendering, tile source, geocoding/search and canonical POI/editorial records are separate concerns; use `MAP_ENGINEERING.md` + the map-platform-selection skill for material map/provider changes.
+- Map UI must have an accessible list/detail equivalent and be tested for list↔pin sync, mobile overlays, attribution and failure states.
 
 ## Project memory priority
 `projects/ayvalik-vibes/PROJECT.md` → current source/freshness evidence → project decisions/corrections → shared standards.
