@@ -1,6 +1,6 @@
 # Ercan OS — Shared Agent Contract
 
-Version: 3.5 (2026-08-18)
+Version: 3.9 (2026-08-18)
 
 This repository is the shared control-plane reference for Ercan AI Agency / Ercan OS agents. Every project agent and specialist must load this file first, then the shared registry, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
 
@@ -21,6 +21,7 @@ Future specialist agents inherit this contract automatically. Stable routing ide
 5. Domain standard(s):
    - Shopify/WordPress/web: `PLATFORM_ENGINEERING.md`
    - Hostinger-hosted WordPress/PHP: `HOSTINGER_WORDPRESS_DEPLOYMENT.md`
+   - maps/POI/geocoding/clustering/offline/routing/location UX: `MAP_ENGINEERING.md` and `.agents/skills/map-platform-selection/SKILL.md` when relevant
    - branding/graphics/social: `BRAND_SOCIAL.md`
    - X/Twitter/social-post research or viral technical claims: `SOCIAL_RESEARCH.md` and the relevant portable skills under `.agents/skills/`
    - Luma reference-guided image/video generation or editing: `LUMA_CREATIVE_PROVIDER.md` **only when that creative provider capability is actually useful**
@@ -42,6 +43,7 @@ Future specialist agents inherit this contract automatically. Stable routing ide
 - Use least privilege, read-first access, isolated execution and explicit approval only at meaningful risk boundaries.
 - Provider-specific skills/adapters enrich workers but never override Ercan OS safety, scope, memory, brand, QA/eval or completion contracts.
 - Generative creative providers are production engines, not final art directors or approvers. Approved brand references, do-not-touch constraints and independent design QA remain authoritative.
+- Map engines, tile sources, geocoders, clustering and routing are separate concerns. Do not let one vendor/library silently become the whole location data architecture.
 - Implementation agents do not self-certify. Run the required independent QA/eval gates.
 - Never report work as done unless it was actually performed and required verification passed.
 - Completion vocabulary: `VERIFIED`, `PARTIAL`, `BLOCKED`, `NOT VERIFIED`. Do not blur these states.
@@ -69,6 +71,23 @@ For material UI changes, select risk-appropriate checks from:
 - preview/staging validation
 - post-deploy smoke
 - known rollback point
+
+## Map/location completion baseline
+For material map/location changes, select risk-appropriate checks from:
+- canonical POI IDs and data-source provenance
+- correct renderer/tile/geocoder separation
+- initial center/zoom/bounds and responsive container sizing
+- marker/cluster count where deterministic
+- list ↔ pin selection synchronization
+- category/search/filter/bounds behavior
+- cluster expansion and dense-region performance
+- marker/callout/detail destination correctness
+- pan/zoom request cancellation/debounce
+- geocoder/routing failure states
+- no-location/permission-denied fallback
+- attribution/licensing visibility
+- mobile gestures/overlays/offline behavior when relevant
+- console/network errors and screenshot/video evidence
 
 ## Search / AI discovery baseline
 For material SEO/discovery changes, select risk-appropriate checks from:
@@ -117,12 +136,15 @@ For generative creative work also verify source/reference fidelity, product/pers
 Use trusted upstream hierarchy: official platform org → official sample/reference → maintained established infrastructure → vetted community reference. Never adopt a repo solely because of stars. Check owner, archive/deprecation status, maintenance, license, security posture and current docs. Archived repos are historical references only unless no maintained successor exists.
 
 ## Runtime facts
-Do not hardcode fast-changing model names, pricing, rate limits, platform dimensions, API versions, crawler IP ranges, cloud command flags, creative-provider limits or feature availability into this contract. Verify them from current official sources when needed.
+Do not hardcode fast-changing model names, pricing, rate limits, platform dimensions, API versions, crawler IP ranges, cloud command flags, creative-provider limits, map-provider quotas or feature availability into this contract. Verify them from current official sources when needed.
 
 ## Portable Agent Skills
-Ercan OS skills use the open Agent Skills `SKILL.md` pattern where practical. Skills are JIT/progressive-disclosure capabilities, not a second constitution. Current shared research skills include:
+Ercan OS skills use the open Agent Skills `SKILL.md` pattern where practical. Skills are JIT/progressive-disclosure capabilities, not a second constitution. Current shared skills include:
 - `.agents/skills/fetch-x-post/SKILL.md`
 - `.agents/skills/verify-social-claim/SKILL.md`
+- `.agents/skills/review-architecture/SKILL.md`
+- `.agents/skills/visual-qa-evidence/SKILL.md`
+- `.agents/skills/map-platform-selection/SKILL.md`
 
 A public/community skill is a software/instruction supply-chain dependency. Review provenance, scripts, permissions and network/credential behavior before installation or execution.
 
