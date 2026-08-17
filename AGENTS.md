@@ -1,28 +1,30 @@
 # Ercan OS — Shared Agent Contract
 
-Version: 3.0 (2026-08-17)
+Version: 3.1 (2026-08-17)
 
-This repository is the shared control-plane reference for Ercan AI Agency / Ercan OS agents. Every project agent and specialist must load this file first, then the shared registry and relevant standard under `docs/standards/`, then project-local rules. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
+This repository is the shared control-plane reference for Ercan AI Agency / Ercan OS agents. Every project agent and specialist must load this file first, then the shared registry, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
 
 ## Agent aliases
 - `@Orchestrator` — manager/control plane; owns routing, task state, final synthesis and completion decision.
-- `@DragDrop` — Shopify/e-commerce project agent.
-- `@VinterroDigital` — agency/brand/web/social project agent.
-- `@AyvalıkVibes` — editorial/local/social/WordPress project agent.
-- `@GoAyvalık` — local guide/app/web project agent.
+- `@DragDrop` — Shopify/e-commerce project agent → `projects/dragdrop/AGENTS.md`.
+- `@VinterroDigital` — agency/brand/web/social project agent → `projects/vinterro-digital/AGENTS.md`.
+- `@AyvalıkVibes` — editorial/local/social/WordPress project agent → `projects/ayvalik-vibes/AGENTS.md`.
+- `@GoAyvalık` — local guide/app/web project agent → `projects/goayvalik/AGENTS.md`.
 
 Future specialist agents inherit this contract automatically. Stable routing identities and inheritance are recorded in `docs/standards/AGENT_REGISTRY.md`.
 
 ## Mandatory load order
 1. `AGENTS.md`
 2. `docs/standards/AGENT_REGISTRY.md`
-3. `docs/standards/AGENT_ENGINEERING.md`
-4. Domain standard(s):
+3. Matching `projects/<slug>/AGENTS.md` + `PROJECT.md`
+4. `docs/standards/AGENT_ENGINEERING.md`
+5. Domain standard(s):
    - Shopify/WordPress/web: `PLATFORM_ENGINEERING.md`
+   - Hostinger-hosted WordPress/PHP: `HOSTINGER_WORDPRESS_DEPLOYMENT.md`
    - branding/graphics/social: `BRAND_SOCIAL.md`
    - GitHub/tooling/upstream: `UPSTREAM_TOOLCHAIN.md`
-5. Project-local context, decisions, brand rules, do-not-touch rules and current task ledger.
-6. Only the task-relevant skills/tools/context; do not context-stuff unrelated history.
+6. Project-local decisions, brand rules, do-not-touch rules and current task ledger when available.
+7. Only task-relevant skills/tools/context; do not context-stuff unrelated history.
 
 ## Non-negotiable operating rules
 - Inspect/reproduce before modifying.
@@ -39,7 +41,7 @@ Future specialist agents inherit this contract automatically. Stable routing ide
 - Case facts/results live in reviewed/versioned artifacts; long-term memory stores reusable lessons/preferences, not a shadow source of truth.
 
 ## Default task lifecycle
-`intent → route → JIT context → task spec → risk/scope gate → specialist/skill → controlled execution → automated checks → browser/visual QA → independent evaluator → trace/artifact → feedback/eval → regression`
+`intent → route → project adapter → JIT context → task spec → risk/scope gate → specialist/skill → controlled execution → automated checks → browser/visual QA → independent evaluator → trace/artifact → feedback/eval → regression`
 
 ## Web/UI completion baseline
 For material UI changes, select risk-appropriate checks from:
