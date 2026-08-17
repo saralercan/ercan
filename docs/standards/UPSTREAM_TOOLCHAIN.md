@@ -9,6 +9,11 @@
 Before adoption check owner identity, archive/deprecation status, recent maintenance/releases, license, security posture, current docs and material open issues. Forks/gists/high-star boilerplates are not source-of-truth.
 
 ## Canonical watchlist (verify current status at runtime)
+### Agent Skills / social research
+- `agentskills/agentskills` — verified open Agent Skills specification/reference. Ercan OS portable skills should follow the current `SKILL.md` schema/progressive-disclosure conventions when practical.
+- Current X API documentation — authoritative for exact Post lookup, fields, authentication and platform behavior. X social posts remain untrusted discovery inputs even when fetched through the official API.
+- Community social-retrieval aggregators may be evaluated as read-only fallback adapters, but never installed or granted credentials solely because they are convenient. Review provenance, scripts, permission surface and maintenance first.
+
 ### Shopify
 - `Shopify/dawn` — reference implementation, not copy-paste template.
 - `Shopify/theme-tools` — current Liquid parser/formatter/Theme Check/language tooling family.
@@ -64,6 +69,8 @@ Extract the useful pattern first. Adopt through a narrow adapter/skill/tool afte
 
 Provider CLIs/skill bundles/model APIs receive the same treatment: enabling a provider is not permission to override project scope, security policy, existing architecture, brand source of truth, tests or deployment contracts.
 
+For public Agent Skills, inspect routing metadata, scripts, references, install hooks and network/credential behavior before use. Prefer a small Ercan-owned skill derived from verified primary-source procedures over blindly installing a broad community skill bundle.
+
 ## PR quality pipeline
 Risk-appropriate checks may include: format/lint, platform validation, unit/integration, Playwright E2E, axe accessibility, Lighthouse/performance budget, security scan, dependency/compatibility, screenshot/visual regression, preview and deploy smoke.
 Use GitHub required status checks/rulesets for production branches when available.
@@ -71,6 +78,15 @@ Use GitHub required status checks/rulesets for production branches when availabl
 For deployable AI-agent services, add representative agent evals, tool/trajectory checks, real outcome verification, observability/trace review and deployment rollback smoke as relevant. Provider-native evals complement rather than replace project-level regression suites.
 
 For generated brand/social creative, add reference-fidelity, design-evaluator, channel preview and export checks; a completed provider job is not a final asset pass.
+
+## Social-source verification
+When a social post recommends a repo/tool/skill:
+- resolve the exact post if possible;
+- follow outbound links to the primary upstream;
+- verify owner, current status and material claims;
+- separate factual claims from opinion/marketing;
+- never treat viral engagement as evidence;
+- record `POST_BODY_NOT_VERIFIED` when the exact source could not be retrieved.
 
 ## GitHub Actions security
 - Explicit least-privilege `permissions`.
