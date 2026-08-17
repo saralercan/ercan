@@ -3,7 +3,7 @@
 All listed agents inherit root `AGENTS.md`, `AGENT_ENGINEERING.md`, task-relevant domain standards and their project adapter under `projects/`. This registry defines routing focus, not separate constitutions.
 
 ## @Orchestrator
-Manager/control plane. Owns project routing, JIT context retrieval, task spec compilation, specialist delegation, risk/scope gating, task ledger, synthesis and final completion state. SEO/search/AI-discovery tasks must load `AI_DISCOVERY_SEO.md` and the matching project `SEARCH_VISIBILITY.md` when present. Google ADK / Agents CLI work loads `GOOGLE_AGENT_PLATFORM.md` only when that provider surface is actually required. Reference-guided generative creative work may load `LUMA_CREATIVE_PROVIDER.md` only when it materially improves the creative task.
+Manager/control plane. Owns project routing, JIT context retrieval, task spec compilation, specialist delegation, risk/scope gating, task ledger, synthesis and final completion state. SEO/search/AI-discovery tasks must load `AI_DISCOVERY_SEO.md` and the matching project `SEARCH_VISIBILITY.md` when present. X/Twitter/social-link research loads `SOCIAL_RESEARCH.md` plus `fetch-x-post` and/or `verify-social-claim` JIT skills. Google ADK / Agents CLI work loads `GOOGLE_AGENT_PLATFORM.md` only when that provider surface is actually required. Reference-guided generative creative work may load `LUMA_CREATIVE_PROVIDER.md` only when it materially improves the creative task.
 
 ## @DragDrop
 Adapter: `projects/dragdrop/AGENTS.md`
@@ -42,9 +42,12 @@ Mandatory domain standards: `AGENT_ENGINEERING.md`, `BRAND_SOCIAL.md`, `PLATFORM
 Default QA focus: product UX, responsive web/app surfaces, localization, maps/content freshness, structured place data, brand coherence, search discovery and end-to-end critical flows.
 
 ## Specialist pool
-Orchestrator may instantiate bounded roles such as Shopify Engineer, WordPress Engineer, Hostinger Deployment Engineer, Browser QA, Visual QA, Accessibility QA, Performance Engineer, SEO Engineer, Entity/Structured Data Specialist, Local SEO Specialist, AI Discovery/GEO Evaluator, Content Strategist, Social Strategist, Instagram Art Director, Graphic Designer, Reels/Video Director, Creative Model Provider Specialist, Reference Fidelity Evaluator, Copywriter, Paid Social Strategist, Performance Analyst, Brand QA, Security Reviewer, Agent Platform Engineer, Google ADK/Agents CLI Specialist, Agent Eval Engineer, Observability Engineer and Strong Advisor.
+Orchestrator may instantiate bounded roles such as Shopify Engineer, WordPress Engineer, Hostinger Deployment Engineer, Browser QA, Visual QA, Accessibility QA, Performance Engineer, SEO Engineer, Entity/Structured Data Specialist, Local SEO Specialist, AI Discovery/GEO Evaluator, Social Research Resolver, Primary-Source Verification Analyst, Content Strategist, Social Strategist, Instagram Art Director, Graphic Designer, Reels/Video Director, Creative Model Provider Specialist, Reference Fidelity Evaluator, Copywriter, Paid Social Strategist, Performance Analyst, Brand QA, Security Reviewer, Agent Platform Engineer, Google ADK/Agents CLI Specialist, Agent Eval Engineer, Observability Engineer and Strong Advisor.
 
 Specialists receive a delegation contract (objective, boundary, tools/sources, output, success criteria, exclusions) and do not silently expand scope.
+
+## Social research rule
+When the user supplies X/social links, the resolver first establishes exact post identity/body where possible. The verification specialist then evaluates technical/product claims against official docs, verified GitHub repos, release notes or primary research. If exact post content cannot be retrieved, the system must say `POST_BODY_NOT_VERIFIED` rather than infer content from adjacent posts. Social virality, follower count and reposts are not evidence.
 
 ## Provider-adapter rule
 Provider-specific capabilities are optional adapters, not new constitutions. Google Agents CLI/ADK may be loaded JIT for Google agent-service work; Luma may be loaded JIT for reference-guided image/video generation/editing. Neither may replace the Ercan OS task spec, memory/scope rules, project brand system, independent QA, security boundaries or final completion contract.
