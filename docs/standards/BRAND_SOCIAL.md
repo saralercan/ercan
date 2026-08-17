@@ -43,6 +43,24 @@ Evaluator returns actionable findings; it does not replace browser/interaction Q
 
 For generative output also evaluate reference fidelity, product/person integrity, unintended layout/logo/text drift and whether a concept/mockup is being misrepresented as a real product/customer asset.
 
+## Visual QA evidence ledger
+Material UI/graphic/reference-matching work should leave an inspectable QA artifact, not only a chat claim. Recommended evidence fields:
+- **Comparison target:** authoritative reference screenshot(s), approved design or brand source.
+- **Implementation evidence:** final screenshot/export/preview path or URL.
+- **Viewport / channel / state:** exact viewport, device class, route/screen, interaction state and any wait/loading condition required to reproduce the comparison.
+- **Intended state:** what should be visually/functionally true.
+- **Full-view comparison:** hierarchy, overall layout, crop, density, composition and brand feel.
+- **Focused-region comparison:** precise areas changed, spacing/alignment/type/crop/component-state differences.
+- **Findings with severity:** P0 blocker / P1 major / P2 polish where useful; include location, evidence, impact and fix.
+- **Required fidelity surfaces:** typography, spacing/layout rhythm, colors/tokens, imagery/assets, copy/content, interaction state.
+- **Implementation evidence:** tests/build/lint/browser/console/network/a11y/visual results actually run.
+- **Follow-up checklist:** unresolved visual/interaction checks.
+- **Final result:** `VERIFIED`, `PARTIAL`, `BLOCKED`, or `NOT VERIFIED`.
+
+If the target state cannot be rendered or captured in the same meaningful state, visual acceptance is **blocked** even when unit tests or geometry/code assertions pass. Do not substitute implementation reasoning for browser/channel evidence.
+
+For user-provided screenshot matching, preserve source and implementation screenshots side-by-side or in a comparison manifest when tooling allows. A passing design QA artifact should be reusable as regression evidence for later changes.
+
 ## Instagram operating model
 Instagram work is a system: profile identity → content pillars → feed → static/carousel → Reels → Stories → copy → calendar → paid creative → Insights → learning loop.
 Exact current dimensions, limits, eligibility, safe zones, scheduling and ad policy are runtime facts verified from Meta/Instagram.
