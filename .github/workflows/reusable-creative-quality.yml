@@ -1,0 +1,76 @@
+name: Reusable Creative Quality
+
+on:
+  workflow_call:
+    inputs:
+      working_directory:
+        required: false
+        type: string
+        default: '.'
+      node_version:
+        required: false
+        type: string
+        default: '22'
+      install_command:
+        required: false
+        type: string
+        default: 'npm ci'
+      lint_command:
+        required: false
+        type: string
+        default: 'npm run lint --if-present'
+      export_test_command:
+        description: Validate generated social/brand asset manifests, dimensions, alpha, naming, clipping or checksums
+        required: false
+        type: string
+        default: 'npm test --if-present'
+      render_command:
+        description: Optional deterministic Sharp/SVGO/Remotion render test
+        required: false
+        type: string
+        default: ''
+      visual_command:
+        description: Optional screenshot/visual regression evaluator command
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  creative-quality:
+    name: Creative export / render QA
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: ${{ inputs.node_version }}
+          cache: npm
+          cache-dependency-path: ${{ inputs.working_directory }}/package-lock.json
+
+      - name: Install
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.install_command }}
+
+      - name: Lint creative pipeline
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.lint_command }}
+
+      - name: Export manifest tests
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.export_test_command }}
+
+      - name: Deterministic render smoke
+        if: ${{ inputs.render_command != '' }}
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.render_command }}
+
+      - name: Visual regression / preview QA
+        if: ${{ inputs.visual_command != '' }}
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.visual_command }}
