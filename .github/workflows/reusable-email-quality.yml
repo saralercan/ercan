@@ -1,0 +1,96 @@
+name: Reusable Email Quality
+
+on:
+  workflow_call:
+    inputs:
+      working_directory:
+        required: false
+        type: string
+        default: '.'
+      node_version:
+        required: false
+        type: string
+        default: '22'
+      install_command:
+        required: false
+        type: string
+        default: 'npm ci'
+      lint_command:
+        description: Optional template/application lint command
+        required: false
+        type: string
+        default: 'npm run lint --if-present'
+      template_build_command:
+        description: Build/render email templates or generated HTML/plain-text fixtures
+        required: false
+        type: string
+        default: 'npm run email:build --if-present'
+      test_command:
+        description: Unit/integration tests for mail events, renderer and transport adapters
+        required: false
+        type: string
+        default: 'npm test --if-present'
+      capture_test_command:
+        description: Optional Mailpit/provider-sandbox integration test; project owns service setup
+        required: false
+        type: string
+        default: ''
+      render_qa_command:
+        description: Optional email HTML/link/client-compatibility QA command
+        required: false
+        type: string
+        default: ''
+      secret_scan_command:
+        description: Optional project-specific check for leaked SMTP/API credentials or unsafe fixtures
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  email-quality:
+    name: Email build / test / delivery QA
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: ${{ inputs.node_version }}
+          cache: npm
+          cache-dependency-path: ${{ inputs.working_directory }}/package-lock.json
+
+      - name: Install
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.install_command }}
+
+      - name: Lint
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.lint_command }}
+
+      - name: Build email templates
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.template_build_command }}
+
+      - name: Unit / integration tests
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.test_command }}
+
+      - name: Captured delivery integration
+        if: ${{ inputs.capture_test_command != '' }}
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.capture_test_command }}
+
+      - name: Render / link / client QA
+        if: ${{ inputs.render_qa_command != '' }}
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.render_qa_command }}
+
+      - name: Mail secret / fixture safety check
+        if: ${{ inputs.secret_scan_command != '' }}
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.secret_scan_command }}
