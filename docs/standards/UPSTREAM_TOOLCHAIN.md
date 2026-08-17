@@ -28,6 +28,19 @@ Legacy `Shopify/theme-check` is historical/superseded by Theme Tools.
 - `Automattic/VIP-Coding-Standards` (selective/justified rules)
 - `Automattic/vip-go-skeleton` as enterprise architecture reference
 
+### Mapping / geospatial
+- `maplibre/maplibre-gl-js` — preferred modern open-source vector-map renderer candidate for rich web maps; GPU-accelerated vector tiles, data layers, heatmaps/3D and vendor-neutral tile sources.
+- `maplibre/maplibre-native` — native open-source map engine.
+- `maplibre/flutter-maplibre-gl` — Flutter Android/iOS/Web binding; vendor-neutral and compatible with self-hosted or mixed tile providers.
+- `Leaflet/Leaflet` — lightweight, mature interactive maps for simpler/legacy web and WordPress surfaces.
+- `react-native-maps/react-native-maps` — React Native iOS/Android maps with markers, shapes, GeoJSON and URL/local tile overlays.
+- `osm-search/Nominatim` — canonical open-source OSM geocoding/reverse-geocoding reference. Public instance usage policy is not an unlimited production SLA.
+- `mapbox/supercluster` — fast GeoJSON point clustering for dense marker datasets.
+- Protomaps/PMTiles ecosystem — static/object-storage-friendly vector-tile distribution. `protomaps/protomaps-leaflet` is maintenance mode and itself recommends MapLibre for new work, so treat it as legacy integration reference rather than default renderer.
+- `mapbox/mapbox-gl-js` — provider-specific commercial candidate; current licensing/pricing/token terms must be checked before adoption.
+
+Renderer, tile source, geocoder, routing and canonical POI database are separate concerns. Never let a convenient SDK silently become the full location architecture.
+
 ### Google agent platform
 - `google/agents-cli` — official optional CLI + Skills layer for coding agents building, evaluating, deploying, publishing and observing Google ADK agents.
 - Current Google Agents CLI docs and current Google ADK docs are authoritative for lifecycle, commands, deployment targets, auth, eval and observability behavior.
@@ -79,6 +92,8 @@ For deployable AI-agent services, add representative agent evals, tool/trajector
 
 For generated brand/social creative, add reference-fidelity, design-evaluator, channel preview and export checks; a completed provider job is not a final asset pass.
 
+For map/location products, add representative dense-POI tests, list↔pin synchronization, geocoder/routing failure states, attribution, mobile permission fallback, provider/network failures and real viewport/device evidence.
+
 ## Social-source verification
 When a social post recommends a repo/tool/skill:
 - resolve the exact post if possible;
@@ -115,4 +130,4 @@ Provider implementations need idempotency, retry/backoff, rate-limit awareness, 
 ## Upstream change intelligence
 When a tool behaves unexpectedly, check current version, changelog/releases and upstream issues before assuming user code is wrong. Linter/test false positives are possible; create minimal reproduction when needed.
 
-For provider agent platforms and creative model APIs, inspect current product stage, docs, capabilities and release notes before upgrade/production automation. Learned command/model/limit assumptions must not be treated as permanent.
+For provider agent platforms, creative model APIs and map/geospatial dependencies, inspect current product stage, docs, capabilities, license/usage policies and release notes before upgrade/production automation. Learned command/model/limit/provider assumptions must not be treated as permanent.
