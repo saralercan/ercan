@@ -11,6 +11,7 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - Promptfoo-class eval/red-team workflow: `ADOPT_PATTERN_ONLY` → shared eval/regression discipline; exact tooling project-specific.
 - Pascal Editor architecture review + design QA evidence: `ADOPT_PATTERN_ONLY` → `review-architecture` and `visual-qa-evidence` skills.
 - Agent Reach-class multi-platform research adapters: `ADOPT_PATTERN_ONLY` → least-privilege provider/fallback architecture in `SOCIAL_RESEARCH.md`; broad authenticated bundle is not a default dependency.
+- ChatGPT Work / Voice in Work-Codex / Sites-class product surfaces: `ADOPT_PATTERN_ONLY` as optional interaction/execution surfaces for orchestrating longer work and agent coordination; they are not a replacement for the Ercan OS repo constitution, skills, source-of-truth systems or QA. Availability/permissions are runtime product facts and must be checked from current official OpenAI docs.
 
 ## GitHub / production quality
 - Shopify `theme-tools`, Dawn, Theme Check Action: `ADOPT` as canonical Shopify references.
