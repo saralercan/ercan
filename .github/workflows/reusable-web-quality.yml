@@ -1,0 +1,93 @@
+name: Reusable Web Quality
+
+on:
+  workflow_call:
+    inputs:
+      working_directory:
+        required: false
+        type: string
+        default: '.'
+      node_version:
+        required: false
+        type: string
+        default: '22'
+      install_command:
+        required: false
+        type: string
+        default: 'npm ci'
+      lint_command:
+        required: false
+        type: string
+        default: 'npm run lint --if-present'
+      build_command:
+        required: false
+        type: string
+        default: 'npm run build --if-present'
+      test_command:
+        required: false
+        type: string
+        default: 'npm test --if-present'
+      e2e_command:
+        description: Optional Playwright/browser QA command
+        required: false
+        type: string
+        default: ''
+      accessibility_command:
+        description: Optional axe/accessibility command
+        required: false
+        type: string
+        default: ''
+      performance_command:
+        description: Optional Lighthouse/LHCI performance command
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Web build / test / QA
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: ${{ inputs.node_version }}
+          cache: npm
+          cache-dependency-path: ${{ inputs.working_directory }}/package-lock.json
+
+      - name: Install
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.install_command }}
+
+      - name: Lint
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.lint_command }}
+
+      - name: Build
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.build_command }}
+
+      - name: Unit / integration tests
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.test_command }}
+
+      - name: Browser E2E
+        if: ${{ inputs.e2e_command != '' }}
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.e2e_command }}
+
+      - name: Accessibility
+        if: ${{ inputs.accessibility_command != '' }}
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.accessibility_command }}
+
+      - name: Performance regression
+        if: ${{ inputs.performance_command != '' }}
+        working-directory: ${{ inputs.working_directory }}
+        run: ${{ inputs.performance_command }}
