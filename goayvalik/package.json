@@ -1,0 +1,23 @@
+{
+  "name": "goayvalik-firebase-next",
+  "version": "0.3.0",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "seed:verified": "node scripts/seed-verified.mjs",
+    "admin:claim": "node scripts/set-admin-claim.mjs",
+    "prebuild": "node bootstrap.mjs"
+  },
+  "dependencies": {
+    "firebase": "12.18.0",
+    "firebase-admin": "14.3.0",
+    "next": "15.2.9",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  }
+}
