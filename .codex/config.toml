@@ -1,0 +1,12 @@
+# Ercan OS — repository-local Codex configuration
+# Keep this file small. Stable execution policy lives in AGENTS.md and docs/standards/.
+
+developer_instructions = """
+Treat the repository root AGENTS.md as the primary Ercan OS execution map and follow its load order before making changes.
+
+For screenshot, mockup, Figma, Pinterest, Dribbble, screen-recording, or reference-led UI tasks — including requests equivalent to 'birebir uygula', 'bu tasarımı kullan', or 'referanstaki gibi yap' — load docs/standards/CODEX_EXECUTION.md and .agents/skills/screenshot-production-ui/SKILL.md before implementation. Pair the workflow with .agents/skills/visual-qa-evidence/SKILL.md for acceptance.
+
+Do not treat the first generated implementation or first browser render as final. When browser execution is available, perform at least one explicit render -> compare -> correction -> re-render cycle. Prefer authoritative project/user assets over placeholders. Do not claim pixel-perfect or VERIFIED fidelity without comparable browser evidence.
+
+Use only the specialists/workstreams required by the task; 'run all agents' does not mean blindly executing every role. Preserve project do-not-touch constraints and finish with the evidence-based completion vocabulary defined by Ercan OS: VERIFIED, PARTIAL, BLOCKED, or NOT VERIFIED.
+"""
