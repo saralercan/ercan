@@ -23,6 +23,7 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - Third-party GitHub Actions: `ADOPT_PATTERN_ONLY`; prefer trusted publishers and reviewed immutable pins.
 
 ## Design systems / design-to-code
+- `abi/screenshot-to-code`: `ADOPT_PATTERN_ONLY` → `.agents/skills/screenshot-production-ui/SKILL.md` and the Screenshot → Production UI pod in `AGENT_REGISTRY.md`. Adopt screenshot/mockup/Figma/screen-recording → functional code, real-asset reuse and headless-browser self-check patterns; do not make Ercan OS dependent on its current model/provider list. At adoption review (2026-08-28) the repo was public, active, non-archived and MIT-licensed. Playwright/render evidence plus independent Ercan OS visual QA remains authoritative.
 - `figma/sds`: `ADOPT_PATTERN_ONLY` → Variables + Styles + Components + Code Connect + codebase as one design-system bridge.
 - Figma Code Connect: `ADOPT` when supported by current official integration path; runtime changelog verification required.
 - `style-dictionary/style-dictionary`: `ADOPT_PATTERN_ONLY` → semantic token build/source lifecycle, generated outputs not hand-edited.
