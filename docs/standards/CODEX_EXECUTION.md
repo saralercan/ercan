@@ -8,6 +8,20 @@ This document defines how OpenAI Codex should execute Ercan OS tasks when workin
 
 Codex must treat repository knowledge as the source of truth and load only the task-relevant instructions. Start from root `AGENTS.md`, then the agent registry, the matching project adapter, and only the standards/skills needed for the current task.
 
+## Qualified-agent routing
+
+When the user says **“tüm ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent, Codex must interpret the request as **automatic qualified-agent routing** and load `docs/standards/QUALIFIED_AGENT_ROUTING.md`.
+
+Codex must not ask the user to enumerate specialists that can be inferred from the task. It must detect the project, decompose the goal into capability requirements, select the minimum sufficient set of qualified workstreams, order dependencies, run only materially useful roles, and include independent QA when the work requires verification.
+
+Selection criteria are: project fit, task competence, tool/data fit, dependency fit, risk fit and verification fit. A specialist required by the task should be included even if the user did not name it. An unrelated specialist should not be included merely because the user said “all agents.” Codex must never claim that an unavailable or unexecuted specialist actually ran.
+
+Examples:
+- production speed task → platform specialist + Performance Engineer + browser/performance QA; do not add redesign/copy/SEO unless material
+- screenshot-led rebuild → ScreenshotToCode + RealAsset + platform implementation + PixelMatch + ProductionQA; add UXEnhancement only when justified
+- SEO remediation → SEO/Entity/Local/AI-discovery specialists according to scope + technical verification; do not add unrelated visual agents
+- simple deterministic change → smallest competent implementation path + appropriate check, not a theatrical multi-agent workflow
+
 ## Screenshot → Production UI activation
 
 When the task includes a screenshot, mockup, Figma frame, Pinterest/Dribbble reference, screen recording, or phrases such as “birebir uygula”, “bu tasarımı kullan”, “referanstaki gibi yap”, “screenshotı koda çevir”, or equivalent reference-led UI intent, Codex must load:

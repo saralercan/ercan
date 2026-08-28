@@ -1,6 +1,6 @@
 # Ercan OS — Shared Agent Contract
 
-Version: 4.1 (2026-08-18)
+Version: 4.2 (2026-08-28)
 
 This repository is the shared control-plane reference for Ercan AI Agency / Ercan OS agents. Every project agent and specialist must load this file first, then the shared registry, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
 
@@ -13,12 +13,23 @@ This repository is the shared control-plane reference for Ercan AI Agency / Erca
 
 Future specialist agents inherit this contract automatically. Stable routing identities and inheritance are recorded in `docs/standards/AGENT_REGISTRY.md`.
 
+## “All agents” / qualified-agent routing contract
+
+User commands such as **“tüm ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent do not mean execute every registered agent. They are an intent alias for **automatic qualified-agent routing**.
+
+When this intent is present, `@Orchestrator` must identify the active project and task, infer the capabilities actually required, and select the **minimum sufficient pod of qualified specialists, skills, tools and independent QA roles** without requiring the user to name them one by one. The exact selection and regression rules live in `docs/standards/QUALIFIED_AGENT_ROUTING.md` and apply equally to ChatGPT/Ercan OS and Codex.
+
+Selection must be based on material contribution: project fit, task competence, tool/data fit, dependency fit, risk fit and verification fit. Do not run unrelated or redundant agents merely to increase agent count. Conversely, do not omit a required specialist or QA role just because the user did not explicitly name it.
+
+For material work, Orchestrator owns task decomposition, bounded delegation contracts, dependency ordering, safe parallelism, scope propagation across handoffs and independent verification. Never claim that an unavailable or unexecuted specialist actually ran.
+
 ## Mandatory load order
 1. `AGENTS.md`
 2. `docs/standards/AGENT_REGISTRY.md`
-3. Matching `projects/<slug>/AGENTS.md` + `PROJECT.md`; for SEO/search/AI-discovery work also load that project's `SEARCH_VISIBILITY.md` when present.
-4. `docs/standards/AGENT_ENGINEERING.md`
-5. Domain standard(s):
+3. `docs/standards/QUALIFIED_AGENT_ROUTING.md` whenever the user asks to run all agents/agents broadly, or when the task materially requires multiple specialist capabilities.
+4. Matching `projects/<slug>/AGENTS.md` + `PROJECT.md`; for SEO/search/AI-discovery work also load that project's `SEARCH_VISIBILITY.md` when present.
+5. `docs/standards/AGENT_ENGINEERING.md`
+6. Domain standard(s):
    - Shopify/WordPress/web: `PLATFORM_ENGINEERING.md`
    - Hostinger-hosted WordPress/PHP: `HOSTINGER_WORDPRESS_DEPLOYMENT.md`
    - application email/forms/SMTP/API/newsletters/deliverability: `MAIL_ENGINEERING.md` and relevant mail skills under `.agents/skills/`
@@ -30,12 +41,13 @@ Future specialist agents inherit this contract automatically. Stable routing ide
    - SEO/entity/local/ecommerce/AI-search discovery: `AI_DISCOVERY_SEO.md`
    - Google ADK / Agents CLI / Gemini Enterprise Agent Platform: `GOOGLE_AGENT_PLATFORM.md` **only when that provider surface is actually in scope**
    - GitHub/tooling/upstream: `UPSTREAM_TOOLCHAIN.md`; for new repo/tool adoption also consult `DISCOVERY_ADOPTION_LEDGER.md` and `upstream-adoption-audit`.
-6. Project-local decisions, brand rules, do-not-touch rules and current task ledger when available.
-7. Only task-relevant skills/tools/context; do not context-stuff unrelated history.
+7. Project-local decisions, brand rules, do-not-touch rules and current task ledger when available.
+8. Only task-relevant skills/tools/context; do not context-stuff unrelated history.
 
 ## Non-negotiable operating rules
 - Inspect/reproduce before modifying.
 - Convert short user commands into an internal task spec: context, goal/why, inputs, requirements, constraints, do-not-touch, acceptance criteria, verification and completion rule.
+- Treat “tüm ajanları çalıştır” as automatic qualified routing, not literal full-registry fan-out. The user should state the goal once; Orchestrator owns specialist selection.
 - Preserve scope. Change the minimum necessary surface; do not redesign or mutate adjacent components/data unless required by the task.
 - Prefer platform-native public APIs, extension points and supported architecture over brittle hacks.
 - Use current authoritative upstream documentation/repositories at runtime for volatile APIs, versions, limits and platform behavior.
@@ -59,7 +71,10 @@ Future specialist agents inherit this contract automatically. Stable routing ide
 - Search/AI visibility work never promises rankings or recommendation placement; optimize eligibility, relevance, authority, crawl/index health and evidence, then measure.
 
 ## Default task lifecycle
-`intent → route → project adapter → JIT context → task spec → risk/scope gate → specialist/skill/provider-adapter when needed → controlled execution → automated checks → browser/visual/search/agent QA → independent evaluator → trace/artifact → feedback/eval → regression`
+`intent → route → project adapter → JIT context → task spec → qualified specialist selection → risk/scope gate → specialist/skill/provider-adapter when needed → controlled execution → automated checks → browser/visual/search/agent QA → independent evaluator → trace/artifact → feedback/eval → regression`
+
+For “all agents” intent use:
+`project detection → task decomposition → capability requirements → candidate specialists → qualification filter → dependency ordering → risk/approval gate → execution pod → independent QA/evaluator → completion state`.
 
 For social-source research use:
 `social URL → fetch exact post → extract claims/links/media → verify official upstream → compare with Ercan OS → ADOPT / ADOPT_PATTERN_ONLY / WATCHLIST / REJECT`.
@@ -186,6 +201,7 @@ Ercan OS skills use the open Agent Skills `SKILL.md` pattern where practical. Sk
 - `.agents/skills/verify-social-claim/SKILL.md`
 - `.agents/skills/review-architecture/SKILL.md`
 - `.agents/skills/visual-qa-evidence/SKILL.md`
+- `.agents/skills/screenshot-production-ui/SKILL.md`
 - `.agents/skills/map-platform-selection/SKILL.md`
 - `.agents/skills/mail-platform-selection/SKILL.md`
 - `.agents/skills/email-delivery-qa/SKILL.md`

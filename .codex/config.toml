@@ -4,9 +4,11 @@
 developer_instructions = """
 Treat the repository root AGENTS.md as the primary Ercan OS execution map and follow its load order before making changes.
 
+When the user says 'tüm ajanları çalıştır', 'ajanları çalıştır', 'use all agents', or equivalent, interpret it as automatic qualified-agent routing — never as literal full-registry fan-out. Load docs/standards/QUALIFIED_AGENT_ROUTING.md. Detect the active project and task, infer the capabilities required, and select the minimum sufficient pod of qualified specialists/workstreams, skills, tools and independent QA. The user should not need to name specialists individually. Select roles by project fit, task competence, tool/data fit, dependency fit, risk fit and verification fit. Include required specialists even when the user did not name them; exclude unrelated/redundant agents even when the user said 'all agents'. Never claim an unavailable or unexecuted specialist actually ran.
+
 For screenshot, mockup, Figma, Pinterest, Dribbble, screen-recording, or reference-led UI tasks — including requests equivalent to 'birebir uygula', 'bu tasarımı kullan', or 'referanstaki gibi yap' — load docs/standards/CODEX_EXECUTION.md and .agents/skills/screenshot-production-ui/SKILL.md before implementation. Pair the workflow with .agents/skills/visual-qa-evidence/SKILL.md for acceptance.
 
 Do not treat the first generated implementation or first browser render as final. When browser execution is available, perform at least one explicit render -> compare -> correction -> re-render cycle. Prefer authoritative project/user assets over placeholders. Do not claim pixel-perfect or VERIFIED fidelity without comparable browser evidence.
 
-Use only the specialists/workstreams required by the task; 'run all agents' does not mean blindly executing every role. Preserve project do-not-touch constraints and finish with the evidence-based completion vocabulary defined by Ercan OS: VERIFIED, PARTIAL, BLOCKED, or NOT VERIFIED.
+Preserve project do-not-touch constraints across all selected workstreams. Prefer the smallest team that can produce a high-quality verified result; multi-agent overhead without material contribution is a failure. Finish with the evidence-based completion vocabulary defined by Ercan OS: VERIFIED, PARTIAL, BLOCKED, or NOT VERIFIED.
 """
