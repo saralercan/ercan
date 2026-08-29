@@ -1,7 +1,7 @@
 # Ercan OS — Qualified Agent Routing
 
 Status: active
-Version: 1.0 (2026-08-28)
+Version: 1.1 (2026-08-29)
 
 This standard defines the meaning of user commands such as **“tüm ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent requests for broad specialist involvement.
 
@@ -17,7 +17,7 @@ This meaning is shared by ChatGPT/Ercan OS and Codex.
 
 The user should be able to state the goal once. The system owns specialist selection.
 
-The user is not expected to know whether a task needs a Shopify Engineer, Visual QA, SEO Engineer, Performance Engineer, Real Asset Resolver, Security Reviewer, or another specialist. `@Orchestrator` resolves that from context.
+The user is not expected to know whether a task needs a Shopify Engineer, Visual QA, SEO Engineer, Performance Engineer, Real Asset Resolver, Upstream Intelligence researcher, Security Reviewer, or another specialist. `@Orchestrator` resolves that from context.
 
 A user may still explicitly request or exclude a named specialist. Explicit task constraints override automatic roster selection where safe and feasible.
 
@@ -25,7 +25,7 @@ A user may still explicitly request or exclude a named specialist. Explicit task
 
 For every “all agents” intent, run this selection sequence before execution:
 
-`project detection → task decomposition → capability requirements → candidate specialists → qualification filter → dependency ordering → risk/approval gate → execution pod → independent QA/evaluator → completion state`
+`project detection → task decomposition → capability requirements → candidate specialists → qualification filter → optional upstream intelligence gap check → dependency ordering → risk/approval gate → execution pod → independent QA/evaluator → completion state`
 
 ### 1. Project detection
 Identify the active project, repository, platform, brand rules, environment and do-not-touch constraints before choosing specialists.
@@ -39,6 +39,7 @@ Examples:
 - WordPress deployment → WordPress/Hostinger implementation, deployment verification, rollback/smoke; add design/SEO/mail only when in scope
 - SEO/AI discovery → technical SEO, structured data/entity, content/search evidence and measurement; do not summon unrelated graphic agents
 - social creative → art direction, graphic/copy/content specialists, real-asset integrity and brand/export QA; add paid-media specialist only for ad work
+- broad GitHub/open-source improvement request → Upstream Intelligence discovery + relevant domain specialists + upstream audit; broad scan is allowed, production dependency fan-out is not
 
 ### 3. Qualification filter
 A specialist is selected only when it has a material contribution and passes the relevant filters:
@@ -52,6 +53,19 @@ A specialist is selected only when it has a material contribution and passes the
 
 Agents that do not pass a material-contribution test are not run merely to satisfy the wording “all agents.”
 
+### 4. Upstream intelligence qualification
+
+Select `@UpstreamIntelligence` when at least one is true:
+- the user explicitly asks to search GitHub/open source broadly or add useful repos/tools/patterns;
+- a task has a material library/tool/framework/provider choice;
+- an existing capability gap could plausibly be solved by current upstream work;
+- the task requires comparing canonical platform tooling with community alternatives;
+- a new repo/tool/skill/provider is being considered for adoption.
+
+Do **not** select it for trivial deterministic edits or when the project already has a canonical adequate solution and further discovery adds no value.
+
+When selected, load `UPSTREAM_INTELLIGENCE.md`, `UPSTREAM_INTELLIGENCE_CATALOG.md` JIT and `upstream-intelligence-scan`. The discovery layer may examine hundreds or thousands of candidates. Only audited, non-duplicate, task-relevant candidates are handed to implementation.
+
 ## Minimum sufficient pod
 
 Prefer the smallest team that can produce a high-quality verified result.
@@ -59,7 +73,8 @@ Prefer the smallest team that can produce a high-quality verified result.
 A material task normally includes:
 - one owner/implementation workstream for each genuinely distinct capability required;
 - one independent QA/evaluator when verification is material;
-- security/approval/deployment specialists only when the risk boundary requires them.
+- security/approval/deployment specialists only when the risk boundary requires them;
+- an Upstream Intelligence workstream only when current external tooling/pattern discovery has material value.
 
 A simple deterministic task may need only one competent implementation specialist plus the appropriate check. Multi-agent overhead is itself a failure when it adds no quality or safety value.
 
@@ -73,6 +88,7 @@ A simple deterministic task may need only one competent implementation specialis
 - avoid duplicate specialists performing the same work without a comparison/evaluator purpose;
 - preserve the user’s do-not-touch constraints across every handoff;
 - require independent verification for material implementation work;
+- consult upstream intelligence before inventing a new capability from scratch when a strong canonical solution may already exist;
 - stop adding agents when marginal contribution is negligible;
 - never claim that an unavailable or unexecuted agent actually ran.
 
@@ -80,27 +96,28 @@ A simple deterministic task may need only one competent implementation specialis
 
 The roster is task-specific, not project-static. The same project may use different pods for different requests.
 
-Examples:
-
 ### Reference-led web/UI
-`@Orchestrator → @ScreenshotToCode → @RealAsset → implementation/platform specialist → browser render → @PixelMatch → @UXEnhancement when justified → @ProductionQA`
+`@Orchestrator → optional @UpstreamIntelligence if a tooling gap exists → @ScreenshotToCode → @RealAsset → implementation/platform specialist → browser render → @PixelMatch → @UXEnhancement when justified → @ProductionQA`
 
 ### Performance-only web work
-`@Orchestrator → platform specialist → Performance Engineer → Browser QA/ProductionQA`
+`@Orchestrator → platform specialist → optional @UpstreamIntelligence for profiling/optimization tool gap → Performance Engineer → Browser QA/ProductionQA`
 
 Do not automatically run redesign, copywriting or SEO specialists when the user explicitly says the visual theme, ads or content must not change.
 
 ### SEO / AI discovery
-`@Orchestrator → SEO Engineer → Entity/Structured Data Specialist and/or Local SEO Specialist when relevant → AI Discovery/GEO Evaluator → technical/browser verification`
+`@Orchestrator → SEO Engineer → Entity/Structured Data Specialist and/or Local SEO Specialist when relevant → optional @UpstreamIntelligence for current audit/crawl tooling → AI Discovery/GEO Evaluator → technical/browser verification`
 
 ### Shopify commerce
-`@Orchestrator → Shopify Engineer → task-specific design/search/performance specialist(s) → browser/product/cart QA → ProductionQA`
+`@Orchestrator → Shopify Engineer → optional @UpstreamIntelligence for current canonical/community tooling comparison → task-specific design/search/performance specialist(s) → browser/product/cart QA → ProductionQA`
 
 ### WordPress / Hostinger
-`@Orchestrator → WordPress Engineer → Hostinger Deployment Engineer when deployment is in scope → task-specific design/mail/SEO specialist(s) → browser/deployment QA`
+`@Orchestrator → WordPress Engineer → Hostinger Deployment Engineer when deployment is in scope → optional @UpstreamIntelligence for plugin/tooling gap → task-specific design/mail/SEO specialist(s) → browser/deployment QA`
 
 ### Social/brand creative
-`@Orchestrator → Social Strategist/Art Director as needed → Graphic Designer/Copywriter/Video specialist according to deliverable → Brand QA → export/channel QA`
+`@Orchestrator → Social Strategist/Art Director as needed → optional @UpstreamIntelligence for reusable creative/export/publishing architecture → Graphic Designer/Copywriter/Video specialist according to deliverable → Brand QA → export/channel QA`
+
+### Broad GitHub capability expansion
+`@Orchestrator → @UpstreamIntelligence → domain specialist(s) for web/app/design/social/SEO/etc. → Upstream Adoption Auditor for promoted candidates → Security Reviewer when code/credentials/permissions are material → regression/eval → catalog/ledger update`
 
 ## Quality over agent count
 
@@ -112,6 +129,8 @@ Forbidden behavior:
 - selecting specialists merely because their names are related to a keyword;
 - adding redundant agents to make the process look more sophisticated;
 - skipping a required specialist/QA role because the user did not name it;
+- globally installing hundreds of discovered repositories because broad GitHub research was requested;
+- treating stars or an awesome-list entry as proof of safety/fit;
 - claiming a multi-agent execution occurred when only one generic response was produced and no actual specialist/tool/workstream separation was used.
 
 ## Completion evidence
@@ -121,6 +140,7 @@ For material tasks, the final result should be traceable to the qualified pod th
 - why each was selected;
 - important dependencies/handoffs;
 - tools/evidence used;
+- upstream candidates promoted/rejected when discovery occurred;
 - independent QA outcome;
 - final completion state: `VERIFIED`, `PARTIAL`, `BLOCKED`, or `NOT VERIFIED`.
 
@@ -136,3 +156,6 @@ These behaviors are mandatory:
 4. User does not name Performance QA but asks to speed up a production website → automatically include performance verification because it is required by the task.
 5. User explicitly says ads and live theme must not change → every selected specialist inherits that constraint; no agent may expand scope.
 6. A required capability is unavailable in the runtime → use the closest qualified available path, state the limitation honestly, and never pretend the unavailable specialist executed.
+7. User asks to scan GitHub for everything useful across web/app/design/social → select Upstream Intelligence and relevant domain reviewers, create/update durable catalog knowledge, but do not install every discovered repo.
+8. Discovery finds canonical repo plus many forks → keep canonical and reject duplicate forks unless a fork has a concrete material feature required by the task.
+9. Discovery finds an archived/deprecated tool with maintained successor → classify `SUPERSEDED`; do not introduce it into new production work.
