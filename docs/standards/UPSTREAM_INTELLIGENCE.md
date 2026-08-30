@@ -1,15 +1,19 @@
 # Ercan OS — Upstream Intelligence Standard
 
 Status: active
-Version: 1.0 (2026-08-29)
+Version: 1.1 (2026-08-30)
 
 ## Purpose
 
 Ercan OS must continuously benefit from strong public GitHub work without turning the control plane into an unreviewed dependency dump. This standard converts broad requests such as “GitHub’daki işimize yarayan her şeyi tara/ekle” into a safe high-recall discovery process plus narrow, evidence-based adoption.
 
-Primary catalog: `docs/upstream/UPSTREAM_INTELLIGENCE_CATALOG.md`.
-Primary decisions: `docs/standards/DISCOVERY_ADOPTION_LEDGER.md`.
+Primary current overlay: `docs/upstream/UPSTREAM_INTELLIGENCE_CURRENT.md`.
+Primary broad catalog: `docs/upstream/UPSTREAM_INTELLIGENCE_CATALOG.md`.
+Primary durable decisions: `docs/standards/DISCOVERY_ADOPTION_LEDGER.md`.
+Evidence/history: `docs/upstream/scans/`.
 Execution skill: `.agents/skills/upstream-intelligence-scan/SKILL.md`.
+
+The current overlay exists so newly reviewed status changes and security gates become visible to GPT/Codex immediately, even before periodic consolidation into the broad catalog and durable ledger.
 
 ## Core principle
 
@@ -18,10 +22,12 @@ Execution skill: `.agents/skills/upstream-intelligence-scan/SKILL.md`.
 The research layer may inspect tens, hundreds or thousands of candidate repositories and curated catalogs. The production layer must only integrate candidates that materially improve the current capability and pass provenance, maintenance, license, security, permission, operational-cost, duplication and project-fit checks.
 
 “Add everything useful” therefore means:
-1. add high-value upstream knowledge to the intelligence catalog;
+1. add high-value upstream knowledge to the intelligence system;
 2. add recursive discovery sources that expose additional high-quality candidates;
-3. promote only the smallest required implementation unit into an active skill/standard/tool/project adapter;
-4. avoid installing or executing unrelated repositories globally.
+3. promote current material status/security/routing changes into `UPSTREAM_INTELLIGENCE_CURRENT.md`;
+4. promote stable durable knowledge into the broad catalog/ledger when appropriate;
+5. promote only the smallest required implementation unit into an active skill/standard/tool/project adapter;
+6. avoid installing or executing unrelated repositories globally.
 
 ## Coverage domains
 
@@ -90,12 +96,23 @@ Stars/forks are weak discovery signals, not trust scores.
 - `SUPERSEDED`: historical only; maintained successor should be selected.
 - `REJECT`: duplicate, unsafe, unmaintained, incompatible license, excessive permissions or otherwise poor fit.
 
+## Operational knowledge load order
+
+For upstream-sensitive tasks use this order:
+1. `UPSTREAM_INTELLIGENCE_CURRENT.md` — newest reviewed operational overlay and status/security changes;
+2. `UPSTREAM_INTELLIGENCE_CATALOG.md` — broad durable catalog;
+3. `DISCOVERY_ADOPTION_LEDGER.md` — durable decision history;
+4. referenced dated scan(s) only when evidence/detail is required;
+5. current official upstream verification for volatile runtime facts.
+
+If the current overlay explicitly changes the status of an older catalog/ledger item, the current overlay wins until consolidation.
+
 ## Recursive discovery
 
 Curated lists such as Awesome Selfhosted, Awesome Tailwind CSS, Awesome React/React Native/Flutter, Awesome WordPress/Shopify, design-system catalogs and accessibility lists are **discovery indexes**, not approved dependencies.
 
 When a task exposes a capability gap:
-`catalog search → curated-source search → GitHub/web current search → candidate shortlist → upstream audit → decision`.
+`current-index check → catalog search → curated-source search → GitHub/web current search → candidate shortlist → upstream audit → decision`.
 
 This gives Ercan OS high recall without loading thousands of repositories into every task.
 
@@ -104,8 +121,9 @@ This gives Ercan OS high recall without loading thousands of repositories into e
 When the user asks to “run all agents” and the task involves technology/tool/library selection or implementation that can benefit from upstream patterns, `@Orchestrator` must include an Upstream Intelligence workstream if it has material value.
 
 That workstream must:
-- search the existing catalog first;
-- avoid duplicate research already represented in the ledger;
+- consult `UPSTREAM_INTELLIGENCE_CURRENT.md` first for current routing/security/status changes;
+- search the existing broad catalog next;
+- avoid duplicate research already represented in the ledger and dated scans;
 - use current GitHub/web evidence for volatile facts;
 - return only candidates that materially improve the task;
 - mark whether each candidate is a direct dependency, task-scoped tool, pattern-only reference or watchlist item;
@@ -134,8 +152,12 @@ Prefer:
 ## Maintenance
 
 When new upstream research is performed:
-1. update `UPSTREAM_INTELLIGENCE_CATALOG.md` for durable high-value candidates;
-2. update `DISCOVERY_ADOPTION_LEDGER.md` for material promoted/rejected decisions;
-3. add/update a skill only when a repeatable execution procedure exists;
-4. add regression/eval coverage for material routing/tool behavior;
-5. keep runtime versions/limits outside durable contracts and re-check them from upstream at execution time.
+1. write/review the dated scan in `docs/upstream/scans/` when the research is material;
+2. update `UPSTREAM_INTELLIGENCE_CURRENT.md` for every material current routing, status, security, supersession or promotion change, or explicitly record that no current change resulted;
+3. periodically consolidate stable high-value candidates into `UPSTREAM_INTELLIGENCE_CATALOG.md`;
+4. periodically consolidate durable promoted/rejected decisions into `DISCOVERY_ADOPTION_LEDGER.md`;
+5. add/update a skill only when a repeatable execution procedure exists;
+6. add regression/eval coverage for material routing/tool behavior;
+7. keep runtime versions/limits outside durable contracts and re-check them from upstream at execution time.
+
+A dated scan is evidence/history, not sufficient operational integration by itself. Current decisions must be reachable through the current overlay before the work can be treated as fully integrated into Ercan OS routing.
