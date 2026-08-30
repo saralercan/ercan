@@ -1,0 +1,1 @@
+This pass intentionally promotes only materially differentiated upstreams. See `2026-08-30-third-pass.md` for decisions and evidence. No community dependency was installed or executed.
