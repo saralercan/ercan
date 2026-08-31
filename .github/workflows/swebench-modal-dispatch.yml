@@ -1,0 +1,157 @@
+name: Ercan OS SWE-bench Modal Evaluation
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: "Type RUN to authorize paid cloud evaluation"
+        required: true
+        type: string
+      dataset:
+        description: "SWE-bench dataset alias"
+        required: true
+        default: "lite"
+        type: choice
+        options:
+          - lite
+          - verified
+      predictions_path:
+        description: "Repo-relative JSONL under benchmarks/predictions/"
+        required: true
+        type: string
+      run_id:
+        description: "Unique run ID; change it when predictions change"
+        required: true
+        type: string
+      parallelism:
+        description: "Cloud parallelism"
+        required: true
+        default: "2"
+        type: choice
+        options:
+          - "1"
+          - "2"
+          - "4"
+          - "8"
+          - "10"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ercan-swebench-modal
+  cancel-in-progress: false
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
+      MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
+      SWE_BENCH_VERSION: "5.0.2"
+      SWE_BENCH_WHEEL_SHA256: "b7f0416a1e686eca22c2f749b5f816685a202835032f6683080e2b53545bbb62"
+      MODAL_VERSION: "1.5.5"
+    steps:
+      - name: Authorization gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "${{ inputs.confirm }}" = "RUN" || { echo "confirm must equal RUN"; exit 2; }
+          test "$GITHUB_REF" = "refs/heads/master" || { echo "paid benchmark dispatch is allowed only from master"; exit 2; }
+          test -n "$MODAL_TOKEN_ID" || { echo "MODAL_TOKEN_ID secret is not configured"; exit 2; }
+          test -n "$MODAL_TOKEN_SECRET" || { echo "MODAL_TOKEN_SECRET secret is not configured"; exit 2; }
+
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Validate predictions path and schema
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          root = Path.cwd().resolve()
+          rel = Path("${{ inputs.predictions_path }}")
+          if rel.is_absolute() or ".." in rel.parts:
+              raise SystemExit("predictions_path must be repo-relative without ..")
+          full = (root / rel).resolve()
+          allowed = (root / "benchmarks" / "predictions").resolve()
+          try:
+              full.relative_to(allowed)
+          except ValueError:
+              raise SystemExit("predictions_path must be under benchmarks/predictions/")
+          if full.suffix != ".jsonl":
+              raise SystemExit("predictions_path must end in .jsonl")
+          if not full.is_file():
+              raise SystemExit(f"predictions file not found: {full}")
+          PY
+          python3 scripts/validate_swebench_predictions.py "${{ inputs.predictions_path }}" --max-instances 500 | tee predictions-validation.json
+
+      - name: Verify and install pinned SWE-bench harness
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .benchmark-wheels
+          python -m pip download --no-deps --only-binary=:all: "swebench==$SWE_BENCH_VERSION" -d .benchmark-wheels
+          WHEEL="$(find .benchmark-wheels -maxdepth 1 -type f -name 'swebench-*.whl' -print -quit)"
+          test -n "$WHEEL"
+          echo "$SWE_BENCH_WHEEL_SHA256  $WHEEL" | sha256sum -c -
+          python -m pip install "$WHEEL" "modal==$MODAL_VERSION"
+          python -m pip freeze | sort > benchmark-dependencies.txt
+
+      - name: Record run contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p benchmark-evidence
+          cp predictions-validation.json benchmark-evidence/
+          cp benchmark-dependencies.txt benchmark-evidence/
+          python3 - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          p = Path("${{ inputs.predictions_path }}")
+          record = {
+              "ercan_os_commit": os.environ["GITHUB_SHA"],
+              "dataset": "${{ inputs.dataset }}",
+              "run_id": "${{ inputs.run_id }}",
+              "parallelism": int("${{ inputs.parallelism }}"),
+              "predictions_path": str(p),
+              "predictions_sha256": hashlib.sha256(p.read_bytes()).hexdigest(),
+              "swebench": os.environ["SWE_BENCH_VERSION"],
+              "modal": os.environ["MODAL_VERSION"],
+              "provider": "modal",
+          }
+          Path("benchmark-evidence/run-contract.json").write_text(json.dumps(record, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+          PY
+
+      - name: Run official SWE-bench cloud evaluation
+        shell: bash
+        run: |
+          set -euo pipefail
+          swebench eval "${{ inputs.dataset }}" \
+            -p "${{ inputs.predictions_path }}" \
+            --run-id "${{ inputs.run_id }}" \
+            --modal \
+            -j "${{ inputs.parallelism }}"
+
+      - name: Collect evaluation evidence
+        if: always()
+        shell: bash
+        run: |
+          set +e
+          find . -maxdepth 5 -type f \( -name "*${{ inputs.run_id }}*.json" -o -name "*.log" -o -name "*.eval" \) -print0 \
+            | xargs -0 -r -I{} cp --parents "{}" benchmark-evidence/
+          find benchmark-evidence -type f -print0 | sort -z | xargs -0 sha256sum > benchmark-evidence/SHA256SUMS.txt
+
+      - name: Upload immutable run evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: swebench-${{ inputs.dataset }}-${{ inputs.run_id }}-${{ github.sha }}
+          path: benchmark-evidence/
+          if-no-files-found: error
+          retention-days: 30
