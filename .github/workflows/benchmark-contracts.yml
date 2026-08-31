@@ -7,8 +7,10 @@ on:
       - 'docs/evals/**'
       - 'docs/standards/STABLE_AGENT_CORE.md'
       - 'scripts/validate_benchmark_contracts.py'
+      - 'scripts/validate_swebench_predictions.py'
       - '.github/workflows/benchmark-contracts.yml'
       - '.github/workflows/behavioral-benchmark-dispatch.yml'
+      - '.github/workflows/swebench-modal-dispatch.yml'
   push:
     branches: [master]
     paths:
@@ -16,8 +18,10 @@ on:
       - 'docs/evals/**'
       - 'docs/standards/STABLE_AGENT_CORE.md'
       - 'scripts/validate_benchmark_contracts.py'
+      - 'scripts/validate_swebench_predictions.py'
       - '.github/workflows/benchmark-contracts.yml'
       - '.github/workflows/behavioral-benchmark-dispatch.yml'
+      - '.github/workflows/swebench-modal-dispatch.yml'
   schedule:
     - cron: '17 5 * * 1'
   workflow_dispatch:
@@ -33,7 +37,7 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - name: Validate benchmark manifest
+      - name: Validate benchmark manifest and paid-run safety gates
         run: python3 scripts/validate_benchmark_contracts.py
 
   freshness:
