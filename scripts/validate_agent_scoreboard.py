@@ -47,7 +47,7 @@ def evaluate():
             "stable": f"`{agent}`" in stable,
             "source_pack": has_heading(sources, "#", agent),
             "championship": has_heading(bench, "###", agent),
-            "routing": has_heading(registries, "##", agent),
+            "routing": has_heading(registries, "##", agent) or has_heading(registries, "###", agent),
             "research_gate": global_research_gate,
         }
         score = sum(20 for passed in checks.values() if passed)
