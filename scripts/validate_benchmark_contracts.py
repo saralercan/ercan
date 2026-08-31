@@ -12,6 +12,9 @@ ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "benchmarks/manifest.json"
 STABLE = ROOT / "docs/standards/STABLE_AGENT_CORE.md"
 DISPATCH = ROOT / ".github/workflows/behavioral-benchmark-dispatch.yml"
+SWEBENCH_DISPATCH = ROOT / ".github/workflows/swebench-modal-dispatch.yml"
+COMPUTE_POLICY = ROOT / "docs/evals/BENCHMARK_COMPUTE_POLICY.md"
+PREDICTIONS_VALIDATOR = ROOT / "scripts/validate_swebench_predictions.py"
 REQUIRED = {
     "bfcl-v4",
     "inspect-bfcl-v1-v3-baseline",
@@ -65,6 +68,39 @@ def validate_dispatch(errors: list[str]) -> None:
         errors.append("behavioral benchmark dispatch must not be scheduled automatically")
     if "bfcl-v4" in text.lower() or "bfcl_v4" in text.lower():
         errors.append("behavioral Inspect dispatch must not expose BFCL V4; use official Berkeley harness separately")
+
+
+def validate_swebench_dispatch(errors: list[str]) -> None:
+    if not COMPUTE_POLICY.exists():
+        errors.append("benchmark compute policy missing")
+    if not PREDICTIONS_VALIDATOR.exists():
+        errors.append("SWE-bench predictions validator missing")
+    if not SWEBENCH_DISPATCH.exists():
+        errors.append("SWE-bench Modal dispatch workflow missing")
+        return
+    text = SWEBENCH_DISPATCH.read_text(encoding="utf-8")
+    required_fragments = {
+        "manual-only trigger": "workflow_dispatch:",
+        "explicit RUN confirmation": "inputs.confirm",
+        "master-only paid execution": "refs/heads/master",
+        "Modal token ID boundary": "secrets.MODAL_TOKEN_ID",
+        "Modal token secret boundary": "secrets.MODAL_TOKEN_SECRET",
+        "predictions path confinement": "benchmarks/predictions",
+        "predictions validator": "validate_swebench_predictions.py",
+        "official SWE-bench CLI": "swebench eval",
+        "Modal cloud flag": "--modal",
+        "unique run ID input": "inputs.run_id",
+        "wheel hash gate": "SWE_BENCH_WHEEL_SHA256",
+        "evidence hashes": "SHA256SUMS.txt",
+        "artifact retention": "actions/upload-artifact@v7",
+    }
+    for label, fragment in required_fragments.items():
+        if fragment not in text:
+            errors.append(f"SWE-bench dispatch missing {label}")
+    if re.search(r"(?m)^\s*schedule\s*:", text):
+        errors.append("SWE-bench paid cloud dispatch must not be scheduled automatically")
+    if "pull_request:" in text or re.search(r"(?m)^\s*push\s*:", text):
+        errors.append("SWE-bench paid cloud dispatch must be workflow_dispatch only")
 
 
 def main() -> int:
@@ -138,14 +174,28 @@ def main() -> int:
     if ipin.get("inspect-evals") != "0.18.0":
         warnings.append("inspect-evals pin differs from 2026-08-31 reviewed baseline 0.18.0")
 
+    swe = next((s for s in suites if s.get("id") == "swe-bench-verified"), {})
+    spin = swe.get("pin", {})
+    if spin.get("swebench-package") != "5.0.2":
+        errors.append("swe-bench-verified must pin reviewed swebench package 5.0.2")
+    if spin.get("swebench-wheel-sha256") != "b7f0416a1e686eca22c2f749b5f816685a202835032f6683080e2b53545bbb62":
+        errors.append("swe-bench-verified wheel hash differs from reviewed 5.0.2 artifact")
+    cloud = spin.get("cloud", [])
+    if not isinstance(cloud, list) or "modal" not in cloud:
+        errors.append("swe-bench-verified must record official Modal cloud evaluation path")
+
     validate_dispatch(errors)
+    validate_swebench_dispatch(errors)
 
     for warning in warnings:
         print(f"WARNING: {warning}")
     if errors:
         return fail(errors)
 
-    print(f"Benchmark contracts PASS: {len(suites)} suites; {len(agents)} stable agents known; strict_freshness={args.strict_freshness}; behavioral_dispatch=manual-only")
+    print(
+        f"Benchmark contracts PASS: {len(suites)} suites; {len(agents)} stable agents known; "
+        f"strict_freshness={args.strict_freshness}; behavioral_dispatch=manual-only; swebench_cloud=manual-only"
+    )
     return 0
 
 
