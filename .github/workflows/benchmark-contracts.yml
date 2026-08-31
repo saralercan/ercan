@@ -1,0 +1,46 @@
+name: Ercan OS Benchmark Contracts
+
+on:
+  pull_request:
+    paths:
+      - 'benchmarks/**'
+      - 'docs/evals/**'
+      - 'docs/standards/STABLE_AGENT_CORE.md'
+      - 'scripts/validate_benchmark_contracts.py'
+      - '.github/workflows/benchmark-contracts.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'benchmarks/**'
+      - 'docs/evals/**'
+      - 'docs/standards/STABLE_AGENT_CORE.md'
+      - 'scripts/validate_benchmark_contracts.py'
+      - '.github/workflows/benchmark-contracts.yml'
+  schedule:
+    - cron: '17 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Validate benchmark manifest
+        run: python3 scripts/validate_benchmark_contracts.py
+
+  freshness:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Enforce benchmark source freshness
+        run: python3 scripts/validate_benchmark_contracts.py --strict-freshness
