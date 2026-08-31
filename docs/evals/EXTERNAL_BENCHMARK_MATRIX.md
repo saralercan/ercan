@@ -32,9 +32,9 @@ Inspect provides composable datasets, agents/tools and scorers plus structured e
 
 Primary Ercan OS use:
 - common runner/log format across compatible internal/adapted suites;
-- BFCL/SWE-bench wrappers only when their output remains faithful to canonical scoring;
 - security/agentic/GUI eval orchestration;
-- reproducible result artifact and scorer metadata.
+- reproducible result artifact and scorer metadata;
+- BFCL **V1–V3 internal baseline only** using the current Inspect Evals BFCL port. The port does not implement BFCL V4 and therefore cannot produce a V4 leaderboard-comparable score.
 
 Privacy gate:
 - no secrets in repo;
@@ -47,6 +47,7 @@ Current status: **RUNTIME_CONTRACT_READY / PAID MODEL RUN NOT_RUN**.
 ## BFCL V4 — tool use / orchestration
 
 Official source: https://gorilla.cs.berkeley.edu/leaderboard.html
+Canonical implementation: https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard
 
 Current reproducibility anchor observed 2026-08-31:
 - BFCL V4 leaderboard.
@@ -65,6 +66,10 @@ Required run evidence:
 - tool schema exposure policy;
 - result JSON/logs;
 - per-category accuracy + hallucination/irrelevant-tool behavior + latency.
+
+Comparability hard gate:
+- BFCL V4 comparative claims must use the official Berkeley V4 harness/package and pinned comparable version.
+- Inspect Evals BFCL currently implements V1/V2/V3 and may be used as a separate internal behavioral baseline only; do not merge its score into BFCL V4 leaderboard comparisons.
 
 Current status: **NOT_RUN** — no independent callable 21-agent runtime/model adapter is connected to this repository in the current execution environment.
 
