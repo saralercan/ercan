@@ -13,12 +13,15 @@ MANIFEST = ROOT / "benchmarks/manifest.json"
 STABLE = ROOT / "docs/standards/STABLE_AGENT_CORE.md"
 DISPATCH = ROOT / ".github/workflows/behavioral-benchmark-dispatch.yml"
 SWEBENCH_DISPATCH = ROOT / ".github/workflows/swebench-modal-dispatch.yml"
+CODEX_PREDICTIONS = ROOT / ".github/workflows/codex-swebench-predictions.yml"
 COMPUTE_POLICY = ROOT / "docs/evals/BENCHMARK_COMPUTE_POLICY.md"
 PREDICTIONS_VALIDATOR = ROOT / "scripts/validate_swebench_predictions.py"
+CASE_FETCHER = ROOT / "scripts/fetch_swebench_case.py"
 REQUIRED = {
     "bfcl-v4",
     "inspect-bfcl-v1-v3-baseline",
     "swe-bench-verified",
+    "codex-swebench-prediction-harness",
     "swe-bench-multimodal",
     "inspect-runtime",
     "mcp-2026-07-28",
@@ -34,6 +37,8 @@ ALLOWED_STATUS = {
     "BENCHMARKED_FRONTIER_CANDIDATE",
     "STALE_COMPARISON",
 }
+CODEX_ACTION_COMMIT = "86365089eb2b84e0a8fb0717b304f8bdcb13b20e"
+CODEX_VERSION = "0.151.0"
 
 
 def stable_agents() -> set[str]:
@@ -47,27 +52,73 @@ def fail(errors: list[str]) -> int:
     return 1
 
 
+def must_contain(text: str, fragments: dict[str, str], prefix: str, errors: list[str]) -> None:
+    for label, fragment in fragments.items():
+        if fragment not in text:
+            errors.append(f"{prefix} missing {label}")
+
+
 def validate_dispatch(errors: list[str]) -> None:
     if not DISPATCH.exists():
         errors.append("behavioral benchmark dispatch workflow missing")
         return
     text = DISPATCH.read_text(encoding="utf-8")
-    required_fragments = {
-        "manual-only trigger": "workflow_dispatch:",
-        "explicit RUN approval": "inputs.confirmation == 'RUN'",
-        "OpenAI secret boundary": "secrets.OPENAI_API_KEY",
-        "top-level wheel provenance": "verify_benchmark_artifacts.py",
-        "Inspect BFCL internal baseline": "inspect eval inspect_evals/bfcl",
-        "sensitive trace suppression": "OPENAI_AGENTS_TRACE_INCLUDE_SENSITIVE_DATA",
-        "reproducibility evidence": "behavioral-run-metadata.json",
-    }
-    for label, fragment in required_fragments.items():
-        if fragment not in text:
-            errors.append(f"behavioral dispatch missing {label}")
+    must_contain(
+        text,
+        {
+            "manual-only trigger": "workflow_dispatch:",
+            "explicit RUN approval": "inputs.confirmation == 'RUN'",
+            "OpenAI secret boundary": "secrets.OPENAI_API_KEY",
+            "top-level wheel provenance": "verify_benchmark_artifacts.py",
+            "Inspect BFCL internal baseline": "inspect eval inspect_evals/bfcl",
+            "sensitive trace suppression": "OPENAI_AGENTS_TRACE_INCLUDE_SENSITIVE_DATA",
+            "reproducibility evidence": "behavioral-run-metadata.json",
+        },
+        "behavioral dispatch",
+        errors,
+    )
     if re.search(r"(?m)^\s*schedule\s*:", text):
         errors.append("behavioral benchmark dispatch must not be scheduled automatically")
     if "bfcl-v4" in text.lower() or "bfcl_v4" in text.lower():
         errors.append("behavioral Inspect dispatch must not expose BFCL V4; use official Berkeley harness separately")
+
+
+def validate_codex_predictions(errors: list[str]) -> None:
+    if not CASE_FETCHER.exists():
+        errors.append("gold-safe SWE-bench case fetcher missing")
+    if not CODEX_PREDICTIONS.exists():
+        errors.append("Codex SWE-bench prediction workflow missing")
+        return
+    text = CODEX_PREDICTIONS.read_text(encoding="utf-8")
+    must_contain(
+        text,
+        {
+            "manual trigger": "workflow_dispatch:",
+            "RUN authorization": "confirm must equal RUN",
+            "master-only generation": "refs/heads/master",
+            "maximum three instances": "1..3 items",
+            "OpenAI secret through action": "openai-api-key: ${{ secrets.OPENAI_API_KEY }}",
+            "pinned official Codex action": f"openai/codex-action@{CODEX_ACTION_COMMIT}",
+            "pinned Codex CLI": f'codex-version: "{CODEX_VERSION}"',
+            "workspace permission profile": 'permission-profile: ":workspace"',
+            "drop-sudo safety": 'safety-strategy: "drop-sudo"',
+            "ephemeral session": '"--ephemeral"',
+            "user config isolation": '"--ignore-user-config"',
+            "repo rule isolation": '"--ignore-rules"',
+            "project docs disabled": '"project_doc_max_bytes=0"',
+            "sanitized case fetch": "fetch_swebench_case.py",
+            "gold field leak check": "gold/evaluator fields leaked",
+            "prediction validation": "validate_swebench_predictions.py",
+            "separate unscored state": "PREDICTIONS_GENERATED_NOT_SCORED",
+            "immutable artifacts": "actions/upload-artifact@v7",
+        },
+        "Codex prediction workflow",
+        errors,
+    )
+    if re.search(r"(?m)^\s*schedule\s*:", text):
+        errors.append("Codex prediction generation must not be scheduled automatically")
+    if "--modal" in text or "swebench eval" in text:
+        errors.append("prediction generation and SWE-bench scoring must remain separate workflows")
 
 
 def validate_swebench_dispatch(errors: list[str]) -> None:
@@ -79,24 +130,31 @@ def validate_swebench_dispatch(errors: list[str]) -> None:
         errors.append("SWE-bench Modal dispatch workflow missing")
         return
     text = SWEBENCH_DISPATCH.read_text(encoding="utf-8")
-    required_fragments = {
-        "manual-only trigger": "workflow_dispatch:",
-        "explicit RUN confirmation": "inputs.confirm",
-        "master-only paid execution": "refs/heads/master",
-        "Modal token ID boundary": "secrets.MODAL_TOKEN_ID",
-        "Modal token secret boundary": "secrets.MODAL_TOKEN_SECRET",
-        "predictions path confinement": "benchmarks/predictions",
-        "predictions validator": "validate_swebench_predictions.py",
-        "official SWE-bench CLI": "swebench eval",
-        "Modal cloud flag": "--modal",
-        "unique run ID input": "inputs.run_id",
-        "wheel hash gate": "SWE_BENCH_WHEEL_SHA256",
-        "evidence hashes": "SHA256SUMS.txt",
-        "artifact retention": "actions/upload-artifact@v7",
-    }
-    for label, fragment in required_fragments.items():
-        if fragment not in text:
-            errors.append(f"SWE-bench dispatch missing {label}")
+    must_contain(
+        text,
+        {
+            "manual-only trigger": "workflow_dispatch:",
+            "explicit RUN confirmation": "inputs.confirm",
+            "master-only paid execution": "refs/heads/master",
+            "Modal token ID boundary": "secrets.MODAL_TOKEN_ID",
+            "Modal token secret boundary": "secrets.MODAL_TOKEN_SECRET",
+            "artifact source selector": "predictions_source",
+            "generator provenance check": "Ercan OS Codex SWE-bench Predictions",
+            "successful generator requirement": '"conclusion": "success"',
+            "artifact download": "actions/download-artifact@v8",
+            "actions read permission": "actions: read",
+            "predictions path confinement": "benchmarks/predictions",
+            "predictions validator": "validate_swebench_predictions.py",
+            "official SWE-bench CLI": "swebench eval",
+            "Modal cloud flag": "--modal",
+            "unique run ID input": "inputs.run_id",
+            "wheel hash gate": "SWE_BENCH_WHEEL_SHA256",
+            "evidence hashes": "SHA256SUMS.txt",
+            "artifact retention": "actions/upload-artifact@v7",
+        },
+        "SWE-bench dispatch",
+        errors,
+    )
     if re.search(r"(?m)^\s*schedule\s*:", text):
         errors.append("SWE-bench paid cloud dispatch must not be scheduled automatically")
     if "pull_request:" in text or re.search(r"(?m)^\s*push\s*:", text):
@@ -184,8 +242,27 @@ def main() -> int:
     if not isinstance(cloud, list) or "modal" not in cloud:
         errors.append("swe-bench-verified must record official Modal cloud evaluation path")
 
+    codex = next((s for s in suites if s.get("id") == "codex-swebench-prediction-harness"), {})
+    cpin = codex.get("pin", {})
+    if cpin.get("codex-action-commit") != CODEX_ACTION_COMMIT:
+        errors.append("Codex prediction harness action commit differs from reviewed v1 commit")
+    if cpin.get("codex-cli") != CODEX_VERSION:
+        errors.append("Codex prediction harness CLI differs from reviewed 0.151.0")
+    if cpin.get("gold_patch_exposure") != "prohibited":
+        errors.append("Codex prediction harness must prohibit gold patch exposure")
+    if cpin.get("max_instances_per_generation_run") != 3:
+        errors.append("Codex prediction harness must remain capped at three instances per generation run")
+
     validate_dispatch(errors)
+    validate_codex_predictions(errors)
     validate_swebench_dispatch(errors)
+
+    for path in (PREDICTIONS_VALIDATOR, CASE_FETCHER):
+        if path.exists():
+            try:
+                compile(path.read_text(encoding="utf-8"), str(path), "exec")
+            except SyntaxError as exc:
+                errors.append(f"Python syntax error in {path.name}: {exc}")
 
     for warning in warnings:
         print(f"WARNING: {warning}")
@@ -194,7 +271,8 @@ def main() -> int:
 
     print(
         f"Benchmark contracts PASS: {len(suites)} suites; {len(agents)} stable agents known; "
-        f"strict_freshness={args.strict_freshness}; behavioral_dispatch=manual-only; swebench_cloud=manual-only"
+        f"strict_freshness={args.strict_freshness}; behavioral_dispatch=manual-only; "
+        "prediction_generation=manual-only; swebench_cloud=manual-only"
     )
     return 0
 
