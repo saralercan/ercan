@@ -11,8 +11,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "benchmarks/manifest.json"
 STABLE = ROOT / "docs/standards/STABLE_AGENT_CORE.md"
+DISPATCH = ROOT / ".github/workflows/behavioral-benchmark-dispatch.yml"
 REQUIRED = {
     "bfcl-v4",
+    "inspect-bfcl-v1-v3-baseline",
     "swe-bench-verified",
     "swe-bench-multimodal",
     "inspect-runtime",
@@ -40,6 +42,29 @@ def fail(errors: list[str]) -> int:
     for error in errors:
         print(f"ERROR: {error}", file=sys.stderr)
     return 1
+
+
+def validate_dispatch(errors: list[str]) -> None:
+    if not DISPATCH.exists():
+        errors.append("behavioral benchmark dispatch workflow missing")
+        return
+    text = DISPATCH.read_text(encoding="utf-8")
+    required_fragments = {
+        "manual-only trigger": "workflow_dispatch:",
+        "explicit RUN approval": "inputs.confirmation == 'RUN'",
+        "OpenAI secret boundary": "secrets.OPENAI_API_KEY",
+        "top-level wheel provenance": "verify_benchmark_artifacts.py",
+        "Inspect BFCL internal baseline": "inspect eval inspect_evals/bfcl",
+        "sensitive trace suppression": "OPENAI_AGENTS_TRACE_INCLUDE_SENSITIVE_DATA",
+        "reproducibility evidence": "behavioral-run-metadata.json",
+    }
+    for label, fragment in required_fragments.items():
+        if fragment not in text:
+            errors.append(f"behavioral dispatch missing {label}")
+    if re.search(r"(?m)^\s*schedule\s*:", text):
+        errors.append("behavioral benchmark dispatch must not be scheduled automatically")
+    if "bfcl-v4" in text.lower() or "bfcl_v4" in text.lower():
+        errors.append("behavioral Inspect dispatch must not expose BFCL V4; use official Berkeley harness separately")
 
 
 def main() -> int:
@@ -113,12 +138,14 @@ def main() -> int:
     if ipin.get("inspect-evals") != "0.18.0":
         warnings.append("inspect-evals pin differs from 2026-08-31 reviewed baseline 0.18.0")
 
+    validate_dispatch(errors)
+
     for warning in warnings:
         print(f"WARNING: {warning}")
     if errors:
         return fail(errors)
 
-    print(f"Benchmark contracts PASS: {len(suites)} suites; {len(agents)} stable agents known; strict_freshness={args.strict_freshness}")
+    print(f"Benchmark contracts PASS: {len(suites)} suites; {len(agents)} stable agents known; strict_freshness={args.strict_freshness}; behavioral_dispatch=manual-only")
     return 0
 
 

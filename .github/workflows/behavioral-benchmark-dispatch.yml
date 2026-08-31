@@ -1,0 +1,117 @@
+name: Ercan OS Behavioral Benchmark Dispatch
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: "Type RUN to allow a paid behavioral model call"
+        required: true
+        type: string
+      model:
+        description: "Inspect OpenAI model id, for example an available openai/<model> id"
+        required: true
+        type: string
+      sample_limit:
+        description: "BFCL V1-V3 smoke sample limit"
+        required: true
+        default: "10"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  inspect-bfcl-v1-v3-smoke:
+    if: ${{ inputs.confirmation == 'RUN' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Validate opt-in and secret boundary
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          MODEL: ${{ inputs.model }}
+          LIMIT: ${{ inputs.sample_limit }}
+        run: |
+          test -n "$OPENAI_API_KEY" || { echo '::error::OPENAI_API_KEY repository secret is not configured'; exit 2; }
+          case "$MODEL" in
+            openai/*) ;;
+            *) echo '::error::This dispatch is intentionally limited to the OpenAI provider namespace'; exit 2 ;;
+          esac
+          case "$LIMIT" in
+            ''|*[!0-9]*) echo '::error::sample_limit must be an integer'; exit 2 ;;
+          esac
+          test "$LIMIT" -ge 1 -a "$LIMIT" -le 100 || { echo '::error::sample_limit must be between 1 and 100'; exit 2; }
+
+      - name: Download reviewed Inspect wheels without installing
+        run: |
+          rm -rf benchmarks/.artifact-check
+          mkdir -p benchmarks/.artifact-check
+          python -m pip download --disable-pip-version-check --no-deps --only-binary=:all: \
+            'inspect-ai==0.3.261' 'inspect-evals==0.18.0' \
+            --dest benchmarks/.artifact-check
+
+      - name: Verify reviewed top-level wheel hashes
+        run: python3 scripts/verify_benchmark_artifacts.py
+
+      - name: Install isolated benchmark runtime
+        run: |
+          python -m pip install --disable-pip-version-check --only-binary=:all: \
+            benchmarks/.artifact-check/inspect_ai-0.3.261-py3-none-any.whl \
+            benchmarks/.artifact-check/inspect_evals-0.18.0-py3-none-any.whl
+          python -m pip freeze > benchmark-runtime-freeze.txt
+          inspect --version
+
+      - name: Record reproducibility metadata
+        env:
+          MODEL: ${{ inputs.model }}
+          LIMIT: ${{ inputs.sample_limit }}
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, pathlib, subprocess
+          root = pathlib.Path('.')
+          manifest = root / 'benchmarks/manifest.json'
+          payload = {
+              'benchmark_id': 'inspect-bfcl-v1-v3-baseline',
+              'comparability': 'internal baseline only; NOT BFCL V4 comparable',
+              'ercan_os_commit': os.environ.get('GITHUB_SHA'),
+              'model': os.environ['MODEL'],
+              'sample_limit': int(os.environ['LIMIT']),
+              'manifest_sha256': hashlib.sha256(manifest.read_bytes()).hexdigest(),
+              'runtime_freeze_sha256': hashlib.sha256((root / 'benchmark-runtime-freeze.txt').read_bytes()).hexdigest(),
+              'workflow_run_id': os.environ.get('GITHUB_RUN_ID'),
+              'workflow_run_attempt': os.environ.get('GITHUB_RUN_ATTEMPT'),
+          }
+          (root / 'behavioral-run-metadata.json').write_text(json.dumps(payload, indent=2) + '\n', encoding='utf-8')
+          PY
+
+      - name: Run Inspect BFCL V1-V3 smoke baseline
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_AGENTS_TRACE_INCLUDE_SENSITIVE_DATA: "0"
+          MODEL: ${{ inputs.model }}
+          LIMIT: ${{ inputs.sample_limit }}
+        run: |
+          mkdir -p benchmark-logs
+          inspect eval inspect_evals/bfcl \
+            --model "$MODEL" \
+            --limit "$LIMIT" \
+            --display none \
+            --log-dir benchmark-logs
+
+      - name: Upload reproducibility evidence
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: behavioral-bfcl-v1-v3-${{ github.run_id }}
+          path: |
+            behavioral-run-metadata.json
+            benchmark-runtime-freeze.txt
+            benchmark-logs/**
+          if-no-files-found: warn
+          retention-days: 30
