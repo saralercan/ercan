@@ -1,0 +1,37 @@
+name: Ercan OS Agent Scoreboard
+
+on:
+  pull_request:
+    paths:
+      - 'docs/standards/**'
+      - 'docs/research/**'
+      - 'docs/evals/**'
+      - '.agents/skills/**'
+      - '.codex/config.toml'
+      - 'scripts/validate_agent_scoreboard.py'
+      - '.github/workflows/agent-scoreboard.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'docs/standards/**'
+      - 'docs/research/**'
+      - 'docs/evals/**'
+      - '.agents/skills/**'
+      - '.codex/config.toml'
+      - 'scripts/validate_agent_scoreboard.py'
+      - '.github/workflows/agent-scoreboard.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  static-agent-readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate 21-agent structural readiness
+        run: python3 scripts/validate_agent_scoreboard.py --check
