@@ -42,6 +42,27 @@
       "targets": ["@WebAppExpert", "@ShopifyExpert", "@WordPressExpert", "@WixExpert", "@AgentMCPExpert"]
     },
     {
+      "id": "codex-swebench-prediction-harness",
+      "kind": "coding-agent-prediction-generation",
+      "status": "NOT_RUN",
+      "canonical_source": "https://github.com/openai/codex-action",
+      "pin": {
+        "codex-action-commit": "86365089eb2b84e0a8fb0717b304f8bdcb13b20e",
+        "codex-action-tag-observed": "v1",
+        "codex-cli": "0.151.0",
+        "permission-profile": ":workspace",
+        "safety-strategy": "drop-sudo",
+        "project_doc_max_bytes": 0,
+        "agent_harness_id": "ercan-os-codex-webapp-v1",
+        "max_instances_per_generation_run": 3,
+        "dataset_metadata_source": "Hugging Face Dataset Viewer filter API",
+        "gold_patch_exposure": "prohibited"
+      },
+      "checked_at": "2026-08-31",
+      "freshness_days": 14,
+      "targets": ["@WebAppExpert"]
+    },
+    {
       "id": "swe-bench-multimodal",
       "kind": "visual-coding",
       "status": "NOT_RUN",
