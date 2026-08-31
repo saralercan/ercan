@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "updated": "2026-08-31",
+  "policy": "docs/evals/RECERTIFICATION_POLICY.md",
+  "agents": {
+    "@Orchestrator": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@UpstreamIntelligence": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@ShopifyExpert": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@WordPressExpert": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@WixExpert": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@DragDrop": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@VinterroDigital": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@AyvalıkVibes": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@GoAyvalık": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@ScreenshotToCode": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@RealAsset": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@PixelMatch": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@UXEnhancement": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@ProductionQA": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@SEOExpert": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@SocialMediaExpert": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@CreativeDesignExpert": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@WebAppExpert": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@SecurityExpert": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@PerformanceExpert": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"},
+    "@AgentMCPExpert": {"static_readiness":"PASS","behavioral_evidence":"NOT_RUN","external_comparative":"NOT_RUN","production_status":"NOT_CLAIMED","recertification":"NOT_REQUIRED"}
+  }
+}
