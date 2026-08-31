@@ -1,0 +1,41 @@
+name: Ercan OS Benchmark Provenance
+
+on:
+  pull_request:
+    paths:
+      - 'benchmarks/manifest.json'
+      - 'benchmarks/inspect/**'
+      - 'scripts/verify_benchmark_artifacts.py'
+      - '.github/workflows/benchmark-provenance.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'benchmarks/manifest.json'
+      - 'benchmarks/inspect/**'
+      - 'scripts/verify_benchmark_artifacts.py'
+      - '.github/workflows/benchmark-provenance.yml'
+  schedule:
+    - cron: '31 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect-wheel-provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Download pinned wheels without installing them
+        run: |
+          rm -rf benchmarks/.artifact-check
+          mkdir -p benchmarks/.artifact-check
+          python -m pip download --disable-pip-version-check --no-deps --only-binary=:all: \
+            'inspect-ai==0.3.261' 'inspect-evals==0.18.0' \
+            --dest benchmarks/.artifact-check
+      - name: Verify reviewed SHA-256 hashes
+        run: python3 scripts/verify_benchmark_artifacts.py
