@@ -6,6 +6,12 @@ Canonical stable-core count: **21**
 
 This file is the compact counting/index surface. Detailed contracts live in `AGENT_REGISTRY.md`, `DOMAIN_EXPERT_REGISTRY.md`, platform/domain training standards and project adapters.
 
+Every stable identity is also governed by:
+- `docs/standards/WORLD_CLASS_AGENT_RESEARCH.md` — evidence hierarchy, freshness, scientific discipline and world-class claim gate;
+- `docs/research/AGENT_SOURCE_PACKS.md` — per-agent canonical/scientific/GitHub source maps;
+- `docs/evals/WORLD_CLASS_AGENT_BENCHMARK_SUITE.md` — cross-agent certification and comparative benchmark framework;
+- `.agents/skills/expert-research-refresh/SKILL.md` — JIT research refresh procedure.
+
 ## Control / intelligence
 1. `@Orchestrator`
 2. `@UpstreamIntelligence`
@@ -36,6 +42,12 @@ This file is the compact counting/index surface. Detailed contracts live in `AGE
 19. `@SecurityExpert`
 20. `@PerformanceExpert`
 21. `@AgentMCPExpert`
+
+## Maintained-expertise rule
+
+A stable identity is not considered current merely because it is listed here. On volatile or material work it must use its JIT source pack and current primary evidence rather than stale model memory. New scientific findings, platform changes, advisories and benchmark failures feed back into training and regression tests.
+
+`PRODUCTION_VERIFIED` means the current certification/regression evidence passed for the applicable task class. It does not mean perfect, error-free or objectively best in the world. Comparative world-class claims require dated reproducible benchmark evidence.
 
 ## Counting rule
 
