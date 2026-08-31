@@ -34,6 +34,12 @@ Current index entries override older catalog/ledger entries only when the same u
 - Unified Wix CLI/current development-path docs — **ADOPT / CANONICAL DIRECTION** for new Wix-managed apps/headless projects. Legacy CLI patterns are compatibility-only after project inspection.
 - Stable Ercan OS routing identities now exist for `@ShopifyExpert`, `@WordPressExpert`, and `@WixExpert`; production competence is governed by `PLATFORM_EXPERT_TRAINING.md` + `PLATFORM_EXPERT_CERTIFICATION.md`.
 
+### Agent evaluation / benchmark runtime
+- `UKGovernmentBEIS/inspect_ai` / Inspect AI — **ADOPT_WHEN_NEEDED / EVALUATION ORCHESTRATION** for reproducible coding, agentic, reasoning, multimodal and tool/MCP evaluations. It is a neutral runner/log/scorer framework, not authority over a benchmark's canonical scoring/version contract.
+- `UKGovernmentBEIS/inspect_evals` — **ADOPT_WHEN_NEEDED / DISCOVERY+RUNNER SOURCE**. Since May 2026, new eval submissions use an external-register model; every externally managed eval must be pinned to its upstream commit before comparable use.
+- Reviewed runtime pins live in `benchmarks/manifest.json`; freshness and execution privacy are governed by `docs/evals/BENCHMARK_RUNTIME_CONTRACT.md`.
+- OpenAI Agents SDK tracing may capture generation/tool payloads; benchmark runs involving sensitive fixtures must disable/exclude sensitive trace content rather than exporting it by default.
+
 ### Mobile / Flutter
 - `flutter/agent-plugins` — **ADOPT_WHEN_NEEDED** — official Flutter agent/runtime skill reference; prefer over community Flutter agent packs for Flutter implementation/debugging.
 
