@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "updated": "2026-08-31",
+  "policy": "docs/evals/BENCHMARK_RUNTIME_CONTRACT.md",
+  "suites": [
+    {
+      "id": "bfcl-v4",
+      "kind": "tool-use",
+      "status": "NOT_RUN",
+      "canonical_source": "https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard",
+      "pin": {"commit": "f7cf735", "package": "bfcl-eval==2025.12.17"},
+      "checked_at": "2026-08-31",
+      "freshness_days": 30,
+      "targets": ["@Orchestrator", "@AgentMCPExpert", "@ShopifyExpert", "@WordPressExpert", "@WixExpert"]
+    },
+    {
+      "id": "swe-bench-verified",
+      "kind": "coding",
+      "status": "NOT_RUN",
+      "canonical_source": "https://www.swebench.com/SWE-bench/reference/harness/",
+      "pin": {"dataset": "princeton-nlp/SWE-bench_Verified", "instances": 500, "runner": "swebench.harness.run_evaluation"},
+      "checked_at": "2026-08-31",
+      "freshness_days": 30,
+      "targets": ["@WebAppExpert", "@ShopifyExpert", "@WordPressExpert", "@WixExpert", "@AgentMCPExpert"]
+    },
+    {
+      "id": "swe-bench-multimodal",
+      "kind": "visual-coding",
+      "status": "NOT_RUN",
+      "canonical_source": "https://github.com/SWE-bench/SWE-bench",
+      "pin": {"dataset": "princeton-nlp/SWE-bench_Multimodal", "local_preflight": "public-dev"},
+      "checked_at": "2026-08-31",
+      "freshness_days": 30,
+      "targets": ["@ScreenshotToCode", "@PixelMatch", "@ProductionQA", "@WebAppExpert"]
+    },
+    {
+      "id": "inspect-runtime",
+      "kind": "eval-orchestration",
+      "status": "ADOPT_WHEN_NEEDED",
+      "canonical_source": "https://inspect.aisi.org.uk/",
+      "pin": {
+        "inspect-ai": "0.3.261",
+        "inspect-ai-wheel-sha256": "b30e4c2c4d380343072ec9e14019eae46e9e41401bed34d2ca1c79adeb700be6",
+        "inspect-evals": "0.18.0",
+        "inspect-evals-wheel-sha256": "dfe1a2468f0fbec22e49a40bf87290cdbdf1d8aaad1965eaee0c35461701a893"
+      },
+      "checked_at": "2026-08-31",
+      "freshness_days": 14,
+      "targets": ["@Orchestrator", "@AgentMCPExpert", "@WebAppExpert", "@SecurityExpert", "@ProductionQA"]
+    },
+    {
+      "id": "mcp-2026-07-28",
+      "kind": "protocol",
+      "status": "SCENARIOS_DEFINED",
+      "canonical_source": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+      "pin": {"spec_date": "2026-07-28"},
+      "checked_at": "2026-08-31",
+      "freshness_days": 14,
+      "targets": ["@AgentMCPExpert", "@SecurityExpert", "@Orchestrator"]
+    },
+    {
+      "id": "security-normative",
+      "kind": "security",
+      "status": "SCENARIOS_DEFINED",
+      "canonical_source": "https://owasp.org/www-project-application-security-verification-standard/",
+      "pin": {"asvs": "5.0.0", "wstg": "current", "nist_ssdf": "SP 800-218"},
+      "checked_at": "2026-08-31",
+      "freshness_days": 30,
+      "targets": ["@SecurityExpert", "@AgentMCPExpert", "@ProductionQA"]
+    }
+  ]
+}

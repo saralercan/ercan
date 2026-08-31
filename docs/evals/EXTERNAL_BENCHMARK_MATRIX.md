@@ -13,6 +13,36 @@ Purpose: define reproducible external behavioral/comparative benchmark runs for 
 - Do not cherry-pick passing cases after seeing results.
 - Store task IDs, raw outcome state, evaluator result, failure taxonomy, latency and cost when measurable.
 - `NOT_RUN` is preferable to fabricated or incomparable results.
+- Execution/privacy details are governed by `docs/evals/BENCHMARK_RUNTIME_CONTRACT.md` and machine-readable pins by `benchmarks/manifest.json`.
+
+## Inspect AI — neutral evaluation runtime
+
+Official sources:
+- https://inspect.aisi.org.uk/
+- https://github.com/UKGovernmentBEIS/inspect_ai
+- https://github.com/UKGovernmentBEIS/inspect_evals
+
+Decision: **ADOPT_WHEN_NEEDED / EVALUATION ORCHESTRATION**, not benchmark authority.
+
+Reviewed 2026-08-31 pins:
+- `inspect-ai==0.3.261`
+- `inspect-evals==0.18.0`
+
+Inspect provides composable datasets, agents/tools and scorers plus structured evaluation logs across coding, agentic, reasoning and multimodal tasks. Inspect Evals moved new submissions to an external-register model in May 2026; externally managed evals must be pinned to their own upstream commit before comparable execution. Inspect task comparability/version changes must be respected rather than mixing results across incompatible task versions.
+
+Primary Ercan OS use:
+- common runner/log format across compatible internal/adapted suites;
+- BFCL/SWE-bench wrappers only when their output remains faithful to canonical scoring;
+- security/agentic/GUI eval orchestration;
+- reproducible result artifact and scorer metadata.
+
+Privacy gate:
+- no secrets in repo;
+- sanitize benchmark fixtures;
+- OpenAI Agents SDK tracing may capture model and tool inputs/outputs, so sensitive trace payload capture must be disabled/excluded when applicable;
+- trace/harness IDs may be used for reproducible grouping, but production private data is not exported merely for evaluation convenience.
+
+Current status: **RUNTIME_CONTRACT_READY / PAID MODEL RUN NOT_RUN**.
 
 ## BFCL V4 — tool use / orchestration
 
@@ -44,7 +74,7 @@ Official source: https://github.com/SWE-bench/SWE-bench
 
 Current dataset/evaluation facts observed 2026-08-31:
 - SWE-bench Verified contains 500 expert-verified solvable problems.
-- Current upstream CLI supports `swebench eval verified` and Docker-backed reproducible evaluation.
+- Current upstream evaluation uses Docker-backed reproducible environments and `swebench.harness.run_evaluation` for predictions.
 - Predictions must come from an actual agent/model run; gold patches are only harness validation.
 
 Primary Ercan OS targets:
@@ -68,8 +98,7 @@ Current status: **NOT_RUN** — this ChatGPT session does not expose a Docker/mo
 Official source: https://github.com/SWE-bench/SWE-bench
 
 Current dataset facts:
-- 100 public dev instances and 500 test instances are documented upstream.
-- Upstream states the test evaluation is private/leaderboard-submission oriented; use the public dev split for local preflight and official submission for comparable test claims.
+- public development instances are suitable for local preflight; official comparable test claims require the benchmark's accepted evaluation/submission path.
 
 Primary Ercan OS targets:
 - `@ScreenshotToCode`

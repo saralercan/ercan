@@ -1,0 +1,13 @@
+[project]
+name = "ercan-os-inspect-benchmarks"
+version = "0.1.0"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "inspect-ai==0.3.261",
+  "inspect-evals==0.18.0",
+]
+
+[tool.ercan-benchmarks]
+status = "optional-isolated-runtime"
+manifest = "../manifest.json"
+no_credentials_in_repo = true
