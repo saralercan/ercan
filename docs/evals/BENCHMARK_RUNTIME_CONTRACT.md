@@ -63,6 +63,8 @@ A result becomes `STALE_COMPARISON` when a benchmark changes in a way that affec
 ### BFCL
 Use the official Berkeley Function Calling Leaderboard harness/package at the pinned comparable commit/version. Preserve test-category coverage; unrun categories cannot be silently ignored in overall claims. Record irrelevant-tool/hallucination behavior and latency in addition to accuracy.
 
+The current Inspect Evals BFCL port implements BFCL V1, V2 and V3 categories, not BFCL V4. It may be used as an internal V1–V3 behavioral baseline, but its score must **never** be reported as a BFCL V4 leaderboard-comparable result. BFCL V4 comparative claims require the official Berkeley V4 harness/package and its pinned comparability contract.
+
 ### SWE-bench Verified
 Use the official Docker-based `swebench.harness` evaluation. Gold patches validate the harness only; Ercan OS scores require predictions produced by the actual configured agent/model. Record resolved/failed instance IDs and patch/test logs.
 
