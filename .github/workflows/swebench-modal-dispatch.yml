@@ -15,12 +15,25 @@ on:
         options:
           - lite
           - verified
-      predictions_path:
-        description: "Repo-relative JSONL under benchmarks/predictions/"
+      predictions_source:
+        description: "Use generated artifact or reviewed repo JSONL"
         required: true
+        default: "artifact"
+        type: choice
+        options:
+          - artifact
+          - repo
+      generator_run_id:
+        description: "Successful Codex prediction workflow run ID when source=artifact"
+        required: false
+        type: string
+      predictions_path:
+        description: "Repo-relative JSONL under benchmarks/predictions/ when source=repo"
+        required: false
+        default: "benchmarks/predictions/predictions.jsonl"
         type: string
       run_id:
-        description: "Unique run ID; change it when predictions change"
+        description: "Unique SWE-bench run ID; change it when predictions change"
         required: true
         type: string
       parallelism:
@@ -37,6 +50,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
 
 concurrency:
   group: ercan-swebench-modal
@@ -61,35 +75,84 @@ jobs:
           test "$GITHUB_REF" = "refs/heads/master" || { echo "paid benchmark dispatch is allowed only from master"; exit 2; }
           test -n "$MODAL_TOKEN_ID" || { echo "MODAL_TOKEN_ID secret is not configured"; exit 2; }
           test -n "$MODAL_TOKEN_SECRET" || { echo "MODAL_TOKEN_SECRET secret is not configured"; exit 2; }
+          test "${{ inputs.run_id }}" != "" || { echo "run_id is required"; exit 2; }
 
       - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
 
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
-      - name: Validate predictions path and schema
+      - name: Verify generator workflow provenance
+        if: ${{ inputs.predictions_source == 'artifact' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GENERATOR_RUN_ID: ${{ inputs.generator_run_id }}
         shell: bash
         run: |
           set -euo pipefail
+          test "$GENERATOR_RUN_ID" != "" || { echo "generator_run_id is required for artifact source"; exit 2; }
+          [[ "$GENERATOR_RUN_ID" =~ ^[0-9]+$ ]] || { echo "generator_run_id must be numeric"; exit 2; }
+          curl --fail --silent --show-error \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/runs/${GENERATOR_RUN_ID}" \
+            > generator-run.json
           python3 - <<'PY'
-          from pathlib import Path
-          root = Path.cwd().resolve()
-          rel = Path("${{ inputs.predictions_path }}")
-          if rel.is_absolute() or ".." in rel.parts:
-              raise SystemExit("predictions_path must be repo-relative without ..")
-          full = (root / rel).resolve()
-          allowed = (root / "benchmarks" / "predictions").resolve()
-          try:
-              full.relative_to(allowed)
-          except ValueError:
-              raise SystemExit("predictions_path must be under benchmarks/predictions/")
-          if full.suffix != ".jsonl":
-              raise SystemExit("predictions_path must end in .jsonl")
-          if not full.is_file():
-              raise SystemExit(f"predictions file not found: {full}")
+          import json
+          run = json.load(open("generator-run.json", encoding="utf-8"))
+          expected = {
+              "name": "Ercan OS Codex SWE-bench Predictions",
+              "event": "workflow_dispatch",
+              "head_branch": "master",
+              "conclusion": "success",
+          }
+          bad = {k: (run.get(k), v) for k, v in expected.items() if run.get(k) != v}
+          if bad:
+              raise SystemExit(f"generator workflow provenance rejected: {bad}")
+          print({k: run.get(k) for k in ("id", "name", "event", "head_branch", "head_sha", "conclusion")})
           PY
-          python3 scripts/validate_swebench_predictions.py "${{ inputs.predictions_path }}" --max-instances 500 | tee predictions-validation.json
+
+      - name: Download generated predictions artifact
+        if: ${{ inputs.predictions_source == 'artifact' }}
+        uses: actions/download-artifact@v8
+        with:
+          name: swebench-predictions-${{ inputs.dataset }}-${{ inputs.generator_run_id }}
+          path: artifact-input
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: ${{ inputs.generator_run_id }}
+
+      - name: Select and validate predictions
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${{ inputs.predictions_source }}" = "artifact" ]; then
+            PREDICTIONS_FILE="artifact-input/predictions.jsonl"
+            test -f "$PREDICTIONS_FILE" || { echo "combined predictions.jsonl missing from generator artifact"; exit 2; }
+          else
+            PREDICTIONS_FILE="${{ inputs.predictions_path }}"
+            python3 - <<'PY'
+            from pathlib import Path
+            root = Path.cwd().resolve()
+            rel = Path("${{ inputs.predictions_path }}")
+            if rel.is_absolute() or ".." in rel.parts:
+                raise SystemExit("predictions_path must be repo-relative without ..")
+            full = (root / rel).resolve()
+            allowed = (root / "benchmarks" / "predictions").resolve()
+            try:
+                full.relative_to(allowed)
+            except ValueError:
+                raise SystemExit("predictions_path must be under benchmarks/predictions/")
+            if full.suffix != ".jsonl" or not full.is_file():
+                raise SystemExit("valid predictions JSONL not found")
+            PY
+          fi
+          echo "PREDICTIONS_FILE=$PREDICTIONS_FILE" >> "$GITHUB_ENV"
+          python3 scripts/validate_swebench_predictions.py "$PREDICTIONS_FILE" --max-instances 500 | tee predictions-validation.json
+          sha256sum "$PREDICTIONS_FILE" | tee predictions-input.sha256
 
       - name: Verify and install pinned SWE-bench harness
         shell: bash
@@ -108,17 +171,19 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p benchmark-evidence
-          cp predictions-validation.json benchmark-evidence/
-          cp benchmark-dependencies.txt benchmark-evidence/
+          cp predictions-validation.json predictions-input.sha256 benchmark-dependencies.txt benchmark-evidence/
+          if [ -f generator-run.json ]; then cp generator-run.json benchmark-evidence/; fi
           python3 - <<'PY'
           import hashlib, json, os
           from pathlib import Path
-          p = Path("${{ inputs.predictions_path }}")
+          p = Path(os.environ["PREDICTIONS_FILE"])
           record = {
               "ercan_os_commit": os.environ["GITHUB_SHA"],
               "dataset": "${{ inputs.dataset }}",
               "run_id": "${{ inputs.run_id }}",
               "parallelism": int("${{ inputs.parallelism }}"),
+              "predictions_source": "${{ inputs.predictions_source }}",
+              "generator_run_id": "${{ inputs.generator_run_id }}" or None,
               "predictions_path": str(p),
               "predictions_sha256": hashlib.sha256(p.read_bytes()).hexdigest(),
               "swebench": os.environ["SWE_BENCH_VERSION"],
@@ -133,7 +198,7 @@ jobs:
         run: |
           set -euo pipefail
           swebench eval "${{ inputs.dataset }}" \
-            -p "${{ inputs.predictions_path }}" \
+            -p "$PREDICTIONS_FILE" \
             --run-id "${{ inputs.run_id }}" \
             --modal \
             -j "${{ inputs.parallelism }}"
@@ -143,7 +208,7 @@ jobs:
         shell: bash
         run: |
           set +e
-          find . -maxdepth 5 -type f \( -name "*${{ inputs.run_id }}*.json" -o -name "*.log" -o -name "*.eval" \) -print0 \
+          find . -maxdepth 6 -type f \( -name "*${{ inputs.run_id }}*.json" -o -name "*.log" -o -name "*.eval" \) -print0 \
             | xargs -0 -r -I{} cp --parents "{}" benchmark-evidence/
           find benchmark-evidence -type f -print0 | sort -z | xargs -0 sha256sum > benchmark-evidence/SHA256SUMS.txt
 
