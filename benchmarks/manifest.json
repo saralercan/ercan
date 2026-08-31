@@ -27,20 +27,28 @@
       "id": "swe-bench-verified",
       "kind": "coding",
       "status": "NOT_RUN",
-      "canonical_source": "https://www.swebench.com/SWE-bench/reference/harness/",
-      "pin": {"dataset": "princeton-nlp/SWE-bench_Verified", "instances": 500, "runner": "swebench.harness.run_evaluation"},
+      "canonical_source": "https://www.swebench.com/SWE-bench/guides/evaluation/",
+      "pin": {
+        "dataset": "SWE-bench/SWE-bench_Verified",
+        "instances": 500,
+        "swebench-package": "5.0.2",
+        "swebench-wheel-sha256": "b7f0416a1e686eca22c2f749b5f816685a202835032f6683080e2b53545bbb62",
+        "runner": "swebench eval verified",
+        "cloud": ["modal", "sb-cli/aws"],
+        "run_id_rule": "unique when predictions change"
+      },
       "checked_at": "2026-08-31",
-      "freshness_days": 30,
+      "freshness_days": 14,
       "targets": ["@WebAppExpert", "@ShopifyExpert", "@WordPressExpert", "@WixExpert", "@AgentMCPExpert"]
     },
     {
       "id": "swe-bench-multimodal",
       "kind": "visual-coding",
       "status": "NOT_RUN",
-      "canonical_source": "https://github.com/SWE-bench/SWE-bench",
-      "pin": {"dataset": "princeton-nlp/SWE-bench_Multimodal", "local_preflight": "public-dev"},
+      "canonical_source": "https://www.swebench.com/submit.html",
+      "pin": {"dataset": "SWE-bench/SWE-bench_Multimodal", "local_preflight": "public-dev", "test_evaluation": "accepted official path / sb-cli"},
       "checked_at": "2026-08-31",
-      "freshness_days": 30,
+      "freshness_days": 14,
       "targets": ["@ScreenshotToCode", "@PixelMatch", "@ProductionQA", "@WebAppExpert"]
     },
     {
