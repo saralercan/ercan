@@ -8,8 +8,10 @@ on:
       - 'docs/standards/STABLE_AGENT_CORE.md'
       - 'scripts/validate_benchmark_contracts.py'
       - 'scripts/validate_swebench_predictions.py'
+      - 'scripts/fetch_swebench_case.py'
       - '.github/workflows/benchmark-contracts.yml'
       - '.github/workflows/behavioral-benchmark-dispatch.yml'
+      - '.github/workflows/codex-swebench-predictions.yml'
       - '.github/workflows/swebench-modal-dispatch.yml'
   push:
     branches: [master]
@@ -19,8 +21,10 @@ on:
       - 'docs/standards/STABLE_AGENT_CORE.md'
       - 'scripts/validate_benchmark_contracts.py'
       - 'scripts/validate_swebench_predictions.py'
+      - 'scripts/fetch_swebench_case.py'
       - '.github/workflows/benchmark-contracts.yml'
       - '.github/workflows/behavioral-benchmark-dispatch.yml'
+      - '.github/workflows/codex-swebench-predictions.yml'
       - '.github/workflows/swebench-modal-dispatch.yml'
   schedule:
     - cron: '17 5 * * 1'
