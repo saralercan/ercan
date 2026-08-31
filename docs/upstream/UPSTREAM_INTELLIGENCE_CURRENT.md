@@ -1,7 +1,7 @@
 # Ercan OS — Current Upstream Intelligence Index
 
 Status: active operational overlay
-Updated: 2026-08-30
+Updated: 2026-08-31
 
 Purpose: make the newest reviewed upstream findings immediately visible to GPT/Ercan OS and Codex without forcing every task to read every dated scan. This file is an operational overlay on top of `UPSTREAM_INTELLIGENCE_CATALOG.md` and `DISCOVERY_ADOPTION_LEDGER.md`. Dated scan files remain the evidence/history layer.
 
@@ -22,8 +22,17 @@ Current index entries override older catalog/ledger entries only when the same u
 - `docs/upstream/scans/2026-08-30-continuation.md`
 - `docs/upstream/scans/2026-08-30-third-pass.md`
 - `docs/upstream/scans/2026-08-30-fourth-pass.md`
+- `docs/upstream/scans/2026-08-31-platform-expert-training.md`
 
 ## Current promotions and status changes
+
+### Platform expert agent training
+- `Shopify/Shopify-AI-Toolkit` — **ADOPT_WHEN_NEEDED / CANONICAL AGENT TRAINING SOURCE** for Shopify-specific docs/schema search, code validation and platform skills. Load the smallest relevant official skills JIT; inspect current telemetry/privacy behavior before execution and never send secrets/private customer data unnecessarily.
+- Shopify Dev MCP — **ADOPT_WHEN_NEEDED / CANONICAL DEVELOPER CONTEXT** for current Shopify docs/schema/validation; native runtime/browser QA remains separate.
+- `WordPress/agent-skills` — **ADOPT_WHEN_NEEDED / CANONICAL AGENT TRAINING SOURCE** for modern WordPress routing, blocks, themes, plugins, REST, Interactivity, Abilities, WP-CLI, performance, Playground and related workflows.
+- `wix/skills` — **ADOPT_WHEN_NEEDED / OFFICIAL EXPERIMENTAL TRAINING SOURCE**. It is Wix-owned and Codex-compatible but explicitly experimental; verify every material result against current `dev.wix.com` docs and real project behavior.
+- Unified Wix CLI/current development-path docs — **ADOPT / CANONICAL DIRECTION** for new Wix-managed apps/headless projects. Legacy CLI patterns are compatibility-only after project inspection.
+- Stable Ercan OS routing identities now exist for `@ShopifyExpert`, `@WordPressExpert`, and `@WixExpert`; production competence is governed by `PLATFORM_EXPERT_TRAINING.md` + `PLATFORM_EXPERT_CERTIFICATION.md`.
 
 ### Mobile / Flutter
 - `flutter/agent-plugins` — **ADOPT_WHEN_NEEDED** — official Flutter agent/runtime skill reference; prefer over community Flutter agent packs for Flutter implementation/debugging.
@@ -105,6 +114,8 @@ When `@Orchestrator` selects an upstream-intelligence workstream:
 - use the smallest task-relevant unit and perform current upstream verification before production adoption;
 - route security-sensitive findings through existing Ercan OS policy/QA/security gates;
 - preserve `ADOPT_PATTERN_ONLY`, `WATCHLIST`, `SUPERSEDED`, and `REJECT` boundaries exactly.
+
+For Shopify/WordPress/Wix tasks, current platform-expert training decisions in this index are mandatory routing inputs even when a broader upstream-intelligence scan is not otherwise necessary.
 
 ## Promotion maintenance rule
 
