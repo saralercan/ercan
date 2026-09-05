@@ -5,6 +5,9 @@ Date: 2026-09-06
 
 Purpose: promote reviewed GitHub/open-source capabilities into qualified Ercan OS specialist routing for web, app/mobile, social media, SEO/AEO/GEO, Meta advertising/measurement and branding. This standard supplements, and never overrides, root `AGENTS.md`, `AGENT_REGISTRY.md`, `QUALIFIED_AGENT_ROUTING.md`, project adapters, safety, scope and independent QA rules.
 
+JIT upstream catalog supplement: `docs/upstream/GITHUB_SPECIALIST_CATALOG_V3.md`.
+Reviewed evidence: `docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md`.
+
 ## Core rule
 
 GitHub repositories are upstream capability references, not autonomous authorities. Stable Ercan OS specialist identities own the task. Upstreams are loaded JIT, re-verified when volatile, and adopted narrowly. Archived/deprecated projects are historical/pattern references only unless a maintained successor does not exist and the task explicitly justifies them.
