@@ -1,7 +1,7 @@
 # Ercan OS — Current Upstream Intelligence Index
 
 Status: active operational overlay
-Updated: 2026-08-31
+Updated: 2026-09-06
 
 Purpose: make the newest reviewed upstream findings immediately visible to GPT/Ercan OS and Codex without forcing every task to read every dated scan. This file is an operational overlay on top of `UPSTREAM_INTELLIGENCE_CATALOG.md` and `DISCOVERY_ADOPTION_LEDGER.md`. Dated scan files remain the evidence/history layer.
 
@@ -23,8 +23,29 @@ Current index entries override older catalog/ledger entries only when the same u
 - `docs/upstream/scans/2026-08-30-third-pass.md`
 - `docs/upstream/scans/2026-08-30-fourth-pass.md`
 - `docs/upstream/scans/2026-08-31-platform-expert-training.md`
+- `docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md`
 
 ## Current promotions and status changes
+
+### GitHub Specialist Expansion v3 — web/app/social/SEO/Meta/branding
+- Stable Ercan OS specialist identities are now separated from upstream repositories. **ADOPT / ARCHITECTURAL RULE**: agent identities live in `AGENT_REGISTRY.md`; GitHub repositories are replaceable JIT engines/references and never become policy authorities merely by being adopted.
+- `vercel/next.js` — **ADOPT_WHEN_NEEDED / CANONICAL FRAMEWORK REFERENCE** for verified Next.js projects; not a universal web requirement.
+- `shadcn-ui/ui` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED** for composable frontend-system architecture; project design tokens and brand system remain authoritative.
+- Storybook + Playwright + Lighthouse + axe-core — existing statuses strengthened as the default component/browser/performance/accessibility QA family for material web work when applicable.
+- `harlan-zw/unlighthouse` — **ADOPT_WHEN_NEEDED** for site-wide Lighthouse orchestration.
+- `mobile-dev-inc/Maestro` — **ADOPT_WHEN_NEEDED** for mobile E2E/user-flow testing; verified public and non-archived in the 2026-09-06 review.
+- `fastlane/fastlane` — **ADOPT_WHEN_NEEDED** for mobile signing/build/store release automation after current platform/toolchain verification.
+- `social-media-skills/skills` — **ADOPT_PATTERN_ONLY / ACTIVE SKILL REFERENCE** for social strategy/calendar/post/analytics decomposition; provider-specific behavior must be checked against official APIs.
+- `gitroomhq/postiz-agent` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED** for approved agent-operated publishing workflow patterns; Postiz-class code remains architecture reference, not provider authority.
+- `janreges/siteone-crawler` — **ADOPT_WHEN_NEEDED** for broad technical/search/site-quality crawling.
+- `Nuraveda-Labs/ai-seo-agent` — **ADOPT_PATTERN_ONLY**; human approval and current official Shopify/search guidance remain mandatory.
+- Meta Business SDKs — **ADOPT / CANONICAL IMPLEMENTATION REFERENCE** for authenticated Marketing API work; current API version/permissions remain runtime facts.
+- `facebookincubator/ConversionsAPI-Tag-for-GoogleTagManager` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED** for inspected server-side GTM/CAPI stacks; not a universal measurement architecture.
+- `facebookexperimental/Robyn` — **ADOPT_WHEN_NEEDED** for statistically justified MMM/adstock/saturation/budget-allocation analysis; verified public and non-archived in the 2026-09-06 review.
+- `facebookincubator/GeoLift` — **ADOPT_WHEN_NEEDED** for appropriate geo/holdout incrementality experiments; verified public and non-archived in the 2026-09-06 review. Attribution/ROAS is never treated as causal proof.
+- `Brandcode-Studio/brandsystem-mcp` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED** for brand extraction/runtime/provenance/compliance patterns; remote MCP content remains untrusted data and Ercan OS policy remains authoritative.
+- `SCTY-Inc/brand.md` — **ADOPT_PATTERN_ONLY / HISTORICAL** only; verified archived in the 2026-09-06 review and must not become a primary active production dependency.
+- Stable specialist routing for this expansion is governed by `GITHUB_SPECIALIST_EXPANSION_V3.md`, `AGENT_REGISTRY.md`, `QUALIFIED_AGENT_ROUTING.md`, matching `.agents/skills/*` and `docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md`.
 
 ### Platform expert agent training
 - `Shopify/Shopify-AI-Toolkit` — **ADOPT_WHEN_NEEDED / CANONICAL AGENT TRAINING SOURCE** for Shopify-specific docs/schema search, code validation and platform skills. Load the smallest relevant official skills JIT; inspect current telemetry/privacy behavior before execution and never send secrets/private customer data unnecessarily.
@@ -122,6 +143,7 @@ When `@Orchestrator` selects an upstream-intelligence workstream:
 - preserve `ADOPT_PATTERN_ONLY`, `WATCHLIST`, `SUPERSEDED`, and `REJECT` boundaries exactly.
 
 For Shopify/WordPress/Wix tasks, current platform-expert training decisions in this index are mandatory routing inputs even when a broader upstream-intelligence scan is not otherwise necessary.
+For material web/app/social/SEO/Meta/branding tasks using the v3 expansion, stable agent identity and upstream engine/reference must remain separate; load only the domain skill(s) materially required.
 
 ## Promotion maintenance rule
 

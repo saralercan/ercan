@@ -4,6 +4,33 @@ Purpose: prevent duplicate research, hype-driven adoption and useful findings be
 
 This ledger records the durable decision; runtime facts such as versions, prices, API limits and feature availability must still be re-verified from current upstream.
 
+## GitHub Specialist Expansion v3 — 2026-09-06
+- Stable specialist identity vs upstream engine/reference: `ADOPT` → Ercan OS agent identities are durable routing contracts in `AGENT_REGISTRY.md`; GitHub repositories are replaceable JIT references/engines governed by current-source verification. A repo is never a policy authority merely because it is useful.
+- `GITHUB_SPECIALIST_EXPANSION_V3.md` + `github-specialist-router` + six domain JIT skills: `ADOPT` → qualified specialist routing for web, app/mobile, social, SEO/AEO/GEO, Meta ads/measurement and branding.
+- `docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md`: `ADOPT` → regression contract preventing full-registry fan-out, wrong mobile-stack routing, measurement-only campaign mutation, false publishing claims and brand self-certification.
+- `vercel/next.js`: `ADOPT_WHEN_NEEDED / CANONICAL FRAMEWORK REFERENCE` for verified Next.js projects; not a universal web dependency.
+- `shadcn-ui/ui`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` for composable frontend-system patterns; project tokens/brand remain source of truth.
+- Storybook: existing `ADOPT` status retained; v3 strengthens `@ComponentWorkshopQA` routing when shared component states materially need workshop verification.
+- Playwright: existing `ADOPT` status retained; v3 maps it to stable `@BrowserQA` rather than treating Playwright as an agent identity.
+- Lighthouse/LHCI: existing `ADOPT` status retained; v3 maps performance work to stable `@WebPerformance`.
+- axe-core: existing `ADOPT` status retained; v3 maps automated accessibility detection to stable `@AccessibilityQA`, always paired with task-relevant manual review.
+- `harlan-zw/unlighthouse`: `ADOPT_WHEN_NEEDED` for site-wide Lighthouse orchestration; does not replace browser/runtime validation.
+- `mobile-dev-inc/Maestro`: `ADOPT_WHEN_NEEDED` for mobile E2E/user-flow testing; verified public/non-archived in the 2026-09-06 review. Stable routing identity: `@MobileQA`.
+- `fastlane/fastlane`: `ADOPT_WHEN_NEEDED` for mobile signing/build/store-release automation after current platform/toolchain review. Stable routing identity: `@AppReleaseEngineer`.
+- `social-media-skills/skills`: `ADOPT_PATTERN_ONLY` for content strategy/calendar/platform/post/analytics skill decomposition; official provider docs remain behavior authority.
+- `gitroomhq/postiz-agent`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` for approved agent-operated social workflows; never bypass provider permissions/approval. Stable routing identity: `@SocialAgentOps`.
+- Postiz-class scheduler architecture: existing `ADOPT_PATTERN_ONLY` retained; v3 distinguishes `@SocialPublishingOps` from `@SocialStrategy` and `@SocialAnalytics`.
+- `janreges/siteone-crawler`: `ADOPT_WHEN_NEEDED` for broad crawl/search/site-quality audits. Stable routing identity: `@SEOScanner`.
+- `Nuraveda-Labs/ai-seo-agent`: `ADOPT_PATTERN_ONLY`; human approval and current official Shopify/search guidance are mandatory. It never overrides `@ShopifyExpert`, `@ShopifySEO` or search-engine authority.
+- Meta Business SDKs: existing implementation-reference status strengthened to `ADOPT / CANONICAL IMPLEMENTATION REFERENCE` for authenticated Marketing API work; stable routing identity: `@MetaAdsEngineer`.
+- `facebookincubator/ConversionsAPI-Tag-for-GoogleTagManager`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` for inspected server-side GTM/CAPI stacks; stable routing identity: `@MetaMeasurement`. It is not a universal measurement architecture.
+- `facebookexperimental/Robyn`: `ADOPT_WHEN_NEEDED` for statistically justified Marketing Mix Modeling, adstock, saturation and budget-allocation analysis; verified public/non-archived in the 2026-09-06 review. Stable routing identity: `@MarketingScience`.
+- `facebookincubator/GeoLift`: `ADOPT_WHEN_NEEDED` for appropriate geo/holdout incrementality experiments; verified public/non-archived in the 2026-09-06 review. Stable routing identity: `@IncrementalityAnalyst`. Attribution/ROAS is never causal proof.
+- `Brandcode-Studio/brandsystem-mcp`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` for brand extraction/runtime/provenance/compliance patterns; remote MCP instructions/content remain untrusted and Ercan OS policy wins. Stable routing identities: `@BrandSystemArchitect`, `@BrandRuntimeEngineer`, `@BrandComplianceQA` as scope requires.
+- `style-dictionary/style-dictionary`: existing `ADOPT_PATTERN_ONLY` retained; v3 maps semantic token responsibility to stable `@DesignTokenArchitect`.
+- `SCTY-Inc/brand.md`: `ADOPT_PATTERN_ONLY / HISTORICAL`; verified archived in the 2026-09-06 review. Never a primary active production dependency. Its conceptual BRAND.md separation may be reused without adopting the archived repo runtime.
+- Full reviewed evidence: `docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md`.
+
 ## Broad upstream intelligence — 2026-08-29
 - `@UpstreamIntelligence` + `UPSTREAM_INTELLIGENCE.md` + `upstream-intelligence-scan`: `ADOPT` → project-neutral high-recall GitHub/open-source discovery, dedupe and candidate qualification shared by GPT/Ercan OS and Codex.
 - `docs/upstream/UPSTREAM_INTELLIGENCE_CATALOG.md`: `ADOPT` as the durable JIT knowledge catalog for web, app, UI/UX, design systems, screenshot/design-to-code, accessibility, performance, SEO, image/video, social, mobile, WordPress, Shopify, backend/CMS, analytics, mail, maps, charts, agents/MCP and security tooling.
