@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "standard": "GITHUB_SPECIALIST_EXPANSION_V3",
+  "status": "active",
+  "reviewed": "2026-09-06",
+  "routing_standard": "docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md",
+  "registry": "docs/standards/AGENT_REGISTRY.md",
+  "qualified_routing": "docs/standards/QUALIFIED_AGENT_ROUTING.md",
+  "catalog": "docs/upstream/GITHUB_SPECIALIST_CATALOG_V3.md",
+  "current_index": "docs/upstream/UPSTREAM_INTELLIGENCE_CURRENT.md",
+  "adoption_ledger": "docs/standards/DISCOVERY_ADOPTION_LEDGER.md",
+  "regression_eval": "docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md",
+  "evidence_scan": "docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md",
+  "router_skill": ".agents/skills/github-specialist-router/SKILL.md",
+  "domains": {
+    "web": {
+      "skill": ".agents/skills/web-production-specialist/SKILL.md",
+      "agents": [
+        "@WebArchitecture",
+        "@FrontendSystem",
+        "@BrowserQA",
+        "@AccessibilityQA",
+        "@WebPerformance",
+        "@ComponentWorkshopQA"
+      ],
+      "upstreams": [
+        {"repo": "vercel/next.js", "decision": "ADOPT_WHEN_NEEDED"},
+        {"repo": "shadcn-ui/ui", "decision": "ADOPT_PATTERN_ONLY"},
+        {"repo": "storybookjs/storybook", "decision": "ADOPT"},
+        {"repo": "microsoft/playwright", "decision": "ADOPT"},
+        {"repo": "GoogleChrome/lighthouse", "decision": "ADOPT"},
+        {"repo": "dequelabs/axe-core", "decision": "ADOPT"},
+        {"repo": "harlan-zw/unlighthouse", "decision": "ADOPT_WHEN_NEEDED"},
+        {"repo": "abi/screenshot-to-code", "decision": "ADOPT_PATTERN_ONLY"}
+      ]
+    },
+    "mobile": {
+      "skill": ".agents/skills/mobile-app-specialist/SKILL.md",
+      "agents": [
+        "@MobileArchitect",
+        "@FlutterSpecialist",
+        "@ReactNativeSpecialist",
+        "@MobileQA",
+        "@AppReleaseEngineer"
+      ],
+      "upstreams": [
+        {"repo": "flutter/flutter", "decision": "ADOPT_WHEN_NEEDED"},
+        {"repo": "facebook/react-native", "decision": "ADOPT_WHEN_NEEDED"},
+        {"repo": "expo/expo", "decision": "ADOPT_WHEN_NEEDED"},
+        {"repo": "mobile-dev-inc/Maestro", "decision": "ADOPT_WHEN_NEEDED"},
+        {"repo": "fastlane/fastlane", "decision": "ADOPT_WHEN_NEEDED"},
+        {"repo": "flutter/agent-plugins", "decision": "ADOPT_WHEN_NEEDED"}
+      ]
+    },
+    "social": {
+      "skill": ".agents/skills/social-growth-specialist/SKILL.md",
+      "additional_skills": [".agents/skills/social-publisher-architecture/SKILL.md"],
+      "agents": [
+        "@SocialStrategy",
+        "@SocialPublishingOps",
+        "@SocialAgentOps",
+        "@SocialAnalytics",
+        "@ContentRecycling"
+      ],
+      "upstreams": [
+        {"repo": "social-media-skills/skills", "decision": "ADOPT_PATTERN_ONLY"},
+        {"repo": "gitroomhq/postiz-app", "decision": "ADOPT_PATTERN_ONLY"},
+        {"repo": "gitroomhq/postiz-agent", "decision": "ADOPT_PATTERN_ONLY"}
+      ]
+    },
+    "seo": {
+      "skill": ".agents/skills/seo-aeo-geo-specialist/SKILL.md",
+      "agents": [
+        "@TechnicalSEO",
+        "@SEOScanner",
+        "@WordPressSEO",
+        "@ShopifySEO",
+        "@AEO_GEO"
+      ],
+      "upstreams": [
+        {"repo": "janreges/siteone-crawler", "decision": "ADOPT_WHEN_NEEDED"},
+        {"repo": "Yoast/wordpress-seo", "decision": "ADOPT_PATTERN_ONLY"},
+        {"repo": "Shopify/theme-tools", "decision": "ADOPT"},
+        {"repo": "Nuraveda-Labs/ai-seo-agent", "decision": "ADOPT_PATTERN_ONLY"}
+      ]
+    },
+    "meta_ads": {
+      "skill": ".agents/skills/meta-ads-measurement/SKILL.md",
+      "agents": [
+        "@MetaAdsEngineer",
+        "@MetaMeasurement",
+        "@MarketingScience",
+        "@IncrementalityAnalyst",
+        "@AdsCreativeStrategist"
+      ],
+      "upstreams": [
+        {"repo": "facebook/facebook-nodejs-business-sdk", "decision": "ADOPT"},
+        {"repo": "facebookincubator/ConversionsAPI-Tag-for-GoogleTagManager", "decision": "ADOPT_PATTERN_ONLY"},
+        {"repo": "facebookexperimental/Robyn", "decision": "ADOPT_WHEN_NEEDED"},
+        {"repo": "facebookincubator/GeoLift", "decision": "ADOPT_WHEN_NEEDED"}
+      ]
+    },
+    "branding": {
+      "skill": ".agents/skills/brand-system-specialist/SKILL.md",
+      "agents": [
+        "@BrandSystemArchitect",
+        "@BrandBehavior",
+        "@DesignTokenArchitect",
+        "@BrandRuntimeEngineer",
+        "@BrandComplianceQA"
+      ],
+      "upstreams": [
+        {"repo": "Brandcode-Studio/brandsystem-mcp", "decision": "ADOPT_PATTERN_ONLY"},
+        {"repo": "style-dictionary/style-dictionary", "decision": "ADOPT_PATTERN_ONLY"},
+        {"repo": "SCTY-Inc/brand.md", "decision": "HISTORICAL_ARCHIVED"}
+      ]
+    }
+  },
+  "invariants": {
+    "stable_agent_identity_is_not_upstream_repo": true,
+    "qualified_routing_not_literal_full_fanout": true,
+    "implementation_does_not_self_certify": true,
+    "meta_attribution_is_not_incrementality": true,
+    "publishing_requires_authenticated_surface": true,
+    "archived_upstreams_not_primary_production_dependency": true
+  }
+}
