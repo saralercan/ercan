@@ -1,0 +1,63 @@
+name: Ercan OS GitHub Specialist v3 Doctor
+
+on:
+  pull_request:
+    paths:
+      - 'AGENTS.md'
+      - 'docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md'
+      - 'docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.json'
+      - 'docs/standards/AGENT_REGISTRY.md'
+      - 'docs/standards/QUALIFIED_AGENT_ROUTING.md'
+      - 'docs/standards/DISCOVERY_ADOPTION_LEDGER.md'
+      - 'docs/upstream/GITHUB_SPECIALIST_CATALOG_V3.md'
+      - 'docs/upstream/UPSTREAM_INTELLIGENCE_CURRENT.md'
+      - 'docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md'
+      - 'docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md'
+      - '.agents/skills/github-specialist-router/**'
+      - '.agents/skills/web-production-specialist/**'
+      - '.agents/skills/mobile-app-specialist/**'
+      - '.agents/skills/social-growth-specialist/**'
+      - '.agents/skills/social-publisher-architecture/**'
+      - '.agents/skills/seo-aeo-geo-specialist/**'
+      - '.agents/skills/meta-ads-measurement/**'
+      - '.agents/skills/brand-system-specialist/**'
+      - 'scripts/validate_github_specialist_v3.py'
+      - '.github/workflows/github-specialist-v3-doctor.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'AGENTS.md'
+      - 'docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md'
+      - 'docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.json'
+      - 'docs/standards/AGENT_REGISTRY.md'
+      - 'docs/standards/QUALIFIED_AGENT_ROUTING.md'
+      - 'docs/standards/DISCOVERY_ADOPTION_LEDGER.md'
+      - 'docs/upstream/GITHUB_SPECIALIST_CATALOG_V3.md'
+      - 'docs/upstream/UPSTREAM_INTELLIGENCE_CURRENT.md'
+      - 'docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md'
+      - 'docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md'
+      - '.agents/skills/github-specialist-router/**'
+      - '.agents/skills/web-production-specialist/**'
+      - '.agents/skills/mobile-app-specialist/**'
+      - '.agents/skills/social-growth-specialist/**'
+      - '.agents/skills/social-publisher-architecture/**'
+      - '.agents/skills/seo-aeo-geo-specialist/**'
+      - '.agents/skills/meta-ads-measurement/**'
+      - '.agents/skills/brand-system-specialist/**'
+      - 'scripts/validate_github_specialist_v3.py'
+      - '.github/workflows/github-specialist-v3-doctor.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  specialist-v3-doctor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Validate GitHub Specialist v3 manifest, routing and upstream decisions
+        run: python3 scripts/validate_github_specialist_v3.py
