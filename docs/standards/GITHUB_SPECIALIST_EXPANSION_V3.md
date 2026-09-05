@@ -5,8 +5,10 @@ Date: 2026-09-06
 
 Purpose: promote reviewed GitHub/open-source capabilities into qualified Ercan OS specialist routing for web, app/mobile, social media, SEO/AEO/GEO, Meta advertising/measurement and branding. This standard supplements, and never overrides, root `AGENTS.md`, `AGENT_REGISTRY.md`, `QUALIFIED_AGENT_ROUTING.md`, project adapters, safety, scope and independent QA rules.
 
+Machine-readable manifest: `docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.json`.
 JIT upstream catalog supplement: `docs/upstream/GITHUB_SPECIALIST_CATALOG_V3.md`.
 Reviewed evidence: `docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md`.
+Regression eval: `docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md`.
 
 ## Core rule
 

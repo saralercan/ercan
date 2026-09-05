@@ -68,7 +68,7 @@ Authority: Google Search Central, Bing/IndexNow, Schema.org, OpenAI/Perplexity c
 
 | Upstream | Decision | Stable specialist use |
 |---|---|---|
-| Meta Business SDKs | ADOPT / canonical implementation reference | `@MetaAdsEngineer` |
+| `facebook/facebook-nodejs-business-sdk` | ADOPT / canonical implementation reference | `@MetaAdsEngineer` |
 | `facebookincubator/ConversionsAPI-Tag-for-GoogleTagManager` | ADOPT_PATTERN_ONLY / WHEN_NEEDED | `@MetaMeasurement` |
 | `facebookexperimental/Robyn` | ADOPT_WHEN_NEEDED | `@MarketingScience` |
 | `facebookincubator/GeoLift` | ADOPT_WHEN_NEEDED | `@IncrementalityAnalyst` |
