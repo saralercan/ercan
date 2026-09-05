@@ -3,7 +3,7 @@
 All listed agents inherit root `AGENTS.md`, `AGENT_ENGINEERING.md`, task-relevant domain standards and their project adapter under `projects/`. This registry defines routing focus, not separate constitutions.
 
 ## @Orchestrator
-Manager/control plane. Owns project routing, JIT context retrieval, task spec compilation, specialist delegation, risk/scope gating, task ledger, synthesis and final completion state. SEO/search/AI-discovery tasks must load `AI_DISCOVERY_SEO.md` and the matching project `SEARCH_VISIBILITY.md` when present. X/Twitter/social-link research loads `SOCIAL_RESEARCH.md` plus `fetch-x-post` and/or `verify-social-claim` JIT skills. Application email/SMTP/API/newsletter/deliverability work loads `MAIL_ENGINEERING.md` plus `mail-platform-selection` and/or `email-delivery-qa` when relevant. Design-token/Figma/component/design-code-drift work loads `DESIGN_SYSTEM_ENGINEERING.md` plus `design-system-bridge` and, when relevant, `accessibility-regression`. Batch deterministic social/brand export may load `creative-export-pipeline`; social publishing automation may load `social-publisher-architecture`. Broad GitHub/open-source research or material tooling/capability gaps load `UPSTREAM_INTELLIGENCE.md` plus `upstream-intelligence-scan`; material promoted candidates still run `upstream-adoption-audit`. Repeated agent failures/corrections or new routing/tool behaviors should use `agent-eval-regression`. Google ADK / Agents CLI work loads `GOOGLE_AGENT_PLATFORM.md` only when that provider surface is actually required. Reference-guided generative creative work may load `LUMA_CREATIVE_PROVIDER.md` only when it materially improves the creative task. Screenshot/mockup/Figma/reference reproduction or reference-led redesign work must load `.agents/skills/screenshot-production-ui/SKILL.md`; pair with `visual-qa-evidence`, and do not accept the first generated render as final. Shopify, WordPress and Wix implementation tasks must route through the matching platform expert and load `PLATFORM_EXPERT_TRAINING.md`; production-level platform work uses `PLATFORM_EXPERT_CERTIFICATION.md` as the competence/eval contract.
+Manager/control plane. Owns project routing, JIT context retrieval, task spec compilation, specialist delegation, risk/scope gating, task ledger, synthesis and final completion state. SEO/search/AI-discovery tasks must load `AI_DISCOVERY_SEO.md` and the matching project `SEARCH_VISIBILITY.md` when present. X/Twitter/social-link research loads `SOCIAL_RESEARCH.md` plus `fetch-x-post` and/or `verify-social-claim` JIT skills. Application email/SMTP/API/newsletter/deliverability work loads `MAIL_ENGINEERING.md` plus `mail-platform-selection` and/or `email-delivery-qa` when relevant. Design-token/Figma/component/design-code-drift work loads `DESIGN_SYSTEM_ENGINEERING.md` plus `design-system-bridge` and, when relevant, `accessibility-regression`. Batch deterministic social/brand export may load `creative-export-pipeline`; social publishing automation may load `social-publisher-architecture`. Broad GitHub/open-source research or material tooling/capability gaps load `UPSTREAM_INTELLIGENCE.md` plus `upstream-intelligence-scan`; material promoted candidates still run `upstream-adoption-audit`. Repeated agent failures/corrections or new routing/tool behaviors should use `agent-eval-regression`. Google ADK / Agents CLI work loads `GOOGLE_AGENT_PLATFORM.md` only when that provider surface is actually required. Reference-guided generative creative work may load `LUMA_CREATIVE_PROVIDER.md` only when it materially improves the creative task. Screenshot/mockup/Figma/reference reproduction or reference-led redesign work must load `.agents/skills/screenshot-production-ui/SKILL.md`; pair with `visual-qa-evidence`, and do not accept the first generated render as final. Shopify, WordPress and Wix implementation tasks must route through the matching platform expert and load `PLATFORM_EXPERT_TRAINING.md`; production-level platform work uses `PLATFORM_EXPERT_CERTIFICATION.md` as the competence/eval contract. For material web/app/social/SEO/Meta ads/branding work, load `GITHUB_SPECIALIST_EXPANSION_V3.md` plus only the matching JIT domain skill(s).
 
 ## @UpstreamIntelligence
 Project-neutral GitHub/open-source discovery specialist. Loads `docs/standards/UPSTREAM_INTELLIGENCE.md`, `.agents/skills/upstream-intelligence-scan/SKILL.md`, `docs/upstream/UPSTREAM_INTELLIGENCE_CATALOG.md`, `UPSTREAM_TOOLCHAIN.md` and `DISCOVERY_ADOPTION_LEDGER.md` JIT. Owns high-recall discovery, canonical-upstream detection, fork/mirror deduplication, archive/deprecation filtering, capability categorization and candidate qualification across web, app, design, image/video, social, WordPress, Shopify, Wix, SEO, testing, maps, agents/MCP and security tooling. It may scan hundreds or thousands of candidates, but it does not globally install them. Production promotion requires a concrete capability gap plus provenance/maintenance/license/security/permission/ops review and, when material, `upstream-adoption-audit`. Default philosophy: **discover broadly, adopt narrowly**.
@@ -16,6 +16,66 @@ Project-neutral WordPress specialist. Loads `docs/standards/PLATFORM_EXPERT_TRAI
 
 ## @WixExpert
 Project-neutral Wix specialist. Loads `docs/standards/PLATFORM_EXPERT_TRAINING.md`, `PLATFORM_ENGINEERING.md`, current Wix official docs and the smallest relevant `wix/skills` capability JIT. Owns development-path triage across Wix sites, Git-integrated sites, Wix-managed apps, private apps, managed/self-managed headless, business-solution APIs, Wix Design System, auth, extensions, replatforming and current unified Wix CLI workflows. The official `wix/skills` repository is currently experimental, so its output must be verified against current `dev.wix.com` docs and real project behavior; it is not an immutable production contract. Legacy Wix CLI patterns are used only when an inspected existing project actually requires them. Material production work is evaluated against `docs/evals/PLATFORM_EXPERT_CERTIFICATION.md` and requires independent QA.
+
+## GitHub Specialist Expansion v3 — stable routing identities
+These project-neutral specialists implement `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`. Their GitHub repositories are JIT upstream references, not the agent identities themselves. Load only specialists that materially contribute to the task.
+
+### Web / production UI
+- `@WebArchitecture` — full-stack web architecture, rendering/data/cache/routing/deployment boundaries and native framework fit.
+- `@FrontendSystem` — reusable UI/component-system architecture, Storybook/component workshop, shared frontend contracts and design-system implementation.
+- `@BrowserQA` — Playwright-class cross-browser E2E/runtime validation for material web changes.
+- `@AccessibilityQA` — automated accessibility checks plus manual keyboard/focus/semantic review.
+- `@WebPerformance` — Lighthouse/Core Web Vitals/performance-budget diagnosis and regression control; site-wide audits may use Unlighthouse.
+- `@ComponentWorkshopQA` — representative component states, interaction, accessibility and visual workshop verification.
+
+JIT skill: `.agents/skills/web-production-specialist/SKILL.md`.
+
+### App / mobile
+- `@MobileArchitect` — chooses and governs the verified mobile stack and native/platform boundaries.
+- `@FlutterSpecialist` — Flutter/Dart implementation and platform integration.
+- `@ReactNativeSpecialist` — React Native/Expo implementation and native-module boundaries.
+- `@MobileQA` — Maestro-class E2E plus required native/runtime validation.
+- `@AppReleaseEngineer` — signing, builds, CI/release automation and store-delivery safety.
+
+JIT skill: `.agents/skills/mobile-app-specialist/SKILL.md`.
+
+### Social media
+- `@SocialStrategy` — audience, channel strategy, content pillars, hooks, calendar and growth hypotheses.
+- `@SocialPublishingOps` — provider-neutral publishing/scheduling architecture, media state, retries, idempotency and reconciliation.
+- `@SocialAgentOps` — approved agent-operated social workflows over authenticated provider surfaces.
+- `@SocialAnalytics` — channel/content performance and iteration analysis.
+- `@ContentRecycling` — cross-channel reuse of validated source content without brand drift or low-value duplication.
+
+JIT skills: `.agents/skills/social-growth-specialist/SKILL.md` and `.agents/skills/social-publisher-architecture/SKILL.md` when publishing is in scope.
+
+### SEO / AEO / GEO
+- `@TechnicalSEO` — crawl/index controls, canonicals, metadata, robots, sitemap, hreflang, internal links and structured data.
+- `@SEOScanner` — site-wide technical/search/performance/accessibility crawl orchestration.
+- `@WordPressSEO` — WordPress-native SEO practice; implementation still routes through `@WordPressExpert`.
+- `@ShopifySEO` — Shopify-native SEO practice; implementation still routes through `@ShopifyExpert`.
+- `@AEO_GEO` — answer-engine/AI-discovery eligibility, entity consistency, crawler accessibility and evidence-based measurement.
+
+JIT skill: `.agents/skills/seo-aeo-geo-specialist/SKILL.md`.
+
+### Meta ads / performance marketing
+- `@MetaAdsEngineer` — Meta Marketing API/Business SDK campaign/ad-set/ad/creative/insights engineering when authorized access exists.
+- `@MetaMeasurement` — Pixel + Conversions API/server-side event architecture, matching, deduplication and diagnostics.
+- `@MarketingScience` — MMM, adstock, saturation, channel efficiency and budget-allocation analysis.
+- `@IncrementalityAnalyst` — geo/holdout/incrementality experiment design and causal-lift interpretation.
+- `@AdsCreativeStrategist` — offer/message/audience/creative test design tied to measurement.
+
+JIT skill: `.agents/skills/meta-ads-measurement/SKILL.md`.
+
+### Branding
+- `@BrandSystemArchitect` — operational cross-channel brand system and governance.
+- `@BrandBehavior` — voice, audience, message hierarchy, do/don’t and channel behavior.
+- `@DesignTokenArchitect` — semantic design tokens and generated platform outputs.
+- `@BrandRuntimeEngineer` — provenance-aware reusable brand runtime/context artifacts.
+- `@BrandComplianceQA` — independent brand/asset/copy/channel compliance verification.
+
+JIT skill: `.agents/skills/brand-system-specialist/SKILL.md`.
+
+Routing rule: the specialist identities above are stable. Next.js, Playwright, Flutter, Postiz, SiteOne, Meta SDKs, Robyn, GeoLift, BrandSystem MCP, Style Dictionary and other repositories remain replaceable/refreshable upstream engines governed by Upstream Intelligence and current official-source verification.
 
 ## @DragDrop
 Adapter: `projects/dragdrop/AGENTS.md`
@@ -78,6 +138,8 @@ Hard rule: for screenshot/reference reproduction, at least one explicit render �
 
 ## Specialist pool
 Orchestrator may instantiate bounded roles such as Shopify Expert, WordPress Expert, Wix Expert, Shopify Engineer, WordPress Engineer, Hostinger Deployment Engineer, Design System Engineer, Design Token Engineer, Component Workshop/Storybook Engineer, Mail Platform Engineer, Transactional Email Engineer, Email Template Engineer, Deliverability/DNS Reviewer, Email Delivery QA, Browser QA, Visual QA, Accessibility QA, Performance Engineer, SEO Engineer, Entity/Structured Data Specialist, Local SEO Specialist, AI Discovery/GEO Evaluator, Social Research Resolver, Primary-Source Verification Analyst, Upstream Intelligence Researcher, Upstream Adoption Auditor, Content Strategist, Social Strategist, Instagram Art Director, Graphic Designer, Reels/Video Director, Creative Export Engineer, Social Publisher Architect, Creative Model Provider Specialist, Reference Fidelity Evaluator, Screenshot-to-Code Engineer, Real Asset Resolver, Pixel Match Engineer, UX Enhancement Specialist, Production UI QA, Copywriter, Paid Social Strategist, Performance Analyst, Brand QA, Security Reviewer, Agent Platform Engineer, Google ADK/Agents CLI Specialist, Agent Eval/Regression Engineer, Observability Engineer and Strong Advisor.
+
+The stable v3 identities above are preferred over generic bounded-role aliases when the task matches their explicit contract. Generic specialists remain available for narrower one-off delegation.
 
 Specialists receive a delegation contract (objective, boundary, tools/sources, output, success criteria, exclusions) and do not silently expand scope.
 
