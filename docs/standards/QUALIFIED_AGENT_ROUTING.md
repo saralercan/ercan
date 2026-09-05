@@ -1,7 +1,7 @@
 # Ercan OS — Qualified Agent Routing
 
 Status: active
-Version: 1.1 (2026-08-29)
+Version: 1.2 (2026-09-06)
 
 This standard defines the meaning of user commands such as **“tüm ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent requests for broad specialist involvement.
 
@@ -12,6 +12,8 @@ These commands do **not** mean “execute every registered agent.” They mean:
 > The Orchestrator must automatically identify the project and task, build the minimum sufficient team of qualified specialists, tools and QA roles, and execute that team without requiring the user to name each specialist individually.
 
 This meaning is shared by ChatGPT/Ercan OS and Codex.
+
+For web, app/mobile, social media, SEO/AEO/GEO, Meta advertising/measurement and branding work, `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md` is part of the qualification source. Load only the matching JIT skill(s), never the entire v3 pool by default.
 
 ## User experience contract
 
@@ -40,6 +42,9 @@ Examples:
 - SEO/AI discovery → technical SEO, structured data/entity, content/search evidence and measurement; do not summon unrelated graphic agents
 - social creative → art direction, graphic/copy/content specialists, real-asset integrity and brand/export QA; add paid-media specialist only for ad work
 - broad GitHub/open-source improvement request → Upstream Intelligence discovery + relevant domain specialists + upstream audit; broad scan is allowed, production dependency fan-out is not
+- mobile app implementation → `@MobileArchitect` + exactly the active implementation-stack specialist + `@MobileQA`; add `@AppReleaseEngineer` only for build/store delivery
+- Meta ads work → distinguish campaign engineering, measurement, marketing science, incrementality and creative strategy; do not collapse them into one generic ads role
+- cross-channel brand-system work → brand-system/runtime/token specialist(s) + independent `@BrandComplianceQA` when the brand system itself is materially affected
 
 ### 3. Qualification filter
 A specialist is selected only when it has a material contribution and passes the relevant filters:
@@ -83,12 +88,14 @@ A simple deterministic task may need only one competent implementation specialis
 `@Orchestrator` must:
 - infer the specialist roster automatically from the task;
 - load only relevant project adapters, standards and skills;
+- use stable specialist identities from `AGENT_REGISTRY.md` when a v3 domain capability matches the task;
 - define a bounded delegation contract for each selected role: objective, scope, inputs, tools, outputs, dependencies and success criteria;
 - order sequential dependencies correctly and parallelize only independent work;
 - avoid duplicate specialists performing the same work without a comparison/evaluator purpose;
 - preserve the user’s do-not-touch constraints across every handoff;
 - require independent verification for material implementation work;
 - consult upstream intelligence before inventing a new capability from scratch when a strong canonical solution may already exist;
+- treat upstream repositories as replaceable engines/references, not agent identities or policy authorities;
 - stop adding agents when marginal contribution is negligible;
 - never claim that an unavailable or unexecuted agent actually ran.
 
@@ -97,27 +104,43 @@ A simple deterministic task may need only one competent implementation specialis
 The roster is task-specific, not project-static. The same project may use different pods for different requests.
 
 ### Reference-led web/UI
-`@Orchestrator → optional @UpstreamIntelligence if a tooling gap exists → @ScreenshotToCode → @RealAsset → implementation/platform specialist → browser render → @PixelMatch → @UXEnhancement when justified → @ProductionQA`
+`@Orchestrator → optional @UpstreamIntelligence if a tooling gap exists → @WebArchitecture when architecture changes are material → @ScreenshotToCode → @RealAsset → implementation/platform specialist → @FrontendSystem when shared UI/component architecture is touched → browser render → @PixelMatch → @UXEnhancement when justified → @AccessibilityQA/@WebPerformance as risk requires → @BrowserQA/@ProductionQA`
 
 ### Performance-only web work
-`@Orchestrator → platform specialist → optional @UpstreamIntelligence for profiling/optimization tool gap → Performance Engineer → Browser QA/ProductionQA`
+`@Orchestrator → platform specialist → optional @UpstreamIntelligence for profiling/optimization tool gap → @WebPerformance → @BrowserQA/ProductionQA`
 
 Do not automatically run redesign, copywriting or SEO specialists when the user explicitly says the visual theme, ads or content must not change.
 
+### Shared frontend/design-system work
+`@Orchestrator → @WebArchitecture as needed → @FrontendSystem → @DesignTokenArchitect when shared semantic tokens are affected → @ComponentWorkshopQA → @AccessibilityQA → @BrowserQA → independent QA`
+
+### Mobile app work
+`@Orchestrator → @MobileArchitect → @FlutterSpecialist OR @ReactNativeSpecialist according to the inspected stack → @MobileQA → @AppReleaseEngineer only when build/sign/store delivery is in scope → independent QA`
+
+Do not run both Flutter and React Native specialists unless the product actually spans both or the user requested a migration/comparison.
+
 ### SEO / AI discovery
-`@Orchestrator → SEO Engineer → Entity/Structured Data Specialist and/or Local SEO Specialist when relevant → optional @UpstreamIntelligence for current audit/crawl tooling → AI Discovery/GEO Evaluator → technical/browser verification`
+`@Orchestrator → @TechnicalSEO → @WordPressSEO or @ShopifySEO only for the active platform → Entity/Structured Data Specialist and/or Local SEO Specialist when relevant → optional @UpstreamIntelligence for current audit/crawl tooling → @SEOScanner when a site-wide audit is justified → @AEO_GEO when AI-discovery/answerability is in scope → technical/browser verification`
 
 ### Shopify commerce
-`@Orchestrator → Shopify Engineer → optional @UpstreamIntelligence for current canonical/community tooling comparison → task-specific design/search/performance specialist(s) → browser/product/cart QA → ProductionQA`
+`@Orchestrator → @ShopifyExpert → optional @UpstreamIntelligence for current canonical/community tooling comparison → @ShopifySEO/@TechnicalSEO when search surfaces are touched → @WebPerformance/@AccessibilityQA when relevant → @BrowserQA/product/cart QA → ProductionQA`
 
 ### WordPress / Hostinger
-`@Orchestrator → WordPress Engineer → Hostinger Deployment Engineer when deployment is in scope → optional @UpstreamIntelligence for plugin/tooling gap → task-specific design/mail/SEO specialist(s) → browser/deployment QA`
+`@Orchestrator → @WordPressExpert → Hostinger Deployment Engineer when deployment is in scope → optional @UpstreamIntelligence for plugin/tooling gap → @WordPressSEO/@TechnicalSEO, brand, mail or performance specialist(s) only when materially required → @BrowserQA/deployment QA`
 
 ### Social/brand creative
-`@Orchestrator → Social Strategist/Art Director as needed → optional @UpstreamIntelligence for reusable creative/export/publishing architecture → Graphic Designer/Copywriter/Video specialist according to deliverable → Brand QA → export/channel QA`
+`@Orchestrator → @BrandSystemArchitect/@SocialStrategy as needed → optional @UpstreamIntelligence for reusable creative/export/publishing architecture → Graphic Designer/Copywriter/Video specialist according to deliverable → @SocialPublishingOps only when publishing/scheduling is in scope → @SocialAnalytics when measurement/iteration is requested → @BrandComplianceQA/Brand QA → export/channel QA`
+
+### Meta advertising / measurement
+`@Orchestrator → @AdsCreativeStrategist when creative testing is in scope → @MetaAdsEngineer when authenticated campaign execution is required → @MetaMeasurement when Pixel/CAPI/conversion instrumentation is in scope → @MarketingScience when MMM/channel-allocation analysis is statistically justified → @IncrementalityAnalyst when causal lift/holdout/geo testing is required → independent measurement/brand QA`
+
+Attribution/ROAS never substitutes for incrementality evidence. Campaign mutation is never implied by analysis-only work.
+
+### Brand-system / cross-channel identity
+`@Orchestrator → @BrandSystemArchitect → @BrandBehavior and/or @DesignTokenArchitect according to scope → @BrandRuntimeEngineer when reusable machine-readable runtime context is needed → implementation surface specialists → @BrandComplianceQA`
 
 ### Broad GitHub capability expansion
-`@Orchestrator → @UpstreamIntelligence → domain specialist(s) for web/app/design/social/SEO/etc. → Upstream Adoption Auditor for promoted candidates → Security Reviewer when code/credentials/permissions are material → regression/eval → catalog/ledger update`
+`@Orchestrator → @UpstreamIntelligence → matching stable v3 domain specialist(s) for web/app/social/SEO/Meta/branding → Upstream Adoption Auditor for promoted candidates → Security Reviewer when code/credentials/permissions are material → regression/eval → catalog/ledger/current-index update`
 
 ## Quality over agent count
 
@@ -131,6 +154,7 @@ Forbidden behavior:
 - skipping a required specialist/QA role because the user did not name it;
 - globally installing hundreds of discovered repositories because broad GitHub research was requested;
 - treating stars or an awesome-list entry as proof of safety/fit;
+- treating Next.js, Flutter, Postiz, Robyn, GeoLift, BrandSystem MCP or another upstream repository as a permanent agent identity;
 - claiming a multi-agent execution occurred when only one generic response was produced and no actual specialist/tool/workstream separation was used.
 
 ## Completion evidence
@@ -150,12 +174,17 @@ The user does not need a verbose agent roster unless it helps explain the result
 
 These behaviors are mandatory:
 
-1. User says “tüm ajanları çalıştır” for a screenshot-based web redesign → route only the qualified screenshot/UI/platform/QA pod, not mail/map/SEO agents unless those capabilities are genuinely in scope.
-2. User says “tüm ajanları çalıştır” for SEO remediation → route SEO/entity/technical verification specialists; do not run unrelated visual agents.
+1. User says “tüm ajanları çalıştır” for a screenshot-based web redesign → route only the qualified screenshot/UI/platform/QA pod, not mail/map/Meta agents unless those capabilities are genuinely in scope.
+2. User says “tüm ajanları çalıştır” for SEO remediation → route `@TechnicalSEO`, the active platform SEO role when relevant, site-wide scanner/AEO-GEO only when justified, and technical verification; do not run unrelated visual agents.
 3. User asks for a simple text-only correction and says “tüm ajanları çalıştır” → do not manufacture a large multi-agent workflow; use the smallest competent path.
-4. User does not name Performance QA but asks to speed up a production website → automatically include performance verification because it is required by the task.
+4. User does not name Performance QA but asks to speed up a production website → automatically include `@WebPerformance` and runtime/browser verification because they are required by the task.
 5. User explicitly says ads and live theme must not change → every selected specialist inherits that constraint; no agent may expand scope.
 6. A required capability is unavailable in the runtime → use the closest qualified available path, state the limitation honestly, and never pretend the unavailable specialist executed.
-7. User asks to scan GitHub for everything useful across web/app/design/social → select Upstream Intelligence and relevant domain reviewers, create/update durable catalog knowledge, but do not install every discovered repo.
+7. User asks to scan GitHub for everything useful across web/app/design/social/SEO/Meta/branding → select `@UpstreamIntelligence` plus matching stable domain reviewers, update durable catalog/routing knowledge, but do not install every discovered repo.
 8. Discovery finds canonical repo plus many forks → keep canonical and reject duplicate forks unless a fork has a concrete material feature required by the task.
-9. Discovery finds an archived/deprecated tool with maintained successor → classify `SUPERSEDED`; do not introduce it into new production work.
+9. Discovery finds an archived/deprecated tool with maintained successor → classify `SUPERSEDED` or pattern-only; do not introduce it into new production work.
+10. Mobile task is verified as Flutter → route `@FlutterSpecialist`; do not also run `@ReactNativeSpecialist` merely because both are registered.
+11. Meta task asks only for measurement repair → route `@MetaMeasurement`; do not mutate campaigns or add MMM/incrementality unless required by the goal.
+12. Cross-channel brand-system change → implementation cannot self-certify; `@BrandComplianceQA` remains independent.
+13. Web task touches shared components → `@FrontendSystem`/`@ComponentWorkshopQA` may be required even if the user did not explicitly name design-system work.
+14. Social content creation without authenticated publishing request → do not imply `@SocialPublishingOps` published anything.

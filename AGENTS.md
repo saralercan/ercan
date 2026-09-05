@@ -1,12 +1,13 @@
 # Ercan OS — Shared Agent Contract
 
-Version: 4.3 (2026-08-29)
+Version: 4.4 (2026-09-06)
 
 This repository is the shared control-plane reference for Ercan AI Agency / Ercan OS agents. Every project agent and specialist must load this file first, then the shared registry, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
 
 ## Agent aliases
 - `@Orchestrator` — manager/control plane; owns routing, task state, final synthesis and completion decision.
 - `@UpstreamIntelligence` — GitHub/open-source discovery specialist; broad discovery, dedupe and candidate qualification → `docs/standards/UPSTREAM_INTELLIGENCE.md` + `.agents/skills/upstream-intelligence-scan/SKILL.md`.
+- GitHub Specialist Expansion v3 stable identities for web/app/social/SEO/Meta/branding are registered in `docs/standards/AGENT_REGISTRY.md` and governed by `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`.
 - `@DragDrop` — Shopify/e-commerce project agent → `projects/dragdrop/AGENTS.md`.
 - `@VinterroDigital` — agency/brand/web/social project agent → `projects/vinterro-digital/AGENTS.md`.
 - `@AyvalıkVibes` — editorial/local/social/WordPress project agent → `projects/ayvalik-vibes/AGENTS.md`.
@@ -30,23 +31,27 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
 1. `AGENTS.md`
 2. `docs/standards/AGENT_REGISTRY.md`
 3. `docs/standards/QUALIFIED_AGENT_ROUTING.md` whenever the user asks to run all agents/agents broadly, or when the task materially requires multiple specialist capabilities.
-4. `docs/standards/UPSTREAM_INTELLIGENCE.md` + `.agents/skills/upstream-intelligence-scan/SKILL.md` when broad GitHub/open-source discovery is requested or a material tooling/capability selection gap exists. Consult `docs/upstream/UPSTREAM_INTELLIGENCE_CATALOG.md` JIT; do not context-stuff the full catalog into unrelated tasks.
-5. Matching `projects/<slug>/AGENTS.md` + `PROJECT.md`; for SEO/search/AI-discovery work also load that project's `SEARCH_VISIBILITY.md` when present.
-6. `docs/standards/AGENT_ENGINEERING.md`
-7. Domain standard(s):
+4. `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md` + `.agents/skills/github-specialist-router/SKILL.md` when a material web/app/social/SEO/Meta ads/branding task needs the expanded stable specialist pool; then load only the matching domain skill(s).
+5. `docs/standards/UPSTREAM_INTELLIGENCE.md` + `.agents/skills/upstream-intelligence-scan/SKILL.md` when broad GitHub/open-source discovery is requested or a material tooling/capability selection gap exists. Consult `docs/upstream/UPSTREAM_INTELLIGENCE_CATALOG.md` JIT; do not context-stuff the full catalog into unrelated tasks.
+6. Matching `projects/<slug>/AGENTS.md` + `PROJECT.md`; for SEO/search/AI-discovery work also load that project's `SEARCH_VISIBILITY.md` when present.
+7. `docs/standards/AGENT_ENGINEERING.md`
+8. Domain standard(s):
    - Shopify/WordPress/web: `PLATFORM_ENGINEERING.md`
    - Hostinger-hosted WordPress/PHP: `HOSTINGER_WORDPRESS_DEPLOYMENT.md`
    - application email/forms/SMTP/API/newsletters/deliverability: `MAIL_ENGINEERING.md` and relevant mail skills under `.agents/skills/`
    - maps/POI/geocoding/clustering/offline/routing/location UX: `MAP_ENGINEERING.md` and `.agents/skills/map-platform-selection/SKILL.md` when relevant
    - design tokens/Figma/components/Storybook/design-code drift: `DESIGN_SYSTEM_ENGINEERING.md` and relevant design-system/accessibility skills
-   - branding/graphics/social: `BRAND_SOCIAL.md`
+   - branding/graphics/social: `BRAND_SOCIAL.md`; add v3 brand/social JIT skills when cross-channel brand runtime, social growth or publishing operations are materially in scope
    - X/Twitter/social-post research or viral technical claims: `SOCIAL_RESEARCH.md` and the relevant portable skills under `.agents/skills/`
    - Luma reference-guided image/video generation or editing: `LUMA_CREATIVE_PROVIDER.md` **only when that creative provider capability is actually useful**
-   - SEO/entity/local/ecommerce/AI-search discovery: `AI_DISCOVERY_SEO.md`
+   - SEO/entity/local/ecommerce/AI-search discovery: `AI_DISCOVERY_SEO.md`; add `.agents/skills/seo-aeo-geo-specialist/SKILL.md` when the v3 stable SEO pod is materially needed
+   - Meta ads/measurement/MMM/incrementality: `BRAND_SOCIAL.md` + `.agents/skills/meta-ads-measurement/SKILL.md`, with current official Meta authority verified at runtime
+   - mobile app architecture/QA/release: `.agents/skills/mobile-app-specialist/SKILL.md` plus platform-native current docs/tooling
+   - web production/performance/accessibility/browser QA: `.agents/skills/web-production-specialist/SKILL.md`
    - Google ADK / Agents CLI / Gemini Enterprise Agent Platform: `GOOGLE_AGENT_PLATFORM.md` **only when that provider surface is actually in scope**
    - GitHub/tooling/upstream: `UPSTREAM_TOOLCHAIN.md`; broad discovery/tool selection also uses `UPSTREAM_INTELLIGENCE.md`, `UPSTREAM_INTELLIGENCE_CATALOG.md`, `DISCOVERY_ADOPTION_LEDGER.md` and `upstream-adoption-audit`.
-8. Project-local decisions, brand rules, do-not-touch rules and current task ledger when available.
-9. Only task-relevant skills/tools/context; do not context-stuff unrelated history.
+9. Project-local decisions, brand rules, do-not-touch rules and current task ledger when available.
+10. Only task-relevant skills/tools/context; do not context-stuff unrelated history.
 
 ## Non-negotiable operating rules
 - Inspect/reproduce before modifying.
@@ -64,6 +69,7 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
 - Reject duplicate forks/mirrors when a canonical upstream already covers the capability unless the fork has a material required independent feature.
 - Use least privilege, read-first access, isolated execution and explicit approval only at meaningful risk boundaries.
 - Provider-specific skills/adapters enrich workers but never override Ercan OS safety, scope, memory, brand, QA/eval or completion contracts.
+- Stable specialist identities are Ercan OS routing contracts; upstream repositories are replaceable engines/references and never become policy authorities by themselves.
 - Generative creative providers are production engines, not final art directors or approvers. Approved brand references, do-not-touch constraints and independent design QA remain authoritative.
 - Map engines, tile sources, geocoders, clustering and routing are separate concerns. Do not let one vendor/library silently become the whole location data architecture.
 - Mailbox operations, application mail events, template rendering, SMTP/API transport, campaign/list management, deliverability and mail-server infrastructure are separate concerns. Do not solve a contact-form problem by silently creating mail-server operations.
@@ -81,7 +87,7 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
 `intent → route → project adapter → JIT context → task spec → qualified specialist selection → optional upstream intelligence gap check → risk/scope gate → specialist/skill/provider-adapter when needed → controlled execution → automated checks → browser/visual/search/agent QA → independent evaluator → trace/artifact → feedback/eval → regression`
 
 For “all agents” intent use:
-`project detection → task decomposition → capability requirements → candidate specialists → qualification filter → optional upstream intelligence → dependency ordering → risk/approval gate → execution pod → independent QA/evaluator → completion state`.
+`project detection → task decomposition → capability requirements → candidate specialists → qualification filter → v3 domain pod selection when relevant → optional upstream intelligence → dependency ordering → risk/approval gate → execution pod → independent QA/evaluator → completion state`.
 
 For broad GitHub/open-source discovery use:
 `catalog + ledger check → high-recall official/GitHub/curated-source discovery → dedupe → archive/deprecation/license/security/relevance filter → shortlist → deep audit only for promotion → catalog/skill/standard/project integration → regression/eval → ledger update`.
@@ -222,6 +228,13 @@ Ercan OS skills use the open Agent Skills `SKILL.md` pattern where practical. Sk
 - `.agents/skills/social-publisher-architecture/SKILL.md`
 - `.agents/skills/upstream-adoption-audit/SKILL.md`
 - `.agents/skills/agent-eval-regression/SKILL.md`
+- `.agents/skills/github-specialist-router/SKILL.md`
+- `.agents/skills/web-production-specialist/SKILL.md`
+- `.agents/skills/mobile-app-specialist/SKILL.md`
+- `.agents/skills/social-growth-specialist/SKILL.md`
+- `.agents/skills/seo-aeo-geo-specialist/SKILL.md`
+- `.agents/skills/meta-ads-measurement/SKILL.md`
+- `.agents/skills/brand-system-specialist/SKILL.md`
 
 A public/community skill is a software/instruction supply-chain dependency. Review provenance, scripts, permissions and network/credential behavior before installation or execution.
 
