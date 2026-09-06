@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "standard": "GITHUB_SPECIALIST_EXPANSION_V3",
   "status": "active",
   "reviewed": "2026-09-07",
@@ -140,6 +140,54 @@
       ]
     }
   },
+  "project_routing": {
+    "dragdrop": {
+      "adapter": "projects/dragdrop/AGENTS.md",
+      "core_owner": "@DragDrop",
+      "platform_expert": "@ShopifyExpert",
+      "routes": {
+        "storefront_ui": ["@FrontendSystem", "@WebPerformance", "@AccessibilityQA", "@BrowserQA"],
+        "seo_ai": ["@ShopifySEO", "@TechnicalSEO", "@SEOScanner", "@AEO_GEO"],
+        "brand_system": ["@DesignTokenArchitect", "@BrandComplianceQA"],
+        "social": ["@SocialStrategy", "@SocialPublishingOps", "@SocialAnalytics"],
+        "meta_ads": ["@AdsCreativeStrategist", "@MetaAdsEngineer", "@MetaMeasurement", "@MarketingScience", "@IncrementalityAnalyst"]
+      }
+    },
+    "vinterro-digital": {
+      "adapter": "projects/vinterro-digital/AGENTS.md",
+      "core_owner": "@VinterroDigital",
+      "platform_expert": "@WordPressExpert",
+      "routes": {
+        "website_ui": ["@FrontendSystem", "@WebPerformance", "@AccessibilityQA", "@BrowserQA"],
+        "seo_ai": ["@WordPressSEO", "@TechnicalSEO", "@SEOScanner", "@AEO_GEO"],
+        "brand_system": ["@BrandSystemArchitect", "@BrandBehavior", "@DesignTokenArchitect", "@BrandRuntimeEngineer", "@BrandComplianceQA"],
+        "social": ["@SocialStrategy", "@SocialPublishingOps", "@SocialAgentOps", "@SocialAnalytics", "@ContentRecycling"],
+        "meta_ads": ["@AdsCreativeStrategist", "@MetaAdsEngineer", "@MetaMeasurement", "@MarketingScience", "@IncrementalityAnalyst"]
+      }
+    },
+    "goayvalik": {
+      "adapter": "projects/goayvalik/AGENTS.md",
+      "core_owner": "@GoAyvalık",
+      "platform_expert": "@WordPressExpert",
+      "routes": {
+        "website_ui": ["@FrontendSystem", "@WebPerformance", "@AccessibilityQA", "@BrowserQA"],
+        "seo_ai": ["@WordPressSEO", "@TechnicalSEO", "@SEOScanner", "@AEO_GEO"],
+        "brand_social": ["@BrandSystemArchitect", "@BrandComplianceQA", "@SocialStrategy", "@SocialAnalytics"],
+        "mobile_app": ["@MobileArchitect", "@FlutterSpecialist", "@MobileQA", "@AppReleaseEngineer"]
+      }
+    },
+    "ayvalik-vibes": {
+      "adapter": "projects/ayvalik-vibes/AGENTS.md",
+      "core_owner": "@AyvalıkVibes",
+      "platform_expert": "@WordPressExpert",
+      "routes": {
+        "website_ui": ["@FrontendSystem", "@WebPerformance", "@AccessibilityQA", "@BrowserQA"],
+        "seo_ai": ["@WordPressSEO", "@TechnicalSEO", "@SEOScanner", "@AEO_GEO"],
+        "brand_system": ["@BrandSystemArchitect", "@DesignTokenArchitect", "@BrandComplianceQA"],
+        "social": ["@SocialStrategy", "@SocialPublishingOps", "@SocialAnalytics", "@ContentRecycling"]
+      }
+    }
+  },
   "invariants": {
     "stable_agent_identity_is_not_upstream_repo": true,
     "qualified_routing_not_literal_full_fanout": true,
@@ -147,6 +195,7 @@
     "meta_attribution_is_not_incrementality": true,
     "publishing_requires_authenticated_surface": true,
     "archived_upstreams_not_primary_production_dependency": true,
-    "canonical_repo_redirects_are_normalized": true
+    "canonical_repo_redirects_are_normalized": true,
+    "project_adapters_reference_only_qualified_v3_identities": true
   }
 }
