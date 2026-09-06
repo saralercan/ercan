@@ -31,6 +31,7 @@ Machine-readable candidate map: `docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.js
 - Material website work includes performance/accessibility/browser verification when those surfaces can regress.
 - Instagram organic, paid, feed, Reels/Stories and logo work follow `BRAND_SOCIAL.md`; mobile/feed preview and export QA required.
 - Paid creative requires objective, audience, offer, hook/angle, proof, CTA, placement and measurement hypothesis.
+- **Measurement-only** Meta tasks remain read-only with respect to campaign/ad-set/ad mutation unless campaign execution is separately and explicitly in scope.
 - Attribution/ROAS is not causal-lift proof; use `@IncrementalityAnalyst` only when causal lift is actually the question.
 - Contact, proposal, lead, outreach and website-notification email work follows `MAIL_ENGINEERING.md`; important leads are persisted/correlated independently of notification email so provider failure cannot lose the enquiry.
 - WordPress/Hostinger mail uses supported WordPress hooks/APIs plus authenticated SMTP/API transport; no core PHPMailer edits, raw credential exposure or production-list sends from staging.
