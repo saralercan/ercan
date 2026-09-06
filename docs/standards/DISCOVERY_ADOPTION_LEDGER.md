@@ -4,6 +4,18 @@ Purpose: prevent duplicate research, hype-driven adoption and useful findings be
 
 This ledger records the durable decision; runtime facts such as versions, prices, API limits and feature availability must still be re-verified from current upstream.
 
+## GitHub Specialist v3 upstream hygiene — 2026-09-07
+- Stable routing count: `ADOPT / NO CHANGE` → keep **21 Stable Core + 31 GitHub Specialist v3 Extension = 52 named stable routing identities**. This gap pass found no material capability requiring a new stable agent.
+- Canonical-repo redirect normalization: `ADOPT` → resolve GitHub owner/path redirects before writing active manifest/catalog identities; aliases belong only in explicit superseded/rename notes or dated evidence.
+- `style-dictionary/style-dictionary`: `ADOPT_PATTERN_ONLY / CURRENT CANONICAL PATH` → semantic token lifecycle/transforms for `@DesignTokenArchitect`. Historical `amzn/style-dictionary`: `SUPERSEDED / RENAMED ALIAS`.
+- `Meshpilot-AGI/ai-seo-agent`: `ADOPT_PATTERN_ONLY / CURRENT CANONICAL PATH` → human-approved Shopify SEO workflow ideas only; official Shopify/search guidance remains authority. Historical `Nuraveda-Labs/ai-seo-agent`: `SUPERSEDED / RENAMED ALIAS`.
+- `lost-pixel/lost-pixel`: `SUPERSEDED / HISTORICAL FOR NEW WORK` → verified archived; do not promote. Existing Playwright + BackstopJS/reg-suit/pixel-diff patterns and current QA identities are sufficient.
+- `Shopify/react-native-performance`: `SUPERSEDED / HISTORICAL FOR NEW WORK` → verified archived; use current platform-native React Native/Expo/Flutter profiling selected JIT.
+- Visual-regression stable identity expansion: `REJECT_DUPLICATE / NO PROMOTION` → existing `@BrowserQA`, `@ComponentWorkshopQA`, `@PixelMatch`, `@ProductionQA` already cover the bounded capability; adding a new stable `@VisualRegression` identity would duplicate routing.
+- Mobile-performance stable identity expansion: `REJECT_DUPLICATE / NO PROMOTION` → current mobile + performance specialists can own platform-native profiling without a new stable identity.
+- Social-listening engine promotion: `WATCHLIST / NO PROMOTION` → broad discovery did not find a canonical community engine strong enough to supersede provider-native analytics plus `@SocialStrategy` / `@SocialAnalytics`.
+- Full reviewed evidence: `docs/upstream/scans/2026-09-07-github-specialist-gap-pass.md`.
+
 ## GitHub Specialist Expansion v3 — 2026-09-06
 - Stable specialist identity vs upstream engine/reference: `ADOPT` → Ercan OS agent identities are durable routing contracts in `AGENT_REGISTRY.md`; GitHub repositories are replaceable JIT references/engines governed by current-source verification. A repo is never a policy authority merely because it is useful.
 - `GITHUB_SPECIALIST_EXPANSION_V3.md` + `github-specialist-router` + six domain JIT skills: `ADOPT` → qualified specialist routing for web, app/mobile, social, SEO/AEO/GEO, Meta ads/measurement and branding.
@@ -21,7 +33,7 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - `gitroomhq/postiz-agent`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` for approved agent-operated social workflows; never bypass provider permissions/approval. Stable routing identity: `@SocialAgentOps`.
 - Postiz-class scheduler architecture: existing `ADOPT_PATTERN_ONLY` retained; v3 distinguishes `@SocialPublishingOps` from `@SocialStrategy` and `@SocialAnalytics`.
 - `janreges/siteone-crawler`: `ADOPT_WHEN_NEEDED` for broad crawl/search/site-quality audits. Stable routing identity: `@SEOScanner`.
-- `Nuraveda-Labs/ai-seo-agent`: `ADOPT_PATTERN_ONLY`; human approval and current official Shopify/search guidance are mandatory. It never overrides `@ShopifyExpert`, `@ShopifySEO` or search-engine authority.
+- `Nuraveda-Labs/ai-seo-agent`: `ADOPT_PATTERN_ONLY` at the 2026-09-06 review; **superseded as an active path by the 2026-09-07 canonical rename decision above**.
 - Meta Business SDKs: existing implementation-reference status strengthened to `ADOPT / CANONICAL IMPLEMENTATION REFERENCE` for authenticated Marketing API work; stable routing identity: `@MetaAdsEngineer`.
 - `facebookincubator/ConversionsAPI-Tag-for-GoogleTagManager`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` for inspected server-side GTM/CAPI stacks; stable routing identity: `@MetaMeasurement`. It is not a universal measurement architecture.
 - `facebookexperimental/Robyn`: `ADOPT_WHEN_NEEDED` for statistically justified Marketing Mix Modeling, adstock, saturation and budget-allocation analysis; verified public/non-archived in the 2026-09-06 review. Stable routing identity: `@MarketingScience`.
@@ -126,8 +138,8 @@ This ledger records the durable decision; runtime facts such as versions, prices
 ## Mandatory convergence rule
 When new research is requested:
 1. Check `UPSTREAM_INTELLIGENCE_CATALOG.md`, this ledger and current standards first.
-2. Verify current upstream status.
-3. If capability already exists, update evidence/version notes rather than duplicate it.
+2. Verify current upstream status and canonical repository identity/redirects.
+3. If capability already exists, update evidence/version/rename notes rather than duplicate it.
 4. If useful but missing, promote it into the smallest correct unit: catalog entry, standard, JIT skill, reusable CI, project adapter or provider adapter.
 5. If it changes agent behavior materially, add/extend regression/eval coverage.
 6. Record the decision here so the finding does not get lost in chat.
