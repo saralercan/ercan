@@ -27,6 +27,7 @@ def main() -> int:
     manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
 
     required_top_level = [
+        "identity_counts",
         "routing_standard",
         "registry",
         "qualified_routing",
@@ -34,6 +35,8 @@ def main() -> int:
         "current_index",
         "adoption_ledger",
         "regression_eval",
+        "extension_scoreboard",
+        "extension_certification",
         "evidence_scan",
         "router_skill",
         "domains",
@@ -56,8 +59,13 @@ def main() -> int:
         manifest["current_index"],
         manifest["adoption_ledger"],
         manifest["regression_eval"],
+        manifest["extension_scoreboard"],
+        manifest["extension_certification"],
         manifest["evidence_scan"],
         manifest["router_skill"],
+        "docs/standards/STABLE_AGENT_CORE.md",
+        "docs/standards/DOMAIN_EXPERT_REGISTRY.md",
+        "docs/evals/AGENT_SCOREBOARD.md",
     ]
 
     for domain, config in manifest["domains"].items():
@@ -80,6 +88,11 @@ def main() -> int:
     current = read(manifest["current_index"])
     ledger = read(manifest["adoption_ledger"])
     regression = read(manifest["regression_eval"])
+    scoreboard = read(manifest["extension_scoreboard"])
+    certification = read(manifest["extension_certification"])
+    stable_core = read("docs/standards/STABLE_AGENT_CORE.md")
+    domain_registry = read("docs/standards/DOMAIN_EXPERT_REGISTRY.md")
+    core_scoreboard = read("docs/evals/AGENT_SCOREBOARD.md")
     root_agents = read("AGENTS.md")
 
     all_agents: list[str] = []
@@ -108,6 +121,10 @@ def main() -> int:
                 fail(f"agent missing from registry: {agent}", failures)
             if agent not in expansion:
                 fail(f"agent missing from expansion standard: {agent}", failures)
+            if agent not in scoreboard:
+                fail(f"agent missing from v3 extension scoreboard: {agent}", failures)
+            if agent not in certification:
+                fail(f"agent missing from v3 behavioral certification contract: {agent}", failures)
 
         for upstream in config.get("upstreams", []):
             repo = upstream.get("repo", "")
@@ -126,6 +143,30 @@ def main() -> int:
                 dupes.add(agent)
             seen.add(agent)
         fail(f"stable agent identity duplicated across domains: {sorted(dupes)}", failures)
+
+    counts = manifest["identity_counts"]
+    expected_core = counts.get("stable_core")
+    expected_extension = counts.get("specialist_extension")
+    expected_total = counts.get("total_named_stable_routing_identities")
+
+    if expected_core != 21:
+        fail(f"stable core count drift: expected manifest stable_core=21, got {expected_core!r}", failures)
+    if expected_extension != len(all_agents):
+        fail(
+            f"specialist extension count drift: manifest={expected_extension!r}, actual={len(all_agents)}",
+            failures,
+        )
+    if expected_total != expected_core + expected_extension:
+        fail(
+            f"total identity count drift: total={expected_total!r}, core+extension={expected_core + expected_extension}",
+            failures,
+        )
+    if expected_extension != 31 or expected_total != 52:
+        fail(
+            f"v3 accounting invariant drift: expected 21 core + 31 extension = 52 total, got "
+            f"{expected_core}+{expected_extension}={expected_total}",
+            failures,
+        )
 
     upstream_repo_names = {repo.lower() for _, repo, _ in all_upstreams}
     for agent in all_agents:
@@ -151,6 +192,41 @@ def main() -> int:
     if "GITHUB_SPECIALIST_ROUTING_V3.md" not in expansion and "GITHUB_SPECIALIST_ROUTING_V3.md" not in root_agents:
         fail("v3 regression eval is not linked from governing surfaces", failures)
 
+    core_count_needles = [
+        "Canonical stable core count: **21**",
+        "GitHub Specialist v3 extension count: **31**",
+        "Total named stable routing identities: **52**",
+    ]
+    for needle in core_count_needles:
+        if needle not in stable_core:
+            fail(f"stable-core accounting surface missing: {needle}", failures)
+
+    if "Combined named stable routing surface: **52 identities**" not in domain_registry:
+        fail("domain expert registry does not acknowledge 21+31=52 stable routing surface", failures)
+
+    if "Specialist-extension structural readiness: **31/31 PASS**" not in scoreboard:
+        fail("v3 extension scoreboard missing 31/31 PASS structural summary", failures)
+    if "Total named stable routing identities: **52**" not in scoreboard:
+        fail("v3 extension scoreboard missing 52-identity accounting", failures)
+    if "Behavioral specialist certification: **NOT_RUN**" not in scoreboard:
+        fail("v3 extension scoreboard must keep behavioral certification NOT_RUN", failures)
+
+    if "Stable identities checked: **21**" not in core_scoreboard:
+        fail("core scoreboard must remain scoped to 21 Stable Core identities", failures)
+    if "Structural readiness: **21/21 PASS**" not in core_scoreboard:
+        fail("core scoreboard 21/21 structural summary drift", failures)
+
+    certification_needles = [
+        "PRODUCTION_VERIFIED",
+        "85/100",
+        "zero hard fails",
+        "behavioral status remains `NOT_RUN`",
+    ]
+    certification_lower = certification.lower()
+    for needle in certification_needles:
+        if needle.lower() not in certification_lower:
+            fail(f"v3 behavioral certification contract missing: {needle}", failures)
+
     invariants = manifest["invariants"]
     for key, value in invariants.items():
         if value is not True:
@@ -164,7 +240,9 @@ def main() -> int:
         "publishing_requires_authenticated_surface": ["authenticated", "publishing"],
         "archived_upstreams_not_primary_production_dependency": ["archived", "primary"],
     }
-    combined_governance = "\n".join([expansion, routing, catalog, ledger, regression]).lower()
+    combined_governance = "\n".join(
+        [expansion, routing, catalog, ledger, regression, scoreboard, certification, stable_core]
+    ).lower()
     for key, needles in invariant_evidence.items():
         for needle in needles:
             if needle.lower() not in combined_governance:
@@ -195,9 +273,12 @@ def main() -> int:
 
     print("GitHub Specialist v3 doctor: PASS")
     print(f"Domains: {len(manifest['domains'])}")
-    print(f"Stable agents: {len(all_agents)}")
+    print(f"Stable Core identities: {expected_core}")
+    print(f"Specialist extension identities: {len(all_agents)}")
+    print(f"Total named stable routing identities: {expected_total}")
     print(f"Upstream references: {len(all_upstreams)}")
     print(f"Referenced files: {len(set(referenced_files))}")
+    print("Behavioral specialist certification: NOT_RUN")
     return 0
 
 
