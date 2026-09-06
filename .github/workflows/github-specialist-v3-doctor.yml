@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - 'AGENTS.md'
+      - 'docs/standards/STABLE_AGENT_CORE.md'
+      - 'docs/standards/DOMAIN_EXPERT_REGISTRY.md'
       - 'docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md'
       - 'docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.json'
       - 'docs/standards/AGENT_REGISTRY.md'
@@ -12,7 +14,10 @@ on:
       - 'docs/upstream/GITHUB_SPECIALIST_CATALOG_V3.md'
       - 'docs/upstream/UPSTREAM_INTELLIGENCE_CURRENT.md'
       - 'docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md'
+      - 'docs/evals/AGENT_SCOREBOARD.md'
       - 'docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md'
+      - 'docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md'
+      - 'docs/evals/GITHUB_SPECIALIST_CERTIFICATION_V3.md'
       - '.agents/skills/github-specialist-router/**'
       - '.agents/skills/web-production-specialist/**'
       - '.agents/skills/mobile-app-specialist/**'
@@ -27,6 +32,8 @@ on:
     branches: [master]
     paths:
       - 'AGENTS.md'
+      - 'docs/standards/STABLE_AGENT_CORE.md'
+      - 'docs/standards/DOMAIN_EXPERT_REGISTRY.md'
       - 'docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md'
       - 'docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.json'
       - 'docs/standards/AGENT_REGISTRY.md'
@@ -35,7 +42,10 @@ on:
       - 'docs/upstream/GITHUB_SPECIALIST_CATALOG_V3.md'
       - 'docs/upstream/UPSTREAM_INTELLIGENCE_CURRENT.md'
       - 'docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md'
+      - 'docs/evals/AGENT_SCOREBOARD.md'
       - 'docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md'
+      - 'docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md'
+      - 'docs/evals/GITHUB_SPECIALIST_CERTIFICATION_V3.md'
       - '.agents/skills/github-specialist-router/**'
       - '.agents/skills/web-production-specialist/**'
       - '.agents/skills/mobile-app-specialist/**'
@@ -59,5 +69,5 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - name: Validate GitHub Specialist v3 manifest, routing and upstream decisions
+      - name: Validate GitHub Specialist v3 identity accounting, routing, certification and upstream decisions
         run: python3 scripts/validate_github_specialist_v3.py
