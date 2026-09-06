@@ -18,6 +18,10 @@ on:
       - 'docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md'
       - 'docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md'
       - 'docs/evals/GITHUB_SPECIALIST_CERTIFICATION_V3.md'
+      - 'projects/dragdrop/AGENTS.md'
+      - 'projects/vinterro-digital/AGENTS.md'
+      - 'projects/goayvalik/AGENTS.md'
+      - 'projects/ayvalik-vibes/AGENTS.md'
       - '.agents/skills/github-specialist-router/**'
       - '.agents/skills/web-production-specialist/**'
       - '.agents/skills/mobile-app-specialist/**'
@@ -27,6 +31,7 @@ on:
       - '.agents/skills/meta-ads-measurement/**'
       - '.agents/skills/brand-system-specialist/**'
       - 'scripts/validate_github_specialist_v3.py'
+      - 'scripts/validate_github_specialist_project_routing_v3.py'
       - '.github/workflows/github-specialist-v3-doctor.yml'
   push:
     branches: [master]
@@ -46,6 +51,10 @@ on:
       - 'docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md'
       - 'docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md'
       - 'docs/evals/GITHUB_SPECIALIST_CERTIFICATION_V3.md'
+      - 'projects/dragdrop/AGENTS.md'
+      - 'projects/vinterro-digital/AGENTS.md'
+      - 'projects/goayvalik/AGENTS.md'
+      - 'projects/ayvalik-vibes/AGENTS.md'
       - '.agents/skills/github-specialist-router/**'
       - '.agents/skills/web-production-specialist/**'
       - '.agents/skills/mobile-app-specialist/**'
@@ -55,6 +64,7 @@ on:
       - '.agents/skills/meta-ads-measurement/**'
       - '.agents/skills/brand-system-specialist/**'
       - 'scripts/validate_github_specialist_v3.py'
+      - 'scripts/validate_github_specialist_project_routing_v3.py'
       - '.github/workflows/github-specialist-v3-doctor.yml'
 
 permissions:
@@ -71,3 +81,5 @@ jobs:
           python-version: '3.12'
       - name: Validate GitHub Specialist v3 identity accounting, routing, certification and upstream hygiene
         run: python3 scripts/validate_github_specialist_v3.py
+      - name: Validate project adapters against v3 project routing manifest
+        run: python3 scripts/validate_github_specialist_project_routing_v3.py
