@@ -1,8 +1,13 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "standard": "GITHUB_SPECIALIST_EXPANSION_V3",
   "status": "active",
-  "reviewed": "2026-09-06",
+  "reviewed": "2026-09-07",
+  "identity_counts": {
+    "stable_core": 21,
+    "specialist_extension": 31,
+    "total_named_stable_routing_identities": 52
+  },
   "routing_standard": "docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md",
   "registry": "docs/standards/AGENT_REGISTRY.md",
   "qualified_routing": "docs/standards/QUALIFIED_AGENT_ROUTING.md",
@@ -10,6 +15,8 @@
   "current_index": "docs/upstream/UPSTREAM_INTELLIGENCE_CURRENT.md",
   "adoption_ledger": "docs/standards/DISCOVERY_ADOPTION_LEDGER.md",
   "regression_eval": "docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md",
+  "extension_scoreboard": "docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md",
+  "extension_certification": "docs/evals/GITHUB_SPECIALIST_CERTIFICATION_V3.md",
   "evidence_scan": "docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md",
   "router_skill": ".agents/skills/github-specialist-router/SKILL.md",
   "domains": {
