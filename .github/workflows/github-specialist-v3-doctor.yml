@@ -13,7 +13,7 @@ on:
       - 'docs/standards/DISCOVERY_ADOPTION_LEDGER.md'
       - 'docs/upstream/GITHUB_SPECIALIST_CATALOG_V3.md'
       - 'docs/upstream/UPSTREAM_INTELLIGENCE_CURRENT.md'
-      - 'docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md'
+      - 'docs/upstream/scans/**'
       - 'docs/evals/AGENT_SCOREBOARD.md'
       - 'docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md'
       - 'docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md'
@@ -41,7 +41,7 @@ on:
       - 'docs/standards/DISCOVERY_ADOPTION_LEDGER.md'
       - 'docs/upstream/GITHUB_SPECIALIST_CATALOG_V3.md'
       - 'docs/upstream/UPSTREAM_INTELLIGENCE_CURRENT.md'
-      - 'docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md'
+      - 'docs/upstream/scans/**'
       - 'docs/evals/AGENT_SCOREBOARD.md'
       - 'docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md'
       - 'docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md'
@@ -69,5 +69,5 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - name: Validate GitHub Specialist v3 identity accounting, routing, certification and upstream decisions
+      - name: Validate GitHub Specialist v3 identity accounting, routing, certification and upstream hygiene
         run: python3 scripts/validate_github_specialist_v3.py
