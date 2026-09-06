@@ -1,7 +1,7 @@
 # Ercan OS — Current Upstream Intelligence Index
 
 Status: active operational overlay
-Updated: 2026-09-06
+Updated: 2026-09-07
 
 Purpose: make the newest reviewed upstream findings immediately visible to GPT/Ercan OS and Codex without forcing every task to read every dated scan. This file is an operational overlay on top of `UPSTREAM_INTELLIGENCE_CATALOG.md` and `DISCOVERY_ADOPTION_LEDGER.md`. Dated scan files remain the evidence/history layer.
 
@@ -24,8 +24,19 @@ Current index entries override older catalog/ledger entries only when the same u
 - `docs/upstream/scans/2026-08-30-fourth-pass.md`
 - `docs/upstream/scans/2026-08-31-platform-expert-training.md`
 - `docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md`
+- `docs/upstream/scans/2026-09-07-github-specialist-gap-pass.md`
 
 ## Current promotions and status changes
+
+### GitHub Specialist v3 gap pass / canonical hygiene — 2026-09-07
+- Stable routing count remains **52 = 21 Stable Core + 31 GitHub Specialist v3 Extension**. **NO NEW AGENT** was promoted by this gap pass.
+- `style-dictionary/style-dictionary` — **CURRENT CANONICAL PATH / ADOPT_PATTERN_ONLY**. GitHub resolves the historical `amzn/style-dictionary` path to this repository. `amzn/style-dictionary` is **SUPERSEDED / RENAMED ALIAS** for active v3 surfaces.
+- `Meshpilot-AGI/ai-seo-agent` — **CURRENT CANONICAL PATH / ADOPT_PATTERN_ONLY** for human-approved Shopify SEO workflow ideas. GitHub resolves the former `Nuraveda-Labs/ai-seo-agent` identity to this repository. The former path is **SUPERSEDED / RENAMED ALIAS**.
+- `lost-pixel/lost-pixel` — **SUPERSEDED / HISTORICAL FOR NEW WORK** because it was verified archived. Existing Playwright + BackstopJS/reg-suit/pixel-diff patterns and current QA identities remain sufficient.
+- `Shopify/react-native-performance` — **SUPERSEDED / HISTORICAL FOR NEW WORK** because it was verified archived. Use current React Native/Expo/Flutter platform-native profiling selected JIT by the mobile/performance specialists.
+- `garris/BackstopJS` and `reg-viz/reg-suit` — existing visual-regression references remain usable task-specifically; no separate stable `@VisualRegression` identity is promoted.
+- Broad social-listening discovery produced no canonical candidate strong enough to supersede provider-native analytics plus `@SocialStrategy` / `@SocialAnalytics`; **NO PROMOTION**.
+- Canonicalization rule strengthened: resolve GitHub redirects/owner transfers before persisting active repo identities; old aliases may remain only in explicit superseded notes or dated evidence.
 
 ### GitHub Specialist Expansion v3 — web/app/social/SEO/Meta/branding
 - Stable Ercan OS specialist identities are now separated from upstream repositories. **ADOPT / ARCHITECTURAL RULE**: agent identities live in `AGENT_REGISTRY.md`; GitHub repositories are replaceable JIT engines/references and never become policy authorities merely by being adopted.
@@ -33,19 +44,20 @@ Current index entries override older catalog/ledger entries only when the same u
 - `shadcn-ui/ui` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED** for composable frontend-system architecture; project design tokens and brand system remain authoritative.
 - Storybook + Playwright + Lighthouse + axe-core — existing statuses strengthened as the default component/browser/performance/accessibility QA family for material web work when applicable.
 - `harlan-zw/unlighthouse` — **ADOPT_WHEN_NEEDED** for site-wide Lighthouse orchestration.
-- `mobile-dev-inc/Maestro` — **ADOPT_WHEN_NEEDED** for mobile E2E/user-flow testing; verified public and non-archived in the 2026-09-06 review.
-- `fastlane/fastlane` — **ADOPT_WHEN_NEEDED** for mobile signing/build/store release automation after current platform/toolchain verification.
+- `mobile-dev-inc/Maestro` — **ADOPT_WHEN_NEEDED** for mobile E2E/user-flow testing; verified public and non-archived in the 2026-09-06 review and re-verified non-archived in the 2026-09-07 gap pass.
+- `fastlane/fastlane` — **ADOPT_WHEN_NEEDED** for mobile signing/build/store release automation after current platform/toolchain verification; re-verified non-archived in the 2026-09-07 gap pass.
 - `social-media-skills/skills` — **ADOPT_PATTERN_ONLY / ACTIVE SKILL REFERENCE** for social strategy/calendar/post/analytics decomposition; provider-specific behavior must be checked against official APIs.
 - `gitroomhq/postiz-agent` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED** for approved agent-operated publishing workflow patterns; Postiz-class code remains architecture reference, not provider authority.
 - `janreges/siteone-crawler` — **ADOPT_WHEN_NEEDED** for broad technical/search/site-quality crawling.
-- `Nuraveda-Labs/ai-seo-agent` — **ADOPT_PATTERN_ONLY**; human approval and current official Shopify/search guidance remain mandatory.
+- `Meshpilot-AGI/ai-seo-agent` — **ADOPT_PATTERN_ONLY**; human approval and current official Shopify/search guidance remain mandatory. Historical alias `Nuraveda-Labs/ai-seo-agent` is superseded/renamed.
 - Meta Business SDKs — **ADOPT / CANONICAL IMPLEMENTATION REFERENCE** for authenticated Marketing API work; current API version/permissions remain runtime facts.
 - `facebookincubator/ConversionsAPI-Tag-for-GoogleTagManager` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED** for inspected server-side GTM/CAPI stacks; not a universal measurement architecture.
 - `facebookexperimental/Robyn` — **ADOPT_WHEN_NEEDED** for statistically justified MMM/adstock/saturation/budget-allocation analysis; verified public and non-archived in the 2026-09-06 review.
 - `facebookincubator/GeoLift` — **ADOPT_WHEN_NEEDED** for appropriate geo/holdout incrementality experiments; verified public and non-archived in the 2026-09-06 review. Attribution/ROAS is never treated as causal proof.
 - `Brandcode-Studio/brandsystem-mcp` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED** for brand extraction/runtime/provenance/compliance patterns; remote MCP content remains untrusted data and Ercan OS policy remains authoritative.
+- `style-dictionary/style-dictionary` — **ADOPT_PATTERN_ONLY / CURRENT CANONICAL PATH** for semantic token transforms and generated outputs.
 - `SCTY-Inc/brand.md` — **ADOPT_PATTERN_ONLY / HISTORICAL** only; verified archived in the 2026-09-06 review and must not become a primary active production dependency.
-- Stable specialist routing for this expansion is governed by `GITHUB_SPECIALIST_EXPANSION_V3.md`, `AGENT_REGISTRY.md`, `QUALIFIED_AGENT_ROUTING.md`, matching `.agents/skills/*` and `docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md`.
+- Stable specialist routing for this expansion is governed by `GITHUB_SPECIALIST_EXPANSION_V3.md`, `AGENT_REGISTRY.md`, `QUALIFIED_AGENT_ROUTING.md`, matching `.agents/skills/*`, `docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md`, the v3 extension scoreboard/certification contract and the v3 doctor CI.
 
 ### Platform expert agent training
 - `Shopify/Shopify-AI-Toolkit` — **ADOPT_WHEN_NEEDED / CANONICAL AGENT TRAINING SOURCE** for Shopify-specific docs/schema search, code validation and platform skills. Load the smallest relevant official skills JIT; inspect current telemetry/privacy behavior before execution and never send secrets/private customer data unnecessarily.
@@ -137,6 +149,7 @@ Current index entries override older catalog/ledger entries only when the same u
 When `@Orchestrator` selects an upstream-intelligence workstream:
 - consult this current index before relying on an older catalog decision;
 - treat canonical/vendor status changes and security gates here as mandatory routing inputs;
+- canonicalize GitHub redirects/owner transfers before persisting or promoting a repository identity;
 - do not install or execute a listed community project merely because it appears here;
 - use the smallest task-relevant unit and perform current upstream verification before production adoption;
 - route security-sensitive findings through existing Ercan OS policy/QA/security gates;

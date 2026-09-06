@@ -38,7 +38,10 @@ def main() -> int:
         "extension_scoreboard",
         "extension_certification",
         "evidence_scan",
+        "latest_refresh_scan",
         "router_skill",
+        "upstream_aliases",
+        "archived_rejections",
         "domains",
         "invariants",
     ]
@@ -62,6 +65,7 @@ def main() -> int:
         manifest["extension_scoreboard"],
         manifest["extension_certification"],
         manifest["evidence_scan"],
+        manifest["latest_refresh_scan"],
         manifest["router_skill"],
         "docs/standards/STABLE_AGENT_CORE.md",
         "docs/standards/DOMAIN_EXPERT_REGISTRY.md",
@@ -90,6 +94,7 @@ def main() -> int:
     regression = read(manifest["regression_eval"])
     scoreboard = read(manifest["extension_scoreboard"])
     certification = read(manifest["extension_certification"])
+    refresh_scan = read(manifest["latest_refresh_scan"])
     stable_core = read("docs/standards/STABLE_AGENT_CORE.md")
     domain_registry = read("docs/standards/DOMAIN_EXPERT_REGISTRY.md")
     core_scoreboard = read("docs/evals/AGENT_SCOREBOARD.md")
@@ -178,6 +183,80 @@ def main() -> int:
         if repo not in catalog and repo not in current and repo not in ledger:
             fail(f"upstream missing from catalog/current/ledger surfaces: {repo}", failures)
 
+    # Canonical repository aliases: aliases must never re-enter the active domain upstream lists.
+    aliases = manifest.get("upstream_aliases", [])
+    if not isinstance(aliases, list) or not aliases:
+        fail("upstream_aliases must be a non-empty list", failures)
+    alias_names: set[str] = set()
+    canonical_names: set[str] = set()
+    active_repos = {repo for _, repo, _ in all_upstreams}
+    for item in aliases:
+        alias = item.get("alias", "")
+        canonical = item.get("canonical", "")
+        status = item.get("status", "")
+        if not alias or "/" not in alias:
+            fail(f"invalid upstream alias: {alias!r}", failures)
+        if not canonical or "/" not in canonical:
+            fail(f"invalid canonical repo for alias {alias!r}: {canonical!r}", failures)
+        if alias == canonical:
+            fail(f"alias equals canonical repo: {alias}", failures)
+        if status != "SUPERSEDED_RENAMED":
+            fail(f"alias status drift for {alias}: expected SUPERSEDED_RENAMED, got {status!r}", failures)
+        if alias in active_repos:
+            fail(f"superseded alias reintroduced as active upstream: {alias}", failures)
+        if canonical not in active_repos:
+            fail(f"canonical target missing from active upstreams: {canonical}", failures)
+        alias_names.add(alias)
+        canonical_names.add(canonical)
+        for surface_name, surface in [
+            ("catalog", catalog),
+            ("current", current),
+            ("ledger", ledger),
+            ("refresh_scan", refresh_scan),
+        ]:
+            if alias not in surface or canonical not in surface:
+                fail(
+                    f"canonical rename evidence missing in {surface_name}: {alias} -> {canonical}",
+                    failures,
+                )
+
+    required_aliases = {
+        "amzn/style-dictionary": "style-dictionary/style-dictionary",
+        "Nuraveda-Labs/ai-seo-agent": "Meshpilot-AGI/ai-seo-agent",
+    }
+    alias_map = {item.get("alias"): item.get("canonical") for item in aliases}
+    for alias, canonical in required_aliases.items():
+        if alias_map.get(alias) != canonical:
+            fail(f"required canonical alias drift: {alias} must map to {canonical}", failures)
+
+    # Archived candidates are explicit non-promotions and must not enter active upstreams.
+    archived_rejections = manifest.get("archived_rejections", [])
+    if not isinstance(archived_rejections, list):
+        fail("archived_rejections must be a list", failures)
+        archived_rejections = []
+    required_archived = {
+        "lost-pixel/lost-pixel",
+        "Shopify/react-native-performance",
+    }
+    if not required_archived.issubset(set(archived_rejections)):
+        fail(
+            f"required archived rejections missing: {sorted(required_archived - set(archived_rejections))}",
+            failures,
+        )
+    for repo in archived_rejections:
+        if repo in active_repos:
+            fail(f"archived rejection reintroduced as active upstream: {repo}", failures)
+        if repo not in current or repo not in ledger or repo not in refresh_scan:
+            fail(f"archived rejection lacks current/ledger/scan evidence: {repo}", failures)
+
+    # Explicit canonical decisions that must remain stable unless a future reviewed status change updates this doctor.
+    seo_decisions = {repo: decision for domain, repo, decision in all_upstreams if domain == "seo"}
+    if seo_decisions.get("Meshpilot-AGI/ai-seo-agent") != "ADOPT_PATTERN_ONLY":
+        fail("Meshpilot-AGI/ai-seo-agent must remain ADOPT_PATTERN_ONLY in active SEO upstreams", failures)
+    branding_decisions = {repo: decision for domain, repo, decision in all_upstreams if domain == "branding"}
+    if branding_decisions.get("style-dictionary/style-dictionary") != "ADOPT_PATTERN_ONLY":
+        fail("style-dictionary/style-dictionary must remain ADOPT_PATTERN_ONLY in active branding upstreams", failures)
+
     required_root_refs = [
         "GITHUB_SPECIALIST_EXPANSION_V3.md",
         "github-specialist-router/SKILL.md",
@@ -239,9 +318,10 @@ def main() -> int:
         "meta_attribution_is_not_incrementality": ["causal", "ROAS"],
         "publishing_requires_authenticated_surface": ["authenticated", "publishing"],
         "archived_upstreams_not_primary_production_dependency": ["archived", "primary"],
+        "canonical_repo_redirects_are_normalized": ["canonical", "redirect"],
     }
     combined_governance = "\n".join(
-        [expansion, routing, catalog, ledger, regression, scoreboard, certification, stable_core]
+        [expansion, routing, catalog, ledger, regression, scoreboard, certification, stable_core, refresh_scan]
     ).lower()
     for key, needles in invariant_evidence.items():
         for needle in needles:
@@ -277,6 +357,8 @@ def main() -> int:
     print(f"Specialist extension identities: {len(all_agents)}")
     print(f"Total named stable routing identities: {expected_total}")
     print(f"Upstream references: {len(all_upstreams)}")
+    print(f"Canonical aliases guarded: {len(aliases)}")
+    print(f"Archived rejections guarded: {len(archived_rejections)}")
     print(f"Referenced files: {len(set(referenced_files))}")
     print("Behavioral specialist certification: NOT_RUN")
     return 0

@@ -1,20 +1,25 @@
 # Ercan OS — GitHub Specialist Expansion v3
 
 Status: active
-Date: 2026-09-06
+Date: 2026-09-07
 
 Purpose: promote reviewed GitHub/open-source capabilities into qualified Ercan OS specialist routing for web, app/mobile, social media, SEO/AEO/GEO, Meta advertising/measurement and branding. This standard supplements, and never overrides, root `AGENTS.md`, `AGENT_REGISTRY.md`, `QUALIFIED_AGENT_ROUTING.md`, project adapters, safety, scope and independent QA rules.
 
 Machine-readable manifest: `docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.json`.
 JIT upstream catalog supplement: `docs/upstream/GITHUB_SPECIALIST_CATALOG_V3.md`.
-Reviewed evidence: `docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md`.
+Reviewed evidence baseline: `docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md`.
+Latest upstream hygiene refresh: `docs/upstream/scans/2026-09-07-github-specialist-gap-pass.md`.
 Regression eval: `docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md`.
+Structural scoreboard: `docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md`.
+Behavioral certification: `docs/evals/GITHUB_SPECIALIST_CERTIFICATION_V3.md`.
 
 ## Core rule
 
-GitHub repositories are upstream capability references, not autonomous authorities. Stable Ercan OS specialist identities own the task. Upstreams are loaded JIT, re-verified when volatile, and adopted narrowly. Archived/deprecated projects are historical/pattern references only unless a maintained successor does not exist and the task explicitly justifies them.
+GitHub repositories are upstream capability references, not autonomous authorities. Stable Ercan OS specialist identities own the task. Upstreams are loaded JIT, re-verified when volatile, canonicalized when GitHub redirects/owner transfers occur, and adopted narrowly. Archived/deprecated projects are historical/pattern references only unless a maintained successor does not exist and the task explicitly justifies them.
 
 When the user says “tüm ajanları çalıştır”, Orchestrator must include every materially relevant specialist from the pods below, but must not fan out unrelated domains merely to increase agent count.
+
+The stable routing surface is **21 Stable Core + 31 GitHub Specialist v3 Extension = 52 named stable routing identities**. This count is not execution fan-out.
 
 ## Web / production UI pod
 
@@ -40,6 +45,8 @@ Reviewed upstream references:
 Minimum material web flow:
 `@WebArchitecture → platform specialist when applicable → @FrontendSystem → implementation → @WebPerformance/@AccessibilityQA as risk requires → @BrowserQA → independent QA`.
 
+Visual-regression tooling remains a bounded QA capability inside the existing pod. The 2026-09-07 gap pass did not justify a separate stable visual-regression identity.
+
 ## App / mobile pod
 
 Stable specialists:
@@ -59,6 +66,8 @@ Reviewed upstream references:
 
 Do not select both Flutter and React Native specialists unless the project actually spans both or a migration/comparison is requested.
 
+The archived `Shopify/react-native-performance` repository is historical only; mobile performance uses current platform-native profiling/tooling selected JIT by the mobile/performance specialists.
+
 ## Social media pod
 
 Stable specialists:
@@ -73,7 +82,7 @@ Reviewed upstream references:
 - `gitroomhq/postiz-app` — provider/scheduler architecture reference.
 - `gitroomhq/postiz-agent` — agent-operated social workflow reference.
 
-Official Meta/X/LinkedIn/TikTok/etc. provider documentation remains authority for permissions, API behavior, limits and publishing semantics.
+Official Meta/X/LinkedIn/TikTok/etc. provider documentation remains authority for permissions, API behavior, limits and publishing semantics. The 2026-09-07 gap pass found no canonical community social-listening engine strong enough to justify another stable identity or supersede provider-native analytics.
 
 ## SEO / AEO / GEO pod
 
@@ -90,7 +99,9 @@ Reviewed upstream references:
 - `harlan-zw/unlighthouse`
 - `Yoast/wordpress-seo`
 - `Shopify/theme-tools`
-- `Nuraveda-Labs/ai-seo-agent` — community pattern only; human approval and official Shopify/search guidance remain mandatory.
+- `Meshpilot-AGI/ai-seo-agent` — community pattern only; human approval and official Shopify/search guidance remain mandatory.
+
+Canonical path note: GitHub resolves the former `Nuraveda-Labs/ai-seo-agent` identity to `Meshpilot-AGI/ai-seo-agent`; the old path is a superseded/renamed alias and must not return to active manifests.
 
 Authority rule: Google Search Central, Bing/IndexNow, Schema.org, OpenAI/Perplexity publisher/crawler documentation and official platform docs override community GEO/SEO scoring repos.
 
@@ -129,6 +140,8 @@ Reviewed upstream references:
 - `style-dictionary/style-dictionary` — token transformation/output reference.
 - `SCTY-Inc/brand.md` — archived as of this review; `ADOPT_PATTERN_ONLY/HISTORICAL`, never the primary active production dependency.
 
+Canonical path note: the historical `amzn/style-dictionary` path now resolves to `style-dictionary/style-dictionary`; active v3 surfaces use the current canonical path.
+
 Recommended separation:
 - `BRAND.md` — behavior, voice, audience, message and brand-policy layer.
 - `DESIGN.md` — visual/composition/typography/imagery layer when the project uses such a file.
@@ -157,6 +170,15 @@ For branding, brand system/token/runtime specialists are included when cross-cha
 
 ### Social campaign with paid Meta layer
 `@Orchestrator → @BrandSystemArchitect/@SocialStrategy → creative specialists → @AdsCreativeStrategist → @MetaAdsEngineer when execution access exists → @MetaMeasurement → @SocialAnalytics/@MarketingScience as appropriate → Brand/measurement QA`.
+
+## Upstream hygiene gate
+
+Before an upstream becomes or remains an active v3 reference:
+- resolve GitHub redirects/owner transfers and persist the current canonical identity;
+- keep old aliases only in explicit superseded/renamed notes or dated evidence;
+- reject archived candidates as new production dependencies when maintained/native alternatives exist;
+- do not create a new stable specialist solely because another repository category exists;
+- update CURRENT + ledger + manifest + catalog + doctor guard when a canonical status change materially affects routing.
 
 ## Completion gate
 

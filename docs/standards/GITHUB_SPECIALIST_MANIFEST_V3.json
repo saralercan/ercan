@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "standard": "GITHUB_SPECIALIST_EXPANSION_V3",
   "status": "active",
   "reviewed": "2026-09-07",
@@ -18,7 +18,24 @@
   "extension_scoreboard": "docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md",
   "extension_certification": "docs/evals/GITHUB_SPECIALIST_CERTIFICATION_V3.md",
   "evidence_scan": "docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md",
+  "latest_refresh_scan": "docs/upstream/scans/2026-09-07-github-specialist-gap-pass.md",
   "router_skill": ".agents/skills/github-specialist-router/SKILL.md",
+  "upstream_aliases": [
+    {
+      "alias": "amzn/style-dictionary",
+      "canonical": "style-dictionary/style-dictionary",
+      "status": "SUPERSEDED_RENAMED"
+    },
+    {
+      "alias": "Nuraveda-Labs/ai-seo-agent",
+      "canonical": "Meshpilot-AGI/ai-seo-agent",
+      "status": "SUPERSEDED_RENAMED"
+    }
+  ],
+  "archived_rejections": [
+    "lost-pixel/lost-pixel",
+    "Shopify/react-native-performance"
+  ],
   "domains": {
     "web": {
       "skill": ".agents/skills/web-production-specialist/SKILL.md",
@@ -88,7 +105,7 @@
         {"repo": "janreges/siteone-crawler", "decision": "ADOPT_WHEN_NEEDED"},
         {"repo": "Yoast/wordpress-seo", "decision": "ADOPT_PATTERN_ONLY"},
         {"repo": "Shopify/theme-tools", "decision": "ADOPT"},
-        {"repo": "Nuraveda-Labs/ai-seo-agent", "decision": "ADOPT_PATTERN_ONLY"}
+        {"repo": "Meshpilot-AGI/ai-seo-agent", "decision": "ADOPT_PATTERN_ONLY"}
       ]
     },
     "meta_ads": {
@@ -129,6 +146,7 @@
     "implementation_does_not_self_certify": true,
     "meta_attribution_is_not_incrementality": true,
     "publishing_requires_authenticated_surface": true,
-    "archived_upstreams_not_primary_production_dependency": true
+    "archived_upstreams_not_primary_production_dependency": true,
+    "canonical_repo_redirects_are_normalized": true
   }
 }
