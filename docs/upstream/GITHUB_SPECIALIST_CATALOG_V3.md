@@ -1,11 +1,11 @@
 # Ercan OS — GitHub Specialist Catalog v3
 
 Status: active JIT catalog supplement
-Reviewed: 2026-09-07
+Reviewed: 2026-09-12
 Parent catalog: `docs/upstream/UPSTREAM_INTELLIGENCE_CATALOG.md`
 Governing standard: `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`
 Evidence baseline: `docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md`
-Latest refresh: `docs/upstream/scans/2026-09-07-github-specialist-gap-pass.md`
+Latest refresh: `docs/upstream/scans/2026-09-12-website-downloader-adoption.md`
 
 Purpose: provide a compact, task-routed upstream map for the stable specialist identities added for web, app/mobile, social, SEO/AEO/GEO, Meta ads/measurement and branding. This supplement avoids duplicating the entire broad catalog and is loaded only when one of these domains is materially in scope.
 
@@ -26,8 +26,11 @@ Stable Ercan OS specialist identities are not GitHub repositories. Repositories 
 | `dequelabs/axe-core` | ADOPT | `@AccessibilityQA` automated checks |
 | `harlan-zw/unlighthouse` | ADOPT_WHEN_NEEDED | `@WebPerformance` site-wide audit |
 | `abi/screenshot-to-code` | ADOPT_PATTERN_ONLY | existing `@ScreenshotToCode` pod |
+| `AhmadIbrahiim/Website-downloader` | ADOPT_WHEN_NEEDED | JIT `site-mirror` capability routed through the existing web pod for authorized/public migration, offline reference capture and asset inventory |
 
-Hard boundaries: axe never replaces manual keyboard/focus/semantic QA; Lighthouse never replaces runtime/browser QA; framework choice follows the inspected project.
+Website-downloader review note (2026-09-12): reviewed master head `130ad63d7163c19df64322556ca9c260eef353be`; upstream software is MIT-licensed. Current code uses `execFile`, HTTP(S) URL validation, per-job isolated directories, scoped cleanup and quota/timeout controls. Hosted or multi-user use still requires Ercan OS private-network, redirect and DNS-rebinding defenses because protocol/hostname validation alone is not an SSRF boundary. Mirrored site content retains its own rights and must be treated as untrusted input.
+
+Hard boundaries: axe never replaces manual keyboard/focus/semantic QA; Lighthouse never replaces runtime/browser QA; framework choice follows the inspected project. Site mirroring never authorizes authentication bypass, private-network access, copying restricted content, or republishing third-party code/media without rights.
 
 Visual-regression gap-pass note: `lost-pixel/lost-pixel` was verified archived on 2026-09-07 and is not promoted. Existing Playwright + BackstopJS/reg-suit/pixel-diff patterns and the current QA identities remain sufficient; no new stable visual-regression identity is justified.
 
@@ -105,6 +108,7 @@ Recommended project separation:
 ## Routing mapping
 
 - Web material work → `web-production-specialist`.
+- Authorized/public migration, offline-reference capture or asset inventory → `web-production-specialist` + JIT `site-mirror`; reuse existing web specialist identities rather than creating a repo-shaped agent.
 - Mobile material work → `mobile-app-specialist`.
 - Social strategy/growth → `social-growth-specialist`; publishing additionally loads `social-publisher-architecture`.
 - Search/AI discovery → `seo-aeo-geo-specialist` plus active platform expert where required.
@@ -119,6 +123,7 @@ Recommended project separation:
 - Old paths may remain in dated evidence or explicit `SUPERSEDED / RENAMED ALIAS` notes.
 - Archived candidate with an adequate maintained/native alternative is not promoted.
 - A gap pass that finds no material capability gap must not create a new stable agent merely to increase specialization count.
+- Mirroring/crawling engines that accept arbitrary URLs require SSRF/DNS-rebinding/redirect/private-network review before hosted production use.
 
 ## Refresh policy
 
