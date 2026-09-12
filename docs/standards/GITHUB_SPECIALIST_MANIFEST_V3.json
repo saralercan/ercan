@@ -2,7 +2,7 @@
   "schema_version": "1.3",
   "standard": "GITHUB_SPECIALIST_EXPANSION_V3",
   "status": "active",
-  "reviewed": "2026-09-07",
+  "reviewed": "2026-09-12",
   "identity_counts": {
     "stable_core": 21,
     "specialist_extension": 31,
@@ -39,6 +39,7 @@
   "domains": {
     "web": {
       "skill": ".agents/skills/web-production-specialist/SKILL.md",
+      "additional_skills": [".agents/skills/site-mirror/SKILL.md"],
       "agents": [
         "@WebArchitecture",
         "@FrontendSystem",
@@ -55,7 +56,8 @@
         {"repo": "GoogleChrome/lighthouse", "decision": "ADOPT"},
         {"repo": "dequelabs/axe-core", "decision": "ADOPT"},
         {"repo": "harlan-zw/unlighthouse", "decision": "ADOPT_WHEN_NEEDED"},
-        {"repo": "abi/screenshot-to-code", "decision": "ADOPT_PATTERN_ONLY"}
+        {"repo": "abi/screenshot-to-code", "decision": "ADOPT_PATTERN_ONLY"},
+        {"repo": "AhmadIbrahiim/Website-downloader", "decision": "ADOPT_WHEN_NEEDED"}
       ]
     },
     "mobile": {
