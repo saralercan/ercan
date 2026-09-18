@@ -1,6 +1,6 @@
 # Ercan OS — Shared Agent Contract
 
-Version: 4.4 (2026-09-06)
+Version: 4.5 (2026-09-19)
 
 This repository is the shared control-plane reference for Ercan AI Agency / Ercan OS agents. Every project agent and specialist must load this file first, then the shared registry, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
 
@@ -47,7 +47,7 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
    - SEO/entity/local/ecommerce/AI-search discovery: `AI_DISCOVERY_SEO.md`; add `.agents/skills/seo-aeo-geo-specialist/SKILL.md` when the v3 stable SEO pod is materially needed
    - Meta ads/measurement/MMM/incrementality: `BRAND_SOCIAL.md` + `.agents/skills/meta-ads-measurement/SKILL.md`, with current official Meta authority verified at runtime
    - mobile app architecture/QA/release: `.agents/skills/mobile-app-specialist/SKILL.md` plus platform-native current docs/tooling
-   - web production/performance/accessibility/browser QA: `.agents/skills/web-production-specialist/SKILL.md`
+   - web production/performance/accessibility/browser QA: `.agents/skills/web-production-specialist/SKILL.md`; for material site generation, AI/visual editing, localization, media optimization, PWA/offline, frontend-health or web-security lanes also load `.agents/skills/web-builder-capability-pack/SKILL.md`
    - Google ADK / Agents CLI / Gemini Enterprise Agent Platform: `GOOGLE_AGENT_PLATFORM.md` **only when that provider surface is actually in scope**
    - GitHub/tooling/upstream: `UPSTREAM_TOOLCHAIN.md`; broad discovery/tool selection also uses `UPSTREAM_INTELLIGENCE.md`, `UPSTREAM_INTELLIGENCE_CATALOG.md`, `DISCOVERY_ADOPTION_LEDGER.md` and `upstream-adoption-audit`.
 9. Project-local decisions, brand rules, do-not-touch rules and current task ledger when available.
@@ -70,6 +70,7 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
 - Use least privilege, read-first access, isolated execution and explicit approval only at meaningful risk boundaries.
 - Provider-specific skills/adapters enrich workers but never override Ercan OS safety, scope, memory, brand, QA/eval or completion contracts.
 - Stable specialist identities are Ercan OS routing contracts; upstream repositories are replaceable engines/references and never become policy authorities by themselves.
+- AI website builders, visual editors, browser operators, media/PWA/security toolchains and similar GitHub projects are capability engines, not automatic new stable identities. Route them through existing qualified specialists using `.agents/skills/web-builder-capability-pack/SKILL.md` and preserve anti-duplication.
 - Generative creative providers are production engines, not final art directors or approvers. Approved brand references, do-not-touch constraints and independent design QA remain authoritative.
 - Map engines, tile sources, geocoders, clustering and routing are separate concerns. Do not let one vendor/library silently become the whole location data architecture.
 - Mailbox operations, application mail events, template rendering, SMTP/API transport, campaign/list management, deliverability and mail-server infrastructure are separate concerns. Do not solve a contact-form problem by silently creating mail-server operations.
@@ -230,6 +231,7 @@ Ercan OS skills use the open Agent Skills `SKILL.md` pattern where practical. Sk
 - `.agents/skills/agent-eval-regression/SKILL.md`
 - `.agents/skills/github-specialist-router/SKILL.md`
 - `.agents/skills/web-production-specialist/SKILL.md`
+- `.agents/skills/web-builder-capability-pack/SKILL.md`
 - `.agents/skills/mobile-app-specialist/SKILL.md`
 - `.agents/skills/social-growth-specialist/SKILL.md`
 - `.agents/skills/seo-aeo-geo-specialist/SKILL.md`

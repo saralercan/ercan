@@ -41,3 +41,6 @@ The machine-readable candidate map is `docs/standards/GITHUB_SPECIALIST_MANIFEST
 `projects/dragdrop/PROJECT.md` → current task evidence → project decision/correction logs → general standards.
 
 Completion: `VERIFIED` only after required implementation + independent browser/visual/search/measurement/mail QA pass for the surfaces actually touched.
+
+## Web Builder Capability Pack
+For material storefront generation/modernization, visual editing, localization, media optimization, PWA/offline, frontend-health, browser-operator or web-security work, load `.agents/skills/web-builder-capability-pack/SKILL.md`. Keep `@ShopifyExpert` as the platform owner. Use ShopifyStorefront/HeadlessCommerce lanes only when the inspected task requires them; Hydrogen is not a default. WordPress lanes do not apply to DragDrop unless a separate verified WordPress surface is explicitly introduced.

@@ -5,7 +5,7 @@ description: Build, review or improve production websites with modern web archit
 
 # Web Production Specialist
 
-Load `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`, `PLATFORM_ENGINEERING.md`, and `DESIGN_SYSTEM_ENGINEERING.md` when shared tokens/components are touched. For screenshot/reference work also load `screenshot-production-ui` and `visual-qa-evidence`. For migration/offline-reference capture or asset inventory, load `site-mirror`.
+Load `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`, `PLATFORM_ENGINEERING.md`, and `DESIGN_SYSTEM_ENGINEERING.md` when shared tokens/components are touched. For material site generation, AI/local builders, visual editing, localization, media optimization, PWA/offline, frontend-health or security lanes, also load `.agents/skills/web-builder-capability-pack/SKILL.md`. For screenshot/reference work also load `screenshot-production-ui` and `visual-qa-evidence`. For migration/offline-reference capture or asset inventory, load `site-mirror`.
 
 ## Specialist identities
 `@WebArchitecture`, `@FrontendSystem`, `@ScreenshotToCode`, `@ComponentWorkshopQA`, `@WebPerformance`, `@AccessibilityQA`, `@BrowserQA`.
@@ -26,3 +26,7 @@ Prefer current canonical sources such as `vercel/next.js`, `shadcn-ui/ui`, `stor
 
 ## Completion evidence
 Build/runtime status, representative browser screenshots, console/network status, a11y result, performance/regression result and `VERIFIED/PARTIAL/BLOCKED/NOT VERIFIED`. When mirroring is used, also record target authorization basis, capture scope, upstream revision, network-safety checks, quota/timeout and provenance/rights notes.
+
+
+## Extended web-builder capability pack
+For build-from-brief, autonomous/rapid/local AI builder, visual editor, headless storefront, authorized browser-operator, localization, media optimization, PWA/offline, frontend-health or security work, load `.agents/skills/web-builder-capability-pack/SKILL.md`. Its lane names are capabilities mapped to the stable specialists above and to platform experts; they do not create duplicate stable identities. OpenHands/Bolt/Dyad/Onlook/browser-use and similar repositories remain JIT engines/references. Playwright/browser evidence and independent Ercan OS QA remain the completion authority.

@@ -41,3 +41,6 @@ Machine-readable candidate map: `docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.js
 `projects/vinterro-digital/PROJECT.md` → current task evidence → approved GOOD/BAD brand references/corrections → shared standards.
 
 Completion: `VERIFIED` only after the task-relevant brand/platform/browser/export/search/measurement/mail QA passes.
+
+## Web Builder Capability Pack
+For material website generation/modernization, visual editing, WordPress engineering/theme QA, localization, media optimization, PWA/offline, frontend-health, browser-operator or web-security work, load `.agents/skills/web-builder-capability-pack/SKILL.md`. Keep `@WordPressExpert` as the platform owner for the verified WordPress surface and retain Hostinger deployment as a separate boundary when deployment is actually in scope.

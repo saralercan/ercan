@@ -11,7 +11,7 @@ Load `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`, root `AGENTS.md`, `docs
 Treat “tüm ajanları çalıştır” as qualified routing. Select every materially relevant specialist and no unrelated specialist.
 
 ## Domain pods
-- Web: `@WebArchitecture`, `@FrontendSystem`, `@ScreenshotToCode` when reference-led, `@WebPerformance`, `@AccessibilityQA`, `@BrowserQA`, `@ComponentWorkshopQA` when relevant. When an owner-authorized/public migration, offline reference capture or asset inventory materially benefits from a mirror, additionally load `.agents/skills/site-mirror/SKILL.md`; the mirror engine is a JIT capability, not a new stable identity.
+- Web: `@WebArchitecture`, `@FrontendSystem`, `@ScreenshotToCode` when reference-led, `@WebPerformance`, `@AccessibilityQA`, `@BrowserQA`, `@ComponentWorkshopQA` when relevant. For build-from-brief, autonomous/rapid/local builder, visual editor, headless storefront, browser-operator, localization, media, PWA/offline, frontend-health or web-security work, additionally load `.agents/skills/web-builder-capability-pack/SKILL.md` and map its lanes onto these existing stable specialists/platform experts. When an owner-authorized/public migration, offline reference capture or asset inventory materially benefits from a mirror, additionally load `.agents/skills/site-mirror/SKILL.md`; the mirror engine is a JIT capability, not a new stable identity.
 - App/mobile: `@MobileArchitect`, exactly the implementation-stack specialist(s) required (`@FlutterSpecialist` and/or `@ReactNativeSpecialist`), `@MobileQA`, `@AppReleaseEngineer` only when release/build/store delivery is in scope.
 - Social: `@SocialStrategy`, `@SocialPublishingOps`, `@SocialAgentOps` when authenticated agent-operated publishing is intended, `@SocialAnalytics`, `@ContentRecycling` when cross-channel reuse is required.
 - SEO/AEO/GEO: `@TechnicalSEO`, `@SEOScanner`, platform specialist (`@WordPressSEO`/`@ShopifySEO`) when applicable, `@AEO_GEO` when answer-engine/AI-discovery is material.
@@ -22,7 +22,7 @@ Treat “tüm ajanları çalıştır” as qualified routing. Select every mater
 1. Detect project, repository, platform, brand and production constraints.
 2. Decompose the task into domain capabilities rather than keywords.
 3. Select the smallest sufficient pod; add Upstream Intelligence only for a real tooling/current-source gap or explicit GitHub research.
-4. Load the matching domain skill from this expansion; load `site-mirror` only for legitimate authorized/public capture work.
+4. Load the matching domain skill from this expansion; for material web-builder lanes load `web-builder-capability-pack`; load `site-mirror` only for legitimate authorized/public capture work.
 5. Route implementation through platform experts where applicable.
 6. Preserve authentication/approval boundaries for publishing and ads, and access/network/rights boundaries for site mirroring.
 7. Require independent QA for material implementation.

@@ -40,3 +40,6 @@ Machine-readable candidate map: `docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.js
 `projects/goayvalik/PROJECT.md` → current task/source evidence → project decisions/corrections → shared standards.
 
 Completion: `VERIFIED` only after task-relevant WordPress/browser/content/map/search/mobile/brand/mail QA passes.
+
+## Web Builder Capability Pack
+For material guide-site generation/modernization, visual editing, localization, media optimization, PWA/offline, frontend-health, browser-operator or web-security work, load `.agents/skills/web-builder-capability-pack/SKILL.md`. Route WordPress implementation through `@WordPressExpert` while WordPress is the verified active source; if the inspected source stack changes, select the matching platform owner instead of carrying WordPress assumptions forward.
