@@ -83,7 +83,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
       - name: Validate GitHub Specialist v3 identity accounting, routing, certification and upstream hygiene
