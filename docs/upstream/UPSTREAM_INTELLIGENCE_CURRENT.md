@@ -5,6 +5,14 @@ Updated: 2026-09-07
 
 Purpose: make the newest reviewed upstream findings immediately visible to GPT/Ercan OS and Codex without forcing every task to read every dated scan. This file is an operational overlay on top of `UPSTREAM_INTELLIGENCE_CATALOG.md` and `DISCOVERY_ADOPTION_LEDGER.md`. Dated scan files remain the evidence/history layer.
 
+
+## Web builder capability pack — 2026-09-19
+- Load `.agents/skills/web-builder-capability-pack/SKILL.md` for material site generation, autonomous/rapid/local AI builders, visual editing, headless storefronts, localization, media optimization, PWA/offline, frontend-health or web-security work.
+- Stable identity count remains **21 + 31 = 52**; capability lane names are not new stable agents.
+- Current verified canonical additions: `OpenHands/OpenHands`, `stackblitz-labs/bolt.diy`, `dyad-sh/dyad`, `onlook-dev/onlook`, `BuilderIO/mitosis`, `WordPress/theme-check`, `i18next/i18next`, `GoogleChrome/workbox`, `semgrep/semgrep`, `biomejs/biome`, `stylelint/stylelint`, `html-validate/html-validate`.
+- Existing engines reused by the pack include WordPress Gutenberg/WP-CLI, Shopify CLI/Hydrogen/Theme Tools, browser-use, Sharp, SVGO, Trivy, Astro, Playwright, Lighthouse, axe-core and Storybook.
+- Autonomous builders/editors/operators are JIT engines only; repository scope, sandboxing, platform-native validation and independent QA remain mandatory.
+
 ## Load order
 
 For any task that invokes upstream intelligence:
