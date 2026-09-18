@@ -106,3 +106,15 @@ Passing threshold: 9/10 per case, with no hard-rule violation.
 - executing mirrored active content as trusted ingestion input;
 - using archived/community upstream as higher authority than maintained official/canonical sources;
 - implementation agent self-certifies material production work.
+
+## Web Builder Capability Pack regressions
+
+1. **Build from brief / autonomous builder**: select `@WebArchitecture + @FrontendSystem` and required QA; load the capability pack. OpenHands/Bolt/Dyad are optional engines, not automatic stable identities or completion authority.
+2. **Visual editor/reference-led implementation**: route through `@FrontendSystem + @ScreenshotToCode + @BrowserQA`; a visual editor does not waive rendered comparison or independent QA.
+3. **DragDrop storefront/headless request**: keep `@ShopifyExpert` as platform owner. Hydrogen is selected only for a verified headless requirement; WordPress lanes must not route.
+4. **WordPress theme request**: keep `@WordPressExpert` as platform owner; Theme Check/browser/accessibility gates are added according to risk.
+5. **Localization request**: route localization as a capability lane through platform/frontend + browser QA; verify locale routes, forms/controls, fallback/plurals and RTL when relevant.
+6. **Media optimization request**: use deterministic media tooling through `@WebPerformance/@FrontendSystem`; preserve source/provenance and verify crop/logo/text fidelity.
+7. **PWA/offline request**: add architecture/performance/browser verification; never introduce a service worker merely because Workbox is available.
+8. **Web security request**: scanning engines complement least-privilege/manual review; a clean Trivy/Semgrep-style scan must never be reported as complete security certification.
+9. **Capability-count invariant**: these lanes must not change 21 Stable Core + 31 Specialist Extension = 52 named stable routing identities unless a separately reviewed future expansion explicitly changes the contract.
