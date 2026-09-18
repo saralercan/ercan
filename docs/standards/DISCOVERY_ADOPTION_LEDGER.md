@@ -4,6 +4,21 @@ Purpose: prevent duplicate research, hype-driven adoption and useful findings be
 
 This ledger records the durable decision; runtime facts such as versions, prices, API limits and feature availability must still be re-verified from current upstream.
 
+
+## Web Builder Capability Pack — 2026-09-19
+- Stable identity decision: `ADOPT / NO COUNT CHANGE` → keep **21 Stable Core + 31 GitHub Specialist v3 Extension = 52 named stable routing identities**. New builder labels are JIT capabilities mapped to existing specialists, not duplicate agents.
+- `OpenHands/OpenHands`: `ADOPT_WHEN_NEEDED` → autonomous repo-scoped build/orchestration; sandbox/least-privilege required.
+- `stackblitz-labs/bolt.diy`: `ADOPT_PATTERN_ONLY` → rapid AI app-builder workflow/reference, never final QA authority.
+- `dyad-sh/dyad`: `ADOPT_WHEN_NEEDED` → local AI builder option.
+- `onlook-dev/onlook`: `ADOPT_PATTERN_ONLY` → visual source-editing workflow/reference.
+- `BuilderIO/mitosis`: `ADOPT_WHEN_NEEDED` → cross-framework components only when project requirements justify it.
+- `WordPress/theme-check`: `ADOPT_WHEN_NEEDED`; `WordPress/gutenberg` + `wp-cli/wp-cli` remain platform-native references owned by `@WordPressExpert`.
+- `Shopify/cli` + `Shopify/hydrogen`: existing platform-native references; Hydrogen remains conditional on a verified headless requirement.
+- `browser-use/browser-use`: existing `ADOPT_WHEN_NEEDED` browser-agent reference; Playwright remains verification authority.
+- `i18next/i18next`, `GoogleChrome/workbox`, `semgrep/semgrep`, `biomejs/biome`, `stylelint/stylelint`, `html-validate/html-validate`: `ADOPT_WHEN_NEEDED` as localization/PWA/security/frontend-health engines.
+- `lovell/sharp`, `svg/svgo`, `aquasecurity/trivy`, `withastro/astro`: retain existing catalog roles and are now routed through the new capability pack when materially relevant.
+- Evidence: `docs/upstream/scans/2026-09-19-web-builder-capability-expansion.md`.
+
 ## GitHub Specialist v3 upstream hygiene — 2026-09-07
 - Stable routing count: `ADOPT / NO CHANGE` → keep **21 Stable Core + 31 GitHub Specialist v3 Extension = 52 named stable routing identities**. This gap pass found no material capability requiring a new stable agent.
 - Canonical-repo redirect normalization: `ADOPT` → resolve GitHub owner/path redirects before writing active manifest/catalog identities; aliases belong only in explicit superseded/rename notes or dated evidence.
