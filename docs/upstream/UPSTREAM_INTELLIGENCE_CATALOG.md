@@ -366,3 +366,21 @@ Selection order:
 `task capability → project constraints → canonical ADOPT candidates → ADOPT_WHEN_NEEDED → pattern references → recursive discovery sources if gap remains → upstream audit → narrow integration → QA/eval → ledger update`.
 
 Stars are discovery signals only, never adoption authority. Archived/deprecated repos, weak provenance, unclear licenses, excessive permissions, broad credential requirements, unmaintained forks, or redundant capability are filtered out before any integration.
+
+## Web builder capability expansion — 2026-09-19
+
+These are JIT engines/references for `.agents/skills/web-builder-capability-pack/SKILL.md`; they do not create stable agent identities.
+
+- `OpenHands/OpenHands` — ADOPT_WHEN_NEEDED — autonomous coding/orchestration in isolated repo-scoped execution.
+- `stackblitz-labs/bolt.diy` — ADOPT_PATTERN_ONLY — rapid AI app-builder workflow/reference.
+- `dyad-sh/dyad` — ADOPT_WHEN_NEEDED — local AI application-builder option.
+- `onlook-dev/onlook` — ADOPT_PATTERN_ONLY — visual code-editing workflow/reference.
+- `BuilderIO/mitosis` — ADOPT_WHEN_NEEDED — cross-framework component generation where a real multi-framework/migration requirement exists.
+- `WordPress/theme-check` — ADOPT_WHEN_NEEDED — WordPress theme conformance checking.
+- `i18next/i18next` — ADOPT_WHEN_NEEDED — localization architecture for compatible JavaScript stacks.
+- `GoogleChrome/workbox` — ADOPT_WHEN_NEEDED — service-worker/PWA/offline cache architecture.
+- `semgrep/semgrep` — ADOPT_WHEN_NEEDED — source/static security analysis.
+- `biomejs/biome` — ADOPT_WHEN_NEEDED — compatible JS/TS/JSON/CSS lint/format.
+- `stylelint/stylelint` — ADOPT_WHEN_NEEDED — CSS linting where compatible.
+- `html-validate/html-validate` — ADOPT_WHEN_NEEDED — structural HTML validation.
+
