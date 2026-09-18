@@ -1,7 +1,7 @@
 # Ercan OS — GitHub Specialist Expansion v3
 
 Status: active
-Date: 2026-09-07
+Date: 2026-09-19
 
 Purpose: promote reviewed GitHub/open-source capabilities into qualified Ercan OS specialist routing for web, app/mobile, social media, SEO/AEO/GEO, Meta advertising/measurement and branding. This standard supplements, and never overrides, root `AGENTS.md`, `AGENT_REGISTRY.md`, `QUALIFIED_AGENT_ROUTING.md`, project adapters, safety, scope and independent QA rules.
 
@@ -9,6 +9,7 @@ Machine-readable manifest: `docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.json`.
 JIT upstream catalog supplement: `docs/upstream/GITHUB_SPECIALIST_CATALOG_V3.md`.
 Reviewed evidence baseline: `docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md`.
 Latest upstream hygiene refresh: `docs/upstream/scans/2026-09-07-github-specialist-gap-pass.md`.
+Latest web-builder capability expansion: `docs/upstream/scans/2026-09-19-web-builder-capability-expansion.md`.
 Regression eval: `docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md`.
 Structural scoreboard: `docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md`.
 Behavioral certification: `docs/evals/GITHUB_SPECIALIST_CERTIFICATION_V3.md`.
@@ -46,6 +47,13 @@ Minimum material web flow:
 `@WebArchitecture → platform specialist when applicable → @FrontendSystem → implementation → @WebPerformance/@AccessibilityQA as risk requires → @BrowserQA → independent QA`.
 
 Visual-regression tooling remains a bounded QA capability inside the existing pod. The 2026-09-07 gap pass did not justify a separate stable visual-regression identity.
+
+### Web Builder Capability Pack
+For material website creation or modernization, load `.agents/skills/web-builder-capability-pack/SKILL.md`. The pack adds JIT lanes for AutonomousWebBuilder, InstantAppBuilder, LocalAppBuilder, VisualWebEditor, DesignSystem, ComponentLab, WordPressEngineer, WordPressThemeQA, ShopifyStorefront, HeadlessCommerce, WebOperator, SEOIndexability, LocalizationQA, MediaOptimizer, PWAEngineer, WebSecurity, FrontendHealth and ContentSiteBuilder.
+
+These are capability labels, not new stable identities. Route them through the existing stable owners such as `@WebArchitecture`, `@FrontendSystem`, `@ComponentWorkshopQA`, `@WordPressExpert`, `@ShopifyExpert`, `@TechnicalSEO`, `@SEOScanner`, `@WebPerformance`, `@AccessibilityQA` and `@BrowserQA`. This preserves the 21 + 31 = 52 stable-identity accounting and avoids duplicate routing.
+
+Reviewed JIT engines include `OpenHands/OpenHands`, `stackblitz-labs/bolt.diy`, `dyad-sh/dyad`, `onlook-dev/onlook`, `BuilderIO/mitosis`, `WordPress/theme-check`, `i18next/i18next`, `GoogleChrome/workbox`, `semgrep/semgrep`, `biomejs/biome`, `stylelint/stylelint` and `html-validate/html-validate`, alongside existing canonical platform/QA engines. AI builders/editors/operators never replace platform-native validation, Playwright/browser evidence or independent QA.
 
 ## App / mobile pod
 
