@@ -188,3 +188,7 @@ These behaviors are mandatory:
 12. Cross-channel brand-system change → implementation cannot self-certify; `@BrandComplianceQA` remains independent.
 13. Web task touches shared components → `@FrontendSystem`/`@ComponentWorkshopQA` may be required even if the user did not explicitly name design-system work.
 14. Social content creation without authenticated publishing request → do not imply `@SocialPublishingOps` published anything.
+
+
+## Extended web-builder capability routing
+When a material website task includes build-from-brief generation, autonomous/rapid/local AI builders, visual code editing, headless storefronts, localization, media optimization, PWA/offline, frontend-health or web-security, load `.agents/skills/web-builder-capability-pack/SKILL.md`. Treat its lane names as capabilities mapped to the smallest sufficient existing stable specialist/platform pod; do not create or fan out duplicate stable agents solely because an upstream repository exists.
