@@ -41,3 +41,6 @@ Machine-readable candidate map: `docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.js
 `projects/ayvalik-vibes/PROJECT.md` → current source/freshness evidence → project decisions/corrections → shared standards.
 
 Completion: `VERIFIED` only after platform QA and, for task-relevant work, freshness/source/map/search/social/brand/mail checks pass.
+
+## Web Builder Capability Pack
+For material editorial/local-guide website generation/modernization, visual editing, WordPress engineering/theme QA, localization, media optimization, PWA/offline, frontend-health, browser-operator or web-security work, load `.agents/skills/web-builder-capability-pack/SKILL.md`. Keep `@WordPressExpert` as platform owner and preserve editorial/local-data freshness plus map/accessibility/browser QA.
