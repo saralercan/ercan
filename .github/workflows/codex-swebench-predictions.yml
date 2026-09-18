@@ -94,7 +94,7 @@ jobs:
           test "$HAS_KEY" = "true" || { echo "OPENAI_API_KEY repository secret is not configured"; exit 2; }
 
       - name: Checkout Ercan OS control plane
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7.0.1
         with:
           path: control
           persist-credentials: false
@@ -228,7 +228,7 @@ jobs:
     if: ${{ !cancelled() && needs.solve.result == 'success' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
 

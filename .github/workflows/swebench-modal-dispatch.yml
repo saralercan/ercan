@@ -77,7 +77,7 @@ jobs:
           test -n "$MODAL_TOKEN_SECRET" || { echo "MODAL_TOKEN_SECRET secret is not configured"; exit 2; }
           test "${{ inputs.run_id }}" != "" || { echo "run_id is required"; exit 2; }
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
 
