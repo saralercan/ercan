@@ -1,6 +1,6 @@
 # Ercan OS — Shared Agent Contract
 
-Version: 4.5 (2026-09-19)
+Version: 4.6 (2026-09-19)
 
 This repository is the shared control-plane reference for Ercan AI Agency / Ercan OS agents. Every project agent and specialist must load this file first, then the shared registry, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
 
