@@ -42,6 +42,7 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
    - maps/POI/geocoding/clustering/offline/routing/location UX: `MAP_ENGINEERING.md` and `.agents/skills/map-platform-selection/SKILL.md` when relevant
    - design tokens/Figma/components/Storybook/design-code drift: `DESIGN_SYSTEM_ENGINEERING.md` and relevant design-system/accessibility skills
    - branding/graphics/social: `BRAND_SOCIAL.md`; add v3 brand/social JIT skills when cross-channel brand runtime, social growth or publishing operations are materially in scope
+   - YouTube channel strategy/growth/scripts/packaging/analytics/monetization: `YOUTUBE_GROWTH_ENGINE.md` + `.agents/skills/youtube-growth-engine/SKILL.md`; use only the qualified existing social/brand/SEO/analytics identities required by the task
    - X/Twitter/social-post research or viral technical claims: `SOCIAL_RESEARCH.md` and the relevant portable skills under `.agents/skills/`
    - Luma reference-guided image/video generation or editing: `LUMA_CREATIVE_PROVIDER.md` **only when that creative provider capability is actually useful**
    - SEO/entity/local/ecommerce/AI-search discovery: `AI_DISCOVERY_SEO.md`; add `.agents/skills/seo-aeo-geo-specialist/SKILL.md` when the v3 stable SEO pod is materially needed
@@ -71,6 +72,7 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
 - Provider-specific skills/adapters enrich workers but never override Ercan OS safety, scope, memory, brand, QA/eval or completion contracts.
 - Stable specialist identities are Ercan OS routing contracts; upstream repositories are replaceable engines/references and never become policy authorities by themselves.
 - AI website builders, visual editors, browser operators, media/PWA/security toolchains and similar GitHub projects are capability engines, not automatic new stable identities. Route them through existing qualified specialists using `.agents/skills/web-builder-capability-pack/SKILL.md` and preserve anti-duplication.
+- YouTube growth is also a capability system, not a guaranteed-income prompt trick or a new stable identity. Route through `.agents/skills/youtube-growth-engine/SKILL.md`, verify current YouTube platform facts at runtime, and never claim publishing/monetization state without external evidence.
 - Generative creative providers are production engines, not final art directors or approvers. Approved brand references, do-not-touch constraints and independent design QA remain authoritative.
 - Map engines, tile sources, geocoders, clustering and routing are separate concerns. Do not let one vendor/library silently become the whole location data architecture.
 - Mailbox operations, application mail events, template rendering, SMTP/API transport, campaign/list management, deliverability and mail-server infrastructure are separate concerns. Do not solve a contact-form problem by silently creating mail-server operations.
@@ -234,6 +236,7 @@ Ercan OS skills use the open Agent Skills `SKILL.md` pattern where practical. Sk
 - `.agents/skills/web-builder-capability-pack/SKILL.md`
 - `.agents/skills/mobile-app-specialist/SKILL.md`
 - `.agents/skills/social-growth-specialist/SKILL.md`
+- `.agents/skills/youtube-growth-engine/SKILL.md`
 - `.agents/skills/seo-aeo-geo-specialist/SKILL.md`
 - `.agents/skills/meta-ads-measurement/SKILL.md`
 - `.agents/skills/brand-system-specialist/SKILL.md`
