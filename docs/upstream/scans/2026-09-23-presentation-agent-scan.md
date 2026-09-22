@@ -11,6 +11,9 @@ Decision model: discover broadly, adopt narrowly; prefer active canonical reposi
 | `icip-cas/PPTAgent` | active; ~5k stars; pushed 2026-09-21 | MIT | `ADOPT_JIT_PRIMARY` | Strongest reviewed fit for editable PowerPoint plus reflective render/review/finalize workflow; current agent skill supports Codex-style hosts. |
 | `presenton/presenton` | active; ~10.7k stars; pushed 2026-09-22 | Apache-2.0 | `ADOPT_JIT_ALTERNATE` | Mature open-source presentation generator/API with editable PPTX, templates and multi-format exports. |
 | `presenton/skills` | active; agent-skill repo | Apache-2.0 | `ADOPT_JIT_ALTERNATE` | Provides explicit agent-facing workflow for design resolution, HTML validation, PPTX/PDF/PNG export and preview creation. |
+| `iOfficeAI/OfficeCLI` | active; native Office agent CLI | Apache-2.0 | `ADOPT_JIT_NATIVE_PPTX` | Strong native PPTX creation/editing, existing-deck repair and render→inspect→fix workflow; dedicated generic and fundraising deck skills. |
+| `SlideSpeak/slide-design-skill` | active; agent skill | MIT | `ADOPT_JIT_VISUAL_DESIGN` | Strong bespoke art direction from brief/brand/reference; deterministic HTML deck rendering with real charts/tables/imagery. Pair with editable builder for native PPTX delivery. |
+| `ningzimu/codex-ppt-skill` | active; Codex-oriented agent skill | MIT | `ADOPT_PATTERN_ONLY / RASTER_FIRST_JIT` | Strong style/reference and full-slide visual generation, but default PPTX is image-based and not element-editable. |
 | `Y-Research-SBU/SlideGen` | active; pushed 2026-06-01 | MIT | `ADOPT_PATTERN_ONLY / ACADEMIC_JIT` | Useful scientific-deck decomposition: outliner, figure/table mapper, equation formulizer, arranger and refiner. |
 
 ## Watchlist / pattern only
@@ -65,6 +68,10 @@ The scan produced a provider-neutral presentation pod instead of hard-coding one
 - https://github.com/presenton/presenton
 - https://github.com/presenton/skills
 - https://github.com/presenton/skills/blob/main/skills/presenton/SKILL.md
+- https://github.com/iOfficeAI/OfficeCLI
+- https://github.com/iOfficeAI/OfficeCLI/blob/main/skills/officecli-pptx/SKILL.md
+- https://github.com/SlideSpeak/slide-design-skill
+- https://github.com/ningzimu/codex-ppt-skill
 - https://github.com/Y-Research-SBU/SlideGen
 - https://github.com/Westlake-AGI-Lab/Auto-Slides
 - https://github.com/rsrohan99/presenter

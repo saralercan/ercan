@@ -41,6 +41,28 @@ These roles are capabilities inside the presentation pack, not additional global
 - Relevant strengths: prompt/document/template-driven creation, existing PPTX-template support, PPTX/PDF/PNG export, design search, icon/image handling, shareable preview and HTML validation.
 - Ercan OS use: alternate engine for template-led generation, API/export workflows or multi-format parity.
 
+### `iOfficeAI/OfficeCLI` — ADOPT_JIT_NATIVE_PPTX
+- Purpose: agent-oriented native Office document creation/editing with direct PowerPoint structure control plus render/preview feedback.
+- License: Apache-2.0.
+- Reviewed 2026-09-23: active, not archived; dedicated `officecli-pptx` and fundraising `officecli-pitch-deck` skills are present.
+- Relevant strengths: native PPTX create/read/edit, existing-deck repair, templates/masters/notes/charts/shapes, explicit typography/layout rules, render→look→fix loop, agent help/schema discovery.
+- Ercan OS use: preferred native-editing engine for existing decks and a strong alternate builder for new editable decks. Runtime CLI help/version is authoritative for volatile command syntax.
+
+### `SlideSpeak/slide-design-skill` — ADOPT_JIT_VISUAL_DESIGN
+- Purpose: derive a bespoke presentation visual system directly from a design brief, brand URL, reference site or moodboard; render deterministic 1920×1080 HTML with charts/tables/imagery.
+- License: MIT.
+- Reviewed 2026-09-23: active, not archived.
+- Relevant strengths: visual-style discovery rather than preset theme selection, brand-led art direction, coherent per-deck tokens/templates, deterministic web rendering.
+- Ercan OS use: visual-design/art-direction engine. Pair with an editable PPTX builder when native PowerPoint editability is required; do not silently deliver HTML-only output when PPTX was requested.
+
+### `ningzimu/codex-ppt-skill` — ADOPT_PATTERN_ONLY / RASTER_FIRST_JIT
+- Purpose: outline + style planning + full-slide image generation + PPTX assembly.
+- License: MIT.
+- Reviewed 2026-09-23: active, not archived; explicitly supports Codex-style `SKILL.md` workflows and reference-style matching.
+- Relevant strengths: strong visual-first composition, reusable style references, slide-specific source placement, speaker-note generation.
+- Constraint: the default slides are image-based and therefore not natively editable at element level.
+- Ercan OS use: visual-first/raster workflow only when that trade-off is accepted; never the sole engine for an editable-deck requirement.
+
 ### `Y-Research-SBU/SlideGen` — ADOPT_PATTERN_ONLY / ACADEMIC_JIT
 - Purpose: collaborative multimodal scientific slide generation.
 - License: MIT.
