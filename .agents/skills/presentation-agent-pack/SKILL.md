@@ -32,6 +32,15 @@ Use when the deliverable must be a polished, editable `.pptx` and visual review 
 ### Alternate template/API/export engine — `presenton/presenton` + `presenton/skills`
 Use when existing PPTX templates, editable PPTX export, PDF/PNG parity, design/template search, shareable preview or API-based generation materially helps. Prefer user/project brand direction over generic built-in templates.
 
+### Direct PPTX authoring/editing engine — `iOfficeAI/OfficeCLI`
+Use when Ercan OS must create, inspect, revise or repair native PowerPoint structures directly, especially existing decks, templates, masters, notes, charts, shapes or iterative render→inspect→fix loops. Its reviewed PPTX skill enforces presentation-distance readability, explicit type hierarchy, editable native elements and visual delivery gates. Apache-2.0 licensed. Treat the installed CLI/version help as runtime authority for command syntax; never curl/execute remote install scripts automatically without an explicit runtime need and normal tool/security review.
+
+### Bespoke visual-design engine — `SlideSpeak/slide-design-skill`
+Use as an art-direction/layout engine when the user cares strongly about a distinctive on-brand visual system derived from a brief, brand URL, reference site or moodboard. It renders deterministic 1920×1080 HTML with charts, tables and imagery and is MIT licensed. It is not the default final PPTX authoring engine: when editable PowerPoint is required, pair its visual grammar/output plan with `PPTAgent`, `OfficeCLI` or another verified editable builder and run the normal Ercan OS render/review loop.
+
+### Raster-first visual engine — `ningzimu/codex-ppt-skill`
+Use only when highly visual full-slide image generation is intentionally preferred over native editability, or as a concept/reference workflow for style matching and slide-image generation. MIT licensed. Its default deck is image-based, so it must **not** be selected as the sole engine when editable text/shapes/charts are a requirement. Any later image-to-editable conversion is a separate lossy/QA-sensitive step and must be verified independently.
+
 ### Academic/scientific pattern engine — `Y-Research-SBU/SlideGen`
 Use JIT for research-paper/scientific decks where figure/table/equation mapping and academic slide arrangement are material. It is a pattern/reference engine, not an automatic default for business or brand decks.
 
