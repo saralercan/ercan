@@ -63,6 +63,27 @@ These roles are capabilities inside the presentation pack, not additional global
 - Constraint: the default slides are image-based and therefore not natively editable at element level.
 - Ercan OS use: visual-first/raster workflow only when that trade-off is accepted; never the sole engine for an editable-deck requirement.
 
+### `addsumtech/slides_maker` — ADOPT_JIT_SOURCE_TRACED_NATIVE
+- Purpose: source-grounded multi-agent presentation generation with native editable PPTX and an independent critic.
+- License: MIT.
+- Reviewed 2026-09-23: active, not archived; Codex/Claude-oriented skill with explicit source-traceability and delivery gates.
+- Relevant strengths: reads source material directly, preserves numbers/figures, native editable text/shapes/charts/equations, independent critic, template matching and multiple aspect ratios.
+- Ercan OS use: preferred engine when factual defensibility, source-traceability and independent review are unusually important.
+
+### `solid-shuwen/shuttleslide` — ADOPT_JIT_ROUNDTRIP_BRIDGE
+- Purpose: bidirectional PPTX ↔ HTML conversion with formatting metadata preservation and optional AI slide generation.
+- License: MIT.
+- Reviewed 2026-09-23: active, not archived; project labels itself alpha, so production use requires task-local verification.
+- Relevant strengths: deterministic PPTX→HTML and HTML→PPTX, editable DrawingML shapes, round-trip preservation, web review surface.
+- Ercan OS use: conversion/repair/preview bridge for existing decks; not the default narrative or visual-design engine.
+
+### `ningzimu/image-to-editable-ppt-skill` — ADOPT_JIT_RECONSTRUCTION
+- Purpose: reconstruct images, PDFs and image-based presentations into object-level editable PowerPoint.
+- License: MIT.
+- Reviewed 2026-09-23: active, not archived; multi-agent per-page reconstruction workflow.
+- Relevant strengths: native text-box recovery where readable, simple geometry to PowerPoint shapes, editable chart/flow reconstruction where feasible, explicit limitations instead of guessing.
+- Ercan OS use: screenshot/PDF/image-based deck → editable PPTX reconstruction. Never present it as lossless when the source is ambiguous or visually complex.
+
 ### `Y-Research-SBU/SlideGen` — ADOPT_PATTERN_ONLY / ACADEMIC_JIT
 - Purpose: collaborative multimodal scientific slide generation.
 - License: MIT.

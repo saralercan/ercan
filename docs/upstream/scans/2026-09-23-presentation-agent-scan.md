@@ -14,7 +14,20 @@ Decision model: discover broadly, adopt narrowly; prefer active canonical reposi
 | `iOfficeAI/OfficeCLI` | active; native Office agent CLI | Apache-2.0 | `ADOPT_JIT_NATIVE_PPTX` | Strong native PPTX creation/editing, existing-deck repair and render→inspect→fix workflow; dedicated generic and fundraising deck skills. |
 | `SlideSpeak/slide-design-skill` | active; agent skill | MIT | `ADOPT_JIT_VISUAL_DESIGN` | Strong bespoke art direction from brief/brand/reference; deterministic HTML deck rendering with real charts/tables/imagery. Pair with editable builder for native PPTX delivery. |
 | `ningzimu/codex-ppt-skill` | active; Codex-oriented agent skill | MIT | `ADOPT_PATTERN_ONLY / RASTER_FIRST_JIT` | Strong style/reference and full-slide visual generation, but default PPTX is image-based and not element-editable. |
+| `addsumtech/slides_maker` | active; multi-agent slide skill | MIT | `ADOPT_JIT_SOURCE_TRACED_NATIVE` | Native editable PPTX, source-traced facts/figures, independent critic and multi-canvas delivery. |
+| `solid-shuwen/shuttleslide` | active; alpha round-trip converter/agent | MIT | `ADOPT_JIT_ROUNDTRIP_BRIDGE` | PPTX↔HTML with editable structure and formatting metadata preservation; strongest as a bridge/repair workflow. |
+| `ningzimu/image-to-editable-ppt-skill` | active; reconstruction skill | MIT | `ADOPT_JIT_RECONSTRUCTION` | Rebuilds images/PDF/image-based decks into object-level editable PowerPoint with explicit limitations. |
 | `Y-Research-SBU/SlideGen` | active; pushed 2026-06-01 | MIT | `ADOPT_PATTERN_ONLY / ACADEMIC_JIT` | Useful scientific-deck decomposition: outliner, figure/table mapper, equation formulizer, arranger and refiner. |
+
+## Additional watchlist / pattern-only candidates
+
+### `Akxan/ppt-agent-skill`
+- MIT; broad style library, data-viz recipes and HTML→SVG→PPTX workflow.
+- Useful design-pattern reference, but substantially overlaps SlideSpeak / PPTAgent / OfficeCLI; do not add another default engine without a concrete gap.
+
+### `chuspeeism/dashi-ppt-skill`
+- Rich editable HTML/PPTX workflow and large theme/layout library.
+- License: AGPL-3.0. Treat as watchlist/pattern-only unless deployment/licensing obligations are explicitly reviewed for the target use.
 
 ## Watchlist / pattern only
 
@@ -72,6 +85,11 @@ The scan produced a provider-neutral presentation pod instead of hard-coding one
 - https://github.com/iOfficeAI/OfficeCLI/blob/main/skills/officecli-pptx/SKILL.md
 - https://github.com/SlideSpeak/slide-design-skill
 - https://github.com/ningzimu/codex-ppt-skill
+- https://github.com/addsumtech/slides_maker
+- https://github.com/solid-shuwen/shuttleslide
+- https://github.com/ningzimu/image-to-editable-ppt-skill
+- https://github.com/Akxan/ppt-agent-skill
+- https://github.com/chuspeeism/dashi-ppt-skill
 - https://github.com/Y-Research-SBU/SlideGen
 - https://github.com/Westlake-AGI-Lab/Auto-Slides
 - https://github.com/rsrohan99/presenter

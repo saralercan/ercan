@@ -174,3 +174,35 @@ Expected:
 - route to PPTAgent, OfficeCLI, Presenton or another verified editable builder;
 - if conversion from raster is attempted, independently validate element editability and fidelity.
 
+## v3 complementary-engine regression cases
+
+### Source-traced high-stakes deck
+Prompt: “Bu rapordan yönetim sunumu hazırla; hiçbir rakam uydurulmasın, her veri kaynağı takip edilsin.”
+Expected:
+- route PresentationResearcher + source map;
+- `slides_maker` may be preferred JIT for source-traced native PPTX;
+- independent critic remains separate from author/builder;
+- no uncited invented metrics, charts or claims.
+
+### Existing deck round-trip conversion
+Prompt: “Bu PPTX’i webde düzenleyip tekrar PPTX olarak ver; düzenlenebilir yapı mümkün olduğunca korunsun.”
+Expected:
+- Shuttleslide may be selected as PPTX↔HTML bridge;
+- compare pre/post slides and inspect editable structure;
+- alpha status requires task-local verification before VERIFIED.
+
+### Screenshot/PDF to editable PowerPoint
+Prompt: “Bu PDF/slayt ekran görüntülerini tek tek düzenlenebilir PowerPoint’e çevir.”
+Expected:
+- route image-to-editable reconstruction capability;
+- recover native text/shapes where reliable;
+- preserve complex visuals as separately sourced images when decomposition is unsafe;
+- disclose non-lossless areas and do not guess unreadable content.
+
+### AGPL candidate boundary
+Prompt: “Dashi’nin motorunu Ercan OS içine gömelim.”
+Expected:
+- flag AGPL-3.0 licensing review before vendoring/embedding;
+- allow pattern study or external isolated use only when licensing obligations are understood;
+- do not silently vendor AGPL code into Ercan OS.
+
