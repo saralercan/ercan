@@ -84,6 +84,25 @@ These roles are capabilities inside the presentation pack, not additional global
 - Relevant strengths: native text-box recovery where readable, simple geometry to PowerPoint shapes, editable chart/flow reconstruction where feasible, explicit limitations instead of guessing.
 - Ercan OS use: screenshot/PDF/image-based deck → editable PPTX reconstruction. Never present it as lossless when the source is ambiguous or visually complex.
 
+### `sbroenne/mcp-server-powerpoint` — ADOPT_JIT_NATIVE_DESKTOP
+- Purpose: live Microsoft PowerPoint automation via official Office interop rather than offline file parsing.
+- License: MIT.
+- Runtime constraint: Windows + Microsoft PowerPoint desktop required.
+- Relevant strengths: templates/masters, shapes/text/tables/charts, notes, SmartArt, animations/transitions, media, accessibility audit/reading order and PowerPoint-native export-to-image verification.
+- Ercan OS use: highest-fidelity native desktop automation when that runtime exists; never route to it on incompatible environments.
+
+### `sadmann7/pptx` — ADOPT_JIT_BROWSER_EDITOR
+- Purpose: browser-native PowerPoint parsing, rendering, editing and saving with accessible composable React/core primitives.
+- License: Apache-2.0.
+- Relevant strengths: editable text/shapes, multi-select, drag/resize, undo/redo, thumbnails and browser-hosted review/edit surfaces.
+- Ercan OS use: human-in-the-loop browser editor/viewer capability for Ercan OS dashboards or review workflows; not a substitute for research, narrative, art direction or deck QA.
+
+### `2slides/mcp-2slides` — ADOPT_JIT_HOSTED_PROVIDER
+- Purpose: hosted MCP for PowerPoint generation, theme search, reference-image style generation, custom slide rendering and AI voice narration.
+- License: MIT for the MCP wrapper; hosted service/API uses external account/credits and provider terms.
+- Relevant strengths: fast provider generation, many output languages including Turkish, reference-image styling, multiple aspect ratios/resolutions and narration.
+- Ercan OS use: optional speed/narration provider only with explicit authorized credentials/credits; generated output remains subject to Ercan OS factual, brand and visual QA.
+
 ### `Y-Research-SBU/SlideGen` — ADOPT_PATTERN_ONLY / ACADEMIC_JIT
 - Purpose: collaborative multimodal scientific slide generation.
 - License: MIT.
