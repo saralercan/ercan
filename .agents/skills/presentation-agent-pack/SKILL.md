@@ -41,6 +41,15 @@ Use as an art-direction/layout engine when the user cares strongly about a disti
 ### Raster-first visual engine — `ningzimu/codex-ppt-skill`
 Use only when highly visual full-slide image generation is intentionally preferred over native editability, or as a concept/reference workflow for style matching and slide-image generation. MIT licensed. Its default deck is image-based, so it must **not** be selected as the sole engine when editable text/shapes/charts are a requirement. Any later image-to-editable conversion is a separate lossy/QA-sensitive step and must be verified independently.
 
+### Source-traced native deck engine — `addsumtech/slides_maker`
+Use when the deck must stay defensible against source material: papers, reports, repos, business documents or researched topics where numbers/figures must remain traceable. Its reviewed workflow emphasizes native editable PPTX, source fidelity, separate critic review and multi-canvas composition. Prefer it for high-stakes report, defense, executive and proposal decks when source-traceability and independent criticism are material.
+
+### Round-trip PPTX ↔ HTML bridge — `solid-shuwen/shuttleslide`
+Use for existing-deck conversion, inspection, web preview/editor workflows or repair where preserving editable PowerPoint structure through PPTX→HTML→PPTX matters. Its deterministic path preserves editable elements and formatting metadata; the optional AI generator is secondary. Use it as a bridge/conversion engine, not as a substitute for Ercan OS narrative/art-direction review.
+
+### Image/PDF → editable PPT reconstruction — `ningzimu/image-to-editable-ppt-skill`
+Use when the source is a slide image, PDF, screenshot or image-based PPTX and the user needs object-level editable PowerPoint. Reconstruct readable text as native text, simple geometry as PowerPoint shapes, and keep complex visuals as separate sourced assets when they cannot be meaningfully decomposed. This is a reconstruction capability, not a from-scratch deck authoring engine.
+
 ### Academic/scientific pattern engine — `Y-Research-SBU/SlideGen`
 Use JIT for research-paper/scientific decks where figure/table/equation mapping and academic slide arrangement are material. It is a pattern/reference engine, not an automatic default for business or brand decks.
 
