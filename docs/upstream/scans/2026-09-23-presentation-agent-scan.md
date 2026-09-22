@@ -17,6 +17,9 @@ Decision model: discover broadly, adopt narrowly; prefer active canonical reposi
 | `addsumtech/slides_maker` | active; multi-agent slide skill | MIT | `ADOPT_JIT_SOURCE_TRACED_NATIVE` | Native editable PPTX, source-traced facts/figures, independent critic and multi-canvas delivery. |
 | `solid-shuwen/shuttleslide` | active; alpha round-trip converter/agent | MIT | `ADOPT_JIT_ROUNDTRIP_BRIDGE` | PPTX↔HTML with editable structure and formatting metadata preservation; strongest as a bridge/repair workflow. |
 | `ningzimu/image-to-editable-ppt-skill` | active; reconstruction skill | MIT | `ADOPT_JIT_RECONSTRUCTION` | Rebuilds images/PDF/image-based decks into object-level editable PowerPoint with explicit limitations. |
+| `sbroenne/mcp-server-powerpoint` | active; Windows/PowerPoint MCP | MIT | `ADOPT_JIT_NATIVE_DESKTOP` | Live PowerPoint COM automation with templates, SmartArt, animation, accessibility and PowerPoint-native visual export verification. |
+| `sadmann7/pptx` | active; browser PPTX editor/core | Apache-2.0 | `ADOPT_JIT_BROWSER_EDITOR` | Browser-native accessible PPTX parse/render/edit/save primitives for human review and Ercan OS UI integration. |
+| `2slides/mcp-2slides` | active; hosted MCP wrapper | MIT | `ADOPT_JIT_HOSTED_PROVIDER` | Fast theme/reference-image slide generation plus narration; external API key/credits and provider terms apply. |
 | `Y-Research-SBU/SlideGen` | active; pushed 2026-06-01 | MIT | `ADOPT_PATTERN_ONLY / ACADEMIC_JIT` | Useful scientific-deck decomposition: outliner, figure/table mapper, equation formulizer, arranger and refiner. |
 
 ## Additional watchlist / pattern-only candidates
@@ -28,6 +31,21 @@ Decision model: discover broadly, adopt narrowly; prefer active canonical reposi
 ### `chuspeeism/dashi-ppt-skill`
 - Rich editable HTML/PPTX workflow and large theme/layout library.
 - License: AGPL-3.0. Treat as watchlist/pattern-only unless deployment/licensing obligations are explicitly reviewed for the target use.
+
+### `artifact-kit/html-to-pptx-skill`
+- Strong DOM-measurement approach for HTML/dashboard/SVG → editable PPTX using native objects.
+- Repository review did not expose a clear root license file during this pass.
+- Decision: `WATCHLIST / PATTERN_ONLY` until license/provenance is explicit. The measure-first reconstruction idea may be independently reimplemented.
+
+### `SlideSpeak/slidespeak-mcp`
+- Useful hosted MCP access to SlideSpeak generation, but no clear repository license file was found in this pass.
+- Existing Ercan OS SlideSpeak design-skill integration already covers the unique art-direction value.
+- Decision: `WATCHLIST / PROVIDER_CONNECTOR_ONLY`; do not vendor code without license clarity.
+
+### `robonuggets/notebooklm-skill`
+- Source-grounded NotebookLM query/source/slide automation is conceptually useful.
+- No repository license found in this pass; authentication relies on a Google account/session workflow.
+- Decision: `WATCHLIST / PATTERN_ONLY`; source-grounded research concepts are already covered by PresentationResearcher and slides_maker.
 
 ## Watchlist / pattern only
 
@@ -90,6 +108,12 @@ The scan produced a provider-neutral presentation pod instead of hard-coding one
 - https://github.com/ningzimu/image-to-editable-ppt-skill
 - https://github.com/Akxan/ppt-agent-skill
 - https://github.com/chuspeeism/dashi-ppt-skill
+- https://github.com/sbroenne/mcp-server-powerpoint
+- https://github.com/sadmann7/pptx
+- https://github.com/2slides/mcp-2slides
+- https://github.com/artifact-kit/html-to-pptx-skill
+- https://github.com/SlideSpeak/slidespeak-mcp
+- https://github.com/robonuggets/notebooklm-skill
 - https://github.com/Y-Research-SBU/SlideGen
 - https://github.com/Westlake-AGI-Lab/Auto-Slides
 - https://github.com/rsrohan99/presenter

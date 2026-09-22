@@ -50,6 +50,15 @@ Use for existing-deck conversion, inspection, web preview/editor workflows or re
 ### Image/PDF → editable PPT reconstruction — `ningzimu/image-to-editable-ppt-skill`
 Use when the source is a slide image, PDF, screenshot or image-based PPTX and the user needs object-level editable PowerPoint. Reconstruct readable text as native text, simple geometry as PowerPoint shapes, and keep complex visuals as separate sourced assets when they cannot be meaningfully decomposed. This is a reconstruction capability, not a from-scratch deck authoring engine.
 
+### Native Microsoft PowerPoint desktop control — `sbroenne/mcp-server-powerpoint`
+Use only when a compatible Windows desktop with Microsoft PowerPoint is actually available and authorized. This MCP controls the live PowerPoint application through Microsoft Office interop, enabling true native templates/masters, SmartArt, animations, media, notes, accessibility operations and PowerPoint-rendered export-to-image verification. Prefer it for highest-fidelity repair/automation of an already-open or corporate-template deck. It is Windows-only and must never be assumed available on macOS/Linux/cloud runtimes.
+
+### Browser-native PPTX editor/runtime — `sadmann7/pptx`
+Use as a JIT browser editing/viewing capability when an Ercan OS surface needs to parse, render and edit real PowerPoint presentations in a React/browser UI. It provides accessible composable primitives, direct text/shape editing, selection, resize, undo/redo and PPTX save flows. This is an editor/runtime capability, not a presentation authoring or narrative agent; pair it with the presentation pod when in-browser human review/editing is required.
+
+### Hosted fast-generation / narration provider — `2slides/mcp-2slides`
+Use only as an optional external provider when fast theme-driven PowerPoint generation, reference-image style generation or AI voice narration materially helps and the user/runtime has authorized API access/credits. Treat outputs as drafts until Ercan OS source, brand and visual QA passes. Never expose or persist API keys in deck artifacts.
+
 ### Academic/scientific pattern engine — `Y-Research-SBU/SlideGen`
 Use JIT for research-paper/scientific decks where figure/table/equation mapping and academic slide arrangement are material. It is a pattern/reference engine, not an automatic default for business or brand decks.
 
