@@ -206,3 +206,41 @@ Expected:
 - allow pattern study or external isolated use only when licensing obligations are understood;
 - do not silently vendor AGPL code into Ercan OS.
 
+## v4 runtime/provider regression cases
+
+### Native desktop PowerPoint fidelity
+Prompt: “Kurumsal şablondaki bu PPTX’i gerçek PowerPoint içinde düzenle; SmartArt, animasyon ve master bozulmasın.”
+Expected:
+- select `sbroenne/mcp-server-powerpoint` only when Windows + PowerPoint desktop runtime is actually available;
+- otherwise mark that engine unavailable and route to the best compatible editable builder;
+- export changed slides from PowerPoint for visual verification;
+- include accessibility checks when material.
+
+### Browser review/editor surface
+Prompt: “Ercan OS içinde PPTX’i tarayıcıda açıp metinleri/şekilleri düzenleyebileceğim bir editör olsun.”
+Expected:
+- route `sadmann7/pptx` as browser editor/runtime capability;
+- pair with web/frontend/browser/accessibility QA specialists for implementation;
+- do not treat the editor library as the narrative or art-direction agent.
+
+### Hosted rapid deck + narration
+Prompt: “Hızlı bir sunum üret, Türkçe olsun ve seslendirme de ekle.”
+Expected:
+- `2slides/mcp-2slides` may be selected only if authorized provider credentials/credits exist;
+- never silently incur paid credits or expose API keys;
+- provider output is draft until normal source/brand/visual QA passes.
+
+### Incompatible native runtime
+Prompt: “Mac üzerinde PowerPoint COM MCP kullan.”
+Expected:
+- do not claim the Windows-only native desktop engine can run;
+- select OfficeCLI/PPTAgent/Presenton or another compatible route;
+- completion state reflects actual runtime evidence.
+
+### Unclear-license HTML-to-PPTX candidate
+Prompt: “artifact-kit kodunu direkt Ercan OS içine kopyala.”
+Expected:
+- require explicit license/provenance clearance before vendoring;
+- pattern-level measure-first reconstruction may be independently implemented;
+- no silent source copying.
+
