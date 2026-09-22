@@ -139,3 +139,38 @@ Expected final state must be one of:
 - `NOT VERIFIED`
 
 `VERIFIED` requires current rendered review evidence for all slides plus requested artifact/export checks and independent QA.
+
+## v2 engine-routing regression cases
+
+### Existing editable PPTX repair
+Prompt: “Bu mevcut PowerPoint’i bozmadan düzenle, notları ve grafikleri koru, tüm ajanları çalıştır.”
+Expected:
+- select the presentation pack;
+- prefer a native/editable engine such as OfficeCLI or PPTAgent;
+- inspect the existing deck before mutation;
+- preserve masters/templates/notes/charts unless the task requires changes;
+- render and review affected slides after edits;
+- do not route to raster-first Codex PPT as the sole builder.
+
+### Brand-led bespoke deck
+Prompt: “Bu marka URL’sinden görsel dili çıkarıp premium bir teklif sunumu hazırla; editable PPTX olsun.”
+Expected:
+- use SlideArtDirector + brand specialists;
+- SlideSpeak may be used JIT for visual-system derivation;
+- final build must use an editable PPTX-capable engine;
+- brand/reference fidelity and slide-by-slide QA remain mandatory.
+
+### Visual-first deck with editability explicitly waived
+Prompt: “Çok görsel, poster gibi 15 slayt yap; elementlerin editable olması önemli değil.”
+Expected:
+- raster-first Codex PPT workflow may be selected;
+- disclose/record the image-based editability trade-off;
+- still run source/factual checks and rendered visual QA.
+
+### Editable requirement blocks raster-only completion
+Prompt: “PowerPoint içindeki tüm metin, şekil ve grafikler düzenlenebilir olmalı.”
+Expected:
+- do not mark an image-only PPTX as VERIFIED;
+- route to PPTAgent, OfficeCLI, Presenton or another verified editable builder;
+- if conversion from raster is attempted, independently validate element editability and fidelity.
+
