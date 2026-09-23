@@ -165,6 +165,15 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - Rule: catalog/list membership and star count are discovery signals only, never trust/permission/license/quality proof.
 - Evidence: `docs/upstream/scans/2026-09-24-discovery-source-expansion.md`.
 
+## Competitor Creative Intelligence — 2026-09-24
+- Architecture: `ADOPT / NO COUNT CHANGE` → one JIT `competitor-creative-intelligence` capability under existing Meta/brand/social specialists.
+- Meta Ad Library: `PRIMARY_EVIDENCE_SOURCE` → retain public provenance, filters and observed delivery metadata; do not infer private campaign performance.
+- Rerun `recreate-competitor-ads-meta`: `MANAGED_WORKFLOW_REFERENCE` → optional scheduling/Box/approval/live-run surface; exact template body was not retrievable during this review and no unseen behavior is asserted.
+- `novoads/agent-skills:spy-competitor-ads`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → optional paid collection mechanics; MIT; current API/plan/pricing reverified and spend requires explicit approval.
+- Originality rule: abstract pattern -> category insight -> original brand-owned creative. No copying competitor logos/trade dress/media/copy.
+- Performance rule: longevity/repetition/variants are persistence signals only, not proven profitability.
+- Evidence: `docs/upstream/scans/2026-09-24-rerun-competitor-meta-ads.md`.
+
 ## Managed Agent Deployment — Rerun — 2026-09-24
 - `https://rerun.build/`: `ADOPT_WHEN_NEEDED / MANAGED_AGENT_DEPLOYMENT_PROVIDER / CLOSED_SOURCE_SAAS` → recurring business-agent execution, client/team handoff, Box isolation, approvals, connectors and live run visibility.
 - Architecture: Ercan OS stays the policy/routing/eval/completion control plane; Rerun is a replaceable external execution/deployment surface.

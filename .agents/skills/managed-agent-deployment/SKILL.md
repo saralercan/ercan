@@ -45,6 +45,7 @@ Use Rerun when the task benefits from:
 
 Examples:
 - competitor monitoring;
+- competitor creative monitoring / Meta Ad Library evidence collection, when paired with `competitor-creative-intelligence`;
 - reporting and digest generation;
 - invoice/admin follow-up with approval gates;
 - support triage where the connector permissions fit;

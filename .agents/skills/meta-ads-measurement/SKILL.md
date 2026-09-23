@@ -16,6 +16,9 @@ Load `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`, project brand/ads const
 - `facebookexperimental/Robyn` for statistically justified MMM work;
 - `facebookincubator/GeoLift` for appropriate geo-experiment/incrementality work.
 
+## Competitor creative intelligence
+For Meta Ad Library competitor research, recurring competitor creative monitoring, swipe/evidence files or competitor-derived original creative briefs, also load `.agents/skills/competitor-creative-intelligence/SKILL.md` + `docs/standards/COMPETITOR_CREATIVE_INTELLIGENCE.md`. Public ad longevity/variants are observational signals, never proof of profitability; competitor expression must be transformed into original brand-owned work.
+
 ## Procedure
 1. Separate campaign execution, conversion measurement, MMM and causal incrementality questions.
 2. Verify account/auth scope and current API version before any write; content/analysis capability never implies campaign mutation permission.
