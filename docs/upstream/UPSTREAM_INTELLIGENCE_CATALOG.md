@@ -330,6 +330,19 @@ Decision vocabulary:
 - `irfndi/prism-liquidity-agent` — ADOPT_PATTERN_ONLY — paper/backtest/replay/risk-gate architecture reference.
 - `monteduro/killmyidea` — ADOPT_PATTERN_ONLY — versioned multi-dimensional product/startup scoring pattern; root license not established in review.
 
+### Design quality / UI craft references
+
+- `anthropics/skills:frontend-design` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — official distinctive frontend-design reference.
+- `emilkowalski/skills:apple-design` — ADOPT_PATTERN_ONLY — fluid Apple-style web interaction reference.
+- `emilkowalski/skills:emil-design-eng` — ADOPT_PATTERN_ONLY — UI polish and motion-decision reference.
+- `MengTo/Skills:beautiful-shadows` — ADOPT_PATTERN_ONLY — layered neutral elevation/shadow reference.
+- `addyosmani/web-quality-skills:accessibility` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — evidence-led WCAG-oriented accessibility workflow.
+- `Superfuture/design-review` — ADOPT_PATTERN_ONLY — ranked UI critique patterns; telemetry/Pro service excluded.
+- `shadcn-ui/ui:shadcn` — ADOPT_WHEN_NEEDED / CANONICAL — project-aware shadcn component/CLI workflow.
+- `pbakaus/impeccable:adapt` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — adaptive/responsive context and input-mode patterns.
+- `jakubkrehel/skills:better-interface` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — cross-discipline evidence-led interface review.
+- `interaction-design` — SYNTHESIZED_LANE — covered by reviewed Emil/Impeccable interaction references; no separate upstream identity.
+
 ## 23. Security, supply-chain and dependency quality
 
 - `gitleaks/gitleaks` — ADOPT — secret scanning.
@@ -367,6 +380,7 @@ These are not automatically trusted dependencies. They are searchable upstream c
 - `ripienaar/free-for-dev` — DISCOVERY_SOURCE — developer SaaS/PaaS/IaaS free-tier candidate discovery; provider pricing/limits/production terms are volatile and must be rechecked.
 - `public-apis/public-apis` — DISCOVERY_SOURCE — public API candidate discovery with Auth/HTTPS/CORS metadata; actual API docs/terms/quota/licensing remain authoritative.
 - `hesreallyhim/awesome-claude-code` — DISCOVERY_SOURCE_ONLY — Claude Code/agent tooling catalog; restrictive CC BY-NC-ND list license means use only to locate original upstreams.
+- `Alishahryar1/free-claude-code` — WATCHLIST / ADOPT_PATTERN_ONLY — coding-agent/model-provider router, fallback and local proxy architecture; provider terms/free tiers/credential handling must be verified independently before use.
 - `anthropics/skills` — ADOPT_WHEN_NEEDED / OFFICIAL_REFERENCE — official Anthropic Agent Skills examples/implementation patterns; exact sub-skill licensing varies, and canonical Agent Skills specification remains format authority.
 
 ## 25. Explicit superseded / caution examples discovered during research
