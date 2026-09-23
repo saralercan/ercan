@@ -73,6 +73,12 @@ Mailbox/user operations, application mail events, templates, transport, campaign
 
 Renderer, tile source, geocoder, routing and canonical POI database are separate concerns. Never let a convenient SDK silently become the full location architecture.
 
+### Competitor creative intelligence
+- Meta Ad Library/current official Meta documentation — primary public source for competitor ad evidence.
+- `novoads/agent-skills:spy-competitor-ads` — optional ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED collection reference; paid API, current pricing/availability rechecked and spend requires approval.
+- Rerun competitor-ad template — managed scheduling/deployment reference only; no template behavior is assumed beyond what is directly verified.
+- Route through `COMPETITOR_CREATIVE_INTELLIGENCE.md` + `competitor-creative-intelligence`; convert competitor evidence into original brand-owned hypotheses/briefs and never represent public persistence as ROI proof.
+
 ### Managed agent deployment providers
 - `https://rerun.build/` — ADOPT_WHEN_NEEDED / MANAGED_AGENT_DEPLOYMENT_PROVIDER / CLOSED_SOURCE_SAAS. Use for recurring business-agent execution, isolated client/project Boxes, human approvals, broad connectors/MCP/API and operator/client live visibility.
 - Load `MANAGED_AGENT_DEPLOYMENT.md` + `managed-agent-deployment` before use.
