@@ -68,6 +68,18 @@ Mailbox/user operations, application mail events, templates, transport, campaign
 
 Renderer, tile source, geocoder, routing and canonical POI database are separate concerns. Never let a convenient SDK silently become the full location architecture.
 
+### JEV runtime extensions
+- `browser-use/jev-ultrafast` — structured browser action/target pattern beneath authorized browser operation.
+- `tamaratran/fast-jev-compaction` — transcript/history pruning; preserve critical text/evidence and fallback safely.
+- `GhalebDweikat/winnow` — reversible large tool-result sieve/recall; data-egress review required.
+- `itsmostafa/typesafe-mcp` / `jkudish/jev-mcp` — alternative MCP surfaces; select the narrowest one, do not install both by default.
+- `sharziki/semdecide` — Unix/CI semantic primitive with uncertainty/provider-failure exit paths.
+- `0xNatoshi/jev-codex-router` — model/effort routing architecture pattern only; current model/quota facts resolved at runtime.
+- `devagrawal09/jev-review` — staged code-review triage pattern.
+- `ellipsis-dev/blink` — semantic file-tree navigation pattern; no root license observed in review.
+- `vercel-labs/json-render` — Generative UI engine routed through Web Builder / Design Quality, not a Jev provider.
+- Load via `.agents/skills/jev-runtime-extensions/SKILL.md`; no runtime extension overrides deterministic permissions, tests, trust or completion evidence.
+
 ### Typed judgment / System One providers
 - `typesafe-ai/skills` — official TypeSafe Agent Skill reference for System One/Jev workflow design.
 - `typesafe-ai/typesafe-sdk-js` and `typesafe-ai/typesafe-sdk-python` — official provider SDKs when a project needs TypeSafe/Jev integration.
