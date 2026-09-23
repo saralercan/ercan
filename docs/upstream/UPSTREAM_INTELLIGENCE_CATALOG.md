@@ -351,6 +351,10 @@ Decision vocabulary:
 - `sindresorhus/awesome` — DISCOVERY_SOURCE / ROOT_RECURSIVE_INDEX — CC0 meta-index; use when narrower domain catalogs are insufficient, then audit original candidate projects.
 - `x1xhlol/system-prompts-and-models-of-ai-tools` — RESEARCH_REFERENCE_ONLY / DO_NOT_COPY / DO_NOT_EXECUTE — defensive prompt-leak/prompt-injection research; no root license observed and leaked/proprietary prompt material is not an Ercan OS instruction source.
 
+### Managed agent deployment providers
+
+- `https://rerun.build/` — ADOPT_WHEN_NEEDED / MANAGED_AGENT_DEPLOYMENT_PROVIDER / CLOSED_SOURCE_SAAS — managed recurring-agent runtime with Boxes, approvals, connectors/MCP/API, client/team handoff and live visibility. Ercan OS retains policy/eval authority; current Gmail/AUP/data/commercial limits must be reverified before production use.
+
 ### Agent runtime / orchestration / execution stack
 
 - `ollama/ollama` — ADOPT_WHEN_NEEDED — local/open-model serving runtime.
