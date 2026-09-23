@@ -84,6 +84,13 @@ Renderer, tile source, geocoder, routing and canonical POI database are separate
 - `UnitOneAI/SecuritySkills` — WATCHLIST; structure may be useful but older ASVS references prevent use as current authority.
 - Route through `DIGITAL_SPECIALIST_AGENTS.md` + `digital-specialist-agent-pack`.
 
+### Digital experience specialists
+- `wshobson/agents` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT for UI/UX/design-system/accessibility/interaction/visual/security patterns.
+- `addyosmani/web-quality-skills` — ADOPT_WHEN_NEEDED / MIT for measurement-first performance/accessibility/SEO/best-practice skills.
+- `addyosmani/agentic-seo` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT for agent-facing documentation/discovery heuristics.
+- Official/current W3C, Google Search/Analytics, Meta and OWASP sources remain domain authority.
+- Route through `DIGITAL_EXPERIENCE_SPECIALISTS.md` + `digital-experience-specialists`.
+
 ### Website lifecycle / live UI / runtime agents
 - `GoogleChrome/modern-web-guidance` — ADOPT_WHEN_NEEDED / OFFICIAL_GUIDANCE / Apache-2.0 / preview. Use to query current modern HTML/CSS/client-JS patterns and Web Platform Baseline-aware fallbacks before implementing/modernizing frontend features.
 - `ChromeDevTools/chrome-devtools-mcp` — ADOPT_WHEN_NEEDED / RUNTIME_INSPECTION / Apache-2.0. Use for live Chrome console/network/screenshot/performance/runtime evidence; prefer dedicated/scoped browser sessions and workspace-limited filesystem access.
