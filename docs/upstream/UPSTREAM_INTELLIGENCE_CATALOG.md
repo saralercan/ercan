@@ -351,6 +351,16 @@ Decision vocabulary:
 - `sindresorhus/awesome` — DISCOVERY_SOURCE / ROOT_RECURSIVE_INDEX — CC0 meta-index; use when narrower domain catalogs are insufficient, then audit original candidate projects.
 - `x1xhlol/system-prompts-and-models-of-ai-tools` — RESEARCH_REFERENCE_ONLY / DO_NOT_COPY / DO_NOT_EXECUTE — defensive prompt-leak/prompt-injection research; no root license observed and leaked/proprietary prompt material is not an Ercan OS instruction source.
 
+### Hardware / PCB / KiCad
+
+- `heypcb.ai` — ADOPT_WHEN_NEEDED / CLOSED_SOURCE_SAAS — AI-assisted KiCad board design and fabrication-output provider; independent engineering validation mandatory.
+- heypcb Circuit World — HARDWARE_REFERENCE_DISCOVERY — licensed public board/fork discovery; per-board licence and source provenance required.
+- `biosshot/kicad-copilot` — ADOPT_WHEN_NEEDED / MIT — KiCad MCP/file automation, checkpoints, component search, local routing and native CLI checks.
+- `circuit-synth/circuit-synth` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT — code-based/parametric KiCad circuit generation.
+- `LGAI-Research/PCBWorld` — ADOPT_PATTERN_ONLY / BENCHMARK_WHEN_NEEDED — engine-grounded routing/evaluation; BSD environment + GPL engine.
+- `IxTechCrypto/kicad-skills` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT — domain PCB/DFM/verification skill patterns.
+- `buildwithtrace/trace` — WATCHLIST / PATTERN_ONLY / MIXED_LICENSE — KiCad-derived core plus proprietary AI modules.
+
 ### Weekly SEO diagnostic / DataForSEO
 
 - DataForSEO OnPage API — ADOPT_WHEN_NEEDED / EXTERNAL_SEO_DIAGNOSTIC_PROVIDER — customizable site crawl, technical checks, selected browser/Lighthouse evidence.
