@@ -174,6 +174,17 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - Performance rule: longevity/repetition/variants are persistence signals only, not proven profitability.
 - Evidence: `docs/upstream/scans/2026-09-24-rerun-competitor-meta-ads.md`.
 
+## Rerun Platform Refresh / API Bridge — 2026-09-24
+- `rerun-api-bridge`: `ADOPT / NO COUNT CHANGE` → JIT Ercan OS ↔ Rerun workspace synchronization via current workspace-scoped MCP/API.
+- Current API surface: agents, skills, schedules, triggers/webhooks, runs/messages, databases, connectors, share links and templates.
+- Workspace boundary: current technical docs say one private machine per workspace; Boxes are organizational and share machine/folder/shared database. Separate workspaces are required for tenant/credential isolation.
+- `PROVIDER_STATE_CONFLICT`: DPA Annex II still says dedicated VM per Box.
+- `PROVIDER_STATE_CONFLICT`: Gmail Privacy Policy says sending-only while homepage shows inbox/new-email examples.
+- Pricing conflict: live pricing page currently shows $49/month, 5 agents, 3 seats, 3-day no-card trial; older official/indexed pages still show $24/3 agents/7 days. Always read live pricing before purchase/proposal.
+- Expert/marketplace current marketing: 95% template-sale revenue and 20% recurring referred-client plan commission; volatile commercial terms, not guaranteed income.
+- Evidence: `docs/upstream/scans/2026-09-24-rerun-platform-refresh.md`.
+- Stable identities remain 52.
+
 ## Managed Agent Deployment — Rerun — 2026-09-24
 - `https://rerun.build/`: `ADOPT_WHEN_NEEDED / MANAGED_AGENT_DEPLOYMENT_PROVIDER / CLOSED_SOURCE_SAAS` → recurring business-agent execution, client/team handoff, Box isolation, approvals, connectors and live run visibility.
 - Architecture: Ercan OS stays the policy/routing/eval/completion control plane; Rerun is a replaceable external execution/deployment surface.
