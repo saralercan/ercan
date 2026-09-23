@@ -22,4 +22,4 @@ Date: 2026-09-24
 - official/current platform and WCAG sources outrank community design skills.
 - shadcn is loaded only for compatible projects.
 - design-review telemetry/pro service is not adopted.
-- interaction-design exists as a synthesized lane, not an invented upstream identity.
+- interaction-design resolves to reviewed `wshobson/agents` while Ercan OS platform/accessibility/performance rules remain authoritative.
