@@ -87,7 +87,7 @@ Renderer, tile source, geocoder, routing and canonical POI database are separate
 - Read live pricing/docs at decision time; do not reuse stale package numbers from comparison/index pages.
 
 ### Managed agent deployment providers
-- `https://rerun.build/` — ADOPT_WHEN_NEEDED / MANAGED_AGENT_DEPLOYMENT_PROVIDER / CLOSED_SOURCE_SAAS. Use for recurring business-agent execution, isolated client/project Boxes, human approvals, broad connectors/MCP/API and operator/client live visibility.
+- `https://rerun.build/` — ADOPT_WHEN_NEEDED / MANAGED_AGENT_DEPLOYMENT_PROVIDER / CLOSED_SOURCE_SAAS. Use for recurring business-agent execution, client/project organization through Boxes, separate-workspace isolation when needed, human approvals, broad connectors/MCP/API and operator/client live visibility.
 - Load `MANAGED_AGENT_DEPLOYMENT.md` + `managed-agent-deployment` before use.
 - Preserve Ercan OS as policy/routing/eval/completion authority.
 - Current Gmail scope is documented as sending-only; inspect exact connector capabilities before inbox workflows.
