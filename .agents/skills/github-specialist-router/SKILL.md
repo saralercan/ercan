@@ -26,6 +26,7 @@ Treat “tüm ajanları çalıştır” as qualified routing. Select every mater
 - Execution governance: load `.agents/skills/execution-governance/SKILL.md` for bugs, regressions, risky/cross-module edits, repeated failed fixes, fallbacks/adapters or unclear canonical ownership. Keep trivial work on the fast path.
 - Founder operations: load `.agents/skills/founder-operations/SKILL.md` for founder strategy, GTM, SOP, PRD, CRO, pricing, outreach or marketing-ops tasks; map to existing business/sales/marketing/product owners rather than creating founder-agent duplicates.
 - Judgment engine: load `.agents/skills/judgment-engine/SKILL.md` + `docs/standards/JUDGMENT_ENGINE.md` when code needs a bounded semantic Choice/Noul/Score-style decision, ranking, verification, routing or action selection. TypeSafe/Jev is an optional reviewed provider; deterministic policy/safety/permissions remain authoritative.
+- JEV runtime extensions: additionally load `.agents/skills/jev-runtime-extensions/SKILL.md` + `docs/standards/JEV_RUNTIME_EXTENSIONS.md` only for browser action loops, context pruning, MCP adapters, CLI/CI semantic gates, model routing, review triage or repo navigation. Generative UI routes to the web/design pack.
 
 ## Procedure
 1. Detect project, repository, platform, brand and production constraints.
