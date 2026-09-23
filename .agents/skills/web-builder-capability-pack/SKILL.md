@@ -13,6 +13,7 @@ This pack expands the existing web-production pod without changing the stable ro
 - InstantAppBuilder -> `@WebArchitecture + @FrontendSystem`; Bolt/Dyad-class builders are JIT accelerators, never final QA authority.
 - LocalAppBuilder -> `@WebArchitecture + @FrontendSystem`; prefer local/sandboxed execution when cloud access is unnecessary.
 - VisualWebEditor -> `@FrontendSystem + @ScreenshotToCode + @BrowserQA`; Onlook-class visual editing is a production aid, not a replacement for source control or browser verification.
+- GenerativeUI -> `@FrontendSystem + @BrowserQA + @AccessibilityQA`; `vercel-labs/json-render` is an ADOPT_WHEN_NEEDED engine for schema/catalog-constrained generated UI. Generated specs may only use approved components/actions and never gain arbitrary code execution or hidden permissions.
 - DesignSystem -> `@FrontendSystem + @DesignTokenArchitect + @ComponentWorkshopQA`; shadcn/Storybook/Mitosis patterns are selected only when stack-compatible.
 - ComponentLab -> `@ComponentWorkshopQA + @AccessibilityQA + @BrowserQA`.
 - WordPressEngineer -> `@WordPressExpert + @FrontendSystem`; Gutenberg/WP-CLI remain platform-native implementation references.
