@@ -5,7 +5,7 @@ description: Add fast typed semantic judgments to software and agent workflows u
 
 # Judgment Engine
 
-This is a JIT capability, not a new stable agent identity.
+This is a JIT capability, not a new stable agent identity. For browser action selection, context pruning/compaction, MCP adapters, Unix/CI semantic decisions, model routing, code-review triage or repo navigation, load `.agents/skills/jev-runtime-extensions/SKILL.md` only when that runtime concern is material.
 
 Use it when the application already knows the candidate actions or outcomes and needs a fast semantic judgment over current state. The model supplies probabilities/typed answers; **code owns policy, thresholds, side effects, permissions and safety**.
 
@@ -42,6 +42,10 @@ Prefer one request containing independent questions over the same state when tha
 - game/simulation control -> simulation owner
 - founder/product scoring -> `founder-operations`; advisory only
 - high-risk domains -> deterministic policy/safety owner remains authoritative
+- context compaction/tool-result pruning -> `@Orchestrator` + execution-governance
+- model routing -> `@Orchestrator` + runtime owner
+- MCP/CLI adapters -> tool integration owner + task-domain QA
+- codebase navigation/review triage -> implementation owner + independent QA
 
 ## Core design rules
 
@@ -56,6 +60,10 @@ Prefer one request containing independent questions over the same state when tha
 8. **Keep a deterministic fallback** when a missing provider must not stall a safe workflow.
 9. **Log enough to replay the decision**: normalized state hash/ID, questions, answers/probabilities, selected action, policy gate outcome, latency and downstream result where privacy allows.
 10. **Do not ask Jev to generate prose/code/explanations.** Use a generative model only where generative work is actually needed.
+
+## Runtime extension pack
+
+Reviewed runtime adapters/patterns such as Jev Ultrafast, fast-jev-compaction, typesafe-mcp, jev-mcp, SemDecide, Jev Codex Router, Winnow, Jev Review and Blink live in `.agents/skills/jev-runtime-extensions/SKILL.md` + `docs/standards/JEV_RUNTIME_EXTENSIONS.md`. They extend this engine without changing its authority model. `vercel-labs/json-render` is routed to web/design owners as a guardrailed Generative UI engine rather than treated as a Jev provider.
 
 ## Reviewed application patterns
 

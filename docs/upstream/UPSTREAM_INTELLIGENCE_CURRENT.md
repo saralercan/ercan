@@ -19,6 +19,21 @@ Purpose: make the newest reviewed upstream findings immediately visible to GPT/E
 - `interaction-design` is an Ercan OS synthesized lane using reviewed Emil/Impeccable patterns; no distinct upstream identity is invented.
 - Stable routing identity count remains 52.
 
+## JEV Runtime Extensions — 2026-09-24
+- Load `.agents/skills/jev-runtime-extensions/SKILL.md` + `docs/standards/JEV_RUNTIME_EXTENSIONS.md` beneath Judgment Engine for browser action loops, context compaction/sieving, MCP adapters, CLI/CI predicates, model routing, code-review triage or repo navigation.
+- `browser-use/jev-ultrafast` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT** for bounded structured browser operation; DONE still requires independent verification.
+- `tamaratran/fast-jev-compaction` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT** for transcript/tool-history pruning while preserving critical text/evidence.
+- `vercel-labs/json-render` — **ADOPT_WHEN_NEEDED / Apache-2.0** through Web Builder + Design Quality as guardrailed Generative UI; not a Jev provider.
+- `itsmostafa/typesafe-mcp` — **ADOPT_WHEN_NEEDED / MIT** for minimal generic MCP judgment exposure.
+- `jkudish/jev-mcp` — **ADOPT_WHEN_NEEDED / MIT** for specialized verify/screen/find/rerank/classify/decide/compare/extract/review/gate tools; advisory beneath deterministic Ercan OS policy.
+- `sharziki/semdecide` — **ADOPT_WHEN_NEEDED / MIT** for Unix/CI semantic predicates with explicit uncertainty/provider-failure exits.
+- `0xNatoshi/jev-codex-router` — **ADOPT_PATTERN_ONLY / WATCHLIST / MIT** for per-call model/effort routing, fallback and calibration patterns; exact models/quotas remain runtime facts.
+- `GhalebDweikat/winnow` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT** for reversible large-tool-output filtering/recall; data-egress review required.
+- `devagrawal09/jev-review` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT** for staged code-review triage; findings are not defect proof.
+- `ellipsis-dev/blink` — **ADOPT_PATTERN_ONLY** for semantic file-tree navigation; no root license observed and source inspection remains required.
+- Items 11–20 from the supplied list are already covered by Judgment Engine and are not duplicated.
+- Stable routing identity count remains 52; no global install or credential was added.
+
 ## Judgment Engine / TypeSafe Jev — 2026-09-24
 - Load `.agents/skills/judgment-engine/SKILL.md` + `docs/standards/JUDGMENT_ENGINE.md` when a bounded semantic Choice/Noul/Score-style decision materially improves a workflow.
 - `typesafe-ai/skills` — **ADOPT_WHEN_NEEDED / OFFICIAL REFERENCE / MIT**.
@@ -62,6 +77,8 @@ For any task that invokes upstream intelligence:
 Current index entries override older catalog/ledger entries only when the same upstream is explicitly marked as a status change or superseded here.
 
 ## Evidence scans currently incorporated
+
+- `docs/upstream/scans/2026-09-24-jev-runtime-extensions.md`
 
 - `docs/upstream/scans/2026-09-24-design-quality-engine.md`
 

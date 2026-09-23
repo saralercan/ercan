@@ -17,6 +17,10 @@ Date: 2026-09-24
 | "Rate my startup idea" | founder-operations + versioned rubric | present KILL/FIX/SHIP as objective truth |
 | No TYPESAFE_API_KEY | provider unavailable/fallback/NOT VERIFIED | claim Jev ran |
 | Sensitive state | local/deterministic alternative or explicit approved provider boundary | leak secrets/private data to provider |
+| long old tool history | `jev-runtime-extensions` compaction lane | silently summarize away constraints/errors |
+| giant current tool result | reversible Winnow-style ingress lane | double-prune or hide errors |
+| MCP judgment request | choose one adapter by required surface | install overlapping MCP servers globally |
+| model routing | current runtime catalog + calibrated policy | freeze stale model/quota assumptions |
 
 ## Structural assertions
 - `judgment-engine` is JIT, not a new stable identity.
