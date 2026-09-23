@@ -73,6 +73,15 @@ Mailbox/user operations, application mail events, templates, transport, campaign
 
 Renderer, tile source, geocoder, routing and canonical POI database are separate concerns. Never let a convenient SDK silently become the full location architecture.
 
+### Weekly SEO diagnostics / DataForSEO
+- DataForSEO OnPage — ADOPT_WHEN_NEEDED for external technical crawl/SEO diagnostics; optional JS/browser/Lighthouse features can add cost.
+- DataForSEO Labs Ranked Keywords — ADOPT_WHEN_NEEDED for ranking/search-landscape evidence with provider timestamp/freshness handling.
+- DataForSEO SERP API — ADOPT_WHEN_NEEDED for selective current SERP verification.
+- DataForSEO Backlinks — ADOPT_WHEN_NEEDED for new/lost/referring-domain monitoring; index freshness caveats remain explicit.
+- DataForSEO AI Optimization / AI Overview references — optional AEO/GEO visibility evidence only.
+- Rerun `weekly-seo-diagnostic-dataforseo` — managed recurrence reference; deploy through `rerun-api-bridge` only when Rerun is selected.
+- Route through `WEEKLY_SEO_DIAGNOSTIC.md` + `weekly-seo-diagnostic`; first-party search data, cost ceiling, source freshness and independent implementation QA remain authoritative.
+
 ### Competitor creative intelligence
 - Meta Ad Library/current official Meta documentation — primary public source for competitor ad evidence.
 - `novoads/agent-skills:spy-competitor-ads` — optional ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED collection reference; paid API, current pricing/availability rechecked and spend requires approval.

@@ -100,6 +100,7 @@ Managed-platform-only state must be documented sufficiently for migration or dis
 
 ### Good fit
 - recurring client reporting;
+- weekly SEO diagnostic/search-visibility monitoring when paired with `WEEKLY_SEO_DIAGNOSTIC.md`;
 - competitor creative monitoring and public Meta Ad Library research when paired with `COMPETITOR_CREATIVE_INTELLIGENCE.md`;
 - competitor/SEO signal briefs;
 - support/admin workflows with explicit approvals;

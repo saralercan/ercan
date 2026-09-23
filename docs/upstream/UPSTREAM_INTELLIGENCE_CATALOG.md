@@ -351,6 +351,15 @@ Decision vocabulary:
 - `sindresorhus/awesome` — DISCOVERY_SOURCE / ROOT_RECURSIVE_INDEX — CC0 meta-index; use when narrower domain catalogs are insufficient, then audit original candidate projects.
 - `x1xhlol/system-prompts-and-models-of-ai-tools` — RESEARCH_REFERENCE_ONLY / DO_NOT_COPY / DO_NOT_EXECUTE — defensive prompt-leak/prompt-injection research; no root license observed and leaked/proprietary prompt material is not an Ercan OS instruction source.
 
+### Weekly SEO diagnostic / DataForSEO
+
+- DataForSEO OnPage API — ADOPT_WHEN_NEEDED / EXTERNAL_SEO_DIAGNOSTIC_PROVIDER — customizable site crawl, technical checks, selected browser/Lighthouse evidence.
+- DataForSEO Labs Ranked Keywords — ADOPT_WHEN_NEEDED — external ranking/search-landscape and AI Overview reference evidence with explicit data freshness.
+- DataForSEO SERP API — ADOPT_WHEN_NEEDED — priority live SERP verification by query/location/language/device.
+- DataForSEO Backlinks API — ADOPT_WHEN_NEEDED — new/lost/referring-domain diagnostics; not an auto-disavow authority.
+- DataForSEO AI Optimization / LLM Mentions — ADOPT_WHEN_NEEDED — optional AI-search visibility observation layer.
+- Rerun `weekly-seo-diagnostic-dataforseo` — MANAGED_WORKFLOW_REFERENCE — optional weekly recurrence through managed deployment/API bridge; exact current template body requires live verification.
+
 ### Competitor creative intelligence
 
 - Meta Ad Library / current official Meta transparency documentation — PRIMARY_EVIDENCE_SOURCE — public competitor ad creative/delivery evidence; performance inference restricted.

@@ -120,6 +120,9 @@ The API + template marketplace + Expert Program make Rerun a potential Vinterro 
 
 Current published Expert Program percentages are treated as volatile commercial terms.
 
+## Weekly SEO diagnostic route
+For `weekly-seo-diagnostic-dataforseo` or equivalent recurring search-health workflows, load `WEEKLY_SEO_DIAGNOSTIC.md`. Rerun owns recurrence/runtime state; Ercan OS owns diagnostic policy, evidence schema, cost ceiling, issue prioritization and completion. Baseline/fingerprint state must persist across runs and client tenant boundaries use separate workspaces, not Boxes.
+
 ## Completion contract
 
 A Rerun API deployment is VERIFIED only after runtime state, actual scheduled/triggered execution and material external side effects are independently checked.

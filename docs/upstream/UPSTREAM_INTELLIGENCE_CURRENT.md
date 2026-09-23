@@ -16,6 +16,18 @@ Purpose: make the newest reviewed upstream findings immediately visible to GPT/E
 - Stars/list inclusion remain weak discovery signals, not trust, licensing or production-readiness evidence.
 - Stable routing identity count remains 52; no catalog was bulk-installed.
 
+## Weekly SEO Diagnostic / DataForSEO — 2026-09-24
+- Load `.agents/skills/weekly-seo-diagnostic/SKILL.md` + `docs/standards/WEEKLY_SEO_DIAGNOSTIC.md` for recurring SEO/AEO/GEO monitoring, weekly DataForSEO diagnostics or Rerun SEO reports.
+- DataForSEO OnPage — **ADOPT_WHEN_NEEDED / EXTERNAL_SEO_DIAGNOSTIC_PROVIDER** for customizable crawling, technical checks, duplicate/non-indexable/redirect/link/resource diagnostics and optional Lighthouse/browser-rendering evidence.
+- DataForSEO Labs Ranked Keywords — ranking/search-landscape input with explicit provider freshness tracking. Current DataForSEO guidance says selected endpoints including Ranked Keywords use a weekly update layer while the underlying SERP database may refresh by query/location on roughly 30–90 day cycles.
+- DataForSEO SERP API — use selectively for current location/language/device-specific verification of priority queries, not blanket high-volume weekly checks by default.
+- DataForSEO Backlinks — optional new/lost/referring-domain monitoring; current index is crawled continuously but full refresh can take materially longer than a week.
+- DataForSEO AI Optimization / AI Overview references — optional AEO/GEO observation lane; not a ranking guarantee.
+- First-party Search Console/Bing/analytics evidence remains distinct and preferred for actual owned-site outcomes where available.
+- All production weekly runs require a cost ceiling, actual run-cost recording, baseline/fingerprint state and freshness-aware delta classification.
+- Rerun template `weekly-seo-diagnostic-dataforseo` is a **MANAGED_WORKFLOW_REFERENCE**; exact page body was not retrievable during review, so no unseen steps are adopted.
+- Stable routing identities remain 52.
+
 ## Competitor Creative Intelligence — 2026-09-24
 - Load `.agents/skills/competitor-creative-intelligence/SKILL.md` + `docs/standards/COMPETITOR_CREATIVE_INTELLIGENCE.md` for Meta Ad Library competitor research, recurring creative monitoring, swipe/evidence files and competitor-derived original creative briefs.
 - Meta Ad Library remains the primary public evidence source. Public delivery duration, repeated variants or collation counts are persistence signals, not proof of profitability/ROAS/conversions.
@@ -139,6 +151,8 @@ For any task that invokes upstream intelligence:
 Current index entries override older catalog/ledger entries only when the same upstream is explicitly marked as a status change or superseded here.
 
 ## Evidence scans currently incorporated
+
+- `docs/upstream/scans/2026-09-24-rerun-weekly-seo-dataforseo.md`
 
 - `docs/upstream/scans/2026-09-24-rerun-platform-refresh.md`
 

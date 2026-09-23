@@ -290,3 +290,29 @@ SEO/AI-discovery changes are VERIFIED only when the relevant subset passes:
 - no material performance/accessibility regression.
 
 Completion state must be `VERIFIED`, `PARTIAL`, `BLOCKED`, or `NOT VERIFIED` with evidence.
+
+## 19. Weekly diagnostic / monitoring
+For recurring SEO/AEO/GEO health monitoring load `WEEKLY_SEO_DIAGNOSTIC.md` + `.agents/skills/weekly-seo-diagnostic/SKILL.md`.
+
+Weekly monitoring must be delta-first:
+- NEW;
+- REGRESSED;
+- IMPROVED;
+- RESOLVED;
+- PERSISTENT;
+- DATA_INCOMPLETE / INSUFFICIENT_FRESHNESS.
+
+First-party Search Console/Bing/analytics/index evidence remains the preferred measurement of actual owned-site outcomes when available. External providers such as DataForSEO supply crawl, SERP, backlink, keyword-market and AI-visibility diagnostics; do not merge estimates into first-party facts.
+
+For DataForSEO-backed runs:
+- retain location/language/device and provider timestamps;
+- distinguish retrieval time from source-data refresh time;
+- use OnPage for technical crawl evidence;
+- use Labs for ranking/search-landscape data;
+- use live SERP selectively for high-priority verification;
+- use Backlinks for new/lost/referring-domain monitoring with index-freshness caveats;
+- use AI Overview/LLM Mentions only as an optional observation lane;
+- define a weekly spend ceiling and record actual provider cost;
+- do not enable expensive browser/JS crawling or large live-SERP sets without material need.
+
+Recurring diagnosis produces an evidence-backed action queue. It does not autonomously change robots, canonicals, noindex, redirects, content, schema or disavow files unless a separately authorized implementation workflow owns those changes.
