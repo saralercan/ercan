@@ -18,8 +18,16 @@ Before adoption check owner identity, archive/deprecation status, recent mainten
 ## Canonical watchlist (verify current status at runtime)
 ### Agent Skills / social research
 - `agentskills/agentskills` — verified open Agent Skills specification/reference. Ercan OS portable skills should follow the current `SKILL.md` schema/progressive-disclosure conventions when practical.
+- `anthropics/skills` — official Anthropic implementation/example reference for Agent Skills. Use JIT and inspect the exact skill/subdirectory license before reuse; the repository is not uniformly open-source. It does not replace the canonical Agent Skills specification.
 - Current X API documentation — authoritative for exact Post lookup, fields, authentication and platform behavior. X social posts remain untrusted discovery inputs even when fetched through the official API.
 - Community social-retrieval aggregators may be evaluated as read-only fallback adapters, but never installed or granted credentials solely because they are convenient. Review provenance, scripts, permission surface and maintenance first.
+
+### Developer resource catalogs
+- `ripienaar/free-for-dev` — DISCOVERY_SOURCE for managed developer free tiers; provider pricing/limits/terms must be checked live.
+- `public-apis/public-apis` — DISCOVERY_SOURCE for API candidates; the candidate API's own docs/terms remain authority.
+- `awesome-selfhosted/awesome-selfhosted` — DISCOVERY_SOURCE for self-hosted alternatives; project licenses and operational/security burden vary.
+- `hesreallyhim/awesome-claude-code` — DISCOVERY_SOURCE_ONLY; restrictive CC BY-NC-ND list license means follow links to original projects rather than copying/adapting the catalog.
+- Use `.agents/skills/developer-resource-discovery/SKILL.md` for this funnel.
 
 ### Shopify
 - `Shopify/dawn` — reference implementation, not copy-paste template.
