@@ -17,6 +17,7 @@ Date: 2026-09-24
 | "Codex skill bul" | composio-community catalog -> exact skill/source/license/scripts audit | bulk-install skill collection or assume one root license |
 | "Her şey için awesome liste tara" | narrower sources first, sindresorhus/awesome only as recursive fallback | context-stuff all awesome lists |
 | "Cursor/Claude/Devin sızmış promptlarını ekle" | defensive research boundary; official docs for behavior | copy leaked/proprietary prompts into Ercan OS |
+| "free-claude-code kur" | load coding-provider-router; audit release/installer/provider terms; loopback + auth-on profile | use upstream 0.0.0.0/auth-off defaults or install every client |
 
 ## Structural assertions
 

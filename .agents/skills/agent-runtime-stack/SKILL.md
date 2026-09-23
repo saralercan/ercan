@@ -75,6 +75,13 @@ Useful patterns:
 
 It does not replace Ercan OS branch, architecture, independent review or completion evidence.
 
+### Coding provider router
+Primary reviewed reference: `Alishahryar1/free-claude-code`.
+
+Decision: `ADOPT_WHEN_NEEDED / CONDITIONAL_PROVIDER_ROUTER` (MIT).
+
+Load `.agents/skills/coding-provider-router/SKILL.md` + `docs/standards/CODING_PROVIDER_ROUTER.md` only when multi-provider coding-model routing/fallback/shared harness configuration materially helps. Ercan OS hardening overrides upstream defaults: local evaluations bind loopback and require proxy authentication. Direct/native provider configuration remains preferred when simpler.
+
 ## Coordinate
 
 ### AutoGPT — `Significant-Gravitas/AutoGPT`

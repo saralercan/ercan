@@ -83,7 +83,7 @@ Purpose: make the newest reviewed upstream findings immediately visible to GPT/E
 - Provider credentials remain optional and must not be stored in the repo. Stable routing identity count remains 52.
 
 ## Developer resource discovery — 2026-09-24
-- `Alishahryar1/free-claude-code` — **WATCHLIST / ADOPT_PATTERN_ONLY** as a coding-agent/model-provider router and fallback architecture reference; MIT. Its free-tier/provider claims are volatile and provider-specific. Never auto-install its remote installer or route credentials through it without current provider ToS, security, privacy, proxy and local-network review.
+- `Alishahryar1/free-claude-code` — **ADOPT_WHEN_NEEDED / CONDITIONAL_PROVIDER_ROUTER / MIT**. Load `coding-provider-router` for multi-provider coding-model routing/fallback. Ercan OS overrides upstream local defaults to `127.0.0.1` + proxy auth enabled, uses explicit provider/client allowlists, audits exact installer/release, and re-verifies every provider's current terms/quotas/privacy. README aggregate free-token/provider claims are not durable facts.
 - Load `.agents/skills/developer-resource-discovery/SKILL.md` for free-tier service, public API, self-hosted alternative or Agent Skill discovery.
 - `ripienaar/free-for-dev` — **DISCOVERY_SOURCE** only; reviewed repository has no root LICENSE file, so do not copy its catalog into Ercan OS. Re-verify provider pricing/terms/limits live.
 - `public-apis/public-apis` — **DISCOVERY_SOURCE**; MIT list, but each API's own current docs/auth/quota/data terms are authoritative.
@@ -112,6 +112,8 @@ For any task that invokes upstream intelligence:
 Current index entries override older catalog/ledger entries only when the same upstream is explicitly marked as a status change or superseded here.
 
 ## Evidence scans currently incorporated
+
+- `docs/upstream/scans/2026-09-24-free-claude-code-reassessment.md`
 
 - `docs/upstream/scans/2026-09-24-discovery-source-expansion.md`
 

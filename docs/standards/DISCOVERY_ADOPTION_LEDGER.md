@@ -220,13 +220,15 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - Architecture decision: one JIT `judgment-engine` under existing owners; no new stable agent identities.
 
 ## Developer resource discovery — 2026-09-24
-- `Alishahryar1/free-claude-code`: `WATCHLIST / ADOPT_PATTERN_ONLY` → model/provider routing, fallback and local proxy architecture reference. MIT; every provider's current terms/free tier/auth/privacy must be verified independently; no auto-install.
+- `Alishahryar1/free-claude-code`: `ADOPT_WHEN_NEEDED / CONDITIONAL_PROVIDER_ROUTER` → multi-harness coding-model/provider routing, fallback and local proxy runtime. MIT. Mandatory Ercan OS hardening: loopback bind + proxy auth on + explicit provider/client allowlists; exact installer/release and each provider's current terms/privacy/quota independently verified.
 - `ripienaar/free-for-dev`: `DISCOVERY_SOURCE` → free-tier service candidate discovery only; current provider terms must be verified. No root LICENSE observed in review, so no substantial catalog copying.
 - `public-apis/public-apis`: `DISCOVERY_SOURCE` → API candidate discovery; MIT list, but each API has independent terms, auth, quota, maintenance and data-license requirements.
 - `awesome-selfhosted/awesome-selfhosted`: existing `DISCOVERY_SOURCE` reaffirmed → self-hosted alternatives; list CC BY-SA 3.0, project-level licensing/ops/security reviewed separately.
 - `hesreallyhim/awesome-claude-code`: `DISCOVERY_SOURCE_ONLY` → follow original upstream links; list CC BY-NC-ND 4.0 prevents derivative catalog reuse.
 - `anthropics/skills`: `ADOPT_WHEN_NEEDED / OFFICIAL_REFERENCE` → official skill implementation/example source with mixed licensing; exact skill license must be checked. Does not supersede the canonical Agent Skills specification.
 - Architecture decision: one JIT `developer-resource-discovery` capability under `@UpstreamIntelligence`; no new stable agent identities and no bulk installation.
+- FCC runtime use additionally routes through `coding-provider-router`; stable identity count remains unchanged.
+- Evidence: `docs/upstream/scans/2026-09-24-free-claude-code-reassessment.md`.
 
 ## Rejection / non-adoption rules
 - Archived/deprecated repo with maintained successor → `SUPERSEDED`, not new production dependency.
