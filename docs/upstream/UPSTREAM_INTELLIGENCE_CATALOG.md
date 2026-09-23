@@ -351,6 +351,12 @@ Decision vocabulary:
 - `sindresorhus/awesome` — DISCOVERY_SOURCE / ROOT_RECURSIVE_INDEX — CC0 meta-index; use when narrower domain catalogs are insufficient, then audit original candidate projects.
 - `x1xhlol/system-prompts-and-models-of-ai-tools` — RESEARCH_REFERENCE_ONLY / DO_NOT_COPY / DO_NOT_EXECUTE — defensive prompt-leak/prompt-injection research; no root license observed and leaked/proprietary prompt material is not an Ercan OS instruction source.
 
+### Competitor creative intelligence
+
+- Meta Ad Library / current official Meta transparency documentation — PRIMARY_EVIDENCE_SOURCE — public competitor ad creative/delivery evidence; performance inference restricted.
+- `novoads/agent-skills:spy-competitor-ads` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — optional paid Meta-ad collection mechanics, durable provenance and brand/page disambiguation.
+- Rerun `recreate-competitor-ads-meta` — MANAGED_WORKFLOW_REFERENCE — optional recurring execution surface; exact current template behavior requires live verification.
+
 ### Managed agent deployment providers
 
 - `https://rerun.build/` — ADOPT_WHEN_NEEDED / MANAGED_AGENT_DEPLOYMENT_PROVIDER / CLOSED_SOURCE_SAAS — managed recurring-agent runtime with Boxes, approvals, connectors/MCP/API, client/team handoff and live visibility. Ercan OS retains policy/eval authority; current Gmail/AUP/data/commercial limits must be reverified before production use.
