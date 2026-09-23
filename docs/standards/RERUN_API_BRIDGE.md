@@ -63,6 +63,8 @@ Do not use separate Boxes alone as proof of client isolation.
 
 ## Official-source conflict policy
 
+When current official Rerun sources materially disagree, mark `PROVIDER_STATE_CONFLICT` until target-workspace behavior or provider clarification resolves the difference.
+
 Current official sources are internally inconsistent on some points.
 
 ### Box isolation
