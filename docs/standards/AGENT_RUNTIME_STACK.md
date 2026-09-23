@@ -44,10 +44,15 @@ Each stage is optional. Product requirements determine which stages exist.
 | `THUDM/AgentBench` | agent benchmark environments | ADOPT_PATTERN_ONLY / WHEN_NEEDED_FOR_BENCHMARKING |
 | `elevenlabs/elevenlabs-python` | speech/TTS/voice provider adapter | ADOPT_WHEN_NEEDED |
 | `deepgram/deepgram-python-sdk` | STT/TTS/voice provider adapter | ADOPT_WHEN_NEEDED |
+| `https://rerun.build/` | managed recurring-agent deployment/client handoff/approvals/live visibility | ADOPT_WHEN_NEEDED / MANAGED_AGENT_DEPLOYMENT_PROVIDER |
 
 ## Coding provider routing
 
 Use `CODING_PROVIDER_ROUTER.md` when a coding system needs shared provider/model routing across multiple harnesses. The reviewed FCC implementation is conditional because its current upstream defaults bind the proxy to `0.0.0.0` and leave proxy authentication disabled. Ercan OS local use overrides this to loopback + authentication and installs only explicitly required clients/providers.
+
+## Managed deployment providers
+
+Use `MANAGED_AGENT_DEPLOYMENT.md` when an agent needs to live outside the developer control plane as a managed recurring business operation. Rerun is a reviewed managed provider for this role. Ercan OS retains policy/routing/eval authority; Rerun supplies execution, Boxes, integrations, approvals and operator/client visibility.
 
 ## Current-status corrections
 
