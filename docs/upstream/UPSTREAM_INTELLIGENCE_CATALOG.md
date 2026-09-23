@@ -357,6 +357,13 @@ Decision vocabulary:
 - `novoads/agent-skills:spy-competitor-ads` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — optional paid Meta-ad collection mechanics, durable provenance and brand/page disambiguation.
 - Rerun `recreate-competitor-ads-meta` — MANAGED_WORKFLOW_REFERENCE — optional recurring execution surface; exact current template behavior requires live verification.
 
+### Rerun API / workspace bridge
+
+- `https://docs.rerun.build/` — PRIMARY_PROVIDER_DOCS — current Rerun workspace/MCP/API authority for agents, skills, schedules, triggers, runs, databases, connectors, share links and templates.
+- `rerun-api-bridge` — ADOPT / JIT — Ercan OS -> Rerun workspace synchronization beneath managed-agent-deployment.
+- Current architecture: one private machine per workspace; Boxes are organizational, not isolation walls. Official DPA/Privacy/marketing conflicts remain explicit `PROVIDER_STATE_CONFLICT` items.
+- Pricing/package/Expert Program percentages are volatile commercial facts and must be re-read live.
+
 ### Managed agent deployment providers
 
 - `https://rerun.build/` — ADOPT_WHEN_NEEDED / MANAGED_AGENT_DEPLOYMENT_PROVIDER / CLOSED_SOURCE_SAAS — managed recurring-agent runtime with Boxes, approvals, connectors/MCP/API, client/team handoff and live visibility. Ercan OS retains policy/eval authority; current Gmail/AUP/data/commercial limits must be reverified before production use.
