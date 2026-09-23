@@ -16,7 +16,7 @@ Execution skill:
 
 - @UISpecialist
 - @UXResearchSpecialist
-- @DesignSystemSpecialist
+- @DesignTokensSpecialist
 - @AccessibilitySpecialist
 - @SEOSpecialist
 - @AEOAgentDiscoverySpecialist
