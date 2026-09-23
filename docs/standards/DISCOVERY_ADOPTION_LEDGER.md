@@ -152,7 +152,7 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - `shadcn-ui/ui:shadcn`: `ADOPT_WHEN_NEEDED / CANONICAL` → official project-aware shadcn component/CLI workflow.
 - `pbakaus/impeccable:adapt`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → responsive/adaptive design and input-context patterns.
 - `jakubkrehel/skills:better-interface`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → holistic evidence-first interface review orchestration.
-- `interaction-design`: synthesized Ercan OS lane, no separate upstream promotion.
+- `wshobson/agents:interaction-design`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → purposeful microinteraction, feedback, motion and gesture patterns; combine with existing platform/accessibility/performance rules.
 - Architecture decision: one JIT `design-quality-engine`; no new stable identities.
 
 ## JEV Runtime Extensions — 2026-09-24
