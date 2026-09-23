@@ -8,6 +8,7 @@ Date: 2026-09-24
 Introduce a provider-optional typed judgment layer for bounded semantic decisions without turning Ercan OS into a Jev-specific architecture.
 
 Execution skill: `.agents/skills/judgment-engine/SKILL.md`.
+Runtime extension standard: `docs/standards/JEV_RUNTIME_EXTENSIONS.md` and `.agents/skills/jev-runtime-extensions/SKILL.md` when browser/context/MCP/CI/model-routing/code-review/repo-navigation concerns are material.
 
 Stable routing identities remain unchanged: **21 Stable Core + 31 GitHub Specialist v3 Extension = 52**.
 
@@ -71,6 +72,10 @@ Market-state classification and paper/backtest experiments are allowed as resear
 
 ### Security/account changes
 A model may help classify risk or intent, but authentication, authorization, secret handling and destructive-operation gates remain deterministic.
+
+## Runtime extensions
+
+The parent Judgment Engine remains the policy boundary. Runtime adapters are selected JIT and must not be globally installed merely because they overlap. Use `typesafe-mcp` for a small generic MCP surface, `jev-mcp` when purpose-built verification/reranking/review tools materially help, `fast-jev-compaction` for history compaction, Winnow-style logic for large tool-result ingress, and SemDecide for CLI/CI predicates. Exact model routing uses current runtime/model availability rather than a frozen ladder.
 
 ## Reviewed upstream patterns
 
