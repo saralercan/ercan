@@ -73,6 +73,17 @@ Mailbox/user operations, application mail events, templates, transport, campaign
 
 Renderer, tile source, geocoder, routing and canonical POI database are separate concerns. Never let a convenient SDK silently become the full location architecture.
 
+### Digital specialist agents
+- UI/UX: Anthropic frontend-design + existing Design Quality; `hueyexe/frontend-agent-skills` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT; W3C WCAG 2.2 + WCAG-EM 2.0 remain accessibility authority.
+- SEO: Google Search Central/Search Console — primary authority; `marketingskills/seo` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT for operational workflows only.
+- Meta: existing stable five-agent pod; Robyn (MIT) for appropriate MMM and GeoLift (MIT) for appropriate incrementality experiments.
+- Graphic design: Anthropic `canvas-design` + `theme-factory` — Apache-2.0; `ArnavPuri/designskills` — MIT; all remain beneath project brand/art-direction/preflight authority.
+- Security: OWASP ASVS 5.0.0 primary app-security requirements; WSTG 4.2 stable testing guide; `zaproxy/zaproxy` Apache-2.0 for authorized DAST; Semgrep/Trivy for static/supply-chain detection.
+- `trailofbits/skills` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / CC BY-SA 4.0; respect attribution/share-alike before copied adaptations.
+- `OWASP/secure-agent-playbook` — PATTERN_ONLY / LICENSE_CLARIFICATION_REQUIRED from reviewed root state.
+- `UnitOneAI/SecuritySkills` — WATCHLIST; structure may be useful but older ASVS references prevent use as current authority.
+- Route through `DIGITAL_SPECIALIST_AGENTS.md` + `digital-specialist-agent-pack`.
+
 ### Website lifecycle / live UI / runtime agents
 - `GoogleChrome/modern-web-guidance` — ADOPT_WHEN_NEEDED / OFFICIAL_GUIDANCE / Apache-2.0 / preview. Use to query current modern HTML/CSS/client-JS patterns and Web Platform Baseline-aware fallbacks before implementing/modernizing frontend features.
 - `ChromeDevTools/chrome-devtools-mcp` — ADOPT_WHEN_NEEDED / RUNTIME_INSPECTION / Apache-2.0. Use for live Chrome console/network/screenshot/performance/runtime evidence; prefer dedicated/scoped browser sessions and workspace-limited filesystem access.
