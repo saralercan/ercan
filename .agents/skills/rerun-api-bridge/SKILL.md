@@ -188,6 +188,9 @@ These values are volatile and are not permanent configuration facts.
 
 Current Expert Program marketing advertises 95% of template sale revenue and 20% recurring commission on referred client plans. Treat these as current commercial terms, not guaranteed income or permanent rates.
 
+## SEO diagnostic template route
+When deploying a weekly SEO/DataForSEO workflow such as `weekly-seo-diagnostic-dataforseo`, load `weekly-seo-diagnostic`. Keep the Ercan OS diagnostic schema/source of truth versioned, place client-isolated deployments in separate workspaces when required, keep DataForSEO credentials out of templates/share links, schedule timezone explicitly, persist baseline/fingerprint state, and smoke-test a baseline before recurring execution.
+
 ## Verification
 
 VERIFIED bridge use requires:
