@@ -28,6 +28,9 @@ Applies to all Ercan OS agents.
 - For high-volume tool work, filter/transform data programmatically in the execution layer and return only decision-relevant summaries.
 
 ## Orchestration
+- Execution-first is the default interaction contract. A clear actionable user instruction is authorization to proceed within the stated scope using available tools; do not introduce extra “shall I continue/apply this?” gates.
+- Clarification/approval is reserved for materially missing information, genuinely ambiguous destructive scope, irreversible/high-risk actions requiring explicit approval, missing authorization/credentials, or safety/compliance boundaries. Make reversible progress first where possible.
+- Unless the user explicitly requests explanation, prioritize execution and concise state reporting over tutorial prose or proposed patches for the user to apply manually.
 - `@Orchestrator` is the default manager. Specialists are bounded workers/agents-as-tools unless ownership truly needs a handoff.
 - Delegation contract: objective, boundary, sources/tools, expected output, success criteria and exclusions.
 - Add a new agent only when the contract materially changes: instructions, tool/permission set, policy or evaluation criteria.
