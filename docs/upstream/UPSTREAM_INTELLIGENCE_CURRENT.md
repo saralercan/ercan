@@ -6,6 +6,19 @@ Updated: 2026-09-24
 Purpose: make the newest reviewed upstream findings immediately visible to GPT/Ercan OS and Codex without forcing every task to read every dated scan. This file is an operational overlay on top of `UPSTREAM_INTELLIGENCE_CATALOG.md` and `DISCOVERY_ADOPTION_LEDGER.md`. Dated scan files remain the evidence/history layer.
 
 
+## Design Quality Engine — 2026-09-24
+- Load `.agents/skills/design-quality-engine/SKILL.md` + `docs/standards/DESIGN_QUALITY_ENGINE.md` for material premium UI direction, interaction/motion, responsive adaptation, shadcn composition, accessibility/design critique or final rendered design QA.
+- `anthropics/skills:frontend-design` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED**, skill-specific Apache-2.0.
+- `emilkowalski/skills:apple-design` and `emil-design-eng` — **ADOPT_PATTERN_ONLY**, MIT; current Apple HIG remains platform authority.
+- `MengTo/Skills:beautiful-shadows` — **ADOPT_PATTERN_ONLY**, MIT; use as elevation pattern, not a universal shadow token set.
+- `addyosmani/web-quality-skills:accessibility` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED**, MIT beneath existing `@AccessibilityQA`.
+- `Superfuture/design-review` — **ADOPT_PATTERN_ONLY**; ranked critique pattern only. Do not import telemetry or Pro service. README states MIT but no standalone LICENSE file was observed.
+- `shadcn-ui/ui:shadcn` — **ADOPT_WHEN_NEEDED / CANONICAL** for compatible shadcn projects, MIT.
+- `pbakaus/impeccable:adapt` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED**, Apache-2.0.
+- `jakubkrehel/skills:better-interface` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED**, MIT.
+- `interaction-design` is an Ercan OS synthesized lane using reviewed Emil/Impeccable patterns; no distinct upstream identity is invented.
+- Stable routing identity count remains 52.
+
 ## Judgment Engine / TypeSafe Jev — 2026-09-24
 - Load `.agents/skills/judgment-engine/SKILL.md` + `docs/standards/JUDGMENT_ENGINE.md` when a bounded semantic Choice/Noul/Score-style decision materially improves a workflow.
 - `typesafe-ai/skills` — **ADOPT_WHEN_NEEDED / OFFICIAL REFERENCE / MIT**.
@@ -20,6 +33,7 @@ Purpose: make the newest reviewed upstream findings immediately visible to GPT/E
 - Provider credentials remain optional and must not be stored in the repo. Stable routing identity count remains 52.
 
 ## Developer resource discovery — 2026-09-24
+- `Alishahryar1/free-claude-code` — **WATCHLIST / ADOPT_PATTERN_ONLY** as a coding-agent/model-provider router and fallback architecture reference; MIT. Its free-tier/provider claims are volatile and provider-specific. Never auto-install its remote installer or route credentials through it without current provider ToS, security, privacy, proxy and local-network review.
 - Load `.agents/skills/developer-resource-discovery/SKILL.md` for free-tier service, public API, self-hosted alternative or Agent Skill discovery.
 - `ripienaar/free-for-dev` — **DISCOVERY_SOURCE** only; reviewed repository has no root LICENSE file, so do not copy its catalog into Ercan OS. Re-verify provider pricing/terms/limits live.
 - `public-apis/public-apis` — **DISCOVERY_SOURCE**; MIT list, but each API's own current docs/auth/quota/data terms are authoritative.
@@ -48,6 +62,8 @@ For any task that invokes upstream intelligence:
 Current index entries override older catalog/ledger entries only when the same upstream is explicitly marked as a status change or superseded here.
 
 ## Evidence scans currently incorporated
+
+- `docs/upstream/scans/2026-09-24-design-quality-engine.md`
 
 - `docs/upstream/scans/2026-09-24-jev-judgment-engine.md`
 

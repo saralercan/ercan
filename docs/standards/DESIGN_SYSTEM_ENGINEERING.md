@@ -67,6 +67,12 @@ Treat the following as regression candidates:
 - WordPress: use theme.json/block.json/native style surfaces where appropriate; persistent business behavior remains in plugin/application logic.
 - Do not import an entire frontend framework/design-system dependency merely to reuse a handful of tokens/components.
 
+## Design-quality integration
+
+When a task materially changes visual direction, interaction language, responsive behavior or final interface craft, load `.agents/skills/design-quality-engine/SKILL.md`. Design Quality complements this design-system standard: the design system owns reusable semantic contracts, while Design Quality evaluates how those contracts are composed and experienced in real product surfaces.
+
+For shadcn projects, current `shadcn-ui/ui` project-aware guidance may be loaded JIT. Do not convert another established component system to shadcn merely for stylistic preference.
+
 ## Review / migration gate
 For material system changes:
 1. Identify source-of-truth layer.

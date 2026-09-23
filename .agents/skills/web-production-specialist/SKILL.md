@@ -5,13 +5,13 @@ description: Build, review or improve production websites with modern web archit
 
 # Web Production Specialist
 
-Load `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`, `PLATFORM_ENGINEERING.md`, and `DESIGN_SYSTEM_ENGINEERING.md` when shared tokens/components are touched. For material site generation, AI/local builders, visual editing, localization, media optimization, PWA/offline, frontend-health or security lanes, also load `.agents/skills/web-builder-capability-pack/SKILL.md`. For screenshot/reference work also load `screenshot-production-ui` and `visual-qa-evidence`. For migration/offline-reference capture or asset inventory, load `site-mirror`.
+Load `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`, `PLATFORM_ENGINEERING.md`, and `DESIGN_SYSTEM_ENGINEERING.md` when shared tokens/components are touched. For premium visual direction, interaction craft, responsive adaptation, accessibility/design review or final UI polish, also load `.agents/skills/design-quality-engine/SKILL.md` + `docs/standards/DESIGN_QUALITY_ENGINE.md`. For material site generation, AI/local builders, visual editing, localization, media optimization, PWA/offline, frontend-health or security lanes, also load `.agents/skills/web-builder-capability-pack/SKILL.md`. For screenshot/reference work also load `screenshot-production-ui` and `visual-qa-evidence`. For migration/offline-reference capture or asset inventory, load `site-mirror`.
 
 ## Specialist identities
 `@WebArchitecture`, `@FrontendSystem`, `@ScreenshotToCode`, `@ComponentWorkshopQA`, `@WebPerformance`, `@AccessibilityQA`, `@BrowserQA`.
 
 ## Upstream references
-Prefer current canonical sources such as `vercel/next.js`, `shadcn-ui/ui`, `storybookjs/storybook`, `microsoft/playwright`, `GoogleChrome/lighthouse`, `dequelabs/axe-core` and `harlan-zw/unlighthouse`. `abi/screenshot-to-code` is a reference pattern, not the final QA authority. `AhmadIbrahiim/Website-downloader` is an `ADOPT_WHEN_NEEDED` capture engine for authorized/public migration, archival/reference and asset-inventory work; it is not a stable agent identity and must run behind the `site-mirror` network, provenance and rights guardrails.
+Prefer current canonical sources such as `vercel/next.js`, `shadcn-ui/ui`, `storybookjs/storybook`, `microsoft/playwright`, `GoogleChrome/lighthouse`, `dequelabs/axe-core` and `harlan-zw/unlighthouse`. Design-quality work may additionally load reviewed patterns from `anthropics/skills`, `emilkowalski/skills`, `MengTo/Skills`, `addyosmani/web-quality-skills`, `pbakaus/impeccable`, `jakubkrehel/skills` and pattern-only `Superfuture/design-review` through `design-quality-engine`. `abi/screenshot-to-code` is a reference pattern, not the final QA authority. `AhmadIbrahiim/Website-downloader` is an `ADOPT_WHEN_NEEDED` capture engine for authorized/public migration, archival/reference and asset-inventory work; it is not a stable agent identity and must run behind the `site-mirror` network, provenance and rights guardrails.
 
 ## Procedure
 1. Inspect the active stack and platform before selecting framework-specific patterns.

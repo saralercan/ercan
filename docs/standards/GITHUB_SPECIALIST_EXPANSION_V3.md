@@ -11,6 +11,7 @@ Reviewed evidence baseline: `docs/upstream/scans/2026-09-06-github-specialist-ex
 Latest upstream hygiene refresh: `docs/upstream/scans/2026-09-07-github-specialist-gap-pass.md`.
 Latest web-builder capability expansion: `docs/upstream/scans/2026-09-19-web-builder-capability-expansion.md`.
 Latest adaptive capability expansion: `docs/upstream/scans/2026-09-24-adaptive-capability-pack.md`.
+Latest design-quality expansion: `docs/upstream/scans/2026-09-24-design-quality-engine.md`.
 Regression eval: `docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md`.
 Structural scoreboard: `docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md`.
 Behavioral certification: `docs/evals/GITHUB_SPECIALIST_CERTIFICATION_V3.md`.
@@ -48,6 +49,13 @@ Minimum material web flow:
 `@WebArchitecture → platform specialist when applicable → @FrontendSystem → implementation → @WebPerformance/@AccessibilityQA as risk requires → @BrowserQA → independent QA`.
 
 Visual-regression tooling remains a bounded QA capability inside the existing pod. The 2026-09-07 gap pass did not justify a separate stable visual-regression identity.
+
+### Design Quality Engine
+For material visual design, UI polish, responsive/adaptive interaction, shadcn composition, accessibility/design critique or final rendered interface QA, load `.agents/skills/design-quality-engine/SKILL.md` + `docs/standards/DESIGN_QUALITY_ENGINE.md`.
+
+The engine maps into existing stable owners such as `@FrontendSystem`, `@AccessibilityQA`, `@BrowserQA`, `@WebPerformance`, `@BrandSystemArchitect`, `@DesignTokenArchitect`, `@BrandComplianceQA` and `@ComponentWorkshopQA`. It does not create new stable identities.
+
+Reviewed references include official `anthropics/skills:frontend-design`, canonical `shadcn-ui/ui:shadcn`, `emilkowalski/skills`, `MengTo/Skills`, `addyosmani/web-quality-skills`, `pbakaus/impeccable`, `jakubkrehel/skills` and pattern-only `Superfuture/design-review`. Project brand, current platform guidance, WCAG and rendered QA remain authoritative.
 
 ### Web Builder Capability Pack
 For material website creation or modernization, load `.agents/skills/web-builder-capability-pack/SKILL.md`. The pack adds JIT lanes for AutonomousWebBuilder, InstantAppBuilder, LocalAppBuilder, VisualWebEditor, DesignSystem, ComponentLab, WordPressEngineer, WordPressReplica, WordPressThemeQA, ShopifyStorefront, HeadlessCommerce, WebOperator, SEOIndexability, LocalizationQA, MediaOptimizer, PWAEngineer, WebSecurity, FrontendHealth and ContentSiteBuilder. For screenshot/mockup/Figma/HTML/reference-led WordPress reconstruction or redesign, also load `.agents/skills/wordpress-replica/SKILL.md`, `docs/standards/WORDPRESS_REPLICA_ENGINE.md` and `docs/evals/WORDPRESS_REPLICA_REGRESSION.md`.
