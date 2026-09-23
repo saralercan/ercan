@@ -165,6 +165,19 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - Rule: catalog/list membership and star count are discovery signals only, never trust/permission/license/quality proof.
 - Evidence: `docs/upstream/scans/2026-09-24-discovery-source-expansion.md`.
 
+## Weekly SEO Diagnostic / DataForSEO — 2026-09-24
+- Architecture: `ADOPT / NO COUNT CHANGE` → one JIT `weekly-seo-diagnostic` capability under existing SEO/AEO/GEO specialists.
+- DataForSEO OnPage: `ADOPT_WHEN_NEEDED / EXTERNAL_SEO_DIAGNOSTIC_PROVIDER` → technical crawl and selected Lighthouse/browser evidence; costly options enabled only when justified.
+- DataForSEO Labs: `ADOPT_WHEN_NEEDED` → ranking/search-landscape/AI Overview reference evidence with explicit `last_updated_time`/freshness handling.
+- DataForSEO SERP: `ADOPT_WHEN_NEEDED` → priority live spot checks by location/language/device.
+- DataForSEO Backlinks: `ADOPT_WHEN_NEEDED` → new/lost/referring-domain monitoring with index-refresh caveats; no auto-disavow.
+- DataForSEO AI Optimization: `ADOPT_WHEN_NEEDED` → optional LLM/AI-search visibility observation.
+- Rerun `weekly-seo-diagnostic-dataforseo`: `MANAGED_WORKFLOW_REFERENCE` → optional recurrence/deployment; exact template body was not retrievable in review.
+- First-party Search Console/Bing/analytics remains separate from external estimates.
+- Cost ceiling, run-cost evidence, baseline/fingerprints and provider freshness are mandatory for production recurrence.
+- Evidence: `docs/upstream/scans/2026-09-24-rerun-weekly-seo-dataforseo.md`.
+- Stable identities remain 52.
+
 ## Competitor Creative Intelligence — 2026-09-24
 - Architecture: `ADOPT / NO COUNT CHANGE` → one JIT `competitor-creative-intelligence` capability under existing Meta/brand/social specialists.
 - Meta Ad Library: `PRIMARY_EVIDENCE_SOURCE` → retain public provenance, filters and observed delivery metadata; do not infer private campaign performance.
