@@ -97,6 +97,13 @@ A/B tests should isolate the main variable where practical; judge by objective-r
 
 Generative-provider variants must still preserve brand/product truth and be distinguishable by creative hypothesis, not just random visual drift.
 
+## Competitor creative intelligence
+For competitor-ad research load `COMPETITOR_CREATIVE_INTELLIGENCE.md` + `.agents/skills/competitor-creative-intelligence/SKILL.md`.
+
+Use public competitor advertising to identify abstract patterns such as hook families, offer framing, proof style, format, pacing, CTA and category whitespace. Do not copy competitor creative expression, logos, trade dress, photography/video, music/voice or copy into final brand work. Separate observations from hypotheses and treat ad longevity/repetition as persistence signals, not ROAS/profitability evidence.
+
+When a recurring workflow is useful, `managed-agent-deployment` may host collection/scheduling/approvals, while Ercan OS remains source of truth for originality, brand fit, policy and QA.
+
 ## Measurement loop
 `publish/run → collect Insights/reporting → segment by format/pillar/angle → diagnose winners/losers → hypothesis → variant → test → update playbook`.
 Store learnings as audience/offer/angle/format/KPI relationships, not “this design looked nice.” Treat small samples and estimated metrics with uncertainty.
