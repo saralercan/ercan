@@ -157,6 +157,15 @@ Rules:
 - treat connected-account tokens and hosted MCP endpoints as sensitive credentials;
 - do not load hundreds of tool schemas when discovery/meta-tools can keep context narrow.
 
+### Managed agent deployment
+Primary reviewed provider: `https://rerun.build/`.
+
+Decision: `ADOPT_WHEN_NEEDED / MANAGED_AGENT_DEPLOYMENT_PROVIDER / CLOSED_SOURCE_SAAS`.
+
+Load `.agents/skills/managed-agent-deployment/SKILL.md` + `docs/standards/MANAGED_AGENT_DEPLOYMENT.md` when recurring business agents need a managed runtime, client/team handoff, isolated project/client execution, connector-backed actions, human approval gates or operator-friendly live run visibility.
+
+Rerun is a deployment/execution surface beneath Ercan OS governance. It must not replace project rules, stable routing, evals or completion authority. Current provider terms, pricing, connector scopes and data-processing arrangements remain runtime-verified facts.
+
 ## Memory, evaluation and delivery
 
 ### PrivateGPT — `zylon-ai/private-gpt`
