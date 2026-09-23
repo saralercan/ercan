@@ -30,6 +30,19 @@ Purpose: make the newest reviewed upstream findings immediately visible to GPT/E
 - Active security testing is only for owned/explicitly authorized targets.
 - Evidence: `docs/upstream/scans/2026-09-24-digital-specialist-agents.md`.
 
+## Digital Experience Specialists — 2026-09-24
+- Load `.agents/skills/digital-experience-specialists/SKILL.md` + `docs/standards/DIGITAL_EXPERIENCE_SPECIALISTS.md` for deep UI/UX/design-system/accessibility/SEO/AEO/Meta/graphic/CRO/analytics/privacy/security work.
+- `wshobson/agents` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT** for ready UI designer, accessibility, design-system, interaction, visual-design, responsive and security/threat-model patterns.
+- `addyosmani/web-quality-skills` — **ADOPT_WHEN_NEEDED / MIT** for measurement-first performance, Core Web Vitals, accessibility, SEO and best-practices/security skills; preserve its separation of field/RUM/lab/source evidence.
+- `addyosmani/agentic-seo` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT** for AI-agent documentation/discoverability audits; its score is directional and never proof of AI ranking/recommendation.
+- W3C WCAG 2.2 + WCAG-EM 2 remain accessibility authority.
+- Google Search Central/Search Console remain search authority; no ranking guarantees.
+- Current Google Analytics docs remain event/tagging authority; observed events/DebugView are required for measurement verification.
+- Current Meta for Business guidance remains Meta creative/placement authority; platform study results are context-specific, not universal performance guarantees.
+- OWASP Top 10:2025 + ASVS 5.0 are current web-security awareness/verification references.
+- USWDS/GOV.UK/NNG are research/practice references for user-needs, usability and journey/heuristic work.
+- Stable routing identity count remains 52.
+
 ## Website Lifecycle Agents — 2026-09-24
 - Load `.agents/skills/website-lifecycle-agent-pack/SKILL.md` + `docs/standards/WEBSITE_LIFECYCLE_AGENTS.md` for material website redesign/update/modernization/migration/release work.
 - Six JIT aliases were added without changing stable identities: `@WebsiteRefreshArchitect`, `@LiveUIContextAgent`, `@ModernWebRefactorAgent`, `@RuntimeInspectorAgent`, `@MigrationGuardian`, `@ReleaseGuardian`.
@@ -192,6 +205,8 @@ For any task that invokes upstream intelligence:
 Current index entries override older catalog/ledger entries only when the same upstream is explicitly marked as a status change or superseded here.
 
 ## Evidence scans currently incorporated
+
+- `docs/upstream/scans/2026-09-24-digital-experience-specialists.md`
 
 - `docs/upstream/scans/2026-09-24-digital-specialist-agents.md`
 
