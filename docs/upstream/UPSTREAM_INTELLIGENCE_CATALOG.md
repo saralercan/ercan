@@ -343,6 +343,19 @@ Decision vocabulary:
 - `jakubkrehel/skills:better-interface` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — cross-discipline evidence-led interface review.
 - `interaction-design` — SYNTHESIZED_LANE — covered by reviewed Emil/Impeccable interaction references; no separate upstream identity.
 
+### JEV runtime extension ecosystem
+
+- `browser-use/jev-ultrafast` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — bounded structured browser operation.
+- `tamaratran/fast-jev-compaction` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — transcript/history compaction without rewriting retained text.
+- `vercel-labs/json-render` — ADOPT_WHEN_NEEDED — schema/catalog-constrained Generative UI; web/design route.
+- `itsmostafa/typesafe-mcp` — ADOPT_WHEN_NEEDED — minimal generic MCP judgment adapter.
+- `jkudish/jev-mcp` — ADOPT_WHEN_NEEDED — purpose-built semantic MCP toolset.
+- `sharziki/semdecide` — ADOPT_WHEN_NEEDED — semantic CLI/CI primitive.
+- `0xNatoshi/jev-codex-router` — ADOPT_PATTERN_ONLY / WATCHLIST — model/effort routing, fallback and calibration architecture.
+- `GhalebDweikat/winnow` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — reversible context ingress sieve.
+- `devagrawal09/jev-review` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — staged review triage.
+- `ellipsis-dev/blink` — ADOPT_PATTERN_ONLY — semantic file-tree navigation; root license not established.
+
 ## 23. Security, supply-chain and dependency quality
 
 - `gitleaks/gitleaks` — ADOPT — secret scanning.
