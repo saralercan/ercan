@@ -27,6 +27,7 @@ Each stage is optional. Product requirements determine which stages exist.
 | `microsoft/autogen` | legacy Microsoft multi-agent framework | SUPERSEDED_FOR_NEW_WORK |
 | `microsoft/agent-framework` | current Microsoft production agent/workflow framework | ADOPT_WHEN_NEEDED / preferred AutoGen successor |
 | `Aider-AI/aider` | Git-aware coding-agent patterns | ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED |
+| `Alishahryar1/free-claude-code` | shared coding-model/provider proxy + fallback across multiple harnesses | ADOPT_WHEN_NEEDED / CONDITIONAL_PROVIDER_ROUTER |
 | `Significant-Gravitas/AutoGPT` | autonomous workflow/platform patterns | ADOPT_PATTERN_ONLY / WATCHLIST; mixed license |
 | `FoundationAgents/MetaGPT` | SOP/role decomposition | ADOPT_PATTERN_ONLY |
 | `crewAIInc/crewAI` | crew/flow runtime | existing ADOPT_WHEN_NEEDED |
@@ -43,6 +44,10 @@ Each stage is optional. Product requirements determine which stages exist.
 | `THUDM/AgentBench` | agent benchmark environments | ADOPT_PATTERN_ONLY / WHEN_NEEDED_FOR_BENCHMARKING |
 | `elevenlabs/elevenlabs-python` | speech/TTS/voice provider adapter | ADOPT_WHEN_NEEDED |
 | `deepgram/deepgram-python-sdk` | STT/TTS/voice provider adapter | ADOPT_WHEN_NEEDED |
+
+## Coding provider routing
+
+Use `CODING_PROVIDER_ROUTER.md` when a coding system needs shared provider/model routing across multiple harnesses. The reviewed FCC implementation is conditional because its current upstream defaults bind the proxy to `0.0.0.0` and leave proxy authentication disabled. Ercan OS local use overrides this to loopback + authentication and installs only explicitly required clients/providers.
 
 ## Current-status corrections
 
