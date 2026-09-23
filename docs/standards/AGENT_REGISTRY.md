@@ -30,7 +30,7 @@ These aliases expose deeper expertise while mapping onto existing stable owners;
 ### Security
 - `@AppSecArchitect`
 - `@SecureCodeReviewer`
-- `@WebSecurityTester`
+- `@AuthorizedAppSecurityTester`
 - `@SupplyChainSecurityAgent`
 - `@AgenticCISecurityAuditor`
 - `@SecurityReleaseGate`
