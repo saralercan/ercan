@@ -55,7 +55,7 @@ Adopt its strongest separation as a pattern:
 
 For material coding work, consider a lightweight evidence ledger covering edits, checks and failures. If code changed after the latest passing relevant check, completion remains unverified until an appropriate check passes or the task explicitly documents why no check applies.
 
-When a bounded semantic question materially helps — for example, whether the final message actually claims completion — `judgment-engine` may be loaded. The Ercan OS evidence gate remains authoritative.
+When a bounded semantic question materially helps — for example, whether the final message actually claims completion — `judgment-engine` may be loaded. For CLI/CI semantic predicates, Jev review triage or completion-oriented MCP tooling, `jev-runtime-extensions` may also be loaded. SemDecide/jev-review/jev-mcp outputs remain advisory unless a deterministic project rule explicitly and safely consumes them; the Ercan OS evidence gate remains authoritative.
 
 ## Anti-overhead rule
 Governance must reduce rework, not create ceremony. Do not create branches, specs, ADRs or workspace records solely because this skill loaded. Create durable artifacts only when task risk/complexity or project rules justify them.
