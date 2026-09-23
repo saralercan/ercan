@@ -341,7 +341,7 @@ Decision vocabulary:
 - `shadcn-ui/ui:shadcn` — ADOPT_WHEN_NEEDED / CANONICAL — project-aware shadcn component/CLI workflow.
 - `pbakaus/impeccable:adapt` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — adaptive/responsive context and input-mode patterns.
 - `jakubkrehel/skills:better-interface` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — cross-discipline evidence-led interface review.
-- `interaction-design` — SYNTHESIZED_LANE — covered by reviewed Emil/Impeccable interaction references; no separate upstream identity.
+- `wshobson/agents:interaction-design` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — microinteraction, feedback, loading-state, motion and gesture patterns.
 
 ### JEV runtime extension ecosystem
 
