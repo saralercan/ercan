@@ -325,12 +325,31 @@ Decision vocabulary:
 
 ## 24. Recursive discovery sources — high leverage catalogs
 
-These are not automatically trusted dependencies. They are searchable upstream catalogs used by `upstream-intelligence-scan` and `developer-resource-discovery` to find candidates and then run normal Ercan OS verification.
+These are not automatically trusted dependencies. They are searchable upstream catalogs used by `upstream-intelligence-scan` and, where applicable, `developer-resource-discovery` to find additional candidates and then run normal Ercan OS verification.
 
+- `sindresorhus/awesome` — DISCOVERY_SOURCE — broad curated list ecosystem.
+- `bayandin/awesome-awesomeness` — DISCOVERY_SOURCE — index of awesome lists.
+- `awesome-selfhosted/awesome-selfhosted` — DISCOVERY_SOURCE — thousands of self-hostable applications/services; list licensing and each project's license/security/ops are separate concerns.
+- `awesome-selfhosted/awesome-selfhosted-data` — DISCOVERY_SOURCE — machine-readable self-hosted catalog.
+- `aniftyco/awesome-tailwindcss` — DISCOVERY_SOURCE — Tailwind tools/components/templates/plugins.
+- `brillout/awesome-react-components` — DISCOVERY_SOURCE — React component ecosystem.
+- `enaqx/awesome-react` — DISCOVERY_SOURCE — React ecosystem references.
+- `jondot/awesome-react-native` — DISCOVERY_SOURCE — React Native ecosystem; verify item freshness.
+- `eric-erki/awesome-react-native` — DISCOVERY_SOURCE — React Native ecosystem mirror/curation.
+- `nepaul/awesome-flutter` — DISCOVERY_SOURCE — Flutter ecosystem discovery.
+- `wp-hub/awesome-wordpress` — DISCOVERY_SOURCE — WordPress frameworks/plugins/themes/tools.
+- `MentionNetwork/awesome-shopify` — DISCOVERY_SOURCE — Shopify APIs/SDKs/themes/headless/MCP/agentic commerce.
+- `LeCoupa/awesome-shopify` — DISCOVERY_SOURCE — Shopify historical resource index.
+- `klaufel/awesome-design-systems` — DISCOVERY_SOURCE — design systems/tokens/testing resources.
+- `saadeghi/design-systems` — DISCOVERY_SOURCE — public design-system/style-guide index.
+- `brandonhimpfen/awesome-ui-components` — DISCOVERY_SOURCE — UI component libraries/frameworks/kits.
+- `brandonhimpfen/awesome-ux` — DISCOVERY_SOURCE — UX research/writing/prototyping/resources.
+- `brandonhimpfen/awesome-design` — DISCOVERY_SOURCE — design/UI/UX/inspiration/tool index.
+- `faheemkodi/design-resources` — DISCOVERY_SOURCE — design assets/templates/frameworks/tools.
+- `codesandtags/frontend-resources` — DISCOVERY_SOURCE — community-curated frontend resources.
+- `lukeslp/awesome-accessibility` — DISCOVERY_SOURCE — accessibility resources/tools/testing.
 - `ripienaar/free-for-dev` — DISCOVERY_SOURCE — developer SaaS/PaaS/IaaS free-tier candidate discovery; provider pricing/limits/production terms are volatile and must be rechecked.
 - `public-apis/public-apis` — DISCOVERY_SOURCE — public API candidate discovery with Auth/HTTPS/CORS metadata; actual API docs/terms/quota/licensing remain authoritative.
-- `awesome-selfhosted/awesome-selfhosted` — DISCOVERY_SOURCE — self-hosted application/service discovery; list license and each project's license/ops/security are separate concerns.
-- `awesome-selfhosted/awesome-selfhosted-data` — DISCOVERY_SOURCE — machine-readable self-hosted catalog companion.
 - `hesreallyhim/awesome-claude-code` — DISCOVERY_SOURCE_ONLY — Claude Code/agent tooling catalog; restrictive CC BY-NC-ND list license means use only to locate original upstreams.
 - `anthropics/skills` — ADOPT_WHEN_NEEDED / OFFICIAL_REFERENCE — official Anthropic Agent Skills examples/implementation patterns; exact sub-skill licensing varies, and canonical Agent Skills specification remains format authority.
 
