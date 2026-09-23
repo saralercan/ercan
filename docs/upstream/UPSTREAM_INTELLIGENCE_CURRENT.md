@@ -1,10 +1,19 @@
 # Ercan OS — Current Upstream Intelligence Index
 
 Status: active operational overlay
-Updated: 2026-09-07
+Updated: 2026-09-24
 
 Purpose: make the newest reviewed upstream findings immediately visible to GPT/Ercan OS and Codex without forcing every task to read every dated scan. This file is an operational overlay on top of `UPSTREAM_INTELLIGENCE_CATALOG.md` and `DISCOVERY_ADOPTION_LEDGER.md`. Dated scan files remain the evidence/history layer.
 
+
+## Developer resource discovery — 2026-09-24
+- Load `.agents/skills/developer-resource-discovery/SKILL.md` for free-tier service, public API, self-hosted alternative or Agent Skill discovery.
+- `ripienaar/free-for-dev` — **DISCOVERY_SOURCE** only; reviewed repository has no root LICENSE file, so do not copy its catalog into Ercan OS. Re-verify provider pricing/terms/limits live.
+- `public-apis/public-apis` — **DISCOVERY_SOURCE**; MIT list, but each API's own current docs/auth/quota/data terms are authoritative.
+- `awesome-selfhosted/awesome-selfhosted` — existing **DISCOVERY_SOURCE** remains active; list is CC BY-SA 3.0 and every project requires its own license/security/ops review.
+- `hesreallyhim/awesome-claude-code` — **DISCOVERY_SOURCE_ONLY**; reviewed list is CC BY-NC-ND 4.0, so follow original links and audit candidate repos rather than copying/adapting the list.
+- `anthropics/skills` — **ADOPT_WHEN_NEEDED / OFFICIAL_REFERENCE** for Anthropic skill implementation patterns. The repository has mixed licensing; check each skill/subdirectory. It does not replace the canonical open Agent Skills specification.
+- Stable routing identity count remains unchanged; `@UpstreamIntelligence` owns discovery and task-domain owners own production adoption.
 
 ## Web builder capability pack — 2026-09-19
 - Load `.agents/skills/web-builder-capability-pack/SKILL.md` for material site generation, autonomous/rapid/local AI builders, visual editing, headless storefronts, localization, media optimization, PWA/offline, frontend-health or web-security work.
@@ -26,6 +35,8 @@ For any task that invokes upstream intelligence:
 Current index entries override older catalog/ledger entries only when the same upstream is explicitly marked as a status change or superseded here.
 
 ## Evidence scans currently incorporated
+
+- `docs/upstream/scans/2026-09-24-developer-resource-discovery.md`
 
 - `docs/upstream/scans/2026-08-30-continuation.md`
 - `docs/upstream/scans/2026-08-30-third-pass.md`

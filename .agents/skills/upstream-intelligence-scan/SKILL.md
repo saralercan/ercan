@@ -45,6 +45,7 @@ When the request is intentionally broad, cover as many of these as materially us
 22. agent/MCP/browser/RAG tooling
 23. security/supply-chain/CI
 24. curated awesome/machine-readable discovery sources
+25. free-tier services / public APIs / self-hosted alternatives / agent-skill catalogs
 
 ## Search strategy
 
@@ -111,6 +112,9 @@ Generative repos/providers are production engines, not final art directors. Dete
 
 ### Agent/MCP/browser tools
 Use least privilege. Do not expose cookies, broad tokens or authenticated sessions to community tools merely for convenience.
+
+### Developer resource discovery
+When the user asks for free developer services, public APIs, self-hosted alternatives or new Agent Skills, load `.agents/skills/developer-resource-discovery/SKILL.md`. Use `ripienaar/free-for-dev`, `public-apis/public-apis`, `awesome-selfhosted/awesome-selfhosted`, `hesreallyhim/awesome-claude-code` and `anthropics/skills` only according to that skill's trust/license boundaries. Curated catalogs discover candidates; canonical provider/project docs decide production fitness.
 
 ## Output to Orchestrator
 

@@ -325,11 +325,11 @@ Decision vocabulary:
 
 ## 24. Recursive discovery sources — high leverage catalogs
 
-These are not automatically trusted dependencies. They are searchable upstream catalogs used by `upstream-intelligence-scan` to find additional candidates and then run normal Ercan OS verification.
+These are not automatically trusted dependencies. They are searchable upstream catalogs used by `upstream-intelligence-scan` and, where applicable, `developer-resource-discovery` to find additional candidates and then run normal Ercan OS verification.
 
 - `sindresorhus/awesome` — DISCOVERY_SOURCE — broad curated list ecosystem.
 - `bayandin/awesome-awesomeness` — DISCOVERY_SOURCE — index of awesome lists.
-- `awesome-selfhosted/awesome-selfhosted` — DISCOVERY_SOURCE — thousands of self-hostable applications/services.
+- `awesome-selfhosted/awesome-selfhosted` — DISCOVERY_SOURCE — thousands of self-hostable applications/services; list licensing and each project's license/security/ops are separate concerns.
 - `awesome-selfhosted/awesome-selfhosted-data` — DISCOVERY_SOURCE — machine-readable self-hosted catalog.
 - `aniftyco/awesome-tailwindcss` — DISCOVERY_SOURCE — Tailwind tools/components/templates/plugins.
 - `brillout/awesome-react-components` — DISCOVERY_SOURCE — React component ecosystem.
@@ -348,6 +348,10 @@ These are not automatically trusted dependencies. They are searchable upstream c
 - `faheemkodi/design-resources` — DISCOVERY_SOURCE — design assets/templates/frameworks/tools.
 - `codesandtags/frontend-resources` — DISCOVERY_SOURCE — community-curated frontend resources.
 - `lukeslp/awesome-accessibility` — DISCOVERY_SOURCE — accessibility resources/tools/testing.
+- `ripienaar/free-for-dev` — DISCOVERY_SOURCE — developer SaaS/PaaS/IaaS free-tier candidate discovery; provider pricing/limits/production terms are volatile and must be rechecked.
+- `public-apis/public-apis` — DISCOVERY_SOURCE — public API candidate discovery with Auth/HTTPS/CORS metadata; actual API docs/terms/quota/licensing remain authoritative.
+- `hesreallyhim/awesome-claude-code` — DISCOVERY_SOURCE_ONLY — Claude Code/agent tooling catalog; restrictive CC BY-NC-ND list license means use only to locate original upstreams.
+- `anthropics/skills` — ADOPT_WHEN_NEEDED / OFFICIAL_REFERENCE — official Anthropic Agent Skills examples/implementation patterns; exact sub-skill licensing varies, and canonical Agent Skills specification remains format authority.
 
 ## 25. Explicit superseded / caution examples discovered during research
 

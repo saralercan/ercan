@@ -23,7 +23,7 @@ When this intent is present, `@Orchestrator` must identify the active project an
 
 Selection must be based on material contribution: project fit, task competence, tool/data fit, dependency fit, risk fit and verification fit. Do not run unrelated or redundant agents merely to increase agent count. Conversely, do not omit a required specialist or QA role just because the user did not explicitly name it.
 
-When a material task could benefit from current GitHub/open-source tools, reusable UI patterns, platform references, QA tooling or a missing capability, `@Orchestrator` may include `@UpstreamIntelligence`. Broad requests such as “GitHub’daki işimize yarayan her şeyi tara/ekle” must route through it. The discovery layer may scan hundreds or thousands of candidates, but the production layer follows **discover broadly, adopt narrowly** and never installs unrelated repositories globally.
+When a material task could benefit from current GitHub/open-source tools, reusable UI patterns, platform references, QA tooling or a missing capability, `@Orchestrator` may include `@UpstreamIntelligence`. Requests for free-tier services, public APIs, self-hosted alternatives or Agent Skills route through `developer-resource-discovery` so curated indexes remain discovery inputs rather than production authority. Broad requests such as “GitHub’daki işimize yarayan her şeyi tara/ekle” must route through it. The discovery layer may scan hundreds or thousands of candidates, but the production layer follows **discover broadly, adopt narrowly** and never installs unrelated repositories globally.
 
 For material work, Orchestrator owns task decomposition, bounded delegation contracts, dependency ordering, safe parallelism, scope propagation across handoffs and independent verification. Never claim that an unavailable or unexecuted specialist actually ran.
 
@@ -224,6 +224,7 @@ Ercan OS skills use the open Agent Skills `SKILL.md` pattern where practical. Sk
 - `.agents/skills/visual-qa-evidence/SKILL.md`
 - `.agents/skills/screenshot-production-ui/SKILL.md`
 - `.agents/skills/upstream-intelligence-scan/SKILL.md`
+- `.agents/skills/developer-resource-discovery/SKILL.md`
 - `.agents/skills/map-platform-selection/SKILL.md`
 - `.agents/skills/mail-platform-selection/SKILL.md`
 - `.agents/skills/email-delivery-qa/SKILL.md`
