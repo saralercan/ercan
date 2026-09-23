@@ -113,6 +113,8 @@ Current index entries override older catalog/ledger entries only when the same u
 
 ## Evidence scans currently incorporated
 
+- `docs/upstream/scans/2026-09-24-rerun-build.md`
+
 - `docs/upstream/scans/2026-09-24-free-claude-code-reassessment.md`
 
 - `docs/upstream/scans/2026-09-24-discovery-source-expansion.md`
