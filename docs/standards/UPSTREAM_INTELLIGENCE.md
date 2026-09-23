@@ -57,6 +57,7 @@ At minimum, upstream intelligence should cover:
 - agents/MCP/browser research/RAG tooling
 - security/supply-chain/CI quality
 - curated “awesome” and machine-readable discovery sources
+- free-tier developer services, public API catalogs, self-hosted alternatives and Agent Skill catalogs
 
 ## Discovery hierarchy
 
@@ -106,6 +107,10 @@ For upstream-sensitive tasks use this order:
 5. current official upstream verification for volatile runtime facts.
 
 If the current overlay explicitly changes the status of an older catalog/ledger item, the current overlay wins until consolidation.
+
+## Developer resource discovery sources
+
+For requests involving free/low-cost developer services, public APIs, self-hosted replacements or Agent Skills, load `.agents/skills/developer-resource-discovery/SKILL.md`. Discovery indexes are never current pricing/availability/security authority. Resolve shortlisted entries to current canonical provider/project sources before recommendation or adoption. Restrictive or mixed-license catalogs may be searched as indexes without copying their curated content.
 
 ## Recursive discovery
 
