@@ -165,6 +165,16 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - Rule: catalog/list membership and star count are discovery signals only, never trust/permission/license/quality proof.
 - Evidence: `docs/upstream/scans/2026-09-24-discovery-source-expansion.md`.
 
+## Managed Agent Deployment — Rerun — 2026-09-24
+- `https://rerun.build/`: `ADOPT_WHEN_NEEDED / MANAGED_AGENT_DEPLOYMENT_PROVIDER / CLOSED_SOURCE_SAAS` → recurring business-agent execution, client/team handoff, Box isolation, approvals, connectors and live run visibility.
+- Architecture: Ercan OS stays the policy/routing/eval/completion control plane; Rerun is a replaceable external execution/deployment surface.
+- Gmail boundary: current Privacy Policy says sending-only; no mailbox read/search/list assumption.
+- Outreach boundary: current AUP prohibits bulk unsolicited email/message/call campaigns; do not use for Vinterro bulk cold outreach.
+- Data boundary: verify current Privacy Policy, DPA, subprocessor list, deployment mode and retention before client production use.
+- Commercial boundary: current price, trial, Expert Program, marketplace and revenue-share terms are volatile; no revenue forecast or client price commitment without re-verification.
+- Evidence: `docs/upstream/scans/2026-09-24-rerun-build.md`.
+- Stable routing identities remain 52; no mandatory dependency.
+
 ## Agent Runtime Stack — 2026-09-24
 - Architecture: `ADOPT / NO COUNT CHANGE` → one JIT `agent-runtime-stack` capability under existing Ercan OS owners; preserve **21 Stable Core + 31 GitHub Specialist v3 Extension = 52**.
 - `ollama/ollama`: `ADOPT_WHEN_NEEDED` → local/open-model runtime; evaluate model/hardware/privacy/egress fit.
