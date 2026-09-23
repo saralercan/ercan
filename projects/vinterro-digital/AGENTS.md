@@ -13,7 +13,7 @@ Inherit root `AGENTS.md` plus `AGENT_ENGINEERING.md`, `BRAND_SOCIAL.md`, `PLATFO
 
 These are candidate pods; Orchestrator still applies material-contribution filtering.
 
-- **Website UI / frontend quality:** `@FrontendSystem`, `@WebPerformance`, `@AccessibilityQA`, `@BrowserQA`; add screenshot-production specialists for reference-led reproduction.
+- **Website UI / frontend quality:** `@FrontendSystem`, `@WebPerformance`, `@AccessibilityQA`, `@BrowserQA`; add screenshot-production specialists for reference-led reproduction. For reference-led WordPress theme reconstruction/migration, load `@WordPressReplica` JIT via `.agents/skills/wordpress-replica/SKILL.md`.
 - **SEO / AI discovery:** `@WordPressSEO`, `@TechnicalSEO`, `@SEOScanner`, `@AEO_GEO` according to platform/crawl/entity/AI-discovery scope.
 - **Brand system / cross-channel identity:** `@BrandSystemArchitect`, `@BrandBehavior`, `@DesignTokenArchitect`, `@BrandRuntimeEngineer`, independent `@BrandComplianceQA` according to reusable brand-system scope.
 - **Social:** `@SocialStrategy`, `@SocialPublishingOps`, `@SocialAgentOps`, `@SocialAnalytics`, `@ContentRecycling` according to strategy, publishing, agent-operated workflow, analytics and reuse scope. Authenticated publishing is never inferred from content creation.
@@ -43,4 +43,4 @@ Machine-readable candidate map: `docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.js
 Completion: `VERIFIED` only after the task-relevant brand/platform/browser/export/search/measurement/mail QA passes.
 
 ## Web Builder Capability Pack
-For material website generation/modernization, visual editing, WordPress engineering/theme QA, localization, media optimization, PWA/offline, frontend-health, browser-operator or web-security work, load `.agents/skills/web-builder-capability-pack/SKILL.md`. Keep `@WordPressExpert` as the platform owner for the verified WordPress surface and retain Hostinger deployment as a separate boundary when deployment is actually in scope.
+For material website generation/modernization, visual editing, WordPress engineering/theme QA, localization, media optimization, PWA/offline, frontend-health, browser-operator or web-security work, load `.agents/skills/web-builder-capability-pack/SKILL.md`. For screenshot/mockup/Figma/HTML/reference-led WordPress work, additionally load `.agents/skills/wordpress-replica/SKILL.md` + `docs/standards/WORDPRESS_REPLICA_ENGINE.md`; the `@WordPressReplica` alias resolves to existing stable specialists. Keep `@WordPressExpert` as the platform owner for the verified WordPress surface and retain Hostinger deployment as a separate boundary when deployment is actually in scope.
