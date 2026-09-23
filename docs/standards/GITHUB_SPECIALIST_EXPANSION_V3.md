@@ -10,6 +10,7 @@ JIT upstream catalog supplement: `docs/upstream/GITHUB_SPECIALIST_CATALOG_V3.md`
 Reviewed evidence baseline: `docs/upstream/scans/2026-09-06-github-specialist-expansion-v3.md`.
 Latest upstream hygiene refresh: `docs/upstream/scans/2026-09-07-github-specialist-gap-pass.md`.
 Latest web-builder capability expansion: `docs/upstream/scans/2026-09-19-web-builder-capability-expansion.md`.
+Latest adaptive capability expansion: `docs/upstream/scans/2026-09-24-adaptive-capability-pack.md`.
 Regression eval: `docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md`.
 Structural scoreboard: `docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md`.
 Behavioral certification: `docs/evals/GITHUB_SPECIALIST_CERTIFICATION_V3.md`.
@@ -155,6 +156,19 @@ Recommended separation:
 - `DESIGN.md` — visual/composition/typography/imagery layer when the project uses such a file.
 - design tokens — semantic machine-readable visual values.
 - `AGENTS.md` — working/routing/QA instructions; it must not become the brand book.
+
+## Adaptive Capability Pack (2026-09-24)
+
+Load `docs/standards/ADAPTIVE_CAPABILITY_PACK.md` and only its relevant JIT skill when a task materially needs learning/tutoring, YouTube transcript/search intelligence, platform-specific design guidance, disciplined execution/debug governance or founder operating workflows.
+
+Reviewed upstream references:
+- `bevibing/tutor-skills` — learning/tutor patterns; MIT; host/storage assumptions remain optional.
+- `ZeroPointRepo/youtube-skills` — TranscriptAPI-backed YouTube read intelligence; MIT; credentialed optional provider only.
+- `ehmo/platform-design-skills` — Apple/Android/Web platform-design digests; MIT; official current platform docs remain authority.
+- `GanyuanRan/Aegis` — engineering method-pack patterns; MIT; never a second Ercan OS policy/completion authority.
+- `ognjengt/founder-skills` — founder/business workflow patterns; MIT; route through existing stable business/sales/marketing/product owners.
+
+These additions do **not** change the stable identity count: 21 Stable Core + 31 GitHub Specialist v3 Extension = 52.
 
 ## Qualified routing matrix
 
