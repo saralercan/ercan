@@ -18,7 +18,7 @@ This is a JIT discovery capability owned by `@UpstreamIntelligence`. It expands 
 - RootAwesomeDiscovery -> `sindresorhus/awesome` as the last-resort recursive index when narrower catalogs do not cover the requirement.
 - PromptLeakResearch -> `x1xhlol/system-prompts-and-models-of-ai-tools` as defensive research reference only; do not copy, redistribute or operationalize leaked/proprietary prompt content.
 - OfficialSkillReference -> `anthropics/skills` as an official Anthropic implementation/example source; the open Agent Skills specification remains the canonical format authority.
-- CodingModelRouterWatchlist -> `Alishahryar1/free-claude-code` as a provider/router/fallback architecture reference only.
+- CodingModelRouter -> `Alishahryar1/free-claude-code` as an ADOPT_WHEN_NEEDED conditional provider-router candidate; runtime use requires `coding-provider-router` hardening and current provider audit.
 
 ## Owner mapping
 
@@ -71,7 +71,9 @@ Use as a root recursive discovery index only after narrower Ercan OS sources fai
 Collections of exposed/leaked system prompts or model artifacts are not approved skill/prompt sources. They may inform defensive threat modeling for prompt extraction or prompt injection, but Ercan OS must not copy or operationalize leaked/proprietary content, infer vendor behavior from it as authoritative, or redistribute material without clear rights. Prefer official/current product documentation and observable public behavior.
 
 ### free-claude-code
-Use only when the actual goal is coding-model/provider routing, fallback resilience or local proxy architecture. The repository is MIT, but provider integrations have independent authentication, terms, quotas, privacy and billing behavior. Review installer scripts, local listening interfaces, credential storage, proxy authentication and every selected provider's current official terms before any execution. Do not treat the README's aggregate free-token claim as a durable fact.
+Current Ercan OS decision: `ADOPT_WHEN_NEEDED / CONDITIONAL_PROVIDER_ROUTER`. Use only when the actual goal is multi-provider coding-model routing, fallback resilience or shared local proxy architecture. Load `coding-provider-router` before runtime use.
+
+The repository is MIT, but provider integrations have independent authentication, terms, quotas, privacy and billing behavior. Current upstream defaults bind the API to `0.0.0.0` and leave proxy authentication disabled, so Ercan OS local evaluation must override to loopback + authentication. Review the exact installer/release, install only required clients, and independently verify every selected provider's official terms. Do not treat README provider-count/free-token claims as durable facts.
 
 ### anthropics/skills
 Official Anthropic examples/implementation reference. Do not treat the whole repository as uniformly open-source: the README states many skills are Apache-2.0 while document skills are source-available with different terms. Check the exact subdirectory license before reuse. Use current `agentskills.io` / canonical Agent Skills specification for format authority; use Anthropic's repo for examples and production-inspired patterns.
