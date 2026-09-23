@@ -113,7 +113,7 @@ Rules:
 - verify the exact OAuth/API scope currently requested;
 - never infer read access from send access or vice versa;
 - restrict write/action connectors independently;
-- do not use one client's credentials in another client's Box;
+- do not use one client's credentials in another client's workspace; a Box is not a credential boundary;
 - connected third-party terms remain binding;
 - MCP servers remain independently audited under Ercan OS MCP discovery/security rules.
 
