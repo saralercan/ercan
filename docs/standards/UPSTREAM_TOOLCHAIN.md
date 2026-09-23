@@ -23,6 +23,7 @@ Before adoption check owner identity, archive/deprecation status, recent mainten
 - Community social-retrieval aggregators may be evaluated as read-only fallback adapters, but never installed or granted credentials solely because they are convenient. Review provenance, scripts, permission surface and maintenance first.
 
 ### Developer resource catalogs
+- `Alishahryar1/free-claude-code` — WATCHLIST / ADOPT_PATTERN_ONLY for coding-agent/model routing and fallback architecture. Treat remote installers, provider credentials, local proxy exposure and provider terms as separate security/compatibility decisions; never infer that listed free quotas remain current.
 - `ripienaar/free-for-dev` — DISCOVERY_SOURCE for managed developer free tiers; provider pricing/limits/terms must be checked live.
 - `public-apis/public-apis` — DISCOVERY_SOURCE for API candidates; the candidate API's own docs/terms remain authority.
 - `awesome-selfhosted/awesome-selfhosted` — DISCOVERY_SOURCE for self-hosted alternatives; project licenses and operational/security burden vary.
@@ -95,6 +96,13 @@ Renderer, tile source, geocoder, routing and canonical POI database are separate
 - GitHub CodeQL/code scanning
 - Dependabot
 - secret-scanning/Gitleaks-class tooling when appropriate
+
+### Design quality / UI craft
+- `anthropics/skills:frontend-design` — official frontend visual-direction pattern; skill-specific Apache-2.0.
+- `shadcn-ui/ui:shadcn` — canonical shadcn project-aware skill and CLI/docs workflow.
+- `emilkowalski/skills`, `MengTo/Skills`, `addyosmani/web-quality-skills`, `pbakaus/impeccable`, `jakubkrehel/skills` — reviewed JIT design/accessibility/interaction references through `design-quality-engine`.
+- `Superfuture/design-review` — critique-pattern reference only; do not import telemetry or license-gated remote Pro behavior.
+- Current platform HIG/Material/WCAG and project brand/design system remain authority.
 
 ### Design systems / creative production
 - `figma/code-connect`, `figma/sds` — official Figma reference family for connecting Variables, Styles, Components and production code; use `DESIGN_SYSTEM_ENGINEERING.md` + `design-system-bridge` rather than copying SDS vocabulary.
