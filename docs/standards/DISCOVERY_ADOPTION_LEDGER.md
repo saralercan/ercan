@@ -142,6 +142,22 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - listmonk: `ADOPT_WHEN_NEEDED` for self-hosted newsletter/list management after AGPL/operations review.
 - Postal/Stalwart/mailcow-class self-hosted mail infrastructure: `WATCHLIST/EXPLICIT INFRA DECISION`; never default merely to send contact-form mail.
 
+## Judgment Engine / Jev — 2026-09-24
+- `typesafe-ai/skills`: `ADOPT_WHEN_NEEDED / OFFICIAL_REFERENCE` → System One/Jev workflow design and live-doc routing.
+- `typesafe-ai/typesafe-sdk-js`: `ADOPT_WHEN_NEEDED / OFFICIAL_SDK` → JS/TS typed judgment integration.
+- `typesafe-ai/typesafe-sdk-python`: `ADOPT_WHEN_NEEDED / OFFICIAL_SDK` → Python typed judgment integration; runtime metadata/license rechecked before production use.
+- `lahfir/agent-desktop`: `ADOPT_WHEN_NEEDED` → authorized accessibility-tree desktop automation; Apache-2.0, OS-permission scoped.
+- `qkal/Canny`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → completion ledger where deterministic facts gate "done" and semantic judgments remain advisory.
+- `jexp/neo4jev`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → bounded graph-edge choice + goal detection + beam/budget patterns.
+- `AkashPriyadarshii/jev-curate`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → deterministic prefilters + semantic rubrics + verbatim keep/reject dataset pipeline.
+- `fhshaik/typesafe-mario`: `ADOPT_PATTERN_ONLY` → structured simulator state to bounded legal actions; no root license observed.
+- `RomanSlack/jev-drone`: `ADOPT_PATTERN_ONLY` → simulation hierarchy with deterministic control/safety retaining authority.
+- `emrickgarrett/OneVOneJev`: `ADOPT_PATTERN_ONLY` → multi-judgment real-time game tick + deterministic fallback; no root license observed.
+- `jarrodwatts/jev-trader`: `ADOPT_PATTERN_ONLY` → dry-run/latency/stale-decision/risk-accounting patterns; not default live trading.
+- `irfndi/prism-liquidity-agent`: `ADOPT_PATTERN_ONLY` → paper/backtest/replay/risk-gate patterns; not default live trading.
+- `monteduro/killmyidea`: `ADOPT_PATTERN_ONLY` → versioned composite scoring under Founder Operations; no root license observed.
+- Architecture decision: one JIT `judgment-engine` under existing owners; no new stable agent identities.
+
 ## Developer resource discovery — 2026-09-24
 - `ripienaar/free-for-dev`: `DISCOVERY_SOURCE` → free-tier service candidate discovery only; current provider terms must be verified. No root LICENSE observed in review, so no substantial catalog copying.
 - `public-apis/public-apis`: `DISCOVERY_SOURCE` → API candidate discovery; MIT list, but each API has independent terms, auth, quota, maintenance and data-license requirements.

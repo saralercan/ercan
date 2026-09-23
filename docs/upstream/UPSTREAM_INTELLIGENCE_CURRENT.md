@@ -6,6 +6,19 @@ Updated: 2026-09-24
 Purpose: make the newest reviewed upstream findings immediately visible to GPT/Ercan OS and Codex without forcing every task to read every dated scan. This file is an operational overlay on top of `UPSTREAM_INTELLIGENCE_CATALOG.md` and `DISCOVERY_ADOPTION_LEDGER.md`. Dated scan files remain the evidence/history layer.
 
 
+## Judgment Engine / TypeSafe Jev — 2026-09-24
+- Load `.agents/skills/judgment-engine/SKILL.md` + `docs/standards/JUDGMENT_ENGINE.md` when a bounded semantic Choice/Noul/Score-style decision materially improves a workflow.
+- `typesafe-ai/skills` — **ADOPT_WHEN_NEEDED / OFFICIAL REFERENCE / MIT**.
+- `typesafe-ai/typesafe-sdk-js` — **ADOPT_WHEN_NEEDED / OFFICIAL SDK / MIT**.
+- `typesafe-ai/typesafe-sdk-python` — **ADOPT_WHEN_NEEDED / OFFICIAL SDK**; re-check current package/repo metadata before production use.
+- `lahfir/agent-desktop` — **ADOPT_WHEN_NEEDED / Apache-2.0** for authorized macOS desktop automation; permission-scoped and least-privilege.
+- `qkal/Canny` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT** beneath execution governance; deterministic evidence gates remain authoritative and Jev judgment is advisory.
+- `jexp/neo4jev`, `AkashPriyadarshii/jev-curate` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED** for graph traversal and dataset curation patterns.
+- `fhshaik/typesafe-mario`, `RomanSlack/jev-drone`, `emrickgarrett/OneVOneJev` — **ADOPT_PATTERN_ONLY** for bounded state/action-loop design; drone use is simulation/control-architecture research only.
+- `jarrodwatts/jev-trader`, `irfndi/prism-liquidity-agent` — **ADOPT_PATTERN_ONLY** for dry-run/paper/backtest/latency/risk-gate architecture; not default live financial execution.
+- `monteduro/killmyidea` — **ADOPT_PATTERN_ONLY** beneath Founder Operations; verdict labels are not objective business truth.
+- Provider credentials remain optional and must not be stored in the repo. Stable routing identity count remains 52.
+
 ## Developer resource discovery — 2026-09-24
 - Load `.agents/skills/developer-resource-discovery/SKILL.md` for free-tier service, public API, self-hosted alternative or Agent Skill discovery.
 - `ripienaar/free-for-dev` — **DISCOVERY_SOURCE** only; reviewed repository has no root LICENSE file, so do not copy its catalog into Ercan OS. Re-verify provider pricing/terms/limits live.
@@ -35,6 +48,8 @@ For any task that invokes upstream intelligence:
 Current index entries override older catalog/ledger entries only when the same upstream is explicitly marked as a status change or superseded here.
 
 ## Evidence scans currently incorporated
+
+- `docs/upstream/scans/2026-09-24-jev-judgment-engine.md`
 
 - `docs/upstream/scans/2026-09-24-developer-resource-discovery.md`
 

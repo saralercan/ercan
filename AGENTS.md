@@ -75,6 +75,7 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
 - `@WordPressReplica` is a user-facing JIT alias for visual-to-WordPress reconstruction, not a stable identity. It must load `.agents/skills/wordpress-replica/SKILL.md`, preserve WordPress-native editability/SEO contracts, and cannot claim 1:1 fidelity without rendered visual-comparison evidence.
 - YouTube growth is also a capability system, not a guaranteed-income prompt trick or a new stable identity. Route through `.agents/skills/youtube-growth-engine/SKILL.md`, verify current YouTube platform facts at runtime, and never claim publishing/monetization state without external evidence.
 - Adaptive Capability Pack JIT skills extend learning, YouTube evidence retrieval, platform-design guidance, execution governance and founder operations without changing the stable routing identity count. Route them through existing owners, keep official/current sources authoritative, and never claim optional upstream providers executed unless they actually did.
+- Judgment models are semantic decision providers, not policy or authority. Use `judgment-engine` only for bounded judgments where deterministic code remains responsible for permissions, safety invariants, exact rules, side effects and final verification. Physical-control and financial-execution examples default to simulation/advisory patterns unless separately authorized and independently safeguarded.
 - Generative creative providers are production engines, not final art directors or approvers. Approved brand references, do-not-touch constraints and independent design QA remain authoritative.
 - Map engines, tile sources, geocoders, clustering and routing are separate concerns. Do not let one vendor/library silently become the whole location data architecture.
 - Mailbox operations, application mail events, template rendering, SMTP/API transport, campaign/list management, deliverability and mail-server infrastructure are separate concerns. Do not solve a contact-form problem by silently creating mail-server operations.
@@ -245,6 +246,7 @@ Ercan OS skills use the open Agent Skills `SKILL.md` pattern where practical. Sk
 - `.agents/skills/platform-design-intelligence/SKILL.md`
 - `.agents/skills/execution-governance/SKILL.md`
 - `.agents/skills/founder-operations/SKILL.md`
+- `.agents/skills/judgment-engine/SKILL.md`
 - `.agents/skills/seo-aeo-geo-specialist/SKILL.md`
 - `.agents/skills/meta-ads-measurement/SKILL.md`
 - `.agents/skills/brand-system-specialist/SKILL.md`

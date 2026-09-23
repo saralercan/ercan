@@ -44,6 +44,19 @@ Use governed path when any of these appear:
 7. Verify original reproduction plus risk-appropriate regression surface.
 8. Retire or explicitly track obsolete fallback/duplicate responsibility introduced or discovered by the change.
 
+## Completion supervision pattern
+
+Reviewed upstream: `qkal/Canny` (MIT).
+
+Adopt its strongest separation as a pattern:
+- deterministic facts may enforce completion gates;
+- semantic judgments may classify or annotate ambiguous claims/rule conflicts;
+- a probabilistic judgment must not silently become an irreversible blocker.
+
+For material coding work, consider a lightweight evidence ledger covering edits, checks and failures. If code changed after the latest passing relevant check, completion remains unverified until an appropriate check passes or the task explicitly documents why no check applies.
+
+When a bounded semantic question materially helps — for example, whether the final message actually claims completion — `judgment-engine` may be loaded. The Ercan OS evidence gate remains authoritative.
+
 ## Anti-overhead rule
 Governance must reduce rework, not create ceremony. Do not create branches, specs, ADRs or workspace records solely because this skill loaded. Create durable artifacts only when task risk/complexity or project rules justify them.
 

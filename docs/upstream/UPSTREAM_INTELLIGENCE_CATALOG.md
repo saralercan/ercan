@@ -314,6 +314,22 @@ Decision vocabulary:
 - `crewAIInc/crewAI` — WATCHLIST — multi-agent orchestration patterns; Ercan OS contract remains authoritative.
 - `microsoft/autogen` — ADOPT_PATTERN_ONLY — agent conversation/orchestration research patterns.
 
+### Judgment / typed-decision providers and patterns
+
+- `typesafe-ai/skills` — ADOPT_WHEN_NEEDED — official TypeSafe System One/Jev Agent Skill reference.
+- `typesafe-ai/typesafe-sdk-js` — ADOPT_WHEN_NEEDED — official JS/TS SDK for typed judgment integration.
+- `typesafe-ai/typesafe-sdk-python` — ADOPT_WHEN_NEEDED — official Python SDK; re-verify current metadata before production use.
+- `lahfir/agent-desktop` — ADOPT_WHEN_NEEDED — authorized accessibility-tree desktop automation and stable-ref pattern.
+- `qkal/Canny` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — evidence-led coding-agent completion supervision.
+- `jexp/neo4jev` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — bounded graph navigation/beam-search pattern.
+- `AkashPriyadarshii/jev-curate` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — structured dataset curation/sifting pattern.
+- `fhshaik/typesafe-mario` — ADOPT_PATTERN_ONLY — emulator-state to bounded-action loop; root license not established in review.
+- `RomanSlack/jev-drone` — ADOPT_PATTERN_ONLY — simulation-only hierarchical control/safety pattern.
+- `emrickgarrett/OneVOneJev` — ADOPT_PATTERN_ONLY — real-time bounded multi-action judgment pattern; root license not established in review.
+- `jarrodwatts/jev-trader` — ADOPT_PATTERN_ONLY — paper/dry-run latency and risk-accounting reference.
+- `irfndi/prism-liquidity-agent` — ADOPT_PATTERN_ONLY — paper/backtest/replay/risk-gate architecture reference.
+- `monteduro/killmyidea` — ADOPT_PATTERN_ONLY — versioned multi-dimensional product/startup scoring pattern; root license not established in review.
+
 ## 23. Security, supply-chain and dependency quality
 
 - `gitleaks/gitleaks` — ADOPT — secret scanning.

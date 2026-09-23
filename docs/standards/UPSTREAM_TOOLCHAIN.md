@@ -67,6 +67,14 @@ Mailbox/user operations, application mail events, templates, transport, campaign
 
 Renderer, tile source, geocoder, routing and canonical POI database are separate concerns. Never let a convenient SDK silently become the full location architecture.
 
+### Typed judgment / System One providers
+- `typesafe-ai/skills` — official TypeSafe Agent Skill reference for System One/Jev workflow design.
+- `typesafe-ai/typesafe-sdk-js` and `typesafe-ai/typesafe-sdk-python` — official provider SDKs when a project needs TypeSafe/Jev integration.
+- Current TypeSafe docs/API remain authority for model names, schemas, limits, pricing and behavior.
+- Route through `.agents/skills/judgment-engine/SKILL.md`; provider output never replaces deterministic permissions, policy, safety, exact calculation or completion evidence.
+- Community Jev demos are pattern sources only unless separately promoted after audit.
+- Physical-control and financial-execution examples remain simulation/advisory/paper/backtest references by default.
+
 ### Google agent platform
 - `google/agents-cli` — official optional CLI + Skills layer for coding agents building, evaluating, deploying, publishing and observing Google ADK agents.
 - Current Google Agents CLI docs and current Google ADK docs are authoritative for lifecycle, commands, deployment targets, auth, eval and observability behavior.
