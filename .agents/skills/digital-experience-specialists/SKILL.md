@@ -48,7 +48,7 @@ Primary references:
 
 Rule: hypotheses are labeled as hypotheses until supported by research/evidence.
 
-## 3. @DesignSystemSpecialist
+## 3. @DesignTokensSpecialist
 Stable mapping: `@DesignTokenArchitect + @FrontendSystem + @ComponentWorkshopQA`.
 
 Owns:
