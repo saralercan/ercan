@@ -377,7 +377,7 @@ Review:
 
 Static tools do not prove absence of vulnerabilities.
 
-## @WebSecurityTester
+## @AuthorizedAppSecurityTester
 Stable mapping:
 `Security Reviewer + @BrowserQA`.
 
