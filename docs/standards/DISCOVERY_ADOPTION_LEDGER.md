@@ -155,6 +155,31 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - `wshobson/agents:interaction-design`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → purposeful microinteraction, feedback, motion and gesture patterns; combine with existing platform/accessibility/performance rules.
 - Architecture decision: one JIT `design-quality-engine`; no new stable identities.
 
+## Agent Runtime Stack — 2026-09-24
+- Architecture: `ADOPT / NO COUNT CHANGE` → one JIT `agent-runtime-stack` capability under existing Ercan OS owners; preserve **21 Stable Core + 31 GitHub Specialist v3 Extension = 52**.
+- `ollama/ollama`: `ADOPT_WHEN_NEEDED` → local/open-model runtime; evaluate model/hardware/privacy/egress fit.
+- `langchain-ai/langchain`: existing `ADOPT_WHEN_NEEDED` reaffirmed; no duplicate stable agent.
+- `openinterpreter/openinterpreter`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → coding/computer-use harness with sandbox/approval boundaries.
+- `microsoft/autogen`: `SUPERSEDED_FOR_NEW_WORK` → maintenance mode; new Microsoft-oriented work evaluates `microsoft/agent-framework`.
+- `microsoft/agent-framework`: `ADOPT_WHEN_NEEDED / PREFERRED_SUCCESSOR_FOR_AUTOGEN` → production-grade graph/workflow/handoff/checkpoint/HITL patterns.
+- `Aider-AI/aider`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → repo-map, Git-aware editing, lint/test feedback.
+- `Significant-Gravitas/AutoGPT`: `ADOPT_PATTERN_ONLY / WATCHLIST` → exact-path license required; platform is PolyForm Shield, classic/outside-platform portions MIT.
+- `FoundationAgents/MetaGPT`: `ADOPT_PATTERN_ONLY` → SOP/role decomposition patterns, no second Ercan OS constitution.
+- `crewAIInc/crewAI`: existing `ADOPT_WHEN_NEEDED` reaffirmed.
+- `stanfordnlp/dspy`: `ADOPT_WHEN_NEEDED` → LM program optimization only with representative evals/holdouts.
+- `camel-ai/camel`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → research/simulation/synthetic-data and large multi-agent studies.
+- `FlowiseAI/Flowise`: `SUPERSEDED/HISTORICAL` → canonical repo archived; no new production default.
+- `continuedev/continue`: `SUPERSEDED/HISTORICAL` → repo read-only/not actively maintained.
+- `vercel/ai`: existing `ADOPT_WHEN_NEEDED` reaffirmed.
+- `e2b-dev/E2B`: `ADOPT_WHEN_NEEDED` → isolated code/computer execution; sandbox credentials/network scoped separately.
+- `ComposioHQ/composio`: `ADOPT_WHEN_NEEDED` → per-user authenticated action/tool sessions with least-privilege toolkit/action scope.
+- `zylon-ai/private-gpt`: `ADOPT_WHEN_NEEDED` → local/private AI API/RAG layer; verify all downstream providers/tools/egress.
+- `mem0ai/mem0`: `ADOPT_WHEN_NEEDED` → application memory only with tenancy/provenance/retention/privacy rules.
+- `AgentOps-AI/agentops`: `ADOPT_WHEN_NEEDED` → observability/session replay when incremental over current telemetry; redact sensitive traces.
+- `THUDM/AgentBench`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED_FOR_BENCHMARKING` → benchmark methodology/environments, not routine regression.
+- `elevenlabs/elevenlabs-python`, `deepgram/deepgram-python-sdk`: `ADOPT_WHEN_NEEDED / PROVIDER_ADAPTER` → speech/voice I/O; voice rights/consent and current provider facts required.
+- Framework rule: select one primary maintained orchestration runtime and add tools/sandbox/memory/observability/voice as independent optional adapters.
+
 ## JEV Runtime Extensions — 2026-09-24
 - `browser-use/jev-ultrafast`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → structured browser action/target loop with freshness checks.
 - `tamaratran/fast-jev-compaction`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → transcript/tool-history compaction; preserve critical text/evidence and explicit fallback.
