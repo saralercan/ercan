@@ -23,7 +23,7 @@ Before adoption check owner identity, archive/deprecation status, recent mainten
 - Community social-retrieval aggregators may be evaluated as read-only fallback adapters, but never installed or granted credentials solely because they are convenient. Review provenance, scripts, permission surface and maintenance first.
 
 ### Developer resource catalogs
-- `Alishahryar1/free-claude-code` — WATCHLIST / ADOPT_PATTERN_ONLY for coding-agent/model routing and fallback architecture. Treat remote installers, provider credentials, local proxy exposure and provider terms as separate security/compatibility decisions; never infer that listed free quotas remain current.
+- `Alishahryar1/free-claude-code` — ADOPT_WHEN_NEEDED / CONDITIONAL_PROVIDER_ROUTER for shared coding-agent model routing/fallback. Runtime use loads `CODING_PROVIDER_ROUTER.md`; Ercan OS binds local evaluations to loopback, enables proxy auth, selects explicit providers/clients, audits the exact installer and rechecks current provider terms. Never infer listed free quotas remain current.
 - `ripienaar/free-for-dev` — DISCOVERY_SOURCE for managed developer free tiers; provider pricing/limits/terms must be checked live.
 - `public-apis/public-apis` — DISCOVERY_SOURCE for API candidates; the candidate API's own docs/terms remain authority.
 - `awesome-selfhosted/awesome-selfhosted` — DISCOVERY_SOURCE for self-hosted alternatives; project licenses and operational/security burden vary.
