@@ -16,7 +16,7 @@ Purpose: make the newest reviewed upstream findings immediately visible to GPT/E
 - `shadcn-ui/ui:shadcn` — **ADOPT_WHEN_NEEDED / CANONICAL** for compatible shadcn projects, MIT.
 - `pbakaus/impeccable:adapt` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED**, Apache-2.0.
 - `jakubkrehel/skills:better-interface` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED**, MIT.
-- `interaction-design` is an Ercan OS synthesized lane using reviewed Emil/Impeccable patterns; no distinct upstream identity is invented.
+- `wshobson/agents:interaction-design` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED**, MIT; supplies microinteraction/motion/feedback patterns while Ercan OS platform/accessibility/performance rules remain authoritative.
 - Stable routing identity count remains 52.
 
 ## JEV Runtime Extensions — 2026-09-24
