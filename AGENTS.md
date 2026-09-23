@@ -50,7 +50,7 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
    - mobile app architecture/QA/release: `.agents/skills/mobile-app-specialist/SKILL.md` plus platform-native current docs/tooling
    - web production/performance/accessibility/browser QA: `.agents/skills/web-production-specialist/SKILL.md`; for premium visual direction, interaction/motion, responsive adaptation, shadcn composition or interface critique also load `.agents/skills/design-quality-engine/SKILL.md` + `DESIGN_QUALITY_ENGINE.md`; for material site generation, AI/visual editing, localization, media optimization, PWA/offline, frontend-health or web-security lanes also load `.agents/skills/web-builder-capability-pack/SKILL.md`; for screenshot/mockup/Figma/HTML/reference-led WordPress reconstruction or migration also load `.agents/skills/wordpress-replica/SKILL.md` + `docs/standards/WORDPRESS_REPLICA_ENGINE.md`
    - Google ADK / Agents CLI / Gemini Enterprise Agent Platform: `GOOGLE_AGENT_PLATFORM.md` **only when that provider surface is actually in scope**
-   - GitHub/tooling/upstream: `UPSTREAM_TOOLCHAIN.md`; broad discovery/tool selection also uses `UPSTREAM_INTELLIGENCE.md`, `UPSTREAM_INTELLIGENCE_CATALOG.md`, `DISCOVERY_ADOPTION_LEDGER.md` and `upstream-adoption-audit`.
+   - GitHub/tooling/upstream: `UPSTREAM_TOOLCHAIN.md`; broad discovery/tool selection also uses `UPSTREAM_INTELLIGENCE.md`, `UPSTREAM_INTELLIGENCE_CATALOG.md`, `DISCOVERY_ADOPTION_LEDGER.md` and `upstream-adoption-audit`; JEV browser/context/MCP/CI/router/review/navigation work also loads `JEV_RUNTIME_EXTENSIONS.md` when material.
 9. Project-local decisions, brand rules, do-not-touch rules and current task ledger when available.
 10. Only task-relevant skills/tools/context; do not context-stuff unrelated history.
 
@@ -76,6 +76,7 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
 - YouTube growth is also a capability system, not a guaranteed-income prompt trick or a new stable identity. Route through `.agents/skills/youtube-growth-engine/SKILL.md`, verify current YouTube platform facts at runtime, and never claim publishing/monetization state without external evidence.
 - Adaptive Capability Pack JIT skills extend learning, YouTube evidence retrieval, platform-design guidance, execution governance and founder operations without changing the stable routing identity count. Route them through existing owners, keep official/current sources authoritative, and never claim optional upstream providers executed unless they actually did.
 - Judgment models are semantic decision providers, not policy or authority. Use `judgment-engine` only for bounded judgments where deterministic code remains responsible for permissions, safety invariants, exact rules, side effects and final verification. Physical-control and financial-execution examples default to simulation/advisory patterns unless separately authorized and independently safeguarded.
+- JEV runtime extensions are optional adapters/patterns, not mandatory global installs. Use `jev-runtime-extensions` for browser loops, context pruning, MCP/CLI, model routing, code-review triage or repo navigation only when materially useful. Avoid overlapping compaction/MCP layers, keep context pruning reversible, and never let semantic security/review scores override deterministic trust, tests or approvals.
 - Design-quality skills are craft/reference layers, not visual authorities. Route premium UI work through `design-quality-engine`; project brand, current platform guidance, accessibility obligations, existing component systems and rendered QA remain authoritative. Do not force Apple/shadcn/Tailwind conventions onto incompatible projects.
 - Generative creative providers are production engines, not final art directors or approvers. Approved brand references, do-not-touch constraints and independent design QA remain authoritative.
 - Map engines, tile sources, geocoders, clustering and routing are separate concerns. Do not let one vendor/library silently become the whole location data architecture.
@@ -248,6 +249,7 @@ Ercan OS skills use the open Agent Skills `SKILL.md` pattern where practical. Sk
 - `.agents/skills/execution-governance/SKILL.md`
 - `.agents/skills/founder-operations/SKILL.md`
 - `.agents/skills/judgment-engine/SKILL.md`
+- `.agents/skills/jev-runtime-extensions/SKILL.md`
 - `.agents/skills/design-quality-engine/SKILL.md`
 - `.agents/skills/seo-aeo-geo-specialist/SKILL.md`
 - `.agents/skills/meta-ads-measurement/SKILL.md`
