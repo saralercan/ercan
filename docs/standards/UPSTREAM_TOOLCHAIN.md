@@ -28,6 +28,11 @@ Before adoption check owner identity, archive/deprecation status, recent mainten
 - `public-apis/public-apis` — DISCOVERY_SOURCE for API candidates; the candidate API's own docs/terms remain authority.
 - `awesome-selfhosted/awesome-selfhosted` — DISCOVERY_SOURCE for self-hosted alternatives; project licenses and operational/security burden vary.
 - `hesreallyhim/awesome-claude-code` — DISCOVERY_SOURCE_ONLY; restrictive CC BY-NC-ND list license means follow links to original projects rather than copying/adapting the catalog.
+- `punkpeye/awesome-mcp-servers` — DISCOVERY_SOURCE for MCP candidates; audit each server's publisher, license, install/runtime commands, network/filesystem/database permissions and auth before connection.
+- `Shubhamsaboo/awesome-llm-apps` — DISCOVERY_SOURCE / APP_PATTERN_LIBRARY; audit only the exact agent/RAG/voice/skill subproject and its dependencies/provider assumptions.
+- `composio-community/awesome-codex-skills` — DISCOVERY_SOURCE_ONLY with per-skill audit. Current canonical owner differs from older README examples; root license was not established, so exact path/license/scripts/tools must be inspected.
+- `sindresorhus/awesome` — ROOT_RECURSIVE_DISCOVERY_SOURCE (CC0); use after narrower catalogs, then follow the selected list to original projects.
+- `x1xhlol/system-prompts-and-models-of-ai-tools` — RESEARCH_REFERENCE_ONLY / DO_NOT_COPY / DO_NOT_EXECUTE; prompt-leak threat-modeling only, not a system-prompt source.
 - Use `.agents/skills/developer-resource-discovery/SKILL.md` for this funnel.
 
 ### Shopify
