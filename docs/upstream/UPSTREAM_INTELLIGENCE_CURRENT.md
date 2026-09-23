@@ -16,6 +16,20 @@ Purpose: make the newest reviewed upstream findings immediately visible to GPT/E
 - Stars/list inclusion remain weak discovery signals, not trust, licensing or production-readiness evidence.
 - Stable routing identity count remains 52; no catalog was bulk-installed.
 
+## Digital Specialist Agent Pack — 2026-09-24
+- Load `.agents/skills/digital-specialist-agent-pack/SKILL.md` + `docs/standards/DIGITAL_SPECIALIST_AGENTS.md` for deep UI/UX, SEO/AEO/GEO, graphic-design and web-security specialist work.
+- New JIT aliases: 4 UI/UX, 5 SEO, 4 graphic-design and 6 security roles. Stable routing identities remain **52**.
+- Meta is intentionally **not duplicated**: existing stable `@MetaAdsEngineer`, `@MetaMeasurement`, `@MarketingScience`, `@IncrementalityAnalyst`, `@AdsCreativeStrategist` remain the specialist pod.
+- UI/UX: `hueyexe/frontend-agent-skills` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT**; Anthropic frontend-design and existing Design Quality remain core references. W3C WCAG 2.2 + WCAG-EM 2.0 remain accessibility authority.
+- SEO: Google Search Central/Search Console remain **PRIMARY_SEARCH_AUTHORITY**. `marketingskills/seo` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT** for technical triage, opportunity, decay, cannibalization, internal-link, schema and reporting workflows. Third-party tools never imply access to Google internal ranking data.
+- Meta: `facebookexperimental/Robyn` — MIT, existing ADOPT_WHEN_NEEDED MMM reference; current upstream describes Python as beta/LLM-translated relative to mature R. `facebookincubator/GeoLift` — MIT, existing incrementality/geo-experiment reference.
+- Graphic design: Anthropic `canvas-design` and `theme-factory` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / Apache-2.0**. `ArnavPuri/designskills` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT**. Brand/project direction remains authoritative and generation providers do not self-approve.
+- Security: OWASP ASVS **5.0.0** is the current stable app-security requirements authority. OWASP WSTG **4.2** remains stable while v5 is development. `zaproxy/zaproxy` — **ADOPT_WHEN_NEEDED / AUTHORIZED_DAST / Apache-2.0**. Semgrep/Trivy remain static/supply-chain detectors, not proof of security.
+- `trailofbits/skills` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / CC BY-SA 4.0** for audit methodology and agentic-actions security patterns; exact copying/adaptation must respect share-alike obligations.
+- `OWASP/secure-agent-playbook` — **PATTERN_ONLY / LICENSE_CLARIFICATION_REQUIRED** from reviewed root state. `UnitOneAI/SecuritySkills` — MIT but **WATCHLIST / DO_NOT_USE_AS_CURRENT_AUTHORITY** because parts still reference older ASVS 4.0.3.
+- Active security testing is only for owned/explicitly authorized targets.
+- Evidence: `docs/upstream/scans/2026-09-24-digital-specialist-agents.md`.
+
 ## Website Lifecycle Agents — 2026-09-24
 - Load `.agents/skills/website-lifecycle-agent-pack/SKILL.md` + `docs/standards/WEBSITE_LIFECYCLE_AGENTS.md` for material website redesign/update/modernization/migration/release work.
 - Six JIT aliases were added without changing stable identities: `@WebsiteRefreshArchitect`, `@LiveUIContextAgent`, `@ModernWebRefactorAgent`, `@RuntimeInspectorAgent`, `@MigrationGuardian`, `@ReleaseGuardian`.
@@ -178,6 +192,8 @@ For any task that invokes upstream intelligence:
 Current index entries override older catalog/ledger entries only when the same upstream is explicitly marked as a status change or superseded here.
 
 ## Evidence scans currently incorporated
+
+- `docs/upstream/scans/2026-09-24-digital-specialist-agents.md`
 
 - `docs/upstream/scans/2026-09-24-website-design-update-agents.md`
 
