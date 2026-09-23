@@ -343,6 +343,14 @@ Decision vocabulary:
 - `jakubkrehel/skills:better-interface` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — cross-discipline evidence-led interface review.
 - `wshobson/agents:interaction-design` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — microinteraction, feedback, loading-state, motion and gesture patterns.
 
+### High-recall discovery indexes — 2026-09-24
+
+- `punkpeye/awesome-mcp-servers` — DISCOVERY_SOURCE / MCP_CATALOG — candidate MCP server discovery; every server requires original-source, publisher, license, permission, install and network/security audit before connection.
+- `Shubhamsaboo/awesome-llm-apps` — DISCOVERY_SOURCE / APP_PATTERN_LIBRARY — agent/RAG/voice/skill application examples; audit only the exact subproject needed.
+- `composio-community/awesome-codex-skills` — DISCOVERY_SOURCE_ONLY / PER_SKILL_AUDIT_REQUIRED — curated Codex skills; current canonical repository is under `composio-community`; root license not established and individual skills may differ.
+- `sindresorhus/awesome` — DISCOVERY_SOURCE / ROOT_RECURSIVE_INDEX — CC0 meta-index; use when narrower domain catalogs are insufficient, then audit original candidate projects.
+- `x1xhlol/system-prompts-and-models-of-ai-tools` — RESEARCH_REFERENCE_ONLY / DO_NOT_COPY / DO_NOT_EXECUTE — defensive prompt-leak/prompt-injection research; no root license observed and leaked/proprietary prompt material is not an Ercan OS instruction source.
+
 ### Agent runtime / orchestration / execution stack
 
 - `ollama/ollama` — ADOPT_WHEN_NEEDED — local/open-model serving runtime.
