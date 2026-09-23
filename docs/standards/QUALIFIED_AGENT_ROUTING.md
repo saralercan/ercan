@@ -115,6 +115,24 @@ Load `DIGITAL_SPECIALIST_AGENTS.md` + `digital-specialist-agent-pack` when the t
 For cross-domain site work, composition may be:
 `website lifecycle owner -> UX/IA -> brand/graphic -> implementation -> accessibility/SEO -> Meta only if ads/measurement is actually in scope -> security -> release QA`.
 
+### Digital experience specialist routing
+Use `DIGITAL_EXPERIENCE_SPECIALISTS.md` + `digital-experience-specialists` when a task needs deep UI/UX/SEO/Meta/graphic/CRO/analytics/privacy/security expertise.
+
+Examples:
+- visual UI quality -> `@UISpecialist`
+- research/usability/IA -> `@UXResearchSpecialist`
+- tokens/components/themes -> `@DesignTokensSpecialist`
+- WCAG/assistive-tech -> `@AccessibilitySpecialist`
+- technical/on-page/search -> `@SEOSpecialist`
+- AI/answer-engine/agent discoverability -> `@AEOAgentDiscoverySpecialist`
+- Meta ad creative -> `@MetaCreativeSpecialist + @GraphicDesignSpecialist`
+- Pixel/CAPI/conversion instrumentation -> `@MetaMeasurementSpecialist`
+- funnel/conversion problem -> `@CROSpecialist + @AnalyticsInstrumentationSpecialist` and UX when material
+- GA4/GTM/event model -> `@AnalyticsInstrumentationSpecialist`
+- consent/security -> `@PrivacySecuritySpecialist`
+
+Do not mechanically run all 12. Add independent QA and platform specialists where implementation/risk requires them.
+
 ### Website lifecycle / redesign / update
 Use `WEBSITE_LIFECYCLE_AGENTS.md` + `website-lifecycle-agent-pack`.
 

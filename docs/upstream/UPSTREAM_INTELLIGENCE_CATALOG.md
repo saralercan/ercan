@@ -367,6 +367,13 @@ Decision vocabulary:
 - `UnitOneAI/SecuritySkills` — WATCHLIST — useful structure but not current framework authority where older ASVS references remain.
 - Meta `facebookexperimental/Robyn` and `facebookincubator/GeoLift` remain existing reviewed Marketing Science references; no duplicate Meta identities.
 
+### Digital experience specialist packs
+
+- `wshobson/agents` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT — ready UI designer, accessibility, design-system, interaction, visual-design and security/threat patterns.
+- `addyosmani/web-quality-skills` — ADOPT_WHEN_NEEDED / MIT — measurement-first performance, Core Web Vitals, accessibility, SEO and best-practices skills.
+- `addyosmani/agentic-seo` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT — agent-facing documentation/AEO structural audit.
+- W3C WCAG 2.2/WCAG-EM 2, Google Search/Analytics, Meta and OWASP Top 10:2025/ASVS 5.0 — authoritative current domain sources.
+
 ### Website lifecycle / visual update / runtime inspection
 
 - `GoogleChrome/modern-web-guidance` — ADOPT_WHEN_NEEDED / OFFICIAL_GUIDANCE — current web-platform/compatibility/performance/accessibility guidance for coding agents.

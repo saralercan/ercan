@@ -177,6 +177,15 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - Security testing authorization is mandatory.
 - Evidence: `docs/upstream/scans/2026-09-24-digital-specialist-agents.md`.
 
+## Digital Experience Specialists — 2026-09-24
+- Architecture: `ADOPT / NO COUNT CHANGE` → one JIT `digital-experience-specialists` pack with 12 specialist aliases mapped to existing stable owners.
+- `wshobson/agents`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT` → UI/accessibility/design-system/interaction/visual/security patterns.
+- `addyosmani/web-quality-skills`: `ADOPT_WHEN_NEEDED / MIT` → measurement-first web quality skills.
+- `addyosmani/agentic-seo`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT` → AI-agent discoverability/documentation heuristics; no ranking guarantee.
+- Official authority order: W3C, Google Search/Analytics, Meta, OWASP, current platform docs; community skills remain subordinate.
+- Evidence: `docs/upstream/scans/2026-09-24-digital-experience-specialists.md`.
+- Stable identities remain 52.
+
 ## Website Lifecycle Agents — 2026-09-24
 - Architecture: `ADOPT / NO COUNT CHANGE` → one JIT `website-lifecycle-agent-pack` with six user-facing routing aliases mapped to existing stable web/SEO/platform specialists.
 - `GoogleChrome/modern-web-guidance`: `ADOPT_WHEN_NEEDED / OFFICIAL_GUIDANCE / Apache-2.0 / preview` → current web-platform modernization; actual browser/accessibility testing still required.
