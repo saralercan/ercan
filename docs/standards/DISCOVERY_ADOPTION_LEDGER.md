@@ -165,6 +165,18 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - Rule: catalog/list membership and star count are discovery signals only, never trust/permission/license/quality proof.
 - Evidence: `docs/upstream/scans/2026-09-24-discovery-source-expansion.md`.
 
+## Hardware Design Engine / heypcb — 2026-09-24
+- Architecture: `ADOPT / NO COUNT CHANGE` → one JIT `hardware-design-engine` capability; stable routing identities remain **52**.
+- `heypcb.ai`: `ADOPT_WHEN_NEEDED / AI_PCB_DESIGN_PROVIDER / CLOSED_SOURCE_SAAS` → KiCad-native AI design acceleration; explicit cloud/IP/privacy and independent engineering-review boundaries.
+- heypcb Circuit World: `HARDWARE_REFERENCE_DISCOVERY` → per-board licence/source review, fork attribution and complete re-verification required.
+- `biosshot/kicad-copilot`: `ADOPT_WHEN_NEEDED / MIT` → KiCad MCP/file automation, checkpoints and native ERC/DRC/exports.
+- `circuit-synth/circuit-synth`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT` → software-style parametric/version-controlled circuit definitions.
+- `LGAI-Research/PCBWorld`: `ADOPT_PATTERN_ONLY / BENCHMARK_WHEN_NEEDED` → DRC-grounded routing benchmark; BSD environment/evaluation + GPL engine split.
+- `IxTechCrypto/kicad-skills`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT` → domain DFM/routing/verification patterns; numeric design constraints independently validated.
+- `buildwithtrace/trace`: `WATCHLIST / PATTERN_ONLY / MIXED_LICENSE` → do not copy proprietary `trace/` AI modules.
+- Completion rule: `DESIGN_VERIFIED` and `PHYSICALLY_VALIDATED` are separate states; fabrication/production/certification claims require appropriate real engineering evidence.
+- Evidence: `docs/upstream/scans/2026-09-24-heypcb-circuit-world.md`.
+
 ## Weekly SEO Diagnostic / DataForSEO — 2026-09-24
 - Architecture: `ADOPT / NO COUNT CHANGE` → one JIT `weekly-seo-diagnostic` capability under existing SEO/AEO/GEO specialists.
 - DataForSEO OnPage: `ADOPT_WHEN_NEEDED / EXTERNAL_SEO_DIAGNOSTIC_PROVIDER` → technical crawl and selected Lighthouse/browser evidence; costly options enabled only when justified.

@@ -73,6 +73,16 @@ Mailbox/user operations, application mail events, templates, transport, campaign
 
 Renderer, tile source, geocoder, routing and canonical POI database are separate concerns. Never let a convenient SDK silently become the full location architecture.
 
+### Hardware / PCB / KiCad
+- `heypcb.ai` — ADOPT_WHEN_NEEDED / AI_PCB_DESIGN_PROVIDER / CLOSED_SOURCE_SAAS. Treat as design acceleration only; current provider Terms require user engineering review/test/validation and current Privacy Policy requires project-data/cloud-processing review.
+- heypcb Circuit World — HARDWARE_REFERENCE_DISCOVERY. Inspect each board's stated licence/source and re-run all engineering verification after forks/adaptation.
+- `biosshot/kicad-copilot` — ADOPT_WHEN_NEEDED / MIT for KiCad-native MCP/file automation and native ERC/DRC/export workflows.
+- `circuit-synth/circuit-synth` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT for code-defined/parametric circuits.
+- `LGAI-Research/PCBWorld` — ADOPT_PATTERN_ONLY / BENCHMARK_WHEN_NEEDED; BSD environment/evaluation, GPL engine.
+- `IxTechCrypto/kicad-skills` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT for closed-loop DRC/DFM and domain design patterns.
+- `buildwithtrace/trace` — WATCHLIST / PATTERN_ONLY / MIXED_LICENSE; current `trace/` directory is proprietary and must not be copied.
+- Route through `HARDWARE_DESIGN_ENGINE.md` + `hardware-design-engine`; KiCad-native source, exact datasheets, deterministic ERC/DRC/DFM and independent review remain authoritative.
+
 ### Weekly SEO diagnostics / DataForSEO
 - DataForSEO OnPage — ADOPT_WHEN_NEEDED for external technical crawl/SEO diagnostics; optional JS/browser/Lighthouse features can add cost.
 - DataForSEO Labs Ranked Keywords — ADOPT_WHEN_NEEDED for ranking/search-landscape evidence with provider timestamp/freshness handling.

@@ -19,6 +19,7 @@ This is a JIT discovery capability owned by `@UpstreamIntelligence`. It expands 
 - PromptLeakResearch -> `x1xhlol/system-prompts-and-models-of-ai-tools` as defensive research reference only; do not copy, redistribute or operationalize leaked/proprietary prompt content.
 - OfficialSkillReference -> `anthropics/skills` as an official Anthropic implementation/example source; the open Agent Skills specification remains the canonical format authority.
 - CodingModelRouter -> `Alishahryar1/free-claude-code` as an ADOPT_WHEN_NEEDED conditional provider-router candidate; runtime use requires `coding-provider-router` hardening and current provider audit.
+- HardwareReferenceDiscovery -> heypcb Circuit World plus reviewed KiCad/PCB upstreams as candidate/reference sources; each board/tool gets independent license, engineering and safety review before reuse.
 
 ## Owner mapping
 
@@ -69,6 +70,9 @@ Use as a root recursive discovery index only after narrower Ercan OS sources fai
 
 ### prompt-leak collections
 Collections of exposed/leaked system prompts or model artifacts are not approved skill/prompt sources. They may inform defensive threat modeling for prompt extraction or prompt injection, but Ercan OS must not copy or operationalize leaked/proprietary content, infer vendor behavior from it as authoritative, or redistribute material without clear rights. Prefer official/current product documentation and observable public behavior.
+
+### hardware / Circuit World
+Use Circuit World and other public hardware libraries only for discovery/reference. Public visibility does not imply unrestricted reuse. Inspect the exact board licence, source CAD, component assumptions and revision, then re-run deterministic engineering verification before adaptation. For heypcb/cloud providers, also review current privacy/IP/export-control constraints before uploading confidential designs.
 
 ### free-claude-code
 Current Ercan OS decision: `ADOPT_WHEN_NEEDED / CONDITIONAL_PROVIDER_ROUTER`. Use only when the actual goal is multi-provider coding-model routing, fallback resilience or shared local proxy architecture. Load `coding-provider-router` before runtime use.

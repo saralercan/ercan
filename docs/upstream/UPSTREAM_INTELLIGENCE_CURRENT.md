@@ -16,6 +16,19 @@ Purpose: make the newest reviewed upstream findings immediately visible to GPT/E
 - Stars/list inclusion remain weak discovery signals, not trust, licensing or production-readiness evidence.
 - Stable routing identity count remains 52; no catalog was bulk-installed.
 
+## Hardware Design Engine / heypcb — 2026-09-24
+- Load `.agents/skills/hardware-design-engine/SKILL.md` + `docs/standards/HARDWARE_DESIGN_ENGINE.md` for PCB/electronics/KiCad/schematic/layout/routing/ERC/DRC/DFM/fabrication tasks.
+- `heypcb.ai` — **ADOPT_WHEN_NEEDED / AI_PCB_DESIGN_PROVIDER / CLOSED_SOURCE_SAAS** for natural-language KiCad-native design acceleration, design/fab checks and portable fabrication/CAD outputs. Current Terms explicitly place final engineering/test/validation responsibility on the user.
+- heypcb Circuit World — **HARDWARE_REFERENCE_DISCOVERY**. Public boards are published with title/licence/author and may be forked; every board's licence is checked independently and all engineering checks are rerun after reuse.
+- heypcb Privacy Policy currently states project/design data may be processed by configured AI providers; raw project files are not used to train public foundation models, but a redacted technical learning store may retain agent turns/verification results for up to one year and distill generic cross-account engineering lessons under described conditions. Confidential/NDA/export-sensitive hardware requires an explicit cloud-processing decision.
+- `biosshot/kicad-copilot` — **ADOPT_WHEN_NEEDED / MIT** for file-oriented KiCad MCP automation, checkpoints, component search, placement/routing and native `kicad-cli` ERC/DRC/export integration.
+- `circuit-synth/circuit-synth` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT** for code-defined/version-controlled circuits and parametric KiCad generation.
+- `LGAI-Research/PCBWorld` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED_FOR_BENCHMARKING**; BSD-3-Clause environment/evaluation with a GPLv3 engine. Strong reference for DRC-grounded routing evaluation.
+- `IxTechCrypto/kicad-skills` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT** for high-current/high-speed/RF/custom-part/DFM verification patterns; numeric rules are reverified against the actual board, fab and standards.
+- `buildwithtrace/trace` — **WATCHLIST / PATTERN_ONLY / MIXED_LICENSE**. KiCad-derived areas are GPLv3 while current `trace/` AI modules are proprietary/all-rights-reserved and are not copied.
+- Hardware completion distinguishes **DESIGN_VERIFIED** from **PHYSICALLY_VALIDATED**. AI output, screenshots or clean DRC alone never imply production readiness/certification.
+- Stable routing identities remain 52.
+
 ## Weekly SEO Diagnostic / DataForSEO — 2026-09-24
 - Load `.agents/skills/weekly-seo-diagnostic/SKILL.md` + `docs/standards/WEEKLY_SEO_DIAGNOSTIC.md` for recurring SEO/AEO/GEO monitoring, weekly DataForSEO diagnostics or Rerun SEO reports.
 - DataForSEO OnPage — **ADOPT_WHEN_NEEDED / EXTERNAL_SEO_DIAGNOSTIC_PROVIDER** for customizable crawling, technical checks, duplicate/non-indexable/redirect/link/resource diagnostics and optional Lighthouse/browser-rendering evidence.
@@ -151,6 +164,8 @@ For any task that invokes upstream intelligence:
 Current index entries override older catalog/ledger entries only when the same upstream is explicitly marked as a status change or superseded here.
 
 ## Evidence scans currently incorporated
+
+- `docs/upstream/scans/2026-09-24-heypcb-circuit-world.md`
 
 - `docs/upstream/scans/2026-09-24-rerun-weekly-seo-dataforseo.md`
 
