@@ -6,6 +6,31 @@ Updated: 2026-09-24
 Purpose: make the newest reviewed upstream findings immediately visible to GPT/Ercan OS and Codex without forcing every task to read every dated scan. This file is an operational overlay on top of `UPSTREAM_INTELLIGENCE_CATALOG.md` and `DISCOVERY_ADOPTION_LEDGER.md`. Dated scan files remain the evidence/history layer.
 
 
+## Agent Runtime Stack — 2026-09-24
+- Load `.agents/skills/agent-runtime-stack/SKILL.md` + `docs/standards/AGENT_RUNTIME_STACK.md` when selecting/composing model runtime, orchestration, coding harness, tools/actions, sandbox, memory, observability/evals or voice infrastructure.
+- `ollama/ollama` — **ADOPT_WHEN_NEEDED / MIT** for local/open-model runtime; local does not by itself prove privacy or capability fit.
+- `langchain-ai/langchain` — existing **ADOPT_WHEN_NEEDED** status retained; use only when its abstractions materially help.
+- `openinterpreter/openinterpreter` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / Apache-2.0** for coding/computer-use harness patterns behind sandbox/approval boundaries.
+- `microsoft/autogen` — **SUPERSEDED_FOR_NEW_WORK**; reviewed repo is in maintenance mode and points new work to `microsoft/agent-framework`.
+- `microsoft/agent-framework` — **ADOPT_WHEN_NEEDED / PREFERRED_SUCCESSOR_FOR_AUTOGEN / MIT** for production-oriented Microsoft multi-agent/workflow systems.
+- `Aider-AI/aider` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / Apache-2.0** for repo-map, Git-aware coding and lint/test-loop patterns.
+- `Significant-Gravitas/AutoGPT` — **ADOPT_PATTERN_ONLY / WATCHLIST**; mixed licensing: `autogpt_platform` is PolyForm Shield while classic/outside-platform areas are MIT.
+- `FoundationAgents/MetaGPT` — **ADOPT_PATTERN_ONLY / MIT** for SOP/role decomposition; does not replace Ercan OS routing.
+- `crewAIInc/crewAI` — existing **ADOPT_WHEN_NEEDED** status retained.
+- `stanfordnlp/dspy` — **ADOPT_WHEN_NEEDED / MIT** for LM-program optimization against representative evals.
+- `camel-ai/camel` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / Apache-2.0** for multi-agent research, simulation and data-generation workloads.
+- `FlowiseAI/Flowise` — **SUPERSEDED/HISTORICAL** for new work; reviewed canonical GitHub repo is archived.
+- `continuedev/continue` — **SUPERSEDED/HISTORICAL / Apache-2.0**; README states the repository is no longer actively maintained and is read-only.
+- `vercel/ai` — existing **ADOPT_WHEN_NEEDED** status retained for compatible JS/TS AI apps.
+- `e2b-dev/E2B` — **ADOPT_WHEN_NEEDED / Apache-2.0** for isolated cloud code/computer execution; sandbox does not imply permission to mutate external systems.
+- `ComposioHQ/composio` — **ADOPT_WHEN_NEEDED / MIT** for scoped authenticated tool/action integrations.
+- `zylon-ai/private-gpt` — **ADOPT_WHEN_NEEDED / Apache-2.0** for local/private AI API/RAG layers; privacy depends on the full inference/embedding/tool/egress path.
+- `mem0ai/mem0` — **ADOPT_WHEN_NEEDED / Apache-2.0** for application memory with explicit tenancy, provenance, retention/deletion and privacy rules.
+- `AgentOps-AI/agentops` — **ADOPT_WHEN_NEEDED / MIT** when it adds observability value beyond existing telemetry; trace privacy applies.
+- `THUDM/AgentBench` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED_FOR_BENCHMARKING / Apache-2.0**; not the default Ercan OS regression suite.
+- `elevenlabs/elevenlabs-python`, `deepgram/deepgram-python-sdk` — **ADOPT_WHEN_NEEDED / PROVIDER_ADAPTER / MIT SDKs** for voice/speech surfaces; current provider capabilities/limits are runtime facts and voice cloning needs explicit rights/consent.
+- Architecture: choose one primary orchestration framework per application and add sandbox/memory/observability/voice only when requirements justify them. Stable routing identity count remains 52.
+
 ## Design Quality Engine — 2026-09-24
 - Load `.agents/skills/design-quality-engine/SKILL.md` + `docs/standards/DESIGN_QUALITY_ENGINE.md` for material premium UI direction, interaction/motion, responsive adaptation, shadcn composition, accessibility/design critique or final rendered design QA.
 - `anthropics/skills:frontend-design` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED**, skill-specific Apache-2.0.
@@ -77,6 +102,8 @@ For any task that invokes upstream intelligence:
 Current index entries override older catalog/ledger entries only when the same upstream is explicitly marked as a status change or superseded here.
 
 ## Evidence scans currently incorporated
+
+- `docs/upstream/scans/2026-09-24-agent-runtime-stack.md`
 
 - `docs/upstream/scans/2026-09-24-jev-runtime-extensions.md`
 
