@@ -103,6 +103,18 @@ A simple deterministic task may need only one competent implementation specialis
 
 The roster is task-specific, not project-static. The same project may use different pods for different requests.
 
+### Deep digital specialist routing
+Load `DIGITAL_SPECIALIST_AGENTS.md` + `digital-specialist-agent-pack` when the task requires domain depth beyond generic web implementation.
+
+- UI/UX discovery/IA/interactions/accessibility -> select only the matching UI/UX alias(es).
+- SEO -> separate architecture, content opportunity, schema/entity, measurement and AI visibility instead of one generic "SEO agent".
+- Meta -> use the existing stable five-agent pod; do not create duplicate campaign/measurement/MMM/incrementality identities.
+- Graphic design -> separate art direction, typography/layout, channel creative and export/preflight.
+- Security -> separate architecture/threat model, secure-code review, authorized web testing, supply-chain/agentic-CI review and release gate.
+
+For cross-domain site work, composition may be:
+`website lifecycle owner -> UX/IA -> brand/graphic -> implementation -> accessibility/SEO -> Meta only if ads/measurement is actually in scope -> security -> release QA`.
+
 ### Website lifecycle / redesign / update
 Use `WEBSITE_LIFECYCLE_AGENTS.md` + `website-lifecycle-agent-pack`.
 

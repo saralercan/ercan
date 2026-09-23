@@ -124,3 +124,15 @@ Before publish where relevant: current aspect/export spec, profile/feed/Reel/Sto
 
 ## Agency-quality completion
 Do not claim agency-level completion unless brand fit, originality, craft, clarity, channel/mobile preview, asset correctness, readability/accessibility, export QA and campaign cohesion have no unresolved critical findings.
+
+
+## Specialist graphic production
+For material graphic-design work load `DIGITAL_SPECIALIST_AGENTS.md` + `.agents/skills/digital-specialist-agent-pack/SKILL.md`.
+
+Route:
+- concept/art direction -> `@GraphicArtDirector`;
+- typography/grid/layout -> `@TypographyLayoutAgent`;
+- channel/ad/social/poster/banner execution -> `@CampaignCreativeDesigner`;
+- independent final export/brand check -> `@CreativePreflightQA`.
+
+Approved brand assets, copy and channel requirements remain source of truth. Generative image/design engines are execution providers, not final art directors or approvers.

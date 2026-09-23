@@ -21,6 +21,9 @@ Load `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`, `BRAND_SOCIAL.md`, `DES
 - tokens: semantic colors, type, spacing, radius, motion and platform outputs.
 - `AGENTS.md`: routing/working/QA instructions; do not turn it into the brand book.
 
+## Graphic specialist routing
+For art direction, typography/layout, campaign graphics or export/preflight, load `.agents/skills/digital-specialist-agent-pack/SKILL.md` + `docs/standards/DIGITAL_SPECIALIST_AGENTS.md`. Existing brand sources and asset provenance remain authoritative; image-generation/design engines do not self-direct or self-approve.
+
 ## Procedure
 1. Identify authoritative brand sources and asset provenance.
 2. Resolve contradictions before generating a normalized runtime/brand spec; never invent missing brand facts silently.
