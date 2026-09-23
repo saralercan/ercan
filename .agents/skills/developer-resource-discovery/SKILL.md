@@ -14,6 +14,7 @@ This is a JIT discovery capability owned by `@UpstreamIntelligence`. It expands 
 - SelfHostedAlternatives -> `awesome-selfhosted/awesome-selfhosted` + its machine-readable data companion as discovery indexes.
 - AgentSkillDiscovery -> `hesreallyhim/awesome-claude-code` as a discovery index only.
 - OfficialSkillReference -> `anthropics/skills` as an official Anthropic implementation/example source; the open Agent Skills specification remains the canonical format authority.
+- CodingModelRouterWatchlist -> `Alishahryar1/free-claude-code` as a provider/router/fallback architecture reference only.
 
 ## Owner mapping
 
@@ -49,6 +50,9 @@ Use as a broad discovery index for free-software network services and web applic
 
 ### awesome-claude-code
 Discovery only. The reviewed list is CC BY-NC-ND 4.0, so do not copy/adapt its curated content into Ercan OS. Follow links to the original candidate repository and audit that upstream independently.
+
+### free-claude-code
+Use only when the actual goal is coding-model/provider routing, fallback resilience or local proxy architecture. The repository is MIT, but provider integrations have independent authentication, terms, quotas, privacy and billing behavior. Review installer scripts, local listening interfaces, credential storage, proxy authentication and every selected provider's current official terms before any execution. Do not treat the README's aggregate free-token claim as a durable fact.
 
 ### anthropics/skills
 Official Anthropic examples/implementation reference. Do not treat the whole repository as uniformly open-source: the README states many skills are Apache-2.0 while document skills are source-available with different terms. Check the exact subdirectory license before reuse. Use current `agentskills.io` / canonical Agent Skills specification for format authority; use Anthropic's repo for examples and production-inspired patterns.
