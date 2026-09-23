@@ -73,6 +73,14 @@ Mailbox/user operations, application mail events, templates, transport, campaign
 
 Renderer, tile source, geocoder, routing and canonical POI database are separate concerns. Never let a convenient SDK silently become the full location architecture.
 
+### Managed agent deployment providers
+- `https://rerun.build/` — ADOPT_WHEN_NEEDED / MANAGED_AGENT_DEPLOYMENT_PROVIDER / CLOSED_SOURCE_SAAS. Use for recurring business-agent execution, isolated client/project Boxes, human approvals, broad connectors/MCP/API and operator/client live visibility.
+- Load `MANAGED_AGENT_DEPLOYMENT.md` + `managed-agent-deployment` before use.
+- Preserve Ercan OS as policy/routing/eval/completion authority.
+- Current Gmail scope is documented as sending-only; inspect exact connector capabilities before inbox workflows.
+- Current AUP prohibits bulk unsolicited email/message/call campaigns; do not use Rerun as Vinterro bulk cold-outreach transport.
+- Reverify pricing, plan limits, data-processing terms, sub-processors, self-hosted/custom infrastructure availability and marketplace/expert terms at runtime.
+
 ### Agent runtime stack
 - Load `AGENT_RUNTIME_STACK.md` + `.agents/skills/agent-runtime-stack/SKILL.md` when model serving, orchestration, tools/actions, sandbox, memory, observability/evals or voice infrastructure is materially in scope.
 - `ollama/ollama` — local/open-model runtime candidate; evaluate hardware, model capability, binding/egress and privacy rather than assuming local = private.
