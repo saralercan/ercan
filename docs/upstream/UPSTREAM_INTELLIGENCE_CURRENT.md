@@ -16,6 +16,15 @@ Purpose: make the newest reviewed upstream findings immediately visible to GPT/E
 - Stars/list inclusion remain weak discovery signals, not trust, licensing or production-readiness evidence.
 - Stable routing identity count remains 52; no catalog was bulk-installed.
 
+## Managed Agent Deployment — Rerun — 2026-09-24
+- `https://rerun.build/` — **ADOPT_WHEN_NEEDED / MANAGED_AGENT_DEPLOYMENT_PROVIDER / CLOSED_SOURCE_SAAS** for recurring business-agent execution, isolated Boxes, approvals, connectors/MCP/API, client/team handoff and live run visibility.
+- Rerun remains beneath Ercan OS governance: project rules, stable routing, approval policy, evals and completion authority stay in Ercan OS.
+- Current Privacy Policy/DPA state Cloud Mode customer content is processed by Reunit SA as processor, core infrastructure is EU-hosted, one dedicated VM per Box is described, connected-service secrets are not stored in Rerun's database, and self-hosted mode exists for customer infrastructure. Treat these as provider/contract statements and reverify current terms/subprocessors before client production use.
+- Current Privacy Policy states Gmail access is **sending only**; do not assume mailbox read/search/list capability.
+- Current AUP prohibits bulk unsolicited email/message/call campaigns; do not route Vinterro bulk cold outreach through Rerun.
+- Current public pricing starts from $24/month and current Expert Program/marketplace terms advertise template/revenue-share opportunities, but all commercial quantities/terms are volatile and must be checked before proposal/purchase.
+- Stable routing identity count remains 52; no SaaS account, connector credential or dependency was added by this integration.
+
 ## Agent Runtime Stack — 2026-09-24
 - Load `.agents/skills/agent-runtime-stack/SKILL.md` + `docs/standards/AGENT_RUNTIME_STACK.md` when selecting/composing model runtime, orchestration, coding harness, tools/actions, sandbox, memory, observability/evals or voice infrastructure.
 - `ollama/ollama` — **ADOPT_WHEN_NEEDED / MIT** for local/open-model runtime; local does not by itself prove privacy or capability fit.
