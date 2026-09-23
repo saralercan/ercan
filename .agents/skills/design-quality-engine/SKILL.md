@@ -5,7 +5,7 @@ description: Build and review high-quality product interfaces using distinctive 
 
 # Design Quality Engine
 
-This JIT capability strengthens the existing Ercan OS web/design pod without creating new stable routing identities.
+This JIT capability strengthens the existing Ercan OS web/design pod without creating new stable routing identities. For deeper UX research, information architecture, interaction-design or formal accessibility-evaluation work, also load `.agents/skills/digital-specialist-agent-pack/SKILL.md` + `docs/standards/DIGITAL_SPECIALIST_AGENTS.md`.
 
 ## Stable-owner mapping
 
