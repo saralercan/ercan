@@ -121,7 +121,7 @@ Use `DIGITAL_EXPERIENCE_SPECIALISTS.md` + `digital-experience-specialists` when 
 Examples:
 - visual UI quality -> `@UISpecialist`
 - research/usability/IA -> `@UXResearchSpecialist`
-- tokens/components/themes -> `@DesignSystemSpecialist`
+- tokens/components/themes -> `@DesignTokensSpecialist`
 - WCAG/assistive-tech -> `@AccessibilitySpecialist`
 - technical/on-page/search -> `@SEOSpecialist`
 - AI/answer-engine/agent discoverability -> `@AEOAgentDiscoverySpecialist`
