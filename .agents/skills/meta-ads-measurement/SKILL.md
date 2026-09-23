@@ -16,6 +16,20 @@ Load `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`, project brand/ads const
 - `facebookexperimental/Robyn` for statistically justified MMM work;
 - `facebookincubator/GeoLift` for appropriate geo-experiment/incrementality work.
 
+## 2026 specialist reaffirmation
+The existing five-agent split remains correct and should not be collapsed or duplicated:
+- `@MetaAdsEngineer` = campaign/API execution;
+- `@MetaMeasurement` = Pixel/CAPI/server-event integrity;
+- `@AdsCreativeStrategist` = creative-test hypothesis/design;
+- `@MarketingScience` = MMM/channel-effect modeling;
+- `@IncrementalityAnalyst` = causal lift/geo/holdout experimentation.
+
+Reviewed current open-source Meta Marketing Science references:
+- `facebookexperimental/Robyn` — MIT; R is the mature reference path, while current upstream describes the Python implementation as beta/LLM-translated.
+- `facebookincubator/GeoLift` — MIT; end-to-end geo-experiment design, power/market selection and inference.
+
+Load `digital-specialist-agent-pack` when Meta work also requires graphic, UX, SEO or security specialists. Never create another generic "Meta agent" that blurs these responsibilities.
+
 ## Competitor creative intelligence
 For Meta Ad Library competitor research, recurring competitor creative monitoring, swipe/evidence files or competitor-derived original creative briefs, also load `.agents/skills/competitor-creative-intelligence/SKILL.md` + `docs/standards/COMPETITOR_CREATIVE_INTELLIGENCE.md`. Public ad longevity/variants are observational signals, never proof of profitability; competitor expression must be transformed into original brand-owned work.
 
