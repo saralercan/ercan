@@ -16,6 +16,9 @@ Load `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`, `AI_DISCOVERY_SEO.md`, 
 ## Authority
 Current Google Search Central, Bing/IndexNow, Schema.org, OpenAI/Perplexity publisher/crawler documentation and official CMS/commerce platform docs outrank community scores and heuristics.
 
+## Recurring diagnostics
+For weekly SEO health monitoring, DataForSEO-backed diagnostics, ranking/backlink/AI-visibility deltas or Rerun scheduled reports, also load `.agents/skills/weekly-seo-diagnostic/SKILL.md` + `docs/standards/WEEKLY_SEO_DIAGNOSTIC.md`. Keep first-party Search Console/Bing/analytics evidence distinct from external provider estimates and track provider freshness/cost.
+
 ## Procedure
 1. Establish indexability/canonical/robots/sitemap baseline before content-level optimization.
 2. Crawl representative or whole-site surfaces as appropriate; preserve URL/entity/product relationships.
