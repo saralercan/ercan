@@ -16,6 +16,20 @@ Purpose: make the newest reviewed upstream findings immediately visible to GPT/E
 - Stars/list inclusion remain weak discovery signals, not trust, licensing or production-readiness evidence.
 - Stable routing identity count remains 52; no catalog was bulk-installed.
 
+## Website Lifecycle Agents — 2026-09-24
+- Load `.agents/skills/website-lifecycle-agent-pack/SKILL.md` + `docs/standards/WEBSITE_LIFECYCLE_AGENTS.md` for material website redesign/update/modernization/migration/release work.
+- Six JIT aliases were added without changing stable identities: `@WebsiteRefreshArchitect`, `@LiveUIContextAgent`, `@ModernWebRefactorAgent`, `@RuntimeInspectorAgent`, `@MigrationGuardian`, `@ReleaseGuardian`.
+- `GoogleChrome/modern-web-guidance` — **ADOPT_WHEN_NEEDED / OFFICIAL_GUIDANCE / Apache-2.0 / preview** for current HTML/CSS/client-JS patterns, Web Platform Baseline-aware modernization, performance/accessibility and native platform features.
+- `ChromeDevTools/chrome-devtools-mcp` — **ADOPT_WHEN_NEEDED / RUNTIME_INSPECTION / Apache-2.0** for live browser console/network/screenshot/performance/runtime diagnosis. Use dedicated/scoped browser sessions because agent clients can inspect/modify browser-visible data.
+- `aidenybai/react-grab` — **ADOPT_WHEN_NEEDED / LIVE_UI_CONTEXT / MIT** for React rendered-element -> component/file/line context.
+- `SandeepBaskaran/design-mode` — **ADOPT_WHEN_NEEDED / LIVE_UI_FEEDBACK / MIT** for browser visual editing/annotations and local/self-hosted/cloud MCP handoff; cloud relay is a privacy boundary.
+- `onlook-dev/onlook` — existing **ADOPT_PATTERN_ONLY** visual/code editing reference reused; no duplicate dependency.
+- `stagewise-io/stagewise` — **ADOPT_PATTERN_ONLY / AGPLv3** for browser-context/agentic IDE workflow ideas; exact distribution/deployment needs license review.
+- Playwright official Test Agents — **ADOPT / OFFICIAL_WEB_TEST_AGENT_PATTERN**: planner -> generator -> healer, with Ercan OS acceptance behavior remaining authoritative.
+- Google Search Central site-move guidance — **AUTHORITATIVE_MIGRATION_REFERENCE** for old->new URL mapping, permanent redirects, canonicals/hreflang/internal links/sitemaps and post-move monitoring.
+- W3C WCAG 2.2 remains the stable conformance reference; WCAG-EM 2.0 is the current evaluation methodology note. WCAG 3 is still a Working Draft.
+- Stable routing identity count remains 52.
+
 ## Hardware Design Engine / heypcb — 2026-09-24
 - Load `.agents/skills/hardware-design-engine/SKILL.md` + `docs/standards/HARDWARE_DESIGN_ENGINE.md` for PCB/electronics/KiCad/schematic/layout/routing/ERC/DRC/DFM/fabrication tasks.
 - `heypcb.ai` — **ADOPT_WHEN_NEEDED / AI_PCB_DESIGN_PROVIDER / CLOSED_SOURCE_SAAS** for natural-language KiCad-native design acceleration, design/fab checks and portable fabrication/CAD outputs. Current Terms explicitly place final engineering/test/validation responsibility on the user.
@@ -164,6 +178,8 @@ For any task that invokes upstream intelligence:
 Current index entries override older catalog/ledger entries only when the same upstream is explicitly marked as a status change or superseded here.
 
 ## Evidence scans currently incorporated
+
+- `docs/upstream/scans/2026-09-24-website-design-update-agents.md`
 
 - `docs/upstream/scans/2026-09-24-heypcb-circuit-world.md`
 

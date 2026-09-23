@@ -73,6 +73,18 @@ Mailbox/user operations, application mail events, templates, transport, campaign
 
 Renderer, tile source, geocoder, routing and canonical POI database are separate concerns. Never let a convenient SDK silently become the full location architecture.
 
+### Website lifecycle / live UI / runtime agents
+- `GoogleChrome/modern-web-guidance` — ADOPT_WHEN_NEEDED / OFFICIAL_GUIDANCE / Apache-2.0 / preview. Use to query current modern HTML/CSS/client-JS patterns and Web Platform Baseline-aware fallbacks before implementing/modernizing frontend features.
+- `ChromeDevTools/chrome-devtools-mcp` — ADOPT_WHEN_NEEDED / RUNTIME_INSPECTION / Apache-2.0. Use for live Chrome console/network/screenshot/performance/runtime evidence; prefer dedicated/scoped browser sessions and workspace-limited filesystem access.
+- `aidenybai/react-grab` — ADOPT_WHEN_NEEDED / LIVE_UI_CONTEXT / MIT. Use only in compatible React/dev contexts to resolve rendered elements to component/file/line source context.
+- `SandeepBaskaran/design-mode` — ADOPT_WHEN_NEEDED / LIVE_UI_FEEDBACK / MIT. Visual browser edits/annotations become source change packets; cloud relay is a privacy/data-egress decision.
+- `onlook-dev/onlook` — existing ADOPT_PATTERN_ONLY visual editor reference.
+- `stagewise-io/stagewise` — ADOPT_PATTERN_ONLY / AGPLv3; browser-context editing ideas only unless the exact use/distribution is license-compatible.
+- Playwright Test Agents — ADOPT / official planner/generator/healer pattern; healed tests never redefine expected product behavior.
+- Google Search Central site moves — authoritative migration source for URL maps, redirects, canonicals, hreflang/internal links/sitemaps and monitoring.
+- W3C WCAG 2.2 + WCAG-EM 2.0 — accessibility conformance/evaluation authority for current production work.
+- Route through `WEBSITE_LIFECYCLE_AGENTS.md` + `website-lifecycle-agent-pack`.
+
 ### Hardware / PCB / KiCad
 - `heypcb.ai` — ADOPT_WHEN_NEEDED / AI_PCB_DESIGN_PROVIDER / CLOSED_SOURCE_SAAS. Treat as design acceleration only; current provider Terms require user engineering review/test/validation and current Privacy Policy requires project-data/cloud-processing review.
 - heypcb Circuit World — HARDWARE_REFERENCE_DISCOVERY. Inspect each board's stated licence/source and re-run all engineering verification after forks/adaptation.

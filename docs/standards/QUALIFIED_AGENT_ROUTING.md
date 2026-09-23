@@ -103,6 +103,17 @@ A simple deterministic task may need only one competent implementation specialis
 
 The roster is task-specific, not project-static. The same project may use different pods for different requests.
 
+### Website lifecycle / redesign / update
+Use `WEBSITE_LIFECYCLE_AGENTS.md` + `website-lifecycle-agent-pack`.
+
+Default routing by change class:
+- small visual/content patch -> `@LiveUIContextAgent` as needed -> implementation/platform owner -> `@ReleaseGuardian`;
+- refresh/redesign -> `@WebsiteRefreshArchitect -> @LiveUIContextAgent/@FrontendSystem -> @RuntimeInspectorAgent -> @ReleaseGuardian`;
+- legacy frontend modernization -> `@WebsiteRefreshArchitect -> @ModernWebRefactorAgent -> @RuntimeInspectorAgent -> @ReleaseGuardian`;
+- CMS/framework/domain/URL migration -> `@WebsiteRefreshArchitect -> @MigrationGuardian -> active platform specialist -> @ReleaseGuardian`.
+
+Do not select all six aliases by default. Add only the roles with material contribution. Platform-native specialists remain implementation owners for WordPress/Shopify/Wix. Major domain/CMS/IA/design changes should be phased when that materially reduces migration risk.
+
 ### Reference-led web/UI
 `@Orchestrator → optional @UpstreamIntelligence if a tooling gap exists → @WebArchitecture when architecture changes are material → @ScreenshotToCode → @RealAsset → implementation/platform specialist → @FrontendSystem when shared UI/component architecture is touched → browser render → @PixelMatch → @UXEnhancement when justified → @AccessibilityQA/@WebPerformance as risk requires → @BrowserQA/@ProductionQA`
 

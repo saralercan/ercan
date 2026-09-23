@@ -165,6 +165,20 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - Rule: catalog/list membership and star count are discovery signals only, never trust/permission/license/quality proof.
 - Evidence: `docs/upstream/scans/2026-09-24-discovery-source-expansion.md`.
 
+## Website Lifecycle Agents — 2026-09-24
+- Architecture: `ADOPT / NO COUNT CHANGE` → one JIT `website-lifecycle-agent-pack` with six user-facing routing aliases mapped to existing stable web/SEO/platform specialists.
+- `GoogleChrome/modern-web-guidance`: `ADOPT_WHEN_NEEDED / OFFICIAL_GUIDANCE / Apache-2.0 / preview` → current web-platform modernization; actual browser/accessibility testing still required.
+- `ChromeDevTools/chrome-devtools-mcp`: `ADOPT_WHEN_NEEDED / RUNTIME_INSPECTION / Apache-2.0` → live runtime/network/console/performance evidence; dedicated/scoped sessions.
+- `aidenybai/react-grab`: `ADOPT_WHEN_NEEDED / LIVE_UI_CONTEXT / MIT` → React element-to-source context.
+- `SandeepBaskaran/design-mode`: `ADOPT_WHEN_NEEDED / LIVE_UI_FEEDBACK / MIT` → browser visual changes/annotations with MCP handoff; cloud/local/self-hosted privacy reviewed per project.
+- `onlook-dev/onlook`: existing `ADOPT_PATTERN_ONLY` reaffirmed.
+- `stagewise-io/stagewise`: `ADOPT_PATTERN_ONLY / AGPLv3` → browser/IDE agent workflow patterns; no incompatible code reuse.
+- Playwright planner/generator/healer: `ADOPT / OFFICIAL_WEB_TEST_AGENT_PATTERN`.
+- Google Search Central site moves: `AUTHORITATIVE_MIGRATION_REFERENCE`.
+- W3C WCAG 2.2 + WCAG-EM 2.0: accessibility conformance/evaluation authority; WCAG 3 remains draft.
+- Evidence: `docs/upstream/scans/2026-09-24-website-design-update-agents.md`.
+- Stable identities remain 52.
+
 ## Hardware Design Engine / heypcb — 2026-09-24
 - Architecture: `ADOPT / NO COUNT CHANGE` → one JIT `hardware-design-engine` capability; stable routing identities remain **52**.
 - `heypcb.ai`: `ADOPT_WHEN_NEEDED / AI_PCB_DESIGN_PROVIDER / CLOSED_SOURCE_SAAS` → KiCad-native AI design acceleration; explicit cloud/IP/privacy and independent engineering-review boundaries.
