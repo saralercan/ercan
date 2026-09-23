@@ -24,7 +24,7 @@ Ercan OS remains the source of:
 
 Rerun may be used as:
 - a managed execution surface for recurring business agents;
-- an isolated client/project Box;
+- a client/project Box for organization inside a workspace;
 - a connector/MCP/API access layer;
 - a human-approval surface for risky actions;
 - a live run/visibility surface for non-technical operators;
@@ -38,7 +38,7 @@ Use Rerun when the task benefits from:
 - always-on scheduled or event-triggered business agents;
 - operator-friendly deployment without terminal maintenance;
 - client/team access to run status and approvals;
-- isolated per-client/project execution environments;
+- managed per-workspace execution environments, with Boxes used for organization rather than tenant isolation;
 - managed integrations across SaaS tools;
 - bringing an existing model subscription/API/local model into a managed business-ops runtime;
 - packaging repeatable client agents/templates.
@@ -88,16 +88,22 @@ Requires human approval before execution, including when material:
 
 Use the platform's approval feature as an execution gate, but preserve the Ercan OS approval rule as the policy source.
 
-## Boxes / isolation
+## Workspaces / Boxes / isolation
 
-Treat one Rerun Box as an execution environment, not as proof of complete security.
+Current Rerun technical docs define **workspace** as the real machine/account boundary:
+- one private cloud machine per workspace;
+- all agents in that workspace share that machine;
+- Boxes group agents by team/client/project;
+- Boxes are not an isolation wall and share the workspace machine/folder/shared database.
 
-For client/project isolation:
-- use separate Boxes when credentials/data/projects should not share a machine;
-- scope files and connectors to the minimum required;
-- avoid placing unrelated client data in the same Box;
-- define retention/deletion/export behavior before handoff;
-- verify backup/export/termination behavior if business-critical state lives there.
+Therefore:
+- use separate workspaces, not merely separate Boxes, when client credentials/data/confidentiality require tenant isolation;
+- treat a Box as organization only;
+- never place unrelated client secrets in one workspace just because they sit in different Boxes;
+- scope files/connectors to the minimum required;
+- define retention/deletion/export behavior before handoff.
+
+Current DPA language still says one dedicated VM per Box, which conflicts with current technical docs. Mark this `PROVIDER_STATE_CONFLICT` and get provider clarification if contractual isolation matters.
 
 ## Connectors and credentials
 
@@ -135,7 +141,8 @@ Therefore:
 Rerun currently states:
 - Cloud Mode customer content is processed by Reunit SA as processor under its DPA;
 - core infrastructure is EU-hosted;
-- a dedicated virtual machine is used per Box in cloud mode;
+- current technical docs describe one private cloud machine per workspace, with Boxes sharing that machine;
+- current DPA Annex II still describes one dedicated VM per Box, creating a `PROVIDER_STATE_CONFLICT`;
 - connected-service secrets are not stored in Rerun's database;
 - self-hosted mode is described for customer infrastructure, with Enterprise/custom infrastructure references.
 
@@ -158,6 +165,9 @@ Treat current revenue-share, marketplace, pricing and expert benefits as volatil
 - margin/pricing commitments.
 
 Rerun is a potential deployment and distribution channel for Vinterro Digital, not an assumed revenue source.
+
+## API bridge
+When Ercan OS needs to create/update/sync Rerun agents, skills, schedules, triggers, runs, databases, connectors, share links or templates, load `.agents/skills/rerun-api-bridge/SKILL.md` + `docs/standards/RERUN_API_BRIDGE.md`. Read runtime state before writes and keep Ercan OS policy/evals authoritative.
 
 ## Completion / verification
 
