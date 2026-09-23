@@ -142,6 +142,14 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - listmonk: `ADOPT_WHEN_NEEDED` for self-hosted newsletter/list management after AGPL/operations review.
 - Postal/Stalwart/mailcow-class self-hosted mail infrastructure: `WATCHLIST/EXPLICIT INFRA DECISION`; never default merely to send contact-form mail.
 
+## Developer resource discovery — 2026-09-24
+- `ripienaar/free-for-dev`: `DISCOVERY_SOURCE` → free-tier service candidate discovery only; current provider terms must be verified. No root LICENSE observed in review, so no substantial catalog copying.
+- `public-apis/public-apis`: `DISCOVERY_SOURCE` → API candidate discovery; MIT list, but each API has independent terms, auth, quota, maintenance and data-license requirements.
+- `awesome-selfhosted/awesome-selfhosted`: existing `DISCOVERY_SOURCE` reaffirmed → self-hosted alternatives; list CC BY-SA 3.0, project-level licensing/ops/security reviewed separately.
+- `hesreallyhim/awesome-claude-code`: `DISCOVERY_SOURCE_ONLY` → follow original upstream links; list CC BY-NC-ND 4.0 prevents derivative catalog reuse.
+- `anthropics/skills`: `ADOPT_WHEN_NEEDED / OFFICIAL_REFERENCE` → official skill implementation/example source with mixed licensing; exact skill license must be checked. Does not supersede the canonical Agent Skills specification.
+- Architecture decision: one JIT `developer-resource-discovery` capability under `@UpstreamIntelligence`; no new stable agent identities and no bulk installation.
+
 ## Rejection / non-adoption rules
 - Archived/deprecated repo with maintained successor → `SUPERSEDED`, not new production dependency.
 - High stars without provenance/maintenance/license fit → no adoption.
