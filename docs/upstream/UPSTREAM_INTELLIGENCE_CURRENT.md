@@ -16,6 +16,14 @@ Purpose: make the newest reviewed upstream findings immediately visible to GPT/E
 - Stars/list inclusion remain weak discovery signals, not trust, licensing or production-readiness evidence.
 - Stable routing identity count remains 52; no catalog was bulk-installed.
 
+## Competitor Creative Intelligence — 2026-09-24
+- Load `.agents/skills/competitor-creative-intelligence/SKILL.md` + `docs/standards/COMPETITOR_CREATIVE_INTELLIGENCE.md` for Meta Ad Library competitor research, recurring creative monitoring, swipe/evidence files and competitor-derived original creative briefs.
+- Meta Ad Library remains the primary public evidence source. Public delivery duration, repeated variants or collation counts are persistence signals, not proof of profitability/ROAS/conversions.
+- Rerun template `recreate-competitor-ads-meta` is treated as a managed-workflow reference; exact page body was not retrievable in this review, so no unseen implementation detail is adopted.
+- `novoads/agent-skills:spy-competitor-ads` — **ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT** for optional collection mechanics such as durable Ad Library provenance, brand/page disambiguation, expiring-media handling and pre-spend cost confirmation.
+- Competitor creative expression is never copied into final brand work; Ercan OS transforms observable patterns into original hooks/angles/briefs and preserves brand/IP/policy QA.
+- Stable routing identity count remains 52.
+
 ## Managed Agent Deployment — Rerun — 2026-09-24
 - `https://rerun.build/` — **ADOPT_WHEN_NEEDED / MANAGED_AGENT_DEPLOYMENT_PROVIDER / CLOSED_SOURCE_SAAS** for recurring business-agent execution, isolated Boxes, approvals, connectors/MCP/API, client/team handoff and live run visibility.
 - Rerun remains beneath Ercan OS governance: project rules, stable routing, approval policy, evals and completion authority stay in Ercan OS.
@@ -121,6 +129,8 @@ For any task that invokes upstream intelligence:
 Current index entries override older catalog/ledger entries only when the same upstream is explicitly marked as a status change or superseded here.
 
 ## Evidence scans currently incorporated
+
+- `docs/upstream/scans/2026-09-24-rerun-competitor-meta-ads.md`
 
 - `docs/upstream/scans/2026-09-24-rerun-build.md`
 
