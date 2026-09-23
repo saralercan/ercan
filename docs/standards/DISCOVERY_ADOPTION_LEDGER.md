@@ -165,6 +165,18 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - Rule: catalog/list membership and star count are discovery signals only, never trust/permission/license/quality proof.
 - Evidence: `docs/upstream/scans/2026-09-24-discovery-source-expansion.md`.
 
+## Digital Specialist Agent Pack — 2026-09-24
+- Architecture: `ADOPT / NO COUNT CHANGE` → one JIT `digital-specialist-agent-pack`; stable identities remain 52.
+- UI/UX: `hueyexe/frontend-agent-skills` MIT -> `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED`; W3C WCAG 2.2/WCAG-EM 2.0 authority.
+- SEO: Google Search Central/Search Console -> `PRIMARY_SEARCH_AUTHORITY`; `marketingskills/seo` MIT -> `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED`.
+- Meta: retain existing five stable specialist identities; Robyn/GeoLift remain reviewed Meta Marketing Science engines where statistically appropriate.
+- Graphic: Anthropic `canvas-design`/`theme-factory` Apache-2.0 + `ArnavPuri/designskills` MIT -> pattern/optional production references; brand authority and independent preflight required.
+- Security: OWASP ASVS 5.0.0 primary requirements; WSTG 4.2 stable testing guide; ZAP Apache-2.0 authorized DAST; Semgrep/Trivy detector engines; Trail of Bits Skills CC BY-SA pattern/optional audit methodology.
+- `OWASP/secure-agent-playbook`: pattern-only pending root licensing clarity.
+- `UnitOneAI/SecuritySkills`: WATCHLIST because current skill descriptions include older ASVS references; not current authority.
+- Security testing authorization is mandatory.
+- Evidence: `docs/upstream/scans/2026-09-24-digital-specialist-agents.md`.
+
 ## Website Lifecycle Agents — 2026-09-24
 - Architecture: `ADOPT / NO COUNT CHANGE` → one JIT `website-lifecycle-agent-pack` with six user-facing routing aliases mapped to existing stable web/SEO/platform specialists.
 - `GoogleChrome/modern-web-guidance`: `ADOPT_WHEN_NEEDED / OFFICIAL_GUIDANCE / Apache-2.0 / preview` → current web-platform modernization; actual browser/accessibility testing still required.
