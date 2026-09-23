@@ -40,6 +40,23 @@ Meta uses the existing stable specialist pod and is intentionally not duplicated
 
 Load `.agents/skills/digital-specialist-agent-pack/SKILL.md` + `docs/standards/DIGITAL_SPECIALIST_AGENTS.md`.
 
+## Digital experience specialist JIT aliases
+These user-facing roles are JIT aliases mapped onto existing stable specialists; they **do not** increase the stable routing identity count:
+- `@UISpecialist` -> `@FrontendSystem + @BrandSystemArchitect + @BrowserQA`
+- `@UXResearchSpecialist` -> `@WebArchitecture + @FrontendSystem` with research/analytics evidence
+- `@DesignSystemSpecialist` -> `@DesignTokenArchitect + @FrontendSystem + @ComponentWorkshopQA`
+- `@AccessibilitySpecialist` -> `@AccessibilityQA`
+- `@SEOSpecialist` -> `@TechnicalSEO + @SEOScanner + platform SEO specialist`
+- `@AEOAgentDiscoverySpecialist` -> `@AEO_GEO + @TechnicalSEO`
+- `@MetaCreativeSpecialist` -> `@AdsCreativeStrategist + @BrandSystemArchitect`
+- `@MetaMeasurementSpecialist` -> `@MetaMeasurement + @MetaAdsEngineer`
+- `@GraphicDesignSpecialist` -> `@BrandSystemArchitect + Graphic Designer + @BrandComplianceQA`
+- `@CROSpecialist` -> `@UXEnhancement + @MarketingScience + analytics owner`
+- `@AnalyticsInstrumentationSpecialist` -> analytics/measurement owner + platform specialist
+- `@PrivacySecuritySpecialist` -> security reviewer + platform specialist + independent QA
+
+Load `.agents/skills/digital-experience-specialists/SKILL.md` + `docs/standards/DIGITAL_EXPERIENCE_SPECIALISTS.md`.
+
 ## Website lifecycle JIT aliases
 These user-facing roles are JIT routing aliases mapped onto existing stable specialists; they **do not** increase the stable routing identity count:
 - `@WebsiteRefreshArchitect` -> `@WebArchitecture + @FrontendSystem`
