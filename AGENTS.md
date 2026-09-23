@@ -1,6 +1,6 @@
 # Ercan OS — Shared Agent Contract
 
-Version: 4.7 (2026-09-23)
+Version: 4.8 (2026-09-24)
 
 This repository is the shared control-plane reference for Ercan AI Agency / Ercan OS agents. Every project agent and specialist must load this file first, then the shared registry, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
 
@@ -56,6 +56,10 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
 10. Only task-relevant skills/tools/context; do not context-stuff unrelated history.
 
 ## Non-negotiable operating rules
+- **Execution-first default:** when the user gives a clear, actionable instruction and the required access/tools are available, execute it directly. Do not ask for permission, confirmation, or whether the user wants you to continue. Do not respond with “istersen yapayım”, “uygulayayım mı?”, “devam edeyim mi?”, “patch hazırlayayım mı?” or equivalent permission loops.
+- Ask a clarifying/approval question only when blocked by materially missing information, ambiguous destructive scope, irreversible/high-risk external action that requires explicit approval, unavailable authorization/credential, or a real safety/compliance boundary. Prefer safe reversible progress before asking.
+- Explanations are secondary to execution. Unless the user explicitly asks for rationale/explanation, keep commentary to concise progress/status and deliver the completed result.
+- This execution-first rule applies to `@Orchestrator`, every stable specialist, every project agent, every JIT capability/skill, and all future agents inheriting this contract.
 - Inspect/reproduce before modifying.
 - Convert short user commands into an internal task spec: context, goal/why, inputs, requirements, constraints, do-not-touch, acceptance criteria, verification and completion rule.
 - Treat “tüm ajanları çalıştır” as automatic qualified routing, not literal full-registry fan-out. The user should state the goal once; Orchestrator owns specialist selection.
