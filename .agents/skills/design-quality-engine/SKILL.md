@@ -11,6 +11,7 @@ This JIT capability strengthens the existing Ercan OS web/design pod without cre
 
 - visual direction / distinctive frontend design -> `@FrontendSystem + @BrandSystemArchitect`
 - component composition / shadcn -> `@FrontendSystem`
+- generative UI presentation/review -> `@FrontendSystem + @AccessibilityQA + @BrowserQA`
 - accessibility -> `@AccessibilityQA`
 - responsive/adaptive UI -> `@FrontendSystem + @BrowserQA`
 - motion / interaction -> `@FrontendSystem + @WebPerformance + @AccessibilityQA`
@@ -86,6 +87,10 @@ Key rules:
 - motion is interruptible where the interaction can be interrupted;
 - state changes remain legible with reduced motion;
 - gestures are verified, not inferred from screenshots.
+
+## Generative UI handoff
+
+When a project uses `vercel-labs/json-render`, the Web Builder pack owns the schema/catalog/action boundary. Design Quality reviews the generated surfaces against the same brand, interaction, accessibility, responsive and rendered-evidence standards as hand-authored UI. Do not treat schema-valid output as visually or behaviorally verified.
 
 ## Operating flow
 
