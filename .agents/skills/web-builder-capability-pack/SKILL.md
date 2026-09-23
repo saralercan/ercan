@@ -27,6 +27,7 @@ This pack expands the existing web-production pod without changing the stable ro
 - MediaOptimizer -> `@WebPerformance + @FrontendSystem`; deterministic Sharp/SVGO-class transformations, responsive image output and asset-integrity checks.
 - PWAEngineer -> `@WebArchitecture + @FrontendSystem + @WebPerformance + @BrowserQA`; service worker/cache/offline/installability are enabled only when product requirements justify them.
 - WebSecurity -> existing security-review capability + platform expert + independent QA; use Trivy/Semgrep-class scanning JIT and never equate a clean scan with a security certification.
+- DigitalSecuritySpecialists -> load `.agents/skills/digital-specialist-agent-pack/SKILL.md` for ASVS threat modeling, secure code review, authorized WSTG/ZAP testing, supply-chain/agentic-CI review and security release gating.
 - FrontendHealth -> `@FrontendSystem`; Biome/Stylelint/HTML-Validate-class linting is selected to match the inspected stack.
 - ContentSiteBuilder -> `@WebArchitecture + @FrontendSystem`; Astro is a JIT option for content/editorial/marketing sites, not a global default.
 - WebsiteLifecycleAgents -> load `.agents/skills/website-lifecycle-agent-pack/SKILL.md` for redesign/update planning, live UI-to-source context, modern web refactors, runtime diagnosis, migration protection and release guarding.
