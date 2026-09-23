@@ -68,6 +68,24 @@ Mailbox/user operations, application mail events, templates, transport, campaign
 
 Renderer, tile source, geocoder, routing and canonical POI database are separate concerns. Never let a convenient SDK silently become the full location architecture.
 
+### Agent runtime stack
+- Load `AGENT_RUNTIME_STACK.md` + `.agents/skills/agent-runtime-stack/SKILL.md` when model serving, orchestration, tools/actions, sandbox, memory, observability/evals or voice infrastructure is materially in scope.
+- `ollama/ollama` — local/open-model runtime candidate; evaluate hardware, model capability, binding/egress and privacy rather than assuming local = private.
+- `microsoft/agent-framework` — preferred current Microsoft production agent/workflow framework for new work. `microsoft/autogen` is maintenance-mode/superseded for new systems.
+- `openinterpreter/openinterpreter`, `Aider-AI/aider` — coding-harness references; preserve sandbox, repo scope, Git/rollback and independent test/review gates.
+- `langchain-ai/langchain`, `crewAIInc/crewAI`, `stanfordnlp/dspy`, `camel-ai/camel`, `FoundationAgents/MetaGPT` — select JIT according to actual architecture; never stack frameworks without material need.
+- `Significant-Gravitas/AutoGPT` — mixed-license watchlist/pattern source; `autogpt_platform` is PolyForm Shield, so exact-path license review is mandatory.
+- `FlowiseAI/Flowise` — historical/superseded for new work because reviewed canonical repo is archived.
+- `continuedev/continue` — historical/superseded because reviewed repo is read-only/no longer actively maintained.
+- `vercel/ai` — AI application SDK for compatible JS/TS stacks; not an orchestration constitution.
+- `e2b-dev/E2B` — isolated sandbox/computer execution when justified; sandbox permissions/network/secrets are independently scoped.
+- `ComposioHQ/composio` — authenticated third-party actions/tools; per-user sessions and least-privilege toolkit/action exposure.
+- `zylon-ai/private-gpt` + `mem0ai/mem0` — private/RAG and memory layers only when required; define egress, tenancy, provenance, retention and deletion.
+- `AgentOps-AI/agentops` — optional observability when incremental over current tracing; sensitive trace policy required.
+- `THUDM/AgentBench` — benchmark reference/engine, not the default regression suite.
+- `elevenlabs/elevenlabs-python`, `deepgram/deepgram-python-sdk` — speech/voice provider adapters; current API/model/price facts are runtime-verified and voice cloning requires rights/consent.
+- Prefer one primary maintained orchestration framework per application; sandbox, memory, observability and voice are independent optional adapters.
+
 ### JEV runtime extensions
 - `browser-use/jev-ultrafast` — structured browser action/target pattern beneath authorized browser operation.
 - `tamaratran/fast-jev-compaction` — transcript/history pruning; preserve critical text/evidence and fallback safely.

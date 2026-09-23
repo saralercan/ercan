@@ -34,8 +34,9 @@ No third-party design skill may silently replace the project's visual identity.
 | `shadcn-ui/ui:shadcn` | canonical shadcn project/component workflow | ADOPT_WHEN_NEEDED / CANONICAL |
 | `pbakaus/impeccable:adapt` | responsive/adaptive workflow | ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED |
 | `jakubkrehel/skills:better-interface` | holistic review orchestration | ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED |
+| `wshobson/agents:interaction-design` | microinteractions, feedback, motion and gesture patterns | ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED |
 
-`interaction-design` is represented as a synthesized Ercan OS lane rather than a separately promoted upstream because the supplied item did not resolve to a distinct current canonical skill. Its behavior is covered by reviewed Emil/Impeccable patterns plus existing platform/accessibility standards.
+Interaction Design now has a reviewed canonical upstream. Ercan OS still combines it with Emil/Impeccable patterns and existing platform/accessibility standards rather than treating any single community skill as universal interaction authority.
 
 ## Design implementation flow
 
