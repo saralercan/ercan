@@ -426,7 +426,7 @@ These are not automatically trusted dependencies. They are searchable upstream c
 - `ripienaar/free-for-dev` — DISCOVERY_SOURCE — developer SaaS/PaaS/IaaS free-tier candidate discovery; provider pricing/limits/production terms are volatile and must be rechecked.
 - `public-apis/public-apis` — DISCOVERY_SOURCE — public API candidate discovery with Auth/HTTPS/CORS metadata; actual API docs/terms/quota/licensing remain authoritative.
 - `hesreallyhim/awesome-claude-code` — DISCOVERY_SOURCE_ONLY — Claude Code/agent tooling catalog; restrictive CC BY-NC-ND list license means use only to locate original upstreams.
-- `Alishahryar1/free-claude-code` — WATCHLIST / ADOPT_PATTERN_ONLY — coding-agent/model-provider router, fallback and local proxy architecture; provider terms/free tiers/credential handling must be verified independently before use.
+- `Alishahryar1/free-claude-code` — ADOPT_WHEN_NEEDED / CONDITIONAL_PROVIDER_ROUTER — multi-harness coding-model/provider proxy, shared catalog and fallback architecture; mandatory loopback+auth hardening and provider-by-provider terms/privacy/quota review before runtime use.
 - `anthropics/skills` — ADOPT_WHEN_NEEDED / OFFICIAL_REFERENCE — official Anthropic Agent Skills examples/implementation patterns; exact sub-skill licensing varies, and canonical Agent Skills specification remains format authority.
 
 ## 25. Explicit superseded / caution examples discovered during research
