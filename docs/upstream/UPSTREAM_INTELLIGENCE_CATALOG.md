@@ -343,6 +343,31 @@ Decision vocabulary:
 - `jakubkrehel/skills:better-interface` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — cross-discipline evidence-led interface review.
 - `wshobson/agents:interaction-design` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — microinteraction, feedback, loading-state, motion and gesture patterns.
 
+### Agent runtime / orchestration / execution stack
+
+- `ollama/ollama` — ADOPT_WHEN_NEEDED — local/open-model serving runtime.
+- `langchain-ai/langchain` — ADOPT_WHEN_NEEDED — agent/application abstractions when they materially reduce integration complexity.
+- `openinterpreter/openinterpreter` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — coding/computer-use harness with sandbox/approval boundaries.
+- `microsoft/autogen` — SUPERSEDED_FOR_NEW_WORK — maintenance mode; use `microsoft/agent-framework` for new Microsoft-oriented systems.
+- `microsoft/agent-framework` — ADOPT_WHEN_NEEDED — production multi-agent/workflow runtime with graph/handoff/checkpoint/HITL/observability patterns.
+- `Aider-AI/aider` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — repo-map, Git-aware coding and lint/test-loop patterns.
+- `Significant-Gravitas/AutoGPT` — ADOPT_PATTERN_ONLY / WATCHLIST — mixed-license agent/workflow platform reference; exact-path license required.
+- `FoundationAgents/MetaGPT` — ADOPT_PATTERN_ONLY — SOP/role-decomposition patterns.
+- `crewAIInc/crewAI` — ADOPT_WHEN_NEEDED — crew/flow runtime when project fit is verified.
+- `stanfordnlp/dspy` — ADOPT_WHEN_NEEDED — modular LM programs and eval-driven optimization.
+- `camel-ai/camel` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — multi-agent research/simulation/data-generation.
+- `FlowiseAI/Flowise` — SUPERSEDED / HISTORICAL — reviewed canonical repository archived.
+- `continuedev/continue` — SUPERSEDED / HISTORICAL — reviewed repository read-only/no longer actively maintained.
+- `vercel/ai` — ADOPT_WHEN_NEEDED — provider-neutral AI application streaming/tool/UI SDK for compatible JS/TS stacks.
+- `e2b-dev/E2B` — ADOPT_WHEN_NEEDED — isolated cloud code/computer-use sandbox.
+- `ComposioHQ/composio` — ADOPT_WHEN_NEEDED — authenticated external tools/actions with per-user sessions.
+- `zylon-ai/private-gpt` — ADOPT_WHEN_NEEDED — private/local AI API/RAG layer over compatible inference servers.
+- `mem0ai/mem0` — ADOPT_WHEN_NEEDED — application memory layer with explicit tenancy/provenance/privacy.
+- `AgentOps-AI/agentops` — ADOPT_WHEN_NEEDED — agent observability/session replay when incremental over existing telemetry.
+- `THUDM/AgentBench` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED_FOR_BENCHMARKING — benchmark environments/methodology.
+- `elevenlabs/elevenlabs-python` — ADOPT_WHEN_NEEDED — official voice/TTS/realtime voice SDK.
+- `deepgram/deepgram-python-sdk` — ADOPT_WHEN_NEEDED — official STT/TTS/voice SDK.
+
 ### JEV runtime extension ecosystem
 
 - `browser-use/jev-ultrafast` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED — bounded structured browser operation.
