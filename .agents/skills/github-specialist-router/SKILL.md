@@ -1,6 +1,6 @@
 ---
 name: github-specialist-router
-description: Route Ercan OS work across reviewed GitHub-backed specialist pods and JIT capability packs for web, app/mobile, social media, YouTube, SEO/AEO/GEO, Meta ads/measurement, branding, presentations, learning/tutoring, platform design, execution governance and founder operations. Use when the user asks to run all agents for any of these domains, asks to add GitHub experts, or when a material task spans two or more of these domains.
+description: Route Ercan OS work across reviewed GitHub-backed specialist pods and JIT capability packs for web, app/mobile, social media, YouTube, SEO/AEO/GEO, Meta ads/measurement, branding, presentations, learning/tutoring, platform design, execution governance, founder operations and bounded judgment/decision workflows. Use when the user asks to run all agents for any of these domains, asks to add GitHub experts, or when a material task spans two or more of these domains.
 ---
 
 # GitHub Specialist Router
@@ -24,12 +24,13 @@ Treat “tüm ajanları çalıştır” as qualified routing. Select every mater
 - Platform design: load `.agents/skills/platform-design-intelligence/SKILL.md` when Web/Android/Apple platform conventions materially affect the interface. Current official platform guidance outranks community summaries.
 - Execution governance: load `.agents/skills/execution-governance/SKILL.md` for bugs, regressions, risky/cross-module edits, repeated failed fixes, fallbacks/adapters or unclear canonical ownership. Keep trivial work on the fast path.
 - Founder operations: load `.agents/skills/founder-operations/SKILL.md` for founder strategy, GTM, SOP, PRD, CRO, pricing, outreach or marketing-ops tasks; map to existing business/sales/marketing/product owners rather than creating founder-agent duplicates.
+- Judgment engine: load `.agents/skills/judgment-engine/SKILL.md` + `docs/standards/JUDGMENT_ENGINE.md` when code needs a bounded semantic Choice/Noul/Score-style decision, ranking, verification, routing or action selection. TypeSafe/Jev is an optional reviewed provider; deterministic policy/safety/permissions remain authoritative.
 
 ## Procedure
 1. Detect project, repository, platform, brand and production constraints.
 2. Decompose the task into domain capabilities rather than keywords.
 3. Select the smallest sufficient pod; add Upstream Intelligence only for a real tooling/current-source gap or explicit GitHub research.
-4. Load the matching domain skill from this expansion; for material web-builder lanes load `web-builder-capability-pack`; for reference-led WordPress reconstruction/migration load `wordpress-replica`; load `site-mirror` only for legitimate authorized/public capture work; load `presentation-agent-pack` for PowerPoint/slide/pitch/report/academic presentation work; load the relevant Adaptive Capability Pack skill only when learning, YouTube intelligence, platform design, governed execution or founder operations materially contributes.
+4. Load the matching domain skill from this expansion; for material web-builder lanes load `web-builder-capability-pack`; for reference-led WordPress reconstruction/migration load `wordpress-replica`; load `site-mirror` only for legitimate authorized/public capture work; load `presentation-agent-pack` for PowerPoint/slide/pitch/report/academic presentation work; load the relevant Adaptive Capability Pack skill only when learning, YouTube intelligence, platform design, governed execution or founder operations materially contributes; load `judgment-engine` only when a bounded semantic decision layer materially improves the workflow.
 5. Route implementation through platform experts where applicable; for presentations preserve source truth, brand rules, editable-output requirements and rendered-slide QA.
 6. Preserve authentication/approval boundaries for publishing and ads, access/network/rights boundaries for site mirroring, and license/content-rights boundaries for presentation templates/assets/upstream engines.
 7. Require independent QA for material implementation. Presentation builds must render and visually review the final deck; a successful file export is not a QA pass.
