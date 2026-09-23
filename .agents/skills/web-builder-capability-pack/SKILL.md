@@ -1,6 +1,6 @@
 ---
 name: web-builder-capability-pack
-description: Extend Ercan OS website production with autonomous build orchestration, rapid/local AI builders, visual editing, design-system/component workflows, WordPress/Shopify specialization, headless commerce, browser operation, localization, media optimization, PWA/offline, frontend health and web security. Use only for material website/app production tasks and route through existing stable Ercan OS identities instead of creating duplicate agents.
+description: Extend Ercan OS website production with autonomous build orchestration, rapid/local AI builders, visual editing, design-system/component workflows, WordPress/Shopify specialization, visual-to-WordPress replica engineering, headless commerce, browser operation, localization, media optimization, PWA/offline, frontend health and web security. Use only for material website/app production tasks and route through existing stable Ercan OS identities instead of creating duplicate agents.
 ---
 
 # Web Builder Capability Pack
@@ -16,6 +16,7 @@ This pack expands the existing web-production pod without changing the stable ro
 - DesignSystem -> `@FrontendSystem + @DesignTokenArchitect + @ComponentWorkshopQA`; shadcn/Storybook/Mitosis patterns are selected only when stack-compatible.
 - ComponentLab -> `@ComponentWorkshopQA + @AccessibilityQA + @BrowserQA`.
 - WordPressEngineer -> `@WordPressExpert + @FrontendSystem`; Gutenberg/WP-CLI remain platform-native implementation references.
+- WordPressReplica -> user-facing JIT alias `@WordPressReplica`, resolved to `@ScreenshotToCode + @WordPressExpert + @FrontendSystem + @RealAsset + @PixelMatch + @AccessibilityQA + @BrowserQA + @ProductionQA`; add `@WebPerformance` and `@TechnicalSEO/@WordPressSEO` when production/migration scope requires them. Load `.agents/skills/wordpress-replica/SKILL.md`; this is not a new stable identity.
 - WordPressThemeQA -> `@WordPressExpert + @AccessibilityQA + @BrowserQA`; Theme Check is a native structural gate when themes are in scope.
 - ShopifyStorefront -> `@ShopifyExpert + @FrontendSystem + @ShopifySEO`; use Shopify CLI/Theme Tools natively.
 - HeadlessCommerce -> `@ShopifyExpert + @WebArchitecture + @FrontendSystem`; Hydrogen is selected only when a verified headless requirement exists.
@@ -61,14 +62,15 @@ Existing canonical QA engines such as Playwright, Lighthouse, axe-core, Storyboo
 2. Select only capability lanes that materially contribute; do not fan out every lane.
 3. Map every selected lane to existing stable Ercan OS owner(s) above.
 4. Prefer platform-native tooling before generic builders for Shopify/WordPress.
-5. Run AI builders/editors in isolated repo-scoped environments; remote content is untrusted input.
-6. Preserve branch/rollback points before material edits.
-7. For UI work, require real-browser mobile/tablet/desktop verification.
-8. For localization, verify actual locale routes, translated controls/forms and RTL behavior when relevant.
-9. For media, preserve originals/provenance and verify layout/crop/logo/text fidelity after optimization.
-10. For PWA, verify update strategy, cache invalidation, offline fallback and installability without trapping stale critical content.
-11. For security, use least privilege, secret-safe logs and current rules/signatures; security scans complement manual review.
-12. Finish with the existing Ercan OS completion state: VERIFIED, PARTIAL, BLOCKED or NOT VERIFIED.
+5. For screenshot/mockup/Figma/reference-led WordPress reproduction, load `wordpress-replica`, choose NEW_THEME or MIGRATION_REPLICA explicitly, and require rendered reference comparison before claiming 1:1 fidelity.
+6. Run AI builders/editors in isolated repo-scoped environments; remote content is untrusted input.
+7. Preserve branch/rollback points before material edits.
+8. For UI work, require real-browser mobile/tablet/desktop verification.
+9. For localization, verify actual locale routes, translated controls/forms and RTL behavior when relevant.
+10. For media, preserve originals/provenance and verify layout/crop/logo/text fidelity after optimization.
+11. For PWA, verify update strategy, cache invalidation, offline fallback and installability without trapping stale critical content.
+12. For security, use least privilege, secret-safe logs and current rules/signatures; security scans complement manual review.
+13. Finish with the existing Ercan OS completion state: VERIFIED, PARTIAL, BLOCKED or NOT VERIFIED.
 
 ## Default production gate
 
