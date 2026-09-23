@@ -79,6 +79,13 @@ Renderer, tile source, geocoder, routing and canonical POI database are separate
 - Rerun competitor-ad template — managed scheduling/deployment reference only; no template behavior is assumed beyond what is directly verified.
 - Route through `COMPETITOR_CREATIVE_INTELLIGENCE.md` + `competitor-creative-intelligence`; convert competitor evidence into original brand-owned hypotheses/briefs and never represent public persistence as ROI proof.
 
+### Rerun API bridge
+- Current official Rerun docs expose a workspace-scoped MCP/API for agents, skills, schedules, triggers/webhooks, runs/messages, private/shared databases, connectors, share links and templates.
+- Load `RERUN_API_BRIDGE.md` + `rerun-api-bridge` only when Rerun is the selected managed deployment provider and programmatic sync is required.
+- Current technical docs define one private machine per workspace; Boxes are organizational and share machine/folder/shared database. Do not use Boxes as tenant/security isolation.
+- Current DPA still says dedicated VM per Box and Privacy Policy Gmail scope conflicts with homepage inbox examples. Mark these `PROVIDER_STATE_CONFLICT` and verify target behavior/contract before production.
+- Read live pricing/docs at decision time; do not reuse stale package numbers from comparison/index pages.
+
 ### Managed agent deployment providers
 - `https://rerun.build/` — ADOPT_WHEN_NEEDED / MANAGED_AGENT_DEPLOYMENT_PROVIDER / CLOSED_SOURCE_SAAS. Use for recurring business-agent execution, isolated client/project Boxes, human approvals, broad connectors/MCP/API and operator/client live visibility.
 - Load `MANAGED_AGENT_DEPLOYMENT.md` + `managed-agent-deployment` before use.
