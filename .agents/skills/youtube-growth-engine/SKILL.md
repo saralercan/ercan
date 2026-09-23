@@ -13,7 +13,7 @@ This is a capability lane, not a new stable `@` identity. It turns one-off YouTu
 - NicheValidation -> `@SocialStrategy + @SocialAnalytics + @AEO_GEO`
 - ChannelIdentity -> `@BrandSystemArchitect + @BrandBehavior + @BrandComplianceQA`
 - ContentArchitecture -> `@SocialStrategy + @ContentRecycling`
-- ResearchAndEvidence -> `@SocialStrategy + @AEO_GEO`; use primary/current sources for factual claims.
+- ResearchAndEvidence -> `@SocialStrategy + @AEO_GEO`; use primary/current sources for factual claims. Optionally load `youtube-intelligence-provider` for transcript/search/channel/playlist evidence.
 - ScriptSystem -> bounded Copywriter/Content Strategist role under `@SocialStrategy`
 - Packaging -> `@SocialStrategy + @BrandComplianceQA`; use creative production tools only when actually available.
 - YouTubeDiscovery -> `@TechnicalSEO + @AEO_GEO + @SocialStrategy`; treat YouTube search/recommendation behavior as current runtime facts, not fixed formulas.
@@ -22,6 +22,10 @@ This is a capability lane, not a new stable `@` identity. It turns one-off YouTu
 - Repurposing -> `@ContentRecycling + @SocialStrategy`
 - Monetization -> `@SocialStrategy + @SocialAnalytics`; separate ads, sponsorship, affiliate, product/service, membership and lead-gen economics.
 - IndependentQA -> `@BrandComplianceQA + @SocialAnalytics` plus task-relevant factual/policy review.
+
+## Optional YouTube intelligence provider
+
+When current YouTube transcripts, video/channel search, channel feeds or playlists materially improve research, load `.agents/skills/youtube-intelligence-provider/SKILL.md`. The reviewed `ZeroPointRepo/youtube-skills` upstream may be used only when an authorized TranscriptAPI credential/provider is actually available. Treat it as a replaceable read-only evidence source: it does not authorize uploads, edits, comments, channel/account management or monetization changes. Prefer official YouTube/Google sources for authoritative policy/platform facts and verify volatile provider limits at runtime.
 
 ## Seven-module operating model
 
