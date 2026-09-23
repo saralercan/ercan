@@ -316,3 +316,16 @@ For DataForSEO-backed runs:
 - do not enable expensive browser/JS crawling or large live-SERP sets without material need.
 
 Recurring diagnosis produces an evidence-backed action queue. It does not autonomously change robots, canonicals, noindex, redirects, content, schema or disavow files unless a separately authorized implementation workflow owns those changes.
+
+
+## 20. Deep SEO specialist routing
+For material specialist work, load `DIGITAL_SPECIALIST_AGENTS.md` + `.agents/skills/digital-specialist-agent-pack/SKILL.md`.
+
+Use:
+- `@SearchArchitectureAgent` for crawl/index/URL/internal-link architecture;
+- `@ContentOpportunityAgent` for Search Console-led decay, cannibalization, refresh/new-content and internal-link opportunities;
+- `@SchemaEntityArchitect` for structured-data/entity graphs and visible-truth parity;
+- `@SearchMeasurementAnalyst` for Search Console/GA/Bing/external-provider evidence separation;
+- `@AIVisibilityAgent` for AI Overview/AI Mode/answer-engine visibility and measurement.
+
+Current Google Search Central guidance remains primary authority. Third-party SEO tools/packs do not have access to Google's internal ranking data and do not provide ranking guarantees.
