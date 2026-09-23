@@ -45,6 +45,7 @@ Use Rerun when the task benefits from:
 
 Examples:
 - competitor monitoring;
+- weekly SEO diagnostic / search-visibility monitoring when paired with `weekly-seo-diagnostic`;
 - competitor creative monitoring / Meta Ad Library evidence collection, when paired with `competitor-creative-intelligence`;
 - reporting and digest generation;
 - invoice/admin follow-up with approval gates;
