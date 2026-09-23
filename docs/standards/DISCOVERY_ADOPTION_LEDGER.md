@@ -142,6 +142,19 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - listmonk: `ADOPT_WHEN_NEEDED` for self-hosted newsletter/list management after AGPL/operations review.
 - Postal/Stalwart/mailcow-class self-hosted mail infrastructure: `WATCHLIST/EXPLICIT INFRA DECISION`; never default merely to send contact-form mail.
 
+## Design Quality Engine — 2026-09-24
+- `anthropics/skills:frontend-design`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → distinctive product-specific visual direction.
+- `emilkowalski/skills:apple-design`: `ADOPT_PATTERN_ONLY` → fluid/physical web interaction patterns; Apple HIG remains authority for Apple platforms.
+- `MengTo/Skills:beautiful-shadows`: `ADOPT_PATTERN_ONLY` → layered neutral elevation patterns.
+- `addyosmani/web-quality-skills:accessibility`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → evidence-led WCAG-oriented accessibility review under existing QA.
+- `Superfuture/design-review`: `ADOPT_PATTERN_ONLY` → prioritized evidence-led critique; telemetry and license-gated Pro service explicitly excluded.
+- `emilkowalski/skills:emil-design-eng`: `ADOPT_PATTERN_ONLY` → UI polish and motion-decision patterns.
+- `shadcn-ui/ui:shadcn`: `ADOPT_WHEN_NEEDED / CANONICAL` → official project-aware shadcn component/CLI workflow.
+- `pbakaus/impeccable:adapt`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → responsive/adaptive design and input-context patterns.
+- `jakubkrehel/skills:better-interface`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → holistic evidence-first interface review orchestration.
+- `interaction-design`: synthesized Ercan OS lane, no separate upstream promotion.
+- Architecture decision: one JIT `design-quality-engine`; no new stable identities.
+
 ## Judgment Engine / Jev — 2026-09-24
 - `typesafe-ai/skills`: `ADOPT_WHEN_NEEDED / OFFICIAL_REFERENCE` → System One/Jev workflow design and live-doc routing.
 - `typesafe-ai/typesafe-sdk-js`: `ADOPT_WHEN_NEEDED / OFFICIAL_SDK` → JS/TS typed judgment integration.
@@ -159,6 +172,7 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - Architecture decision: one JIT `judgment-engine` under existing owners; no new stable agent identities.
 
 ## Developer resource discovery — 2026-09-24
+- `Alishahryar1/free-claude-code`: `WATCHLIST / ADOPT_PATTERN_ONLY` → model/provider routing, fallback and local proxy architecture reference. MIT; every provider's current terms/free tier/auth/privacy must be verified independently; no auto-install.
 - `ripienaar/free-for-dev`: `DISCOVERY_SOURCE` → free-tier service candidate discovery only; current provider terms must be verified. No root LICENSE observed in review, so no substantial catalog copying.
 - `public-apis/public-apis`: `DISCOVERY_SOURCE` → API candidate discovery; MIT list, but each API has independent terms, auth, quota, maintenance and data-license requirements.
 - `awesome-selfhosted/awesome-selfhosted`: existing `DISCOVERY_SOURCE` reaffirmed → self-hosted alternatives; list CC BY-SA 3.0, project-level licensing/ops/security reviewed separately.
