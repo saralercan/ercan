@@ -139,6 +139,11 @@ Attribution/ROAS never substitutes for incrementality evidence. Campaign mutatio
 ### Brand-system / cross-channel identity
 `@Orchestrator → @BrandSystemArchitect → @BrandBehavior and/or @DesignTokenArchitect according to scope → @BrandRuntimeEngineer when reusable machine-readable runtime context is needed → implementation surface specialists → @BrandComplianceQA`
 
+### Agent runtime / infrastructure
+`@Orchestrator → runtime/model owner → one primary maintained orchestration framework when needed → scoped tool/action integrations → isolated sandbox only when execution risk justifies it → optional memory/observability/voice adapters → independent agent eval/regression → deployment/runtime QA`
+
+Load `AGENT_RUNTIME_STACK.md` + `agent-runtime-stack`. Do not fan out Ollama, LangChain, Microsoft Agent Framework, CrewAI, MetaGPT, CAMEL and AutoGPT simultaneously. Archived/maintenance/read-only frameworks are pattern/migration references only unless an existing project actually depends on them.
+
 ### Broad GitHub capability expansion
 `@Orchestrator → @UpstreamIntelligence → matching stable v3 domain specialist(s) for web/app/social/SEO/Meta/branding → Upstream Adoption Auditor for promoted candidates → Security Reviewer when code/credentials/permissions are material → regression/eval → catalog/ledger/current-index update`
 
