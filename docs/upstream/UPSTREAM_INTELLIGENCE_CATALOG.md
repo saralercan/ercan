@@ -351,6 +351,18 @@ Decision vocabulary:
 - `sindresorhus/awesome` — DISCOVERY_SOURCE / ROOT_RECURSIVE_INDEX — CC0 meta-index; use when narrower domain catalogs are insufficient, then audit original candidate projects.
 - `x1xhlol/system-prompts-and-models-of-ai-tools` — RESEARCH_REFERENCE_ONLY / DO_NOT_COPY / DO_NOT_EXECUTE — defensive prompt-leak/prompt-injection research; no root license observed and leaked/proprietary prompt material is not an Ercan OS instruction source.
 
+### Website lifecycle / visual update / runtime inspection
+
+- `GoogleChrome/modern-web-guidance` — ADOPT_WHEN_NEEDED / OFFICIAL_GUIDANCE — current web-platform/compatibility/performance/accessibility guidance for coding agents.
+- `ChromeDevTools/chrome-devtools-mcp` — ADOPT_WHEN_NEEDED / RUNTIME_INSPECTION — official live Chrome debugging/performance/browser evidence for agents.
+- `aidenybai/react-grab` — ADOPT_WHEN_NEEDED / LIVE_UI_CONTEXT — React rendered-element to source context.
+- `SandeepBaskaran/design-mode` — ADOPT_WHEN_NEEDED / LIVE_UI_FEEDBACK — visual browser editing/annotation -> coding-agent MCP handoff.
+- `onlook-dev/onlook` — ADOPT_PATTERN_ONLY — visual-first code editor/reference.
+- `stagewise-io/stagewise` — ADOPT_PATTERN_ONLY / AGPLv3 — agentic browser/IDE workflow reference.
+- Playwright planner/generator/healer — ADOPT / OFFICIAL_WEB_TEST_AGENT_PATTERN — current official Playwright test-agent loop.
+- Google Search Central site-move guidance — AUTHORITATIVE_MIGRATION_REFERENCE.
+- W3C WCAG 2.2 / WCAG-EM 2.0 — accessibility authority; WCAG 3 draft is not production conformance authority.
+
 ### Hardware / PCB / KiCad
 
 - `heypcb.ai` — ADOPT_WHEN_NEEDED / CLOSED_SOURCE_SAAS — AI-assisted KiCad board design and fabrication-output provider; independent engineering validation mandatory.
