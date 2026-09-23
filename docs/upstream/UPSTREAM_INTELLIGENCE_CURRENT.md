@@ -24,6 +24,16 @@ Purpose: make the newest reviewed upstream findings immediately visible to GPT/E
 - Competitor creative expression is never copied into final brand work; Ercan OS transforms observable patterns into original hooks/angles/briefs and preserves brand/IP/policy QA.
 - Stable routing identity count remains 52.
 
+## Rerun Platform Refresh / API Bridge — 2026-09-24
+- Load `.agents/skills/rerun-api-bridge/SKILL.md` + `docs/standards/RERUN_API_BRIDGE.md` when Ercan OS must programmatically manage a selected Rerun workspace.
+- Current official docs expose workspace-scoped MCP/API tools for agents, skills, schedules, triggers/webhooks, runs/messages, private/shared databases, connectors, share links and templates; clients include Codex, Claude Code, Cursor, Rerun agents and generic MCP clients.
+- Current technical docs define **one private cloud machine per workspace**; Boxes organize agents and are **not an isolation wall**. Agents in different Boxes share the workspace machine/folder/shared database. Client/credential tenant boundaries therefore require separate workspaces or another isolated deployment.
+- `PROVIDER_STATE_CONFLICT`: current DPA Annex II still says one dedicated VM per Box. Use current technical docs for runtime architecture and seek provider/contract clarification when isolation is material.
+- `PROVIDER_STATE_CONFLICT`: Privacy Policy says Gmail OAuth is sending-only, while homepage examples show inbox sorting/new-email flows. Do not infer mailbox read/search/list until exact target connector/trigger scope is observed.
+- Current live pricing page reviewed on 2026-09-24 shows **from $49/month, 5 agents, 3 seats, one private workspace machine, 200+ apps, unlimited executions and a 3-day no-card trial**. Older Rerun pages/search indexes still show the earlier $24/3-agent/7-day package; commercial state is volatile and never hard-coded.
+- Current Expert Program advertises 95% of template sales and 20% recurring on referred client plans; Marketplace Creator Terms state publication is reviewed/discretionary and not certification. Treat commercial terms as volatile, not guaranteed income.
+- Stable routing identities remain 52; no Rerun API key/account was created by this integration.
+
 ## Managed Agent Deployment — Rerun — 2026-09-24
 - `https://rerun.build/` — **ADOPT_WHEN_NEEDED / MANAGED_AGENT_DEPLOYMENT_PROVIDER / CLOSED_SOURCE_SAAS** for recurring business-agent execution, isolated Boxes, approvals, connectors/MCP/API, client/team handoff and live run visibility.
 - Rerun remains beneath Ercan OS governance: project rules, stable routing, approval policy, evals and completion authority stay in Ercan OS.
@@ -129,6 +139,8 @@ For any task that invokes upstream intelligence:
 Current index entries override older catalog/ledger entries only when the same upstream is explicitly marked as a status change or superseded here.
 
 ## Evidence scans currently incorporated
+
+- `docs/upstream/scans/2026-09-24-rerun-platform-refresh.md`
 
 - `docs/upstream/scans/2026-09-24-rerun-competitor-meta-ads.md`
 
