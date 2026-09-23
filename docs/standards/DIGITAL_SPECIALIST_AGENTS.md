@@ -41,7 +41,7 @@ Stable routing identities remain **52**.
 ### Security
 - `@AppSecArchitect`
 - `@SecureCodeReviewer`
-- `@WebSecurityTester`
+- `@AuthorizedAppSecurityTester`
 - `@SupplyChainSecurityAgent`
 - `@AgenticCISecurityAuditor`
 - `@SecurityReleaseGate`
