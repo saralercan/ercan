@@ -155,6 +155,16 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - `wshobson/agents:interaction-design`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → purposeful microinteraction, feedback, motion and gesture patterns; combine with existing platform/accessibility/performance rules.
 - Architecture decision: one JIT `design-quality-engine`; no new stable identities.
 
+## Discovery Source Expansion — 2026-09-24
+- Architecture: `ADOPT / NO COUNT CHANGE` → extend existing `developer-resource-discovery`; keep stable routing count at **52** and add no production dependency.
+- `punkpeye/awesome-mcp-servers`: `DISCOVERY_SOURCE / MCP_CATALOG` → high-recall MCP candidate discovery only; every server gets independent publisher/license/security/permission audit.
+- `Shubhamsaboo/awesome-llm-apps`: `DISCOVERY_SOURCE / APP_PATTERN_LIBRARY` → exact-subproject architecture/example discovery; no bulk clone/run trust.
+- `composio-community/awesome-codex-skills`: `DISCOVERY_SOURCE_ONLY / PER_SKILL_AUDIT_REQUIRED` → current canonical owner/path; no root license established, so inspect exact skill/source/scripts/license before adoption.
+- `sindresorhus/awesome`: `DISCOVERY_SOURCE / ROOT_RECURSIVE_INDEX` → CC0 meta-index used only after narrower catalogs; candidate-level audit remains mandatory.
+- `x1xhlol/system-prompts-and-models-of-ai-tools`: `RESEARCH_REFERENCE_ONLY / DO_NOT_COPY / DO_NOT_EXECUTE` → defensive prompt-leak/injection research only; no root license observed and leaked/proprietary prompt material is not adopted into Ercan OS.
+- Rule: catalog/list membership and star count are discovery signals only, never trust/permission/license/quality proof.
+- Evidence: `docs/upstream/scans/2026-09-24-discovery-source-expansion.md`.
+
 ## Agent Runtime Stack — 2026-09-24
 - Architecture: `ADOPT / NO COUNT CHANGE` → one JIT `agent-runtime-stack` capability under existing Ercan OS owners; preserve **21 Stable Core + 31 GitHub Specialist v3 Extension = 52**.
 - `ollama/ollama`: `ADOPT_WHEN_NEEDED` → local/open-model runtime; evaluate model/hardware/privacy/egress fit.

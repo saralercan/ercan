@@ -6,6 +6,16 @@ Updated: 2026-09-24
 Purpose: make the newest reviewed upstream findings immediately visible to GPT/Ercan OS and Codex without forcing every task to read every dated scan. This file is an operational overlay on top of `UPSTREAM_INTELLIGENCE_CATALOG.md` and `DISCOVERY_ADOPTION_LEDGER.md`. Dated scan files remain the evidence/history layer.
 
 
+## Discovery Source Expansion — 2026-09-24
+- Load `.agents/skills/developer-resource-discovery/SKILL.md` for high-recall catalog discovery; every promoted candidate still goes through original-source resolution and upstream audit.
+- `punkpeye/awesome-mcp-servers` — **DISCOVERY_SOURCE / MCP_CATALOG / MIT**. Use to find MCP candidates; never connect credentials or execute/install a listed server before independent publisher/license/permission/network/command audit.
+- `Shubhamsaboo/awesome-llm-apps` — **DISCOVERY_SOURCE / APP_PATTERN_LIBRARY / Apache-2.0**. Audit the exact agent/RAG/voice/skill subproject and its dependencies/services; do not clone-run the collection as a trusted bundle.
+- `composio-community/awesome-codex-skills` — **DISCOVERY_SOURCE_ONLY / PER_SKILL_AUDIT_REQUIRED**. Current canonical repo resolves under `composio-community`; root license was not established and individual skills may have distinct licenses/scripts/tool permissions.
+- `sindresorhus/awesome` — **DISCOVERY_SOURCE / ROOT_RECURSIVE_INDEX / CC0-1.0**. Use only when narrower catalogs do not cover the requirement; follow sub-list -> original project -> audit.
+- `x1xhlol/system-prompts-and-models-of-ai-tools` — **RESEARCH_REFERENCE_ONLY / DO_NOT_COPY / DO_NOT_EXECUTE**. No root license observed; repository describes exposed/leaked system prompts. Use only for defensive prompt-leak/prompt-injection threat modeling and prefer official/current docs for product behavior.
+- Stars/list inclusion remain weak discovery signals, not trust, licensing or production-readiness evidence.
+- Stable routing identity count remains 52; no catalog was bulk-installed.
+
 ## Agent Runtime Stack — 2026-09-24
 - Load `.agents/skills/agent-runtime-stack/SKILL.md` + `docs/standards/AGENT_RUNTIME_STACK.md` when selecting/composing model runtime, orchestration, coding harness, tools/actions, sandbox, memory, observability/evals or voice infrastructure.
 - `ollama/ollama` — **ADOPT_WHEN_NEEDED / MIT** for local/open-model runtime; local does not by itself prove privacy or capability fit.
@@ -102,6 +112,8 @@ For any task that invokes upstream intelligence:
 Current index entries override older catalog/ledger entries only when the same upstream is explicitly marked as a status change or superseded here.
 
 ## Evidence scans currently incorporated
+
+- `docs/upstream/scans/2026-09-24-discovery-source-expansion.md`
 
 - `docs/upstream/scans/2026-09-24-agent-runtime-stack.md`
 
