@@ -351,6 +351,22 @@ Decision vocabulary:
 - `sindresorhus/awesome` — DISCOVERY_SOURCE / ROOT_RECURSIVE_INDEX — CC0 meta-index; use when narrower domain catalogs are insufficient, then audit original candidate projects.
 - `x1xhlol/system-prompts-and-models-of-ai-tools` — RESEARCH_REFERENCE_ONLY / DO_NOT_COPY / DO_NOT_EXECUTE — defensive prompt-leak/prompt-injection research; no root license observed and leaked/proprietary prompt material is not an Ercan OS instruction source.
 
+### Digital specialist agents
+
+- `hueyexe/frontend-agent-skills` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT — UI/UX, IA, forms, inclusive design and UX-writing patterns.
+- `marketingskills/seo` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT — technical SEO/content opportunity/decay/cannibalization/internal-link/schema/report workflows; Google remains authority.
+- `anthropics/skills:canvas-design` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / Apache-2.0 — static graphic art-direction philosophy.
+- `anthropics/skills:theme-factory` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / Apache-2.0 — reusable palette/type theme patterns.
+- `ArnavPuri/designskills` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / MIT — graphic/social/ad/poster/thumbnail/layout/type/design-system skill patterns.
+- OWASP ASVS 5.0.0 — PRIMARY_APPSEC_REQUIREMENTS_AUTHORITY.
+- OWASP WSTG 4.2 — STABLE_WEB_SECURITY_TEST_AUTHORITY; v5 remains development.
+- `zaproxy/zaproxy` — ADOPT_WHEN_NEEDED / AUTHORIZED_DAST / Apache-2.0.
+- `semgrep/semgrep` — ADOPT_WHEN_NEEDED — static analysis engine; deeper security coverage depends on rules/product tier.
+- `trailofbits/skills` — ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED / CC BY-SA 4.0 — security-audit and agentic-CI workflow patterns.
+- `OWASP/secure-agent-playbook` — PATTERN_ONLY / LICENSE_CLARIFICATION_REQUIRED.
+- `UnitOneAI/SecuritySkills` — WATCHLIST — useful structure but not current framework authority where older ASVS references remain.
+- Meta `facebookexperimental/Robyn` and `facebookincubator/GeoLift` remain existing reviewed Marketing Science references; no duplicate Meta identities.
+
 ### Website lifecycle / visual update / runtime inspection
 
 - `GoogleChrome/modern-web-guidance` — ADOPT_WHEN_NEEDED / OFFICIAL_GUIDANCE — current web-platform/compatibility/performance/accessibility guidance for coding agents.
