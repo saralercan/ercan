@@ -44,7 +44,7 @@ Load `.agents/skills/digital-specialist-agent-pack/SKILL.md` + `docs/standards/D
 These user-facing roles are JIT aliases mapped onto existing stable specialists; they **do not** increase the stable routing identity count:
 - `@UISpecialist` -> `@FrontendSystem + @BrandSystemArchitect + @BrowserQA`
 - `@UXResearchSpecialist` -> `@WebArchitecture + @FrontendSystem` with research/analytics evidence
-- `@DesignSystemSpecialist` -> `@DesignTokenArchitect + @FrontendSystem + @ComponentWorkshopQA`
+- `@DesignTokensSpecialist` -> `@DesignTokenArchitect + @FrontendSystem + @ComponentWorkshopQA`
 - `@AccessibilitySpecialist` -> `@AccessibilityQA`
 - `@SEOSpecialist` -> `@TechnicalSEO + @SEOScanner + platform SEO specialist`
 - `@AEOAgentDiscoverySpecialist` -> `@AEO_GEO + @TechnicalSEO`
