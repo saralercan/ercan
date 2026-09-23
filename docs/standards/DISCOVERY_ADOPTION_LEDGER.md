@@ -155,6 +155,19 @@ This ledger records the durable decision; runtime facts such as versions, prices
 - `interaction-design`: synthesized Ercan OS lane, no separate upstream promotion.
 - Architecture decision: one JIT `design-quality-engine`; no new stable identities.
 
+## JEV Runtime Extensions — 2026-09-24
+- `browser-use/jev-ultrafast`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → structured browser action/target loop with freshness checks.
+- `tamaratran/fast-jev-compaction`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → transcript/tool-history compaction; preserve critical text/evidence and explicit fallback.
+- `vercel-labs/json-render`: `ADOPT_WHEN_NEEDED` → schema/catalog-constrained Generative UI under web/design owners.
+- `itsmostafa/typesafe-mcp`: `ADOPT_WHEN_NEEDED` → minimal generic MCP typed judgments.
+- `jkudish/jev-mcp`: `ADOPT_WHEN_NEEDED` → purpose-built semantic MCP tools; advisory beneath deterministic gates.
+- `sharziki/semdecide`: `ADOPT_WHEN_NEEDED` → CLI/CI predicates/choices/scores/filtering with uncertainty/failure exit paths.
+- `0xNatoshi/jev-codex-router`: `ADOPT_PATTERN_ONLY / WATCHLIST` → model/effort routing/fallback/logging patterns; exact model economics remain volatile.
+- `GhalebDweikat/winnow`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → reversible large tool-result sieve; do not stack blindly with history compaction.
+- `devagrawal09/jev-review`: `ADOPT_PATTERN_ONLY / ADOPT_WHEN_NEEDED` → review-risk/evidence/severity triage.
+- `ellipsis-dev/blink`: `ADOPT_PATTERN_ONLY` → codebase path navigation; no root license observed.
+- Architecture decision: one JIT `jev-runtime-extensions` pack under Judgment Engine; items 11–20 remain inherited, not duplicated.
+
 ## Judgment Engine / Jev — 2026-09-24
 - `typesafe-ai/skills`: `ADOPT_WHEN_NEEDED / OFFICIAL_REFERENCE` → System One/Jev workflow design and live-doc routing.
 - `typesafe-ai/typesafe-sdk-js`: `ADOPT_WHEN_NEEDED / OFFICIAL_SDK` → JS/TS typed judgment integration.
