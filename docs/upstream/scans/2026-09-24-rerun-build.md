@@ -36,11 +36,13 @@ This is especially relevant for non-technical client handoff and always-on recur
 Current Privacy Policy and DPA state:
 - Cloud Mode customer content is processed by Reunit SA as processor;
 - core infrastructure is hosted in the EU;
-- one dedicated virtual machine per Box is described;
+- DPA Annex II describes one dedicated virtual machine per Box;
 - connected-service secrets/credentials are not stored in Rerun's database;
 - Google API access uses narrow scopes;
 - self-hosted mode is described for customer infrastructure;
 - Enterprise advertises custom infrastructure.
+
+A later same-day technical-doc refresh found current docs explicitly define one private machine per workspace and say Boxes are organizational, not isolation walls. Treat the Box architecture as `PROVIDER_STATE_CONFLICT`; see `2026-09-24-rerun-platform-refresh.md`.
 
 These are provider statements and contractual documents, not independent security certification.
 
@@ -74,9 +76,9 @@ subject to current terms and legal/project rules.
 
 ## Pricing / packaging
 
-Current public pricing advertises a base plan from $24/month with agents, one Box, seat, model credit, broad integrations and unlimited executions, plus a 7-day trial.
+This original scan observed an older public package from $24/month with 3 agents and a 7-day trial. A later same-day refresh of the live pricing page showed a newer package from $49/month with 5 agents, 3 seats and a 3-day no-card trial.
 
-Treat all quantities/prices/features as volatile and verify before purchase/proposal.
+This section is historical evidence only. Commercial values are volatile; use the live pricing page at decision time and see `2026-09-24-rerun-platform-refresh.md`.
 
 ## Expert Program
 

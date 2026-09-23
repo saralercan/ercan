@@ -21,7 +21,7 @@ Stable routing identities remain **52**.
 
 Current public product materials describe:
 - recurring/event-triggered autonomous agents;
-- per-workspace/private Box compute;
+- one private cloud machine per workspace, with Boxes used to organize agents;
 - human approval before sensitive actions;
 - live run visibility;
 - broad app integration plus MCP/API support;
@@ -60,7 +60,7 @@ Current privacy documentation states Gmail access is sending-only. Do not assume
 Current AUP prohibits bulk unsolicited email/message/call campaigns. Do not use Rerun as Vinterro's bulk cold-outreach sender.
 
 ### Data processing
-Current Privacy Policy/DPA describe Reunit SA as processor for Cloud Mode customer content, EU core infrastructure, dedicated VM isolation per Box, and self-hosted mode for customer infrastructure. Contractual availability and subprocessor details remain runtime-verified facts.
+Current Privacy Policy/DPA describe Reunit SA as processor for Cloud Mode customer content and EU core infrastructure. Current technical docs define one private machine per workspace and explicitly say Boxes are not an isolation wall; current DPA Annex II still says one dedicated VM per Box. This is a `PROVIDER_STATE_CONFLICT`, not a resolved isolation guarantee. Self-hosted availability and subprocessor details remain runtime-verified facts.
 
 ### Approvals
 Use Rerun approvals to implement the Ercan OS risk classification, not to redefine it.
@@ -70,14 +70,18 @@ Current marketing/pricing details are volatile. Verify immediately before purcha
 
 ## Project/client isolation
 
-Use separate Boxes when:
+Current docs make the **workspace** the machine/security boundary and Boxes organizational.
+
+Use separate workspaces or another separately isolated deployment when:
 - clients have separate credentials;
 - confidentiality boundaries matter;
-- filesystem state should not be shared;
-- billing/usage/accountability should be separable;
-- handoff requires isolated ownership.
+- filesystem/shared-database state must not be shared;
+- ownership/accountability should be separable.
 
-Do not place all Vinterro clients into one long-lived shared execution environment merely to reduce cost.
+Do not treat Boxes as tenant isolation and do not place all Vinterro clients into one shared workspace merely to reduce cost.
+
+## API bridge
+For programmatic Ercan OS ↔ Rerun synchronization, load `RERUN_API_BRIDGE.md` + `.agents/skills/rerun-api-bridge/SKILL.md`. The current Rerun docs expose workspace-scoped MCP/API tools for agents, skills, schedules, triggers, runs/messages, databases, connectors, share links and templates.
 
 ## Source of truth
 
