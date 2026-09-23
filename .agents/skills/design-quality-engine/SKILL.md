@@ -75,10 +75,14 @@ Reviewed upstream: `jakubkrehel/skills` → `better-interface` (MIT).
 Use the orchestration pattern: consolidate accessibility, layout, writing, typography, color and UI-polish findings into one ranked report. Findings require evidence, not taste. Prefer one root-cause finding over repeated symptoms.
 
 ### 10. Interaction design
-No separate current canonical upstream was established from the supplied list. Implement this lane by combining:
+Reviewed upstream: `wshobson/agents` → `plugins/ui-design/skills/interaction-design/SKILL.md` (MIT).
+
+Use for purposeful microinteractions, motion, feedback, loading states, transitions, gestures and interaction-state polish. Combine it with:
 - `emilkowalski/skills` motion/interaction patterns;
 - `pbakaus/impeccable` interaction, animation and adaptive references;
 - Ercan OS platform-design and accessibility contracts.
+
+Do not import fixed timing/easing values as universal tokens; project interaction language, platform conventions, performance and reduced-motion requirements remain authoritative.
 
 Key rules:
 - immediate feedback for user actions;
