@@ -157,6 +157,8 @@ Refresh is also event-driven whenever:
 
 ## Shopify deep-specialist requirement
 
+For Shopify material work, also load `docs/standards/SHOPIFY_EXPERT_SOURCE_PACK.md`. It is the platform-specific deep source/competency/regression layer over this shared engine.
+
 Shopify agents must maintain professional depth across at least:
 - Liquid and Liquid objects/filters/tags;
 - Online Store 2.0;
