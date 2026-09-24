@@ -106,6 +106,57 @@ These user-facing roles are JIT capabilities mapped onto existing stable special
 
 Load `.agents/skills/javascript-specialist-capability-pack/SKILL.md` + `docs/standards/JAVASCRIPT_SPECIALIST_ENGINE.md`.
 
+## Presentation studio JIT aliases
+These user-facing roles form the expert presentation studio and map onto existing stable/JIT owners; they **do not** increase the stable routing identity count.
+
+### Entry and strategy
+- `@Presentation` -> orchestrates the smallest sufficient presentation studio.
+- `@PresentationDirector` -> `@Orchestrator` + deck-domain owners.
+- `@AudienceIntentAnalyst` -> `@Orchestrator + @BrandBehavior` plus sales/founder/domain context when relevant.
+- `@PresentationResearcher` -> `@Orchestrator` + task-domain specialist; add `@UpstreamIntelligence` only for current public research/tool gaps.
+- `@EvidenceArchitect` -> `@Orchestrator + @ProductionQA`.
+- `@DeckStrategist` / `@StoryArchitect` -> `@Orchestrator + @BrandBehavior`.
+- `@ExecutiveDeckStrategist` -> `@Orchestrator + @ProductionQA`.
+- `@InvestorPitchStrategist` -> `@Orchestrator` + founder/business owners.
+- `@SalesDeckStrategist` -> `@Orchestrator` + sales/business owners.
+- `@ProposalDeckStrategist` -> `@Orchestrator + @BrandBehavior + @ProductionQA`.
+- `@AcademicDeckStrategist` -> `@Orchestrator` + task-domain specialist.
+- `@TrainingDeckStrategist` -> `@Orchestrator` + learning/domain owner.
+- `@KeynoteDeckStrategist` -> `@Orchestrator + @BrandBehavior`.
+
+### Content and delivery
+- `@NarrativeEditor` / `@SlideCopyEditor` -> Editorial & Writing Capability Pack + `@BrandBehavior`.
+- `@SpeakerNotesWriter` -> Editorial & Writing Capability Pack + `@Orchestrator`.
+- `@AppendixArchitect` -> `@Orchestrator + @ProductionQA`.
+- `@LeaveBehindEditor` -> Editorial & Writing Capability Pack + `@ProductionQA`.
+- `@LocalizationDeckEditor` -> Editorial & Writing Capability Pack + active locale/brand owner.
+- `@PresenterCoach` -> `@Orchestrator + @ProductionQA`.
+
+### Visual system and information design
+- `@PresentationDesignSystemDirector` -> `@BrandSystemArchitect + @DesignTokenArchitect + @BrandComplianceQA`.
+- `@SlideArtDirector` -> `@BrandSystemArchitect + @GraphicArtDirector + @BrandComplianceQA`.
+- `@TypographyDirector` -> `@TypographyLayoutAgent + @AccessibilityQA`.
+- `@LayoutComposer` -> `@GraphicArtDirector + @ProductionQA`.
+- `@AssetCurator` -> `@RealAsset + @BrandComplianceQA`.
+- `@VisualAssetDirector` -> `@RealAsset + @BrandSystemArchitect + @BrandComplianceQA`.
+- `@DiagramArchitect` -> information/graphic design owner + `@ProductionQA`.
+- `@DataVizPlanner` / `@DataVizDesigner` -> data-viz/domain owner + `@ProductionQA`.
+- `@TableEditor` -> `@ProductionQA` + data/domain owner.
+
+### Build and QA
+- `@TemplateMasterEngineer` -> `@BrandSystemArchitect + @ProductionQA`.
+- `@MotionTransitionDesigner` -> presentation-native runtime + `@ProductionQA`.
+- `@PPTXEngineer` -> presentation build engine + `@ProductionQA`.
+- `@GoogleSlidesEngineer` -> connected Google Slides/Drive surface when available.
+- `@CanvaPresentationProvider` -> connected Canva surface when available.
+- `@GammaPresentationProvider` -> connected Gamma surface when available.
+- `@AccessibilityDeckReviewer` -> `@AccessibilityQA + @ProductionQA`.
+- `@CompatibilityReviewer` -> `@ProductionQA`.
+- `@DeckRedTeamCritic` -> independent `@ProductionQA`.
+- `@DeckReviewer` -> independent `@ProductionQA + @BrandComplianceQA`.
+
+Load `.agents/skills/presentation-agent-pack/SKILL.md` + `docs/standards/PRESENTATION_ENGINE.md`.
+
 ## Editorial / writing specialist JIT aliases
 These user-facing roles form a JIT editorial desk mapped onto existing stable/JIT specialists; they **do not** increase the stable routing identity count.
 
