@@ -160,6 +160,12 @@ It must separate actuals, assumptions and forecasts; reverify current accounting
 
 It coordinates Shopify, WordPress/WooCommerce, CRO, SEO, paid media, analytics, compliance and finance specialists rather than replacing them.
 
+## Continual expertise
+
+All portable runtimes must preserve the same learning contract. Before material work, the selected ACTIVE specialist loads its profile from `AGENT_EXPERTISE_SOURCE_MATRIX.json` and applies `AGENT_CONTINUAL_EXPERTISE_ENGINE.md`. Provider/model differences may change search/tool mechanics but may not lower source authority, freshness, provenance, ingestion or verification standards.
+
+New verified knowledge is converted into durable rules/evals/source notes rather than copied raw into prompts. Non-selected STANDBY agents do not research unnecessarily.
+
 ## Verification
 
 A task is complete only after the relevant producer + independent QA evidence exists. Routing metadata must expose at minimum:
