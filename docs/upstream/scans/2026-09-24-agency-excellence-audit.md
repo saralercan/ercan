@@ -41,6 +41,20 @@ Current Google Search documentation continues to emphasize helpful/reliable peop
 ### Agent/MCP
 Current MCP TypeScript SDK v2 documents the stable line implementing the 2026-07-28 spec. Agent/MCP specialists must verify negotiated protocol/runtime/auth behavior at task time rather than freeze it into a permanent prompt.
 
+## External verification anchors
+
+Rechecked on 2026-09-24 against current official surfaces:
+- W3C WCAG 2.2 Recommendation: https://www.w3.org/TR/wcag/
+- OWASP ASVS project / current stable 5.0.0: https://owasp.org/projects/asvs
+- Shopify theme performance best practices: https://shopify.dev/docs/storefronts/themes/best-practices/performance
+- WordPress Coding Standards and Accessibility Coding Standards: https://developer.wordpress.org/coding-standards/wordpress-coding-standards/ and https://developer.wordpress.org/coding-standards/wordpress-coding-standards/accessibility/
+- Android Core App Quality guidance: https://developer.android.com/develop/adaptive-apps/quality-guidelines/core-app-quality
+- Apple Human Interface Guidelines — Inclusion: https://developer.apple.com/design/human-interface-guidelines/inclusion
+- Google Search spam policies / Search documentation updates: https://developers.google.com/search/docs/essentials/spam-policies and https://developers.google.com/search/updates
+- MCP TypeScript SDK v2: https://ts.sdk.modelcontextprotocol.io/v2/
+
+These anchors validate the shared baseline only. Platform/API/security/search facts that materially affect a live task are still reverified at execution time.
+
 ## Design decision
 
 “World class” is a **target and evidence program**, not a label that architecture can grant. Static coverage may be `STRUCTURALLY_READY`; real tasks may earn `TASK_VERIFIED` or `PRODUCTION_VERIFIED`; comparative superiority requires dated reproducible external comparison.
