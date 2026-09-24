@@ -12,7 +12,7 @@ Regression eval: `docs/evals/PRESENTATION_ENGINE_REGRESSION.md`
 
 ## Architecture rule
 
-Presentation repositories are replaceable upstream engines, not policy authorities and not new permanent Ercan OS identities. Ercan OS keeps the existing stable routing surface and composes presentation-specific JIT roles around the existing Orchestrator, brand, asset and QA specialists.
+Presentation repositories are replaceable upstream engines, not policy authorities and not new permanent Ercan OS identities. The stable routing count remains **52**; all presentation-studio roles are JIT capabilities. Ercan OS keeps the existing stable routing surface and composes presentation-specific JIT roles around the existing Orchestrator, brand, asset and QA specialists.
 
 Default presentation capability roles:
 - `PresentationDirector`
