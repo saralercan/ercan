@@ -15,6 +15,21 @@ The canonical per-agent source map is:
 The current production inventory is:
 - `docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json`
 
+## Native Vinterro One learning plane
+
+Production persistence uses:
+- `ercan_os_agent_expertise_profiles` — one research/mastery profile per runtime agent;
+- `ercan_os_agent_sources` — agent-specific authority/discovery source registry with authority tier and freshness;
+- `ercan_os_agent_learning_events` — dated, source-backed distilled learning;
+- `ercan_os_agent_expertise_health` — current structural/freshness state.
+
+Native control-plane actions:
+- `agent_expertise` — read one agent's profile/sources/learning/health;
+- `expertise_due` — retrieve agents that need a new learning cycle;
+- `record_agent_learning` — persist verified/candidate learning, provenance, confidence and expiry.
+
+A source list alone is not expertise. `READY_TO_LEARN` means structurally sourced but without fresh verified learning; `CURRENT` requires a non-expired verified learning event.
+
 ## Expertise loop
 
 For every material task, the selected ACTIVE specialist follows:
@@ -168,7 +183,7 @@ Shopify agents must maintain professional depth across at least:
 - app/theme security, OAuth/token handling and permissions;
 - Shopify Editions, changelog and Engineering updates.
 
-Mandatory current upstreams include the relevant pages on `shopify.dev`, Shopify Editions, Shopify Engineering and canonical Shopify GitHub repositories such as Dawn, CLI and Hydrogen. Historical/archived repos must be labeled as such and replaced by the maintained path where applicable.
+Mandatory current upstreams include the relevant pages on `shopify.dev`, the Shopify developer changelog, Shopify Editions/Engineering where material, and canonical Shopify GitHub repositories such as Dawn, CLI, Hydrogen, `Shopify/theme-tools`, `Shopify/agent-skills` and the current AI/developer tooling repositories. `Shopify/theme-check` and `theme-check-vscode` are historical/archived; current Theme Check/Liquid developer tooling must resolve through the maintained `Shopify/theme-tools`/Shopify CLI path.
 
 ## Finance deep-specialist requirement
 
