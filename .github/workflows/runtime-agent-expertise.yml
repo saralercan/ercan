@@ -1,0 +1,44 @@
+name: Vinterro One Runtime Agent Expertise
+
+on:
+  pull_request:
+    paths:
+      - 'AGENTS.md'
+      - 'CLAUDE.md'
+      - 'docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json'
+      - 'docs/standards/AGENT_SOURCE_AUTHORITY_89.json'
+      - 'docs/standards/PORTABLE_AGENT_RUNTIME.md'
+      - 'docs/standards/CONTINUOUS_EXPERTISE_ENGINE.md'
+      - 'docs/standards/SHOPIFY_EXPERT_SOURCE_PACK.md'
+      - '.agents/skills/portable-agent-router/**'
+      - '.agents/skills/continuous-expertise/**'
+      - '.agents/skills/finance-specialist/**'
+      - '.agents/skills/ecommerce-specialist/**'
+      - '.claude/agents/**'
+      - 'scripts/validate_runtime_agent_expertise.py'
+      - '.github/workflows/runtime-agent-expertise.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'AGENTS.md'
+      - 'CLAUDE.md'
+      - 'docs/standards/**'
+      - '.agents/skills/**'
+      - '.claude/agents/**'
+      - 'scripts/validate_runtime_agent_expertise.py'
+      - '.github/workflows/runtime-agent-expertise.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  runtime-agent-expertise:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Validate 89-agent runtime expertise contract
+        run: python3 scripts/validate_runtime_agent_expertise.py
