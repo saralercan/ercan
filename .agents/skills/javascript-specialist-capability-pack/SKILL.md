@@ -1,6 +1,6 @@
 ---
 name: javascript-specialist-capability-pack
-description: Route material JavaScript and TypeScript architecture, debugging, refactoring, async/concurrency, runtime, browser, memory, performance, bundle, testing, dependency and security work through focused JIT capability roles mapped onto existing stable Ercan OS specialists. Use for JS/TS bugs, console/runtime errors, memory leaks, slow scripts, long tasks, bundle bloat, async waterfalls, Node/Bun/Deno runtime issues, React/Next JavaScript performance, TypeScript quality, npm supply-chain review or JavaScript-focused code review.
+description: Route material JavaScript and TypeScript architecture, website interactions, animation, motion graphics, data visualization, SVG/Canvas/WebGL/3D, debugging, refactoring, async/concurrency, runtime, browser, memory, performance, bundle, testing, dependency and security work through focused JIT capability roles mapped onto existing stable Ercan OS specialists. Use for JS/TS bugs, console/runtime errors, memory leaks, slow scripts, long tasks, bundle bloat, async waterfalls, Node/Bun/Deno runtime issues, React/Next JavaScript performance, TypeScript quality, npm supply-chain review or JavaScript-focused code review.
 ---
 
 # JavaScript Specialist Capability Pack
@@ -19,6 +19,17 @@ Use only roles that materially contribute:
 - `AsyncConcurrencyExpert` -> `@FrontendSystem + @WebPerformance`; async/await, Promise composition, cancellation, races, backpressure and waterfall removal.
 - `JavaScriptPerformance` -> `@WebPerformance + @BrowserQA`; CPU/long-task/hot-path/trace evidence before optimization.
 - `DOMPerformance` -> `@WebPerformance + @BrowserQA + @FrontendSystem`; layout thrashing, excessive DOM work, listeners, observers and main-thread cost.
+- `WebInteractionEngineer` -> `@FrontendSystem + @BrowserQA + @AccessibilityQA`; menus, drawers, modals, accordions, tabs, sliders/carousels, galleries, filters, search, drag/drop, hover/pointer/keyboard interactions, forms and progressive enhancement.
+- `MotionInteractionEngineer` -> `@FrontendSystem + @BrandSystemArchitect + @BrowserQA`; micro-interactions, hover/press states, entrance/exit motion, timelines, springs, gesture feedback and motion-system consistency.
+- `ScrollStorytellingEngineer` -> `@FrontendSystem + @WebPerformance + @BrowserQA`; scroll-linked reveals, sticky scenes, parallax, pinned sections, scrubbed timelines and narrative scrollytelling with jank safeguards.
+- `PageTransitionEngineer` -> `@FrontendSystem + @BrowserQA + @AccessibilityQA`; SPA/MPA/element transitions using native View Transitions when compatible, with robust fallback behavior.
+- `SVGAnimationEngineer` -> `@FrontendSystem + @BrandSystemArchitect + @BrowserQA`; SVG path, stroke, mask, clip-path, morphing, icon/logo motion and responsive vector choreography.
+- `DataVizEngineer` -> `@FrontendSystem + @WebPerformance + @AccessibilityQA`; animated/interactive charts, dashboards, timelines, maps/diagrams and live-data visualizations with truthful scales/labels and keyboard/screen-reader alternatives where applicable.
+- `CanvasGraphicsEngineer` -> `@FrontendSystem + @WebPerformance + @BrowserQA`; Canvas 2D, particles, generative backgrounds, custom drawing and high-frequency 2D rendering.
+- `WebGL3DEngineer` -> `@FrontendSystem + @WebPerformance + @BrowserQA`; Three.js-class 3D scenes, products/objects, shaders, camera choreography, model animation and graceful GPU/WebGL fallback.
+- `CreativeCodingEngineer` -> `@FrontendSystem + @BrandSystemArchitect + @WebPerformance`; procedural visuals, particle systems, noise fields, interactive generative graphics and branded motion experiments.
+- `VectorMotionEngineer` -> `@FrontendSystem + @RealAsset + @BrowserQA`; Lottie/Rive-style vector motion assets, playback control, state-driven animation and asset-fidelity checks.
+- `MotionAccessibilityQA` -> `@AccessibilityQA + @WebPerformance + @BrowserQA`; reduced-motion behavior, pause/stop controls where needed, flashing/vestibular-risk review, focus stability and input parity.
 - `MemoryLeakHunter` -> `@WebPerformance + @BrowserQA`; heap snapshots, detached DOM, retained objects/listeners, runaway caches/timers and before/after comparison.
 - `JavaScriptSecurity` -> load `.agents/skills/digital-specialist-agent-pack/SKILL.md`; route secure-code work through the existing security JIT aliases and active platform owner.
 - `NPMSupplyChain` -> existing `@SupplyChainSecurityAgent` JIT alias + active platform owner; lockfile, provenance, advisories, scripts and dependency-risk review.
@@ -59,6 +70,15 @@ Never rewrite a project around a preferred tool merely because it appears in thi
 - `oven-sh/bun` — RUNTIME_WHEN_PROJECT_USES_BUN; do not substitute for Node solely for speed claims.
 - `denoland/deno` — RUNTIME_WHEN_PROJECT_USES_DENO; permission model is valuable but runtime migration requires explicit product/compatibility justification.
 - `evanw/esbuild` / `vitejs/vite` — inspect/use only when the project build graph actually uses them.
+- `greensock/GSAP` — ADOPT_WHEN_NEEDED — advanced framework-agnostic timeline, ScrollTrigger, SVG, Canvas and WebGL orchestration. Use its current GreenSock standard license terms; free/commercial availability does not make it MIT-style open source.
+- `motiondivision/motion` — ADOPT_WHEN_NEEDED — MIT; modern React/JavaScript/Vue animation, gestures, springs, layout transitions, scroll-linked effects and native-browser hybrid execution.
+- `apache/echarts` — ADOPT_WHEN_NEEDED — Apache-2.0; interactive Canvas/SVG charts and dashboards when a rich chart grammar is required.
+- `d3/d3` — ADOPT_WHEN_NEEDED — low-level/custom data visualization and interaction when standard chart components are insufficient.
+- `recharts/recharts` — ADOPT_WHEN_NEEDED — MIT; declarative React/SVG charts for compatible React projects.
+- `pixijs/pixijs` — ADOPT_WHEN_NEEDED — MIT; high-performance 2D rendering over WebGL/WebGPU for particles, rich visual scenes and creative graphics.
+- `mrdoob/three.js` — ADOPT_WHEN_NEEDED — MIT; 3D/WebGL/WebGPU scenes and model animation. Prefer ESM; current upstream marks CommonJS build as deprecated.
+- `airbnb/lottie-web` — ADOPT_WHEN_NEEDED — vector animation playback for authorized Lottie/Bodymovin assets; do not assume arbitrary After Effects features transfer perfectly without asset testing.
+- Native Web Animations API / CSS scroll-driven animations / View Transition API — PREFER_NATIVE_WHEN_SUFFICIENT; use progressive enhancement and compatibility fallbacks.
 - `clinicjs/node-clinic` — HISTORICAL/PATTERN_ONLY; upstream states it is not actively maintained, so do not make it a new production dependency.
 
 ## Default execution loop
@@ -76,6 +96,20 @@ Never rewrite a project around a preferred tool merely because it appears in thi
 - dependency/advisory evidence.
 
 Do not optimize from intuition when an executable measurement is available.
+
+## Motion, graphics and interaction selection rules
+
+- Prefer CSS transitions/animations, Web Animations API, ScrollTimeline/ViewTimeline and View Transitions when the required effect is natively expressible and browser support/fallback is acceptable.
+- Use Motion for component/layout/gesture/spring animation in compatible React/JS stacks; use GSAP when sequencing, ScrollTrigger, SVG morph/path, timeline control or cross-renderer orchestration materially benefits.
+- Use SVG for scalable semantic/vector visuals; Canvas/PixiJS for many frequently changing 2D primitives; Three.js for real 3D/WebGL/WebGPU scenes. Do not use WebGL merely for a simple fade/slide.
+- Use Recharts for ordinary React charts, ECharts for rich dashboard/interactivity, and D3 for bespoke visualization/geometry/control. Do not force one chart library across all projects.
+- Animated charts must preserve truthful scales, units, labels and data semantics. Motion may reveal data; it must not distort the data.
+- Every nonessential animation must respect `prefers-reduced-motion`; essential state change must remain understandable with motion reduced or removed.
+- Avoid perpetual high-cost animation on hidden/offscreen tabs/sections; pause, throttle or tear down observers/render loops when not visible.
+- Prefer transform/opacity for ordinary DOM motion; verify layout/paint/composite cost before animating geometry-heavy properties.
+- Interactive motion must preserve keyboard, pointer/touch and focus behavior. Visual delight never overrides usability.
+- Heavy Canvas/WebGL scenes require mobile/GPU capability checks, responsive quality levels and a non-WebGL fallback when the experience still needs to function.
+- Motion assets and third-party creative files require provenance/license/brand checks just like images/fonts.
 
 ## JavaScript-specific rules
 
