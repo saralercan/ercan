@@ -29,8 +29,9 @@ This pack expands the existing web-production pod without changing the stable ro
 - WebSecurity -> existing security-review capability + platform expert + independent QA; use Trivy/Semgrep-class scanning JIT and never equate a clean scan with a security certification.
 - DigitalSecuritySpecialists -> load `.agents/skills/digital-specialist-agent-pack/SKILL.md` for ASVS threat modeling, secure code review, authorized WSTG/ZAP testing, supply-chain/agentic-CI review and security release gating.
 - FrontendHealth -> `@FrontendSystem`; Biome/Stylelint/HTML-Validate-class linting is selected to match the inspected stack.
-- JavaScriptSpecialists -> load `.agents/skills/javascript-specialist-capability-pack/SKILL.md` for material JS/TS architecture, runtime debugging, async/concurrency, memory, browser/DOM performance, bundle, testing, dependency or security work; map the JIT roles onto existing stable owners rather than creating duplicate agents.
+- JavaScriptSpecialists -> load `.agents/skills/javascript-specialist-capability-pack/SKILL.md` for material JS/TS architecture, website interactions, animation/motion graphics, charts/data visualization, SVG/Canvas/WebGL/3D, runtime debugging, async/concurrency, memory, browser/DOM performance, bundle, testing, dependency or security work; map the JIT roles onto existing stable owners rather than creating duplicate agents.
 - ContentSiteBuilder -> `@WebArchitecture + @FrontendSystem`; Astro is a JIT option for content/editorial/marketing sites, not a global default.
+- MotionGraphicsWeb -> `@FrontendSystem + @WebPerformance + @BrowserQA + @AccessibilityQA` with brand/design owners as required; load the JavaScript Specialist Capability Pack and select native CSS/WAAPI, Motion/GSAP, Recharts/ECharts/D3, PixiJS, Three.js or vector-motion assets only when justified.
 - WebsiteLifecycleAgents -> load `.agents/skills/website-lifecycle-agent-pack/SKILL.md` for redesign/update planning, live UI-to-source context, modern web refactors, runtime diagnosis, migration protection and release guarding.
 
 ## Reviewed upstream engine set

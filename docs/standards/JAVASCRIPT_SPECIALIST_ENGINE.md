@@ -5,10 +5,11 @@ Date: 2026-09-24
 Skill: `.agents/skills/javascript-specialist-capability-pack/SKILL.md`
 Regression eval: `docs/evals/JAVASCRIPT_SPECIALIST_ENGINE_REGRESSION.md`
 Evidence scan: `docs/upstream/scans/2026-09-24-javascript-specialist-capability-pack.md`
+Motion/graphics expansion scan: `docs/upstream/scans/2026-09-24-javascript-motion-graphics-web-expansion.md`
 
 ## Purpose
 
-Provide a disciplined JavaScript/TypeScript engineering layer for browser, frontend, Node/server, React/Next and mixed JS runtimes without creating duplicate permanent agents. The engine converts the user-facing `@JavaScript` alias into focused JIT capability roles mapped onto existing Ercan OS owners.
+Provide a disciplined JavaScript/TypeScript engineering layer for browser, frontend, interaction, animation, motion graphics, data visualization, SVG/Canvas/WebGL/3D, Node/server, React/Next and mixed JS runtimes without creating duplicate permanent agents. The engine converts the user-facing `@JavaScript` alias into focused JIT capability roles mapped onto existing Ercan OS owners.
 
 The engine is execution-first: reproduce and measure before patching, preserve existing project/runtime choices unless evidence justifies migration, and verify the original failure after every material fix.
 
@@ -18,7 +19,7 @@ No new stable identity is created. The stable count remains **52**.
 
 `@JavaScript` is a JIT alias. It may compose:
 
-`JavaScriptArchitect, TypeScriptEngineer, JavaScriptRuntimeDebugger, AsyncConcurrencyExpert, JavaScriptPerformance, DOMPerformance, MemoryLeakHunter, JavaScriptSecurity, NPMSupplyChain, JavaScriptCodeQuality, JavaScriptRefactor, JavaScriptTesting, JavaScriptBrowserQA, ReactPerformance, NextJSRuntime, NodeJSEngineer, JavaScriptRuntimeCompatibility, BundleOptimizer, JavaScriptDependencyAnalyst, JavaScriptReviewer`.
+`JavaScriptArchitect, TypeScriptEngineer, JavaScriptRuntimeDebugger, AsyncConcurrencyExpert, JavaScriptPerformance, DOMPerformance, WebInteractionEngineer, MotionInteractionEngineer, ScrollStorytellingEngineer, PageTransitionEngineer, SVGAnimationEngineer, DataVizEngineer, CanvasGraphicsEngineer, WebGL3DEngineer, CreativeCodingEngineer, VectorMotionEngineer, MotionAccessibilityQA, MemoryLeakHunter, JavaScriptSecurity, NPMSupplyChain, JavaScriptCodeQuality, JavaScriptRefactor, JavaScriptTesting, JavaScriptBrowserQA, ReactPerformance, NextJSRuntime, NodeJSEngineer, JavaScriptRuntimeCompatibility, BundleOptimizer, JavaScriptDependencyAnalyst, JavaScriptReviewer`.
 
 Each role maps to existing stable/JIT owners defined by the skill; roles are capabilities, not additional routing identities.
 
@@ -61,6 +62,18 @@ Use repeatable actions and before/after snapshots. Look for detached DOM, retain
 
 Chrome DevTools MCP memory tools may be used JIT when available. A single heap snapshot without a reproduction sequence is rarely enough to prove a leak.
 
+### Website interaction and motion
+Select the lightest rendering/animation layer that meets the visual requirement. Native CSS/WAAPI/View Transitions come first when sufficient. Route advanced motion to Motion/GSAP only when their sequencing, gesture, layout, SVG or scroll capabilities justify the dependency. Interaction work includes real website behavior—not decorative animation only: menus, search, forms, modals, filtering, galleries, drag/drop, dynamic state and progressive enhancement.
+
+### Animated data visualization
+Choose chart/visualization technology by data and interaction needs, not habit. Recharts is a strong React/SVG default for standard charts; ECharts fits dense interactive dashboards; D3 fits bespoke geometry/visual systems. Charts must expose real data meaning, units and accessible equivalents; animated interpolation must never imply false values.
+
+### SVG, Canvas and 3D
+Prefer SVG for scalable vector semantics and moderate element counts. Prefer Canvas/PixiJS for many high-frequency 2D objects, particles and generative graphics. Prefer Three.js for real 3D/WebGL/WebGPU scenes, model animation, shaders and camera systems. Every heavy renderer needs teardown, resize/device-pixel-ratio controls, visibility handling and mobile quality/fallback decisions.
+
+### Motion accessibility
+Honor `prefers-reduced-motion` and provide reduced/static alternatives. Avoid flashing, uncontrolled parallax, focus displacement and motion that blocks task completion. If motion is essential to communicate state, preserve the state change without relying on animation alone.
+
 ### TypeScript
 Prefer narrowing and API/contract repair over suppression. Typed linting is enabled only when its additional project-analysis cost is justified. Do not force TS migration onto a JavaScript codebase unless requested or materially justified.
 
@@ -77,6 +90,11 @@ Load the existing digital security specialist pack for threat-sensitive work. Re
 - Playwright: browser/E2E verification authority when a real browser flow matters.
 - Chrome DevTools MCP: runtime/performance/memory inspection when available and useful.
 - Bun/Deno: only when the project already uses them or explicit runtime evaluation/migration is requested.
+- Native CSS/WAAPI/View Transitions: default for simple/intermediate motion when sufficient.
+- Motion vs GSAP: choose by framework and motion complexity; Motion favors component/layout/gesture workflows, GSAP favors advanced timeline/scroll/SVG/cross-renderer choreography.
+- Recharts/ECharts/D3: choose by chart complexity, framework fit and required customization.
+- PixiJS/Three.js: select only for high-density 2D or actual 3D/GPU needs; do not add GPU renderers for ordinary UI motion.
+- Lottie/Rive-class assets: use only with authorized assets and verify renderer compatibility, size and reduced-motion behavior.
 - Clinic.js: historical reference only because the upstream states it is not actively maintained.
 
 ## Refactor contract
@@ -89,7 +107,7 @@ Do not combine unrelated formatter churn, dependency upgrades, module-format mig
 
 Select the smallest sufficient set:
 
-`lint/static -> typecheck -> unit -> integration -> build -> browser E2E -> console/network -> performance trace -> heap comparison -> bundle diff -> dependency/security checks -> independent review`.
+`lint/static -> typecheck -> unit -> integration -> build -> browser E2E -> interaction/keyboard/touch -> reduced-motion -> console/network -> performance trace -> frame/render cost -> heap comparison -> bundle diff -> data-viz accuracy/accessibility -> dependency/security checks -> independent review`.
 
 Not every task needs every gate. Every task needs evidence tied to its failure/risk.
 
