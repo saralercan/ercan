@@ -3,7 +3,7 @@
 Status: active
 Date: 2026-09-19
 
-Purpose: promote reviewed GitHub/open-source capabilities into qualified Ercan OS specialist routing for web, app/mobile, social media, SEO/AEO/GEO, Meta advertising/measurement and branding. This standard supplements, and never overrides, root `AGENTS.md`, `AGENT_REGISTRY.md`, `QUALIFIED_AGENT_ROUTING.md`, project adapters, safety, scope and independent QA rules.
+Purpose: promote reviewed GitHub/open-source capabilities into qualified Ercan OS specialist routing for web, JavaScript/TypeScript, editorial/writing, app/mobile, social media, SEO/AEO/GEO, Meta advertising/measurement and branding. This standard supplements, and never overrides, root `AGENTS.md`, `AGENT_REGISTRY.md`, `QUALIFIED_AGENT_ROUTING.md`, project adapters, safety, scope and independent QA rules.
 
 Machine-readable manifest: `docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.json`.
 JIT upstream catalog supplement: `docs/upstream/GITHUB_SPECIALIST_CATALOG_V3.md`.
@@ -81,7 +81,7 @@ Core rule: reproduce and measure when executable evidence is available, patch th
 
 For material blog/article/website copy, technical writing, UX/microcopy, SEO/AEO content, product/ecommerce copy, newsletters, social copy, scripts, case studies, thought leadership, long-form reports, rewriting, developmental/structural/line/copy editing, proofreading, fact checking, citations, accessibility or localization, load `.agents/skills/editorial-writing-capability-pack/SKILL.md` + `docs/standards/EDITORIAL_WRITING_ENGINE.md`.
 
-User-facing aliases such as `@Writing`, `@Editor`, `@BlogEditor`, `@Copywriter`, `@TechnicalWriter`, `@UXWriter` and `@SEOContentEditor` are JIT routing aliases. They compose roles such as EditorialStrategist, ResearchWriter, BlogWriter, LongformWriter, WebsiteCopywriter, ProductCopywriter, UXWriter, SEOContentEditor, AEOContentEditor, BrandVoiceEditor, DevelopmentalEditor, StructuralEditor, LineEditor, CopyEditor, Proofreader, FactChecker, CitationEditor, AccessibilityContentEditor, LocalizationEditor, StructuredContentEditor, NewsletterEditor, SocialCopyEditor, ScriptWriter, CaseStudyWriter, ThoughtLeadershipWriter and EditorialReviewer.
+User-facing aliases such as `@Writing`, `@Editor`, `@BlogEditor`, `@Copywriter`, `@TechnicalWriter`, `@UXWriter` and `@SEOContentEditor` are JIT routing aliases. They compose roles such as EditorialStrategist, ResearchWriter, BlogWriter, LongformWriter, TechnicalWriter, WebsiteCopywriter, ProductCopywriter, EcommerceContentEditor, UXWriter, SEOContentEditor, AEOContentEditor, BrandVoiceEditor, DevelopmentalEditor, StructuralEditor, LineEditor, CopyEditor, Proofreader, FactChecker, CitationEditor, OriginalityEditor, AccessibilityContentEditor, LocalizationEditor, StructuredContentEditor, NewsletterEditor, SocialCopyEditor, ScriptWriter, CaseStudyWriter, ThoughtLeadershipWriter, CorporateCommsEditor, ContentRefreshEditor, HeadlineTitleEditor, ReadabilityEditor, ContentRepurposingEditor, DocumentationEditor, HelpCenterWriter, FAQEditor, EmailCopywriter, AdCopywriter, OutreachCopyEditor, ProposalWriter, PressReleaseWriter, InterviewTranscriptEditor, StyleGuideEditor, TerminologyEditor, EditorialCalendarStrategist and EditorialReviewer.
 
 These roles map to existing Orchestrator, brand, SEO/AEO, social, web/frontend, platform, accessibility and QA owners and **do not change the 52 stable identities**.
 
