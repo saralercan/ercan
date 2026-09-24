@@ -47,6 +47,7 @@ Examples:
 - cross-channel brand-system work → brand-system/runtime/token specialist(s) + independent `@BrandComplianceQA` when the brand system itself is materially affected
 
 ### 3. Qualification filter
+Before domain-specific qualification, every candidate inherits `AGENCY_EXCELLENCE_STANDARD.md`. Selection favors the smallest pod whose members have the right domain ownership **and** can meet the task’s principal-level craft/evidence/verification bar. A specialist that cannot access required evidence/tooling is not qualified merely because its name matches the topic.
 A specialist is selected only when it has a material contribution and passes the relevant filters:
 
 - **project fit** — understands the active project/platform/brand context
@@ -190,7 +191,7 @@ Load `AGENT_RUNTIME_STACK.md` + `agent-runtime-stack`. Do not fan out Ollama, La
 
 ## Quality over agent count
 
-Success is measured by outcome quality, correctness, verification and preserved scope — never by the raw number of agents invoked.
+Success is measured by principal-level outcome quality, correctness, usefulness, craft, verification and preserved scope — never by the raw number of agents invoked.
 
 Forbidden behavior:
 - running the whole registry in parallel because the user said “all agents”;
