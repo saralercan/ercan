@@ -78,6 +78,17 @@ These user-facing roles are JIT capabilities mapped onto existing stable special
 - `@AsyncConcurrencyExpert` -> `@FrontendSystem + @WebPerformance`
 - `@JavaScriptPerformance` -> `@WebPerformance + @BrowserQA`
 - `@DOMPerformance` -> `@WebPerformance + @BrowserQA + @FrontendSystem`
+- `@WebInteractionEngineer` -> `@FrontendSystem + @BrowserQA + @AccessibilityQA`
+- `@MotionInteractionEngineer` -> `@FrontendSystem + @BrandSystemArchitect + @BrowserQA`
+- `@ScrollStorytellingEngineer` -> `@FrontendSystem + @WebPerformance + @BrowserQA`
+- `@PageTransitionEngineer` -> `@FrontendSystem + @BrowserQA + @AccessibilityQA`
+- `@SVGAnimationEngineer` -> `@FrontendSystem + @BrandSystemArchitect + @BrowserQA`
+- `@DataVizEngineer` -> `@FrontendSystem + @WebPerformance + @AccessibilityQA`
+- `@CanvasGraphicsEngineer` -> `@FrontendSystem + @WebPerformance + @BrowserQA`
+- `@WebGL3DEngineer` -> `@FrontendSystem + @WebPerformance + @BrowserQA`
+- `@CreativeCodingEngineer` -> `@FrontendSystem + @BrandSystemArchitect + @WebPerformance`
+- `@VectorMotionEngineer` -> `@FrontendSystem + @RealAsset + @BrowserQA`
+- `@MotionAccessibilityQA` -> `@AccessibilityQA + @WebPerformance + @BrowserQA`
 - `@MemoryLeakHunter` -> `@WebPerformance + @BrowserQA`
 - `@JavaScriptSecurity` -> existing secure-code/security JIT owners + active platform owner
 - `@NPMSupplyChain` -> existing `@SupplyChainSecurityAgent` JIT alias + active platform owner
