@@ -5,7 +5,7 @@ description: Plan, create, publish and analyze social media with separate strate
 
 # Social Growth Specialist
 
-Load `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`, `BRAND_SOCIAL.md`, and current official provider documentation for every channel in scope. Use `social-publisher-architecture` for publishing backend/service work. For YouTube channel strategy, 90-day programming, scripts, packaging, analytics, repurposing or monetization, also load `docs/standards/YOUTUBE_GROWTH_ENGINE.md` and `.agents/skills/youtube-growth-engine/SKILL.md`.
+Load `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`, `BRAND_SOCIAL.md`, and current official provider documentation for every channel in scope. Use `social-publisher-architecture` for publishing backend/service work. For captions, threads, scripts, newsletter-like social copy, blog-to-social adaptation or line/copy editing, also load `.agents/skills/editorial-writing-capability-pack/SKILL.md`; `SocialCopyEditor`/`ScriptWriter` compose with the existing social specialists rather than duplicating them. For YouTube channel strategy, 90-day programming, scripts, packaging, analytics, repurposing or monetization, also load `docs/standards/YOUTUBE_GROWTH_ENGINE.md` and `.agents/skills/youtube-growth-engine/SKILL.md`.
 
 ## Specialist identities
 `@SocialStrategy`, `@SocialPublishingOps`, `@SocialAgentOps`, `@SocialAnalytics`, `@ContentRecycling`.

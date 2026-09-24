@@ -16,6 +16,9 @@ Load `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`, `AI_DISCOVERY_SEO.md`, 
 ## Authority
 Current Google Search Central, Bing/IndexNow, Schema.org, OpenAI/Perplexity publisher/crawler documentation and official CMS/commerce platform docs outrank community scores and heuristics.
 
+## Editorial content routing
+For blog/article/page writing, rewriting, content refreshes, search-intent briefs, on-page copy or people-first SEO/AEO editing, load `.agents/skills/editorial-writing-capability-pack/SKILL.md` + `docs/standards/EDITORIAL_WRITING_ENGINE.md`. SEO/AEO specialists define search/discovery requirements; the editorial pack owns prose creation/editing and independent content QA. Do not let keyword/query expansion override usefulness or source truth.
+
 ## Deep specialist routing
 For search architecture, content opportunity/decay/cannibalization, schema/entity modeling, first-party search measurement or AI-search visibility work, also load `.agents/skills/digital-specialist-agent-pack/SKILL.md` + `docs/standards/DIGITAL_SPECIALIST_AGENTS.md`. Google Search Central/Search Console remains primary authority; optional `marketingskills/seo` patterns never override first-party evidence.
 

@@ -14,6 +14,7 @@ Latest adaptive capability expansion: `docs/upstream/scans/2026-09-24-adaptive-c
 Latest design-quality expansion: `docs/upstream/scans/2026-09-24-design-quality-engine.md`.
 Latest JavaScript specialist expansion: `docs/upstream/scans/2026-09-24-javascript-specialist-capability-pack.md`.
 Latest JavaScript motion/graphics expansion: `docs/upstream/scans/2026-09-24-javascript-motion-graphics-web-expansion.md`.
+Latest editorial/writing expansion: `docs/upstream/scans/2026-09-24-editorial-writing-capability-pack.md`.
 Regression eval: `docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md`.
 Structural scoreboard: `docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md`.
 Behavioral certification: `docs/evals/GITHUB_SPECIALIST_CERTIFICATION_V3.md`.
@@ -75,6 +76,18 @@ The user-facing `@JavaScript` alias composes focused JIT roles such as JavaScrip
 Reviewed JIT references include `addyosmani/agent-skills` for evidence-oriented engineering workflow patterns; `vercel-labs/agent-skills:react-best-practices` for compatible React/Next performance rules; `ChromeDevTools/chrome-devtools-mcp` for live console/network/performance/memory inspection; `typescript-eslint/typescript-eslint`, ESLint and Biome for project-compatible static/type quality; Vitest and Playwright for executable testing; and the exact project runtime's official Node/Bun/Deno guidance. `clinicjs/node-clinic` is historical/pattern-only because the upstream states it is not actively maintained.
 
 Core rule: reproduce and measure when executable evidence is available, patch the smallest causal surface, rerun the original failure, and never treat lint/build success alone as JavaScript runtime verification.
+
+## Editorial & Writing Capability Pack
+
+For material blog/article/website copy, technical writing, UX/microcopy, SEO/AEO content, product/ecommerce copy, newsletters, social copy, scripts, case studies, thought leadership, long-form reports, rewriting, developmental/structural/line/copy editing, proofreading, fact checking, citations, accessibility or localization, load `.agents/skills/editorial-writing-capability-pack/SKILL.md` + `docs/standards/EDITORIAL_WRITING_ENGINE.md`.
+
+User-facing aliases such as `@Writing`, `@Editor`, `@BlogEditor`, `@Copywriter`, `@TechnicalWriter`, `@UXWriter` and `@SEOContentEditor` are JIT routing aliases. They compose roles such as EditorialStrategist, ResearchWriter, BlogWriter, LongformWriter, WebsiteCopywriter, ProductCopywriter, UXWriter, SEOContentEditor, AEOContentEditor, BrandVoiceEditor, DevelopmentalEditor, StructuralEditor, LineEditor, CopyEditor, Proofreader, FactChecker, CitationEditor, AccessibilityContentEditor, LocalizationEditor, StructuredContentEditor, NewsletterEditor, SocialCopyEditor, ScriptWriter, CaseStudyWriter, ThoughtLeadershipWriter and EditorialReviewer.
+
+These roles map to existing Orchestrator, brand, SEO/AEO, social, web/frontend, platform, accessibility and QA owners and **do not change the 52 stable identities**.
+
+Reviewed JIT references include Vale, textlint, retext, markdownlint, CSpell, alex and lychee for deterministic editorial checks, plus selected agent-skill repositories for workflow patterns. Google Search Central, Google Technical Writing, Microsoft Writing Style Guide and W3C/WAI remain higher-authority references for people-first search content, technical writing and accessible web prose. Project-owned brand/style sources remain primary for voice and terminology.
+
+Core rule: authoring, factual verification and final editorial review are separate concerns. A fluent draft, a clean prose-lint run or an SEO score is never sufficient evidence by itself.
 
 ## App / mobile pod
 
@@ -192,7 +205,7 @@ These additions do **not** change the stable identity count: 21 Stable Core + 31
 
 ## Qualified routing matrix
 
-For a material website task, consider web architecture/frontend/platform + technical SEO + performance + accessibility + browser QA when those surfaces are touched. Add the JavaScript specialist pack when JS/TS architecture, runtime, async, memory, bundle, dependency or code-level performance is materially involved.
+For a material website task, consider web architecture/frontend/platform + technical SEO + performance + accessibility + browser QA when those surfaces are touched. Add the Editorial & Writing Capability Pack when website copy, blog/editorial, UX microcopy, structured content or content QA is material. Add the JavaScript specialist pack when JS/TS architecture, runtime, async, memory, bundle, dependency or code-level performance is materially involved.
 For a material mobile task, select `@MobileArchitect`, exactly the implementation stack specialist(s) required, `@MobileQA`, and release engineering only when build/store delivery is in scope.
 For social work, separate strategy, production/publishing and analytics; authenticated publishing is never implied by content creation.
 For SEO, select platform SEO specialist only when that platform is active; add AEO/GEO only when AI-discovery/search-answerability is in scope or materially affected.
