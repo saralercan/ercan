@@ -11,6 +11,7 @@ on:
       - '.agents/skills/ecommerce-specialist/**'
       - '.agents/skills/finance-specialist/**'
       - '.agents/skills/portable-agent-router/**'
+      - '.agents/skills/continual-expertise-engine/**'
       - 'docs/standards/AGENT_EXPERTISE_SOURCE_MATRIX.json'
       - 'docs/standards/AGENT_CONTINUAL_EXPERTISE_ENGINE.md'
       - 'docs/standards/PORTABLE_AGENT_RUNTIME.md'
@@ -34,6 +35,16 @@ on:
   push:
     branches: [master]
     paths:
+      - 'CLAUDE.md'
+      - '.claude/agents/**'
+      - '.agents/skills/ecommerce-specialist/**'
+      - '.agents/skills/finance-specialist/**'
+      - '.agents/skills/portable-agent-router/**'
+      - '.agents/skills/continual-expertise-engine/**'
+      - 'docs/standards/AGENT_EXPERTISE_SOURCE_MATRIX.json'
+      - 'docs/standards/AGENT_CONTINUAL_EXPERTISE_ENGINE.md'
+      - 'docs/standards/PORTABLE_AGENT_RUNTIME.md'
+      - 'docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json'
       - '.codex/config.toml'
       - 'docs/standards/AGENT_REGISTRY.md'
       - 'AGENTS.md'
