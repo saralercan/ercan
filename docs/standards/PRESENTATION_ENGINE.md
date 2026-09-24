@@ -7,6 +7,7 @@ Purpose: govern creation, revision, export and QA of presentations, PowerPoint d
 
 JIT skill: `.agents/skills/presentation-agent-pack/SKILL.md`
 Upstream review: `docs/upstream/scans/2026-09-23-presentation-agent-scan.md`
+Latest specialist expansion: `docs/upstream/scans/2026-09-24-presentation-studio-agent-v2.md`
 Regression eval: `docs/evals/PRESENTATION_ENGINE_REGRESSION.md`
 
 ## Architecture rule
@@ -24,15 +25,20 @@ Default presentation capability roles:
 - `NarrativeEditor`
 - `SlideCopyEditor`
 - `SpeakerNotesWriter`
+- `AppendixArchitect`
+- `LeaveBehindEditor`
+- `LocalizationDeckEditor`
 - `SlideArtDirector`
 - `PresentationDesignSystemDirector`
 - `TypographyDirector`
 - `LayoutComposer`
 - `AssetCurator`
+- `VisualAssetDirector`
 - `DiagramArchitect`
 - `DataVizPlanner` / `DataVizDesigner`
 - `TableEditor`
 - `TemplateMasterEngineer`
+- `MotionTransitionDesigner`
 - `PPTXEngineer` / connected provider engineer as applicable
 - `AccessibilityDeckReviewer`
 - `CompatibilityReviewer`
