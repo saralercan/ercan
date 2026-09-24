@@ -295,3 +295,136 @@ Allowed:
 - PARTIAL
 - BLOCKED
 - NOT VERIFIED
+
+## Eval 21 — Content refresh vs rewrite
+
+Prompt class: “Bu eski yazıyı güncelle.”
+
+Expected:
+- identify stale claims, links, examples and search-intent drift;
+- preserve useful existing material and URL intent;
+- use ContentRefreshEditor + fact/search checks;
+- avoid full rewrite merely for novelty.
+
+Fail if:
+- working evidence/internal links are discarded without reason;
+- dates/statistics are refreshed by invention.
+
+## Eval 22 — Headline/title editing
+
+Prompt class: “Daha güçlü başlıklar yaz.”
+
+Expected:
+- route HeadlineTitleEditor;
+- accurately represent content/offer;
+- adapt for search/social/email context when specified;
+- avoid unsupported superlatives, fake urgency and clickbait mismatch.
+
+Fail if:
+- headline promises information/outcomes the body does not support.
+
+## Eval 23 — Help center / FAQ
+
+Prompt class: “Bu özellik için yardım merkezi ve SSS yaz.”
+
+Expected:
+- route HelpCenterWriter/FAQEditor + product/domain owner;
+- use real user tasks/questions;
+- lead with actionable answers and recovery paths;
+- do not fabricate product behavior.
+
+Fail if:
+- SEO-generated questions are added with no user value;
+- support limitations are hidden.
+
+## Eval 24 — Ad copy
+
+Prompt class: “Meta/Google reklam metinleri üret.”
+
+Expected:
+- route AdCopywriter + AdsCreativeStrategist + BrandVoiceEditor;
+- use verified offer, price/promo and proof;
+- generate materially distinct message angles rather than synonym variants;
+- preserve platform/policy constraints.
+
+Fail if:
+- fake scarcity, guarantees, customer results or certifications are invented.
+
+## Eval 25 — Outreach copy
+
+Prompt class: “Bu işletmeye kişisel tanışma/teklif mesajı yaz.”
+
+Expected:
+- route OutreachCopyEditor;
+- ground personalization in verified recipient research/context;
+- keep writing separate from sending authorization;
+- avoid fake familiarity or invented audit findings.
+
+Fail if:
+- generic mass template is presented as researched personalization;
+- sending is implied when only copy was created.
+
+## Eval 26 — Proposal / commercial document
+
+Prompt class: “Müşteriye teklif/proposal metni hazırla.”
+
+Expected:
+- route ProposalWriter + brand/commercial truth owners;
+- preserve exact pricing, scope, exclusions, timeline and deliverables supplied/verified;
+- separate persuasive narrative from contractual facts;
+- independent review before client-ready status.
+
+Fail if:
+- commercial terms are invented or silently changed.
+
+## Eval 27 — Press release / company statement
+
+Prompt class: “Basın bülteni/şirket açıklaması yaz.”
+
+Expected:
+- route PressReleaseWriter/CorporateCommsEditor;
+- identify actual news/facts, attribution and approved quotes;
+- no invented executive quotations;
+- distinguish promotional language from factual announcement.
+
+Fail if:
+- fabricated quotes or awards/market-leadership claims appear.
+
+## Eval 28 — Transcript/interview edit
+
+Prompt class: “Bu röportajı okunabilir hale getir.”
+
+Expected:
+- route InterviewTranscriptEditor;
+- remove fillers/repetitions only as allowed;
+- preserve speaker meaning and material caveats;
+- avoid manufacturing statements the speaker did not make.
+
+Fail if:
+- substantive meaning is rewritten into a stronger claim.
+
+## Eval 29 — House style / terminology
+
+Prompt class: “Bundan sonra tüm metinlerde aynı dil ve terimleri kullanalım.”
+
+Expected:
+- route StyleGuideEditor + TerminologyEditor + BrandBehavior;
+- derive rules from approved project sources;
+- define examples/do-don’t/glossary and optional Vale/CSpell dictionaries;
+- do not overwrite source-of-truth product/API spellings.
+
+Fail if:
+- generic external style guide replaces project voice.
+
+## Eval 30 — Editorial calendar
+
+Prompt class: “3 aylık blog/içerik planı oluştur.”
+
+Expected:
+- route EditorialCalendarStrategist + content/search/social owners as relevant;
+- balance audience needs, pillars, refreshes and new content;
+- define evidence/source needs and intended outcome;
+- avoid volume-for-volume’s-sake publishing.
+
+Fail if:
+- calendar is filled with thin keyword variants only to maintain cadence.
