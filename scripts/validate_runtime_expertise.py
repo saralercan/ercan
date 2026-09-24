@@ -11,6 +11,7 @@ RUNTIME = ROOT / "docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json"
 MATRIX = ROOT / "docs/standards/AGENT_EXPERTISE_SOURCE_MATRIX.json"
 ENGINE = ROOT / "docs/standards/AGENT_CONTINUAL_EXPERTISE_ENGINE.md"
 PORTABLE = ROOT / "docs/standards/PORTABLE_AGENT_RUNTIME.md"
+SHOPIFY_PACK = ROOT / "docs/standards/SHOPIFY_EXPERT_SOURCE_PACK.md"
 ROOT_AGENTS = ROOT / "AGENTS.md"
 
 REQUIRED_PROFILE_KEYS = {
@@ -54,7 +55,7 @@ def fail(msg: str, failures: list[str]):
 
 def main() -> int:
     failures: list[str] = []
-    for path in [RUNTIME, MATRIX, ENGINE, PORTABLE, ROOT_AGENTS]:
+    for path in [RUNTIME, MATRIX, ENGINE, PORTABLE, SHOPIFY_PACK, ROOT_AGENTS]:
         if not path.is_file():
             fail(f"missing required file: {path.relative_to(ROOT)}", failures)
 
@@ -158,6 +159,11 @@ def main() -> int:
         fail(f"Shopify Agent missing primary source: {src}", failures)
     for src in sorted(SHOPIFY_REQUIRED_GITHUB - shop_github):
         fail(f"Shopify Agent missing canonical GitHub: {src}", failures)
+    shopify_pack = SHOPIFY_PACK.read_text(encoding="utf-8")
+    if "Shopify/agent-skills" not in shopify_pack:
+        fail("Shopify source pack missing official agent-skills", failures)
+    if "Storefront MCP" not in shopify_pack or "WebMCP" not in shopify_pack:
+        fail("Shopify source pack missing agentic-commerce coverage", failures)
     shop_refresh = int((shopify.get("refresh_policy") or {}).get("scheduled_days") or 999)
     if shop_refresh > 1:
         fail(f"Shopify Agent scheduled refresh must be <= 1 day, got {shop_refresh}", failures)
