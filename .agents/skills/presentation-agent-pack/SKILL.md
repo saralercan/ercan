@@ -7,7 +7,7 @@ description: Route Ercan OS presentation work through an expert presentation-stu
 
 Load `docs/standards/PRESENTATION_ENGINE.md`, root `AGENTS.md`, `docs/standards/AGENT_REGISTRY.md`, the active project adapter, task-relevant brand standards and source material.
 
-This is a JIT capability pack. It does **not** create duplicate permanent routing identities. It composes existing Ercan OS specialists with presentation-specific capability roles and replaceable upstream engines.
+This is a JIT capability pack. It does **not** create duplicate permanent routing identities or change the **21 Stable Core + 31 GitHub Specialist v3 Extension = 52 stable routing identities**. It composes existing Ercan OS specialists with presentation-specific capability roles and replaceable upstream engines.
 
 ## Presentation capability roles
 
