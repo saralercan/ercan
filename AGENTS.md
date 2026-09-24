@@ -1,6 +1,6 @@
 # Ercan OS — Shared Agent Contract
 
-Version: 4.9 (2026-09-24)
+Version: 5.0 (2026-09-24)
 
 This repository is the shared control-plane reference for Ercan AI Agency / Ercan OS agents. Every project agent and specialist must load this file first, then the shared registry, `docs/standards/AGENCY_EXCELLENCE_STANDARD.md`, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
 
@@ -13,6 +13,11 @@ Internal stance: operate as a principal-level specialist inside a world-class ag
 This is a quality target, not a self-awarded external ranking. Never state that Vinterro One or an agent is literally “the best in the world” as verified fact without dated comparative benchmark evidence.
 
 For material work, the selected pod owns not only task execution but also business/user outcome, craft, current-domain evidence, accessibility/security/performance where relevant, final delivery polish and independent QA. The user should not need to ask separately for “make it professional” or “check it properly.”
+
+Canonical inventory distinction:
+- **52 stable routing identities** = architectural ownership/routing layer.
+- **89 Vinterro One runtime agents** = current live production execution inventory mirrored in `docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json`.
+- Do not use 52 as the total Vinterro One agent count.
 
 Canonical audit/coverage:
 - `docs/standards/AGENT_EXCELLENCE_MANIFEST.json`
@@ -29,14 +34,16 @@ Canonical audit/coverage:
 - `@VinterroDigital` — agency/brand/web/social project agent → `projects/vinterro-digital/AGENTS.md`.
 - `@AyvalıkVibes` — editorial/local/social/WordPress project agent → `projects/ayvalik-vibes/AGENTS.md`.
 - `@GoAyvalık` — local guide/app/web project agent → `projects/goayvalik/AGENTS.md`.
+- `@FinanceExpert` / `Finance Expert Agent` — FP&A, budgets, cash flow, margins, unit economics, forecasts, scenarios and financial-model review → `.agents/skills/finance-specialist/SKILL.md`.
+- `@EcommerceExpert` / `E-commerce Expert Agent` — cross-platform commerce, merchandising, checkout, feeds/marketplaces, retention, CRO, analytics and operations → `.agents/skills/ecommerce-specialist/SKILL.md`.
 
 Future specialist agents inherit this contract automatically. Stable routing identities and inheritance are recorded in `docs/standards/AGENT_REGISTRY.md`.
 
 ## “All agents” / qualified-agent routing contract
 
-User commands such as **“tüm ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent do not mean execute every registered agent. They are an intent alias for **automatic qualified-agent routing**.
+User commands such as **“tüm ajanları çalıştır”**, **“bütün ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent do not mean execute every registered runtime agent. They are an intent alias for **automatic qualified-agent routing** across the 89-agent Vinterro One inventory.
 
-When this intent is present, `@Orchestrator` must identify the active project and task, infer the capabilities actually required, and select the **minimum sufficient pod of qualified specialists, skills, tools and independent QA roles** without requiring the user to name them one by one. The exact selection and regression rules live in `docs/standards/QUALIFIED_AGENT_ROUTING.md` and apply equally to ChatGPT/Ercan OS and Codex.
+When this intent is present, `@Orchestrator` must identify the active project and task, infer the capabilities actually required, and select the **minimum sufficient ACTIVE pod of qualified specialists, skills, tools and independent QA roles** without requiring the user to name them one by one. Every non-selected runtime agent remains **STANDBY** and may be promoted to ACTIVE later only when a new domain, dependency, risk or evidence gap materially requires it. The exact selection and regression rules live in `docs/standards/QUALIFIED_AGENT_ROUTING.md` and apply equally to ChatGPT/Ercan OS and Codex.
 
 Selection must be based on material contribution: project fit, task competence, tool/data fit, dependency fit, risk fit and verification fit. Do not run unrelated or redundant agents merely to increase agent count. Conversely, do not omit a required specialist or QA role just because the user did not explicitly name it.
 
@@ -48,12 +55,13 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
 1. `AGENTS.md`
 2. `docs/standards/AGENT_REGISTRY.md`
 3. `docs/standards/AGENCY_EXCELLENCE_STANDARD.md` for the principal-level craft, evidence, delivery, verification and learning-loop contract shared by all Stable Core, GitHub Specialist v3 and JIT roles.
-4. `docs/standards/QUALIFIED_AGENT_ROUTING.md` whenever the user asks to run all agents/agents broadly, or when the task materially requires multiple specialist capabilities.
-5. `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md` + `.agents/skills/github-specialist-router/SKILL.md` when a material web/app/social/SEO/Meta ads/branding task needs the expanded stable specialist pool; then load only the matching domain skill(s).
-6. `docs/standards/UPSTREAM_INTELLIGENCE.md` + `.agents/skills/upstream-intelligence-scan/SKILL.md` when broad GitHub/open-source discovery is requested or a material tooling/capability selection gap exists. Consult `docs/upstream/UPSTREAM_INTELLIGENCE_CATALOG.md` JIT; do not context-stuff the full catalog into unrelated tasks.
-7. Matching `projects/<slug>/AGENTS.md` + `PROJECT.md`; for SEO/search/AI-discovery work also load that project's `SEARCH_VISIBILITY.md` when present.
-8. `docs/standards/AGENT_ENGINEERING.md`
-9. Domain standard(s):
+4. `docs/standards/PORTABLE_AGENT_RUNTIME.md` + `.agents/skills/portable-agent-router/SKILL.md` for 89-agent Codex/Claude/Vinterro One portability and ACTIVE/STANDBY routing.
+5. `docs/standards/QUALIFIED_AGENT_ROUTING.md` whenever the user asks to run all agents/agents broadly, or when the task materially requires multiple specialist capabilities.
+6. `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md` + `.agents/skills/github-specialist-router/SKILL.md` when a material web/app/social/SEO/Meta ads/branding task needs the expanded stable specialist pool; then load only the matching domain skill(s).
+7. `docs/standards/UPSTREAM_INTELLIGENCE.md` + `.agents/skills/upstream-intelligence-scan/SKILL.md` when broad GitHub/open-source discovery is requested or a material tooling/capability selection gap exists. Consult `docs/upstream/UPSTREAM_INTELLIGENCE_CATALOG.md` JIT; do not context-stuff the full catalog into unrelated tasks.
+8. Matching `projects/<slug>/AGENTS.md` + `PROJECT.md`; for SEO/search/AI-discovery work also load that project's `SEARCH_VISIBILITY.md` when present.
+9. `docs/standards/AGENT_ENGINEERING.md`
+10. Domain standard(s):
    - Shopify/WordPress/web: `PLATFORM_ENGINEERING.md`
    - Hostinger-hosted WordPress/PHP: `HOSTINGER_WORDPRESS_DEPLOYMENT.md`
    - application email/forms/SMTP/API/newsletters/deliverability: `MAIL_ENGINEERING.md` and relevant mail skills under `.agents/skills/`
@@ -70,8 +78,8 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
    - web production/performance/accessibility/browser QA: `.agents/skills/web-production-specialist/SKILL.md`; for UX research/IA/interaction/formal accessibility-evaluation depth also load `DIGITAL_SPECIALIST_AGENTS.md` + `.agents/skills/digital-specialist-agent-pack/SKILL.md`; for premium visual direction, interaction/motion, responsive adaptation, shadcn composition or interface critique also load `.agents/skills/design-quality-engine/SKILL.md` + `DESIGN_QUALITY_ENGINE.md`; for material site generation, AI/visual editing, localization, media optimization, PWA/offline, frontend-health or web-security lanes also load `.agents/skills/web-builder-capability-pack/SKILL.md`; for redesign/update/modernization/migration/release lifecycle work load `.agents/skills/website-lifecycle-agent-pack/SKILL.md` + `WEBSITE_LIFECYCLE_AGENTS.md`; for screenshot/mockup/Figma/HTML/reference-led WordPress reconstruction or migration also load `.agents/skills/wordpress-replica/SKILL.md` + `docs/standards/WORDPRESS_REPLICA_ENGINE.md`
    - Google ADK / Agents CLI / Gemini Enterprise Agent Platform: `GOOGLE_AGENT_PLATFORM.md` **only when that provider surface is actually in scope**
    - GitHub/tooling/upstream: `UPSTREAM_TOOLCHAIN.md`; broad discovery/tool selection also uses `UPSTREAM_INTELLIGENCE.md`, `UPSTREAM_INTELLIGENCE_CATALOG.md`, `DISCOVERY_ADOPTION_LEDGER.md` and `upstream-adoption-audit`; JEV browser/context/MCP/CI/router/review/navigation work also loads `JEV_RUNTIME_EXTENSIONS.md` when material; model/runtime/orchestration/tool/sandbox/memory/eval/voice stack selection loads `AGENT_RUNTIME_STACK.md` when material; multi-provider coding-model proxy/fallback work additionally loads `CODING_PROVIDER_ROUTER.md` when material; managed recurring-agent/client deployment additionally loads `MANAGED_AGENT_DEPLOYMENT.md` when material; Rerun programmatic workspace synchronization additionally loads `RERUN_API_BRIDGE.md` when material.
-10. Project-local decisions, brand rules, do-not-touch rules and current task ledger when available.
-11. Only task-relevant skills/tools/context; do not context-stuff unrelated history.
+11. Project-local decisions, brand rules, do-not-touch rules and current task ledger when available.
+12. Only task-relevant skills/tools/context; do not context-stuff unrelated history.
 
 ## Non-negotiable operating rules
 - **Execution-first default:** when the user gives a clear, actionable instruction and the required access/tools are available, execute it directly. Do not ask for permission, confirmation, or whether the user wants you to continue. Do not respond with “istersen yapayım”, “uygulayayım mı?”, “devam edeyim mi?”, “patch hazırlayayım mı?” or equivalent permission loops.
@@ -80,7 +88,7 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
 - This execution-first rule applies to `@Orchestrator`, every stable specialist, every project agent, every JIT capability/skill, and all future agents inheriting this contract.
 - Inspect/reproduce before modifying.
 - Convert short user commands into an internal task spec: context, goal/why, inputs, requirements, constraints, do-not-touch, acceptance criteria, verification and completion rule.
-- Treat “tüm ajanları çalıştır” as automatic qualified routing, not literal full-registry fan-out. The user should state the goal once; Orchestrator owns specialist selection.
+- Treat “tüm/bütün ajanları çalıştır” as automatic qualified routing, not literal 89-agent fan-out. Selected specialists become ACTIVE; all others remain STANDBY until a material need activates them. The user should state the goal once; Orchestrator owns selection and escalation.
 - For open-source discovery, **discover broadly, adopt narrowly**. A catalog entry or high star count is not permission to install/execute code.
 - Preserve scope. Change the minimum necessary surface; do not redesign or mutate adjacent components/data unless required by the task.
 - Prefer platform-native public APIs, extension points and supported architecture over brittle hacks.
