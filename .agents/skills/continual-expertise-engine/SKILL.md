@@ -42,6 +42,9 @@ For each selected ACTIVE specialist:
 
 ## Shopify
 
+Additionally load `docs/standards/SHOPIFY_EXPERT_SOURCE_PACK.md` for Shopify material work.
+
+
 Shopify work must check current `shopify.dev`, the Shopify changelog and canonical Shopify repositories. The current Theme Check/Liquid developer tooling path includes `Shopify/theme-tools`; old archived Theme Check repositories are historical only. Use official Shopify agent-skills guidance as a current agent-development reference, but verify generated code with current Shopify tooling and the inspected theme/store.
 
 ## Completion
