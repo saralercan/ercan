@@ -18,7 +18,9 @@
       "championship_gate": "Route a cross-domain high-risk task with correct pod, dependency DAG, bounded permissions, recovery and independent verification.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "AGENTS.md + QUALIFIED_AGENT_ROUTING.md + AGENT_ENGINEERING.md + current agent/runtime/tool specs",
+      "independent_verification_owner": "independent task evaluator / @ProductionQA"
     },
     {
       "id": 2,
@@ -32,7 +34,9 @@
       "championship_gate": "Given noisy repo/article candidates, identify canonical maintained options, reject stale/forked/risky choices and produce an adoption ledger.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "UPSTREAM_INTELLIGENCE.md + canonical GitHub/releases/advisories + OpenSSF/SLSA/OSV/CISA as relevant",
+      "independent_verification_owner": "task-domain specialist + upstream adoption audit"
     },
     {
       "id": 3,
@@ -46,7 +50,9 @@
       "championship_gate": "Repair a production theme feature using current Shopify docs, Theme Check, browser QA and before/after performance evidence.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current shopify.dev + Shopify canonical repositories/changelog + inspected store/theme/app state",
+      "independent_verification_owner": "@BrowserQA + @ProductionQA"
     },
     {
       "id": 4,
@@ -60,7 +66,9 @@
       "championship_gate": "Implement a block/theme/plugin change preserving editor configurability, accessibility, security and upgrade compatibility.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current developer.wordpress.org + WordPress canonical repos/tools + inspected WP runtime",
+      "independent_verification_owner": "@BrowserQA + @ProductionQA"
     },
     {
       "id": 5,
@@ -74,7 +82,9 @@
       "championship_gate": "Classify and implement a Wix change using current native path, permissions, preview/runtime validation and rollback-safe delivery.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current dev.wix.com + official Wix Skills/CLI + inspected Wix project/runtime",
+      "independent_verification_owner": "@BrowserQA + @ProductionQA"
     },
     {
       "id": 6,
@@ -88,7 +98,9 @@
       "championship_gate": "Deliver a scoped storefront/B2B change preserving project rules, cart/account flows, brand, SEO and production QA.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "projects/dragdrop/* + current Shopify/store/analytics/brand truth + task-domain authorities",
+      "independent_verification_owner": "@ProductionQA + task-specific independent specialist"
     },
     {
       "id": 7,
@@ -102,7 +114,9 @@
       "championship_gate": "Create a research-backed client deliverable combining strategy, brand, implementation and independent client-readiness QA.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "projects/vinterro-digital/* + current live CMS/brand/client/commercial truth + task-domain authorities",
+      "independent_verification_owner": "@ProductionQA + @BrandComplianceQA when client-facing creative/brand is material"
     },
     {
       "id": 8,
@@ -116,7 +130,9 @@
       "championship_gate": "Build/update a local guide/event surface with current entity evidence, map accuracy, accessibility and editorial QA.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "projects/ayvalik-vibes/* + current official venue/organizer/municipality/entity evidence",
+      "independent_verification_owner": "@ProductionQA + factual/entity verification"
     },
     {
       "id": 9,
@@ -130,7 +146,9 @@
       "championship_gate": "Ship a multilingual guide/POI feature with source-traced data, responsive map UX, search discoverability and QA.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "projects/goayvalik/* + authoritative POI/map/municipal/event/project data",
+      "independent_verification_owner": "@ProductionQA + browser/map/data verification"
     },
     {
       "id": 10,
@@ -144,7 +162,9 @@
       "championship_gate": "Recreate a complex reference across desktop/tablet/mobile with real assets, semantic code and repeated visual correction.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "reference/Figma/user assets + active framework docs + W3C/WHATWG/MDN",
+      "independent_verification_owner": "@PixelMatch + @BrowserQA + @ProductionQA"
     },
     {
       "id": 11,
@@ -158,7 +178,9 @@
       "championship_gate": "Resolve a mixed asset library containing duplicates, wrong versions, generated placeholders and rights ambiguity.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "project/user authoritative assets + C2PA/IPTC/channel media requirements",
+      "independent_verification_owner": "@BrandComplianceQA or independent asset/provenance review"
     },
     {
       "id": 12,
@@ -172,7 +194,9 @@
       "championship_gate": "Detect and correct subtle spacing/type/crop/state differences across responsive reference/render pairs.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "authoritative reference + deterministic browser/render output + Playwright/image-diff evidence",
+      "independent_verification_owner": "@ProductionQA or separate visual reviewer"
     },
     {
       "id": 13,
@@ -186,7 +210,9 @@
       "championship_gate": "Improve a visually trendy but low-usability flow using evidence, accessible interaction and measurable task-success criteria.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "W3C/WAI/WCAG + platform HIG/design-system guidance + actual user/usability evidence",
+      "independent_verification_owner": "@AccessibilityQA + @ProductionQA"
     },
     {
       "id": 14,
@@ -200,7 +226,9 @@
       "championship_gate": "Find seeded cross-domain defects with high recall/precision and prove fixes in the final artifact/runtime.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "task-domain standards + platform-native validators + browser/runtime/test evidence",
+      "independent_verification_owner": "independent evaluator separate from the QA author when certification is consequential"
     },
     {
       "id": 15,
@@ -214,7 +242,9 @@
       "championship_gate": "Diagnose a mixed technical/content/entity visibility problem and deliver measurable, policy-compliant remediation.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current Google Search Central/Bing/Schema.org/platform publisher guidance + first-party search evidence",
+      "independent_verification_owner": "@SEOScanner/@TechnicalSEO as applicable + independent post-change verification"
     },
     {
       "id": 16,
@@ -228,7 +258,9 @@
       "championship_gate": "Run a multi-channel campaign plan with distinct creative hypotheses, authenticated ops boundaries and analytics interpretation.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current first-party social platform APIs/policies + project brand/analytics truth",
+      "independent_verification_owner": "@SocialAnalytics/@ProductionQA as applicable + provider-state evidence"
     },
     {
       "id": 17,
@@ -242,7 +274,9 @@
       "championship_gate": "Create a distinctive cross-channel campaign system and pass independent brand/art-direction/preflight review.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "project brand/assets + W3C Design Tokens/WCAG + platform-native design guidance",
+      "independent_verification_owner": "@BrandComplianceQA + @ProductionQA"
     },
     {
       "id": 18,
@@ -256,7 +290,9 @@
       "championship_gate": "Implement a production feature across routing/data/auth/UI with tests, browser QA, security/performance checks and deployment smoke.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "active framework/runtime docs + W3C/WHATWG/MDN + inspected repo/deployment truth",
+      "independent_verification_owner": "@BrowserQA + @AccessibilityQA + @ProductionQA"
     },
     {
       "id": 19,
@@ -270,7 +306,9 @@
       "championship_gate": "Assess a seeded app with authz/injection/SSRF/secrets/supply-chain issues and verify remediations without overreach.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current OWASP ASVS/WSTG + NIST + vendor advisories + inspected threat surface",
+      "independent_verification_owner": "independent security/release gate + reproducible remediation checks"
     },
     {
       "id": 20,
@@ -284,7 +322,9 @@
       "championship_gate": "Diagnose mixed TTFB/LCP/INP/CLS causes and improve the real bottleneck while preserving behavior.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current Core Web Vitals/Chrome DevTools/web.dev + field/lab/runtime evidence",
+      "independent_verification_owner": "@WebPerformance/@BrowserQA + same-flow before/after evidence"
     },
     {
       "id": 21,
@@ -298,7 +338,9 @@
       "championship_gate": "Build/review an MCP agent with malicious metadata, auth, long-running/retry and eval traps while preserving policy.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current MCP specification/security guidance + active agent-runtime docs + Ercan OS eval traces",
+      "independent_verification_owner": "independent eval harness + security/tool-state verification"
     },
     {
       "id": 22,
@@ -312,7 +354,9 @@
       "championship_gate": "Design a production architecture for an existing app under performance, SEO, auth and deployment constraints without unnecessary rewrite.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "active framework/browser docs + W3C/WAI + inspected repo/runtime and browser evidence",
+      "independent_verification_owner": "@BrowserQA/@AccessibilityQA/@WebPerformance/@ProductionQA as task risk requires"
     },
     {
       "id": 23,
@@ -326,7 +370,9 @@
       "championship_gate": "Refactor a multi-page feature into reusable accessible components with Storybook/consumer tests and no visual regression.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "active framework/browser docs + W3C/WAI + inspected repo/runtime and browser evidence",
+      "independent_verification_owner": "@BrowserQA/@AccessibilityQA/@WebPerformance/@ProductionQA as task risk requires"
     },
     {
       "id": 24,
@@ -340,7 +386,9 @@
       "championship_gate": "Catch and document seeded cross-browser/runtime defects with reproducible evidence and verify fixes.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "active framework/browser docs + W3C/WAI + inspected repo/runtime and browser evidence",
+      "independent_verification_owner": "@BrowserQA/@AccessibilityQA/@WebPerformance/@ProductionQA as task risk requires"
     },
     {
       "id": 25,
@@ -354,7 +402,9 @@
       "championship_gate": "Audit a complex interactive flow with automated + manual checks and verify remediations.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "active framework/browser docs + W3C/WAI + inspected repo/runtime and browser evidence",
+      "independent_verification_owner": "@BrowserQA/@AccessibilityQA/@WebPerformance/@ProductionQA as task risk requires"
     },
     {
       "id": 26,
@@ -368,7 +418,9 @@
       "championship_gate": "Improve a representative flow with trace-backed LCP/INP/CLS diagnosis and verified regression budget.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "active framework/browser docs + W3C/WAI + inspected repo/runtime and browser evidence",
+      "independent_verification_owner": "@BrowserQA/@AccessibilityQA/@WebPerformance/@ProductionQA as task risk requires"
     },
     {
       "id": 27,
@@ -382,7 +434,9 @@
       "championship_gate": "Certify a shared component across empty/loading/error/disabled/interactive/responsive states and consumer integration.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "active framework/browser docs + W3C/WAI + inspected repo/runtime and browser evidence",
+      "independent_verification_owner": "@BrowserQA/@AccessibilityQA/@WebPerformance/@ProductionQA as task risk requires"
     },
     {
       "id": 28,
@@ -396,7 +450,9 @@
       "championship_gate": "Design an app architecture for multiple form factors with platform-native integrations and measurable quality gates.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current Apple/Android quality guidance + active Flutter/React Native/Expo/platform docs + device/runtime evidence",
+      "independent_verification_owner": "@MobileQA + release/runtime evidence"
     },
     {
       "id": 29,
@@ -410,7 +466,9 @@
       "championship_gate": "Implement a complex adaptive Flutter feature with native integration, tests, accessibility and profile/release evidence.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current Apple/Android quality guidance + active Flutter/React Native/Expo/platform docs + device/runtime evidence",
+      "independent_verification_owner": "@MobileQA + release/runtime evidence"
     },
     {
       "id": 30,
@@ -424,7 +482,9 @@
       "championship_gate": "Implement a cross-platform feature with native edge cases, tests, accessibility and performance verification.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current Apple/Android quality guidance + active Flutter/React Native/Expo/platform docs + device/runtime evidence",
+      "independent_verification_owner": "@MobileQA + release/runtime evidence"
     },
     {
       "id": 31,
@@ -438,7 +498,9 @@
       "championship_gate": "Certify critical flows across representative devices and interruptions with deterministic evidence.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current Apple/Android quality guidance + active Flutter/React Native/Expo/platform docs + device/runtime evidence",
+      "independent_verification_owner": "@MobileQA + release/runtime evidence"
     },
     {
       "id": 32,
@@ -452,7 +514,9 @@
       "championship_gate": "Prepare a release candidate with signing/CI checks, staged rollout plan, rollback and post-release monitoring without unauthorized submission.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current Apple/Android quality guidance + active Flutter/React Native/Expo/platform docs + device/runtime evidence",
+      "independent_verification_owner": "@MobileQA + release/runtime evidence"
     },
     {
       "id": 33,
@@ -466,7 +530,9 @@
       "championship_gate": "Design a multi-channel strategy with distinct channel roles, testable hypotheses and realistic measurement.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current first-party social platform APIs/policies + project brand/analytics truth",
+      "independent_verification_owner": "@SocialAnalytics/@ProductionQA as applicable + provider-state evidence"
     },
     {
       "id": 34,
@@ -480,7 +546,9 @@
       "championship_gate": "Handle partial provider failures/retries without duplicate publishing and reconcile final state.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current first-party social platform APIs/policies + project brand/analytics truth",
+      "independent_verification_owner": "@SocialAnalytics/@ProductionQA as applicable + provider-state evidence"
     },
     {
       "id": 35,
@@ -494,7 +562,9 @@
       "championship_gate": "Execute an approved multi-step social workflow with least privilege, review checkpoints and final provider-state evidence.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current first-party social platform APIs/policies + project brand/analytics truth",
+      "independent_verification_owner": "@SocialAnalytics/@ProductionQA as applicable + provider-state evidence"
     },
     {
       "id": 36,
@@ -508,7 +578,9 @@
       "championship_gate": "Analyze mixed-channel performance with valid normalization, uncertainty and next-test recommendations.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current first-party social platform APIs/policies + project brand/analytics truth",
+      "independent_verification_owner": "@SocialAnalytics/@ProductionQA as applicable + provider-state evidence"
     },
     {
       "id": 37,
@@ -522,7 +594,9 @@
       "championship_gate": "Repurpose one source into several materially different channel outputs while preserving truth and brand.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current first-party social platform APIs/policies + project brand/analytics truth",
+      "independent_verification_owner": "@SocialAnalytics/@ProductionQA as applicable + provider-state evidence"
     },
     {
       "id": 38,
@@ -536,7 +610,9 @@
       "championship_gate": "Diagnose and repair a multi-symptom technical SEO problem with crawl evidence and post-change validation.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current Google Search Central/Bing/Schema.org/platform publisher guidance + first-party search evidence",
+      "independent_verification_owner": "@SEOScanner/@TechnicalSEO as applicable + independent post-change verification"
     },
     {
       "id": 39,
@@ -550,7 +626,9 @@
       "championship_gate": "Turn a noisy site crawl into a prioritized root-cause remediation plan with verified examples.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current Google Search Central/Bing/Schema.org/platform publisher guidance + first-party search evidence",
+      "independent_verification_owner": "@SEOScanner/@TechnicalSEO as applicable + independent post-change verification"
     },
     {
       "id": 40,
@@ -564,7 +642,9 @@
       "championship_gate": "Fix WordPress SEO issues using the existing stack/source of truth and verify rendered/indexable output.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current Google Search Central/Bing/Schema.org/platform publisher guidance + first-party search evidence",
+      "independent_verification_owner": "@SEOScanner/@TechnicalSEO as applicable + independent post-change verification"
     },
     {
       "id": 41,
@@ -578,7 +658,9 @@
       "championship_gate": "Repair Shopify ecommerce SEO across product/collection/theme output with visible truth and browser/crawl verification.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current Google Search Central/Bing/Schema.org/platform publisher guidance + first-party search evidence",
+      "independent_verification_owner": "@SEOScanner/@TechnicalSEO as applicable + independent post-change verification"
     },
     {
       "id": 42,
@@ -592,7 +674,9 @@
       "championship_gate": "Improve AI/search answerability using current guidance and measurable eligibility signals without placement guarantees.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current Google Search Central/Bing/Schema.org/platform publisher guidance + first-party search evidence",
+      "independent_verification_owner": "@SEOScanner/@TechnicalSEO as applicable + independent post-change verification"
     },
     {
       "id": 43,
@@ -606,7 +690,9 @@
       "championship_gate": "Safely implement a scoped campaign change with pre/post state, permissions and rollback-aware verification.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current official Meta developer/business/measurement docs + authorized account/event evidence",
+      "independent_verification_owner": "independent measurement/analytics or account-state verification according to task"
     },
     {
       "id": 44,
@@ -620,7 +706,9 @@
       "championship_gate": "Repair a mixed browser/server event pipeline and prove dedupe/data quality through diagnostics.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current official Meta developer/business/measurement docs + authorized account/event evidence",
+      "independent_verification_owner": "independent measurement/analytics or account-state verification according to task"
     },
     {
       "id": 45,
@@ -634,7 +722,9 @@
       "championship_gate": "Evaluate whether MMM is defensible, fit/validate if appropriate and communicate uncertainty/action limits.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current official Meta developer/business/measurement docs + authorized account/event evidence",
+      "independent_verification_owner": "independent measurement/analytics or account-state verification according to task"
     },
     {
       "id": 46,
@@ -648,7 +738,9 @@
       "championship_gate": "Design and analyze a realistic incrementality test with assumptions, power, contamination and uncertainty.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current official Meta developer/business/measurement docs + authorized account/event evidence",
+      "independent_verification_owner": "independent measurement/analytics or account-state verification according to task"
     },
     {
       "id": 47,
@@ -662,7 +754,9 @@
       "championship_gate": "Create a concept matrix with materially distinct hooks/visual systems and clean measurement plan.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "current official Meta developer/business/measurement docs + authorized account/event evidence",
+      "independent_verification_owner": "independent measurement/analytics or account-state verification according to task"
     },
     {
       "id": 48,
@@ -676,7 +770,9 @@
       "championship_gate": "Build a reusable cross-channel brand system from real strategy/assets and prove consistent adaptation.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "approved project brand truth + W3C Design Tokens + active channel/platform constraints",
+      "independent_verification_owner": "@BrandComplianceQA + @ProductionQA"
     },
     {
       "id": 49,
@@ -690,7 +786,9 @@
       "championship_gate": "Create and apply a distinctive voice system across web, outreach, social and support contexts.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "approved project brand truth + W3C Design Tokens + active channel/platform constraints",
+      "independent_verification_owner": "@BrandComplianceQA + @ProductionQA"
     },
     {
       "id": 50,
@@ -704,7 +802,9 @@
       "championship_gate": "Refactor a multi-platform token system with semantic source of truth, generation and migration verification.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "approved project brand truth + W3C Design Tokens + active channel/platform constraints",
+      "independent_verification_owner": "@BrandComplianceQA + @ProductionQA"
     },
     {
       "id": 51,
@@ -718,7 +818,9 @@
       "championship_gate": "Build a versioned brand runtime consumed by multiple surfaces and verify updates propagate without drift.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "approved project brand truth + W3C Design Tokens + active channel/platform constraints",
+      "independent_verification_owner": "@BrandComplianceQA + @ProductionQA"
     },
     {
       "id": 52,
@@ -732,7 +834,31 @@
       "championship_gate": "Review a cross-channel campaign with seeded subtle brand errors, distinguish valid adaptation and verify corrected outputs.",
       "structural_state": "STRUCTURALLY_READY",
       "behavioral_state": "NOT_RUN",
-      "external_comparative_state": "NOT_RUN"
+      "external_comparative_state": "NOT_RUN",
+      "source_authority_route": "approved project brand truth + W3C Design Tokens + active channel/platform constraints",
+      "independent_verification_owner": "@BrandComplianceQA + @ProductionQA"
     }
-  ]
+  ],
+  "required_profile_fields": [
+    "id",
+    "agent",
+    "tier",
+    "domain",
+    "principal_mandate",
+    "source_authority_route",
+    "gap_before_remediation",
+    "remediation",
+    "hard_fail",
+    "championship_gate",
+    "independent_verification_owner",
+    "structural_state",
+    "behavioral_state",
+    "external_comparative_state"
+  ],
+  "coverage": {
+    "stable_core": 21,
+    "github_specialist_v3": 31,
+    "total": 52,
+    "jit_roles": "inherit through stable owners and domain-specific standards"
+  }
 }
