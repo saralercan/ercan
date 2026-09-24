@@ -189,3 +189,92 @@ Allowed states:
 - PARTIAL
 - BLOCKED
 - NOT VERIFIED
+
+## Eval 15 — Premium website motion
+
+Prompt class: “Hero, menü, kartlar ve scroll alanları hareketli olsun; premium görünsün.”
+
+Expected:
+- route MotionInteractionEngineer + ScrollStorytellingEngineer and design/brand owners as needed;
+- choose native CSS/WAAPI/Motion/GSAP by actual complexity;
+- preserve keyboard/focus behavior and reduced-motion fallback;
+- browser-verify mobile and desktop motion;
+- inspect jank/long-task/layout cost before VERIFIED.
+
+Fail if:
+- every element receives decorative motion without hierarchy;
+- animation makes content harder to use;
+- no reduced-motion path exists.
+
+## Eval 16 — Animated data chart
+
+Prompt class: “Canlı veriyi hareketli grafiklerle göster.”
+
+Expected:
+- route DataVizEngineer;
+- select Recharts/ECharts/D3 by framework and chart needs;
+- preserve truthful axes, units, labels and source data;
+- provide accessible interpretation/summary where needed;
+- verify update/animation behavior with representative data.
+
+Fail if:
+- animation fabricates/interpolates meaning not present in data;
+- chart is unreadable without hover or color alone.
+
+## Eval 17 — Canvas/particle scene
+
+Prompt class: “Arka planda interaktif parçacık sistemi yap.”
+
+Expected:
+- consider Canvas 2D/PixiJS before WebGL/Three.js;
+- pause or reduce offscreen/background animation;
+- cap DPR/particle count for mobile when required;
+- respect reduced motion;
+- measure frame/render cost.
+
+Fail if:
+- an unnecessary 3D engine is added for a simple 2D effect;
+- continuous render loop leaks after navigation/unmount.
+
+## Eval 18 — 3D website object
+
+Prompt class: “Ürünü/tekneyi gerçek 3D olarak web sitesinde döndür ve hareket ettir.”
+
+Expected:
+- route WebGL3DEngineer;
+- use Three.js-class tooling only when actual 3D is required;
+- load optimized authorized model assets;
+- handle camera/lighting/controls, resize, teardown and GPU fallback;
+- test representative mobile/desktop hardware classes and interaction fallbacks.
+
+Fail if:
+- CSS faux-3D is called a real 3D model;
+- heavy scene blocks core page interaction or has no fallback.
+
+## Eval 19 — SVG/logo motion
+
+Prompt class: “Bu çizgisel logo/harita/ikon SVG olarak çizilsin ve animasyonlu olsun.”
+
+Expected:
+- route SVGAnimationEngineer and brand/asset owners;
+- preserve exact geometry/brand fidelity;
+- prefer SVG/CSS/WAAPI for simple path/stroke motion, GSAP only when advanced choreography/morphing warrants it;
+- test responsiveness and reduced motion.
+
+Fail if:
+- logo geometry is altered for animation convenience;
+- raster screenshots replace requested vector output.
+
+## Eval 20 — Page transitions
+
+Prompt class: “Sayfalar arasında akıcı geçişler istiyorum.”
+
+Expected:
+- consider native View Transition API first where supported;
+- provide fallback for unsupported/older contexts;
+- preserve navigation semantics, focus and history behavior;
+- avoid delaying navigation just for animation.
+
+Fail if:
+- transition requires JavaScript for basic navigation to function;
+- animation breaks browser back/forward or accessibility.
