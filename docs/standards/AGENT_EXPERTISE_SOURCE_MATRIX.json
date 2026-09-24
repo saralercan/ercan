@@ -497,22 +497,27 @@
       "family": "web_growth",
       "source_tiers": {
         "primary": [
-          "https://shopify.dev/docs/storefronts/themes",
-          "https://shopify.dev/docs/storefronts/themes/tools/theme-check",
+          "https://shopify.dev/docs",
+          "https://shopify.dev/changelog",
+          "https://shopify.dev/docs/api/liquid",
+          "https://shopify.dev/docs/storefronts/themes/architecture",
+          "https://shopify.dev/docs/storefronts/themes/best-practices",
           "https://shopify.dev/docs/storefronts/themes/best-practices/performance",
           "https://shopify.dev/docs/api/admin-graphql",
           "https://shopify.dev/docs/api/storefront",
-          "https://shopify.dev/docs/api/functions",
-          "https://shopify.dev/docs/apps/build",
-          "https://shopify.dev/changelog",
-          "https://www.shopify.com/editions",
-          "https://shopify.engineering/latest"
+          "https://shopify.dev/docs/apps/build/functions",
+          "https://shopify.dev/docs/apps/build/app-extensions",
+          "https://shopify.dev/docs/apps/build/online-store/theme-app-extensions",
+          "https://shopify.dev/docs/api/checkout-ui-extensions",
+          "https://shopify.dev/docs/storefronts/headless/hydrogen"
         ],
         "canonical_github": [
           "Shopify/dawn",
           "Shopify/cli",
           "Shopify/hydrogen",
-          "Shopify/shopify-app-template-react-router",
+          "Shopify/theme-tools",
+          "Shopify/agent-skills",
+          "Shopify/Shopify-AI-Toolkit",
           "Shopify/theme-check-action"
         ],
         "reviewed_secondary": [
@@ -520,25 +525,25 @@
         ]
       },
       "research_topics": [
-        "Liquid",
-        "JSON templates",
-        "sections/blocks/schema",
-        "Online Store 2.0",
-        "Theme Editor",
-        "Admin GraphQL",
-        "Storefront API",
-        "Functions",
-        "Hydrogen/Oxygen",
-        "checkout/extensions",
-        "web pixels/analytics",
-        "Markets/internationalization",
-        "UCP/Catalog API",
-        "agentic commerce",
-        "performance/CWV",
-        "accessibility",
-        "SEO/product data",
-        "app security",
-        "API versioning/deprecations"
+        "Liquid objects/tags/filters and Shopify-specific Liquid behavior",
+        "Online Store 2.0 architecture, JSON templates, sections, section groups and theme blocks",
+        "Theme Editor schema, merchant configurability, app blocks and dynamic sources",
+        "metafields/metaobjects and product/catalog modeling",
+        "Admin GraphQL API versioning/cost/pagination/mutations",
+        "Storefront API, auth/scopes, webhooks and app architecture",
+        "Shopify Functions execution order/limits/performance",
+        "app extensions, theme app extensions, checkout/customer-account/admin/POS extensions",
+        "Markets, catalogs, B2B, pricing and internationalization",
+        "Hydrogen/Oxygen/headless caching/streaming",
+        "Shopify CLI, theme-tools, Theme Check and Liquid language tooling",
+        "performance/Core Web Vitals and JavaScript discipline",
+        "accessibility and semantic storefront UX",
+        "technical SEO, product structured data and Merchant Center consistency",
+        "analytics, pixels, consent/privacy and attribution",
+        "security, dependency/supply-chain and least privilege",
+        "testing, browser QA, CI/CD and rollback",
+        "API deprecations, archived repositories and official successors",
+        "UCP/WebMCP/agentic-commerce and current Shopify AI developer surfaces"
       ],
       "continual_queries": [
         "Shopify Agent current official documentation changelog deprecations best practices",
@@ -553,20 +558,23 @@
         "Conflicting sources remain explicitly marked until resolved against the most authoritative/current evidence."
       ],
       "refresh_policy": {
-        "scheduled_days": 14,
+        "scheduled_days": 1,
         "event_triggers": [
-          "task enters this domain",
-          "upstream release/changelog",
-          "deprecation/security advisory",
-          "benchmark failure",
+          "every material Shopify task",
+          "Shopify developer changelog update",
+          "API version or deprecation change",
+          "Shopify Editions/release change",
+          "canonical Shopify repository release/archive/successor",
+          "Theme Check/theme-tools change",
+          "storefront performance or QA regression",
           "user correction"
         ],
-        "stale_after_days": 42
+        "stale_after_days": 3
       },
       "mastery_gate": {
-        "structural": "source map + current upstreams + hard-fails present",
-        "behavioral": "complete a representative real task and independent QA",
-        "comparative": "only after reproducible benchmark against a relevant baseline"
+        "structural": "current shopify.dev/changelog + maintained Shopify repos + deprecation/successor map present",
+        "behavioral": "complete representative theme/app/API task, run current Shopify-native validation and independent QA",
+        "comparative": "only after reproducible benchmark against relevant Shopify baseline"
       }
     },
     {
