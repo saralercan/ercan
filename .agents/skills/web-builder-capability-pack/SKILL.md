@@ -29,6 +29,7 @@ This pack expands the existing web-production pod without changing the stable ro
 - WebSecurity -> existing security-review capability + platform expert + independent QA; use Trivy/Semgrep-class scanning JIT and never equate a clean scan with a security certification.
 - DigitalSecuritySpecialists -> load `.agents/skills/digital-specialist-agent-pack/SKILL.md` for ASVS threat modeling, secure code review, authorized WSTG/ZAP testing, supply-chain/agentic-CI review and security release gating.
 - FrontendHealth -> `@FrontendSystem`; Biome/Stylelint/HTML-Validate-class linting is selected to match the inspected stack.
+- JavaScriptSpecialists -> load `.agents/skills/javascript-specialist-capability-pack/SKILL.md` for material JS/TS architecture, runtime debugging, async/concurrency, memory, browser/DOM performance, bundle, testing, dependency or security work; map the JIT roles onto existing stable owners rather than creating duplicate agents.
 - ContentSiteBuilder -> `@WebArchitecture + @FrontendSystem`; Astro is a JIT option for content/editorial/marketing sites, not a global default.
 - WebsiteLifecycleAgents -> load `.agents/skills/website-lifecycle-agent-pack/SKILL.md` for redesign/update planning, live UI-to-source context, modern web refactors, runtime diagnosis, migration protection and release guarding.
 
@@ -57,7 +58,7 @@ Canonical paths verified 2026-09-19:
 - `html-validate/html-validate` — ADOPT_WHEN_NEEDED — HTML structural validation where compatible.
 - `withastro/astro` — ADOPT_WHEN_NEEDED — content/editorial/marketing web architecture.
 
-Existing canonical QA engines such as Playwright, Lighthouse, axe-core, Storybook, shadcn/ui, SiteOne, Theme Tools and screenshot-to-code continue to be selected from existing Ercan OS standards. Website lifecycle work may additionally use GoogleChrome/modern-web-guidance, ChromeDevTools/chrome-devtools-mcp, aidenybai/react-grab and SandeepBaskaran/design-mode through `website-lifecycle-agent-pack`.
+Existing canonical QA engines such as Playwright, Lighthouse, axe-core, Storybook, shadcn/ui, SiteOne, Theme Tools and screenshot-to-code continue to be selected from existing Ercan OS standards. Material JavaScript/TypeScript diagnosis may additionally load the JavaScript Specialist Capability Pack and Chrome DevTools MCP JIT for live runtime/performance/memory evidence. Website lifecycle work may additionally use GoogleChrome/modern-web-guidance, ChromeDevTools/chrome-devtools-mcp, aidenybai/react-grab and SandeepBaskaran/design-mode through `website-lifecycle-agent-pack`.
 
 ## Routing procedure
 

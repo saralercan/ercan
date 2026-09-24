@@ -12,6 +12,7 @@ Latest upstream hygiene refresh: `docs/upstream/scans/2026-09-07-github-speciali
 Latest web-builder capability expansion: `docs/upstream/scans/2026-09-19-web-builder-capability-expansion.md`.
 Latest adaptive capability expansion: `docs/upstream/scans/2026-09-24-adaptive-capability-pack.md`.
 Latest design-quality expansion: `docs/upstream/scans/2026-09-24-design-quality-engine.md`.
+Latest JavaScript specialist expansion: `docs/upstream/scans/2026-09-24-javascript-specialist-capability-pack.md`.
 Regression eval: `docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md`.
 Structural scoreboard: `docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md`.
 Behavioral certification: `docs/evals/GITHUB_SPECIALIST_CERTIFICATION_V3.md`.
@@ -63,6 +64,16 @@ For material website creation or modernization, load `.agents/skills/web-builder
 These are capability labels, not new stable identities. `@WordPressReplica` is a user-facing JIT alias that resolves to the qualified existing owners (`@ScreenshotToCode`, `@WordPressExpert`, `@FrontendSystem` plus reference/QA/SEO specialists as required); it is not added to the stable registry. Route all lanes through the existing stable owners such as `@WebArchitecture`, `@FrontendSystem`, `@ComponentWorkshopQA`, `@WordPressExpert`, `@ShopifyExpert`, `@TechnicalSEO`, `@SEOScanner`, `@WebPerformance`, `@AccessibilityQA` and `@BrowserQA`. This preserves the 21 + 31 = 52 stable-identity accounting and avoids duplicate routing.
 
 Reviewed JIT engines include `OpenHands/OpenHands`, `stackblitz-labs/bolt.diy`, `dyad-sh/dyad`, `onlook-dev/onlook`, `BuilderIO/mitosis`, `WordPress/theme-check`, `i18next/i18next`, `GoogleChrome/workbox`, `semgrep/semgrep`, `biomejs/biome`, `stylelint/stylelint` and `html-validate/html-validate`, alongside existing canonical platform/QA engines. AI builders/editors/operators never replace platform-native validation, Playwright/browser evidence or independent QA.
+
+## JavaScript / TypeScript Specialist Capability Pack
+
+For material JavaScript/TypeScript architecture, debugging, runtime failures, async/concurrency, browser/DOM performance, memory leaks, bundle analysis, testing, Node/Bun/Deno compatibility, npm/dependency analysis or JavaScript security work, load `.agents/skills/javascript-specialist-capability-pack/SKILL.md` + `docs/standards/JAVASCRIPT_SPECIALIST_ENGINE.md`.
+
+The user-facing `@JavaScript` alias composes focused JIT roles such as JavaScriptArchitect, TypeScriptEngineer, JavaScriptRuntimeDebugger, AsyncConcurrencyExpert, JavaScriptPerformance, DOMPerformance, MemoryLeakHunter, JavaScriptTesting, ReactPerformance, NextJSRuntime, NodeJSEngineer, BundleOptimizer and JavaScriptReviewer. These roles map onto existing stable web/frontend/performance/browser/platform/security/QA owners and **do not change the 52 stable identities**.
+
+Reviewed JIT references include `addyosmani/agent-skills` for evidence-oriented engineering workflow patterns; `vercel-labs/agent-skills:react-best-practices` for compatible React/Next performance rules; `ChromeDevTools/chrome-devtools-mcp` for live console/network/performance/memory inspection; `typescript-eslint/typescript-eslint`, ESLint and Biome for project-compatible static/type quality; Vitest and Playwright for executable testing; and the exact project runtime's official Node/Bun/Deno guidance. `clinicjs/node-clinic` is historical/pattern-only because the upstream states it is not actively maintained.
+
+Core rule: reproduce and measure when executable evidence is available, patch the smallest causal surface, rerun the original failure, and never treat lint/build success alone as JavaScript runtime verification.
 
 ## App / mobile pod
 
@@ -180,7 +191,7 @@ These additions do **not** change the stable identity count: 21 Stable Core + 31
 
 ## Qualified routing matrix
 
-For a material website task, consider web architecture/frontend/platform + technical SEO + performance + accessibility + browser QA when those surfaces are touched.
+For a material website task, consider web architecture/frontend/platform + technical SEO + performance + accessibility + browser QA when those surfaces are touched. Add the JavaScript specialist pack when JS/TS architecture, runtime, async, memory, bundle, dependency or code-level performance is materially involved.
 For a material mobile task, select `@MobileArchitect`, exactly the implementation stack specialist(s) required, `@MobileQA`, and release engineering only when build/store delivery is in scope.
 For social work, separate strategy, production/publishing and analytics; authenticated publishing is never implied by content creation.
 For SEO, select platform SEO specialist only when that platform is active; add AEO/GEO only when AI-discovery/search-answerability is in scope or materially affected.
