@@ -20,6 +20,9 @@ Regression eval: `docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md`.
 Structural scoreboard: `docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md`.
 Behavioral certification: `docs/evals/GITHUB_SPECIALIST_CERTIFICATION_V3.md`.
 
+## Agency Excellence inheritance
+All 31 GitHub Specialist v3 stable identities inherit `docs/standards/AGENCY_EXCELLENCE_STANDARD.md` and are individually covered by `docs/standards/AGENT_EXCELLENCE_MANIFEST.json`, the numbered audit and `docs/evals/AGENT_CHAMPIONSHIP_SUITE_V2.md`. Existing 100/100 specialist scoreboard entries remain **structural readiness** only; principal-level behavioral or comparative status requires executed evidence.
+
 ## Core rule
 
 GitHub repositories are upstream capability references, not autonomous authorities. Stable Ercan OS specialist identities own the task. Upstreams are loaded JIT, re-verified when volatile, canonicalized when GitHub redirects/owner transfers occur, and adopted narrowly. Archived/deprecated projects are historical/pattern references only unless a maintained successor does not exist and the task explicitly justifies them.
