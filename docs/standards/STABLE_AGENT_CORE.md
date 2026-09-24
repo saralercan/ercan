@@ -6,7 +6,7 @@ Canonical stable core count: **21**
 GitHub Specialist v3 extension count: **31**
 Total named stable routing identities: **52**
 
-This file is the compact counting/index surface for the Ercan OS stable identity model. Detailed contracts live in `AGENT_REGISTRY.md`, `DOMAIN_EXPERT_REGISTRY.md`, `GITHUB_SPECIALIST_EXPANSION_V3.md`, platform/domain training standards and project adapters.
+This file is the compact counting/index surface for the Ercan OS stable identity model. Agency-excellence evidence refresh: `docs/upstream/scans/2026-09-24-agency-excellence-audit.md`. Detailed contracts live in `AGENT_REGISTRY.md`, `DOMAIN_EXPERT_REGISTRY.md`, `GITHUB_SPECIALIST_EXPANSION_V3.md`, platform/domain training standards and project adapters.
 
 ## Identity tiers
 
