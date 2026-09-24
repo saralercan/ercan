@@ -137,6 +137,21 @@ For CMS/Markdown:
 - links/assets must resolve;
 - structured fields should not be duplicated into bloated prose.
 
+## Content operations and special formats
+
+The editorial desk also covers content refreshes, headline/title work, help-center and FAQ content, proposals, press releases, interviews/transcripts, ad copy, outreach copy and editorial calendars.
+
+- Content refresh preserves useful existing material, working intent and proven structure unless evidence justifies change.
+- Headline/title work must accurately represent the body/offer and may adapt to search, social or email context without clickbait drift.
+- Help-center/FAQ writing is task-first and product-truth-first; it must not invent unsupported behavior or contrived SEO questions.
+- Proposal/commercial copy uses verified pricing, scope, exclusions, timeline and deliverables; editorial persuasion cannot silently change commercial truth.
+- Press releases/company statements use attributable facts and approved quotations; invented executive quotes are prohibited.
+- Ad/outreach copy uses verified offer/recipient research; sending authorization and platform/mail execution remain separate workflows.
+- Interview/transcript editing improves readability without manufacturing statements or changing speaker meaning.
+- Editorial calendars optimize reader value, portfolio balance and maintenance—not publishing volume for its own sake.
+
+StyleGuideEditor and TerminologyEditor may maintain house-style rules, glossaries, Vale styles or CSpell dictionaries derived from approved project/domain sources. Automated dictionaries never override verified product/API terminology.
+
 ## Tool-selection policy
 
 - Vale: project-owned terminology/house-style enforcement; strong default for docs/content CI when the project benefits.
