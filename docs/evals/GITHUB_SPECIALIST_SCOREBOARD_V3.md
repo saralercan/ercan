@@ -56,6 +56,9 @@ A 100/100 static score means the routing/governance surface is complete. It does
 | Branding | `@BrandRuntimeEngineer` | 100/100 | PASS | NOT_RUN | NOT_RUN |
 | Branding | `@BrandComplianceQA` | 100/100 | PASS | NOT_RUN | NOT_RUN |
 
+## Agency Excellence coverage
+All 31 specialist-extension identities are additionally mapped in `docs/standards/AGENT_EXCELLENCE_MANIFEST.json` and `docs/evals/AGENT_CHAMPIONSHIP_SUITE_V2.md`. This preserves the distinction between structural readiness and executed behavioral/comparative evidence.
+
 ## Summary
 
 - Specialist-extension structural readiness: **31/31 PASS**.
