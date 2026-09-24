@@ -19,6 +19,8 @@ The combined named stable routing surface is therefore **52 identities**, but th
 
 Every one of the 52 stable routing identities is governed by `docs/standards/AGENCY_EXCELLENCE_STANDARD.md` and the 1→52 excellence manifest/audit/championship gates. This adds a shared principal-level craft/business/delivery standard without changing identity counts.
 
+Every one of the **52 stable routing identities** is governed by `docs/standards/AGENCY_EXCELLENCE_STANDARD.md` and its machine-readable/audit/championship coverage. Stable Core and v3 specialist identities keep their separate source/routing mechanics, but share the same principal-level agency quality bar.
+
 Every stable-core identity is also governed by:
 - `docs/standards/WORLD_CLASS_AGENT_RESEARCH.md` — evidence hierarchy, freshness, scientific discipline and world-class claim gate;
 - `docs/research/AGENT_SOURCE_PACKS.md` — per-agent canonical/scientific/GitHub source maps;
