@@ -170,6 +170,8 @@ def main() -> int:
 
     governance = {
         "AGENTS.md": read(ROOT / "AGENTS.md"),
+        "AGENT_REGISTRY.md": read(ROOT / "docs/standards/AGENT_REGISTRY.md"),
+        ".codex/config.toml": read(ROOT / ".codex/config.toml"),
         "STABLE_AGENT_CORE.md": read(CORE_PATH),
         "QUALIFIED_AGENT_ROUTING.md": read(ROOT / "docs/standards/QUALIFIED_AGENT_ROUTING.md"),
         "AGENT_ENGINEERING.md": read(ROOT / "docs/standards/AGENT_ENGINEERING.md"),
@@ -190,6 +192,8 @@ def main() -> int:
 
     required_refs = {
         "AGENTS.md": ["AGENCY_EXCELLENCE_STANDARD.md", "validate_agency_excellence.py"],
+        "AGENT_REGISTRY.md": ["AGENCY_EXCELLENCE_STANDARD.md", "principal-level"],
+        ".codex/config.toml": ["AGENCY_EXCELLENCE_STANDARD.md", "SPECIALIST_EXCELLENCE_SOURCE_PACKS.md", "AGENT_EXCELLENCE_MANIFEST.json"],
         "STABLE_AGENT_CORE.md": ["AGENCY_EXCELLENCE_STANDARD.md", "AGENT_EXCELLENCE_MANIFEST"],
         "QUALIFIED_AGENT_ROUTING.md": [
             "AGENCY_EXCELLENCE_STANDARD.md",
