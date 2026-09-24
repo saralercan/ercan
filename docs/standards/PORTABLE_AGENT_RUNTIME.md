@@ -162,7 +162,7 @@ It coordinates Shopify, WordPress/WooCommerce, CRO, SEO, paid media, analytics, 
 
 ## Continual expertise
 
-All portable runtimes must preserve the same learning contract. Before material work, the selected ACTIVE specialist loads its profile from `AGENT_EXPERTISE_SOURCE_MATRIX.json` and applies `AGENT_CONTINUAL_EXPERTISE_ENGINE.md`. Provider/model differences may change search/tool mechanics but may not lower source authority, freshness, provenance, ingestion or verification standards.
+All portable runtimes must preserve the same learning contract. Before material work, the selected ACTIVE specialist loads its profile from `AGENT_EXPERTISE_SOURCE_MATRIX.json` and applies `AGENT_CONTINUAL_EXPERTISE_ENGINE.md`. In Vinterro One native runtime, `ercan_os_agent_expertise_health` is authoritative for freshness: any ACTIVE agent whose state is not `CURRENT` is `research_required` and must refresh current authority before material decisions. Provider/model differences may change search/tool mechanics but may not lower source authority, freshness, provenance, ingestion or verification standards.
 
 New verified knowledge is converted into durable rules/evals/source notes rather than copied raw into prompts. Non-selected STANDBY agents do not research unnecessarily.
 
