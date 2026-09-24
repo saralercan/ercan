@@ -58,6 +58,7 @@ def main() -> int:
         ROOT / "docs/standards/PORTABLE_AGENT_RUNTIME.md",
         ROOT / ".agents/skills/agency-excellence-audit/SKILL.md",
         ROOT / ".agents/skills/portable-agent-router/SKILL.md",
+        ROOT / ".agents/skills/continual-expertise-engine/SKILL.md",
     ]
     for path in required_files:
         if not path.is_file():
@@ -201,7 +202,7 @@ def main() -> int:
     by_name = {p["name"]: p for p in source_profiles}
     shopify = by_name.get("Shopify Agent", {})
     shopify_sources = " ".join(shopify.get("source_tiers", {}).get("primary", []) + shopify.get("source_tiers", {}).get("canonical_github", []))
-    for needle in ("shopify.dev", "Shopify/dawn", "Shopify/cli", "Shopify/hydrogen"):
+    for needle in ("shopify.dev", "Shopify/dawn", "Shopify/cli", "Shopify/hydrogen", "Shopify/theme-tools", "Shopify/agent-skills"):
         if needle not in shopify_sources:
             fail(f"Shopify Agent expertise profile missing mandatory upstream: {needle}", failures)
 
@@ -234,7 +235,7 @@ def main() -> int:
         "GITHUB_SPECIALIST_SCOREBOARD_V3.md": ["AGENT_EXCELLENCE_MANIFEST.json"],
         "AGENCY_EXCELLENCE_STANDARD.md": ["world-class agency target", "Vinterro One 89-agent runtime contract"],
         "PORTABLE_AGENT_RUNTIME.md": ["89 active agents", "STANDBY", "AGENT_EXPERTISE_SOURCE_MATRIX.json"],
-        "AGENT_CONTINUAL_EXPERTISE_ENGINE.md": ["all 89 Vinterro One runtime agents", "Shopify deep-specialist requirement"],
+        "AGENT_CONTINUAL_EXPERTISE_ENGINE.md": ["all 89 Vinterro One runtime agents", "Shopify deep-specialist requirement", "ercan_os_agent_expertise_profiles", "record_agent_learning"],
     }
     for surface, needles in required_refs.items():
         text = governance[surface]
