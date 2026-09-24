@@ -9,11 +9,27 @@ Create a JIT Editorial & Writing Capability Pack rather than adding permanent wr
 
 ## Agent/workflow references
 
+### coreyhaines31/marketingskills — ADOPT_PATTERN_ONLY/JIT
+- MIT, active Agent Skills collection.
+- Relevant reviewed skills include copywriting, copy-editing, email and social content.
+- Useful for marketing-page/lifecycle/social workflow decomposition; project brand, product truth and channel policy remain authoritative.
+
+### RightBlogger/bloggingskills — ADOPT_PATTERN_ONLY
+- MIT, early-stage.
+- Explicit blogging pipeline: context/house-style -> research -> outline -> draft -> humanize -> SEO -> publish.
+- Useful anti-slop/content-context patterns, but maturity is too low to make it a production authority.
+
+### marketingskills/seo — ADOPT_JIT
+- MIT.
+- Useful SEO editorial operations: content briefs, refresh briefs, internal-link planning and title/meta rewriting.
+- First-party Search Console/analytics plus Google Search Central outrank its heuristics.
+
+
 ### vercel/eve technical-writing — ADOPT_PATTERN_ONLY
 A strong repo-grounded technical-writing workflow: new-page/edit/review/style paths, with source/tests/CLI/releases treated as truth. Valuable for documentation verification patterns, not a general editorial authority.
 
-### gwagjiug/technical-writing — ADOPT_PATTERN_ONLY
-Developer-facing technical-writing skill with document-type selection, structure principles, sentence style, review rubrics and templates. Useful decomposition/reference; project runtime remains authoritative.
+### gwagjiug/technical-writing — ADOPT_PATTERN_ONLY / LICENSE-BOUND
+Developer-facing technical-writing skill with document-type selection, structure principles, sentence style, review rubrics and templates. Its skill/reference content is CC BY-NC-SA 4.0 while scripts/tests are MIT; do not vendor the editorial content into commercial Ercan OS assets without license compliance. Project runtime remains authoritative.
 
 ### eigent-ai/agent-skills copywriting — ADOPT_PATTERN_ONLY
 Marketing-copy workflow focused on product, audience, offer, channel, proof and objections. Frameworks such as AIDA/PAS/BAB are optional internal scaffolds, not output templates.
@@ -105,6 +121,7 @@ Authority for accessible web-content practices: unique/informative titles, seman
 ## Routing design
 
 User-facing aliases:
+- @Editorial
 - @Writing
 - @Editor
 - @BlogEditor
@@ -114,7 +131,7 @@ User-facing aliases:
 - @SEOContentEditor
 
 JIT roles:
-EditorialStrategist, ResearchWriter, BlogWriter, LongformWriter, TechnicalWriter, WebsiteCopywriter, ProductCopywriter, EcommerceContentEditor, UXWriter, SEOContentEditor, AEOContentEditor, BrandVoiceEditor, DevelopmentalEditor, StructuralEditor, LineEditor, CopyEditor, Proofreader, FactChecker, CitationEditor, OriginalityEditor, AccessibilityContentEditor, LocalizationEditor, StructuredContentEditor, NewsletterEditor, SocialCopyEditor, ScriptWriter, CaseStudyWriter, ThoughtLeadershipWriter, CorporateCommsEditor, EditorialReviewer.
+EditorialStrategist, ResearchWriter, BlogWriter, LongformWriter, TechnicalWriter, WebsiteCopywriter, ProductCopywriter, EcommerceContentEditor, UXWriter, SEOContentEditor, AEOContentEditor, BrandVoiceEditor, DevelopmentalEditor, StructuralEditor, LineEditor, CopyEditor, Proofreader, FactChecker, CitationEditor, OriginalityEditor, AccessibilityContentEditor, LocalizationEditor, StructuredContentEditor, NewsletterEditor, SocialCopyEditor, ScriptWriter, CaseStudyWriter, ThoughtLeadershipWriter, CorporateCommsEditor, ContentRefreshEditor, HeadlineTitleEditor, ReadabilityEditor, ContentRepurposingEditor, DocumentationEditor, HelpCenterWriter, FAQEditor, EmailCopywriter, AdCopywriter, OutreachCopyEditor, ProposalWriter, PressReleaseWriter, InterviewTranscriptEditor, StyleGuideEditor, TerminologyEditor, EditorialCalendarStrategist, EditorialReviewer.
 
 These map to existing stable/JIT owners and do not add permanent routing identities.
 
