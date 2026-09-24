@@ -6,7 +6,7 @@ Canonical stable core count: **21**
 GitHub Specialist v3 extension count: **31**
 Total named stable routing identities: **52**
 
-This file is the compact counting/index surface for the Ercan OS stable identity model. Detailed contracts live in `AGENT_REGISTRY.md`, `DOMAIN_EXPERT_REGISTRY.md`, `GITHUB_SPECIALIST_EXPANSION_V3.md`, platform/domain training standards and project adapters.
+This file is the compact counting/index surface for the Ercan OS stable identity model. Agency-excellence evidence refresh: `docs/upstream/scans/2026-09-24-agency-excellence-audit.md`. Detailed contracts live in `AGENT_REGISTRY.md`, `DOMAIN_EXPERT_REGISTRY.md`, `GITHUB_SPECIALIST_EXPANSION_V3.md`, platform/domain training standards and project adapters.
 
 ## Identity tiers
 
@@ -17,13 +17,17 @@ Ercan OS uses two stable identity tiers:
 
 The combined named stable routing surface is therefore **52 identities**, but the two tiers must not be conflated. The 21-core scoreboard does not imply the 31 specialist-extension identities have passed the same behavioral benchmark suite, and the v3 structural doctor does not grant world-class or production certification.
 
+Every one of the 52 stable routing identities is governed by `docs/standards/AGENCY_EXCELLENCE_STANDARD.md` and the 1→52 excellence manifest/audit/championship gates. This adds a shared principal-level craft/business/delivery standard without changing identity counts.
+
+Every one of the **52 stable routing identities** is governed by `docs/standards/AGENCY_EXCELLENCE_STANDARD.md` and its machine-readable/audit/championship coverage in `docs/standards/AGENT_EXCELLENCE_MANIFEST.json`, `docs/evals/AGENT_EXCELLENCE_AUDIT_2026-09-24.md` and `docs/evals/AGENT_CHAMPIONSHIP_SUITE_V2.md`. Stable Core and v3 specialist identities keep their separate source/routing mechanics, but share the same principal-level agency quality bar.
+
 Every stable-core identity is also governed by:
 - `docs/standards/WORLD_CLASS_AGENT_RESEARCH.md` — evidence hierarchy, freshness, scientific discipline and world-class claim gate;
 - `docs/research/AGENT_SOURCE_PACKS.md` — per-agent canonical/scientific/GitHub source maps;
 - `docs/evals/WORLD_CLASS_AGENT_BENCHMARK_SUITE.md` — cross-agent certification and comparative benchmark framework;
 - `.agents/skills/expert-research-refresh/SKILL.md` — JIT research refresh procedure.
 
-Every v3 specialist-extension identity is additionally governed by:
+Every v3 specialist-extension identity inherits the same Agency Excellence Standard and is additionally governed by:
 - `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`;
 - `docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.json`;
 - `docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md`;
@@ -80,7 +84,7 @@ These narrower identities may work underneath or alongside a broad core expert. 
 
 ## Maintained-expertise rule
 
-A stable identity is not considered current merely because it is listed here. On volatile or material work it must use its JIT source pack/manifest and current primary evidence rather than stale model memory. New scientific findings, platform changes, advisories and benchmark failures feed back into training and regression tests.
+A stable identity is not considered excellent or current merely because it is listed here. On volatile or material work it must use its JIT source pack/manifest and current primary evidence rather than stale model memory. New scientific findings, platform changes, advisories and benchmark failures feed back into training and regression tests.
 
 `PRODUCTION_VERIFIED` means the current certification/regression evidence passed for the applicable task class. It does not mean perfect, error-free or objectively best in the world. Comparative world-class claims require dated reproducible benchmark evidence.
 

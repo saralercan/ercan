@@ -1,10 +1,10 @@
 # Ercan OS — Agent Source Packs
 
 Status: active
-Updated: 2026-08-31
+Updated: 2026-09-24
 Governing standard: `docs/standards/WORLD_CLASS_AGENT_RESEARCH.md`
 
-Purpose: give every stable Ercan OS identity a maintained, task-scoped research pack. These packs are indexes and routing maps, not a license to context-stuff every source into every task.
+Purpose: give Stable Core identities 1–21 a maintained, task-scoped research pack. GitHub Specialist v3 identities 22–52 use `docs/research/SPECIALIST_EXCELLENCE_SOURCE_PACKS.md` plus their domain JIT skill/manifest, so all 52 now have explicit authority routing. These packs are indexes and routing maps, not a license to context-stuff every source into every task.
 
 ## Shared scientific and engineering backbone
 

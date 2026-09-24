@@ -5,6 +5,7 @@ Audit date: 2026-09-07
 Specialist-extension identities checked: **31**
 Stable Core identities (separate scoreboard): **21**
 Total named stable routing identities: **52**
+Agency Excellence overlay: **31/31 specialist profiles are additionally covered by `AGENT_EXCELLENCE_MANIFEST.json`, `SPECIALIST_EXCELLENCE_SOURCE_PACKS.md` and `AGENT_CHAMPIONSHIP_SUITE_V2.md`.**
 
 This scoreboard measures **static specialist-extension governance/readiness only**. It does not claim that the 31 specialists executed behavioral certification, production tasks, external comparative benchmarks, or world-class benchmarks.
 
@@ -55,6 +56,9 @@ A 100/100 static score means the routing/governance surface is complete. It does
 | Branding | `@DesignTokenArchitect` | 100/100 | PASS | NOT_RUN | NOT_RUN |
 | Branding | `@BrandRuntimeEngineer` | 100/100 | PASS | NOT_RUN | NOT_RUN |
 | Branding | `@BrandComplianceQA` | 100/100 | PASS | NOT_RUN | NOT_RUN |
+
+## Agency Excellence coverage
+All 31 specialist-extension identities are additionally mapped in `docs/standards/AGENT_EXCELLENCE_MANIFEST.json` and `docs/evals/AGENT_CHAMPIONSHIP_SUITE_V2.md`. This preserves the distinction between structural readiness and executed behavioral/comparative evidence.
 
 ## Summary
 

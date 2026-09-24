@@ -3,10 +3,12 @@
 Status: active
 Version: 1.0 (2026-08-31)
 Governing research standard: `docs/standards/WORLD_CLASS_AGENT_RESEARCH.md`
+Agency excellence standard: `docs/standards/AGENCY_EXCELLENCE_STANDARD.md`
+52-agent championship overlay: `docs/evals/AGENT_CHAMPIONSHIP_SUITE_V2.md`
 
 ## Purpose
 
-Turn expert-agent quality into measurable evidence. This suite complements platform/domain certification files and adds cross-agent comparative evaluation, external benchmark adaptation and production-outcome scoring.
+Turn expert-agent quality into measurable evidence. This original suite remains the deep Stable Core 1–21 benchmark contract; all 52 stable identities are additionally covered by `AGENT_CHAMPIONSHIP_SUITE_V2.md`, while GitHub Specialist v3 identities retain deeper domain certification in `GITHUB_SPECIALIST_CERTIFICATION_V3.md`. The suites complement platform/domain certification files and add cross-agent comparative evaluation, external benchmark adaptation and production-outcome scoring.
 
 ## Status vocabulary
 

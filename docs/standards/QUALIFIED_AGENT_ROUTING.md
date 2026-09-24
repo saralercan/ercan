@@ -47,6 +47,7 @@ Examples:
 - cross-channel brand-system work → brand-system/runtime/token specialist(s) + independent `@BrandComplianceQA` when the brand system itself is materially affected
 
 ### 3. Qualification filter
+Before domain-specific qualification, every candidate inherits `AGENCY_EXCELLENCE_STANDARD.md`. Selection favors the smallest pod whose members have the right domain ownership **and** can meet the task’s principal-level craft/evidence/verification bar. A specialist that cannot access required evidence/tooling is not qualified merely because its name matches the topic.
 A specialist is selected only when it has a material contribution and passes the relevant filters:
 
 - **project fit** — understands the active project/platform/brand context
@@ -188,9 +189,21 @@ Load `AGENT_RUNTIME_STACK.md` + `agent-runtime-stack`. Do not fan out Ollama, La
 ### Broad GitHub capability expansion
 `@Orchestrator → @UpstreamIntelligence → matching stable v3 domain specialist(s) for web/app/social/SEO/Meta/branding → Upstream Adoption Auditor for promoted candidates → Security Reviewer when code/credentials/permissions are material → regression/eval → catalog/ledger/current-index update`
 
+## Agency excellence qualification overlay
+
+Every selected specialist inherits `AGENCY_EXCELLENCE_STANDARD.md`. Qualification is not only “can this role touch the task?”; for material work the pod must collectively cover:
+- domain/source authority;
+- strategic/business/user outcome;
+- implementation/craft;
+- risk/accessibility/security/performance as relevant;
+- independent verification;
+- client-ready delivery.
+
+Do not add redundant agents to satisfy this overlay. The Orchestrator chooses the minimum pod that covers the required excellence dimensions. A single qualified expert may cover several dimensions when the role contract actually supports them.
+
 ## Quality over agent count
 
-Success is measured by outcome quality, correctness, verification and preserved scope — never by the raw number of agents invoked.
+Success is measured by principal-level outcome quality, correctness, usefulness, craft, verification and preserved scope — never by the raw number of agents invoked.
 
 Forbidden behavior:
 - running the whole registry in parallel because the user said “all agents”;

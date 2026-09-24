@@ -3,6 +3,7 @@
 Status: generated structural-readiness audit
 Audit date: 2026-08-31
 Stable identities checked: **21**
+Agency Excellence overlay: **21/21 profiles are additionally governed by `AGENCY_EXCELLENCE_STANDARD.md`; see the 52-agent audit/manifest.**
 
 This scoreboard measures **static governance/readiness only**. It does not claim behavioral superiority, benchmark wins, or world-best status. Runtime/tool-use/coding/browser/creative/security benchmark results remain `NOT_RUN` until executed in a reproducible harness with an independent evaluator.
 
@@ -33,6 +34,9 @@ Each item is worth 20 points: stable-core registration, dedicated source pack, a
 | `@SecurityExpert` | 100/100 | PASS | NOT_RUN | NOT_RUN |
 | `@PerformanceExpert` | 100/100 | PASS | NOT_RUN | NOT_RUN |
 | `@AgentMCPExpert` | 100/100 | PASS | NOT_RUN | NOT_RUN |
+
+## Agency Excellence coverage
+All 21 Stable Core identities are additionally mapped in `docs/standards/AGENT_EXCELLENCE_MANIFEST.json` and `docs/evals/AGENT_CHAMPIONSHIP_SUITE_V2.md`. This does not change the behavioral/external `NOT_RUN` state recorded here.
 
 ## Summary
 

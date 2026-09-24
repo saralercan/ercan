@@ -1,0 +1,59 @@
+name: Vinterro One Agency Excellence
+
+on:
+  pull_request:
+    paths:
+      - '.codex/config.toml'
+      - 'docs/standards/AGENT_REGISTRY.md'
+      - 'AGENTS.md'
+      - 'docs/standards/AGENCY_EXCELLENCE_STANDARD.md'
+      - 'docs/standards/AGENT_EXCELLENCE_MANIFEST.json'
+      - 'docs/standards/STABLE_AGENT_CORE.md'
+      - 'docs/standards/WORLD_CLASS_AGENT_RESEARCH.md'
+      - 'docs/standards/QUALIFIED_AGENT_ROUTING.md'
+      - 'docs/standards/AGENT_ENGINEERING.md'
+      - 'docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.json'
+      - 'docs/research/AGENT_SOURCE_PACKS.md'
+      - 'docs/research/SPECIALIST_EXCELLENCE_SOURCE_PACKS.md'
+      - 'docs/evals/AGENT_EXCELLENCE_AUDIT_2026-09-24.md'
+      - 'docs/evals/AGENT_CHAMPIONSHIP_SUITE_V2.md'
+      - 'docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md'
+      - 'docs/evals/AGENT_SCOREBOARD.md'
+      - '.agents/skills/agency-excellence-audit/**'
+      - 'scripts/validate_agency_excellence.py'
+      - '.github/workflows/agency-excellence.yml'
+  push:
+    branches: [master]
+    paths:
+      - '.codex/config.toml'
+      - 'docs/standards/AGENT_REGISTRY.md'
+      - 'AGENTS.md'
+      - 'docs/standards/AGENCY_EXCELLENCE_STANDARD.md'
+      - 'docs/standards/AGENT_EXCELLENCE_MANIFEST.json'
+      - 'docs/standards/STABLE_AGENT_CORE.md'
+      - 'docs/standards/WORLD_CLASS_AGENT_RESEARCH.md'
+      - 'docs/standards/QUALIFIED_AGENT_ROUTING.md'
+      - 'docs/standards/AGENT_ENGINEERING.md'
+      - 'docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.json'
+      - 'docs/research/AGENT_SOURCE_PACKS.md'
+      - 'docs/research/SPECIALIST_EXCELLENCE_SOURCE_PACKS.md'
+      - 'docs/evals/AGENT_EXCELLENCE_AUDIT_2026-09-24.md'
+      - 'docs/evals/AGENT_CHAMPIONSHIP_SUITE_V2.md'
+      - '.agents/skills/agency-excellence-audit/**'
+      - 'scripts/validate_agency_excellence.py'
+      - '.github/workflows/agency-excellence.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  excellence-coverage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Validate 52-agent agency excellence coverage
+        run: python3 scripts/validate_agency_excellence.py
