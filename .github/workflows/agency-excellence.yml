@@ -3,6 +3,8 @@ name: Vinterro One Agency Excellence
 on:
   pull_request:
     paths:
+      - '.codex/config.toml'
+      - 'docs/standards/AGENT_REGISTRY.md'
       - 'AGENTS.md'
       - 'docs/standards/AGENCY_EXCELLENCE_STANDARD.md'
       - 'docs/standards/AGENT_EXCELLENCE_MANIFEST.json'
@@ -23,6 +25,8 @@ on:
   push:
     branches: [master]
     paths:
+      - '.codex/config.toml'
+      - 'docs/standards/AGENT_REGISTRY.md'
       - 'AGENTS.md'
       - 'docs/standards/AGENCY_EXCELLENCE_STANDARD.md'
       - 'docs/standards/AGENT_EXCELLENCE_MANIFEST.json'
