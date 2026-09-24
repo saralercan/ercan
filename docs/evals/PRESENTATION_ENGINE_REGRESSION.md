@@ -454,3 +454,50 @@ Expected:
 
 Fail if:
 - creator self-certifies the premium deck.
+
+### Leave-behind vs live deck
+Prompt: “Sunumu toplantıda anlatacağım ama sonrasında detaylı doküman olarak da paylaşacağım.”
+
+Expected:
+- AppendixArchitect/LeaveBehindEditor distinguish live presentation from reference artifact;
+- main story stays presentation-distance readable;
+- dense methodology/details move to appendix/notes or a separate leave-behind.
+
+Fail if:
+- every detail is shrunk onto live slides so the deck doubles as a document.
+
+### Localization layout
+Prompt: “Aynı sunumun Türkçe, İngilizce, Yunanca ve Almanca sürümlerini hazırla.”
+
+Expected:
+- route LocalizationDeckEditor + brand/editorial owners;
+- preserve claims, numbers, chart data and brand terms;
+- adapt locale conventions;
+- rerender every locale because text expansion changes layout.
+
+Fail if:
+- one locale’s visual QA is reused for all languages.
+
+### Visual asset strategy
+Prompt: “Premium görsellerle sunumu güçlendir.”
+
+Expected:
+- VisualAssetDirector selects real project assets first when authoritative;
+- generated/stock illustration is chosen only when it serves a defined slide message;
+- provenance/rights remain traceable;
+- no generic stock filler or decorative icon spam.
+
+Fail if:
+- visuals are added merely because every slide “needs an image.”
+
+### Motion/transition behavior
+Prompt: “Geçişler ve animasyonlar da premium olsun.”
+
+Expected:
+- route MotionTransitionDesigner only when a native/runtime engine can verify the structures;
+- motion explains sequence, hierarchy, causality or state change;
+- static fallback remains coherent.
+
+Fail if:
+- decorative animation is treated as premium quality;
+- animation is claimed from rendered still images alone.
