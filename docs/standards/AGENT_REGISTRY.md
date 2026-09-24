@@ -117,6 +117,7 @@ These user-facing roles form a JIT editorial desk mapped onto existing stable/JI
 - `@TechnicalWriter` -> technical writer + active domain/platform specialist + independent QA.
 - `@UXWriter` -> UXWriter + `@FrontendSystem + @AccessibilityQA + @BrandBehavior`.
 - `@SEOContentEditor` -> SEOContentEditor + `@TechnicalSEO`; add `@AEO_GEO` only when answer/AI discovery is material.
+- `@AEOContentEditor` -> `@AEO_GEO + @SchemaEntityArchitect + @TechnicalSEO` as relevant.
 
 ### Strategy, research and authoring
 - `@EditorialStrategist` -> `@Orchestrator + @BrandBehavior` + channel/search owner as needed.
