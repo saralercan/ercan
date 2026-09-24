@@ -147,6 +147,20 @@ Agentic features never bypass authorization, checkout integrity, merchant policy
 ## Shopify privacy/tooling rule
 The official AI Toolkit may use telemetry hooks. Before enabling or executing an upstream skill/plugin in an Ercan OS environment, inspect its current telemetry behavior. Do not send secrets, credentials, private customer data or unnecessary verbatim prompts to telemetry. Prefer opt-out or project policy controls when available and required.
 
+## 2026-09-24 Shopify verified refresh
+
+The dated evidence pack is `docs/upstream/scans/2026-09-24-shopify-expertise-refresh.md`.
+
+Current snapshot rules that materially affect implementation:
+- Dawn 16.0.0 is a reference baseline; distinguish repository main from the stable merchant release.
+- reusable/nested theme blocks are first-class current theme architecture; select block/section/snippet/app-block surfaces deliberately.
+- current Theme Store requirements include explicit Lighthouse performance/accessibility thresholds; native lint alone is not release QA.
+- Admin GraphQL must be API-version/schema checked; the 2026-09-24 docs snapshot exposed 2026-07 as latest.
+- standard storefront events/actions introduced in 2026 should be evaluated before custom cross-theme event plumbing.
+- current Admin/App Home styling must account for the September 2026 admin visual refresh and Polaris 2.0 migration surface where applicable.
+
+These are dated snapshot facts, not immutable rules. Re-check current Shopify docs/changelog at task time.
+
 ## Shopify production QA minimum
 Depending on scope, select from:
 - current schema/docs lookup
