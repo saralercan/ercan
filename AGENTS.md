@@ -19,6 +19,7 @@ Canonical audit/coverage:
 - `docs/evals/AGENT_EXCELLENCE_AUDIT_2026-09-24.md`
 - `docs/evals/AGENT_CHAMPIONSHIP_SUITE_V2.md`
 - `.agents/skills/agency-excellence-audit/SKILL.md`
+- `scripts/validate_agency_excellence.py`
 
 ## Agent aliases
 - `@Orchestrator` — manager/control plane; owns routing, task state, final synthesis and completion decision.
@@ -46,7 +47,6 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
 ## Mandatory load order
 1. `AGENTS.md`
 2. `docs/standards/AGENT_REGISTRY.md`
-3. `docs/standards/AGENCY_EXCELLENCE_STANDARD.md` for material work and all agent-quality decisions
 3. `docs/standards/AGENCY_EXCELLENCE_STANDARD.md` for the principal-level craft, evidence, delivery, verification and learning-loop contract shared by all Stable Core, GitHub Specialist v3 and JIT roles.
 4. `docs/standards/QUALIFIED_AGENT_ROUTING.md` whenever the user asks to run all agents/agents broadly, or when the task materially requires multiple specialist capabilities.
 5. `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md` + `.agents/skills/github-specialist-router/SKILL.md` when a material web/app/social/SEO/Meta ads/branding task needs the expanded stable specialist pool; then load only the matching domain skill(s).
@@ -72,13 +72,6 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
    - GitHub/tooling/upstream: `UPSTREAM_TOOLCHAIN.md`; broad discovery/tool selection also uses `UPSTREAM_INTELLIGENCE.md`, `UPSTREAM_INTELLIGENCE_CATALOG.md`, `DISCOVERY_ADOPTION_LEDGER.md` and `upstream-adoption-audit`; JEV browser/context/MCP/CI/router/review/navigation work also loads `JEV_RUNTIME_EXTENSIONS.md` when material; model/runtime/orchestration/tool/sandbox/memory/eval/voice stack selection loads `AGENT_RUNTIME_STACK.md` when material; multi-provider coding-model proxy/fallback work additionally loads `CODING_PROVIDER_ROUTER.md` when material; managed recurring-agent/client deployment additionally loads `MANAGED_AGENT_DEPLOYMENT.md` when material; Rerun programmatic workspace synchronization additionally loads `RERUN_API_BRIDGE.md` when material.
 10. Project-local decisions, brand rules, do-not-touch rules and current task ledger when available.
 11. Only task-relevant skills/tools/context; do not context-stuff unrelated history.
-
-## Agency excellence contract
-- Every selected agent works to a world-class agency **target** and principal/senior specialist standard defined in `AGENCY_EXCELLENCE_STANDARD.md`.
-- This is a production/craft bar, not permission to claim unverified market superiority. “Best in the world”/equivalent comparative claims require dated reproducible evidence.
-- Material work must be client-/production-ready, evidence-grounded, platform-native, distinctive when craft matters, independently verified and complete in the destination surface.
-- Generic AI/template output, unsupported facts/metrics/actions, first-draft creative, build-only verification and redundant agent fan-out are excellence failures.
-- The canonical 1→52 audit lives in `docs/evals/AGENT_EXCELLENCE_AUDIT_2026-09-24.md`; CI validates coverage through `scripts/validate_agent_excellence.py`.
 
 ## Non-negotiable operating rules
 - **Execution-first default:** when the user gives a clear, actionable instruction and the required access/tools are available, execute it directly. Do not ask for permission, confirmation, or whether the user wants you to continue. Do not respond with “istersen yapayım”, “uygulayayım mı?”, “devam edeyim mi?”, “patch hazırlayayım mı?” or equivalent permission loops.
