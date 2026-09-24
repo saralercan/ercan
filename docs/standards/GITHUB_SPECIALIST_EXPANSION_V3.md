@@ -3,7 +3,7 @@
 Status: active
 Date: 2026-09-19
 
-Purpose: promote reviewed GitHub/open-source capabilities into qualified Ercan OS specialist routing for web, JavaScript/TypeScript, editorial/writing, app/mobile, social media, SEO/AEO/GEO, Meta advertising/measurement and branding. This standard supplements, and never overrides, root `AGENTS.md`, `AGENT_REGISTRY.md`, `QUALIFIED_AGENT_ROUTING.md`, project adapters, safety, scope and independent QA rules.
+Purpose: promote reviewed GitHub/open-source capabilities into qualified Ercan OS specialist routing for web, JavaScript/TypeScript, editorial/writing, presentations, app/mobile, social media, SEO/AEO/GEO, Meta advertising/measurement and branding. This standard supplements, and never overrides, root `AGENTS.md`, `AGENT_REGISTRY.md`, `QUALIFIED_AGENT_ROUTING.md`, project adapters, safety, scope and independent QA rules.
 
 Machine-readable manifest: `docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.json`.
 JIT upstream catalog supplement: `docs/upstream/GITHUB_SPECIALIST_CATALOG_V3.md`.
@@ -15,6 +15,7 @@ Latest design-quality expansion: `docs/upstream/scans/2026-09-24-design-quality-
 Latest JavaScript specialist expansion: `docs/upstream/scans/2026-09-24-javascript-specialist-capability-pack.md`.
 Latest JavaScript motion/graphics expansion: `docs/upstream/scans/2026-09-24-javascript-motion-graphics-web-expansion.md`.
 Latest editorial/writing expansion: `docs/upstream/scans/2026-09-24-editorial-writing-capability-pack.md`.
+Latest presentation studio expansion: `docs/upstream/scans/2026-09-24-presentation-studio-agent-v2.md`.
 Regression eval: `docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md`.
 Structural scoreboard: `docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md`.
 Behavioral certification: `docs/evals/GITHUB_SPECIALIST_CERTIFICATION_V3.md`.
@@ -88,6 +89,18 @@ These roles map to existing Orchestrator, brand, SEO/AEO, social, web/frontend, 
 Reviewed JIT references include Vale, textlint, retext, markdownlint, CSpell, alex and lychee for deterministic editorial checks, plus selected agent-skill repositories for workflow patterns. Google Search Central, Google Technical Writing, Microsoft Writing Style Guide and W3C/WAI remain higher-authority references for people-first search content, technical writing and accessible web prose. Project-owned brand/style sources remain primary for voice and terminology.
 
 Core rule: authoring, factual verification and final editorial review are separate concerns. A fluent draft, a clean prose-lint run or an SEO score is never sufficient evidence by itself.
+
+## Presentation Studio Capability Pack
+
+For material PowerPoint, slide deck, pitch deck, proposal deck, executive/board deck, academic/scientific deck, training deck, keynote, presentation PDF/PNG export, speaker notes or presentation QA, load `.agents/skills/presentation-agent-pack/SKILL.md` + `docs/standards/PRESENTATION_ENGINE.md`.
+
+The user-facing `@Presentation` alias composes a JIT expert studio: PresentationDirector, AudienceIntentAnalyst, PresentationResearcher, EvidenceArchitect, DeckStrategist, StoryArchitect, deck-type strategists, NarrativeEditor, SlideCopyEditor, SpeakerNotesWriter, AppendixArchitect, LeaveBehindEditor, LocalizationDeckEditor, PresenterCoach, PresentationDesignSystemDirector, SlideArtDirector, TypographyDirector, LayoutComposer, AssetCurator, VisualAssetDirector, DiagramArchitect, DataVizPlanner/DataVizDesigner, TableEditor, TemplateMasterEngineer, MotionTransitionDesigner, PPTXEngineer/connected provider, AccessibilityDeckReviewer, CompatibilityReviewer, DeckRedTeamCritic and DeckReviewer.
+
+These roles map onto existing Orchestrator, editorial, brand, graphic-design, asset, accessibility, domain/data and ProductionQA owners and **do not change the 52 stable identities**.
+
+Material decks use a source-first slide manifest before build. PPTAgent, OfficeCLI, Presenton and other editable engines are replaceable builders; Canva, Gamma and Google Slides are optional connected execution surfaces. Provider success or a generated PPTX is never completion evidence without source, brand, accessibility/compatibility and rendered-slide QA.
+
+Reviewed v2 references include PoplarPoplar/presentation-skill_-PPTskill for constrained source-first deck design, hunkim/slide-skill for slide-judgment discipline, office-kit/pptx as a pre-1.0 live-preview TypeScript option, and current PptxGenJS/OpenAI-style render/overflow/font validation patterns. Microsoft PowerPoint accessibility guidance is authoritative for unique titles, reading order, alt text, contrast/color independence and accessible type.
 
 ## App / mobile pod
 
