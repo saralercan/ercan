@@ -8,14 +8,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-CORE = [
-    "@Orchestrator", "@UpstreamIntelligence", "@ShopifyExpert", "@WordPressExpert", "@WixExpert",
-    "@DragDrop", "@VinterroDigital", "@AyvalıkVibes", "@GoAyvalık", "@ScreenshotToCode",
-    "@RealAsset", "@PixelMatch", "@UXEnhancement", "@ProductionQA", "@SEOExpert",
-    "@SocialMediaExpert", "@CreativeDesignExpert", "@WebAppExpert", "@SecurityExpert",
-    "@PerformanceExpert", "@AgentMCPExpert",
-]
-
 REQUIRED_PROFILE_FIELDS = {
     "id", "agent", "tier", "domain", "principal_mandate", "gap_before_remediation",
     "remediation", "hard_fail", "championship_gate", "structural_state",
@@ -34,32 +26,38 @@ def fail(msg: str) -> None:
 def main() -> int:
     errors: list[str] = []
 
+    stable_core = read("docs/standards/STABLE_AGENT_CORE.md")
+    core_section = stable_core.split("## GitHub Specialist v3 Extension", 1)[0]
+    core = re.findall(r"(?m)^\d+\. `(@[^\`]+)`\s*$", core_section)
+
     v3 = json.loads(read("docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.json"))
     extension: list[str] = []
     for domain in v3["domains"].values():
         extension.extend(domain["agents"])
 
-    canonical = CORE + extension
-    if len(CORE) != 21:
-        errors.append(f"core count drift: expected 21, got {len(CORE)}")
+    canonical = core + extension
+    expected_core = v3.get("identity_counts", {}).get("stable_core", 21)
+    if len(core) != expected_core:
+        errors.append(f"core count drift: manifest expects {expected_core}, STABLE_AGENT_CORE lists {len(core)}")
     if len(extension) != 31:
         errors.append(f"extension count drift: expected 31, got {len(extension)}")
-    if len(canonical) != 52 or len(set(canonical)) != 52:
-        errors.append("canonical 52-agent list is not exactly 52 unique identities")
+    expected_total = v3.get("identity_counts", {}).get("total_named_stable_routing_identities", 52)
+    if len(canonical) != expected_total or len(set(canonical)) != expected_total:
+        errors.append(f"canonical stable-agent list is not exactly {expected_total} unique identities")
 
     excellence = json.loads(read("docs/standards/AGENT_EXCELLENCE_MANIFEST.json"))
     profiles = excellence.get("profiles", [])
-    if excellence.get("stable_identity_count") != 52:
-        errors.append("AGENT_EXCELLENCE_MANIFEST stable_identity_count must be 52")
-    if len(profiles) != 52:
-        errors.append(f"excellence profile count must be 52, got {len(profiles)}")
+    if excellence.get("stable_identity_count") != expected_total:
+        errors.append(f"AGENT_EXCELLENCE_MANIFEST stable_identity_count must be {expected_total}")
+    if len(profiles) != expected_total:
+        errors.append(f"excellence profile count must be {expected_total}, got {len(profiles)}")
 
     profile_agents = [p.get("agent") for p in profiles]
     profile_ids = [p.get("id") for p in profiles]
     if profile_agents != canonical:
         errors.append("excellence profile agent order does not match Stable Core 1-21 + v3 extension 22-52")
-    if profile_ids != list(range(1, 53)):
-        errors.append("excellence profile IDs must be exactly 1..52")
+    if profile_ids != list(range(1, expected_total + 1)):
+        errors.append(f"excellence profile IDs must be exactly 1..{expected_total}")
 
     for p in profiles:
         missing = REQUIRED_PROFILE_FIELDS - set(p)
@@ -113,9 +111,9 @@ def main() -> int:
         return 2
 
     print("Agency Excellence coverage: PASS")
-    print("Stable Core profiles: 21/21")
-    print("GitHub Specialist v3 profiles: 31/31")
-    print("Total stable identity excellence coverage: 52/52")
+    print(f"Stable Core profiles: {len(core)}/{expected_core}")
+    print(f"GitHub Specialist v3 profiles: {len(extension)}/{len(extension)}")
+    print(f"Total stable identity excellence coverage: {len(canonical)}/{expected_total}")
     print("Behavioral and external comparative states remain evidence-driven; NOT_RUN is not auto-promoted.")
     return 0
 
