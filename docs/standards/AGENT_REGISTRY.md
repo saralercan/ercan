@@ -107,56 +107,62 @@ These user-facing roles are JIT capabilities mapped onto existing stable special
 Load `.agents/skills/javascript-specialist-capability-pack/SKILL.md` + `docs/standards/JAVASCRIPT_SPECIALIST_ENGINE.md`.
 
 ## Editorial / writing specialist JIT aliases
-These user-facing roles are JIT capabilities mapped onto existing stable specialists; they **do not** increase the stable routing identity count.
+These user-facing roles form a JIT editorial desk mapped onto existing stable/JIT specialists; they **do not** increase the stable routing identity count.
 
-- `@Writing` -> orchestrates the smallest sufficient authoring + editorial pod.
-- `@Editor` -> developmental/structural/line/copy/proof roles according to the requested edit.
-- `@BlogEditor` -> BlogWriter + ResearchWriter + SEO/AEO/Brand + independent EditorialReviewer as material.
-- `@Copywriter` -> WebsiteCopywriter/ProductCopywriter + BrandVoiceEditor + channel/CRO/SEO owners as needed.
-- `@TechnicalWriter` -> TechnicalWriter + active domain/platform specialist + independent QA.
+### Entry aliases
+- `@Editorial` / `@Writing` -> orchestrate the smallest sufficient editorial pod.
+- `@Editor` -> choose developmental, structural, line, copy and/or proof roles according to the requested edit.
+- `@BlogEditor` -> research/blog writer + brand/search + independent review as material.
+- `@Copywriter` -> website/product/email/ad/outreach copy role + brand/channel/CRO/search owners as needed.
+- `@TechnicalWriter` -> technical writer + active domain/platform specialist + independent QA.
 - `@UXWriter` -> UXWriter + `@FrontendSystem + @AccessibilityQA + @BrandBehavior`.
 - `@SEOContentEditor` -> SEOContentEditor + `@TechnicalSEO`; add `@AEO_GEO` only when answer/AI discovery is material.
+
+### Strategy, research and authoring
+- `@EditorialStrategist` -> `@Orchestrator + @BrandBehavior` + channel/search owner as needed.
 - `@ResearchWriter` -> `@Orchestrator` + domain specialist; add `@UpstreamIntelligence` for explicit/current public research.
+- `@BlogWriter` -> `@BrandBehavior` + search owners when discovery is material.
+- `@LongformWriter` -> `@BrandBehavior + @ProductionQA`.
+- `@WebsiteCopywriter` -> `@BrandBehavior + @FrontendSystem` + CRO/search owner as needed.
+- `@ProductCopywriter` -> `@BrandBehavior` + active product/platform owner.
+- `@EcommerceContentEditor` -> commerce platform owner + platform SEO specialist.
+- `@ScriptWriter` -> `@SocialStrategy + @BrandBehavior`.
+- `@CaseStudyWriter` -> `@BrandBehavior + @ProductionQA`.
+- `@ThoughtLeadershipWriter` -> `@BrandBehavior + @ResearchWriter`.
+- `@CorporateCommsEditor` -> `@BrandBehavior + @ProductionQA`.
+- `@ProposalWriter` -> `@BrandBehavior + @Orchestrator + @ProductionQA`.
+- `@PressReleaseWriter` -> `@BrandBehavior + @ProductionQA`.
+- `@EmailCopywriter` -> `@BrandBehavior + @ProductionQA`.
+- `@AdCopywriter` -> `@AdsCreativeStrategist + @BrandBehavior`.
+- `@OutreachCopyEditor` -> `@BrandBehavior + @Orchestrator`.
+- `@HelpCenterWriter` -> active product/platform owner + `@AccessibilityQA`.
+- `@FAQEditor` -> `@BrandBehavior` + `@AEO_GEO` when discovery is material.
+
+### Editing and quality
 - `@BrandVoiceEditor` -> `@BrandBehavior + @BrandComplianceQA`.
+- `@DevelopmentalEditor` -> `@Orchestrator + @ProductionQA`.
+- `@StructuralEditor` -> `@ProductionQA`.
+- `@LineEditor` -> `@BrandBehavior + @ProductionQA`.
+- `@CopyEditor` -> `@ProductionQA`.
+- `@Proofreader` -> independent final `@ProductionQA`.
 - `@FactChecker` -> `@Orchestrator` + task-domain owner.
 - `@CitationEditor` -> `@Orchestrator + @ProductionQA`.
+- `@OriginalityEditor` -> `@ProductionQA + @BrandComplianceQA`.
+- `@ReadabilityEditor` -> `@BrandBehavior + @AccessibilityQA`.
 - `@AccessibilityContentEditor` -> `@AccessibilityQA`.
 - `@LocalizationEditor` -> active locale/platform owner + `@BrandBehavior`.
+- `@StructuredContentEditor` -> CMS/platform/frontend owner + `@ProductionQA`.
+- `@DocumentationEditor` -> active domain/platform specialist + `@ProductionQA`.
+- `@InterviewTranscriptEditor` -> `@ProductionQA + @BrandBehavior`.
+- `@HeadlineTitleEditor` -> `@BrandBehavior` + `@TechnicalSEO` when search-facing.
+- `@ContentRefreshEditor` -> `@TechnicalSEO + @SEOScanner + @BrandBehavior`.
+- `@ContentRepurposingEditor` -> `@ContentRecycling + @BrandBehavior`.
 - `@NewsletterEditor` -> `@BrandBehavior` + email/social owner as appropriate.
 - `@SocialCopyEditor` -> `@SocialStrategy + @BrandBehavior`.
-- `@EcommerceContentEditor` -> commerce platform owner + platform SEO specialist.
+- `@StyleGuideEditor` -> `@BrandBehavior + @BrandComplianceQA`.
+- `@TerminologyEditor` -> `@BrandBehavior` + task-domain specialist.
+- `@EditorialCalendarStrategist` -> `@Orchestrator + @SocialStrategy + @TechnicalSEO` as relevant.
 - `@EditorialReviewer` -> independent `@ProductionQA + @BrandComplianceQA`.
-
-Load `.agents/skills/editorial-writing-capability-pack/SKILL.md` + `docs/standards/EDITORIAL_WRITING_ENGINE.md`.
-
-## Editorial / writing specialist JIT aliases
-These user-facing roles form a JIT editorial desk mapped onto existing stable/JIT owners; they **do not** increase the stable routing identity count.
-
-- `@Editorial` -> orchestrates the smallest sufficient editorial desk.
-- `@EditorialResearcher` -> `@Orchestrator` (+ `@UpstreamIntelligence` only when current public research is material)
-- `@ContentStrategist` -> `@BrandBehavior + @Orchestrator`
-- `@BlogWriter` -> `@BrandBehavior + @Orchestrator`
-- `@LongformWriter` -> `@BrandBehavior + @Orchestrator`
-- `@WebsiteCopywriter` -> `@BrandBehavior + @CROSpecialist`
-- `@BrandVoiceEditor` -> `@BrandBehavior + @BrandComplianceQA`
-- `@SEOContentEditor` -> `@TechnicalSEO + @AEO_GEO`
-- `@AEOContentEditor` -> `@AEO_GEO + @TechnicalSEO`
-- `@ContentRefreshEditor` -> `@TechnicalSEO + @SEOScanner + @BrandBehavior`
-- `@HeadlineTitleEditor` -> `@BrandBehavior` (+ `@TechnicalSEO` when search-facing)
-- `@CopyEditor` -> `@ProductionQA + @BrandBehavior`
-- `@Proofreader` -> `@ProductionQA`
-- `@FactCheckerCitationEditor` -> `@Orchestrator` (+ `@UpstreamIntelligence` for public-source verification)
-- `@TechnicalWriter` -> `@Orchestrator + task-domain specialist`
-- `@DocumentationEditor` -> `@Orchestrator + task-domain specialist + @ProductionQA`
-- `@UXWriter` -> `@FrontendSystem + @AccessibilityQA + @BrandBehavior`
-- `@ProductCopywriter` -> `@BrandBehavior + active platform specialist`
-- `@NewsletterEditor` -> `@BrandBehavior + @ProductionQA`
-- `@SocialCopyEditor` -> `@SocialStrategy + @BrandBehavior`
-- `@ContentRepurposingEditor` -> `@ContentRecycling + @BrandBehavior`
-- `@LocalizationEditor` -> `@BrandBehavior + active platform/channel owner`
-- `@ReadabilityEditor` -> `@BrandBehavior + @AccessibilityQA`
-- `@InclusiveLanguageEditor` -> `@AccessibilityQA + @BrandBehavior`
-- `@EditorialReviewer` -> `@ProductionQA + @BrandComplianceQA`
 
 Load `.agents/skills/editorial-writing-capability-pack/SKILL.md` + `docs/standards/EDITORIAL_WRITING_ENGINE.md`.
 
