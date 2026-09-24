@@ -1,6 +1,6 @@
 ---
 name: presentation-agent-pack
-description: Route Ercan OS presentation work through a research, narrative, visual-design, editable-PPTX build and independent visual-QA pipeline. Use for PowerPoint, slide deck, pitch deck, proposal deck, report deck, academic presentation, speaker deck, presentation PDF/PNG export, or when the user asks to run all relevant agents for presentation work.
+description: Route Ercan OS presentation work through an expert presentation-studio pipeline covering audience strategy, source research, story architecture, slide copy, visual systems, diagrams/data visualization, brand/template engineering, editable PPTX/Google Slides/Canva/Gamma provider routing, speaker notes, accessibility, compatibility and independent visual QA. Use for PowerPoint, slide deck, pitch deck, proposal deck, report deck, academic presentation, speaker deck, presentation PDF/PNG export, or when the user asks to run all relevant agents for presentation work.
 ---
 
 # Presentation Agent Pack
@@ -13,16 +13,66 @@ This is a JIT capability pack. It does **not** create duplicate permanent routin
 
 Use only the roles that materially contribute:
 
+- `PresentationDirector` — owns the end-to-end deck brief, audience, purpose, output mode, delivery constraints and specialist routing; user-facing entry alias is `@Presentation`.
+- `AudienceIntentAnalyst` — resolves who will see the deck, what they already know, what decision/action is required and what objections or information gaps must be handled.
 - `PresentationResearcher` — verifies claims, sources, numbers, dates and evidence; separates sourced facts from assumptions.
+- `EvidenceArchitect` — creates claim→source and chart→data mappings so each material assertion/visual remains defensible.
 - `DeckStrategist` — defines audience, objective, decision/action, slide count, narrative arc and information hierarchy.
+- `StoryArchitect` — designs the through-line, section logic, tension/reveal/proof sequence and the reason each slide exists.
+- `ExecutiveDeckStrategist` — executive/board/report decks: decisions, deltas, KPIs, risks, options, owners and next actions.
+- `InvestorPitchStrategist` — investor/fundraising decks: opportunity, evidence, traction, economics, market, differentiation, GTM, team and ask without forcing a rigid template.
+- `SalesDeckStrategist` — buyer-specific sales decks: buyer context, problem, value, proof, differentiation, objection handling and next step.
+- `ProposalDeckStrategist` — client proposal decks: context/diagnosis, approach, scope, deliverables, timeline, commercial terms and next step using verified project/pricing truth.
+- `AcademicDeckStrategist` — research/scientific decks: question, method, evidence, figures/tables, limitations and defensible conclusion.
+- `TrainingDeckStrategist` — teaching/workshop decks: learning objectives, concept, demonstration, practice, check and recap.
+- `KeynoteDeckStrategist` — keynote/story-led decks: memorable arc, visual pacing and speaker-led delivery rather than document density.
 - `NarrativeEditor` — turns research into concise slide-level messages, titles, bullets, callouts and speaker-note structure.
+- `SlideCopyEditor` — removes document prose, compresses slide copy, writes message-led titles and preserves meaning/source truth; load the Editorial & Writing Capability Pack for material copy work.
+- `SpeakerNotesWriter` — creates presenter-only detail, source cues, transitions and talking points without duplicating the slide body.
+- `PresenterCoach` — prepares delivery flow, timing, likely questions, transitions and rehearsal notes when presentation delivery is in scope.
 - `SlideArtDirector` — owns composition, typography, grid, visual rhythm, layout variation, brand fit and slide-to-slide coherence.
+- `PresentationDesignSystemDirector` — derives/locks palette, typography, spacing, grids, recurring motifs, chart/diagram language and master-layout behavior for the deck.
+- `TypographyDirector` — enforces presentation-distance readability, type hierarchy, line length, alignment and font substitution resilience.
+- `LayoutComposer` — selects content-driven slide archetypes and prevents repetitive AI-card/grid layouts or dead whitespace.
+- `DiagramArchitect` — converts systems, processes, timelines, comparisons, architecture and relationships into editable diagrams/flows where practical.
+- `TableEditor` — turns dense tables into decision-friendly views, highlights material rows/columns and prevents tiny spreadsheet dumps.
 - `AssetCurator` — selects authoritative project/user assets and records provenance; do not leave irrelevant placeholders.
 - `DataVizPlanner` — maps real data to appropriate charts/tables/diagrams and prevents decorative or misleading charts.
+- `DataVizDesigner` — owns scales, labels, annotations, emphasis, color/encoding, data-story framing and chart editability/accessibility.
+- `TemplateMasterEngineer` — preserves or builds masters/layouts/placeholders/theme behavior for reusable corporate/template-led decks.
 - `PPTXEngineer` — builds or converts the deck into editable PowerPoint-compatible output and keeps the requested aspect ratio.
+- `GoogleSlidesEngineer` — uses a connected Google Slides/Drive workflow for native Slides templates, updates and reusable design-system fidelity when that surface is actually available.
+- `CanvaPresentationProvider` — optional connected provider for brand-kit-led Canva presentation generation; provider output remains subject to Ercan OS content/brand/visual QA.
+- `GammaPresentationProvider` — optional connected provider for rapid new presentations/templates/exports and engagement analytics; generation convenience does not replace deck strategy or QA.
+- `AccessibilityDeckReviewer` — checks unique slide titles, reading order, alt text, color independence, contrast, hyperlink text and minimum readable type using current PowerPoint accessibility guidance.
+- `CompatibilityReviewer` — checks fonts, missing assets, aspect ratio, export parity and target-viewer compatibility across requested PowerPoint/Keynote/Google Slides/PDF paths.
+- `DeckRedTeamCritic` — independently attacks weak logic, unsupported claims, confusing slide purpose, generic layouts and unconvincing evidence before final approval.
 - `DeckReviewer` — independently reviews rendered slides for clipping, overlap, contrast, density, consistency, factual drift and visual quality.
 
 Map these JIT roles onto existing Ercan OS owners where relevant: `@Orchestrator` for routing/synthesis, `@BrandSystemArchitect`/`@BrandBehavior`/`@DesignTokenArchitect` for brand systems, `@RealAsset` for authoritative assets, `@BrandComplianceQA` for brand verification and `@ProductionQA` for independent final verification. Add `@UpstreamIntelligence` only when a current tool/capability gap or explicit GitHub research is material.
+
+## Deck source-of-truth contract
+
+For material decks, create a slide manifest before build. The implementation format may be JSON/YAML/Markdown, but each planned slide should resolve at least:
+
+`slide_id | audience_job | primary_message | evidence/source | visual_type | layout_archetype | asset/data refs | speaker-note intent | editability requirement | accessibility title/alt needs`.
+
+The manifest is the narrative/build source of truth. Builder-specific HTML/JS/XML/PPTX is generated from it. When source facts change, update the manifest/data artifact first and regenerate affected slides.
+
+A deck should not become a handout by accident. If the audience needs dense reference detail, use speaker notes or a separate leave-behind/appendix when appropriate.
+
+## Deck-type routing
+
+- Investor/fundraising -> `InvestorPitchStrategist`.
+- Sales/client pitch -> `SalesDeckStrategist`.
+- Proposal/tender/commercial offer -> `ProposalDeckStrategist`.
+- Board/executive/management report -> `ExecutiveDeckStrategist`.
+- Academic/scientific/research -> `AcademicDeckStrategist`.
+- Training/workshop/onboarding -> `TrainingDeckStrategist`.
+- Keynote/conference/story-led -> `KeynoteDeckStrategist`.
+- Portfolio/case-study/product launch -> `DeckStrategist + StoryArchitect + SlideArtDirector`, adding domain specialists as required.
+
+Do not force every deck into the same canonical slide sequence.
 
 ## Reviewed upstream engines
 
@@ -62,6 +112,21 @@ Use only as an optional external provider when fast theme-driven PowerPoint gene
 ### Academic/scientific pattern engine — `Y-Research-SBU/SlideGen`
 Use JIT for research-paper/scientific decks where figure/table/equation mapping and academic slide arrangement are material. It is a pattern/reference engine, not an automatic default for business or brand decks.
 
+### Source-first constrained design — `PoplarPoplar/presentation-skill_-PPTskill`
+Use as a reviewed MIT pattern/JIT reference for treating decks as source artifacts with explicit outline/data inputs, constrained slide variants and QA against density/design-taste failures. Strong fit for board, investor-update, policy/clinical/report and data-heavy decks. Ercan OS still owns narrative, facts and final QA.
+
+### Presentation judgment layer — `hunkim/slide-skill`
+Use as a lightweight MIT judgment reference for significance, structure, simplicity and “one primary point per slide.” Treat the one-point rule as a strong default, not an absolute law for board dashboards or tightly related metric clusters.
+
+### Live-preview editable TypeScript engine — `office-kit/pptx`
+Use JIT when a TypeScript/TSX authoring model with browser preview, editable PPTX export and agent-assisted visual iteration materially improves the workflow. Current upstream is pre-1.0, so pin versions and task-locally verify output/API behavior.
+
+### PptxGenJS/OpenAI-style authoring discipline — PATTERN/JIT
+PptxGenJS remains a strong direct editable-PPTX path. Current OpenAI/JetBrains slide-skill patterns add explicit theme fonts, crop/contain helpers, overflow/out-of-bounds checks, font-substitution detection, rendering and montage review. Keep the engine replaceable and always validate the exported file; never equate successful generation with openability or correctness.
+
+### Optional connected providers — Canva / Gamma / Google Slides
+Use Canva only when an authorized connected Canva surface/brand kit materially helps branded creation. Use Gamma only when an authorized connected Gamma surface materially helps rapid generation/template/export/analytics. Use Google Slides when a connected native Slides template/reference/update workflow is required. These providers are execution surfaces, not presentation-policy authorities, and their generated output must pass the same source, brand and visual review gates.
+
 ### Pattern-only / watchlist — `Westlake-AGI-Lab/Auto-Slides`
 Useful for multi-agent academic presentation concepts, but its GitHub license metadata is `NOASSERTION`; do not copy or vendor code into Ercan OS without a separate license/provenance review. Concepts may be studied and reimplemented independently.
 
@@ -69,7 +134,7 @@ Do not adopt repositories with no usable license or materially stale maintenance
 
 ## Default flow
 
-`brief/source intake → PresentationResearcher → DeckStrategist → NarrativeEditor → SlideArtDirector/AssetCurator/DataVizPlanner → PPTXEngineer → render every slide → DeckReviewer → correction loop → final export → independent QA → VERIFIED/PARTIAL/BLOCKED/NOT VERIFIED`
+`brief/source intake → PresentationDirector/AudienceIntentAnalyst → PresentationResearcher/EvidenceArchitect → DeckStrategist/StoryArchitect + deck-type strategist → slide manifest → NarrativeEditor/SlideCopyEditor → PresentationDesignSystemDirector/SlideArtDirector/AssetCurator/DiagramArchitect/DataVizDesigner → TemplateMasterEngineer/PPTXEngineer or connected provider → speaker notes as needed → render every slide → Accessibility/Compatibility review → DeckRedTeamCritic → DeckReviewer → correction loop → final export → independent QA → VERIFIED/PARTIAL/BLOCKED/NOT VERIFIED`
 
 For reference-led decks:
 `reference/template intake → extract design grammar, not copyrighted content → authoritative assets → narrative mapping → build → rendered comparison → correction loop → independent QA`.
@@ -92,7 +157,13 @@ For academic/scientific decks:
 - User/project templates, logos, fonts and brand rules outrank upstream defaults.
 - Do not copy third-party presentation text, imagery or templates beyond rights/license/permission.
 - If a user provides a reference deck, reproduce design language and structure only to the extent permitted; do not silently republish protected content.
-- Speaker notes are generated only when requested or materially useful.
+- Speaker notes are generated when requested or materially useful; they hold delivery detail rather than duplicating slide body text.
+- Every material slide needs a reason to exist: a decision, claim, explanation, comparison, proof point, transition or deliberate emotional beat.
+- Prefer message-led titles (“Revenue concentration increased in Q3”) over topic labels (“Revenue”) when evidence supports the conclusion.
+- Do not mechanically apply one-point-per-slide to board/dashboard slides where a small set of tightly related metrics must be viewed together; preserve a clear primary takeaway.
+- Avoid repeating the same card grid/layout across the deck. Layout variation must follow content, not novelty.
+- Use native editable charts/diagrams when practical; complex visuals may be SVG/raster assets but source/data must remain available for regeneration.
+- Accessibility is a delivery requirement, not an optional polish pass, when the selected format supports it.
 
 ## Mandatory visual QA
 
@@ -104,6 +175,8 @@ A `.pptx` file existing on disk is not verification. For material delivery:
 4. Review charts/tables against source data and labels.
 5. Rebuild after source changes and re-review affected slides; shared-theme changes invalidate all visual reviews.
 6. Run an independent final pass separate from the builder role.
+7. When PowerPoint is the target, check accessibility-relevant title/reading-order/alt-text/contrast issues and font substitution where the runtime exposes those signals.
+8. If speaker notes, animations, masters or hyperlinks are requested, verify those structures separately; rendered pixels alone cannot prove them.
 
 ## Completion gate
 
