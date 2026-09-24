@@ -29,6 +29,9 @@ Use only the roles that materially contribute:
 - `NarrativeEditor` — turns research into concise slide-level messages, titles, bullets, callouts and speaker-note structure.
 - `SlideCopyEditor` — removes document prose, compresses slide copy, writes message-led titles and preserves meaning/source truth; load the Editorial & Writing Capability Pack for material copy work.
 - `SpeakerNotesWriter` — creates presenter-only detail, source cues, transitions and talking points without duplicating the slide body.
+- `AppendixArchitect` — moves necessary but non-core evidence, methodology, detailed tables and backup slides out of the main story while preserving findability.
+- `LeaveBehindEditor` — creates or plans a denser handout/leave-behind when the audience needs reference detail beyond what belongs on presentation slides.
+- `LocalizationDeckEditor` — adapts deck copy, examples, number/date formats and layout for target locales while preserving the same facts, brand and visual intent.
 - `PresenterCoach` — prepares delivery flow, timing, likely questions, transitions and rehearsal notes when presentation delivery is in scope.
 - `SlideArtDirector` — owns composition, typography, grid, visual rhythm, layout variation, brand fit and slide-to-slide coherence.
 - `PresentationDesignSystemDirector` — derives/locks palette, typography, spacing, grids, recurring motifs, chart/diagram language and master-layout behavior for the deck.
@@ -37,9 +40,11 @@ Use only the roles that materially contribute:
 - `DiagramArchitect` — converts systems, processes, timelines, comparisons, architecture and relationships into editable diagrams/flows where practical.
 - `TableEditor` — turns dense tables into decision-friendly views, highlights material rows/columns and prevents tiny spreadsheet dumps.
 - `AssetCurator` — selects authoritative project/user assets and records provenance; do not leave irrelevant placeholders.
+- `VisualAssetDirector` — decides when to use real photography, product imagery, screenshots, icons, illustration, generated visuals or no image at all; preserves rights/provenance and avoids generic stock filler.
 - `DataVizPlanner` — maps real data to appropriate charts/tables/diagrams and prevents decorative or misleading charts.
 - `DataVizDesigner` — owns scales, labels, annotations, emphasis, color/encoding, data-story framing and chart editability/accessibility.
 - `TemplateMasterEngineer` — preserves or builds masters/layouts/placeholders/theme behavior for reusable corporate/template-led decks.
+- `MotionTransitionDesigner` — adds purposeful PowerPoint transitions/animations only when requested or materially useful and only through an engine/runtime that can verify them structurally; never uses motion as decorative default.
 - `PPTXEngineer` — builds or converts the deck into editable PowerPoint-compatible output and keeps the requested aspect ratio.
 - `GoogleSlidesEngineer` — uses a connected Google Slides/Drive workflow for native Slides templates, updates and reusable design-system fidelity when that surface is actually available.
 - `CanvaPresentationProvider` — optional connected provider for brand-kit-led Canva presentation generation; provider output remains subject to Ercan OS content/brand/visual QA.
@@ -158,6 +163,8 @@ For academic/scientific decks:
 - Do not copy third-party presentation text, imagery or templates beyond rights/license/permission.
 - If a user provides a reference deck, reproduce design language and structure only to the extent permitted; do not silently republish protected content.
 - Speaker notes are generated when requested or materially useful; they hold delivery detail rather than duplicating slide body text.
+- If the deck must also function as a leave-behind, explicitly design that artifact or appendix rather than shrinking handout prose onto live slides.
+- Transitions/animations are optional communication tools. Use them to reveal sequence, causality, hierarchy or state change—not to make the deck feel “premium.”
 - Every material slide needs a reason to exist: a decision, claim, explanation, comparison, proof point, transition or deliberate emotional beat.
 - Prefer message-led titles (“Revenue concentration increased in Q3”) over topic labels (“Revenue”) when evidence supports the conclusion.
 - Do not mechanically apply one-point-per-slide to board/dashboard slides where a small set of tightly related metrics must be viewed together; preserve a clear primary takeaway.
