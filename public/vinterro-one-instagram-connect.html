@@ -66,9 +66,19 @@ async function call(action,payload={}){
   return d;
 }
 async function boot(){
-  const connected=qs.get("connected"),error=qs.get("error"),username=qs.get("username");
-  if(connected==="1"){state("Instagram bağlandı"+(username?" — @"+username:"")+".","ok");return}
-  if(error){state(error,"err");return}
+  const code=qs.get("code"),oauthState=qs.get("state"),oauthError=qs.get("error_description")||qs.get("error");
+  if(oauthError){state(oauthError,"err");return}
+  if(code&&oauthState){
+    try{
+      state("Instagram yetkilendirmesi tamamlanıyor…");
+      const r=await fetch(API,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({action:"exchange",code,state:oauthState})});
+      const x=await r.json().catch(()=>({}));
+      if(!r.ok||x.error) throw new Error(x.error||("HTTP "+r.status));
+      history.replaceState(null,"",location.pathname);
+      state("Instagram bağlandı"+(x?.account?.username?" — @"+x.account.username:"")+".","ok");
+      return;
+    }catch(e){state(e.message||String(e),"err");return}
+  }
   try{
     if(!token) throw new Error("Bağlantı anahtarı bulunamadı. ChatGPT tarafından verilen bağlantıyı yeniden aç.");
     const x=await call("status");
