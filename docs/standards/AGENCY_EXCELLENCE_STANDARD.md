@@ -4,6 +4,7 @@ Status: active
 Version: 2.0
 Date: 2026-09-24
 Scope: every Stable Core identity, every GitHub Specialist v3 identity, every JIT capability role, every project agent, and every future agent inheriting `AGENTS.md`.
+Evidence scan: `docs/upstream/scans/2026-09-24-agency-excellence-audit.md`
 
 ## Internal operating identity
 
