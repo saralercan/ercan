@@ -6,6 +6,16 @@ on:
       - '.codex/config.toml'
       - 'docs/standards/AGENT_REGISTRY.md'
       - 'AGENTS.md'
+      - 'CLAUDE.md'
+      - '.claude/agents/**'
+      - '.agents/skills/ecommerce-specialist/**'
+      - '.agents/skills/finance-specialist/**'
+      - '.agents/skills/portable-agent-router/**'
+      - '.agents/skills/continual-expertise-engine/**'
+      - 'docs/standards/AGENT_EXPERTISE_SOURCE_MATRIX.json'
+      - 'docs/standards/AGENT_CONTINUAL_EXPERTISE_ENGINE.md'
+      - 'docs/standards/PORTABLE_AGENT_RUNTIME.md'
+      - 'docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json'
       - 'docs/standards/AGENCY_EXCELLENCE_STANDARD.md'
       - 'docs/standards/AGENT_EXCELLENCE_MANIFEST.json'
       - 'docs/standards/STABLE_AGENT_CORE.md'
@@ -25,6 +35,16 @@ on:
   push:
     branches: [master]
     paths:
+      - 'CLAUDE.md'
+      - '.claude/agents/**'
+      - '.agents/skills/ecommerce-specialist/**'
+      - '.agents/skills/finance-specialist/**'
+      - '.agents/skills/portable-agent-router/**'
+      - '.agents/skills/continual-expertise-engine/**'
+      - 'docs/standards/AGENT_EXPERTISE_SOURCE_MATRIX.json'
+      - 'docs/standards/AGENT_CONTINUAL_EXPERTISE_ENGINE.md'
+      - 'docs/standards/PORTABLE_AGENT_RUNTIME.md'
+      - 'docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json'
       - '.codex/config.toml'
       - 'docs/standards/AGENT_REGISTRY.md'
       - 'AGENTS.md'
@@ -55,5 +75,5 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - name: Validate 52-agent agency excellence coverage
+      - name: Validate 52 stable + 89 runtime agent excellence coverage
         run: python3 scripts/validate_agency_excellence.py

@@ -129,7 +129,7 @@ For current snapshot anchors:
 
 Do not freeze volatile version numbers in this standard when task-time verification is better.
 
-## 52-agent audit contract
+## Architectural 52-agent audit contract
 
 The canonical numbered audit is `docs/evals/AGENT_EXCELLENCE_AUDIT_2026-09-24.md`.
 The machine-readable coverage is `docs/standards/AGENT_EXCELLENCE_MANIFEST.json`.
@@ -145,6 +145,16 @@ All 52 stable routing identities must have:
 - independent verification ownership.
 
 JIT roles inherit the same standard through their stable owners and may add stricter domain-specific gates.
+
+## Vinterro One 89-agent runtime contract
+
+The 52 stable identities are **not** the full production runtime inventory. Vinterro One currently exposes **89 active runtime agents** through the live `ercan_os_agents` registry; the versioned mirror is `docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json`.
+
+All 89 runtime agents inherit this Agency Excellence Standard and `AGENT_CONTINUAL_EXPERTISE_ENGINE.md`. Their individual authority maps live in `AGENT_EXPERTISE_SOURCE_MATRIX.json`. Runtime routing follows `docs/standards/PORTABLE_AGENT_RUNTIME.md`: specialists are STANDBY by default, the smallest sufficient pod becomes ACTIVE for the current task, and additional standby specialists activate only when a new material need appears.
+
+`Finance Expert Agent` and `E-commerce Expert Agent` are first-class runtime specialists and inherit the same evidence, independent-QA, safety and delivery rules.
+
+Static registry health or a value of 100 does not self-certify expertise. Production/comparative evidence states remain evidence-gated.
 
 ## Completion rule
 
