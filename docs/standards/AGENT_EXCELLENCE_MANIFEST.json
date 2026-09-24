@@ -860,5 +860,10 @@
     "github_specialist_v3": 31,
     "total": 52,
     "jit_roles": "inherit through stable owners and domain-specific standards"
-  }
+  },
+  "audit": "docs/evals/AGENT_EXCELLENCE_AUDIT_2026-09-24.md",
+  "championship_suite": "docs/evals/AGENT_CHAMPIONSHIP_SUITE_V2.md",
+  "core_source_packs": "docs/research/AGENT_SOURCE_PACKS.md",
+  "specialist_source_packs": "docs/research/SPECIALIST_EXCELLENCE_SOURCE_PACKS.md",
+  "coverage_validator": "scripts/validate_agency_excellence.py"
 }
