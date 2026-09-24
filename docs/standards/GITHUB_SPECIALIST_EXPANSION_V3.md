@@ -13,6 +13,7 @@ Latest web-builder capability expansion: `docs/upstream/scans/2026-09-19-web-bui
 Latest adaptive capability expansion: `docs/upstream/scans/2026-09-24-adaptive-capability-pack.md`.
 Latest design-quality expansion: `docs/upstream/scans/2026-09-24-design-quality-engine.md`.
 Latest JavaScript specialist expansion: `docs/upstream/scans/2026-09-24-javascript-specialist-capability-pack.md`.
+Latest JavaScript motion/graphics expansion: `docs/upstream/scans/2026-09-24-javascript-motion-graphics-web-expansion.md`.
 Regression eval: `docs/evals/GITHUB_SPECIALIST_ROUTING_V3.md`.
 Structural scoreboard: `docs/evals/GITHUB_SPECIALIST_SCOREBOARD_V3.md`.
 Behavioral certification: `docs/evals/GITHUB_SPECIALIST_CERTIFICATION_V3.md`.
@@ -67,9 +68,9 @@ Reviewed JIT engines include `OpenHands/OpenHands`, `stackblitz-labs/bolt.diy`, 
 
 ## JavaScript / TypeScript Specialist Capability Pack
 
-For material JavaScript/TypeScript architecture, debugging, runtime failures, async/concurrency, browser/DOM performance, memory leaks, bundle analysis, testing, Node/Bun/Deno compatibility, npm/dependency analysis or JavaScript security work, load `.agents/skills/javascript-specialist-capability-pack/SKILL.md` + `docs/standards/JAVASCRIPT_SPECIALIST_ENGINE.md`.
+For material JavaScript/TypeScript architecture, website interactions, animation/motion graphics, animated charts/data visualization, SVG/Canvas/WebGL/3D, debugging, runtime failures, async/concurrency, browser/DOM performance, memory leaks, bundle analysis, testing, Node/Bun/Deno compatibility, npm/dependency analysis or JavaScript security work, load `.agents/skills/javascript-specialist-capability-pack/SKILL.md` + `docs/standards/JAVASCRIPT_SPECIALIST_ENGINE.md`.
 
-The user-facing `@JavaScript` alias composes focused JIT roles such as JavaScriptArchitect, TypeScriptEngineer, JavaScriptRuntimeDebugger, AsyncConcurrencyExpert, JavaScriptPerformance, DOMPerformance, MemoryLeakHunter, JavaScriptTesting, ReactPerformance, NextJSRuntime, NodeJSEngineer, BundleOptimizer and JavaScriptReviewer. These roles map onto existing stable web/frontend/performance/browser/platform/security/QA owners and **do not change the 52 stable identities**.
+The user-facing `@JavaScript` alias composes focused JIT roles such as JavaScriptArchitect, TypeScriptEngineer, JavaScriptRuntimeDebugger, AsyncConcurrencyExpert, JavaScriptPerformance, DOMPerformance, WebInteractionEngineer, MotionInteractionEngineer, ScrollStorytellingEngineer, PageTransitionEngineer, SVGAnimationEngineer, DataVizEngineer, CanvasGraphicsEngineer, WebGL3DEngineer, CreativeCodingEngineer, VectorMotionEngineer, MotionAccessibilityQA, MemoryLeakHunter, JavaScriptTesting, ReactPerformance, NextJSRuntime, NodeJSEngineer, BundleOptimizer and JavaScriptReviewer. These roles map onto existing stable web/frontend/performance/browser/platform/security/QA owners and **do not change the 52 stable identities**.
 
 Reviewed JIT references include `addyosmani/agent-skills` for evidence-oriented engineering workflow patterns; `vercel-labs/agent-skills:react-best-practices` for compatible React/Next performance rules; `ChromeDevTools/chrome-devtools-mcp` for live console/network/performance/memory inspection; `typescript-eslint/typescript-eslint`, ESLint and Biome for project-compatible static/type quality; Vitest and Playwright for executable testing; and the exact project runtime's official Node/Bun/Deno guidance. `clinicjs/node-clinic` is historical/pattern-only because the upstream states it is not actively maintained.
 
