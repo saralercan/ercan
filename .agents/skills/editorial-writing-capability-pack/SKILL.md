@@ -43,7 +43,23 @@ Use only roles that materially contribute:
 - `ScriptWriter` -> `@SocialStrategy + @BrandBehavior`; video/podcast/reel/voiceover scripts with spoken-language rhythm and production cues.
 - `CaseStudyWriter` -> `@BrandBehavior + @ProductionQA`; problem/intervention/evidence/outcome narratives using only verified customer/project facts.
 - `ThoughtLeadershipWriter` -> `@BrandBehavior + ResearchWriter`; point-of-view content with explicit evidence and no fabricated expertise.
-- `CorporateCommsEditor` -> `@BrandBehavior + @ProductionQA`; announcements, press-style copy, statements, internal/external company communications.
+- `CorporateCommsEditor` -> `@BrandBehavior + @ProductionQA`; announcements, statements and internal/external company communications.
+- `ContentRefreshEditor` -> `@TechnicalSEO + @SEOScanner + @BrandBehavior`; updates stale/decaying articles/pages while preserving working intent, source truth and useful existing value.
+- `HeadlineTitleEditor` -> `@BrandBehavior` plus `@TechnicalSEO` when search-facing; accurate titles, headlines, subject-like hooks and metadata without clickbait drift.
+- `ReadabilityEditor` -> `@BrandBehavior + @AccessibilityQA`; plain language, paragraph load, information density, scanability and comprehension without flattening necessary technical detail.
+- `ContentRepurposingEditor` -> `@ContentRecycling + @BrandBehavior`; turns validated source content into platform-native derivatives without inventing new facts.
+- `DocumentationEditor` -> active domain/platform specialist + `@ProductionQA`; restructures documentation around reader goals, prerequisites, procedures, examples, verification and failure modes.
+- `HelpCenterWriter` -> active product/platform owner + `@AccessibilityQA`; help-center and knowledge-base articles optimized for task completion, searchability and support deflection without hiding limitations.
+- `FAQEditor` -> `@BrandBehavior + @AEO_GEO` when discovery matters; selects real user questions, removes duplicate/contrived questions and writes direct evidence-grounded answers.
+- `EmailCopywriter` -> `@BrandBehavior + @ProductionQA`; lifecycle, transactional-content, campaign and announcement copy. Sending/auth/consent/deliverability remain separate systems.
+- `AdCopywriter` -> `@AdsCreativeStrategist + @BrandBehavior`; ad headlines/body/CTA variants grounded in the verified offer and platform constraints; no fabricated scarcity or outcomes.
+- `OutreachCopyEditor` -> `@BrandBehavior + @Orchestrator`; research-led B2B/outreach messages and follow-ups. Recipient research, sending approval and mailbox actions remain separate workflows.
+- `ProposalWriter` -> `@BrandBehavior + @Orchestrator + @ProductionQA`; proposals, scopes, capability statements and commercial narratives grounded in verified pricing/deliverables.
+- `PressReleaseWriter` -> `@BrandBehavior + @ProductionQA`; press releases/media statements with clear news value, attributable facts and no invented quotes.
+- `InterviewTranscriptEditor` -> `@ProductionQA + @BrandBehavior`; cleans interviews/transcripts for readability while preserving speaker meaning and clearly marking substantive edits/omissions when needed.
+- `StyleGuideEditor` -> `@BrandBehavior + @BrandComplianceQA`; creates/maintains project house style, terminology, voice examples, forbidden phrases and editorial conventions from approved sources.
+- `TerminologyEditor` -> `@BrandBehavior + task-domain specialist`; canonical terms, capitalization, spelling, product/API names and glossary consistency; can emit Vale/CSpell dictionaries when useful.
+- `EditorialCalendarStrategist` -> `@Orchestrator + @SocialStrategy + @TechnicalSEO` as relevant; topic portfolio, cadence, pillar/cluster balance, refresh-vs-new decisions and evidence requirements without content-farm volume goals.
 - `EditorialReviewer` -> independent `@ProductionQA + @BrandComplianceQA`; checks brief, truth, structure, voice, usefulness, accessibility/search constraints and readiness after writing/editing passes.
 
 ## Default editorial workflow
