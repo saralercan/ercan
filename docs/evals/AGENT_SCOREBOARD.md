@@ -34,6 +34,9 @@ Each item is worth 20 points: stable-core registration, dedicated source pack, a
 | `@PerformanceExpert` | 100/100 | PASS | NOT_RUN | NOT_RUN |
 | `@AgentMCPExpert` | 100/100 | PASS | NOT_RUN | NOT_RUN |
 
+## Agency Excellence coverage
+All 21 Stable Core identities are additionally mapped in `docs/standards/AGENT_EXCELLENCE_MANIFEST.json` and `docs/evals/AGENT_CHAMPIONSHIP_SUITE_V2.md`. This does not change the behavioral/external `NOT_RUN` state recorded here.
+
 ## Summary
 
 - Structural readiness: **21/21 PASS**.
