@@ -10,6 +10,7 @@ on:
       - 'docs/standards/AGENT_CONTINUAL_EXPERTISE_ENGINE.md'
       - 'docs/standards/AGENT_EXPERTISE_SOURCE_MATRIX.json'
       - 'docs/standards/PLATFORM_EXPERT_TRAINING.md'
+      - 'docs/standards/SHOPIFY_EXPERT_SOURCE_PACK.md'
       - 'docs/standards/AGENT_REGISTRY.md'
       - '.agents/skills/portable-agent-router/**'
       - '.agents/skills/finance-specialist/**'
