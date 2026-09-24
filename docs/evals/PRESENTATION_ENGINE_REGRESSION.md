@@ -244,3 +244,213 @@ Expected:
 - pattern-level measure-first reconstruction may be independently implemented;
 - no silent source copying.
 
+
+## v5 expert-studio regression cases
+
+### Slide manifest before build
+Prompt: “Bu dokümandan 15 slaytlık yönetim sunumu hazırla.”
+
+Expected:
+- PresentationDirector resolves audience, decision and output;
+- source/claim map and slide manifest exist before material build;
+- every planned slide has a primary message, evidence/source, visual type and editability/accessibility intent;
+- builder output is derived from the manifest rather than improvised slide-by-slide.
+
+Fail if:
+- build starts directly from raw document paragraphs with no narrative/source model.
+
+### Investor deck is not a generic company deck
+Prompt: “Yatırımcı sunumu hazırla.”
+
+Expected:
+- route InvestorPitchStrategist;
+- use actual evidence for traction, market, economics, GTM and ask;
+- adapt sequencing to the company's strongest evidence;
+- never invent TAM/SAM/SOM, logos, revenue, customers or growth.
+
+Fail if:
+- a rigid 10-slide startup template overrides the real story.
+
+### Board/executive deck
+Prompt: “Yönetim kurulu için aylık sunum hazırla.”
+
+Expected:
+- route ExecutiveDeckStrategist;
+- prioritize deltas, decisions, KPI context, risks, owners and asks;
+- allow dense but coherent metric clusters where comparison is the point;
+- appendix/notes hold secondary detail.
+
+Fail if:
+- deck becomes a marketing narrative with no decision surface.
+
+### Sales deck
+Prompt: “Bu müşteriye özel satış sunumu hazırla.”
+
+Expected:
+- route SalesDeckStrategist + research/brand owners;
+- buyer context and proof drive story;
+- company-history slides are omitted unless useful to the buyer;
+- next action is explicit.
+
+Fail if:
+- generic corporate deck is merely renamed for the prospect.
+
+### Proposal deck
+Prompt: “Müşteriye fiyatlı teklif sunumu hazırla.”
+
+Expected:
+- route ProposalDeckStrategist + Editorial/Brand/Production QA;
+- preserve verified scope, deliverables, timeline, exclusions and pricing exactly;
+- persuasion never silently changes commercial terms.
+
+Fail if:
+- price/scope is invented or reformulated into a materially different offer.
+
+### Training deck
+Prompt: “Ekibe 45 dakikalık eğitim sunumu yap.”
+
+Expected:
+- route TrainingDeckStrategist;
+- define learning objectives;
+- use concept → demonstration/example → practice/check → recap flow;
+- slides support teaching rather than reproducing a manual.
+
+Fail if:
+- the deck is just documentation split across slides.
+
+### Keynote deck
+Prompt: “20 dakikalık konferans keynote’u hazırla.”
+
+Expected:
+- route KeynoteDeckStrategist + SpeakerNotesWriter/PresenterCoach;
+- prioritize memorable arc, visual pacing and speaker-led delivery;
+- detailed evidence goes to notes/appendix/leave-behind when needed.
+
+Fail if:
+- slides are dense enough to be read instead of presented.
+
+### Presentation-distance readability
+Prompt: any material PowerPoint deck.
+
+Expected:
+- typography hierarchy and presentation-distance review;
+- ordinary body text below the current accessibility/readability floor is flagged unless a justified template/use case exists;
+- legends/table text that only works at zoom are redesigned or moved to appendix.
+
+Fail if:
+- visual QA is performed only at thumbnail/file-open level.
+
+### Accessibility structure
+Prompt: “Kurumsal PPTX erişilebilir olsun.”
+
+Expected:
+- unique descriptive slide titles;
+- intentional reading order;
+- alt text for informative visuals;
+- sufficient contrast and color-independent encoding;
+- meaningful links;
+- accessibility review separate from aesthetic review.
+
+Fail if:
+- “looks accessible” is accepted without structural checks where supported.
+
+### Speaker notes
+Prompt: “Konuşmacı notlarını da ekle.”
+
+Expected:
+- SpeakerNotesWriter adds transitions, evidence cues and delivery detail;
+- notes are not a duplicate of visible body text;
+- notes presence/content is structurally verified when the engine supports it.
+
+Fail if:
+- notes are claimed based only on rendered slide images.
+
+### Diagram-heavy deck
+Prompt: “Sistemi mimari ve süreç diyagramlarıyla anlat.”
+
+Expected:
+- route DiagramArchitect;
+- simple flows remain editable native shapes when practical;
+- complex diagrams retain a source artifact plus rendered visual;
+- labels and connections remain readable at slide distance.
+
+Fail if:
+- random decorative arrows/icons substitute for actual relationships.
+
+### Data-heavy deck
+Prompt: “Bu Excel/CSV verisinden yönetim sunumu yap.”
+
+Expected:
+- route EvidenceArchitect + DataVizDesigner + TableEditor;
+- data artifact remains reproducible;
+- chart type, scale, labels and annotations serve the slide's message;
+- dense raw tables move to appendix unless comparison requires them.
+
+Fail if:
+- chart values cannot be traced back to source data.
+
+### Repeated AI layout detection
+Prompt: any 10+ slide deck.
+
+Expected:
+- LayoutComposer/DeckRedTeamCritic scan for repeated card grids, centered body text, decorative icon clusters and dead whitespace;
+- repetition is retained only when intentionally part of a system.
+
+Fail if:
+- the same three-card layout repeats because it was easy to generate.
+
+### Canva connected provider
+Prompt: “Canva brand kit’imle sunum oluştur.”
+
+Expected:
+- use CanvaPresentationProvider only if connected/authorized;
+- use the chosen brand kit/template as execution surface;
+- Ercan OS still owns narrative/source/slide plan and QA;
+- provider success is not VERIFIED without reviewing the resulting deck.
+
+### Gamma connected provider
+Prompt: “Gamma’da hızlı bir sunum oluştur ve PPTX dışa aktar.”
+
+Expected:
+- use GammaPresentationProvider only if connected/authorized;
+- choose generate/template mode according to request;
+- exported PPTX/PDF remains subject to compatibility and visual QA;
+- analytics capabilities are used only for existing Gamma engagement questions.
+
+### Google Slides template
+Prompt: “Bu mevcut Google Slides şablonunu kullanarak yeni dönem sunumu hazırla.”
+
+Expected:
+- route GoogleSlidesEngineer when native connected deck/template exists;
+- derive design system from the source deck and edit a copy when appropriate;
+- do not replace the native template with generic PPTX/Canva styling.
+
+### Pre-1.0 engine boundary
+Prompt: “office-kit/pptx’i varsayılan motor yap.”
+
+Expected:
+- recognize current pre-1.0 API status;
+- allow pinned task-local JIT use after validation;
+- do not make it the sole default production engine without stronger stability evidence.
+
+### PptxGenJS structural validation
+Prompt: “PptxGenJS ile üret, dosya oluştuysa yeter.”
+
+Expected:
+- reject file-existence completion;
+- run render/open/overflow/font/structural checks available in the runtime;
+- preserve editable native elements where practical.
+
+Fail if:
+- successful write is marked VERIFIED without current rendered/structural QA.
+
+### Final red-team review
+Prompt: any client-facing premium deck.
+
+Expected:
+- DeckRedTeamCritic is independent from author/builder;
+- checks weak claims, missing proof, confusing slide purpose, generic design and hidden density;
+- corrections are rerendered and reviewed before DeckReviewer signs off.
+
+Fail if:
+- creator self-certifies the premium deck.
