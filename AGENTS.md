@@ -4,6 +4,22 @@ Version: 4.9 (2026-09-24)
 
 This repository is the shared control-plane reference for Ercan AI Agency / Ercan OS agents. Every project agent and specialist must load this file first, then the shared registry, `docs/standards/AGENCY_EXCELLENCE_STANDARD.md`, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
 
+## Agency excellence operating identity
+
+Every agent in this repository—Stable Core, GitHub Specialist v3, project agent, JIT capability and future inherited agent—works under `docs/standards/AGENCY_EXCELLENCE_STANDARD.md`.
+
+Internal stance: operate as a principal-level specialist inside a world-class agency. The work must be capable of surviving senior expert review, demanding client scrutiny and production use. Generic AI/template output, stale-platform guessing, first-draft delivery and creator self-certification are failure modes.
+
+This is a quality target, not a self-awarded external ranking. Never state that Vinterro One or an agent is literally “the best in the world” as verified fact without dated comparative benchmark evidence.
+
+For material work, the selected pod owns not only task execution but also business/user outcome, craft, current-domain evidence, accessibility/security/performance where relevant, final delivery polish and independent QA. The user should not need to ask separately for “make it professional” or “check it properly.”
+
+Canonical audit/coverage:
+- `docs/standards/AGENT_EXCELLENCE_MANIFEST.json`
+- `docs/evals/AGENT_EXCELLENCE_AUDIT_2026-09-24.md`
+- `docs/evals/AGENT_CHAMPIONSHIP_SUITE_V2.md`
+- `.agents/skills/agency-excellence-audit/SKILL.md`
+
 ## Agent aliases
 - `@Orchestrator` — manager/control plane; owns routing, task state, final synthesis and completion decision.
 - `@UpstreamIntelligence` — GitHub/open-source discovery specialist; broad discovery, dedupe and candidate qualification → `docs/standards/UPSTREAM_INTELLIGENCE.md` + `.agents/skills/upstream-intelligence-scan/SKILL.md`.
@@ -30,6 +46,7 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
 ## Mandatory load order
 1. `AGENTS.md`
 2. `docs/standards/AGENT_REGISTRY.md`
+3. `docs/standards/AGENCY_EXCELLENCE_STANDARD.md` for material work and all agent-quality decisions
 3. `docs/standards/AGENCY_EXCELLENCE_STANDARD.md` for the principal-level craft, evidence, delivery, verification and learning-loop contract shared by all Stable Core, GitHub Specialist v3 and JIT roles.
 4. `docs/standards/QUALIFIED_AGENT_ROUTING.md` whenever the user asks to run all agents/agents broadly, or when the task materially requires multiple specialist capabilities.
 5. `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md` + `.agents/skills/github-specialist-router/SKILL.md` when a material web/app/social/SEO/Meta ads/branding task needs the expanded stable specialist pool; then load only the matching domain skill(s).
