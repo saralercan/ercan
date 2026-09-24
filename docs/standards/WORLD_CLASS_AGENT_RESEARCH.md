@@ -1,11 +1,11 @@
 # Ercan OS — World-Class Agent Research System
 
 Status: active
-Version: 1.0 (2026-08-31)
+Version: 2.0 (2026-09-24)
 
 ## Objective
 
-Make every stable Ercan OS agent a maintained expert that reasons from current evidence, not a frozen prompt or model-memory snapshot. The target is world-class performance, but that label is never self-awarded: it must be supported by reproducible task outcomes and benchmark evidence.
+Make every one of the 52 stable Vinterro One / Ercan OS routing identities a maintained expert that reasons from current evidence, not a frozen prompt or model-memory snapshot. The target is world-class performance, but that label is never self-awarded: it must be supported by reproducible task outcomes and benchmark evidence.
 
 ## Core operating rule
 
@@ -115,11 +115,11 @@ Do not import an external leaderboard ranking as an Ercan OS score. Reproduce or
 
 ## World-class claim gate
 
-No agent may be described as “the best in the world”, “perfect”, “error-free” or equivalent based only on architecture/training. The strongest allowed internal status is `PRODUCTION_VERIFIED`, backed by current certification evidence. Comparative world-class claims require dated, reproducible benchmark comparison against credible external baselines.
+No agent may be described as “the best in the world”, “perfect”, “error-free” or equivalent based only on architecture/training. The strongest ordinary production status is `PRODUCTION_VERIFIED`; `BENCHMARKED_FRONTIER_CANDIDATE` and `WORLD_CLASS_COMPARATIVE_EVIDENCE` require the stricter evidence states defined in `AGENCY_EXCELLENCE_STANDARD.md`, backed by current certification evidence. Comparative world-class claims require dated, reproducible benchmark comparison against credible external baselines.
 
 ## Required source packs
 
-Every stable identity in `STABLE_AGENT_CORE.md` has a corresponding section in `docs/research/AGENT_SOURCE_PACKS.md`. Project agents inherit relevant domain/platform packs plus project-local truth; they do not duplicate the internet corpus.
+Stable Core identities 1–21 have corresponding sections in `docs/research/AGENT_SOURCE_PACKS.md`. GitHub Specialist v3 identities 22–52 have individual authority routes in `docs/research/SPECIALIST_EXCELLENCE_SOURCE_PACKS.md` plus their domain skill/manifest. `AGENT_EXCELLENCE_MANIFEST.json` gives all 52 a principal mandate, gap/remediation, hard fail and championship gate. Project agents inherit relevant domain/platform packs plus project-local truth; they do not duplicate the internet corpus.
 
 ## Continuous refresh
 
