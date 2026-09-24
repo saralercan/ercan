@@ -5,6 +5,7 @@ Date: 2026-09-24
 Skill: `.agents/skills/javascript-specialist-capability-pack/SKILL.md`
 Regression eval: `docs/evals/JAVASCRIPT_SPECIALIST_ENGINE_REGRESSION.md`
 Evidence scan: `docs/upstream/scans/2026-09-24-javascript-specialist-capability-pack.md`
+Motion/graphics expansion scan: `docs/upstream/scans/2026-09-24-javascript-motion-graphics-web-expansion.md`
 
 ## Purpose
 
