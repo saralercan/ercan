@@ -3,6 +3,7 @@
 Status: generated structural-readiness audit
 Audit date: 2026-08-31
 Stable identities checked: **21**
+Agency Excellence overlay: **21/21 profiles are additionally governed by `AGENCY_EXCELLENCE_STANDARD.md`; see the 52-agent audit/manifest.**
 
 This scoreboard measures **static governance/readiness only**. It does not claim behavioral superiority, benchmark wins, or world-best status. Runtime/tool-use/coding/browser/creative/security benchmark results remain `NOT_RUN` until executed in a reproducible harness with an independent evaluator.
 
