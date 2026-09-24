@@ -48,7 +48,7 @@ Some related ViewTimeline surfaces remain less universally available; verify cur
 - Strong fit: conventional dashboards and product/admin charts in React where component composition and accessible DOM/SVG output matter.
 - Keep React version/package compatibility in scope.
 
-### apache/echarts — ADOPT_WHEN_NEEDED
+### Apache ECharts (`apache/echarts`) — ADOPT_WHEN_NEEDED
 - Apache-2.0.
 - Strong fit: rich interactive dashboards, large chart vocabulary and heavily interactive Canvas/SVG visualization.
 - Avoid importing the full feature set when tree-shakable modular use is available.
@@ -62,7 +62,7 @@ Data integrity rule: animation may reveal or transition real data but must not i
 
 ## 2D creative rendering
 
-### pixijs/pixijs — ADOPT_WHEN_NEEDED
+### PixiJS (`pixijs/pixijs`) — ADOPT_WHEN_NEEDED
 - MIT.
 - Current upstream supports WebGL and WebGPU rendering with asset loading, text, primitives/SVG drawing, textures, filters, blending and pointer/touch interaction.
 - Strong fit: many animated 2D objects, particles, interactive backgrounds, generative graphics and rich canvas-like experiences.
