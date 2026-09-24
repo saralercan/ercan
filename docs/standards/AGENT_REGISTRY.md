@@ -127,6 +127,9 @@ These user-facing roles form the expert presentation studio and map onto existin
 ### Content and delivery
 - `@NarrativeEditor` / `@SlideCopyEditor` -> Editorial & Writing Capability Pack + `@BrandBehavior`.
 - `@SpeakerNotesWriter` -> Editorial & Writing Capability Pack + `@Orchestrator`.
+- `@AppendixArchitect` -> `@Orchestrator + @ProductionQA`.
+- `@LeaveBehindEditor` -> Editorial & Writing Capability Pack + `@ProductionQA`.
+- `@LocalizationDeckEditor` -> Editorial & Writing Capability Pack + active locale/brand owner.
 - `@PresenterCoach` -> `@Orchestrator + @ProductionQA`.
 
 ### Visual system and information design
@@ -135,12 +138,14 @@ These user-facing roles form the expert presentation studio and map onto existin
 - `@TypographyDirector` -> `@TypographyLayoutAgent + @AccessibilityQA`.
 - `@LayoutComposer` -> `@GraphicArtDirector + @ProductionQA`.
 - `@AssetCurator` -> `@RealAsset + @BrandComplianceQA`.
+- `@VisualAssetDirector` -> `@RealAsset + @BrandSystemArchitect + @BrandComplianceQA`.
 - `@DiagramArchitect` -> information/graphic design owner + `@ProductionQA`.
 - `@DataVizPlanner` / `@DataVizDesigner` -> data-viz/domain owner + `@ProductionQA`.
 - `@TableEditor` -> `@ProductionQA` + data/domain owner.
 
 ### Build and QA
 - `@TemplateMasterEngineer` -> `@BrandSystemArchitect + @ProductionQA`.
+- `@MotionTransitionDesigner` -> presentation-native runtime + `@ProductionQA`.
 - `@PPTXEngineer` -> presentation build engine + `@ProductionQA`.
 - `@GoogleSlidesEngineer` -> connected Google Slides/Drive surface when available.
 - `@CanvaPresentationProvider` -> connected Canva surface when available.
