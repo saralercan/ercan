@@ -21,6 +21,9 @@ Load `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`, `BRAND_SOCIAL.md`, `DES
 - tokens: semantic colors, type, spacing, radius, motion and platform outputs.
 - `AGENTS.md`: routing/working/QA instructions; do not turn it into the brand book.
 
+## Editorial voice routing
+For brand voice, website copy, blog/editorial, UX/microcopy, newsletters, scripts, product copy or copy editing, load `.agents/skills/editorial-writing-capability-pack/SKILL.md` + `docs/standards/EDITORIAL_WRITING_ENGINE.md`. `@BrandBehavior` supplies the authoritative voice/message system; writing roles create/edit within it and `@BrandComplianceQA` independently checks material outputs.
+
 ## Graphic specialist routing
 For art direction, typography/layout, campaign graphics or export/preflight, load `.agents/skills/digital-specialist-agent-pack/SKILL.md` + `docs/standards/DIGITAL_SPECIALIST_AGENTS.md`. Existing brand sources and asset provenance remain authoritative; image-generation/design engines do not self-direct or self-approve.
 
