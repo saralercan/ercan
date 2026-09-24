@@ -14,16 +14,73 @@ Regression eval: `docs/evals/PRESENTATION_ENGINE_REGRESSION.md`
 Presentation repositories are replaceable upstream engines, not policy authorities and not new permanent Ercan OS identities. Ercan OS keeps the existing stable routing surface and composes presentation-specific JIT roles around the existing Orchestrator, brand, asset and QA specialists.
 
 Default presentation capability roles:
+- `PresentationDirector`
+- `AudienceIntentAnalyst`
 - `PresentationResearcher`
+- `EvidenceArchitect`
 - `DeckStrategist`
+- `StoryArchitect`
+- deck-type strategist as needed (`ExecutiveDeckStrategist`, `InvestorPitchStrategist`, `SalesDeckStrategist`, `ProposalDeckStrategist`, `AcademicDeckStrategist`, `TrainingDeckStrategist`, `KeynoteDeckStrategist`)
 - `NarrativeEditor`
+- `SlideCopyEditor`
+- `SpeakerNotesWriter`
 - `SlideArtDirector`
+- `PresentationDesignSystemDirector`
+- `TypographyDirector`
+- `LayoutComposer`
 - `AssetCurator`
-- `DataVizPlanner`
-- `PPTXEngineer`
+- `DiagramArchitect`
+- `DataVizPlanner` / `DataVizDesigner`
+- `TableEditor`
+- `TemplateMasterEngineer`
+- `PPTXEngineer` / connected provider engineer as applicable
+- `AccessibilityDeckReviewer`
+- `CompatibilityReviewer`
+- `DeckRedTeamCritic`
 - `DeckReviewer`
 
 These roles are capabilities inside the presentation pack, not additional global `@` identities.
+
+## Presentation Studio source model
+
+Material decks use a source-first workflow. Keep a rebuildable deck manifest separate from generated slide binaries.
+
+Minimum slide contract:
+- slide id / section;
+- audience job;
+- one primary message;
+- supporting evidence and source references;
+- visual/diagram/chart/table choice;
+- layout archetype;
+- asset/data references;
+- speaker-note intent;
+- editability requirement;
+- accessibility title/alt-text/read-order needs.
+
+The manifest can be JSON, YAML or Markdown. Builder-specific HTML/JS/TSX/XML/PPTX is derived from it. Factual/data updates should flow through the manifest/data artifact instead of manual edits to rendered slides whenever practical.
+
+## Deck archetypes
+
+### Executive / board
+Lead with decisions, material deltas, KPI context, risks, options, owners and asks. Dense dashboards are allowed when metrics are tightly related and the slide still has a clear takeaway.
+
+### Investor / fundraising
+Build a defensible investment story from opportunity, product/solution, evidence/traction, economics, market, differentiation, GTM, team and ask. Do not fabricate market sizes, traction or logos. Sequence is adapted to actual evidence rather than a fixed template.
+
+### Sales / client pitch
+Tailor to buyer situation, pain/need, value, proof, differentiation, risk/objections and next step. Avoid generic company-history filler when it does not help the buyer decide.
+
+### Proposal / commercial
+Use verified client context, diagnosis, approach, scope, deliverables, timeline, commercial terms and next step. Narrative cannot silently alter prices or scope.
+
+### Academic / scientific
+Preserve research question, methods, evidence, figures/tables, limitations and citations. Source fidelity outranks visual simplification.
+
+### Training / workshop
+Use learning objectives, concept, worked example/demonstration, exercise/check and recap. Slides support instruction; they are not a transcript of the lesson.
+
+### Keynote / conference
+Optimize for spoken delivery, memorable sequence and visual pacing. Put detail in notes/leave-behind rather than on-screen prose.
 
 ## Reviewed upstream set
 
@@ -102,6 +159,37 @@ These roles are capabilities inside the presentation pack, not additional global
 - License: MIT for the MCP wrapper; hosted service/API uses external account/credits and provider terms.
 - Relevant strengths: fast provider generation, many output languages including Turkish, reference-image styling, multiple aspect ratios/resolutions and narration.
 - Ercan OS use: optional speed/narration provider only with explicit authorized credentials/credits; generated output remains subject to Ercan OS factual, brand and visual QA.
+
+### `PoplarPoplar/presentation-skill_-PPTskill` — ADOPT_PATTERN_ONLY/JIT_CONSTRAINED_DESIGN
+- MIT; source-first editable PPTX workflow with explicit outline/data artifacts and constrained visual variants.
+- Useful for data-heavy board/investor/report/policy/clinical-style decks and for encoding design taste as constraints instead of generic templates.
+- Ercan OS use: design/source pattern and optional engine after task-local validation; presentation policy remains local.
+
+### `hunkim/slide-skill` — ADOPT_PATTERN_ONLY_JUDGMENT
+- MIT; significance/structure/simplicity and one-primary-point-per-slide discipline.
+- Strong for reducing overcrowding and document-like slides.
+- Ercan OS use: judgment layer; not an absolute rule for board dashboards or related metric clusters.
+
+### `office-kit/pptx` — WATCH/ADOPT_JIT_LIVE_PREVIEW
+- TypeScript/TSX PPTX create/read/edit workflow with live browser preview and editable export.
+- Current upstream is 0.x/pre-1.0; pin exact versions and verify runtime/output before production use.
+- Ercan OS use: optional source-driven authoring/live-preview engine when its iteration model materially helps.
+
+### PptxGenJS + current OpenAI/JetBrains slide patterns — ADOPT_PATTERN/JIT
+- Direct editable PowerPoint authoring with explicit theme fonts, native charts where practical, SVG fallback for complex visuals, crop/contain helpers, rendering, montage, overlap/out-of-bounds checks and font-substitution detection.
+- Openability/editability/rendering must be validated independently; successful generation is not a completion gate.
+
+### Connected Canva provider — ADOPT_WHEN_CONNECTED
+- Use only with an authorized Canva connection when brand-kit-led editable presentation creation materially helps.
+- Ercan OS creates/validates the presentation brief, narrative and content plan; Canva is an execution/design surface.
+
+### Connected Gamma provider — ADOPT_WHEN_CONNECTED
+- Use only with an authorized Gamma connection for rapid new presentation/template generation, exports or engagement analytics.
+- Provider output is a draft until Ercan OS source/brand/visual QA passes.
+
+### Connected Google Slides provider — ADOPT_WHEN_CONNECTED
+- Use native Google Slides workflows when an existing Slides template/reference/prior-period deck must be preserved or edited.
+- Derive and honor its design system before mutation; do not replace it with a generic net-new theme.
 
 ### `Y-Research-SBU/SlideGen` — ADOPT_PATTERN_ONLY / ACADEMIC_JIT
 - Purpose: collaborative multimodal scientific slide generation.
