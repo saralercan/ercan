@@ -79,7 +79,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 2,
@@ -127,7 +127,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 3,
@@ -165,7 +165,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 4,
@@ -206,7 +206,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 5,
@@ -307,7 +307,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 6,
@@ -346,7 +346,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 7,
@@ -382,7 +382,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 8,
@@ -423,7 +423,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 9,
@@ -461,7 +461,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 10,
@@ -499,7 +499,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 11,
@@ -536,7 +536,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 12,
@@ -572,7 +572,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 13,
@@ -609,7 +609,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 14,
@@ -642,7 +642,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 15,
@@ -678,7 +678,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 16,
@@ -714,7 +714,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 17,
@@ -765,7 +765,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 18,
@@ -804,7 +804,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 19,
@@ -840,7 +840,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 20,
@@ -876,7 +876,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 21,
@@ -911,7 +911,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 22,
@@ -948,7 +948,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 23,
@@ -985,7 +985,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 24,
@@ -1029,7 +1029,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 25,
@@ -1069,7 +1069,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 26,
@@ -1109,7 +1109,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 27,
@@ -1149,7 +1149,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 28,
@@ -1190,7 +1190,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 29,
@@ -1230,7 +1230,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 30,
@@ -1271,7 +1271,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 31,
@@ -1311,7 +1311,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 32,
@@ -1350,7 +1350,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 33,
@@ -1390,7 +1390,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 34,
@@ -1430,7 +1430,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 35,
@@ -1471,7 +1471,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 36,
@@ -1511,7 +1511,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 37,
@@ -1549,7 +1549,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 38,
@@ -1589,7 +1589,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 39,
@@ -1630,7 +1630,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 40,
@@ -1672,7 +1672,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 41,
@@ -1714,7 +1714,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 42,
@@ -1754,7 +1754,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 43,
@@ -1797,7 +1797,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 44,
@@ -1837,7 +1837,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 45,
@@ -1880,7 +1880,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 46,
@@ -1920,7 +1920,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 47,
@@ -1961,7 +1961,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 48,
@@ -2005,7 +2005,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 49,
@@ -2047,7 +2047,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 50,
@@ -2088,7 +2088,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 51,
@@ -2134,7 +2134,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 52,
@@ -2176,7 +2176,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 53,
@@ -2233,7 +2233,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 54,
@@ -2274,7 +2274,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 55,
@@ -2320,7 +2320,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 56,
@@ -2358,7 +2358,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 57,
@@ -2397,7 +2397,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 58,
@@ -2436,7 +2436,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 59,
@@ -2475,7 +2475,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 60,
@@ -2517,7 +2517,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 61,
@@ -2555,7 +2555,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 62,
@@ -2594,7 +2594,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 63,
@@ -2633,7 +2633,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 64,
@@ -2671,7 +2671,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 65,
@@ -2707,7 +2707,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 66,
@@ -2746,7 +2746,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 67,
@@ -2785,7 +2785,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 68,
@@ -2827,7 +2827,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 69,
@@ -2867,7 +2867,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 70,
@@ -2906,7 +2906,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 71,
@@ -2946,7 +2946,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 72,
@@ -2984,7 +2984,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 73,
@@ -3024,7 +3024,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 74,
@@ -3064,7 +3064,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 75,
@@ -3105,7 +3105,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 76,
@@ -3143,7 +3143,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 77,
@@ -3185,7 +3185,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 78,
@@ -3224,7 +3224,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 79,
@@ -3266,7 +3266,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 80,
@@ -3308,7 +3308,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 81,
@@ -3350,7 +3350,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 82,
@@ -3389,7 +3389,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 83,
@@ -3428,7 +3428,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 84,
@@ -3471,7 +3471,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 85,
@@ -3513,7 +3513,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 86,
@@ -3551,7 +3551,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 87,
@@ -3594,7 +3594,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 88,
@@ -3645,7 +3645,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     },
     {
       "id": 89,
@@ -3689,7 +3689,7 @@
         "claude": true,
         "vinterro_one": true
       },
-      "authority_map": "AGENT_SOURCE_AUTHORITY_89.json"
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     }
   ]
 }
