@@ -1,13 +1,13 @@
-# Vinterro Digital Mail Agent Standard
+# Vinterro Sales Super Agent — Mail Alias Standard
 
 Status: active  
 Version: 2.0 (2026-09-25)
 
-This standard defines the `@MailAgent` user-facing routing contract into the existing **Vinterro One → Sales · AutoGTM** commercial system. It must not create a second prospect, outreach or CRM source of truth.
+This standard defines the `@MailAgent` user-facing routing contract into the canonical **Vinterro One → Sales · AutoGTM → Vinterro Sales Super Agent** commercial system. It must not create a second prospect, outreach or CRM source of truth.
 
 ## Mission
 
-`@MailAgent` is not an email sequencer and is **not a separate operating system**. The canonical owner is **Vinterro One → Sales · AutoGTM**. Vinterro Keşif owns discovery/qualification; existing Outreach owns communication execution/delivery state; existing CRM/pipeline state owns the customer record and follow-up lifecycle.
+`@MailAgent` is not an email sequencer and is **not a separate operating system**. The canonical owner is **Vinterro One → Sales · AutoGTM → Vinterro Sales Super Agent**. Vinterro Keşif owns discovery/qualification; existing Outreach owns communication execution/delivery state; existing CRM/pipeline state owns the customer record and follow-up lifecycle.
 
 Through that canonical system, the alias exposes:
 1. customer/prospect pool creation;
@@ -30,7 +30,7 @@ It routes into Vinterro Keşif / AutoGTM, Outreach, CRM/pipeline, Gmail, public 
 ## Canonical ownership
 
 - **System:** Vinterro One
-- **Commercial owner:** Sales · AutoGTM
+- **Commercial owner:** Sales · AutoGTM → Vinterro Sales Super Agent
 - **Discovery/qualification lane:** Vinterro Keşif
 - **Execution lane:** Outreach
 - **Customer state:** CRM / pipeline
@@ -38,6 +38,10 @@ It routes into Vinterro Keşif / AutoGTM, Outreach, CRM/pipeline, Gmail, public 
 - **User-facing shorthand:** `mail ajanı`, `@MailAgent`
 
 Rule: any new research, copywriting, delivery-tracking or recovery capability discovered for `@MailAgent` must be added **into these existing AutoGTM lanes**, not implemented as a competing agent or second source of truth.
+
+## Cloud/runtime consistency
+
+The user-facing alias must resolve to the same canonical Super Agent contract from any chat/project window. Persistent commercial state belongs to Vinterro One cloud state (AutoGTM + Outreach + CRM + runtime task/heartbeat layer), not to a chat window or model memory. Codex/Work/ChatGPT may execute authorized steps, but they must return evidence into the same state and may not redefine qualification, sender, approval or completion rules.
 
 ## Invocation contract
 
