@@ -7,10 +7,11 @@ Manager/control plane. Owns project routing, JIT context retrieval, task spec co
 
 ## Vinterro Digital Mail Agent JIT alias
 
-`@MailAgent` is the Vinterro Digital lead-to-conversation operating capability. It is not a generic sequencer and does **not** increase the stable routing identity count.
+`@MailAgent` is a user-facing alias into the canonical **Vinterro One → Sales · AutoGTM → Vinterro Sales Super Agent** capability. It is not a separate sales system and does **not** increase the stable routing identity count.
 
 ### Entry routing
-- Trigger phrases include `mail ajanı`, `@MailAgent`, Vinterro Digital outreach, prospect/customer-pool building, new-customer discovery, mail tracking, customer tracking, bounce recovery, follow-up and prospect-reply handling.
+- Trigger phrases include `mail ajanı`, `@MailAgent`, `Sales Super Agent`, Vinterro Digital outreach, prospect/customer-pool building, new-customer discovery, mail tracking, customer tracking, bounce recovery, follow-up and prospect-reply handling.
+- Canonical state belongs to Vinterro One AutoGTM + Outreach + CRM; never create a parallel MailAgent customer database or pipeline.
 - Fixed sender: connected `info@vinterro.digital` Gmail mailbox.
 - Compose the smallest sufficient pod; do not run every subrole for every task.
 
