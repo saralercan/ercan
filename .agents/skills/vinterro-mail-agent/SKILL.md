@@ -1,13 +1,13 @@
 ---
 name: vinterro-mail-agent
-description: Route "mail ajanı" / "@MailAgent" into the canonical Vinterro One Sales · AutoGTM commercial system, including Vinterro Keşif lead discovery/qualification, Outreach, CRM/pipeline, Gmail delivery tracking, bounce/social recovery and user-approved reply handling.
+description: Route "mail ajanı" / "@MailAgent" into the canonical Vinterro Sales Super Agent on Vinterro One Sales · AutoGTM. The Super Agent unifies Vinterro Keşif discovery/qualification, Outreach, CRM/pipeline, Gmail tracking, bounce/social recovery and user-approved replies without creating a parallel sales system.
 ---
 
-# Vinterro Digital Mail Agent
+# Vinterro Sales Super Agent — Mail Alias
 
 User-facing aliases: `@MailAgent`, `mail ajanı`.
 
-This file is a **user-facing alias/router**, not a second sales agent. Canonical ownership remains **Vinterro One → Sales · AutoGTM**, with Vinterro Keşif for discovery/qualification and the existing Outreach/CRM lanes for communication and customer state. `@MailAgent` loads and specializes that existing system; it does not create parallel lead, outreach or CRM state.
+This file is a **user-facing alias/router**, not a second sales agent. Canonical ownership remains **Vinterro One → Sales · AutoGTM → Vinterro Sales Super Agent**, with Vinterro Keşif for discovery/qualification and the existing Outreach/CRM lanes for communication and customer state. `@MailAgent` loads and specializes that existing system; it does not create parallel lead, outreach or CRM state.
 
 Load:
 - `docs/standards/VINTERRO_MAIL_AGENT.md`
@@ -31,7 +31,7 @@ Execution authority:
 
 ## Canonical owner and specialist lanes
 
-Canonical owner: **Vinterro One → Sales · AutoGTM**.
+Canonical owner: **Vinterro One → Sales · AutoGTM → Vinterro Sales Super Agent**.
 
 Existing system lanes remain authoritative:
 - **Vinterro Keşif / AutoGTM discovery + qualification** — candidate discovery, evidence, dedupe, verification, fit/opportunity diagnosis and outreach readiness.
