@@ -290,6 +290,7 @@ Ercan OS skills use the open Agent Skills `SKILL.md` pattern where practical. Sk
 - `.agents/skills/platform-design-intelligence/SKILL.md`
 - `.agents/skills/execution-governance/SKILL.md`
 - `.agents/skills/founder-operations/SKILL.md`
+- `.agents/skills/vinterro-mail-agent/SKILL.md`
 - `.agents/skills/judgment-engine/SKILL.md`
 - `.agents/skills/jev-runtime-extensions/SKILL.md`
 - `.agents/skills/agent-runtime-stack/SKILL.md`
