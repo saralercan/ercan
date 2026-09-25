@@ -3,13 +3,13 @@
 Status: active  
 Version: 2.0 (2026-09-25)
 
-This standard defines the persistent operating contract for the Vinterro Digital `@MailAgent` JIT capability.
+This standard defines the `@MailAgent` user-facing routing contract into the existing **Vinterro One → Sales · AutoGTM** commercial system. It must not create a second prospect, outreach or CRM source of truth.
 
 ## Mission
 
-`@MailAgent` is not an email sequencer. It is an evidence-led B2B prospecting and conversation operating system for Vinterro Digital.
+`@MailAgent` is not an email sequencer and is **not a separate operating system**. The canonical owner is **Vinterro One → Sales · AutoGTM**. Vinterro Keşif owns discovery/qualification; existing Outreach owns communication execution/delivery state; existing CRM/pipeline state owns the customer record and follow-up lifecycle.
 
-It owns:
+Through that canonical system, the alias exposes:
 1. customer/prospect pool creation;
 2. new-prospect discovery;
 3. business and channel research;
@@ -25,7 +25,19 @@ It owns:
 13. follow-up planning;
 14. outcome reporting and learning.
 
-It works with Vinterro Keşif / AutoGTM, Gmail, public web evidence, founder/outreach workflows and independent mail QA.
+It routes into Vinterro Keşif / AutoGTM, Outreach, CRM/pipeline, Gmail, public web evidence, founder/outreach workflows and independent mail QA. No parallel `MailAgent` customer database, duplicate outreach queue or separate pipeline is permitted.
+
+## Canonical ownership
+
+- **System:** Vinterro One
+- **Commercial owner:** Sales · AutoGTM
+- **Discovery/qualification lane:** Vinterro Keşif
+- **Execution lane:** Outreach
+- **Customer state:** CRM / pipeline
+- **Follow-up lanes:** Follow-up, Bounce Recovery, Social Recovery
+- **User-facing shorthand:** `mail ajanı`, `@MailAgent`
+
+Rule: any new research, copywriting, delivery-tracking or recovery capability discovered for `@MailAgent` must be added **into these existing AutoGTM lanes**, not implemented as a competing agent or second source of truth.
 
 ## Invocation contract
 
