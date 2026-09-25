@@ -268,9 +268,27 @@ Rules:
 
 When the user says `bana örnek gönder`, send a real test email from `info@vinterro.digital` to `ercansaral@gmail.com`; chat-only copy does not satisfy the command.
 
+## Connected Gmail execution contract
+
+The connected Vinterro mailbox surface supports:
+- search by Gmail query for brand/domain/email dedupe;
+- full-thread reads before reply;
+- message reads with raw MIME for exact first-send QA;
+- send with `reply_message_id` to preserve the existing Gmail conversation;
+- returned message id/thread id/labels for execution evidence;
+- Gmail labels for workflow state.
+
+Prefer these connected operations over reconstructing low-level Gmail API calls.
+
+Reuse existing labels when present, especially:
+- `Vinterro - Bounce Recovery`
+- `Vinterro - Future Follow-up`
+
+Do not create duplicate labels with near-identical names.
+
 ## Thread integrity
 
-Replies must stay in the existing Gmail conversation. When using raw/API mail paths, preserve the relevant Gmail thread identifier and standards-compliant reply headers/subject requirements. Never create a fresh cold thread for an existing active conversation.
+Replies must stay in the existing Gmail conversation. With the connected Gmail tool, use the actual source message id as `reply_message_id` after reading the thread/reply recipients. When using another raw/API mail path, preserve the relevant Gmail thread identifier and standards-compliant reply headers/subject requirements. Never create a fresh cold thread for an existing active conversation.
 
 ## Bounce and social recovery
 
