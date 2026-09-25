@@ -464,11 +464,29 @@ Secondary tags may capture specifics.
 
 A reply always exits cold-outreach state.
 
+## Connected Gmail execution contract
+
+The authorized connected mailbox is `info@vinterro.digital`.
+
+Use the provider-native operations available in the connected Gmail surface:
+- `search_emails/search_email_ids` for pre-send history checks;
+- `read_email_thread` for full conversation context;
+- `read_email(... include_raw_mime=true)` for first-send/raw HTML QA when needed;
+- `send_email(... reply_message_id=<actual Gmail message id>)` for same-thread replies;
+- returned message id/thread id/labels as send evidence;
+- Gmail labels for operational queues.
+
+Existing workflow labels include:
+- `Vinterro - Bounce Recovery`
+- `Vinterro - Future Follow-up`
+
+Reuse them instead of creating duplicate/near-duplicate labels. Additional labels are introduced only when they materially improve the workflow.
+
 ## Gmail thread integrity
 
 Same-thread replies are mandatory for existing conversations.
 
-When using Gmail raw/API mechanics, same-thread behavior must preserve the relevant thread id and standards-compliant `References`/`In-Reply-To` headers with a matching subject, per current Gmail API rules.
+With the connected Gmail surface, read the full thread and use the actual source Gmail message id as `reply_message_id`. For lower-level Gmail API implementations, preserve thread id plus standards-compliant `References`/`In-Reply-To` headers and matching subject according to current Gmail rules.
 
 Never restart an existing lead conversation as a new cold email.
 
