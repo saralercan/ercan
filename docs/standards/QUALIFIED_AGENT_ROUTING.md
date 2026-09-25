@@ -45,6 +45,7 @@ Examples:
 - mobile app implementation → `@MobileArchitect` + exactly the active implementation-stack specialist + `@MobileQA`; add `@AppReleaseEngineer` only for build/store delivery
 - Meta ads work → distinguish campaign engineering, measurement, marketing science, incrementality and creative strategy; do not collapse them into one generic ads role
 - cross-channel brand-system work → brand-system/runtime/token specialist(s) + independent `@BrandComplianceQA` when the brand system itself is materially affected
+- Vinterro `@MailAgent` prospecting/outreach → select only the lanes required by the request: discovery/evidence/opportunity/contact/qualification for new-lead work; add OutreachCopywriter + MailQA for first touch; add DeliveryTracker/BounceRecovery/SocialRecovery only after real delivery exceptions; add ConversationStrategist + PipelineKeeper for replies/customer tracking. Never fan out social recovery before a bounce/no-email condition and never send inbound replies without user approval.
 
 ### 3. Qualification filter
 Before domain-specific qualification, every candidate inherits `AGENCY_EXCELLENCE_STANDARD.md`. Selection favors the smallest pod whose members have the right domain ownership **and** can meet the task’s principal-level craft/evidence/verification bar. A specialist that cannot access required evidence/tooling is not qualified merely because its name matches the topic.

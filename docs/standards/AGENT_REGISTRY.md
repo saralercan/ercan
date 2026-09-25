@@ -7,16 +7,55 @@ Manager/control plane. Owns project routing, JIT context retrieval, task spec co
 
 ## Vinterro Digital Mail Agent JIT alias
 
-- `@MailAgent` -> `@Orchestrator` + Vinterro Keşif/AutoGTM qualification + authorized Gmail mailbox operations + `@ProductionQA`; add social-channel operations only for verified bounce recovery.
-- Trigger phrases include `mail ajanı`, `@MailAgent`, Vinterro Digital outreach execution, bounce recovery and prospect-reply handling.
-- Fixed sender: connected `info@vinterro.digital` Gmail mailbox.
-- Required flow: `DISCOVER -> RAW EVIDENCE -> NORMALIZE -> DEDUPE -> VERIFY BUSINESS -> VERIFY WEBSITE/SALES CHANNEL -> VERIFY SOCIAL -> VERIFY CONTACT -> SCORE -> OUTREACH READY -> GMAIL QA -> PERSONALIZE -> SEND -> SENT QA -> RECOVERY/REPLY`.
-- Bounce recovery: public alternative business email first; if none exists or it also fails, official Instagram then official LinkedIn with the same personalized proposition adapted to DM format. Social recovery does not count as successful email quota.
-- Inbound replies become `ACTIVE LEAD`; the agent may read/analyze/draft automatically but may only send the same-thread Gmail reply after explicit user approval.
-- `bana örnek gönder` means a real test email from `info@vinterro.digital` to `ercansaral@gmail.com`, not merely copy shown in chat.
-- This is a JIT capability and does **not** increase the stable routing identity count.
+`@MailAgent` is the Vinterro Digital lead-to-conversation operating capability. It is not a generic sequencer and does **not** increase the stable routing identity count.
 
-Load `.agents/skills/vinterro-mail-agent/SKILL.md` + `docs/standards/VINTERRO_MAIL_AGENT.md` + `docs/standards/MAIL_ENGINEERING.md`.
+### Entry routing
+- Trigger phrases include `mail ajanı`, `@MailAgent`, Vinterro Digital outreach, prospect/customer-pool building, new-customer discovery, mail tracking, customer tracking, bounce recovery, follow-up and prospect-reply handling.
+- Fixed sender: connected `info@vinterro.digital` Gmail mailbox.
+- Compose the smallest sufficient pod; do not run every subrole for every task.
+
+### JIT subroles
+- `@MailAgentDirector` -> `@Orchestrator + @ProductionQA`
+- `@LeadDiscoveryScout` -> Vinterro Keşif/AutoGTM + current public-business research
+- `@BusinessEvidenceResearcher` -> `@Orchestrator` + task-relevant web/search evidence
+- `@OpportunityDiagnostician` -> business/growth owner + relevant Web/SEO/Ads/Commerce specialist only when evidence requires it
+- `@ContactResolver` -> public business-contact evidence + Gmail dedupe context
+- `@QualificationAnalyst` -> `@Orchestrator + @ProductionQA`
+- `@OutreachCopywriter` -> Editorial & Writing Capability Pack + `@BrandBehavior`
+- `@ConversationStrategist` -> `@Orchestrator + @BrandBehavior` + active sales/business owner
+- `@PipelineKeeper` -> canonical prospect ledger + Gmail/thread evidence
+- `@DeliveryTracker` -> Gmail mailbox state + Mail Engineering
+- `@BounceRecovery` -> public contact research + Gmail QA
+- `@SocialRecovery` -> authorized Instagram path; LinkedIn only through currently permitted/authorized behavior
+- `@MailQA` -> independent `@ProductionQA` + `email-delivery-qa`
+
+### Required operating paths
+Discovery:
+`DISCOVER -> RAW EVIDENCE -> NORMALIZE -> DEDUPE -> VERIFY BUSINESS -> VERIFY WEBSITE/SALES CHANNEL -> VERIFY SOCIAL -> VERIFY CONTACT -> OPPORTUNITY DIAGNOSIS -> SCORE -> OUTREACH READY`
+
+Outbound:
+`GMAIL HISTORY QA -> MESSAGE BRIEF -> PERSONALIZE -> COPY QA -> SEND -> SENT QA -> PIPELINE UPDATE`
+
+Reply:
+`FULL THREAD -> INTENT -> STAGE -> DRAFT -> USER APPROVAL -> SAME-THREAD SEND -> SENT QA -> NEXT ACTION`
+
+Recovery:
+`BOUNCE -> PUBLIC ALTERNATIVE EMAIL -> GMAIL QA -> RESEND -> SECOND BOUNCE/NO EMAIL -> INSTAGRAM -> LINKEDIN/PERMITTED PATH -> SOCIAL RECOVERY -> SAME-REGION EMAIL REPLACEMENT`
+
+### Non-negotiables
+- Qualification requires an evidence-backed Vinterro opportunity; quota never lowers the bar.
+- No guessed emails or hidden/private contact data.
+- Every qualified business retains a human-readable qualification reason and evidence provenance.
+- Copy is prospect-first, concise, truthful and naturally localized; unsupported case studies/metrics/claims are forbidden.
+- Gmail SENT acceptance is required for email-success counting and is not proof of inbox delivery.
+- Reply stops cold follow-up. Inbound replies become `ACTIVE LEAD`.
+- Prospect replies may be researched/classified/drafted automatically, but actual reply send requires explicit user approval.
+- Every active lead has an activity timeline, current stage and next action/due date.
+- Bounce recovery uses public alternative email first; social fallback is tracked separately and never counts as successful email quota.
+- LinkedIn browser-bot/scraping automation is prohibited; use only a permitted/authorized surface or prepare a manual operator message.
+- `bana örnek gönder` means a real test email from `info@vinterro.digital` to `ercansaral@gmail.com`.
+
+Load `.agents/skills/vinterro-mail-agent/SKILL.md` + `docs/standards/VINTERRO_MAIL_AGENT.md` + `docs/standards/MAIL_ENGINEERING.md`; load `.agents/skills/editorial-writing-capability-pack/SKILL.md` for material outreach/reply copy and `.agents/skills/email-delivery-qa/SKILL.md` for execution verification.
 
 ## Digital specialist JIT aliases
 These aliases expose deeper expertise while mapping onto existing stable owners; they **do not** increase the stable routing identity count.
