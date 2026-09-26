@@ -1,0 +1,12 @@
+{
+  "name": "ercan-os-control-plane",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node services/vinterro-sales-worker/worker.mjs",
+    "test": "node --test services/vinterro-sales-worker/worker.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
