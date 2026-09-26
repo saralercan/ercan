@@ -1,4 +1,5 @@
 import http from "node:http";
+import { pathToFileURL } from "node:url";
 
 const PORT = Number(process.env.PORT || 3000);
 const SUPABASE_URL = String(process.env.SUPABASE_URL || "").replace(/\/$/, "");
@@ -79,50 +80,65 @@ async function tickSafely() {
   }
 }
 
-const server = http.createServer((req, res) => {
-  if (req.method === "GET" && req.url === "/health") {
-    const healthy = configOk() && Boolean(lastSuccessAt);
-    res.writeHead(healthy ? 200 : 503, {
+export function createHealthServer() {
+  return http.createServer((req, res) => {
+    if (req.method === "GET" && req.url === "/health") {
+      const healthy = configOk() && Boolean(lastSuccessAt);
+      res.writeHead(healthy ? 200 : 503, {
+        "content-type": "application/json; charset=utf-8",
+        "cache-control": "no-store",
+        "x-content-type-options": "nosniff"
+      });
+      res.end(JSON.stringify({
+        ok: healthy,
+        worker_id: WORKER_ID,
+        configured: configOk(),
+        in_flight: inFlight,
+        last_tick_at: lastTickAt,
+        last_success_at: lastSuccessAt,
+        last_error: lastError
+      }));
+      return;
+    }
+
+    res.writeHead(404, {
       "content-type": "application/json; charset=utf-8",
-      "cache-control": "no-store",
-      "x-content-type-options": "nosniff"
+      "cache-control": "no-store"
     });
-    res.end(JSON.stringify({
-      ok: healthy,
+    res.end(JSON.stringify({ error: "not_found" }));
+  });
+}
+
+export function startWorker() {
+  const server = createHealthServer();
+  server.listen(PORT, "0.0.0.0", () => {
+    console.log(JSON.stringify({
+      level: "info",
+      event: "worker_started",
       worker_id: WORKER_ID,
-      configured: configOk(),
-      in_flight: inFlight,
-      last_tick_at: lastTickAt,
-      last_success_at: lastSuccessAt,
-      last_error: lastError
+      port: PORT,
+      tick_interval_ms: TICK_INTERVAL_MS
     }));
-    return;
+  });
+
+  if (configOk()) {
+    void tickSafely();
+    setInterval(() => void tickSafely(), TICK_INTERVAL_MS).unref();
+  } else {
+    console.error(JSON.stringify({
+      level: "error",
+      event: "worker_misconfigured",
+      worker_id: WORKER_ID
+    }));
   }
 
-  res.writeHead(404, {
-    "content-type": "application/json; charset=utf-8",
-    "cache-control": "no-store"
-  });
-  res.end(JSON.stringify({ error: "not_found" }));
-});
+  return server;
+}
 
-server.listen(PORT, "0.0.0.0", () => {
-  console.log(JSON.stringify({
-    level: "info",
-    event: "worker_started",
-    worker_id: WORKER_ID,
-    port: PORT,
-    tick_interval_ms: TICK_INTERVAL_MS
-  }));
-});
+const isMain =
+  process.argv[1] &&
+  import.meta.url === pathToFileURL(process.argv[1]).href;
 
-if (configOk()) {
-  void tickSafely();
-  setInterval(() => void tickSafely(), TICK_INTERVAL_MS).unref();
-} else {
-  console.error(JSON.stringify({
-    level: "error",
-    event: "worker_misconfigured",
-    worker_id: WORKER_ID
-  }));
+if (isMain) {
+  startWorker();
 }
