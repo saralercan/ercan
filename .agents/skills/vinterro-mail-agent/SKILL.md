@@ -11,6 +11,7 @@ This file is a **user-facing alias/router**, not a second sales agent. Canonical
 
 Load:
 - `docs/standards/VINTERRO_MAIL_AGENT.md`
+- `docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html` — mandatory visual source of truth for every Vinterro Digital first-touch, follow-up, active-lead reply and test/example send
 - `docs/standards/MAIL_ENGINEERING.md`
 - `.agents/skills/email-delivery-qa/SKILL.md`
 - `.agents/skills/founder-operations/SKILL.md`
@@ -258,6 +259,25 @@ Rules:
 - do not escalate pressure because quota is behind;
 - track touch number, channel, date and next action;
 - cadence/frequency is governed by the active campaign/project rule and current platform/legal constraints, not a hardcoded universal schedule.
+
+## Canonical HTML template lock
+
+The only approved Vinterro Digital email shell is:
+`docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html`.
+
+This is a **hard visual contract**, not a style suggestion. For first-touch, no-response follow-up, inbound-lead reply and `bana örnek gönder` test mail:
+- load the canonical template before rendering;
+- replace only the body/compliance slots; do not reconstruct the wrapper from memory;
+- preserve the exact locked geometry and signature;
+- body content remains left-aligned;
+- use the 770px container, never a 760px or other near-match variant;
+- preserve outer padding `32px 18px`;
+- preserve body typography `Arial/Helvetica, 16px, 1.72, #191919`;
+- preserve the 1px `#e31b23` divider and exact signature sizes/colors/spacing;
+- the gray 12px compliance/test line is conditional: include the appropriate localized opt-out/test line for cold/test outreach; omit it for an active warm prospect/customer reply unless required;
+- do not center body copy, add cards/background fills, change divider color, restyle the signature, or introduce a second template without explicit user approval.
+
+`MailQA` must reject a rendered mail when the locked visual tokens differ from the canonical template. A visually similar reconstruction is not sufficient.
 
 ## Send rules
 
