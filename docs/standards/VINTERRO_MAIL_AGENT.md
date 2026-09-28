@@ -1,7 +1,7 @@
 # Vinterro Sales Super Agent — Mail Alias Standard
 
 Status: active  
-Version: 2.0 (2026-09-25)
+Version: 2.1 (2026-09-29)
 
 This standard defines the `@MailAgent` user-facing routing contract into the canonical **Vinterro One → Sales · AutoGTM → Vinterro Sales Super Agent** commercial system. It must not create a second prospect, outreach or CRM source of truth.
 
@@ -386,6 +386,44 @@ Every draft begins from a structured brief:
 
 No evidence-backed reason = no send-ready draft.
 
+## Canonical Vinterro email visual contract
+
+Source of truth:
+`docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html`
+
+The source template is derived from the user-approved Gmail reference message `1a0e9810c78905e0` (`[TEST] Vinterro Digital — Outreach Mail Tasarım Kontrolü`). This visual shell is now part of Vinterro One's MailAgent contract and is used for Vinterro Digital cold outreach, authorized follow-ups, active-lead/customer replies and user-requested example/test sends.
+
+### Locked design tokens
+
+These values are exact and must not drift:
+- white page/background;
+- outer presentation table: `width:100%`;
+- centered outer cell padding: `32px 18px`;
+- content container: `width="770"`, `width:100%; max-width:770px; margin:0 auto;`;
+- content alignment: left;
+- body font: `Arial, Helvetica, sans-serif`;
+- body size: `16px`;
+- body line-height: `1.72`;
+- body color: `#191919`;
+- normal paragraph margin: `0 0 20px 0`;
+- final body paragraph margin before compliance/signature: `0 0 28px 0`;
+- optional test/opt-out/compliance line: `12px`, `1.55`, `#a0a0a0`, margin `0 0 14px 0`;
+- divider: exactly `1px`, `#e31b23`, full width, margin `0 0 18px 0`;
+- signature brand line: `16px`, `1.4`, weight `700`, `#191919`, margin `0 0 4px 0`;
+- tagline: `12px`, `1.5`, letter-spacing `1.4px`, uppercase, `#4a4a4a`, margin `0 0 6px 0`;
+- contact line: `14px`, `1.55`, `#191919`, margin `0 0 5px 0`;
+- services line: `13px`, `1.55`, `#9a9a9a`, margin `0`.
+
+### Rendering rules
+
+- The renderer changes message content, language and optional compliance text only; it does not redesign the shell.
+- Never synthesize a "close enough" version from memory.
+- A 760px container, different outer padding, different signature typography, a centered message body, colored/card backgrounds, extra decorative blocks or a different divider are non-conforming.
+- Active prospect/customer replies use the same shell and signature. The cold-outreach/test disclaimer is omitted for a warm reply unless it is genuinely required.
+- Cold outreach uses an appropriate localized opt-out/compliance line in the locked gray style.
+- `bana örnek gönder` uses this same canonical HTML and sends from `info@vinterro.digital` to `ercansaral@gmail.com`.
+- Any intentional visual redesign requires explicit user approval followed by an update to this source template, this standard and the regression suite in the same change.
+
 ## Conversation language and copy standard
 
 ### Overall voice
@@ -511,7 +549,7 @@ Never restart an existing lead conversation as a new cold email.
 - one business at a time;
 - no BCC/blast;
 - no PDF/attachment on cold first touch;
-- approved Vinterro HTML;
+- canonical Vinterro HTML from `docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html`; no reconstructed visual variants;
 - required signature:
 
 Vinterro Digital  
