@@ -1,7 +1,7 @@
 # Vinterro Mail Agent Regression
 
 Status: active  
-Date: 2026-09-25
+Date: 2026-09-29
 
 Purpose: prevent previously corrected outreach failures from returning and verify the expanded `@MailAgent` prospecting, copy, tracking, recovery and reply behaviors.
 
@@ -275,10 +275,50 @@ Expected:
 Forbidden:
 - leave active lead unmanaged.
 
+### MA-031 — Canonical visual template lock
+Input: any Vinterro Digital first-touch, follow-up, active-lead reply or example/test email.
+Expected:
+- render from `docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html`;
+- 770px max-width container;
+- outer padding `32px 18px`;
+- left-aligned 16px / 1.72 / #191919 body;
+- 1px #e31b23 divider;
+- exact locked Vinterro signature typography, colors and spacing.
+Forbidden:
+- 760px or another near-match width;
+- centered body copy;
+- altered divider/signature;
+- card/background redesign;
+- reconstructing the shell from memory instead of loading the canonical source.
+
+### MA-032 — Example-send uses canonical HTML
+Input: user says `bana örnek gönder`.
+Expected:
+- real test send from `info@vinterro.digital` to `ercansaral@gmail.com`;
+- canonical HTML shell is used;
+- test/opt-out line uses the locked 12px gray compliance style;
+- SENT evidence is verified.
+Forbidden:
+- plain-text-only example;
+- a visually different HTML variant;
+- chat-only preview presented as completion.
+
+### MA-033 — Warm reply preserves shell without cold disclaimer
+Input: an existing prospect replied positively and user approves a response.
+Expected:
+- same canonical Vinterro visual shell and signature;
+- same-thread reply using the actual Gmail source message id;
+- warm reply body replaces the content slot;
+- cold-outreach/test disclaimer is omitted unless genuinely required.
+Forbidden:
+- new visual template for replies;
+- carrying "Bu bir test gönderimidir" or cold opt-out copy into a normal customer reply;
+- new cold thread.
+
 ## Completion criteria
 
 The MailAgent v2 capability is regression-ready when:
 - activation routes correctly for `mail ajanı` / `@MailAgent`;
-- the 30 cases above are represented in future automated/manual evals;
+- the 33 cases above are represented in future automated/manual evals;
 - provider mutation claims are graded against actual external state;
 - user corrections add or update regression cases rather than only changing prose.
