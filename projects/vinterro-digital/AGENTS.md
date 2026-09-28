@@ -34,6 +34,7 @@ Machine-readable candidate map: `docs/standards/GITHUB_SPECIALIST_MANIFEST_V3.js
 - **Measurement-only** Meta tasks remain read-only with respect to campaign/ad-set/ad mutation unless campaign execution is separately and explicitly in scope.
 - Attribution/ROAS is not causal-lift proof; use `@IncrementalityAnalyst` only when causal lift is actually the question.
 - Contact, proposal, lead, outreach and website-notification email work follows `MAIL_ENGINEERING.md`; important leads are persisted/correlated independently of notification email so provider failure cannot lose the enquiry.
+- Vinterro Digital first-touch outreach also loads `docs/standards/VINTERRO_OUTREACH_SCHEDULE.md` and `docs/standards/VINTERRO_MAIL_AGENT.md`. `mail ajanı` / `@MailAgent` owns execution, Gmail dedupe, delivery truth and quota accounting; `metin ajanı` / `@TextAgent` owns evidence-grounded outreach copy, localization and copy QA. Both must use the same canonical 08:00/20:00 regional schedule and may not create parallel outreach rules.
 - WordPress/Hostinger mail uses supported WordPress hooks/APIs plus authenticated SMTP/API transport; no core PHPMailer edits, raw credential exposure or production-list sends from staging.
 - Sender identity, reply-to, brand template, delivery status and safe test-recipient evidence are part of completion for material mail changes.
 
