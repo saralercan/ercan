@@ -1,7 +1,7 @@
 # Ercan OS — Qualified Agent Routing
 
 Status: active
-Version: 1.2 (2026-09-06)
+Version: 1.3 (2026-09-29)
 
 This standard defines the meaning of user commands such as **“tüm ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent requests for broad specialist involvement.
 
@@ -9,7 +9,7 @@ This standard defines the meaning of user commands such as **“tüm ajanları �
 
 These commands do **not** mean “execute every registered agent.” They mean:
 
-> The Orchestrator must automatically identify the project and task, build the minimum sufficient team of qualified specialists, tools and QA roles, and execute that team without requiring the user to name each specialist individually.
+> The Orchestrator must automatically identify the project and task, build the complete materially relevant team of qualified specialists, tools and QA roles, and execute that team without requiring the user to name each specialist individually. The goal is complete expert coverage, not minimum headcount.
 
 This meaning is shared by ChatGPT/Ercan OS and Codex.
 
@@ -48,7 +48,7 @@ Examples:
 - Vinterro `@MailAgent` prospecting/outreach → select only the lanes required by the request: discovery/evidence/opportunity/contact/qualification for new-lead work; add OutreachCopywriter + MailQA for first touch; add DeliveryTracker/BounceRecovery/SocialRecovery only after real delivery exceptions; add ConversationStrategist + PipelineKeeper for replies/customer tracking. Never fan out social recovery before a bounce/no-email condition and never send inbound replies without user approval.
 
 ### 3. Qualification filter
-Before domain-specific qualification, every candidate inherits `AGENCY_EXCELLENCE_STANDARD.md`. Selection favors the smallest pod whose members have the right domain ownership **and** can meet the task’s principal-level craft/evidence/verification bar. A specialist that cannot access required evidence/tooling is not qualified merely because its name matches the topic.
+Before domain-specific qualification, every candidate inherits `AGENCY_EXCELLENCE_STANDARD.md`. Selection favors the complete non-redundant pod whose members have the right domain ownership **and** can meet the task’s principal-level craft/evidence/verification bar. Do not drop a materially useful specialist merely to minimize agent count. A specialist that cannot access required evidence/tooling is not qualified merely because its name matches the topic.
 A specialist is selected only when it has a material contribution and passes the relevant filters:
 
 - **project fit** — understands the active project/platform/brand context
@@ -73,17 +73,19 @@ Do **not** select it for trivial deterministic edits or when the project already
 
 When selected, load `UPSTREAM_INTELLIGENCE.md`, `UPSTREAM_INTELLIGENCE_CATALOG.md` JIT and `upstream-intelligence-scan`. The discovery layer may examine hundreds or thousands of candidates. Only audited, non-duplicate, task-relevant candidates are handed to implementation.
 
-## Minimum sufficient pod
+## Complete materially relevant pod
 
-Prefer the smallest team that can produce a high-quality verified result.
+Prefer the full non-redundant specialist team that can produce the strongest verified result for the actual scope. Agent count is not a target, but neither is minimization. If the task spans five distinct material capabilities, five or more specialists may be activated.
 
 A material task normally includes:
+- one project lead or Orchestrator owner;
 - one owner/implementation workstream for each genuinely distinct capability required;
+- specialist research/content/design/platform/SEO/performance/accessibility/security roles whenever each has a distinct material contribution;
 - one independent QA/evaluator when verification is material;
-- security/approval/deployment specialists only when the risk boundary requires them;
-- an Upstream Intelligence workstream only when current external tooling/pattern discovery has material value.
+- security/approval/deployment specialists when the risk boundary requires them;
+- an Upstream Intelligence workstream when current external tooling/pattern discovery has material value.
 
-A simple deterministic task may need only one competent implementation specialist plus the appropriate check. Multi-agent overhead is itself a failure when it adds no quality or safety value.
+Independent workstreams should execute in parallel when the runtime supports it; dependent workstreams remain ordered. A simple deterministic task may still need only one competent implementation specialist plus the appropriate check. Redundant agents that add no distinct quality, evidence or safety value remain a failure mode.
 
 ## Orchestrator responsibilities
 
@@ -98,7 +100,7 @@ A simple deterministic task may need only one competent implementation specialis
 - require independent verification for material implementation work;
 - consult upstream intelligence before inventing a new capability from scratch when a strong canonical solution may already exist;
 - treat upstream repositories as replaceable engines/references, not agent identities or policy authorities;
-- stop adding agents when marginal contribution is negligible;
+- include every specialist whose distinct contribution is material; stop only when additional agents would be redundant or negligible;
 - never claim that an unavailable or unexecuted agent actually ran.
 
 ## Dynamic roster rules
@@ -200,7 +202,19 @@ Every selected specialist inherits `AGENCY_EXCELLENCE_STANDARD.md`. Qualificatio
 - independent verification;
 - client-ready delivery.
 
-Do not add redundant agents to satisfy this overlay. The Orchestrator chooses the minimum pod that covers the required excellence dimensions. A single qualified expert may cover several dimensions when the role contract actually supports them.
+Do not add redundant agents to satisfy this overlay. The Orchestrator chooses the complete non-redundant pod that covers all required excellence dimensions. A single qualified expert may cover several dimensions when the role contract actually supports them.
+
+## Parallel specialist activation
+
+When the user explicitly says **“tüm ajanları çalıştır”** or an equivalent broad-agent trigger, Orchestrator should bias toward deeper expert coverage than an ordinary task route:
+- activate every specialist with a distinct material contribution to the current request;
+- include the active project lead, task-domain specialists and independent QA/reviewer roles;
+- run independent workstreams concurrently when safe and supported;
+- allow 3, 5, 8 or more ACTIVE specialists when the task genuinely spans that many independent capabilities;
+- do not wait for the user to name obvious specialists one by one;
+- keep unrelated or duplicative agents STANDBY rather than performing literal full-registry fan-out.
+
+The trigger therefore means **all relevant experts**, not **all registered agents** and not **the smallest possible team**.
 
 ## Quality over agent count
 
