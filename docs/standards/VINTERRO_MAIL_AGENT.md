@@ -1,7 +1,7 @@
 # Vinterro Sales Super Agent — Mail Alias Standard
 
 Status: active  
-Version: 2.2 (2026-09-29)
+Version: 2.3 (2026-09-29)
 
 This standard defines the `@MailAgent` user-facing routing contract into the canonical **Vinterro One → Sales · AutoGTM → Vinterro Sales Super Agent** commercial system. It must not create a second prospect, outreach or CRM source of truth.
 
@@ -171,6 +171,9 @@ Reconciles Gmail message/thread ids, SENT acceptance, delays, bounces and replie
 
 ### BounceRecovery / SocialRecovery
 Recovers failed delivery without guessing addresses or bypassing platform rules.
+
+### Contact Recovery Research Agent
+For any bounced, delayed, obsolete-domain or ambiguous contact, load `docs/standards/VINTERRO_CONTACT_RECOVERY_RESEARCH.md`. This specialist performs read-only cross-channel research across the official site, redirects/new domains, contact/request/reservation pages, booking engines, Instagram, Facebook, LinkedIn, Google Business/Maps evidence and credible tourism/chamber records. It may discover and rank verified public alternatives, but it may not send. MailAgent remains the owner of account-level Gmail/CRM dedupe, suppression, quota accounting and delivery truth.
 
 ### MailQA
 Independently verifies pre-send, post-send and same-thread reply integrity.
