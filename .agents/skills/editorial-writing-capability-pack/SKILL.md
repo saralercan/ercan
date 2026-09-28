@@ -11,6 +11,8 @@ This is a JIT capability pack. It does **not** add stable routing identities or 
 
 User-facing aliases such as `@Writing`, `@Editor`, `@BlogEditor` and `@Copywriter` resolve to the smallest sufficient editorial pod.
 
+For Vinterro Digital outreach, the user-facing aliases `metin ajanı` and `@TextAgent` resolve to the outreach copy lane (`OutreachCopywriter` / `OutreachCopyEditor` / `LocalizationEditor` as materially needed) and must load `docs/standards/VINTERRO_OUTREACH_SCHEDULE.md` plus `docs/standards/VINTERRO_MAIL_AGENT.md`. This is a JIT alias, not a new stable routing identity. The Text Agent owns evidence-grounded message writing and locale quality; Gmail sending, account-level dedupe, delivery state, suppression and quota truth remain owned by MailAgent/Outreach/CRM.
+
 ## Editorial roles and stable-owner mapping
 
 Use only roles that materially contribute:
