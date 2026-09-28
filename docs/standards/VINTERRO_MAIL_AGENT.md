@@ -1,7 +1,7 @@
 # Vinterro Sales Super Agent — Mail Alias Standard
 
 Status: active  
-Version: 2.1 (2026-09-29)
+Version: 2.2 (2026-09-29)
 
 This standard defines the `@MailAgent` user-facing routing contract into the canonical **Vinterro One → Sales · AutoGTM → Vinterro Sales Super Agent** commercial system. It must not create a second prospect, outreach or CRM source of truth.
 
@@ -48,6 +48,23 @@ The user-facing alias must resolve to the same canonical Super Agent contract fr
 The phrases `mail ajanı`, `@MailAgent`, `Vinterro Digital outreach çalıştır`, equivalent prospecting/outreach instructions, requests to build a customer pool, find new customers, inspect outreach replies, recover bounced outreach, track prospects, or prepare/send a prospect reply route here.
 
 The behavior is project-level and should remain consistent across chats when repository/project context is available.
+
+## Canonical outreach schedule and quota policy
+
+Load `docs/standards/VINTERRO_OUTREACH_SCHEDULE.md` for every scheduled or user-invoked Vinterro Digital first-touch outreach run.
+
+The canonical daily contract is:
+- 08:00 Europe/Istanbul: 10 successful new qualified businesses per region;
+- 20:00 Europe/Istanbul: 10 successful new qualified businesses per region;
+- regions: Türkiye, Yunanistan geneli, Tiflis/Gürcistan, Sisam, Midilli, Sakız, İstanköy/Kos, Bulgaristan, Romanya;
+- 90 successful first-touch emails per slot, 180 per day when all regional quotas can be truthfully satisfied;
+- morning and evening cohorts must use different businesses;
+- quotas are region-local and cannot be borrowed across regions;
+- hard bounce/failure and unresolved delay do not count toward success;
+- replacement must be a completely new qualified business from the same region;
+- never weaken qualification or bypass account-level dedupe to fill quota.
+
+The same file is the source of truth for the outreach Text/Copy Agent so scheduling, evidence, language and copy standards cannot drift between agents.
 
 ## Sender identity
 
