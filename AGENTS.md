@@ -1,6 +1,6 @@
 # Ercan OS — Shared Agent Contract
 
-Version: 5.0 (2026-09-24)
+Version: 5.1 (2026-09-29)
 
 This repository is the shared control-plane reference for Ercan AI Agency / Ercan OS agents. Every project agent and specialist must load this file first, then the shared registry, `docs/standards/AGENCY_EXCELLENCE_STANDARD.md`, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
 
@@ -43,13 +43,13 @@ Future specialist agents inherit this contract automatically. Stable routing ide
 
 User commands such as **“tüm ajanları çalıştır”**, **“bütün ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent do not mean execute every registered runtime agent. They are an intent alias for **automatic qualified-agent routing** across the 89-agent Vinterro One inventory.
 
-When this intent is present, `@Orchestrator` must identify the active project and task, infer the capabilities actually required, and select the **minimum sufficient ACTIVE pod of qualified specialists, skills, tools and independent QA roles** without requiring the user to name them one by one. Every non-selected runtime agent remains **STANDBY** and may be promoted to ACTIVE later only when a new domain, dependency, risk or evidence gap materially requires it. The exact selection and regression rules live in `docs/standards/QUALIFIED_AGENT_ROUTING.md` and apply equally to ChatGPT/Ercan OS and Codex.
+When this intent is present, `@Orchestrator` must identify the active project and task, infer the capabilities actually required, and activate the **complete materially relevant ACTIVE pod of qualified specialists, skills, tools and independent QA roles** without requiring the user to name them one by one. Do not optimize for the smallest possible headcount when another specialist has a distinct material contribution. If five or more independent specialist workstreams are genuinely useful, activate them. Every unrelated or redundant runtime agent remains **STANDBY** and may be promoted to ACTIVE later when a new domain, dependency, risk or evidence gap materially requires it. The exact selection and regression rules live in `docs/standards/QUALIFIED_AGENT_ROUTING.md` and apply equally to ChatGPT/Ercan OS and Codex.
 
 Selection must be based on material contribution: project fit, task competence, tool/data fit, dependency fit, risk fit and verification fit. Do not run unrelated or redundant agents merely to increase agent count. Conversely, do not omit a required specialist or QA role just because the user did not explicitly name it.
 
 When a material task could benefit from current GitHub/open-source tools, reusable UI patterns, platform references, QA tooling or a missing capability, `@Orchestrator` may include `@UpstreamIntelligence`. Requests for free-tier services, public APIs, self-hosted alternatives or Agent Skills route through `developer-resource-discovery` so curated indexes remain discovery inputs rather than production authority. Broad requests such as “GitHub’daki işimize yarayan her şeyi tara/ekle” must route through it. The discovery layer may scan hundreds or thousands of candidates, but the production layer follows **discover broadly, adopt narrowly** and never installs unrelated repositories globally.
 
-For material work, Orchestrator owns task decomposition, bounded delegation contracts, dependency ordering, safe parallelism, scope propagation across handoffs and independent verification. Never claim that an unavailable or unexecuted specialist actually ran.
+For material work, Orchestrator owns task decomposition, bounded delegation contracts, dependency ordering, scope propagation across handoffs and independent verification. Independent workstreams should run in parallel when the runtime supports it; dependent work remains ordered. Never claim that an unavailable or unexecuted specialist actually ran.
 
 ## Mandatory load order
 1. `AGENTS.md`
@@ -89,7 +89,7 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
 - This execution-first rule applies to `@Orchestrator`, every stable specialist, every project agent, every JIT capability/skill, and all future agents inheriting this contract.
 - Inspect/reproduce before modifying.
 - Convert short user commands into an internal task spec: context, goal/why, inputs, requirements, constraints, do-not-touch, acceptance criteria, verification and completion rule.
-- Treat “tüm/bütün ajanları çalıştır” as automatic qualified routing, not literal 89-agent fan-out. Selected specialists become ACTIVE; all others remain STANDBY until a material need activates them. The user should state the goal once; Orchestrator owns selection and escalation.
+- Treat “tüm/bütün ajanları çalıştır” as automatic **full qualified-pod routing**, not literal registry fan-out. Activate every specialist with a distinct material contribution to the current task, including independent QA/reviewer roles; parallelize independent specialists when useful. Five or more agents may be ACTIVE at once when the task genuinely spans that many capabilities. Unrelated or redundant agents remain STANDBY. The user should state the goal once; Orchestrator owns selection, parallelism and escalation.
 - For open-source discovery, **discover broadly, adopt narrowly**. A catalog entry or high star count is not permission to install/execute code.
 - Preserve scope. Change the minimum necessary surface; do not redesign or mutate adjacent components/data unless required by the task.
 - Prefer platform-native public APIs, extension points and supported architecture over brittle hacks.
