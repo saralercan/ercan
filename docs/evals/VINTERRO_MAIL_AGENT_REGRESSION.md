@@ -364,10 +364,35 @@ Forbidden:
 - services 12px;
 - plain-text non-clickable site URL.
 
+### MA-038 — Same account, different email
+If prior first-touch exists for one mailbox and another public mailbox resolves to the same business, block a new first-touch.
+
+### MA-039 — Same domain, different display name
+If two candidate records resolve to the same canonical domain, only one account claim may be active for first-touch.
+
+### MA-040 — Same business and location after domain change
+If domain continuity shows the same business moved domains, prior contact still suppresses a new first-touch.
+
+### MA-041 — Concurrent duplicate prevention
+If two workers attempt the same normalized account, only one account claim may succeed; the other must stop before Gmail send.
+
+### MA-042 — Claim store unavailable
+If the live account-claim store cannot be reached, research/drafting may continue but production first-touch send is BLOCKED.
+
+### MA-043 — Gmail history without claim row
+Historical Gmail outreach/reply/opt-out suppresses first-touch even when no claim row exists.
+
+### MA-044 — Morning/evening reuse
+A business used in the 08:00 cohort may not re-enter the 20:00 cohort under another email or domain.
+
+### MA-045 — Bounce recovery
+A verified alternate email after hard bounce reuses the same account recovery path; it is not a new lead.
+
+
 ## Completion criteria
 
 The MailAgent v2 capability is regression-ready when:
 - activation routes correctly for `mail ajanı` / `@MailAgent`;
-- the 37 cases above are represented in future automated/manual evals;
+- the 45 cases above are represented in future automated/manual evals;
 - provider mutation claims are graded against actual external state;
 - user corrections add or update regression cases rather than only changing prose.
