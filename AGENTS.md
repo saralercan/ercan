@@ -1,6 +1,6 @@
 # Ercan OS — Shared Agent Contract
 
-Version: 5.1 (2026-09-29)
+Version: 5.2 (2026-09-29)
 
 This repository is the shared control-plane reference for Ercan AI Agency / Ercan OS agents. Every project agent and specialist must load this file first, then the shared registry, `docs/standards/AGENCY_EXCELLENCE_STANDARD.md`, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
 
@@ -16,8 +16,8 @@ For material work, the selected pod owns not only task execution but also busine
 
 Canonical inventory distinction:
 - **52 stable routing identities** = architectural ownership/routing layer.
-- **89 Vinterro One runtime agents** = current live production execution inventory mirrored in `docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json`.
-- Do not use 52 as the total Vinterro One agent count.
+- **Vinterro One live runtime agents** = production execution inventory from `ercan_os_agents`, mirrored into `docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json`. The live count can grow and must not be hardcoded into routing semantics.
+- Do not use the stable-routing count as the total Vinterro One runtime count.
 
 Canonical audit/coverage:
 - `docs/standards/AGENT_EXCELLENCE_MANIFEST.json`
@@ -39,9 +39,35 @@ Canonical audit/coverage:
 
 Future specialist agents inherit this contract automatically. Stable routing identities and inheritance are recorded in `docs/standards/AGENT_REGISTRY.md`.
 
+
+## Vinterro Digital mail hard gate — Codex/OpenAI/Vinterro One
+
+Any task involving **Vinterro Digital email**, including `mail ajanı`, `@MailAgent`, `metin ajanı`, `@TextAgent`, outreach, follow-up, customer/prospect reply, proposal email, bounce recovery, or `bana örnek gönder`, MUST load these files before drafting or rendering:
+
+1. `.agents/skills/vinterro-mail-agent/SKILL.md`
+2. `docs/standards/VINTERRO_MAIL_AGENT.md`
+3. `docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html`
+4. `docs/evals/VINTERRO_MAIL_AGENT_REGRESSION.md` when QA/regression is material.
+
+This rule applies from the repository root even when Codex is not currently operating under `projects/vinterro-digital/`. Project-path discovery is not sufficient.
+
+The HTML wrapper and signature are a **locked source artifact**, not prose guidance. Do not reconstruct a visually similar email from memory. Render by preserving the canonical template and replacing only its body/compliance slots. If the canonical template cannot be read, the mail task is `BLOCKED`; do not improvise another wrapper or signature.
+
+Before any Vinterro Digital mail is considered send-ready, run the canonical mail QA gate. At minimum verify:
+- content container `770px`;
+- outer padding `32px 18px`;
+- left-aligned Arial/Helvetica body at `16px / 1.72 / #191919`;
+- exact `1px #e31b23` divider;
+- exact Vinterro Digital signature typography, spacing, contact line and services line from the source template;
+- `vinterro.digital` links to `https://vinterro.digital/`;
+- copy follows the evidence-grounded Vinterro MailAgent/TextAgent contract;
+- test command `bana örnek gönder` means a real test send from `info@vinterro.digital` to `ercansaral@gmail.com` plus SENT/raw-MIME verification.
+
+Near-match variants such as 760/780px containers, alternate padding, altered line-height, centered copy, changed signature colors/letter-spacing, card backgrounds or hand-written replacement signatures are non-conforming and must be rejected before send.
+
 ## “All agents” / qualified-agent routing contract
 
-User commands such as **“tüm ajanları çalıştır”**, **“bütün ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent do not mean execute every registered runtime agent. They are an intent alias for **automatic qualified-agent routing** across the 89-agent Vinterro One inventory.
+User commands such as **“tüm ajanları çalıştır”**, **“bütün ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent do not mean execute every registered runtime agent. They are an intent alias for **automatic qualified-agent routing** across the live Vinterro One runtime inventory.
 
 When this intent is present, `@Orchestrator` must identify the active project and task, infer the capabilities actually required, and activate the **complete materially relevant ACTIVE pod of qualified specialists, skills, tools and independent QA roles** without requiring the user to name them one by one. Do not optimize for the smallest possible headcount when another specialist has a distinct material contribution. If five or more independent specialist workstreams are genuinely useful, activate them. Every unrelated or redundant runtime agent remains **STANDBY** and may be promoted to ACTIVE later when a new domain, dependency, risk or evidence gap materially requires it. The exact selection and regression rules live in `docs/standards/QUALIFIED_AGENT_ROUTING.md` and apply equally to ChatGPT/Ercan OS and Codex.
 
@@ -55,7 +81,7 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
 1. `AGENTS.md`
 2. `docs/standards/AGENT_REGISTRY.md`
 3. `docs/standards/AGENCY_EXCELLENCE_STANDARD.md` for the principal-level craft, evidence, delivery, verification and learning-loop contract shared by all Stable Core, GitHub Specialist v3 and JIT roles.
-4. `docs/standards/PORTABLE_AGENT_RUNTIME.md` + `.agents/skills/portable-agent-router/SKILL.md` for 89-agent Codex/Claude/Vinterro One portability and ACTIVE/STANDBY routing.
+4. `docs/standards/PORTABLE_AGENT_RUNTIME.md` + `.agents/skills/portable-agent-router/SKILL.md` for Codex/Claude/Vinterro One runtime portability and ACTIVE/STANDBY routing.
 5. `docs/standards/AGENT_CONTINUAL_EXPERTISE_ENGINE.md` + `docs/standards/AGENT_EXPERTISE_SOURCE_MATRIX.json` for every selected specialist's current-source research, verified ingestion and continual-learning contract.
 6. `docs/standards/QUALIFIED_AGENT_ROUTING.md` whenever the user asks to run all agents/agents broadly, or when the task materially requires multiple specialist capabilities.
 7. `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md` + `.agents/skills/github-specialist-router/SKILL.md` when a material web/app/social/SEO/Meta ads/branding task needs the expanded stable specialist pool; then load only the matching domain skill(s).
