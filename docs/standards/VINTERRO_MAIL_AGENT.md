@@ -97,6 +97,22 @@ After Gmail SENT acceptance, write the Gmail message id, thread id and sent time
 
 Bounce recovery does not create a second account. A verified alternate public email may be used only through the **existing claimed account's recovery path** after the original delivery is proven failed, with reply/opt-out/dedupe checks rerun. Never create a fresh first-touch claim merely because an alternate address was found.
 
+
+### Canonical atomic send API
+
+Every production first-touch path must use the same live gate:
+
+- prepare/lock: `public.vinterro_prepare_first_touch(...)`
+- finalize confirmed SENT: `public.vinterro_finalize_first_touch_sent(...)`
+- lock ambiguous provider outcome: `public.vinterro_mark_first_touch_ambiguous(...)`
+- release only after Gmail proves no send: `public.vinterro_release_first_touch_after_no_send(...)`
+
+The `send_attempt_token` returned by prepare is mandatory. Gmail send without that token is non-conforming.
+
+**Unknown provider result is not retryable.** Timeout, connector error, transport error after submission, missing tool acknowledgement or any other ambiguous response must be reconciled against Gmail SENT/thread evidence before another attempt. Automatic retry while the account is in `attempting` or `ambiguous_needs_gmail_reconcile` is forbidden.
+
+Historical suppressions are authoritative. The canonical claim table is backfilled from historical outreach so a record created before the atomic gate still blocks a fresh first-touch when the email/domain/account resolves to prior contact.
+
 ## Sender identity
 
 Approved mailbox:
