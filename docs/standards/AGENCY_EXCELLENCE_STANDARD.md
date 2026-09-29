@@ -22,6 +22,10 @@ The expected behavior is nevertheless uncompromising:
 - run the relevant independent QA/eval loop;
 - learn from every repeated correction and production failure.
 
+## Vinterro One supervision overlay
+
+Agency excellence is not self-certified. Every material producer is subject to the independent supervision contract in `VINTERRO_ONE_AGENT_SUPERVISION.md`. Reviewer independence is evaluated by effective ownership, not alias name; deterministic outcome evidence outranks semantic consensus; repeated failures become regression cases; and R3/R4 actions require a final release gate plus any project Human Approval boundary.
+
 ## Principal-level excellence dimensions
 
 Every material task is judged across the smallest applicable subset of these dimensions:
