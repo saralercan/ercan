@@ -1,11 +1,11 @@
 ---
 name: github-specialist-router
-description: Route Ercan OS work across reviewed GitHub-backed specialist pods and JIT capability packs for web, JavaScript/TypeScript, writing/editorial/content, app/mobile, social media, YouTube, SEO/AEO/GEO, Meta ads/measurement, branding, presentations, learning/tutoring, platform design, execution governance, founder operations, Vinterro B2B prospecting/mail/customer tracking and bounded judgment/decision workflows. Use when the user asks to run all agents for any of these domains, asks to add GitHub experts, or when a material task spans two or more of these domains.
+description: Route Vinterro One work across reviewed GitHub-backed specialist pods and JIT capability packs for web, JavaScript/TypeScript, writing/editorial/content, app/mobile, social media, YouTube, SEO/AEO/GEO, Meta ads/measurement, branding, presentations, learning/tutoring, platform design, execution governance, founder operations, Vinterro B2B prospecting/mail/customer tracking and bounded judgment/decision workflows. Use when the user asks to run all agents for any of these domains, asks to add GitHub experts, or when a material task spans two or more of these domains.
 ---
 
 # GitHub Specialist Router
 
-Load `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`, root `AGENTS.md`, `docs/standards/AGENT_REGISTRY.md`, and `docs/standards/QUALIFIED_AGENT_ROUTING.md`.
+Load `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`, root `AGENTS.md`, `docs/standards/AGENT_REGISTRY.md`, `docs/standards/QUALIFIED_AGENT_ROUTING.md`, and for material work `docs/standards/VINTERRO_ONE_AGENT_SUPERVISION.md` + `.agents/skills/vinterro-one-agent-supervision/SKILL.md`.
 
 ## Routing rule
 Treat “tüm ajanları çalıştır” as qualified routing. Select every materially relevant specialist and no unrelated specialist.
@@ -39,7 +39,7 @@ Treat “tüm ajanları çalıştır” as qualified routing. Select every mater
 4. Load the matching domain skill from this expansion; load `design-quality-engine` when visual craft, interaction, responsive adaptation or interface review materially contributes; for material web-builder lanes load `web-builder-capability-pack`; for material JavaScript/TypeScript engineering load `javascript-specialist-capability-pack`; for material writing/editorial work load `editorial-writing-capability-pack`; for material writing/editorial/content work load `editorial-writing-capability-pack`; for reference-led WordPress reconstruction/migration load `wordpress-replica`; load `site-mirror` only for legitimate authorized/public capture work; load `presentation-agent-pack` for PowerPoint/slide/pitch/report/academic presentation work; load the relevant Adaptive Capability Pack skill only when learning, YouTube intelligence, platform design, governed execution or founder operations materially contributes; load `judgment-engine` only when a bounded semantic decision layer materially improves the workflow.
 5. Route implementation through platform experts where applicable; editorial work separates authoring from fact/citation/editorial review for material publication artifacts and preserves project brand/source truth; JavaScript/TypeScript work must preserve the inspected runtime/toolchain and reproduce/measure before patching when executable evidence is available; for presentations preserve slide-manifest/source truth, deck-type strategy, brand/design system, editability/compatibility requirements, accessibility and rendered-slide QA.
 6. Preserve authentication/approval boundaries for publishing and ads, access/network/rights boundaries for site mirroring, and license/content-rights boundaries for presentation templates/assets/upstream engines.
-7. Require independent QA for material implementation. Presentation builds must render and visually review the final deck; a successful file export is not a QA pass.
+7. Require independent QA for material implementation under the Vinterro One supervision mesh; the material producer cannot self-certify, R2+ routes add a Domain Supervisor, R3/R4 effects add a Release Gate, and disagreements use an Arbiter. Presentation builds must render and visually review the final deck; a successful file export is not a QA pass.
 8. Report `VERIFIED`, `PARTIAL`, `BLOCKED`, or `NOT VERIFIED` based on executed evidence, never agent-count theater.
 
 ## Output
