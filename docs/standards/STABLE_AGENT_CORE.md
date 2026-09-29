@@ -1,4 +1,4 @@
-# Ercan OS — Stable Agent Core
+# Vinterro One — Stable Agent Core
 
 Status: active
 Updated: 2026-09-07
@@ -6,11 +6,11 @@ Canonical stable core count: **21**
 GitHub Specialist v3 extension count: **31**
 Total named stable routing identities: **52**
 
-This file is the compact counting/index surface for the Ercan OS stable identity model. Agency-excellence evidence refresh: `docs/upstream/scans/2026-09-24-agency-excellence-audit.md`. Detailed contracts live in `AGENT_REGISTRY.md`, `DOMAIN_EXPERT_REGISTRY.md`, `GITHUB_SPECIALIST_EXPANSION_V3.md`, platform/domain training standards and project adapters.
+This file is the compact counting/index surface for the Vinterro One stable identity model. Agency-excellence evidence refresh: `docs/upstream/scans/2026-09-24-agency-excellence-audit.md`. Detailed contracts live in `AGENT_REGISTRY.md`, `DOMAIN_EXPERT_REGISTRY.md`, `GITHUB_SPECIALIST_EXPANSION_V3.md`, platform/domain training standards and project adapters.
 
 ## Identity tiers
 
-Ercan OS uses two stable identity tiers:
+Vinterro One uses two stable identity tiers:
 
 1. **Stable Core — 21 identities.** These are the long-lived control, platform, project, screenshot-production and broad cross-domain expert identities governed by the existing world-class source-pack/championship benchmark system.
 2. **GitHub Specialist v3 Extension — 31 identities.** These are narrower stable routing identities for web, app/mobile, social, SEO/AEO/GEO, Meta ads/measurement and branding. They are governed by `GITHUB_SPECIALIST_EXPANSION_V3.md`, `GITHUB_SPECIALIST_MANIFEST_V3.json`, the v3 doctor CI, routing regression evals and the extension scoreboard/certification contract.
