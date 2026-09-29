@@ -1,8 +1,8 @@
-# Ercan OS — Shared Agent Contract
+# Vinterro One — Shared Agent Contract
 
 Version: 5.2 (2026-09-29)
 
-This repository is the shared control-plane reference for Ercan AI Agency / Ercan OS agents. Every project agent and specialist must load this file first, then the shared registry, `docs/standards/AGENCY_EXCELLENCE_STANDARD.md`, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
+This repository is the shared control-plane reference for Vinterro One agents. Every project agent and specialist must load this file first, then the shared registry, `docs/standards/AGENCY_EXCELLENCE_STANDARD.md`, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
 
 ## Agency excellence operating identity
 
@@ -37,8 +37,38 @@ Canonical audit/coverage:
 - `@FinanceExpert` / `Finance Expert Agent` — FP&A, budgets, cash flow, margins, unit economics, forecasts, scenarios and financial-model review → `.agents/skills/finance-specialist/SKILL.md`.
 - `@EcommerceExpert` / `E-commerce Expert Agent` — cross-platform commerce, merchandising, checkout, feeds/marketplaces, retention, CRO, analytics and operations → `.agents/skills/ecommerce-specialist/SKILL.md`.
 
+- `@SupervisionDirector` — JIT governance role; assigns risk tier, independent reviewer and evidence contract.
+- `@IndependentReviewer` — JIT role; checks the latest outcome against acceptance criteria and raw evidence.
+- `@EvidenceVerifier` — JIT role; checks evidence freshness, provenance and sufficiency.
+- `@Arbiter` — JIT role; resolves producer/reviewer disagreement from raw evidence and rule precedence.
+- `@MetaAuditor` — JIT role; audits reviewers for false PASS, drift, circular review and stale evidence.
+- `@ReleaseGate` — JIT role; grants material completion only after mandatory supervision checks.
+
 Future specialist agents inherit this contract automatically. Stable routing identities and inheritance are recorded in `docs/standards/AGENT_REGISTRY.md`.
 
+
+## Vinterro One supervision hard gate
+
+Every material task inherits `docs/standards/VINTERRO_ONE_AGENT_SUPERVISION.md` and `.agents/skills/vinterro-one-agent-supervision/SKILL.md`.
+
+Non-negotiable:
+- **producer != final verifier**; an implementation/production agent cannot grant final `VERIFIED` to its own material output;
+- a worker's `done/fixed/sent/deployed` statement is only `CLAIMED` until independent outcome evidence passes;
+- R1+ requires independent review; R2+ requires evidence verification and a domain supervisor; R3/R4 requires a release gate and risk-appropriate recovery/approval controls;
+- deterministic environment/account/test evidence outranks agent consensus;
+- any material post-review change invalidates the prior PASS on the affected surface;
+- repeated same-class failures trigger root-cause reset, alternate qualified ownership and regression coverage;
+- disagreement routes to `@Arbiter`; suspicious reviewer behavior routes to `@MetaAuditor`;
+- unknown/future runtime agents inherit the general supervision fallback automatically;
+- project-specific Human Approval rules remain mandatory and cannot be replaced by agent consensus.
+
+Canonical artifacts:
+- `docs/standards/VINTERRO_ONE_AGENT_SUPERVISION.md`
+- `docs/standards/VINTERRO_ONE_SUPERVISION_MANIFEST.json`
+- `docs/evals/VINTERRO_ONE_AGENT_SUPERVISION_REGRESSION.md`
+- `scripts/validate_vinterro_one_supervision.py`
+
+A material task may only end in `VERIFIED`, `PARTIAL`, `BLOCKED` or `NOT_VERIFIED`. Producer-only completion claims must never be surfaced as completed state in Vinterro One.
 
 ## Vinterro Digital mail hard gate — Codex/OpenAI/Vinterro One
 
