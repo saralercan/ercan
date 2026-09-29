@@ -1,6 +1,6 @@
-# Ercan OS Control Plane
+# Vinterro One Control Plane
 
-Shared agent standards, trusted-upstream policy and reusable GitHub Actions for Ercan AI Agency projects.
+Shared agent standards, supervision governance, trusted-upstream policy and reusable GitHub Actions for Vinterro One projects.
 
 ## What agents must read
 1. `AGENTS.md`
@@ -9,6 +9,7 @@ Shared agent standards, trusted-upstream policy and reusable GitHub Actions for 
 4. Project-local rules/context
 
 ## Standards
+- `VINTERRO_ONE_AGENT_SUPERVISION.md` — independent producer/reviewer/arbiter/meta-audit/release-gate governance across the live agent inventory
 - `PLATFORM_ENGINEERING.md` — Shopify + WordPress production engineering
 - `BRAND_SOCIAL.md` — brand, graphic design, Instagram organic/paid, logo and export QA
 - `UPSTREAM_TOOLCHAIN.md` — GitHub upstream adoption, CI, security, design/code and social tooling
@@ -74,5 +75,5 @@ jobs:
 Each project should keep a small local `AGENTS.md` that references this central contract and then adds only project-specific context, brand rules, architecture, do-not-touch constraints, current decisions and task ledger. Do not copy the whole central standard into every repository; centralize stable rules and keep project-local deltas local.
 
 ## Completion model
-Use explicit states: `VERIFIED`, `PARTIAL`, `BLOCKED`, `NOT VERIFIED`.
-A successful build or API response alone is not user-experience verification.
+Use explicit states: `VERIFIED`, `PARTIAL`, `BLOCKED`, `NOT_VERIFIED`.
+A successful build, API response or worker completion statement alone is not outcome verification. Material work follows the Vinterro One supervision mesh: producer -> independent review -> evidence verification -> correction/arbitration when needed -> final gate.

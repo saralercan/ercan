@@ -1,0 +1,232 @@
+{
+  "schema_version": "1.0",
+  "system_name": "Vinterro One",
+  "status": "active",
+  "effective_date": "2026-09-29",
+  "inventory": {
+    "scope": "dynamic_live_inventory",
+    "operator_reported_current_agent_count": 103,
+    "hardcode_count_for_enforcement": false,
+    "unknown_agent_policy": "route_to_general_supervisor_and_require_independent_review_for_R1_plus",
+    "portable_mirror_count_observed": 89,
+    "live_operator_reported_count": 103,
+    "resync_required_when_live_access_available": true,
+    "never_fabricate_missing_agents": true
+  },
+  "invariants": {
+    "producer_cannot_final_verify_own_material_work": true,
+    "completion_claim_is_not_verification": true,
+    "deterministic_evidence_outranks_semantic_vote": true,
+    "material_change_invalidates_stale_pass": true,
+    "critical_blocker_cannot_be_overridden_by_quorum": true,
+    "project_human_approval_rules_remain_authoritative": true,
+    "reviewer_must_have_raw_evidence_access": true,
+    "reviewer_alias_must_not_hide_same_effective_owner": true
+  },
+  "roles": {
+    "supervision_director": [
+      "@Orchestrator",
+      "@ProductionQA"
+    ],
+    "general_reviewer": [
+      "@ProductionQA"
+    ],
+    "evidence_verifier": [
+      "@ProductionQA"
+    ],
+    "arbiter": [
+      "@Orchestrator",
+      "@ProductionQA"
+    ],
+    "meta_auditor": [
+      "@AgentMCPExpert",
+      "@ProductionQA"
+    ],
+    "recovery_coordinator": [
+      "@Orchestrator",
+      "@ProductionQA"
+    ],
+    "reliability_analyst": [
+      "@AgentMCPExpert",
+      "@ProductionQA"
+    ]
+  },
+  "domain_supervisors": {
+    "web_ui": [
+      "@BrowserQA",
+      "@AccessibilityQA",
+      "@WebPerformance",
+      "@ProductionQA"
+    ],
+    "commerce": [
+      "@EcommerceExpert",
+      "@ShopifyExpert",
+      "@ProductionQA"
+    ],
+    "mail_outreach": [
+      "@MailQA",
+      "@ProductionQA"
+    ],
+    "security": [
+      "@SecurityExpert",
+      "@SecurityReleaseGate",
+      "@ProductionQA"
+    ],
+    "seo_aeo_geo": [
+      "@SEOExpert",
+      "@SEOScanner",
+      "@ProductionQA"
+    ],
+    "brand_creative": [
+      "@BrandComplianceQA",
+      "@ProductionQA"
+    ],
+    "social": [
+      "@SocialAnalytics",
+      "@ProductionQA"
+    ],
+    "meta_measurement": [
+      "@MetaMeasurement",
+      "@MarketingScience",
+      "@ProductionQA"
+    ],
+    "mobile": [
+      "@MobileQA",
+      "@AppReleaseEngineer"
+    ],
+    "performance": [
+      "@PerformanceExpert",
+      "@WebPerformance",
+      "@ProductionQA"
+    ],
+    "agent_runtime": [
+      "@AgentMCPExpert",
+      "@ProductionQA"
+    ],
+    "research_upstream": [
+      "@UpstreamIntelligence",
+      "@ProductionQA"
+    ],
+    "deployment_release": [
+      "@ReleaseGuardian",
+      "@ProductionQA"
+    ],
+    "finance_operations": [
+      "@FinanceExpert",
+      "@ProductionQA"
+    ],
+    "general": [
+      "@ProductionQA"
+    ]
+  },
+  "risk_tiers": {
+    "R0": {
+      "independent_review": "sampled",
+      "release_gate": false,
+      "human_approval": "project_rule"
+    },
+    "R1": {
+      "independent_review": "required",
+      "release_gate": false,
+      "human_approval": "project_rule"
+    },
+    "R2": {
+      "independent_review": "required",
+      "evidence_verifier": "required",
+      "domain_supervisor": "required",
+      "release_gate": "task_dependent"
+    },
+    "R3": {
+      "independent_review": "required",
+      "evidence_verifier": "required",
+      "domain_supervisor": "required",
+      "critic": "recommended",
+      "release_gate": true,
+      "rollback_plan": true,
+      "human_approval": "project_rule"
+    },
+    "R4": {
+      "independent_review": "dual_or_deterministic_plus_specialist",
+      "evidence_verifier": "required",
+      "domain_supervisor": "required",
+      "release_gate": true,
+      "rollback_or_containment": true,
+      "human_approval": "when_required"
+    }
+  },
+  "severity": [
+    "INFO",
+    "MINOR",
+    "MAJOR",
+    "BLOCKER",
+    "CRITICAL"
+  ],
+  "terminal_states": [
+    "VERIFIED",
+    "PARTIAL",
+    "BLOCKED",
+    "NOT_VERIFIED"
+  ],
+  "workflow_states": [
+    "PLANNED",
+    "EXECUTING",
+    "CLAIMED",
+    "UNDER_REVIEW",
+    "CORRECTION_REQUIRED",
+    "RETESTING",
+    "DISPUTED",
+    "BLOCKED",
+    "PARTIAL",
+    "VERIFIED",
+    "REGRESSED",
+    "ROLLED_BACK"
+  ],
+  "retry_policy": {
+    "same_class_failure_before_root_cause_reset": 2,
+    "allow_third_attempt_with_identical_hypothesis": false,
+    "repeated_failure_requires_alternate_owner_or_architecture_review": true,
+    "material_recurrence_requires_regression_case": true
+  },
+  "watchdog_triggers": [
+    "tool_error",
+    "test_failure",
+    "timeout_or_partial_result",
+    "unsupported_completion_claim",
+    "expected_state_mismatch",
+    "user_reports_issue_persists",
+    "repeated_user_correction",
+    "agent_disagreement",
+    "production_regression",
+    "post_review_material_change",
+    "permission_or_credential_boundary_change",
+    "new_unreviewed_fallback",
+    "cross_domain_scope_change"
+  ],
+  "reliability": {
+    "minimum_reviewed_samples_before_strong_inference": 10,
+    "track_producer_and_reviewer_separately": true,
+    "producer_metrics": [
+      "first_pass_verification_rate",
+      "correction_rate_by_severity",
+      "repeated_failure_rate",
+      "evidence_completeness",
+      "regression_or_rollback_rate",
+      "unsupported_completion_claims",
+      "mean_correction_loops",
+      "sample_size"
+    ],
+    "reviewer_metrics": [
+      "false_pass_rate",
+      "false_block_rate",
+      "arbitration_overturn_rate",
+      "seeded_failure_detection_rate",
+      "evidence_quality",
+      "freshness_violations",
+      "sample_size"
+    ]
+  },
+  "canonical_standard": "docs/standards/VINTERRO_ONE_AGENT_SUPERVISION.md",
+  "skill": ".agents/skills/vinterro-one-agent-supervision/SKILL.md",
+  "regression_suite": "docs/evals/VINTERRO_ONE_AGENT_SUPERVISION_REGRESSION.md",
+  "validator": "scripts/validate_vinterro_one_supervision.py"
+}

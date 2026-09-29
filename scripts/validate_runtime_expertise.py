@@ -70,30 +70,33 @@ def main() -> int:
     agents = runtime.get("agents", [])
     profiles = matrix.get("profiles", [])
 
-    if runtime.get("runtime_agent_count") != 89:
-        fail(f"runtime_agent_count must be 89, got {runtime.get('runtime_agent_count')}", failures)
-    if len(agents) != 89:
-        fail(f"runtime manifest must contain 89 agents, got {len(agents)}", failures)
-    if matrix.get("agent_count") != 89:
-        fail(f"expertise matrix agent_count must be 89, got {matrix.get('agent_count')}", failures)
-    if len(profiles) != 89:
-        fail(f"expertise matrix must contain 89 profiles, got {len(profiles)}", failures)
+    runtime_count = runtime.get("runtime_agent_count")
+    if not isinstance(runtime_count, int) or runtime_count < 1:
+        fail(f"runtime_agent_count must be a positive integer, got {runtime_count!r}", failures)
+        runtime_count = len(agents)
+    if len(agents) != runtime_count:
+        fail(f"runtime manifest count mismatch: declared={runtime_count}, actual={len(agents)}", failures)
+    if matrix.get("agent_count") != runtime_count:
+        fail(f"expertise matrix agent_count must match runtime count {runtime_count}, got {matrix.get('agent_count')}", failures)
+    if len(profiles) != runtime_count:
+        fail(f"expertise matrix profile count must match runtime count {runtime_count}, got {len(profiles)}", failures)
 
     runtime_names = [a.get("name") for a in agents]
     profile_names = [p.get("name") for p in profiles]
-    if len(set(runtime_names)) != 89:
+    if len(set(runtime_names)) != runtime_count:
         fail("runtime agent names are not unique", failures)
-    if len(set(profile_names)) != 89:
+    if len(set(profile_names)) != runtime_count:
         fail("expertise profile names are not unique", failures)
     if runtime_names != profile_names:
         missing = [n for n in runtime_names if n not in profile_names]
         extra = [n for n in profile_names if n not in runtime_names]
         fail(f"runtime/expertise order or membership drift; missing={missing}, extra={extra}", failures)
 
-    if [a.get("id") for a in agents] != list(range(1, 90)):
-        fail("runtime manifest IDs must be exactly 1..89", failures)
-    if [p.get("id") for p in profiles] != list(range(1, 90)):
-        fail("expertise profile IDs must be exactly 1..89", failures)
+    expected_ids = list(range(1, runtime_count + 1))
+    if [a.get("id") for a in agents] != expected_ids:
+        fail(f"runtime manifest IDs must be exactly 1..{runtime_count}", failures)
+    if [p.get("id") for p in profiles] != expected_ids:
+        fail(f"expertise profile IDs must be exactly 1..{runtime_count}", failures)
 
     runtime_name_set = set(runtime_names)
     for agent in agents:
@@ -180,7 +183,7 @@ def main() -> int:
     agents_contract = ROOT_AGENTS.read_text(encoding="utf-8")
 
     for needle in (
-        "Scope: all 89 Vinterro One runtime agents",
+        "Scope: all Vinterro One runtime agents",
         "Research the whole internet",
         "Shopify deep-specialist requirement",
         "Source authority tiers",
@@ -191,7 +194,7 @@ def main() -> int:
     for needle in (
         "AGENT_CONTINUAL_EXPERTISE_ENGINE.md",
         "AGENT_EXPERTISE_SOURCE_MATRIX.json",
-        "89 active agents",
+        "Production runtime count is read from the live",
         "STANDBY",
     ):
         if needle not in portable:
@@ -212,8 +215,8 @@ def main() -> int:
         return 1
 
     print("Runtime expertise validator: PASS")
-    print("Runtime agents: 89/89")
-    print("Expertise profiles: 89/89")
+    print(f"Runtime agents: {runtime_count}/{runtime_count}")
+    print(f"Expertise profiles: {runtime_count}/{runtime_count}")
     print("Portable adapters: Codex + Claude + Vinterro One")
     print("Handoffs: valid")
     print("Source packs: deep domain coverage present")

@@ -1,6 +1,6 @@
 # Agent Engineering Standard
 
-Applies to all Ercan OS agents. All agents additionally inherit `AGENCY_EXCELLENCE_STANDARD.md`; engineering discipline and agency craft are evaluated together.
+Applies to all Vinterro One agents. All agents additionally inherit `AGENCY_EXCELLENCE_STANDARD.md`; engineering discipline and agency craft are evaluated together.
 
 ## Principal-level operating bar
 - Every selected agent inherits `AGENCY_EXCELLENCE_STANDARD.md` and works like a senior/principal practitioner for material tasks.
@@ -53,13 +53,13 @@ Applies to all Ercan OS agents. All agents additionally inherit `AGENCY_EXCELLEN
 
 ## Runtime stack selection
 - Load `AGENT_RUNTIME_STACK.md` + `.agents/skills/agent-runtime-stack/SKILL.md` when a task materially selects or composes model runtime, orchestration framework, action/tool provider, sandbox, memory, observability/evals or voice infrastructure.
-- Prefer one primary orchestration framework per application. External runtimes are replaceable implementation engines beneath Ercan OS policy/routing/evidence.
+- Prefer one primary orchestration framework per application. External runtimes are replaceable implementation engines beneath Vinterro One policy/routing/evidence.
 - Prefer maintained successors: new Microsoft-oriented agent work evaluates `microsoft/agent-framework` before maintenance-mode AutoGen; archived/read-only Flowise/Continue are historical patterns, not new defaults.
 - Local inference, sandboxing, memory, tracing and voice are separate optional capabilities; do not bundle them merely because a reference stack diagram contains every layer.
 - Sandboxes constrain code execution but do not authorize external actions. Tool/action providers still require scoped identity, permissions and approval boundaries.
 - Memory is data architecture: define tenant/session scope, provenance, retention/deletion and privacy before durable writes.
 - Observability can contain sensitive prompts/source/tool outputs; filter/redact before external export.
-- Provider/framework benchmark claims are not project evidence. Use Ercan OS acceptance tests and independent evals.
+- Provider/framework benchmark claims are not project evidence. Use Vinterro One acceptance tests and independent evals.
 
 ## Long-running work
 - Externalize state: task/issue tracker, progress ledger, Git history, checkpoints and artifacts survive individual sessions.
@@ -76,6 +76,11 @@ Applies to all Ercan OS agents. All agents additionally inherit `AGENCY_EXCELLEN
 - Agents must not weaken tests, graders, scanners, security controls or acceptance criteria merely to obtain a pass.
 
 ## QA, tracing and evals
+- Material work additionally inherits `VINTERRO_ONE_AGENT_SUPERVISION.md`: producer and final verifier must be separated by effective ownership.
+- Treat producer completion language as `CLAIMED` until fresh outcome evidence is independently checked.
+- A material change after review invalidates the affected PASS and requires fresh verification.
+- Repeated same-class failure must trigger root-cause reset/alternate ownership before another equivalent patch attempt.
+- Reviewer quality is itself observable: false-PASS, arbitration overturn, stale-evidence and seeded-failure detection are meta-audit inputs.
 - Implementation agent != final evaluator.
 - Grade real outcome/environment state, not the agent’s verbal claim.
 - Trace task id, agent/model, tools, handoffs, guardrails, changed files, tests, QA result, corrections and evidence.
