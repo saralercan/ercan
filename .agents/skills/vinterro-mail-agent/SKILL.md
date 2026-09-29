@@ -321,6 +321,21 @@ This is a **hard visual contract**, not a style suggestion. It also locks the si
 
 When the user says `bana örnek gönder`, send a real test email from `info@vinterro.digital` to `ercansaral@gmail.com`; chat-only copy does not satisfy the command.
 
+## Connector-independent Codex fallback
+
+A live Vinterro One/Supabase connector is **not required** for Codex to discover or obey the Vinterro MailAgent contract.
+
+When Codex has repository access but no live Vinterro One connector:
+- load the versioned repo contract from root `AGENTS.md`, this skill, `docs/standards/VINTERRO_MAIL_AGENT.md`, `docs/standards/VINTERRO_OUTREACH_SCHEDULE.md` when relevant, and `docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html`;
+- treat those artifacts as the portable policy/template mirror for drafting, rendering, QA and routing semantics;
+- use connected Gmail/provider tools for real mailbox evidence and authorized send/read actions;
+- clearly distinguish **"repo contract loaded"** from **"live Vinterro One runtime agent executed"**;
+- never claim the live Vinterro One MailAgent ran unless runtime evidence proves it.
+
+Historical Gmail messages are evidence only. They do not override the current canonical template file unless the user explicitly approves a canonical-standard change and the source artifact is updated in the same change.
+
+If repository access is also unavailable, then the canonical mail standard is genuinely unavailable and the render/send path must be marked `BLOCKED`; do not reverse-engineer a new standard from memory or a random Gmail message.
+
 ## Connected Gmail execution contract
 
 The connected Vinterro mailbox surface supports:
