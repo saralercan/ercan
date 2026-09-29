@@ -1,10 +1,10 @@
 # Vinterro One — Portable Agent Runtime
 
 Status: active
-Version: 1.0
-Date: 2026-09-24
+Version: 1.1
+Date: 2026-09-29
 Canonical runtime inventory: `VINTERRO_RUNTIME_AGENT_MANIFEST.json`
-Production runtime count: **89 active agents**
+Production runtime count is read from the live `ercan_os_agents` registry at runtime; do not hardcode routing behavior to an older snapshot.
 
 ## Goal
 
@@ -45,14 +45,15 @@ The phrases:
 mean:
 
 1. Understand the current task, project, risk and required evidence.
-2. Select the **smallest sufficient expert pod**.
-3. Mark only those specialists **ACTIVE** for the current task.
-4. Keep every other agent **STANDBY**.
-5. If the work reveals a new domain, risk, evidence gap or implementation dependency, consult/activate the relevant standby specialist.
-6. Independent QA/reviewer roles may join later even if they were not part of the initial producer pod.
-7. Never broadcast a normal task to all 89 agents merely because the user used the master trigger.
+2. Build the **complete non-redundant pod of every specialist with a distinct material contribution** to the current task.
+3. Activate the project lead plus all materially relevant domain specialists and independent QA/reviewer roles; do not optimize for minimum headcount.
+4. Run independent workstreams in parallel when the provider/runtime supports it; keep dependency-bound work ordered.
+5. Three, five, eight or more specialists may be ACTIVE simultaneously when the task genuinely spans that many capabilities.
+6. Keep only unrelated or redundant agents **STANDBY**.
+7. If the work reveals a new domain, risk, evidence gap or implementation dependency, activate the matching standby specialist immediately.
+8. Never broadcast a task to every registered agent merely because of the phrase; the trigger means **all relevant experts for this task**, not literal full-registry fan-out.
 
-This rule applies equally to Codex, Claude and Vinterro One.
+This rule applies **identically** to ChatGPT/OpenAI, Codex, Claude and Vinterro One. Provider adapters may change mechanics, but they may not reduce the selected expert coverage or reinterpret the master trigger as a minimum-team shortcut.
 
 ## Provider adapters
 
@@ -64,7 +65,7 @@ Use:
 - the canonical runtime manifest;
 - task-relevant domain skills only.
 
-OpenAI Agent Skills use `SKILL.md` bundles and are intended for reusable workflows. Keep the 89-agent inventory JIT behind one router instead of eagerly injecting 89 long prompts into every session.
+OpenAI Agent Skills use `SKILL.md` bundles and are intended for reusable workflows. Keep the runtime inventory JIT behind one router instead of eagerly injecting every long prompt into every session. On the master trigger, the router must still activate every materially relevant expert for the task.
 
 For managed/SDK agent runtimes, map selected agent records into agent instructions/tools/handoffs at runtime. Use multi-agent orchestration only when work can genuinely benefit from separate context or independent execution.
 
@@ -77,7 +78,7 @@ Use:
 
 Claude Code supports project subagents under `.claude/agents/` and automatically delegates when a task matches a subagent description. The Vinterro router deliberately keeps one short discoverable subagent definition and performs JIT role selection from the 89-agent manifest to avoid loading dozens of descriptions into every Claude session.
 
-When separate contexts materially help, the router may spawn general-purpose/research subagents with the selected Vinterro role's exact mandate and constraints. Do not spawn subagents for trivial single-file or sequential work.
+When separate contexts materially help, the router should spawn/activate the selected specialist contexts with each Vinterro role's exact mandate and constraints. Independent specialist workstreams should run concurrently when supported. Do not spawn unrelated subagents merely to inflate agent count.
 
 ### Vinterro One native
 
