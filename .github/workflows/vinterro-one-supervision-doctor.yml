@@ -1,0 +1,35 @@
+name: Vinterro One Supervision Doctor
+
+on:
+  pull_request:
+    paths:
+      - "AGENTS.md"
+      - ".agents/skills/vinterro-one-agent-supervision/**"
+      - "docs/standards/VINTERRO_ONE_AGENT_SUPERVISION.md"
+      - "docs/standards/VINTERRO_ONE_SUPERVISION_MANIFEST.json"
+      - "docs/evals/VINTERRO_ONE_AGENT_SUPERVISION_REGRESSION.md"
+      - "scripts/validate_vinterro_one_supervision.py"
+  push:
+    branches: [master]
+    paths:
+      - "AGENTS.md"
+      - ".agents/skills/vinterro-one-agent-supervision/**"
+      - "docs/standards/VINTERRO_ONE_AGENT_SUPERVISION.md"
+      - "docs/standards/VINTERRO_ONE_SUPERVISION_MANIFEST.json"
+      - "docs/evals/VINTERRO_ONE_AGENT_SUPERVISION_REGRESSION.md"
+      - "scripts/validate_vinterro_one_supervision.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  supervision-doctor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate Vinterro One supervision contract
+        run: python scripts/validate_vinterro_one_supervision.py
