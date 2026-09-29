@@ -55,6 +55,10 @@ mean:
 
 This rule applies **identically** to ChatGPT/OpenAI, Codex, Claude and Vinterro One. Provider adapters may change mechanics, but they may not reduce the selected expert coverage or reinterpret the master trigger as a minimum-team shortcut.
 
+## Supervision portability
+
+Provider portability does not remove Vinterro One supervision. For material work, every runtime must preserve the separation `producer -> independent reviewer -> evidence verifier -> correction/arbitration -> final gate` defined in `VINTERRO_ONE_AGENT_SUPERVISION.md`. A second alias using the same effective implementation owner is not automatically independent. If the current provider cannot execute a required reviewer/evidence step, the result is `PARTIAL` or `NOT_VERIFIED`, not an inferred PASS.
+
 ## Connector availability and portable fallback
 
 The absence of a live Vinterro One/Supabase connector in a provider session does **not** make Vinterro One agent contracts unavailable when the repository is accessible.
