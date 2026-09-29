@@ -30,6 +30,8 @@ on:
       - '.agents/skills/**'
       - '.claude/agents/**'
       - 'scripts/validate_runtime_expertise.py'
+      - 'scripts/validate_academic_expertise.py'
+      - 'docs/research/ACADEMIC_SOURCE_CATALOG_2026-09-29.md'
       - '.github/workflows/runtime-expertise.yml'
 
 permissions:
