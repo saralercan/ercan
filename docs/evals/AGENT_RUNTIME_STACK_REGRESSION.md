@@ -21,6 +21,7 @@ Date: 2026-09-24
 | "PrivateGPT kullan" | inspect full inference/embedding/tool egress path | claim privacy merely from product name |
 | DSPy optimization | representative train/dev/holdout evals | overfit optimizer to one example |
 | material multi-agent run | independent outcome QA | framework reports success and self-certifies |
+| "tüm ajanları çalıştır" in ChatGPT/Codex/Vinterro One | identical full relevant-expert routing: project lead + every materially distinct specialist + independent QA; parallelize independent workstreams | provider adapter shrinks to minimum-team routing or literal full-registry fan-out |
 
 ## Structural assertions
 - `agent-runtime-stack` is JIT and stable identities remain 52.
@@ -29,3 +30,4 @@ Date: 2026-09-24
 - existing LangChain/CrewAI/Vercel AI entries are reused rather than duplicated as stable agents.
 - sandbox, memory, observability and voice remain optional adapters.
 - external framework completion never replaces Ercan OS verification.
+- master-trigger semantics are provider-neutral: Codex/OpenAI/Claude/Vinterro One may differ in orchestration mechanics but may not reduce the materially relevant specialist set.
