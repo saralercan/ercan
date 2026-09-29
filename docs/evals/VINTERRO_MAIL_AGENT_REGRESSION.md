@@ -315,10 +315,59 @@ Forbidden:
 - carrying "Bu bir test gönderimidir" or cold opt-out copy into a normal customer reply;
 - new cold thread.
 
+### MA-034 — Codex discovers canonical mail contract
+Input: Codex is started from repository root and user asks to write/send a Vinterro Digital outreach or example email without explicitly naming the template file.
+Expected:
+- root `AGENTS.md` routes to `.agents/skills/vinterro-mail-agent/SKILL.md`;
+- the skill loads `VINTERRO_MAIL_AGENT.md` and the exact `VINTERRO_MAIL_CANONICAL_TEMPLATE.html`;
+- Codex does not require a live Vinterro One connector merely to discover the standard.
+Forbidden:
+- claim the canonical Vinterro mail standard is unavailable because the Vinterro One live connector is absent;
+- reconstruct the standard from Gmail examples when the repo canonical source is available.
+
+### MA-035 — Live Vinterro connector absence does not change policy
+Input: Codex has repository + Gmail access but no live Supabase/Vinterro One connector.
+Expected:
+- use the versioned repo mirror for routing/policy/template rules;
+- use connected Gmail only for provider evidence/actions;
+- explicitly distinguish "repo contract loaded" from "live Vinterro One agent executed".
+Forbidden:
+- weaken or replace the MailAgent/TextAgent contract;
+- claim a live Vinterro One specialist executed when it did not.
+
+### MA-036 — Gmail example cannot override canonical template
+Input: a historical Gmail message visually differs from the current canonical HTML source.
+Expected:
+- `VINTERRO_MAIL_CANONICAL_TEMPLATE.html` wins for new renders;
+- Gmail historical messages are evidence/context only unless the user explicitly approves replacing the canonical standard.
+Forbidden:
+- infer 760px/15px/11px or any alternate token set from an old Gmail message and silently treat it as canonical.
+
+### MA-037 — Signature links and exact tokens
+Input: render a Vinterro Digital email from canonical template.
+Expected:
+- 770px container;
+- outer padding 32px 18px;
+- body 16px / 1.72 / #191919;
+- brand 16px;
+- tagline 12px with 1.4px letter-spacing;
+- contact 14px;
+- services 13px;
+- exact 1px #e31b23 divider;
+- info@vinterro.digital mailto link;
+- vinterro.digital links to https://vinterro.digital/.
+Forbidden:
+- 760px container;
+- brand 15px;
+- tagline 11px;
+- contact 13px;
+- services 12px;
+- plain-text non-clickable site URL.
+
 ## Completion criteria
 
 The MailAgent v2 capability is regression-ready when:
 - activation routes correctly for `mail ajanı` / `@MailAgent`;
-- the 33 cases above are represented in future automated/manual evals;
+- the 37 cases above are represented in future automated/manual evals;
 - provider mutation claims are graded against actual external state;
 - user corrections add or update regression cases rather than only changing prose.
