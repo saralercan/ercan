@@ -89,7 +89,7 @@ Use:
 - `.claude/agents/vinterro-router.md`;
 - the canonical runtime manifest.
 
-Claude Code supports project subagents under `.claude/agents/` and automatically delegates when a task matches a subagent description. The Vinterro router deliberately keeps one short discoverable subagent definition and performs JIT role selection from the 89-agent manifest to avoid loading dozens of descriptions into every Claude session.
+Claude Code supports project subagents under `.claude/agents/` and automatically delegates when a task matches a subagent description. The Vinterro router deliberately keeps one short discoverable subagent definition and performs JIT role selection from the live-derived manifest to avoid loading dozens of descriptions into every Claude session.
 
 When separate contexts materially help, the router should spawn/activate the selected specialist contexts with each Vinterro role's exact mandate and constraints. Independent specialist workstreams should run concurrently when supported. Do not spawn unrelated subagents merely to inflate agent count.
 

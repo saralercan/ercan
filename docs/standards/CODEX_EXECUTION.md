@@ -12,7 +12,7 @@ Codex must treat repository knowledge as the source of truth and load only the t
 
 When the user says **“tüm ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent, Codex must interpret the request as **automatic qualified-agent routing** and load `docs/standards/QUALIFIED_AGENT_ROUTING.md`.
 
-Codex must not ask the user to enumerate specialists that can be inferred from the task. It must detect the project, decompose the goal into capability requirements, select the minimum sufficient set of qualified workstreams, order dependencies, run only materially useful roles, and include independent QA when the work requires verification.
+Codex must not ask the user to enumerate specialists that can be inferred from the task. It must detect the project, decompose the goal into capability requirements, and for the explicit master trigger activate the complete non-redundant set of materially contributing qualified workstreams, including the project lead and independent QA/reviewer. It must order dependencies, exclude only unrelated or redundant roles, and never perform literal full-registry fan-out.
 
 Selection criteria are: project fit, task competence, tool/data fit, dependency fit, risk fit and verification fit. A specialist required by the task should be included even if the user did not name it. An unrelated specialist should not be included merely because the user said “all agents.” Codex must never claim that an unavailable or unexecuted specialist actually ran.
 

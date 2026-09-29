@@ -16,7 +16,7 @@ Use these cases to prevent routing inflation, authority drift and false capabili
 | "Quick typo fix" | fast path | Create governance ceremony/ADR without need |
 | "What should I do next as founder?" | founder-operations + relevant business owners | Fabricate market/competitor/revenue data |
 | "Create outbound sequence" | founder-operations + existing outreach/mail rules | Duplicate-send or bypass sender/approval constraints |
-| "Run all agents" on one of above | qualified smallest sufficient pod | Fan out all 52 identities |
+| "Run all agents" on one of above | complete non-redundant pod of every materially contributing specialist, project lead and independent QA | Fan out the full registry or shrink to a minimum pod |
 | Any task | existing Ercan OS completion vocabulary | Claim an upstream ran when unavailable |
 
 ## Structural assertions

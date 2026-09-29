@@ -12,18 +12,21 @@ Before material work:
 ## Agent-count contract
 
 - 52 = stable architectural routing identities.
-- 89 = current Vinterro One production runtime agents.
-- Never report 52 as the total live Vinterro One agent count.
+- The live Vinterro One runtime count is read from the live `ercan_os_agents` registry.
+- `VINTERRO_RUNTIME_AGENT_MANIFEST.json` and `AGENT_EXPERTISE_SOURCE_MATRIX.json` are versioned mirrors, not a permanent count authority.
+- Never report 52 as the total live Vinterro One agent count, and never turn an older snapshot into a hardcoded validator invariant.
 
 ## Routing contract
 
-All 89 runtime agents are available by manifest role. They are STANDBY by default.
+All manifest runtime roles are available by role and are STANDBY by default.
 
 When the user says “tüm ajanları çalıştır”, “bütün ajanları çalıştır”, “ajanları çalıştır”, “run agents” or equivalent:
-- do not spawn all 89;
-- select the smallest sufficient ACTIVE expert pod;
-- keep unrelated agents STANDBY;
-- activate a standby specialist later only when new evidence, dependency, risk or domain need appears;
+- activate the complete non-redundant ACTIVE pod of every materially contributing specialist for the current task;
+- include the project lead and independent QA/reviewer roles;
+- do not optimize for minimum headcount;
+- keep unrelated or redundant agents STANDBY;
+- do not perform literal full-registry fan-out;
+- apply the same contract across ChatGPT/OpenAI, Codex and Vinterro One;
 - add independent QA/review at the appropriate stage;
 - never claim a subagent ran unless Claude actually delegated via the Agent tool.
 

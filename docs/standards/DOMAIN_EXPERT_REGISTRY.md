@@ -15,7 +15,7 @@ Combined named stable routing surface: **52 identities**.
 
 The phrase “base identities in `AGENT_REGISTRY.md`” must not be interpreted as the current number of headings in that file: `AGENT_REGISTRY.md` now also contains the 31 v3 specialist-extension identities. The **14 + 7 = 21** count is the Stable Core lineage; the extension is counted separately and machine-read from `GITHUB_SPECIALIST_MANIFEST_V3.json`.
 
-Do not interpret 52 identities as 52 agents running on every task. `@Orchestrator` selects the minimum sufficient qualified pod.
+Do not interpret 52 identities as 52 agents running on every task. For ordinary scoped work, `@Orchestrator` selects a task-specific qualified pod; the explicit “Tüm ajanları çalıştır” master trigger activates every materially contributing specialist plus the project lead and independent QA/reviewer, excluding only unrelated or redundant roles.
 
 ## @SEOExpert
 Project-neutral broad search/AI-discovery specialist. Loads `AI_DISCOVERY_SEO.md`, the active project's `SEARCH_VISIBILITY.md` when present, current Google Search Central guidance, relevant Schema.org/platform docs, and current crawler/publisher guidance JIT. Owns crawl/index/canonical/sitemap/robots, page metadata, structured data tied to visible truth, entity/local/product discovery, hreflang, internal linking, search diagnostics and measurable AI-discovery eligibility. Never promises rankings and never uses spam/deceptive tactics. Material changes require technical/browser/search verification.

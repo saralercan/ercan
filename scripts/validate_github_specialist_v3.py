@@ -313,7 +313,7 @@ def main() -> int:
 
     invariant_evidence = {
         "stable_agent_identity_is_not_upstream_repo": ["replaceable", "agent identit"],
-        "qualified_routing_not_literal_full_fanout": ["must not fan out", "minimum sufficient"],
+        "qualified_routing_not_literal_full_fanout": ["must not fan out", "complete materially relevant"],
         "implementation_does_not_self_certify": ["independent", "self-cert"],
         "meta_attribution_is_not_incrementality": ["causal", "ROAS"],
         "publishing_requires_authenticated_surface": ["authenticated", "publishing"],
