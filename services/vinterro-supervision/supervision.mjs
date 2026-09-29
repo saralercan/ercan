@@ -67,6 +67,7 @@ export function recordReview(run, { reviewerId, verdict, evidenceRefs = [], find
 export function recordSupervisor(run, { supervisorId, verdict, evidenceRefs = [] }) {
   assert(supervisorId, "supervisorId is required");
   assert(supervisorId !== run.workerId, "worker cannot supervise its own material work");
+  if (run.review) assert(supervisorId !== run.review.reviewerId, "domain supervisor must be distinct from independent reviewer");
   assert(["PASS", "REWORK", "BLOCKED"].includes(verdict), "invalid supervisor verdict");
   if (verdict === "PASS") assert(evidenceRefs.length > 0, "supervisor PASS requires evidence");
   run.supervisor = {
@@ -93,6 +94,9 @@ export function recordArbitration(run, { arbiterId, verdict, evidenceRefs = [] }
 
 export function recordMetaAudit(run, { auditorId, verdict, evidenceRefs = [] }) {
   assert(auditorId, "auditorId is required");
+  assert(auditorId !== run.workerId, "worker cannot meta-audit its own run");
+  if (run.review) assert(auditorId !== run.review.reviewerId, "meta auditor must be distinct from reviewer");
+  if (run.supervisor) assert(auditorId !== run.supervisor.supervisorId, "meta auditor must be distinct from domain supervisor");
   assert(["PASS", "REVIEW_REQUIRED", "BLOCKED"].includes(verdict), "invalid meta-audit verdict");
   if (verdict === "PASS") assert(evidenceRefs.length > 0, "meta-audit PASS requires evidence");
   run.metaAudit = {
@@ -106,6 +110,9 @@ export function recordMetaAudit(run, { auditorId, verdict, evidenceRefs = [] }) 
 
 export function recordReleaseGate(run, { gatekeeperId, verdict, evidenceRefs = [] }) {
   assert(gatekeeperId, "gatekeeperId is required");
+  assert(gatekeeperId !== run.workerId, "worker cannot approve its own release");
+  if (run.review) assert(gatekeeperId !== run.review.reviewerId, "release gate must be distinct from reviewer");
+  if (run.supervisor) assert(gatekeeperId !== run.supervisor.supervisorId, "release gate must be distinct from domain supervisor");
   assert(VALID_GATE.has(verdict), "invalid release-gate verdict");
   if (verdict === "RELEASE_APPROVED") assert(evidenceRefs.length > 0, "release approval requires evidence");
   run.releaseGate = {
@@ -131,7 +138,13 @@ export function evaluateCompletion(run) {
   }
 
   if (!current(run.review, run)) return { state: "NOT_VERIFIED", reason: "missing or stale independent review" };
-  if (!["PASS", "PASS_WITH_NOTES"].includes(run.review.verdict)) {
+  const reviewPassed = ["PASS", "PASS_WITH_NOTES"].includes(run.review.verdict);
+  const arbiterOverturnedCurrentReview =
+    current(run.arbiter, run) && run.arbiter.verdict === "OVERTURN_REVIEW";
+  if (!reviewPassed && !arbiterOverturnedCurrentReview) {
+    if (current(run.arbiter, run) && run.arbiter.verdict === "BLOCKED") {
+      return { state: "BLOCKED", reason: "arbiter blocked disputed review" };
+    }
     return { state: run.review.verdict === "BLOCKED" ? "BLOCKED" : "NOT_VERIFIED", reason: "independent review did not pass" };
   }
 
