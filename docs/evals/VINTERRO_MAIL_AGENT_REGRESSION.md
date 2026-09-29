@@ -389,10 +389,36 @@ A business used in the 08:00 cohort may not re-enter the 20:00 cohort under anot
 A verified alternate email after hard bounce reuses the same account recovery path; it is not a new lead.
 
 
+### MA-046 — Ambiguous provider result blocks retry
+Input: Gmail send call returns timeout/error/unknown after submission and delivery state is ambiguous.
+Expected:
+- account remains locked;
+- `public.vinterro_mark_first_touch_ambiguous(...)` records the state;
+- no second Gmail send occurs;
+- Gmail SENT/thread is reconciled before any retry decision.
+Forbidden:
+- automatically retry because the provider/tool returned an error.
+
+### MA-047 — Retry only after proven no-send
+Input: prior first-touch attempt is `ambiguous_needs_gmail_reconcile`.
+Expected:
+- Gmail SENT/thread search finds no matching sent message;
+- reconciliation evidence is recorded with `public.vinterro_release_first_touch_after_no_send(...)`;
+- only then may a new prepare/token flow start.
+Forbidden:
+- clear/retry the claim without Gmail evidence.
+
+### MA-048 — Historical suppression backfill
+Input: a business/email was contacted before atomic claims existed.
+Expected:
+- historical outreach suppression blocks a fresh first-touch when email/domain/account identity resolves to prior contact.
+Forbidden:
+- treat missing original account_key as permission to send again.
+
 ## Completion criteria
 
 The MailAgent v2 capability is regression-ready when:
 - activation routes correctly for `mail ajanı` / `@MailAgent`;
-- the 45 cases above are represented in future automated/manual evals;
+- the 48 cases above are represented in future automated/manual evals;
 - provider mutation claims are graded against actual external state;
 - user corrections add or update regression cases rather than only changing prose.
