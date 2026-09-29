@@ -3691,5 +3691,13 @@
       },
       "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     }
-  ]
+  ],
+  "product_name": "Vinterro One",
+  "supervision": {
+    "standard": "docs/standards/VINTERRO_ONE_AGENT_SUPERVISION.md",
+    "manifest": "docs/standards/VINTERRO_ONE_SUPERVISION_MANIFEST.json",
+    "skill": ".agents/skills/vinterro-one-agent-supervision/SKILL.md",
+    "regression": "docs/evals/VINTERRO_ONE_SUPERVISION_REGRESSION.md",
+    "policy": "Every material active runtime agent is independently reviewed according to risk; material creators cannot self-certify."
+  }
 }

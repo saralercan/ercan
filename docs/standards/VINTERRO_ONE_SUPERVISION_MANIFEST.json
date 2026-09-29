@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "standard": "VINTERRO_ONE_AGENT_SUPERVISION",
+  "product_name": "Vinterro One",
+  "status": "active",
+  "effective_date": "2026-09-29",
+  "legacy_names": [
+    "Ercan OS",
+    "Ercan AI Agency"
+  ],
+  "canonical_loop": [
+    "PLAN",
+    "EXECUTE",
+    "OBSERVE",
+    "REVIEW",
+    "CHALLENGE",
+    "CORRECT",
+    "RE-TEST",
+    "GATE",
+    "COMPLETE"
+  ],
+  "invariants": {
+    "material_creator_cannot_self_certify": true,
+    "completion_claim_is_not_evidence": true,
+    "independent_review_required_for_material_work": true,
+    "disagreement_uses_arbiter_not_majority_vote": true,
+    "stale_pass_invalid_after_material_change": true,
+    "critical_external_effect_requires_release_gate": true,
+    "reviewer_and_supervisor_are_auditable": true,
+    "repeated_failure_requires_root_cause_escalation": true,
+    "missing_evidence_cannot_be_reported_as_verified": true
+  },
+  "risk_classes": {
+    "R0": {
+      "name": "trivial",
+      "minimum": [
+        "worker_self_check_if_allowed"
+      ]
+    },
+    "R1": {
+      "name": "material",
+      "minimum": [
+        "independent_reviewer"
+      ]
+    },
+    "R2": {
+      "name": "production_impacting",
+      "minimum": [
+        "independent_reviewer",
+        "domain_supervisor",
+        "direct_environment_evidence"
+      ]
+    },
+    "R3": {
+      "name": "critical",
+      "minimum": [
+        "independent_reviewer",
+        "domain_supervisor",
+        "release_gate"
+      ],
+      "arbiter_on_dispute": true
+    },
+    "R4": {
+      "name": "systemic_supervision_risk",
+      "minimum": [
+        "independent_reviewer",
+        "agent_runtime_supervisor",
+        "meta_auditor",
+        "regression_eval",
+        "release_gate"
+      ],
+      "arbiter_on_dispute": true
+    }
+  },
+  "verdicts": {
+    "reviewer": [
+      "PASS",
+      "PASS_WITH_NOTES",
+      "REWORK",
+      "BLOCKED"
+    ],
+    "arbiter": [
+      "UPHOLD_REVIEW",
+      "OVERTURN_REVIEW",
+      "RETEST_REQUIRED",
+      "BLOCKED"
+    ],
+    "release_gate": [
+      "RELEASE_APPROVED",
+      "RELEASE_DENIED",
+      "RELEASE_BLOCKED"
+    ],
+    "completion": [
+      "VERIFIED",
+      "PARTIAL",
+      "BLOCKED",
+      "NOT_VERIFIED"
+    ]
+  },
+  "domain_supervisor_capabilities": [
+    "@WebSupervisor",
+    "@CommerceSupervisor",
+    "@EmailSupervisor",
+    "@ContentSupervisor",
+    "@BrandSupervisor",
+    "@SEOSupervisor",
+    "@SocialSupervisor",
+    "@AdsMeasurementSupervisor",
+    "@DataSupervisor",
+    "@SecuritySupervisor",
+    "@PerformanceSupervisor",
+    "@MobileSupervisor",
+    "@PresentationSupervisor",
+    "@InfrastructureSupervisor",
+    "@ResearchEvidenceSupervisor",
+    "@AgentRuntimeSupervisor"
+  ],
+  "correction_packet_fields": [
+    "finding_id",
+    "severity",
+    "criterion",
+    "expected",
+    "observed",
+    "evidence",
+    "likely_owner",
+    "smallest_compliant_fix",
+    "retest_required",
+    "regression_scope"
+  ],
+  "reliability_signals": [
+    "first_pass_acceptance_rate",
+    "reviewer_rejection_rate",
+    "false_pass_rate",
+    "post_pass_rollback_rate",
+    "repeated_user_correction_rate",
+    "escaped_regression_rate",
+    "evidence_completeness_rate",
+    "stale_evidence_incidents",
+    "unsupported_completion_claims",
+    "average_rework_loops",
+    "domain_certification_status"
+  ],
+  "evidence_precedence": [
+    "deterministic_environment_state",
+    "automated_test_ci",
+    "direct_tool_api_provider_state",
+    "browser_runtime_observation",
+    "diff_static_analysis",
+    "rendered_artifact_inspection",
+    "primary_source_factual_evidence",
+    "structured_semantic_review",
+    "worker_narrative"
+  ],
+  "regression_skill": ".agents/skills/agent-eval-regression/SKILL.md",
+  "supervision_skill": ".agents/skills/vinterro-one-agent-supervision/SKILL.md",
+  "regression_contract": "docs/evals/VINTERRO_ONE_SUPERVISION_REGRESSION.md",
+  "runtime_count_policy": "dynamic; applies to every active Vinterro One runtime agent; never hardcode 103 into routing semantics"
+}

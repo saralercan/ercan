@@ -1,4 +1,4 @@
-# Ercan OS — Qualified Agent Routing
+# Vinterro One — Qualified Agent Routing
 
 Status: active
 Version: 1.3 (2026-09-29)
@@ -11,7 +11,7 @@ These commands do **not** mean “execute every registered agent.” They mean:
 
 > The Orchestrator must automatically identify the project and task, build the complete materially relevant team of qualified specialists, tools and QA roles, and execute that team without requiring the user to name each specialist individually. The goal is complete expert coverage, not minimum headcount.
 
-This meaning is shared by ChatGPT/Ercan OS and Codex.
+This meaning is shared by ChatGPT/Vinterro One and Codex.
 
 For web, app/mobile, social media, SEO/AEO/GEO, Meta advertising/measurement and branding work, `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md` is part of the qualification source. Load only the matching JIT skill(s), never the entire v3 pool by default.
 
@@ -215,6 +215,21 @@ When the user explicitly says **“tüm ajanları çalıştır”** or an equiva
 - keep unrelated or duplicative agents STANDBY rather than performing literal full-registry fan-out.
 
 The trigger therefore means **all relevant experts**, not **all registered agents** and not **the smallest possible team**.
+
+## Supervision overlay
+
+Qualified routing is incomplete until the applicable Vinterro One supervision route is also selected.
+
+For every material worker/workstream:
+1. assign an independent reviewer that did not materially create the output;
+2. classify risk R0-R4 using `VINTERRO_ONE_AGENT_SUPERVISION.md`;
+3. add the relevant Domain Supervisor for R2+;
+4. add a Release Gate for R3/R4 external effects;
+5. add Arbiter only on material disagreement;
+6. add Meta Auditor for R4/systemic/repeated false-completion patterns;
+7. invalidate PASS after any later material change and retest proportionally.
+
+"All agents" therefore means all materially relevant **execution and supervision** capabilities, not just producers.
 
 ## Quality over agent count
 
