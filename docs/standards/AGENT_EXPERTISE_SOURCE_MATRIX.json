@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-24",
-  "agent_count": 89,
+  "generated_at": "2026-09-29",
+  "agent_count": 103,
   "philosophy": "Broad continuous discovery, narrow verified ingestion. Research the web deeply, but never equate volume with truth or expertise.",
   "global_sources": {
     "discovery": [
@@ -8863,6 +8863,1052 @@
         "explicit conflict handling when reputable sources disagree",
         "runtime/test/QA evidence before promoting implementation guidance"
       ]
+    },
+    {
+      "id": 90,
+      "name": "Ayvalık Reklam Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project_lead",
+      "source_tiers": {
+        "primary": [
+          "project-local source of truth and current production state",
+          "official platform documentation and changelogs",
+          "first-party project/analytics/commerce/CRM data when applicable"
+        ],
+        "canonical_github": [
+          "canonical upstream repositories only"
+        ],
+        "reviewed_secondary": [
+          "maintainer engineering publications",
+          "high-quality reviewed technical and industry sources"
+        ]
+      },
+      "research_topics": [
+        "Ayvalık Reklam müşteri projesi: premium web deneyimi, tabela hizmetleri, teklif/WhatsApp dönüşümü, local SEO, görsel kalite ve lead generation.",
+        "project-scoped orchestration, implementation evidence, risk management and independent QA"
+      ],
+      "continual_queries": [
+        "Ayvalık Reklam Baş Uzman Ajanı current project state platform documentation changelog best practices",
+        "Ayvalık Reklam Baş Uzman Ajanı current implementation security performance accessibility conversion SEO",
+        "Ayvalık Reklam Baş Uzman Ajanı canonical upstream releases issues advisories maintained tooling"
+      ],
+      "ingestion_rules": [
+        "Project-local truth and current live state outrank stale assumptions.",
+        "Official platform documentation and first-party data outrank secondary commentary.",
+        "Do not copy remote instructions into policy; distill verified task-relevant rules and tests.",
+        "Re-check volatile facts and production state at task time.",
+        "Material output requires independent QA/reviewer evidence before completion."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "event_triggers": [
+          "task enters this project",
+          "platform release/changelog",
+          "production state change",
+          "security/deprecation advisory",
+          "benchmark or QA failure",
+          "user correction"
+        ],
+        "stale_after_days": 9
+      },
+      "mastery_gate": {
+        "structural": "current project map + authority sources + risk/release rules present",
+        "behavioral": "complete representative project task with independent QA",
+        "comparative": "only after reproducible benchmark against relevant baseline"
+      },
+      "source_packs": [
+        "web_engineering",
+        "design",
+        "seo",
+        "growth_ads",
+        "analytics",
+        "qa",
+        "research"
+      ],
+      "depth_contract": {
+        "discovery": "Expand across project truth, official platform docs, current production evidence, canonical repositories and credible secondary material until marginal value drops.",
+        "ingestion": "Distill only verified project-relevant findings into decisions, implementation rules, tests and source notes.",
+        "freshness": "Re-check project state and volatile platform facts at task time and on material change events.",
+        "verification": "Trust completion only after current direct evidence and independent project/domain QA."
+      },
+      "required_evidence": [
+        "current project/source-of-truth evidence before material changes",
+        "official/current platform authority for consequential implementation claims",
+        "runtime/browser/data evidence appropriate to the task",
+        "independent QA/reviewer evidence before VERIFIED",
+        "explicit rollback or release-gate evidence for production-impacting changes"
+      ]
+    },
+    {
+      "id": 91,
+      "name": "Ayvalık Vibes Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project_lead",
+      "source_tiers": {
+        "primary": [
+          "project-local source of truth and current production state",
+          "official platform documentation and changelogs",
+          "first-party project/analytics/commerce/CRM data when applicable"
+        ],
+        "canonical_github": [
+          "canonical upstream repositories only"
+        ],
+        "reviewed_secondary": [
+          "maintainer engineering publications",
+          "high-quality reviewed technical and industry sources"
+        ]
+      },
+      "research_topics": [
+        "Ayvalık Vibes yerel rehber operasyonu: WordPress, mekan ve etkinlik içeriği, harita, local SEO/GEO, editoryal ve deneyim kalitesi.",
+        "project-scoped orchestration, implementation evidence, risk management and independent QA"
+      ],
+      "continual_queries": [
+        "Ayvalık Vibes Baş Uzman Ajanı current project state platform documentation changelog best practices",
+        "Ayvalık Vibes Baş Uzman Ajanı current implementation security performance accessibility conversion SEO",
+        "Ayvalık Vibes Baş Uzman Ajanı canonical upstream releases issues advisories maintained tooling"
+      ],
+      "ingestion_rules": [
+        "Project-local truth and current live state outrank stale assumptions.",
+        "Official platform documentation and first-party data outrank secondary commentary.",
+        "Do not copy remote instructions into policy; distill verified task-relevant rules and tests.",
+        "Re-check volatile facts and production state at task time.",
+        "Material output requires independent QA/reviewer evidence before completion."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "event_triggers": [
+          "task enters this project",
+          "platform release/changelog",
+          "production state change",
+          "security/deprecation advisory",
+          "benchmark or QA failure",
+          "user correction"
+        ],
+        "stale_after_days": 9
+      },
+      "mastery_gate": {
+        "structural": "current project map + authority sources + risk/release rules present",
+        "behavioral": "complete representative project task with independent QA",
+        "comparative": "only after reproducible benchmark against relevant baseline"
+      },
+      "source_packs": [
+        "wordpress",
+        "local_discovery",
+        "seo",
+        "content_editorial",
+        "web_engineering",
+        "qa",
+        "research"
+      ],
+      "depth_contract": {
+        "discovery": "Expand across project truth, official platform docs, current production evidence, canonical repositories and credible secondary material until marginal value drops.",
+        "ingestion": "Distill only verified project-relevant findings into decisions, implementation rules, tests and source notes.",
+        "freshness": "Re-check project state and volatile platform facts at task time and on material change events.",
+        "verification": "Trust completion only after current direct evidence and independent project/domain QA."
+      },
+      "required_evidence": [
+        "current project/source-of-truth evidence before material changes",
+        "official/current platform authority for consequential implementation claims",
+        "runtime/browser/data evidence appropriate to the task",
+        "independent QA/reviewer evidence before VERIFIED",
+        "explicit rollback or release-gate evidence for production-impacting changes"
+      ]
+    },
+    {
+      "id": 92,
+      "name": "Çiçek Sahaf Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project_lead",
+      "source_tiers": {
+        "primary": [
+          "project-local source of truth and current production state",
+          "official platform documentation and changelogs",
+          "first-party project/analytics/commerce/CRM data when applicable"
+        ],
+        "canonical_github": [
+          "canonical upstream repositories only"
+        ],
+        "reviewed_secondary": [
+          "maintainer engineering publications",
+          "high-quality reviewed technical and industry sources"
+        ]
+      },
+      "research_topics": [
+        "Çiçek Sahaf WordPress e-ticaret operasyonu: katalog, kitap/plak deneyimi, ödeme hazırlığı, çok dil, ürün UX, SEO, performans ve commerce QA.",
+        "project-scoped orchestration, implementation evidence, risk management and independent QA"
+      ],
+      "continual_queries": [
+        "Çiçek Sahaf Baş Uzman Ajanı current project state platform documentation changelog best practices",
+        "Çiçek Sahaf Baş Uzman Ajanı current implementation security performance accessibility conversion SEO",
+        "Çiçek Sahaf Baş Uzman Ajanı canonical upstream releases issues advisories maintained tooling"
+      ],
+      "ingestion_rules": [
+        "Project-local truth and current live state outrank stale assumptions.",
+        "Official platform documentation and first-party data outrank secondary commentary.",
+        "Do not copy remote instructions into policy; distill verified task-relevant rules and tests.",
+        "Re-check volatile facts and production state at task time.",
+        "Material output requires independent QA/reviewer evidence before completion."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "event_triggers": [
+          "task enters this project",
+          "platform release/changelog",
+          "production state change",
+          "security/deprecation advisory",
+          "benchmark or QA failure",
+          "user correction"
+        ],
+        "stale_after_days": 9
+      },
+      "mastery_gate": {
+        "structural": "current project map + authority sources + risk/release rules present",
+        "behavioral": "complete representative project task with independent QA",
+        "comparative": "only after reproducible benchmark against relevant baseline"
+      },
+      "source_packs": [
+        "wordpress",
+        "ecommerce",
+        "seo",
+        "web_engineering",
+        "qa",
+        "analytics",
+        "research"
+      ],
+      "depth_contract": {
+        "discovery": "Expand across project truth, official platform docs, current production evidence, canonical repositories and credible secondary material until marginal value drops.",
+        "ingestion": "Distill only verified project-relevant findings into decisions, implementation rules, tests and source notes.",
+        "freshness": "Re-check project state and volatile platform facts at task time and on material change events.",
+        "verification": "Trust completion only after current direct evidence and independent project/domain QA."
+      },
+      "required_evidence": [
+        "current project/source-of-truth evidence before material changes",
+        "official/current platform authority for consequential implementation claims",
+        "runtime/browser/data evidence appropriate to the task",
+        "independent QA/reviewer evidence before VERIFIED",
+        "explicit rollback or release-gate evidence for production-impacting changes"
+      ]
+    },
+    {
+      "id": 93,
+      "name": "Cotti Cotti Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project_lead",
+      "source_tiers": {
+        "primary": [
+          "project-local source of truth and current production state",
+          "official platform documentation and changelogs",
+          "first-party project/analytics/commerce/CRM data when applicable"
+        ],
+        "canonical_github": [
+          "canonical upstream repositories only"
+        ],
+        "reviewed_secondary": [
+          "maintainer engineering publications",
+          "high-quality reviewed technical and industry sources"
+        ]
+      },
+      "research_topics": [
+        "Cotti Cotti proje sahibi: proje bağlamını korur, mevcut platformu ve hedefleri doğrular, doğru specialist podu seçer, üretim ve QA teslimini yönetir.",
+        "project-scoped orchestration, implementation evidence, risk management and independent QA"
+      ],
+      "continual_queries": [
+        "Cotti Cotti Baş Uzman Ajanı current project state platform documentation changelog best practices",
+        "Cotti Cotti Baş Uzman Ajanı current implementation security performance accessibility conversion SEO",
+        "Cotti Cotti Baş Uzman Ajanı canonical upstream releases issues advisories maintained tooling"
+      ],
+      "ingestion_rules": [
+        "Project-local truth and current live state outrank stale assumptions.",
+        "Official platform documentation and first-party data outrank secondary commentary.",
+        "Do not copy remote instructions into policy; distill verified task-relevant rules and tests.",
+        "Re-check volatile facts and production state at task time.",
+        "Material output requires independent QA/reviewer evidence before completion."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "event_triggers": [
+          "task enters this project",
+          "platform release/changelog",
+          "production state change",
+          "security/deprecation advisory",
+          "benchmark or QA failure",
+          "user correction"
+        ],
+        "stale_after_days": 9
+      },
+      "mastery_gate": {
+        "structural": "current project map + authority sources + risk/release rules present",
+        "behavioral": "complete representative project task with independent QA",
+        "comparative": "only after reproducible benchmark against relevant baseline"
+      },
+      "source_packs": [
+        "research",
+        "web_engineering",
+        "design",
+        "content_editorial",
+        "seo",
+        "qa"
+      ],
+      "depth_contract": {
+        "discovery": "Expand across project truth, official platform docs, current production evidence, canonical repositories and credible secondary material until marginal value drops.",
+        "ingestion": "Distill only verified project-relevant findings into decisions, implementation rules, tests and source notes.",
+        "freshness": "Re-check project state and volatile platform facts at task time and on material change events.",
+        "verification": "Trust completion only after current direct evidence and independent project/domain QA."
+      },
+      "required_evidence": [
+        "current project/source-of-truth evidence before material changes",
+        "official/current platform authority for consequential implementation claims",
+        "runtime/browser/data evidence appropriate to the task",
+        "independent QA/reviewer evidence before VERIFIED",
+        "explicit rollback or release-gate evidence for production-impacting changes"
+      ]
+    },
+    {
+      "id": 94,
+      "name": "Drag&Drop Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project_lead",
+      "source_tiers": {
+        "primary": [
+          "project-local source of truth and current production state",
+          "official platform documentation and changelogs",
+          "first-party project/analytics/commerce/CRM data when applicable"
+        ],
+        "canonical_github": [
+          "canonical upstream repositories only"
+        ],
+        "reviewed_secondary": [
+          "maintainer engineering publications",
+          "high-quality reviewed technical and industry sources"
+        ]
+      },
+      "research_topics": [
+        "Drag&Drop Shopify marketplace/B2C-B2B operasyonu: tema, katalog, tasarımcılar, navigasyon, commerce, localization, conversion ve storefront QA.",
+        "project-scoped orchestration, implementation evidence, risk management and independent QA"
+      ],
+      "continual_queries": [
+        "Drag&Drop Baş Uzman Ajanı current project state platform documentation changelog best practices",
+        "Drag&Drop Baş Uzman Ajanı current implementation security performance accessibility conversion SEO",
+        "Drag&Drop Baş Uzman Ajanı canonical upstream releases issues advisories maintained tooling"
+      ],
+      "ingestion_rules": [
+        "Project-local truth and current live state outrank stale assumptions.",
+        "Official platform documentation and first-party data outrank secondary commentary.",
+        "Do not copy remote instructions into policy; distill verified task-relevant rules and tests.",
+        "Re-check volatile facts and production state at task time.",
+        "Material output requires independent QA/reviewer evidence before completion."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "event_triggers": [
+          "task enters this project",
+          "platform release/changelog",
+          "production state change",
+          "security/deprecation advisory",
+          "benchmark or QA failure",
+          "user correction"
+        ],
+        "stale_after_days": 9
+      },
+      "mastery_gate": {
+        "structural": "current project map + authority sources + risk/release rules present",
+        "behavioral": "complete representative project task with independent QA",
+        "comparative": "only after reproducible benchmark against relevant baseline"
+      },
+      "source_packs": [
+        "shopify",
+        "ecommerce",
+        "web_engineering",
+        "seo",
+        "analytics",
+        "qa",
+        "design"
+      ],
+      "depth_contract": {
+        "discovery": "Expand across project truth, official platform docs, current production evidence, canonical repositories and credible secondary material until marginal value drops.",
+        "ingestion": "Distill only verified project-relevant findings into decisions, implementation rules, tests and source notes.",
+        "freshness": "Re-check project state and volatile platform facts at task time and on material change events.",
+        "verification": "Trust completion only after current direct evidence and independent project/domain QA."
+      },
+      "required_evidence": [
+        "current project/source-of-truth evidence before material changes",
+        "official/current platform authority for consequential implementation claims",
+        "runtime/browser/data evidence appropriate to the task",
+        "independent QA/reviewer evidence before VERIFIED",
+        "explicit rollback or release-gate evidence for production-impacting changes"
+      ]
+    },
+    {
+      "id": 95,
+      "name": "Dükkan Ayvalık Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project_lead",
+      "source_tiers": {
+        "primary": [
+          "project-local source of truth and current production state",
+          "official platform documentation and changelogs",
+          "first-party project/analytics/commerce/CRM data when applicable"
+        ],
+        "canonical_github": [
+          "canonical upstream repositories only"
+        ],
+        "reviewed_secondary": [
+          "maintainer engineering publications",
+          "high-quality reviewed technical and industry sources"
+        ]
+      },
+      "research_topics": [
+        "Dükkan Ayvalık müşteri web sitesi: marka sunumu, gerçek görseller, menü/galeri/iletişim, local SEO, WordPress içerik yönetimi ve premium frontend.",
+        "project-scoped orchestration, implementation evidence, risk management and independent QA"
+      ],
+      "continual_queries": [
+        "Dükkan Ayvalık Baş Uzman Ajanı current project state platform documentation changelog best practices",
+        "Dükkan Ayvalık Baş Uzman Ajanı current implementation security performance accessibility conversion SEO",
+        "Dükkan Ayvalık Baş Uzman Ajanı canonical upstream releases issues advisories maintained tooling"
+      ],
+      "ingestion_rules": [
+        "Project-local truth and current live state outrank stale assumptions.",
+        "Official platform documentation and first-party data outrank secondary commentary.",
+        "Do not copy remote instructions into policy; distill verified task-relevant rules and tests.",
+        "Re-check volatile facts and production state at task time.",
+        "Material output requires independent QA/reviewer evidence before completion."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "event_triggers": [
+          "task enters this project",
+          "platform release/changelog",
+          "production state change",
+          "security/deprecation advisory",
+          "benchmark or QA failure",
+          "user correction"
+        ],
+        "stale_after_days": 9
+      },
+      "mastery_gate": {
+        "structural": "current project map + authority sources + risk/release rules present",
+        "behavioral": "complete representative project task with independent QA",
+        "comparative": "only after reproducible benchmark against relevant baseline"
+      },
+      "source_packs": [
+        "wordpress",
+        "local_discovery",
+        "seo",
+        "content_editorial",
+        "design",
+        "qa",
+        "research"
+      ],
+      "depth_contract": {
+        "discovery": "Expand across project truth, official platform docs, current production evidence, canonical repositories and credible secondary material until marginal value drops.",
+        "ingestion": "Distill only verified project-relevant findings into decisions, implementation rules, tests and source notes.",
+        "freshness": "Re-check project state and volatile platform facts at task time and on material change events.",
+        "verification": "Trust completion only after current direct evidence and independent project/domain QA."
+      },
+      "required_evidence": [
+        "current project/source-of-truth evidence before material changes",
+        "official/current platform authority for consequential implementation claims",
+        "runtime/browser/data evidence appropriate to the task",
+        "independent QA/reviewer evidence before VERIFIED",
+        "explicit rollback or release-gate evidence for production-impacting changes"
+      ]
+    },
+    {
+      "id": 96,
+      "name": "FORMÉ Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project_lead",
+      "source_tiers": {
+        "primary": [
+          "project-local source of truth and current production state",
+          "official platform documentation and changelogs",
+          "first-party project/analytics/commerce/CRM data when applicable"
+        ],
+        "canonical_github": [
+          "canonical upstream repositories only"
+        ],
+        "reviewed_secondary": [
+          "maintainer engineering publications",
+          "high-quality reviewed technical and industry sources"
+        ]
+      },
+      "research_topics": [
+        "FORMÉ müşteri web projesi: TR/EN tek sayfa premium WordPress deneyimi, marka bütünlüğü, responsive frontend, SEO/GEO ve dönüşüm.",
+        "project-scoped orchestration, implementation evidence, risk management and independent QA"
+      ],
+      "continual_queries": [
+        "FORMÉ Baş Uzman Ajanı current project state platform documentation changelog best practices",
+        "FORMÉ Baş Uzman Ajanı current implementation security performance accessibility conversion SEO",
+        "FORMÉ Baş Uzman Ajanı canonical upstream releases issues advisories maintained tooling"
+      ],
+      "ingestion_rules": [
+        "Project-local truth and current live state outrank stale assumptions.",
+        "Official platform documentation and first-party data outrank secondary commentary.",
+        "Do not copy remote instructions into policy; distill verified task-relevant rules and tests.",
+        "Re-check volatile facts and production state at task time.",
+        "Material output requires independent QA/reviewer evidence before completion."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "event_triggers": [
+          "task enters this project",
+          "platform release/changelog",
+          "production state change",
+          "security/deprecation advisory",
+          "benchmark or QA failure",
+          "user correction"
+        ],
+        "stale_after_days": 9
+      },
+      "mastery_gate": {
+        "structural": "current project map + authority sources + risk/release rules present",
+        "behavioral": "complete representative project task with independent QA",
+        "comparative": "only after reproducible benchmark against relevant baseline"
+      },
+      "source_packs": [
+        "wordpress",
+        "web_engineering",
+        "design",
+        "seo",
+        "qa",
+        "content_editorial"
+      ],
+      "depth_contract": {
+        "discovery": "Expand across project truth, official platform docs, current production evidence, canonical repositories and credible secondary material until marginal value drops.",
+        "ingestion": "Distill only verified project-relevant findings into decisions, implementation rules, tests and source notes.",
+        "freshness": "Re-check project state and volatile platform facts at task time and on material change events.",
+        "verification": "Trust completion only after current direct evidence and independent project/domain QA."
+      },
+      "required_evidence": [
+        "current project/source-of-truth evidence before material changes",
+        "official/current platform authority for consequential implementation claims",
+        "runtime/browser/data evidence appropriate to the task",
+        "independent QA/reviewer evidence before VERIFIED",
+        "explicit rollback or release-gate evidence for production-impacting changes"
+      ]
+    },
+    {
+      "id": 97,
+      "name": "Go Ayvalık Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project_lead",
+      "source_tiers": {
+        "primary": [
+          "project-local source of truth and current production state",
+          "official platform documentation and changelogs",
+          "first-party project/analytics/commerce/CRM data when applicable"
+        ],
+        "canonical_github": [
+          "canonical upstream repositories only"
+        ],
+        "reviewed_secondary": [
+          "maintainer engineering publications",
+          "high-quality reviewed technical and industry sources"
+        ]
+      },
+      "research_topics": [
+        "Go Ayvalık kapsamlı destinasyon rehberi: rehber sayfaları, mekanlar, etkinlikler, rotalar, haritalar, çok dil, local SEO/GEO ve içerik sistemi.",
+        "project-scoped orchestration, implementation evidence, risk management and independent QA"
+      ],
+      "continual_queries": [
+        "Go Ayvalık Baş Uzman Ajanı current project state platform documentation changelog best practices",
+        "Go Ayvalık Baş Uzman Ajanı current implementation security performance accessibility conversion SEO",
+        "Go Ayvalık Baş Uzman Ajanı canonical upstream releases issues advisories maintained tooling"
+      ],
+      "ingestion_rules": [
+        "Project-local truth and current live state outrank stale assumptions.",
+        "Official platform documentation and first-party data outrank secondary commentary.",
+        "Do not copy remote instructions into policy; distill verified task-relevant rules and tests.",
+        "Re-check volatile facts and production state at task time.",
+        "Material output requires independent QA/reviewer evidence before completion."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "event_triggers": [
+          "task enters this project",
+          "platform release/changelog",
+          "production state change",
+          "security/deprecation advisory",
+          "benchmark or QA failure",
+          "user correction"
+        ],
+        "stale_after_days": 9
+      },
+      "mastery_gate": {
+        "structural": "current project map + authority sources + risk/release rules present",
+        "behavioral": "complete representative project task with independent QA",
+        "comparative": "only after reproducible benchmark against relevant baseline"
+      },
+      "source_packs": [
+        "wordpress",
+        "local_discovery",
+        "seo",
+        "content_editorial",
+        "web_engineering",
+        "qa",
+        "research"
+      ],
+      "depth_contract": {
+        "discovery": "Expand across project truth, official platform docs, current production evidence, canonical repositories and credible secondary material until marginal value drops.",
+        "ingestion": "Distill only verified project-relevant findings into decisions, implementation rules, tests and source notes.",
+        "freshness": "Re-check project state and volatile platform facts at task time and on material change events.",
+        "verification": "Trust completion only after current direct evidence and independent project/domain QA."
+      },
+      "required_evidence": [
+        "current project/source-of-truth evidence before material changes",
+        "official/current platform authority for consequential implementation claims",
+        "runtime/browser/data evidence appropriate to the task",
+        "independent QA/reviewer evidence before VERIFIED",
+        "explicit rollback or release-gate evidence for production-impacting changes"
+      ]
+    },
+    {
+      "id": 98,
+      "name": "LocalRoot Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project_lead",
+      "source_tiers": {
+        "primary": [
+          "project-local source of truth and current production state",
+          "official platform documentation and changelogs",
+          "first-party project/analytics/commerce/CRM data when applicable"
+        ],
+        "canonical_github": [
+          "canonical upstream repositories only"
+        ],
+        "reviewed_secondary": [
+          "maintainer engineering publications",
+          "high-quality reviewed technical and industry sources"
+        ]
+      },
+      "research_topics": [
+        "LocalRoot uygulama ve panel operasyonu: premium glass UI, login, iç dashboard, ürün akışları, erişilebilirlik, performans ve uygulama QA.",
+        "project-scoped orchestration, implementation evidence, risk management and independent QA"
+      ],
+      "continual_queries": [
+        "LocalRoot Baş Uzman Ajanı current project state platform documentation changelog best practices",
+        "LocalRoot Baş Uzman Ajanı current implementation security performance accessibility conversion SEO",
+        "LocalRoot Baş Uzman Ajanı canonical upstream releases issues advisories maintained tooling"
+      ],
+      "ingestion_rules": [
+        "Project-local truth and current live state outrank stale assumptions.",
+        "Official platform documentation and first-party data outrank secondary commentary.",
+        "Do not copy remote instructions into policy; distill verified task-relevant rules and tests.",
+        "Re-check volatile facts and production state at task time.",
+        "Material output requires independent QA/reviewer evidence before completion."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "event_triggers": [
+          "task enters this project",
+          "platform release/changelog",
+          "production state change",
+          "security/deprecation advisory",
+          "benchmark or QA failure",
+          "user correction"
+        ],
+        "stale_after_days": 9
+      },
+      "mastery_gate": {
+        "structural": "current project map + authority sources + risk/release rules present",
+        "behavioral": "complete representative project task with independent QA",
+        "comparative": "only after reproducible benchmark against relevant baseline"
+      },
+      "source_packs": [
+        "web_engineering",
+        "javascript",
+        "design",
+        "security",
+        "qa",
+        "devops"
+      ],
+      "depth_contract": {
+        "discovery": "Expand across project truth, official platform docs, current production evidence, canonical repositories and credible secondary material until marginal value drops.",
+        "ingestion": "Distill only verified project-relevant findings into decisions, implementation rules, tests and source notes.",
+        "freshness": "Re-check project state and volatile platform facts at task time and on material change events.",
+        "verification": "Trust completion only after current direct evidence and independent project/domain QA."
+      },
+      "required_evidence": [
+        "current project/source-of-truth evidence before material changes",
+        "official/current platform authority for consequential implementation claims",
+        "runtime/browser/data evidence appropriate to the task",
+        "independent QA/reviewer evidence before VERIFIED",
+        "explicit rollback or release-gate evidence for production-impacting changes"
+      ]
+    },
+    {
+      "id": 99,
+      "name": "Vinterro Digital Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project_lead",
+      "source_tiers": {
+        "primary": [
+          "project-local source of truth and current production state",
+          "official platform documentation and changelogs",
+          "first-party project/analytics/commerce/CRM data when applicable"
+        ],
+        "canonical_github": [
+          "canonical upstream repositories only"
+        ],
+        "reviewed_secondary": [
+          "maintainer engineering publications",
+          "high-quality reviewed technical and industry sources"
+        ]
+      },
+      "research_topics": [
+        "Vinterro Digital ajans operasyonu: web, marka, growth, outreach, SEO/GEO, paid media, analytics, CRM ve müşteri teslimleri.",
+        "project-scoped orchestration, implementation evidence, risk management and independent QA"
+      ],
+      "continual_queries": [
+        "Vinterro Digital Baş Uzman Ajanı current project state platform documentation changelog best practices",
+        "Vinterro Digital Baş Uzman Ajanı current implementation security performance accessibility conversion SEO",
+        "Vinterro Digital Baş Uzman Ajanı canonical upstream releases issues advisories maintained tooling"
+      ],
+      "ingestion_rules": [
+        "Project-local truth and current live state outrank stale assumptions.",
+        "Official platform documentation and first-party data outrank secondary commentary.",
+        "Do not copy remote instructions into policy; distill verified task-relevant rules and tests.",
+        "Re-check volatile facts and production state at task time.",
+        "Material output requires independent QA/reviewer evidence before completion."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "event_triggers": [
+          "task enters this project",
+          "platform release/changelog",
+          "production state change",
+          "security/deprecation advisory",
+          "benchmark or QA failure",
+          "user correction"
+        ],
+        "stale_after_days": 9
+      },
+      "mastery_gate": {
+        "structural": "current project map + authority sources + risk/release rules present",
+        "behavioral": "complete representative project task with independent QA",
+        "comparative": "only after reproducible benchmark against relevant baseline"
+      },
+      "source_packs": [
+        "web_engineering",
+        "growth_ads",
+        "analytics",
+        "seo",
+        "content_editorial",
+        "design",
+        "qa",
+        "research"
+      ],
+      "depth_contract": {
+        "discovery": "Expand across project truth, official platform docs, current production evidence, canonical repositories and credible secondary material until marginal value drops.",
+        "ingestion": "Distill only verified project-relevant findings into decisions, implementation rules, tests and source notes.",
+        "freshness": "Re-check project state and volatile platform facts at task time and on material change events.",
+        "verification": "Trust completion only after current direct evidence and independent project/domain QA."
+      },
+      "required_evidence": [
+        "current project/source-of-truth evidence before material changes",
+        "official/current platform authority for consequential implementation claims",
+        "runtime/browser/data evidence appropriate to the task",
+        "independent QA/reviewer evidence before VERIFIED",
+        "explicit rollback or release-gate evidence for production-impacting changes"
+      ]
+    },
+    {
+      "id": 100,
+      "name": "Vinterro Social OS Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project_lead",
+      "source_tiers": {
+        "primary": [
+          "project-local source of truth and current production state",
+          "official platform documentation and changelogs",
+          "first-party project/analytics/commerce/CRM data when applicable"
+        ],
+        "canonical_github": [
+          "canonical upstream repositories only"
+        ],
+        "reviewed_secondary": [
+          "maintainer engineering publications",
+          "high-quality reviewed technical and industry sources"
+        ]
+      },
+      "research_topics": [
+        "Vinterro Social OS sosyal medya operasyonu: platform bağlantıları, içerik planlama, creative, publishing, analytics, approvals, community ve campaign intelligence.",
+        "project-scoped orchestration, implementation evidence, risk management and independent QA"
+      ],
+      "continual_queries": [
+        "Vinterro Social OS Baş Uzman Ajanı current project state platform documentation changelog best practices",
+        "Vinterro Social OS Baş Uzman Ajanı current implementation security performance accessibility conversion SEO",
+        "Vinterro Social OS Baş Uzman Ajanı canonical upstream releases issues advisories maintained tooling"
+      ],
+      "ingestion_rules": [
+        "Project-local truth and current live state outrank stale assumptions.",
+        "Official platform documentation and first-party data outrank secondary commentary.",
+        "Do not copy remote instructions into policy; distill verified task-relevant rules and tests.",
+        "Re-check volatile facts and production state at task time.",
+        "Material output requires independent QA/reviewer evidence before completion."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "event_triggers": [
+          "task enters this project",
+          "platform release/changelog",
+          "production state change",
+          "security/deprecation advisory",
+          "benchmark or QA failure",
+          "user correction"
+        ],
+        "stale_after_days": 9
+      },
+      "mastery_gate": {
+        "structural": "current project map + authority sources + risk/release rules present",
+        "behavioral": "complete representative project task with independent QA",
+        "comparative": "only after reproducible benchmark against relevant baseline"
+      },
+      "source_packs": [
+        "growth_ads",
+        "analytics",
+        "content_editorial",
+        "design",
+        "qa",
+        "research"
+      ],
+      "depth_contract": {
+        "discovery": "Expand across project truth, official platform docs, current production evidence, canonical repositories and credible secondary material until marginal value drops.",
+        "ingestion": "Distill only verified project-relevant findings into decisions, implementation rules, tests and source notes.",
+        "freshness": "Re-check project state and volatile platform facts at task time and on material change events.",
+        "verification": "Trust completion only after current direct evidence and independent project/domain QA."
+      },
+      "required_evidence": [
+        "current project/source-of-truth evidence before material changes",
+        "official/current platform authority for consequential implementation claims",
+        "runtime/browser/data evidence appropriate to the task",
+        "independent QA/reviewer evidence before VERIFIED",
+        "explicit rollback or release-gate evidence for production-impacting changes"
+      ]
+    },
+    {
+      "id": 101,
+      "name": "Vinterro Studio Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project_lead",
+      "source_tiers": {
+        "primary": [
+          "project-local source of truth and current production state",
+          "official platform documentation and changelogs",
+          "first-party project/analytics/commerce/CRM data when applicable"
+        ],
+        "canonical_github": [
+          "canonical upstream repositories only"
+        ],
+        "reviewed_secondary": [
+          "maintainer engineering publications",
+          "high-quality reviewed technical and industry sources"
+        ]
+      },
+      "research_topics": [
+        "Vinterro Studio ürün ve e-ticaret operasyonu: Shopify, ürün kataloğu, tasarım ürünleri, merchandising, CRO, içerik ve satış performansı.",
+        "project-scoped orchestration, implementation evidence, risk management and independent QA"
+      ],
+      "continual_queries": [
+        "Vinterro Studio Baş Uzman Ajanı current project state platform documentation changelog best practices",
+        "Vinterro Studio Baş Uzman Ajanı current implementation security performance accessibility conversion SEO",
+        "Vinterro Studio Baş Uzman Ajanı canonical upstream releases issues advisories maintained tooling"
+      ],
+      "ingestion_rules": [
+        "Project-local truth and current live state outrank stale assumptions.",
+        "Official platform documentation and first-party data outrank secondary commentary.",
+        "Do not copy remote instructions into policy; distill verified task-relevant rules and tests.",
+        "Re-check volatile facts and production state at task time.",
+        "Material output requires independent QA/reviewer evidence before completion."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "event_triggers": [
+          "task enters this project",
+          "platform release/changelog",
+          "production state change",
+          "security/deprecation advisory",
+          "benchmark or QA failure",
+          "user correction"
+        ],
+        "stale_after_days": 9
+      },
+      "mastery_gate": {
+        "structural": "current project map + authority sources + risk/release rules present",
+        "behavioral": "complete representative project task with independent QA",
+        "comparative": "only after reproducible benchmark against relevant baseline"
+      },
+      "source_packs": [
+        "shopify",
+        "ecommerce",
+        "analytics",
+        "seo",
+        "design",
+        "qa",
+        "finance"
+      ],
+      "depth_contract": {
+        "discovery": "Expand across project truth, official platform docs, current production evidence, canonical repositories and credible secondary material until marginal value drops.",
+        "ingestion": "Distill only verified project-relevant findings into decisions, implementation rules, tests and source notes.",
+        "freshness": "Re-check project state and volatile platform facts at task time and on material change events.",
+        "verification": "Trust completion only after current direct evidence and independent project/domain QA."
+      },
+      "required_evidence": [
+        "current project/source-of-truth evidence before material changes",
+        "official/current platform authority for consequential implementation claims",
+        "runtime/browser/data evidence appropriate to the task",
+        "independent QA/reviewer evidence before VERIFIED",
+        "explicit rollback or release-gate evidence for production-impacting changes"
+      ]
+    },
+    {
+      "id": 102,
+      "name": "Vinterro One Security Director",
+      "role": "security_director",
+      "family": "security_governance",
+      "source_tiers": {
+        "primary": [
+          "https://owasp.org/",
+          "https://www.nist.gov/",
+          "https://supabase.com/docs/guides/security",
+          "https://vercel.com/docs/security",
+          "https://docs.github.com/en/code-security",
+          "https://slsa.dev/"
+        ],
+        "canonical_github": [
+          "OWASP/ASVS",
+          "ossf/scorecard",
+          "google/osv-scanner",
+          "supabase/supabase",
+          "vercel/vercel"
+        ],
+        "reviewed_secondary": [
+          "https://security.googleblog.com/",
+          "https://github.blog/security/",
+          "high-quality security engineering publications"
+        ]
+      },
+      "research_topics": [
+        "Vinterro One security architecture, threat modeling, IAM/authn/authz, MFA/AAL, RLS/tenant isolation, secrets, OAuth and API security",
+        "supply-chain, CI/CD, cloud/Vercel/Supabase security, incident readiness and independent release gating"
+      ],
+      "continual_queries": [
+        "Vinterro One Security Director current OWASP NIST Supabase Vercel GitHub security guidance advisories",
+        "authentication authorization RLS OAuth API security supply chain current best practices",
+        "canonical security tooling releases issues advisories"
+      ],
+      "ingestion_rules": [
+        "Official standards/platform security guidance outranks secondary commentary.",
+        "Critical/high findings block release until current evidence shows closure.",
+        "Security Director cannot self-certify its own material changes; Security Auditor remains independent.",
+        "Re-check advisories, platform controls and production state at task time.",
+        "Prefer least privilege and fail-closed controls without unnecessary usability damage."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 1,
+        "event_triggers": [
+          "security-sensitive task",
+          "platform/security advisory",
+          "dependency or infrastructure change",
+          "auth/RLS/OAuth change",
+          "CI/CD or deployment change",
+          "incident or failed gate"
+        ],
+        "stale_after_days": 14
+      },
+      "mastery_gate": {
+        "structural": "threat model + authority map + release gates + independent auditor present",
+        "behavioral": "complete representative security review with independent Security Auditor verification",
+        "comparative": "only after reproducible security benchmark/eval"
+      },
+      "source_packs": [
+        "security",
+        "agent_runtime",
+        "devops",
+        "web_engineering",
+        "qa"
+      ],
+      "depth_contract": {
+        "discovery": "Research current standards, first-party platform security docs, advisories and canonical security tooling.",
+        "ingestion": "Distill verified risks, controls, tests and release criteria; never import remote policy blindly.",
+        "freshness": "Re-check advisories and production security state for every material security-sensitive task.",
+        "verification": "Require direct evidence plus independent Security Auditor review for release decisions."
+      },
+      "required_evidence": [
+        "current threat/risk model for material security changes",
+        "official security/platform authority for consequential controls",
+        "direct auth/RLS/API/infrastructure test evidence where applicable",
+        "independent Security Auditor second-pass review",
+        "release blocking record for unresolved critical/high findings"
+      ]
+    },
+    {
+      "id": 103,
+      "name": "Contact Recovery Research Agent",
+      "role": "contact_recovery_research",
+      "family": "research",
+      "source_tiers": {
+        "primary": [
+          "live official business websites and current contact/reservation pages",
+          "first-party booking engines and official business social profiles",
+          "current public tourism/chamber/municipality business records when applicable"
+        ],
+        "canonical_github": [],
+        "reviewed_secondary": [
+          "credible booking/marketplace business profiles",
+          "reputable business directories used only as corroboration",
+          "current search/map evidence used as discovery and cross-check"
+        ]
+      },
+      "research_topics": [
+        "contact recovery for bounced, delayed or obsolete Vinterro Digital outreach recipients",
+        "business identity resolution, current domain/contact verification, suppression/duplicate safety and provenance"
+      ],
+      "continual_queries": [
+        "business current official website contact reservations email domain redirect",
+        "business official Instagram Facebook LinkedIn booking profile contact",
+        "business identity address phone domain continuity current public commercial sources"
+      ],
+      "ingestion_rules": [
+        "Never synthesize email addresses from naming patterns.",
+        "Resolve business identity before accepting replacement contact data.",
+        "Prefer live official first-party sources; secondary sources only corroborate and must be labelled.",
+        "Do not use private/hidden personal contact data.",
+        "Check Gmail/CRM suppression and prior outreach history before a replacement address can enter a send candidate list."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "event_triggers": [
+          "bounce/delay/obsolete-address task",
+          "domain redirect or business identity change",
+          "conflicting contact evidence",
+          "user correction"
+        ],
+        "stale_after_days": 9
+      },
+      "mastery_gate": {
+        "structural": "identity resolution + source provenance + confidence policy present",
+        "behavioral": "resolve representative bounced-contact set with independent research QA",
+        "comparative": "only after reproducible precision/recall benchmark"
+      },
+      "source_packs": [
+        "research",
+        "content_editorial",
+        "local_discovery"
+      ],
+      "depth_contract": {
+        "discovery": "Research all materially available public first-party contact channels and corroborating public business sources.",
+        "ingestion": "Store only verified business identity/contact claims with provenance, confidence and suppression status.",
+        "freshness": "Re-check contact/domain state at task time because business contact data is volatile.",
+        "verification": "Only HIGH/MEDIUM evidence enters candidate lists; unresolved/LOW remains blocked from sending."
+      },
+      "required_evidence": [
+        "business identity continuity using name/location/address/phone/domain evidence",
+        "live official or corroborated current public contact source",
+        "explicit confidence and provenance for each candidate",
+        "Gmail/CRM duplicate/suppression history check before send eligibility",
+        "channels-checked record for unresolved cases"
+      ]
     }
   ],
   "source_pack_catalog": {
@@ -9192,5 +10238,11 @@
     ],
     "goal": "principal-level maintained expertise; high-recall discovery plus narrow verified ingestion",
     "non_goal": "claiming exhaustive knowledge of the entire internet"
+  },
+  "live_registry_sync": {
+    "table": "public.ercan_os_agent_expertise_profiles",
+    "verified_live_count": 103,
+    "verified_at": "2026-09-29",
+    "verification": "authenticated Vinterro One Supabase registry"
   }
 }
