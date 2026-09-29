@@ -1,7 +1,7 @@
 # Vinterro Sales Super Agent — Mail Alias Standard
 
 Status: active  
-Version: 2.3 (2026-09-29)
+Version: 2.4 (2026-09-29)
 
 This standard defines the `@MailAgent` user-facing routing contract into the canonical **Vinterro One → Sales · AutoGTM → Vinterro Sales Super Agent** commercial system. It must not create a second prospect, outreach or CRM source of truth.
 
@@ -65,6 +65,37 @@ The canonical daily contract is:
 - never weaken qualification or bypass account-level dedupe to fill quota.
 
 The same file is the source of truth for the outreach Text/Copy Agent so scheduling, evidence, language and copy standards cannot drift between agents.
+
+
+## Account-level atomic dedupe hard gate
+
+Email address is **not** the prospect identity. Before every production first-touch send, MailAgent must resolve and lock the business/account itself.
+
+Required pre-send sequence:
+`GMAIL HISTORY QA -> NORMALIZE ACCOUNT IDENTITY -> ATOMIC ACCOUNT CLAIM -> MESSAGE BRIEF -> PERSONALIZE -> COPY QA -> SEND -> SENT QA -> CLAIM/LEDGER UPDATE`
+
+The canonical live claim store is:
+`public.vinterro_outreach_account_claims`
+
+A first-touch send is allowed only when all of the following are true:
+1. Gmail history has been searched for business/brand name, known aliases, canonical/current domain, previous/redirected domain, store/booking URLs and **all known email addresses**;
+2. the candidate is normalized to one stable account identity;
+3. an atomic account claim succeeds immediately before Gmail send;
+4. the claim does not conflict on account key, normalized business + location, canonical domain or primary email;
+5. no historical Gmail reply, opt-out, previous cold outreach, unresolved duplicate or account suppression blocks the account.
+
+**Different email never creates a new lead.** `info@brand.com`, `booking@brand.com`, a Gmail address, a new-domain address or another public mailbox remain the same account when evidence resolves them to the same business.
+
+Fail closed:
+- claim conflict => `DUPLICATE/SUPPRESSED`, **do not send**;
+- claim store unavailable for a real first-touch production send => `BLOCKED`, draft/research may continue but Gmail send may not;
+- Gmail history is ambiguous => `BLOCKED` until identity is resolved;
+- parallel agents may research in parallel, but each real first-touch send requires its own successful atomic account claim;
+- a provider send path that bypasses the claim gate is non-conforming even if Gmail later accepts the message.
+
+After Gmail SENT acceptance, write the Gmail message id, thread id and sent timestamp back to the same claim/account record and canonical outreach ledger.
+
+Bounce recovery does not create a second account. A verified alternate public email may be used only through the **existing claimed account's recovery path** after the original delivery is proven failed, with reply/opt-out/dedupe checks rerun. Never create a fresh first-touch claim merely because an alternate address was found.
 
 ## Sender identity
 
@@ -184,7 +215,7 @@ Independently verifies pre-send, post-send and same-thread reply integrity.
 `DISCOVER -> RAW EVIDENCE -> NORMALIZE -> DEDUPE -> VERIFY BUSINESS -> VERIFY WEBSITE/SALES CHANNEL -> VERIFY SOCIAL -> VERIFY CONTACT -> OPPORTUNITY DIAGNOSIS -> SCORE -> OUTREACH READY -> QA`
 
 ### First-touch
-`OUTREACH READY -> GMAIL HISTORY QA -> MESSAGE BRIEF -> PERSONALIZE -> COPY QA -> SEND -> SENT QA -> LEDGER UPDATE`
+`OUTREACH READY -> GMAIL HISTORY QA -> NORMALIZE ACCOUNT IDENTITY -> ATOMIC ACCOUNT CLAIM -> MESSAGE BRIEF -> PERSONALIZE -> COPY QA -> SEND -> SENT QA -> CLAIM/LEDGER UPDATE`
 
 ### Bounce recovery
 `BOUNCE/FAILURE -> INVALID ADDRESS -> PUBLIC ALTERNATIVE EMAIL SEARCH -> GMAIL QA -> RESEND -> SECOND BOUNCE/NO EMAIL -> INSTAGRAM -> LINKEDIN/PERMITTED PATH -> SOCIAL RECOVERY -> SAME-REGION REPLACEMENT`

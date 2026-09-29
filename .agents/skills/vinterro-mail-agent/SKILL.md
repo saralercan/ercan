@@ -66,7 +66,7 @@ These are JIT subroles, not new stable identities.
 Goal: find commercially active businesses where Vinterro Digital has a specific, evidence-backed opportunity. Do not optimize for list volume.
 
 ### 2. First-touch outreach
-`OUTREACH READY -> GMAIL HISTORY QA -> MESSAGE BRIEF -> PERSONALIZE -> COPY QA -> SEND -> SENT QA -> PIPELINE UPDATE`
+`OUTREACH READY -> GMAIL HISTORY QA -> NORMALIZE ACCOUNT IDENTITY -> ATOMIC ACCOUNT CLAIM -> MESSAGE BRIEF -> PERSONALIZE -> COPY QA -> SEND -> SENT QA -> CLAIM/PIPELINE UPDATE`
 
 ### 3. Delivery recovery
 `BOUNCE/FAILURE -> INVALIDATE ADDRESS -> PUBLIC ALTERNATIVE EMAIL -> GMAIL QA -> RESEND -> SECOND BOUNCE/NO EMAIL -> INSTAGRAM -> LINKEDIN/MANUAL-OFFICIAL PATH -> SOCIAL RECOVERY -> SAME-REGION EMAIL REPLACEMENT`
@@ -169,6 +169,32 @@ Recovery/suppression:
 `BOUNCE_RECOVERY | SOCIAL_RECOVERY | SOCIAL_ONLY | OPT_OUT | DUPLICATE | DISQUALIFIED`
 
 Do not infer a later pipeline stage merely because a message was sent.
+
+## Atomic account claim gate
+
+Before any real Vinterro Digital first-touch send, this skill must acquire an account-level claim in `public.vinterro_outreach_account_claims`.
+
+The account identity is broader than recipient email. Normalize and compare:
+- business/brand name;
+- location;
+- canonical/current domain;
+- previous/redirected domain;
+- all known email addresses;
+- aliases;
+- store/marketplace/booking URLs;
+- Gmail history/thread evidence.
+
+A different mailbox for the same business is **not** a new lead.
+
+Hard rules:
+- successful atomic claim is mandatory immediately before Gmail send;
+- conflict on account key, normalized business+location, canonical domain or primary email => `DUPLICATE/SUPPRESSED`, no send;
+- live claim store unavailable => production first-touch send is `BLOCKED`; drafting/research may continue;
+- parallel discovery is allowed, parallel first-touch send is allowed only when each account independently wins its atomic claim;
+- after SENT acceptance, persist Gmail message/thread ids and send timestamp to the claim and canonical outreach ledger;
+- historical Gmail evidence can still suppress a send even when no claim row exists.
+
+Bounce recovery reuses the existing account claim. It may not create a new first-touch identity merely because a new public email was discovered.
 
 ## Gmail history and duplicate gate
 

@@ -82,6 +82,8 @@ Before any Vinterro Digital mail is considered send-ready, run the canonical mai
 
 Near-match variants such as 760/780px containers, alternate padding, altered line-height, centered copy, changed signature colors/letter-spacing, card backgrounds or hand-written replacement signatures are non-conforming and must be rejected before send.
 
+Before any **production first-touch** Vinterro Digital send, the selected pod must also pass the account-level atomic dedupe gate from `docs/standards/VINTERRO_MAIL_AGENT.md`: normalize business identity across brand/location/current+previous domain/all known emails/aliases/store+booking URLs/Gmail history, then acquire a claim in `public.vinterro_outreach_account_claims` immediately before Gmail send. A different email address never creates a new lead. Claim conflict or unavailable live claim store => `BLOCKED`; do not send. Parallel research is allowed, but production sends require independent atomic claims. Historical Gmail evidence remains authoritative and can suppress a send even when the claim table has no row.
+
 ## “All agents” / qualified-agent routing contract
 
 User commands such as **“tüm ajanları çalıştır”**, **“bütün ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent do not mean execute every registered runtime agent. They are an intent alias for **automatic qualified-agent routing** across the live Vinterro One runtime inventory.
