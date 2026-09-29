@@ -1,10 +1,13 @@
 {
-  "name": "ercan-os-control-plane",
+  "name": "vinterro-one-control-plane",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "node services/vinterro-sales-worker/worker.mjs",
-    "test": "node --test services/vinterro-sales-worker/worker.test.mjs"
+    "test": "node --test services/vinterro-sales-worker/worker.test.mjs",
+    "test:supervision": "node --test services/vinterro-supervision/supervision.test.mjs",
+    "validate:supervision": "python3 scripts/validate_vinterro_one_supervision.py",
+    "test:all": "npm test && npm run test:supervision && npm run validate:supervision"
   },
   "engines": {
     "node": ">=20"
