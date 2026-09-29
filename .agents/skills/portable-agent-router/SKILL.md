@@ -1,6 +1,6 @@
 ---
 name: portable-agent-router
-description: Route any Vinterro One task to the smallest relevant expert pod across Codex/OpenAI, Claude and the native Vinterro One runtime. Trigger on "ajanları çalıştır", "tüm ajanları çalıştır", multi-domain work, or when a specialist must be selected.
+description: Route Vinterro One tasks to the complete materially relevant expert pod across Codex/OpenAI, Claude and the native Vinterro One runtime. Trigger on "ajanları çalıştır", "tüm ajanları çalıştır", multi-domain work, specialist selection, and Vinterro Digital mail/outreach tasks that require the canonical MailAgent contract.
 ---
 
 # Portable Agent Router
@@ -11,7 +11,7 @@ Load the repository's Vinterro runtime manifest, portable-runtime standard and t
 
 1. Parse the current task, project, execution surface, risk and required evidence.
 2. Treat every runtime agent as STANDBY by default.
-3. Select the smallest sufficient ACTIVE pod from the canonical runtime manifest.
+3. Select the complete non-redundant ACTIVE pod of specialists with a distinct material contribution; do not optimize for minimum headcount when broader expert coverage materially improves the task.
 4. On the master trigger, **do not run every agent**. It means autonomous relevant-specialist routing.
 5. Keep non-selected agents on STANDBY.
 6. If a new need appears mid-task, activate/consult only the matching standby specialist.
@@ -23,7 +23,15 @@ Load the repository's Vinterro runtime manifest, portable-runtime standard and t
 
 Choose specialists by direct domain match, project ownership, source authority, required tools, risk boundary and independent verification need.
 
-Prefer one strong owner plus a few material specialists over a large meeting.
+Prefer the complete non-redundant specialist pod. Independent workstreams should run in parallel when safe and supported; unrelated agents remain STANDBY.
+
+## Vinterro Digital mail routing hard gate
+
+Before any Vinterro Digital email/outreach/reply/example-mail task, load `.agents/skills/vinterro-mail-agent/SKILL.md` regardless of current working directory. That skill then requires `docs/standards/VINTERRO_MAIL_AGENT.md` and the exact source artifact `docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html`.
+
+Do not rely on generic `MAIL_ENGINEERING.md` alone for Vinterro Digital commercial mail. Do not reconstruct the HTML shell/signature from memory. If the canonical source artifact cannot be read, stop the render/send path as `BLOCKED`.
+
+Route copy work through the Vinterro Text/Copy lane, delivery/dedupe through MailAgent/Outreach/Gmail, and visual/template compliance through independent MailQA. A draft is not send-ready until canonical template tokens and signature are verified.
 
 ## Finance
 
