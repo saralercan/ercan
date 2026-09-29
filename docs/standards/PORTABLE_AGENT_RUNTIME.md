@@ -6,6 +6,8 @@ Date: 2026-09-29
 Canonical runtime inventory: `VINTERRO_RUNTIME_AGENT_MANIFEST.json`
 Production runtime count is read from the live `ercan_os_agents` registry at runtime; do not hardcode routing behavior to an older snapshot.
 
+**Mirror/live count drift:** the versioned manifest is a portable mirror, not the live count authority. If the live registry count differs from the repo mirror (for example, the operator reports 103 while the mirror still contains 89), routing must use the live registry when available and the mirror must be flagged for resync; never fabricate missing agent records merely to match a count.
+
 ## Goal
 
 Every Vinterro One agent must be usable from:
@@ -89,7 +91,7 @@ Use:
 - `.claude/agents/vinterro-router.md`;
 - the canonical runtime manifest.
 
-Claude Code supports project subagents under `.claude/agents/` and automatically delegates when a task matches a subagent description. The Vinterro router deliberately keeps one short discoverable subagent definition and performs JIT role selection from the 89-agent manifest to avoid loading dozens of descriptions into every Claude session.
+Claude Code supports project subagents under `.claude/agents/` and automatically delegates when a task matches a subagent description. The Vinterro router deliberately keeps one short discoverable subagent definition and performs JIT role selection from the current versioned runtime manifest to avoid loading dozens of descriptions into every Claude session.
 
 When separate contexts materially help, the router should spawn/activate the selected specialist contexts with each Vinterro role's exact mandate and constraints. Independent specialist workstreams should run concurrently when supported. Do not spawn unrelated subagents merely to inflate agent count.
 
