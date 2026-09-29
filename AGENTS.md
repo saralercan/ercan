@@ -16,8 +16,8 @@ For material work, the selected pod owns not only task execution but also busine
 
 Canonical inventory distinction:
 - **52 stable routing identities** = architectural ownership/routing layer.
-- **89 Vinterro One runtime agents** = current live production execution inventory mirrored in `docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json`.
-- Do not use 52 as the total Vinterro One agent count.
+- **Vinterro One live runtime agents** = production execution inventory from `ercan_os_agents`, mirrored into `docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json`. The live count can grow and must not be hardcoded into routing semantics.
+- Do not use the stable-routing count as the total Vinterro One runtime count.
 
 Canonical audit/coverage:
 - `docs/standards/AGENT_EXCELLENCE_MANIFEST.json`
@@ -67,7 +67,7 @@ Near-match variants such as 760/780px containers, alternate padding, altered lin
 
 ## “All agents” / qualified-agent routing contract
 
-User commands such as **“tüm ajanları çalıştır”**, **“bütün ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent do not mean execute every registered runtime agent. They are an intent alias for **automatic qualified-agent routing** across the 89-agent Vinterro One inventory.
+User commands such as **“tüm ajanları çalıştır”**, **“bütün ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent do not mean execute every registered runtime agent. They are an intent alias for **automatic qualified-agent routing** across the live Vinterro One runtime inventory.
 
 When this intent is present, `@Orchestrator` must identify the active project and task, infer the capabilities actually required, and activate the **complete materially relevant ACTIVE pod of qualified specialists, skills, tools and independent QA roles** without requiring the user to name them one by one. Do not optimize for the smallest possible headcount when another specialist has a distinct material contribution. If five or more independent specialist workstreams are genuinely useful, activate them. Every unrelated or redundant runtime agent remains **STANDBY** and may be promoted to ACTIVE later when a new domain, dependency, risk or evidence gap materially requires it. The exact selection and regression rules live in `docs/standards/QUALIFIED_AGENT_ROUTING.md` and apply equally to ChatGPT/Ercan OS and Codex.
 
@@ -81,7 +81,7 @@ For material work, Orchestrator owns task decomposition, bounded delegation cont
 1. `AGENTS.md`
 2. `docs/standards/AGENT_REGISTRY.md`
 3. `docs/standards/AGENCY_EXCELLENCE_STANDARD.md` for the principal-level craft, evidence, delivery, verification and learning-loop contract shared by all Stable Core, GitHub Specialist v3 and JIT roles.
-4. `docs/standards/PORTABLE_AGENT_RUNTIME.md` + `.agents/skills/portable-agent-router/SKILL.md` for 89-agent Codex/Claude/Vinterro One portability and ACTIVE/STANDBY routing.
+4. `docs/standards/PORTABLE_AGENT_RUNTIME.md` + `.agents/skills/portable-agent-router/SKILL.md` for Codex/Claude/Vinterro One runtime portability and ACTIVE/STANDBY routing.
 5. `docs/standards/AGENT_CONTINUAL_EXPERTISE_ENGINE.md` + `docs/standards/AGENT_EXPERTISE_SOURCE_MATRIX.json` for every selected specialist's current-source research, verified ingestion and continual-learning contract.
 6. `docs/standards/QUALIFIED_AGENT_ROUTING.md` whenever the user asks to run all agents/agents broadly, or when the task materially requires multiple specialist capabilities.
 7. `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md` + `.agents/skills/github-specialist-router/SKILL.md` when a material web/app/social/SEO/Meta ads/branding task needs the expanded stable specialist pool; then load only the matching domain skill(s).
