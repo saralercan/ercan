@@ -1,8 +1,8 @@
 # Agent Continual Expertise Engine
 
 Status: active
-Version: 1.0
-Date: 2026-09-24
+Version: 1.1
+Date: 2026-09-29
 Scope: all Vinterro One runtime agents in the live `ercan_os_agents` registry
 
 ## Objective
@@ -76,6 +76,39 @@ For every material task, the selected ACTIVE specialist follows:
 
 7. **Record learning**
    Material new knowledge updates the relevant standard/source pack/upstream ledger or evaluation suite.
+
+
+## Academic, thesis and external evidence lane
+
+All runtime agents also inherit `ACADEMIC_RESEARCH_SOURCE_PACK.md`.
+
+Use scholarly and university sources when they can materially improve:
+- architecture/design choices;
+- evaluation methodology;
+- reliability/safety reasoning;
+- human-AI interaction;
+- software engineering and testing;
+- search/recommendation/analytics;
+- marketing/e-commerce/finance models;
+- domain edge cases and failure modes.
+
+Required discovery classes include:
+- OpenAlex, Crossref, OpenAIRE and CORE for scholarly discovery/metadata;
+- OATD and institutional repositories such as MIT, Stanford, Harvard, TU Delft, Aalto, ETH Zurich and YÖK for theses/dissertations;
+- task-relevant peer-reviewed venues and reproducible benchmarks;
+- fast-moving preprints/working papers only with explicit publication-status labeling.
+
+A thesis/dissertation is **Tier 3 academic evidence**, not normative platform truth. Preserve its study population, task, method, date and limitations. Do not generalize one thesis into universal policy.
+
+A discovery index is not evidence of the underlying claim. Open the original paper/thesis/repository before recording a consequential learning event.
+
+Copyright rule: store metadata, provenance, concise distilled findings, decision/evaluation implications and links. Do not permanently copy or redistribute copyrighted full text unless its license explicitly permits that use.
+
+Every runtime profile must maintain:
+- `academic_research` in `source_packs`;
+- at least two `academic_queries`;
+- at least two `thesis_queries`;
+- an `academic_ingestion` policy preserving limitations and source hierarchy.
 
 ## "Research the whole internet" interpretation
 

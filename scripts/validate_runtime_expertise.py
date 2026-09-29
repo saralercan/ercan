@@ -27,6 +27,9 @@ REQUIRED_PROFILE_KEYS = {
     "source_packs",
     "depth_contract",
     "required_evidence",
+    "academic_queries",
+    "thesis_queries",
+    "academic_ingestion",
 }
 
 SHOPIFY_REQUIRED_PRIMARY = {
@@ -204,6 +207,12 @@ def main() -> int:
             fail(f"{name}: continual_queries too shallow", failures)
         if not profile.get("source_packs"):
             fail(f"{name}: missing source_packs", failures)
+        elif "academic_research" not in profile.get("source_packs", []):
+            fail(f"{name}: missing academic_research source pack", failures)
+        if len(profile.get("academic_queries") or []) < 2:
+            fail(f"{name}: academic_queries too shallow", failures)
+        if len(profile.get("thesis_queries") or []) < 2:
+            fail(f"{name}: thesis_queries too shallow", failures)
 
         refresh = profile.get("refresh_policy") or {}
         scheduled = int(refresh.get("scheduled_days") or 0)
@@ -245,7 +254,7 @@ def main() -> int:
         fail("Shopify Agent research curriculum is not deep enough", failures)
 
     packs = matrix.get("source_pack_catalog") or {}
-    for pack in ("shopify", "wordpress", "web_engineering", "javascript", "security", "qa", "seo", "ecommerce", "finance", "growth_ads", "content_editorial", "design", "agent_runtime", "local_discovery", "devops", "analytics", "research"):
+    for pack in ("shopify", "wordpress", "web_engineering", "javascript", "security", "qa", "seo", "ecommerce", "finance", "growth_ads", "content_editorial", "design", "agent_runtime", "local_discovery", "devops", "analytics", "research", "academic_research"):
         if pack not in packs:
             fail(f"missing source pack catalog entry: {pack}", failures)
 

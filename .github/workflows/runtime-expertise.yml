@@ -17,6 +17,9 @@ on:
       - '.agents/skills/ecommerce-specialist/**'
       - '.claude/agents/vinterro-router.md'
       - 'scripts/validate_runtime_expertise.py'
+      - 'scripts/validate_academic_expertise.py'
+      - 'docs/research/ACADEMIC_SOURCE_CATALOG_2026-09-29.md'
+      - 'docs/standards/ACADEMIC_RESEARCH_SOURCE_PACK.md'
       - '.github/workflows/runtime-expertise.yml'
   push:
     branches: [master]
@@ -27,6 +30,8 @@ on:
       - '.agents/skills/**'
       - '.claude/agents/**'
       - 'scripts/validate_runtime_expertise.py'
+      - 'scripts/validate_academic_expertise.py'
+      - 'docs/research/ACADEMIC_SOURCE_CATALOG_2026-09-29.md'
       - '.github/workflows/runtime-expertise.yml'
 
 permissions:
@@ -43,3 +48,5 @@ jobs:
           python-version: '3.12'
       - name: Validate live-runtime expertise coverage
         run: python3 scripts/validate_runtime_expertise.py
+      - name: Validate academic/thesis expertise coverage
+        run: python3 scripts/validate_academic_expertise.py
