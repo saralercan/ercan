@@ -55,6 +55,19 @@ mean:
 
 This rule applies **identically** to ChatGPT/OpenAI, Codex, Claude and Vinterro One. Provider adapters may change mechanics, but they may not reduce the selected expert coverage or reinterpret the master trigger as a minimum-team shortcut.
 
+## Connector availability and portable fallback
+
+The absence of a live Vinterro One/Supabase connector in a provider session does **not** make Vinterro One agent contracts unavailable when the repository is accessible.
+
+When the live control-plane connector is unavailable:
+- load routing/agent/project/skill/standard contracts from the versioned repository mirror;
+- preserve the exact same specialist selection semantics, project rules, mail/template contracts, safety boundaries and QA requirements;
+- use whatever provider connectors are actually available (for example Gmail) only for their real external evidence/actions;
+- never claim that a live Vinterro One runtime agent executed unless current runtime evidence proves it;
+- say `repo contract loaded` / `portable specialist route applied` rather than falsely claiming live agent execution.
+
+When the live connector is available, live registry/state may refine the repo snapshot for current health/status/version, but it must not silently weaken project standards.
+
 ## Provider adapters
 
 ### OpenAI / GPT / Codex
