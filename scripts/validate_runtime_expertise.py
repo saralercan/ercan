@@ -36,6 +36,28 @@ SHOPIFY_REQUIRED_PRIMARY = {
     "https://shopify.dev/docs/storefronts/themes/architecture",
     "https://shopify.dev/docs/api/admin-graphql/latest",
 }
+
+# Known synchronized production floor from the authenticated live registry.
+# This is a regression floor for the repo mirror, not a fixed routing total:
+# the live runtime may grow beyond it.
+LIVE_MIRROR_BASELINE_COUNT = 103
+LIVE_MIRROR_REQUIRED_NAMES = {
+    "Ayvalık Reklam Baş Uzman Ajanı",
+    "Ayvalık Vibes Baş Uzman Ajanı",
+    "Çiçek Sahaf Baş Uzman Ajanı",
+    "Cotti Cotti Baş Uzman Ajanı",
+    "Drag&Drop Baş Uzman Ajanı",
+    "Dükkan Ayvalık Baş Uzman Ajanı",
+    "FORMÉ Baş Uzman Ajanı",
+    "Go Ayvalık Baş Uzman Ajanı",
+    "LocalRoot Baş Uzman Ajanı",
+    "Vinterro Digital Baş Uzman Ajanı",
+    "Vinterro Social OS Baş Uzman Ajanı",
+    "Vinterro Studio Baş Uzman Ajanı",
+    "Vinterro One Security Director",
+    "Contact Recovery Research Agent",
+}
+
 SHOPIFY_REQUIRED_GITHUB = {
     "Shopify/dawn",
     "Shopify/cli",
@@ -82,6 +104,25 @@ def main() -> int:
         fail(f"expertise profile count disagrees with agent_count: {len(profiles)} != {matrix_count}", failures)
     if isinstance(runtime_count, int) and isinstance(matrix_count, int) and runtime_count != matrix_count:
         fail(f"runtime/matrix count drift: runtime={runtime_count}, expertise={matrix_count}", failures)
+    if isinstance(runtime_count, int) and runtime_count < LIVE_MIRROR_BASELINE_COUNT:
+        fail(
+            f"runtime mirror regressed below synchronized live floor: {runtime_count} < {LIVE_MIRROR_BASELINE_COUNT}",
+            failures,
+        )
+    if isinstance(matrix_count, int) and matrix_count < LIVE_MIRROR_BASELINE_COUNT:
+        fail(
+            f"expertise mirror regressed below synchronized live floor: {matrix_count} < {LIVE_MIRROR_BASELINE_COUNT}",
+            failures,
+        )
+
+    runtime_sync = runtime.get("live_registry_sync") or {}
+    matrix_sync = matrix.get("live_registry_sync") or {}
+    if runtime_sync.get("verified_live_count") != runtime_count:
+        fail("runtime live_registry_sync count must match runtime_agent_count", failures)
+    if runtime_sync.get("verified_expertise_profile_count") != matrix_count:
+        fail("runtime live_registry_sync expertise count must match matrix agent_count", failures)
+    if matrix_sync.get("verified_live_count") != matrix_count:
+        fail("matrix live_registry_sync count must match agent_count", failures)
 
     runtime_names = [a.get("name") for a in agents]
     profile_names = [p.get("name") for p in profiles]
@@ -93,6 +134,12 @@ def main() -> int:
         missing = [n for n in runtime_names if n not in profile_names]
         extra = [n for n in profile_names if n not in runtime_names]
         fail(f"runtime/expertise membership drift; missing={missing}, extra={extra}", failures)
+    missing_live_runtime = sorted(LIVE_MIRROR_REQUIRED_NAMES - set(runtime_names))
+    missing_live_profiles = sorted(LIVE_MIRROR_REQUIRED_NAMES - set(profile_names))
+    if missing_live_runtime:
+        fail(f"runtime mirror missing synchronized live agents: {missing_live_runtime}", failures)
+    if missing_live_profiles:
+        fail(f"expertise mirror missing synchronized live agents: {missing_live_profiles}", failures)
 
     runtime_ids = [a.get("id") for a in agents]
     profile_ids = [p.get("id") for p in profiles]
@@ -244,6 +291,7 @@ def main() -> int:
 
     print("Runtime expertise validator: PASS")
     print(f"Runtime agents: {len(agents)}/{runtime_count}")
+    print(f"Known live mirror floor: {LIVE_MIRROR_BASELINE_COUNT}+")
     print(f"Expertise profiles: {len(profiles)}/{matrix_count}")
     print("Portable adapters: Codex + Claude + Vinterro One")
     print("Handoffs: valid")
