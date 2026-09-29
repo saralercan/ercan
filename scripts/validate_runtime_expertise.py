@@ -28,6 +28,8 @@ REQUIRED_PROFILE_KEYS = {
     "depth_contract",
     "required_evidence",
     "academic_queries",
+    "thesis_queries",
+    "academic_ingestion",
 }
 
 SHOPIFY_REQUIRED_PRIMARY = {
