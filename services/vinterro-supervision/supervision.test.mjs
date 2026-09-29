@@ -8,6 +8,7 @@ import {
   recordSupervisor,
   recordMetaAudit,
   recordReleaseGate,
+  recordArbitration,
   evaluateCompletion,
 } from "./supervision.mjs";
 
@@ -50,4 +51,30 @@ test("R4 additionally requires meta-audit", () => {
   assert.equal(evaluateCompletion(run).state, "NOT_VERIFIED");
   recordMetaAudit(run, { auditorId: "meta-auditor", verdict: "PASS", evidenceRefs: ["false-pass-audit"] });
   assert.equal(evaluateCompletion(run).state, "VERIFIED");
+});
+
+test("R2 requires distinct reviewer and domain supervisor", () => {
+  const run = createSupervisionRun({ taskId: "t6", riskClass: RISK.R2, workerId: "worker" });
+  recordMaterialChange(run, { actorId: "worker", evidenceRefs: ["diff"] });
+  recordReview(run, { reviewerId: "qa", verdict: "PASS", evidenceRefs: ["test"] });
+  assert.throws(() => recordSupervisor(run, { supervisorId: "qa", verdict: "PASS", evidenceRefs: ["runtime"] }));
+});
+
+test("current arbiter can overturn a disputed review with evidence", () => {
+  const run = createSupervisionRun({ taskId: "t7", riskClass: RISK.R1, workerId: "worker" });
+  recordMaterialChange(run, { actorId: "worker", evidenceRefs: ["diff"] });
+  recordReview(run, { reviewerId: "qa", verdict: "REWORK", evidenceRefs: ["review-evidence"] });
+  assert.equal(evaluateCompletion(run).state, "NOT_VERIFIED");
+  recordArbitration(run, { arbiterId: "arbiter", verdict: "OVERTURN_REVIEW", evidenceRefs: ["decisive-test"] });
+  assert.equal(evaluateCompletion(run).state, "VERIFIED");
+});
+
+test("release gate must be independent from worker reviewer and supervisor", () => {
+  const run = createSupervisionRun({ taskId: "t8", riskClass: RISK.R3, workerId: "worker" });
+  recordMaterialChange(run, { actorId: "worker", evidenceRefs: ["diff"] });
+  recordReview(run, { reviewerId: "qa", verdict: "PASS", evidenceRefs: ["test"] });
+  recordSupervisor(run, { supervisorId: "supervisor", verdict: "PASS", evidenceRefs: ["runtime"] });
+  assert.throws(() => recordReleaseGate(run, { gatekeeperId: "worker", verdict: "RELEASE_APPROVED", evidenceRefs: ["gate"] }));
+  assert.throws(() => recordReleaseGate(run, { gatekeeperId: "qa", verdict: "RELEASE_APPROVED", evidenceRefs: ["gate"] }));
+  assert.throws(() => recordReleaseGate(run, { gatekeeperId: "supervisor", verdict: "RELEASE_APPROVED", evidenceRefs: ["gate"] }));
 });
