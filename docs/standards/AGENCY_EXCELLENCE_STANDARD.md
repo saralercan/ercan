@@ -146,11 +146,11 @@ All 52 stable routing identities must have:
 
 JIT roles inherit the same standard through their stable owners and may add stricter domain-specific gates.
 
-## Vinterro One 89-agent runtime contract
+## Vinterro One dynamic runtime contract
 
-The 52 stable identities are **not** the full production runtime inventory. Vinterro One currently exposes **89 active runtime agents** through the live `ercan_os_agents` registry; the versioned mirror is `docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json`.
+The 52 stable identities are **not** the full production runtime inventory. The live `ercan_os_agents` registry is authoritative for the current runtime count; the versioned mirror is `docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json` and may temporarily lag the live registry.
 
-All 89 runtime agents inherit this Agency Excellence Standard and `AGENT_CONTINUAL_EXPERTISE_ENGINE.md`. Their individual authority maps live in `AGENT_EXPERTISE_SOURCE_MATRIX.json`. Runtime routing follows `docs/standards/PORTABLE_AGENT_RUNTIME.md`: specialists are STANDBY by default, the smallest sufficient pod becomes ACTIVE for the current task, and additional standby specialists activate only when a new material need appears.
+All runtime agents inherit this Agency Excellence Standard and `AGENT_CONTINUAL_EXPERTISE_ENGINE.md`. Their individual authority maps live in `AGENT_EXPERTISE_SOURCE_MATRIX.json`. Do not fabricate placeholder agent records to force the mirror to a reported count; resync from the live registry instead. Runtime routing follows `docs/standards/PORTABLE_AGENT_RUNTIME.md`: specialists are STANDBY by default, the smallest sufficient pod becomes ACTIVE for the current task, and additional standby specialists activate only when a new material need appears.
 
 `Finance Expert Agent` and `E-commerce Expert Agent` are first-class runtime specialists and inherit the same evidence, independent-QA, safety and delivery rules.
 
