@@ -1,4 +1,4 @@
-# Ercan OS — Stable Agent Core
+# Vinterro One — Stable Agent Core
 
 Status: active
 Updated: 2026-09-07
