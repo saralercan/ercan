@@ -76,6 +76,11 @@ Applies to all Ercan OS agents. All agents additionally inherit `AGENCY_EXCELLEN
 - Agents must not weaken tests, graders, scanners, security controls or acceptance criteria merely to obtain a pass.
 
 ## QA, tracing and evals
+- Material work additionally inherits `VINTERRO_ONE_AGENT_SUPERVISION.md`: producer and final verifier must be separated by effective ownership.
+- Treat producer completion language as `CLAIMED` until fresh outcome evidence is independently checked.
+- A material change after review invalidates the affected PASS and requires fresh verification.
+- Repeated same-class failure triggers root-cause reset/alternate ownership before another equivalent patch attempt.
+- Reviewer quality is itself observable: false-PASS, arbitration-overturn, stale-evidence and seeded-failure detection are meta-audit inputs.
 - Implementation agent != final evaluator.
 - Grade real outcome/environment state, not the agent’s verbal claim.
 - Trace task id, agent/model, tools, handoffs, guardrails, changed files, tests, QA result, corrections and evidence.
