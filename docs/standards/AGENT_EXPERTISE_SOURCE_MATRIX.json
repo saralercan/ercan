@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.0",
-  "generated_at": "2026-09-24",
-  "agent_count": 89,
+  "schema_version": "1.1",
+  "generated_at": "2026-09-29",
+  "agent_count": 103,
   "philosophy": "Broad continuous discovery, narrow verified ingestion. Research the web deeply, but never equate volume with truth or expertise.",
   "global_sources": {
     "discovery": [
@@ -8863,6 +8863,897 @@
         "explicit conflict handling when reputable sources disagree",
         "runtime/test/QA evidence before promoting implementation guidance"
       ]
+    },
+    {
+      "id": 90,
+      "name": "Ayvalık Reklam Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project",
+      "source_tiers": {
+        "primary": [
+          "vinterro-one://projects/ayval-k-reklam",
+          "github://saralercan/ercan/AGENTS.md",
+          "https://www.w3.org/WAI/standards-guidelines/wcag/"
+        ],
+        "canonical_github": [
+          "github://saralercan/ercan/AGENTS.md"
+        ],
+        "reviewed_secondary": [],
+        "community_discovery": []
+      },
+      "research_topics": [
+        "project_truth",
+        "project_rules",
+        "platform_authority"
+      ],
+      "continual_queries": [
+        "Ayvalık Reklam Baş Uzman Ajanı official documentation current",
+        "project_lead_expert current standards changelogs advisories",
+        "Ayvalık Reklam Baş Uzman Ajanı maintained reference implementation"
+      ],
+      "ingestion_rules": [
+        "prefer project/source truth and official primary authority",
+        "verify volatile claims at task time",
+        "treat community/social sources as discovery only",
+        "record provenance and contradictions",
+        "do not promote source volume into expertise without target-environment verification"
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "stale_after_days": 7,
+        "event_triggers": [
+          "platform_change",
+          "production_failure",
+          "user_correction",
+          "security_advisory",
+          "project_rule_change"
+        ]
+      },
+      "mastery_gate": "Current authoritative evidence + target-environment verification + independent QA where material.",
+      "source_packs": [
+        "research",
+        "web_engineering"
+      ],
+      "depth_contract": {
+        "discovery": "high-recall multi-source discovery",
+        "ingestion": "narrow verified claims only",
+        "freshness": "task-time revalidation for volatile facts",
+        "verification": "independent outcome/evidence review"
+      },
+      "required_evidence": [
+        "authoritative source provenance",
+        "freshness/version context",
+        "task-specific acceptance criteria",
+        "independent or deterministic verification"
+      ]
+    },
+    {
+      "id": 91,
+      "name": "Ayvalık Vibes Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project",
+      "source_tiers": {
+        "primary": [
+          "vinterro-one://projects/ayval-k-vibes",
+          "github://saralercan/ercan/projects/ayvalik-vibes/AGENTS.md",
+          "https://developer.wordpress.org/"
+        ],
+        "canonical_github": [
+          "github://saralercan/ercan/projects/ayvalik-vibes/AGENTS.md"
+        ],
+        "reviewed_secondary": [],
+        "community_discovery": []
+      },
+      "research_topics": [
+        "project_truth",
+        "project_rules",
+        "platform_authority"
+      ],
+      "continual_queries": [
+        "Ayvalık Vibes Baş Uzman Ajanı official documentation current",
+        "project_lead_expert current standards changelogs advisories",
+        "Ayvalık Vibes Baş Uzman Ajanı maintained reference implementation"
+      ],
+      "ingestion_rules": [
+        "prefer project/source truth and official primary authority",
+        "verify volatile claims at task time",
+        "treat community/social sources as discovery only",
+        "record provenance and contradictions",
+        "do not promote source volume into expertise without target-environment verification"
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "stale_after_days": 7,
+        "event_triggers": [
+          "platform_change",
+          "production_failure",
+          "user_correction",
+          "security_advisory",
+          "project_rule_change"
+        ]
+      },
+      "mastery_gate": "Current authoritative evidence + target-environment verification + independent QA where material.",
+      "source_packs": [
+        "research",
+        "web_engineering"
+      ],
+      "depth_contract": {
+        "discovery": "high-recall multi-source discovery",
+        "ingestion": "narrow verified claims only",
+        "freshness": "task-time revalidation for volatile facts",
+        "verification": "independent outcome/evidence review"
+      },
+      "required_evidence": [
+        "authoritative source provenance",
+        "freshness/version context",
+        "task-specific acceptance criteria",
+        "independent or deterministic verification"
+      ]
+    },
+    {
+      "id": 92,
+      "name": "Çiçek Sahaf Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project",
+      "source_tiers": {
+        "primary": [
+          "vinterro-one://projects/cicek-sahaf",
+          "github://saralercan/ercan/AGENTS.md",
+          "https://developer.woocommerce.com/"
+        ],
+        "canonical_github": [
+          "github://saralercan/ercan/AGENTS.md"
+        ],
+        "reviewed_secondary": [],
+        "community_discovery": []
+      },
+      "research_topics": [
+        "project_truth",
+        "project_rules",
+        "platform_authority"
+      ],
+      "continual_queries": [
+        "Çiçek Sahaf Baş Uzman Ajanı official documentation current",
+        "project_lead_expert current standards changelogs advisories",
+        "Çiçek Sahaf Baş Uzman Ajanı maintained reference implementation"
+      ],
+      "ingestion_rules": [
+        "prefer project/source truth and official primary authority",
+        "verify volatile claims at task time",
+        "treat community/social sources as discovery only",
+        "record provenance and contradictions",
+        "do not promote source volume into expertise without target-environment verification"
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "stale_after_days": 7,
+        "event_triggers": [
+          "platform_change",
+          "production_failure",
+          "user_correction",
+          "security_advisory",
+          "project_rule_change"
+        ]
+      },
+      "mastery_gate": "Current authoritative evidence + target-environment verification + independent QA where material.",
+      "source_packs": [
+        "research",
+        "web_engineering"
+      ],
+      "depth_contract": {
+        "discovery": "high-recall multi-source discovery",
+        "ingestion": "narrow verified claims only",
+        "freshness": "task-time revalidation for volatile facts",
+        "verification": "independent outcome/evidence review"
+      },
+      "required_evidence": [
+        "authoritative source provenance",
+        "freshness/version context",
+        "task-specific acceptance criteria",
+        "independent or deterministic verification"
+      ]
+    },
+    {
+      "id": 93,
+      "name": "Cotti Cotti Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project",
+      "source_tiers": {
+        "primary": [
+          "vinterro-one://projects/cotti-cotti",
+          "github://saralercan/ercan/AGENTS.md",
+          "https://www.w3.org/WAI/standards-guidelines/wcag/"
+        ],
+        "canonical_github": [
+          "github://saralercan/ercan/AGENTS.md"
+        ],
+        "reviewed_secondary": [],
+        "community_discovery": []
+      },
+      "research_topics": [
+        "project_truth",
+        "project_rules",
+        "platform_authority"
+      ],
+      "continual_queries": [
+        "Cotti Cotti Baş Uzman Ajanı official documentation current",
+        "project_lead_expert current standards changelogs advisories",
+        "Cotti Cotti Baş Uzman Ajanı maintained reference implementation"
+      ],
+      "ingestion_rules": [
+        "prefer project/source truth and official primary authority",
+        "verify volatile claims at task time",
+        "treat community/social sources as discovery only",
+        "record provenance and contradictions",
+        "do not promote source volume into expertise without target-environment verification"
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "stale_after_days": 7,
+        "event_triggers": [
+          "platform_change",
+          "production_failure",
+          "user_correction",
+          "security_advisory",
+          "project_rule_change"
+        ]
+      },
+      "mastery_gate": "Current authoritative evidence + target-environment verification + independent QA where material.",
+      "source_packs": [
+        "research",
+        "web_engineering"
+      ],
+      "depth_contract": {
+        "discovery": "high-recall multi-source discovery",
+        "ingestion": "narrow verified claims only",
+        "freshness": "task-time revalidation for volatile facts",
+        "verification": "independent outcome/evidence review"
+      },
+      "required_evidence": [
+        "authoritative source provenance",
+        "freshness/version context",
+        "task-specific acceptance criteria",
+        "independent or deterministic verification"
+      ]
+    },
+    {
+      "id": 94,
+      "name": "Drag&Drop Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project",
+      "source_tiers": {
+        "primary": [
+          "vinterro-one://projects/drag-drop",
+          "github://saralercan/ercan/projects/dragdrop/AGENTS.md",
+          "https://shopify.dev/docs"
+        ],
+        "canonical_github": [
+          "github://saralercan/ercan/projects/dragdrop/AGENTS.md"
+        ],
+        "reviewed_secondary": [],
+        "community_discovery": []
+      },
+      "research_topics": [
+        "project_truth",
+        "project_rules",
+        "platform_authority"
+      ],
+      "continual_queries": [
+        "Drag&Drop Baş Uzman Ajanı official documentation current",
+        "project_lead_expert current standards changelogs advisories",
+        "Drag&Drop Baş Uzman Ajanı maintained reference implementation"
+      ],
+      "ingestion_rules": [
+        "prefer project/source truth and official primary authority",
+        "verify volatile claims at task time",
+        "treat community/social sources as discovery only",
+        "record provenance and contradictions",
+        "do not promote source volume into expertise without target-environment verification"
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "stale_after_days": 7,
+        "event_triggers": [
+          "platform_change",
+          "production_failure",
+          "user_correction",
+          "security_advisory",
+          "project_rule_change"
+        ]
+      },
+      "mastery_gate": "Current authoritative evidence + target-environment verification + independent QA where material.",
+      "source_packs": [
+        "research",
+        "web_engineering"
+      ],
+      "depth_contract": {
+        "discovery": "high-recall multi-source discovery",
+        "ingestion": "narrow verified claims only",
+        "freshness": "task-time revalidation for volatile facts",
+        "verification": "independent outcome/evidence review"
+      },
+      "required_evidence": [
+        "authoritative source provenance",
+        "freshness/version context",
+        "task-specific acceptance criteria",
+        "independent or deterministic verification"
+      ]
+    },
+    {
+      "id": 95,
+      "name": "Dükkan Ayvalık Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project",
+      "source_tiers": {
+        "primary": [
+          "vinterro-one://projects/dukkan-ayvalik",
+          "github://saralercan/ercan/AGENTS.md",
+          "https://developer.wordpress.org/"
+        ],
+        "canonical_github": [
+          "github://saralercan/ercan/AGENTS.md"
+        ],
+        "reviewed_secondary": [],
+        "community_discovery": []
+      },
+      "research_topics": [
+        "project_truth",
+        "project_rules",
+        "platform_authority"
+      ],
+      "continual_queries": [
+        "Dükkan Ayvalık Baş Uzman Ajanı official documentation current",
+        "project_lead_expert current standards changelogs advisories",
+        "Dükkan Ayvalık Baş Uzman Ajanı maintained reference implementation"
+      ],
+      "ingestion_rules": [
+        "prefer project/source truth and official primary authority",
+        "verify volatile claims at task time",
+        "treat community/social sources as discovery only",
+        "record provenance and contradictions",
+        "do not promote source volume into expertise without target-environment verification"
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "stale_after_days": 7,
+        "event_triggers": [
+          "platform_change",
+          "production_failure",
+          "user_correction",
+          "security_advisory",
+          "project_rule_change"
+        ]
+      },
+      "mastery_gate": "Current authoritative evidence + target-environment verification + independent QA where material.",
+      "source_packs": [
+        "research",
+        "web_engineering"
+      ],
+      "depth_contract": {
+        "discovery": "high-recall multi-source discovery",
+        "ingestion": "narrow verified claims only",
+        "freshness": "task-time revalidation for volatile facts",
+        "verification": "independent outcome/evidence review"
+      },
+      "required_evidence": [
+        "authoritative source provenance",
+        "freshness/version context",
+        "task-specific acceptance criteria",
+        "independent or deterministic verification"
+      ]
+    },
+    {
+      "id": 96,
+      "name": "FORMÉ Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project",
+      "source_tiers": {
+        "primary": [
+          "vinterro-one://projects/forme",
+          "github://saralercan/ercan/AGENTS.md",
+          "https://developer.wordpress.org/"
+        ],
+        "canonical_github": [
+          "github://saralercan/ercan/AGENTS.md"
+        ],
+        "reviewed_secondary": [],
+        "community_discovery": []
+      },
+      "research_topics": [
+        "project_truth",
+        "project_rules",
+        "platform_authority"
+      ],
+      "continual_queries": [
+        "FORMÉ Baş Uzman Ajanı official documentation current",
+        "project_lead_expert current standards changelogs advisories",
+        "FORMÉ Baş Uzman Ajanı maintained reference implementation"
+      ],
+      "ingestion_rules": [
+        "prefer project/source truth and official primary authority",
+        "verify volatile claims at task time",
+        "treat community/social sources as discovery only",
+        "record provenance and contradictions",
+        "do not promote source volume into expertise without target-environment verification"
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "stale_after_days": 7,
+        "event_triggers": [
+          "platform_change",
+          "production_failure",
+          "user_correction",
+          "security_advisory",
+          "project_rule_change"
+        ]
+      },
+      "mastery_gate": "Current authoritative evidence + target-environment verification + independent QA where material.",
+      "source_packs": [
+        "research",
+        "web_engineering"
+      ],
+      "depth_contract": {
+        "discovery": "high-recall multi-source discovery",
+        "ingestion": "narrow verified claims only",
+        "freshness": "task-time revalidation for volatile facts",
+        "verification": "independent outcome/evidence review"
+      },
+      "required_evidence": [
+        "authoritative source provenance",
+        "freshness/version context",
+        "task-specific acceptance criteria",
+        "independent or deterministic verification"
+      ]
+    },
+    {
+      "id": 97,
+      "name": "Go Ayvalık Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project",
+      "source_tiers": {
+        "primary": [
+          "vinterro-one://projects/go-ayval-k",
+          "github://saralercan/ercan/projects/goayvalik/AGENTS.md",
+          "https://developer.wordpress.org/"
+        ],
+        "canonical_github": [
+          "github://saralercan/ercan/projects/goayvalik/AGENTS.md"
+        ],
+        "reviewed_secondary": [],
+        "community_discovery": []
+      },
+      "research_topics": [
+        "project_truth",
+        "project_rules",
+        "platform_authority"
+      ],
+      "continual_queries": [
+        "Go Ayvalık Baş Uzman Ajanı official documentation current",
+        "project_lead_expert current standards changelogs advisories",
+        "Go Ayvalık Baş Uzman Ajanı maintained reference implementation"
+      ],
+      "ingestion_rules": [
+        "prefer project/source truth and official primary authority",
+        "verify volatile claims at task time",
+        "treat community/social sources as discovery only",
+        "record provenance and contradictions",
+        "do not promote source volume into expertise without target-environment verification"
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "stale_after_days": 7,
+        "event_triggers": [
+          "platform_change",
+          "production_failure",
+          "user_correction",
+          "security_advisory",
+          "project_rule_change"
+        ]
+      },
+      "mastery_gate": "Current authoritative evidence + target-environment verification + independent QA where material.",
+      "source_packs": [
+        "research",
+        "web_engineering"
+      ],
+      "depth_contract": {
+        "discovery": "high-recall multi-source discovery",
+        "ingestion": "narrow verified claims only",
+        "freshness": "task-time revalidation for volatile facts",
+        "verification": "independent outcome/evidence review"
+      },
+      "required_evidence": [
+        "authoritative source provenance",
+        "freshness/version context",
+        "task-specific acceptance criteria",
+        "independent or deterministic verification"
+      ]
+    },
+    {
+      "id": 98,
+      "name": "LocalRoot Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project",
+      "source_tiers": {
+        "primary": [
+          "vinterro-one://projects/localroot",
+          "github://saralercan/ercan/AGENTS.md",
+          "https://www.w3.org/WAI/standards-guidelines/wcag/"
+        ],
+        "canonical_github": [
+          "github://saralercan/ercan/AGENTS.md"
+        ],
+        "reviewed_secondary": [],
+        "community_discovery": []
+      },
+      "research_topics": [
+        "project_truth",
+        "project_rules",
+        "platform_authority"
+      ],
+      "continual_queries": [
+        "LocalRoot Baş Uzman Ajanı official documentation current",
+        "project_lead_expert current standards changelogs advisories",
+        "LocalRoot Baş Uzman Ajanı maintained reference implementation"
+      ],
+      "ingestion_rules": [
+        "prefer project/source truth and official primary authority",
+        "verify volatile claims at task time",
+        "treat community/social sources as discovery only",
+        "record provenance and contradictions",
+        "do not promote source volume into expertise without target-environment verification"
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "stale_after_days": 7,
+        "event_triggers": [
+          "platform_change",
+          "production_failure",
+          "user_correction",
+          "security_advisory",
+          "project_rule_change"
+        ]
+      },
+      "mastery_gate": "Current authoritative evidence + target-environment verification + independent QA where material.",
+      "source_packs": [
+        "research",
+        "web_engineering"
+      ],
+      "depth_contract": {
+        "discovery": "high-recall multi-source discovery",
+        "ingestion": "narrow verified claims only",
+        "freshness": "task-time revalidation for volatile facts",
+        "verification": "independent outcome/evidence review"
+      },
+      "required_evidence": [
+        "authoritative source provenance",
+        "freshness/version context",
+        "task-specific acceptance criteria",
+        "independent or deterministic verification"
+      ]
+    },
+    {
+      "id": 99,
+      "name": "Vinterro Digital Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project",
+      "source_tiers": {
+        "primary": [
+          "vinterro-one://projects/vinterro-digital",
+          "github://saralercan/ercan/projects/vinterro-digital/AGENTS.md",
+          "https://developer.wordpress.org/"
+        ],
+        "canonical_github": [
+          "github://saralercan/ercan/projects/vinterro-digital/AGENTS.md"
+        ],
+        "reviewed_secondary": [],
+        "community_discovery": []
+      },
+      "research_topics": [
+        "project_truth",
+        "project_rules",
+        "platform_authority"
+      ],
+      "continual_queries": [
+        "Vinterro Digital Baş Uzman Ajanı official documentation current",
+        "project_lead_expert current standards changelogs advisories",
+        "Vinterro Digital Baş Uzman Ajanı maintained reference implementation"
+      ],
+      "ingestion_rules": [
+        "prefer project/source truth and official primary authority",
+        "verify volatile claims at task time",
+        "treat community/social sources as discovery only",
+        "record provenance and contradictions",
+        "do not promote source volume into expertise without target-environment verification"
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "stale_after_days": 7,
+        "event_triggers": [
+          "platform_change",
+          "production_failure",
+          "user_correction",
+          "security_advisory",
+          "project_rule_change"
+        ]
+      },
+      "mastery_gate": "Current authoritative evidence + target-environment verification + independent QA where material.",
+      "source_packs": [
+        "research",
+        "web_engineering"
+      ],
+      "depth_contract": {
+        "discovery": "high-recall multi-source discovery",
+        "ingestion": "narrow verified claims only",
+        "freshness": "task-time revalidation for volatile facts",
+        "verification": "independent outcome/evidence review"
+      },
+      "required_evidence": [
+        "authoritative source provenance",
+        "freshness/version context",
+        "task-specific acceptance criteria",
+        "independent or deterministic verification"
+      ]
+    },
+    {
+      "id": 100,
+      "name": "Vinterro Social OS Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project",
+      "source_tiers": {
+        "primary": [
+          "vinterro-one://projects/vinterro-social-os",
+          "https://developers.facebook.com/docs/",
+          "github://saralercan/ercan/AGENTS.md"
+        ],
+        "canonical_github": [
+          "github://saralercan/ercan/AGENTS.md"
+        ],
+        "reviewed_secondary": [],
+        "community_discovery": []
+      },
+      "research_topics": [
+        "project_truth",
+        "platform_authority",
+        "project_rules"
+      ],
+      "continual_queries": [
+        "Vinterro Social OS Baş Uzman Ajanı official documentation current",
+        "project_lead_expert current standards changelogs advisories",
+        "Vinterro Social OS Baş Uzman Ajanı maintained reference implementation"
+      ],
+      "ingestion_rules": [
+        "prefer project/source truth and official primary authority",
+        "verify volatile claims at task time",
+        "treat community/social sources as discovery only",
+        "record provenance and contradictions",
+        "do not promote source volume into expertise without target-environment verification"
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "stale_after_days": 7,
+        "event_triggers": [
+          "platform_change",
+          "production_failure",
+          "user_correction",
+          "security_advisory",
+          "project_rule_change"
+        ]
+      },
+      "mastery_gate": "Current authoritative evidence + target-environment verification + independent QA where material.",
+      "source_packs": [
+        "research",
+        "web_engineering"
+      ],
+      "depth_contract": {
+        "discovery": "high-recall multi-source discovery",
+        "ingestion": "narrow verified claims only",
+        "freshness": "task-time revalidation for volatile facts",
+        "verification": "independent outcome/evidence review"
+      },
+      "required_evidence": [
+        "authoritative source provenance",
+        "freshness/version context",
+        "task-specific acceptance criteria",
+        "independent or deterministic verification"
+      ]
+    },
+    {
+      "id": 101,
+      "name": "Vinterro Studio Baş Uzman Ajanı",
+      "role": "project_lead_expert",
+      "family": "project",
+      "source_tiers": {
+        "primary": [
+          "vinterro-one://projects/vinterro-studio",
+          "github://saralercan/ercan/AGENTS.md",
+          "https://shopify.dev/docs"
+        ],
+        "canonical_github": [
+          "github://saralercan/ercan/AGENTS.md"
+        ],
+        "reviewed_secondary": [],
+        "community_discovery": []
+      },
+      "research_topics": [
+        "project_truth",
+        "project_rules",
+        "platform_authority"
+      ],
+      "continual_queries": [
+        "Vinterro Studio Baş Uzman Ajanı official documentation current",
+        "project_lead_expert current standards changelogs advisories",
+        "Vinterro Studio Baş Uzman Ajanı maintained reference implementation"
+      ],
+      "ingestion_rules": [
+        "prefer project/source truth and official primary authority",
+        "verify volatile claims at task time",
+        "treat community/social sources as discovery only",
+        "record provenance and contradictions",
+        "do not promote source volume into expertise without target-environment verification"
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "stale_after_days": 7,
+        "event_triggers": [
+          "platform_change",
+          "production_failure",
+          "user_correction",
+          "security_advisory",
+          "project_rule_change"
+        ]
+      },
+      "mastery_gate": "Current authoritative evidence + target-environment verification + independent QA where material.",
+      "source_packs": [
+        "research",
+        "web_engineering"
+      ],
+      "depth_contract": {
+        "discovery": "high-recall multi-source discovery",
+        "ingestion": "narrow verified claims only",
+        "freshness": "task-time revalidation for volatile facts",
+        "verification": "independent outcome/evidence review"
+      },
+      "required_evidence": [
+        "authoritative source provenance",
+        "freshness/version context",
+        "task-specific acceptance criteria",
+        "independent or deterministic verification"
+      ]
+    },
+    {
+      "id": 102,
+      "name": "Vinterro One Security Director",
+      "role": "security_director",
+      "family": "security",
+      "source_tiers": {
+        "primary": [
+          "https://www.nist.gov/cyberframework",
+          "https://openai.github.io/openai-agents-js/guides/guardrails/",
+          "https://owasp.org/www-project-application-security-verification-standard/",
+          "https://owasp.org/www-project-top-ten/",
+          "https://supabase.com/docs/guides/security/product-security"
+        ],
+        "canonical_github": [
+          "https://github.com/OWASP/ASVS"
+        ],
+        "reviewed_secondary": [],
+        "community_discovery": []
+      },
+      "research_topics": [
+        "security_architecture",
+        "agent_security",
+        "application_security",
+        "web_security",
+        "supabase_security"
+      ],
+      "continual_queries": [
+        "Vinterro One Security Director official documentation current",
+        "security_director current standards changelogs advisories",
+        "Vinterro One Security Director maintained reference implementation"
+      ],
+      "ingestion_rules": [
+        "prefer project/source truth and official primary authority",
+        "verify volatile claims at task time",
+        "treat community/social sources as discovery only",
+        "record provenance and contradictions",
+        "do not promote source volume into expertise without target-environment verification"
+      ],
+      "refresh_policy": {
+        "scheduled_days": 1,
+        "stale_after_days": 7,
+        "event_triggers": [
+          "platform_change",
+          "production_failure",
+          "user_correction",
+          "security_advisory",
+          "project_rule_change"
+        ]
+      },
+      "mastery_gate": "Current authoritative evidence + target-environment verification + independent QA where material.",
+      "source_packs": [
+        "security",
+        "agent_runtime"
+      ],
+      "depth_contract": {
+        "discovery": "high-recall multi-source discovery",
+        "ingestion": "narrow verified claims only",
+        "freshness": "task-time revalidation for volatile facts",
+        "verification": "independent outcome/evidence review"
+      },
+      "required_evidence": [
+        "authoritative source provenance",
+        "freshness/version context",
+        "task-specific acceptance criteria",
+        "independent or deterministic verification"
+      ]
+    },
+    {
+      "id": 103,
+      "name": "Contact Recovery Research Agent",
+      "role": "contact_recovery_research",
+      "family": "research",
+      "source_tiers": {
+        "primary": [
+          "https://www.rfc-editor.org/rfc/rfc7489",
+          "https://support.google.com/business/",
+          "https://developers.google.com/search/docs/appearance/structured-data/organization",
+          "https://www.icann.org/resources/pages/registration-data-2023-11-02-en",
+          "https://www.rfc-editor.org/rfc/rfc5322"
+        ],
+        "canonical_github": [
+          "https://github.com/google/libphonenumber"
+        ],
+        "reviewed_secondary": [],
+        "community_discovery": []
+      },
+      "research_topics": [
+        "email_authentication",
+        "business_identity",
+        "organization_identity",
+        "domain_registration",
+        "email_standard",
+        "contact_validation"
+      ],
+      "continual_queries": [
+        "Contact Recovery Research Agent official documentation current",
+        "contact_recovery_research current standards changelogs advisories",
+        "Contact Recovery Research Agent maintained reference implementation"
+      ],
+      "ingestion_rules": [
+        "prefer project/source truth and official primary authority",
+        "verify volatile claims at task time",
+        "treat community/social sources as discovery only",
+        "record provenance and contradictions",
+        "do not promote source volume into expertise without target-environment verification"
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "stale_after_days": 7,
+        "event_triggers": [
+          "platform_change",
+          "production_failure",
+          "user_correction",
+          "security_advisory",
+          "project_rule_change"
+        ]
+      },
+      "mastery_gate": "Current authoritative evidence + target-environment verification + independent QA where material.",
+      "source_packs": [
+        "research",
+        "growth_ads"
+      ],
+      "depth_contract": {
+        "discovery": "high-recall multi-source discovery",
+        "ingestion": "narrow verified claims only",
+        "freshness": "task-time revalidation for volatile facts",
+        "verification": "independent outcome/evidence review"
+      },
+      "required_evidence": [
+        "authoritative source provenance",
+        "freshness/version context",
+        "task-specific acceptance criteria",
+        "independent or deterministic verification"
+      ]
     }
   ],
   "source_pack_catalog": {
@@ -9180,7 +10071,7 @@
     }
   },
   "coverage_contract": {
-    "profiles": 89,
+    "profiles": 103,
     "every_profile_requires": [
       "source_packs",
       "source_tiers.primary",
