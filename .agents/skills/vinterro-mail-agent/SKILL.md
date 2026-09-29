@@ -196,6 +196,26 @@ Hard rules:
 
 Bounce recovery reuses the existing account claim. It may not create a new first-touch identity merely because a new public email was discovered.
 
+
+### Atomic send-attempt / retry idempotency
+
+The live first-touch gate is executable, not advisory:
+
+1. Call `public.vinterro_prepare_first_touch(...)` immediately before any production first-touch Gmail send.
+2. Proceed only when it returns `allowed=true` and a `send_attempt_token`.
+3. After Gmail SENT acceptance, call `public.vinterro_finalize_first_touch_sent(account_key, send_attempt_token, gmail_message_id, gmail_thread_id, sent_at)`.
+4. If the provider/tool result is timeout, error-after-submit, unknown or otherwise ambiguous, call `public.vinterro_mark_first_touch_ambiguous(...)` and **do not retry**.
+5. A retry is allowed only after Gmail SENT/thread reconciliation proves no message was sent and `public.vinterro_release_first_touch_after_no_send(...)` records that evidence.
+
+Fail closed:
+- no token => no Gmail send;
+- claim function unavailable => no Gmail send;
+- ambiguous attempt => no retry;
+- existing SENT/claim/history conflict => no new first-touch;
+- a provider/tool exception is never proof that Gmail did not accept the message.
+
+This rule exists specifically to prevent duplicate sends caused by provider ambiguity or automatic retry.
+
 ## Gmail history and duplicate gate
 
 Before every first-touch send, search by:
