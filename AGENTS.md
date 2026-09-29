@@ -1,6 +1,6 @@
 # Ercan OS — Shared Agent Contract
 
-Version: 5.1 (2026-09-29)
+Version: 5.2 (2026-09-29)
 
 This repository is the shared control-plane reference for Ercan AI Agency / Ercan OS agents. Every project agent and specialist must load this file first, then the shared registry, `docs/standards/AGENCY_EXCELLENCE_STANDARD.md`, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
 
@@ -38,6 +38,32 @@ Canonical audit/coverage:
 - `@EcommerceExpert` / `E-commerce Expert Agent` — cross-platform commerce, merchandising, checkout, feeds/marketplaces, retention, CRO, analytics and operations → `.agents/skills/ecommerce-specialist/SKILL.md`.
 
 Future specialist agents inherit this contract automatically. Stable routing identities and inheritance are recorded in `docs/standards/AGENT_REGISTRY.md`.
+
+
+## Vinterro Digital mail hard gate — Codex/OpenAI/Vinterro One
+
+Any task involving **Vinterro Digital email**, including `mail ajanı`, `@MailAgent`, `metin ajanı`, `@TextAgent`, outreach, follow-up, customer/prospect reply, proposal email, bounce recovery, or `bana örnek gönder`, MUST load these files before drafting or rendering:
+
+1. `.agents/skills/vinterro-mail-agent/SKILL.md`
+2. `docs/standards/VINTERRO_MAIL_AGENT.md`
+3. `docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html`
+4. `docs/evals/VINTERRO_MAIL_AGENT_REGRESSION.md` when QA/regression is material.
+
+This rule applies from the repository root even when Codex is not currently operating under `projects/vinterro-digital/`. Project-path discovery is not sufficient.
+
+The HTML wrapper and signature are a **locked source artifact**, not prose guidance. Do not reconstruct a visually similar email from memory. Render by preserving the canonical template and replacing only its body/compliance slots. If the canonical template cannot be read, the mail task is `BLOCKED`; do not improvise another wrapper or signature.
+
+Before any Vinterro Digital mail is considered send-ready, run the canonical mail QA gate. At minimum verify:
+- content container `770px`;
+- outer padding `32px 18px`;
+- left-aligned Arial/Helvetica body at `16px / 1.72 / #191919`;
+- exact `1px #e31b23` divider;
+- exact Vinterro Digital signature typography, spacing, contact line and services line from the source template;
+- `vinterro.digital` links to `https://vinterro.digital/`;
+- copy follows the evidence-grounded Vinterro MailAgent/TextAgent contract;
+- test command `bana örnek gönder` means a real test send from `info@vinterro.digital` to `ercansaral@gmail.com` plus SENT/raw-MIME verification.
+
+Near-match variants such as 760/780px containers, alternate padding, altered line-height, centered copy, changed signature colors/letter-spacing, card backgrounds or hand-written replacement signatures are non-conforming and must be rejected before send.
 
 ## “All agents” / qualified-agent routing contract
 
