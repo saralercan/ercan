@@ -260,12 +260,35 @@ Rules:
 - track touch number, channel, date and next action;
 - cadence/frequency is governed by the active campaign/project rule and current platform/legal constraints, not a hardcoded universal schedule.
 
+## Codex/OpenAI discoverability gate
+
+This skill is mandatory for **every Vinterro Digital commercial email task**, even when Codex starts from the repository root and never descends into `projects/vinterro-digital/`.
+
+Trigger terms include, but are not limited to:
+- `mail ajanı`, `@MailAgent`;
+- `metin ajanı`, `@TextAgent`;
+- outreach / cold email / follow-up;
+- customer/prospect reply or proposal email;
+- bounce recovery;
+- `bana örnek gönder`;
+- any request to edit the Vinterro mail body, signature or email appearance.
+
+Load the canonical template file **before** generating HTML. The template file is executable design data, not an example. Never hand-author a replacement wrapper or signature.
+
+Fail closed:
+- missing/unreadable canonical template => `BLOCKED`;
+- canonical token mismatch => `BLOCKED`;
+- MailQA not run when a material send/render is requested => not send-ready.
+
+For Codex work, the route is:
+`root AGENTS.md -> portable-agent-router -> vinterro-mail-agent -> VINTERRO_MAIL_AGENT.md -> VINTERRO_MAIL_CANONICAL_TEMPLATE.html -> copy lane -> MailQA -> provider action`.
+
 ## Canonical HTML template lock
 
 The only approved Vinterro Digital email shell is:
 `docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html`.
 
-This is a **hard visual contract**, not a style suggestion. For first-touch, no-response follow-up, inbound-lead reply and `bana örnek gönder` test mail:
+This is a **hard visual contract**, not a style suggestion. It also locks the signature. For first-touch, no-response follow-up, inbound-lead reply and `bana örnek gönder` test mail:
 - load the canonical template before rendering;
 - replace only the body/compliance slots; do not reconstruct the wrapper from memory;
 - preserve the exact locked geometry and signature;
@@ -276,6 +299,8 @@ This is a **hard visual contract**, not a style suggestion. For first-touch, no-
 - preserve the 1px `#e31b23` divider and exact signature sizes/colors/spacing;
 - the gray 12px compliance/test line is conditional: include the appropriate localized opt-out/test line for cold/test outreach; omit it for an active warm prospect/customer reply unless required;
 - do not center body copy, add cards/background fills, change divider color, restyle the signature, or introduce a second template without explicit user approval.
+- do not rewrite the signature HTML manually even when the visible text looks identical; preserve the exact source-template signature fragment and links.
+- before provider send, validate the rendered HTML with `python3 scripts/validate_vinterro_mail_html.py --file <rendered.html>` when a rendered file exists; otherwise MailQA must verify equivalent raw-MIME tokens after the test/first send.
 
 `MailQA` must reject a rendered mail when the locked visual tokens differ from the canonical template. A visually similar reconstruction is not sufficient.
 
