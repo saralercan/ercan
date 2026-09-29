@@ -250,7 +250,7 @@ These behaviors are mandatory:
 
 1. User says “tüm ajanları çalıştır” for a screenshot-based web redesign → route only the qualified screenshot/UI/platform/QA pod, not mail/map/Meta agents unless those capabilities are genuinely in scope.
 2. User says “tüm ajanları çalıştır” for SEO remediation → route `@TechnicalSEO`, the active platform SEO role when relevant, site-wide scanner/AEO-GEO only when justified, and technical verification; do not run unrelated visual agents.
-3. User asks for a simple text-only correction and says “tüm ajanları çalıştır” → do not manufacture a large multi-agent workflow; use the smallest competent path.
+3. User asks for a simple text-only correction and says “tüm ajanları çalıştır” → activate the materially contributing implementation/lead/QA roles for that task; do not manufacture unrelated fan-out or silently shrink the requested relevant coverage.
 4. User does not name Performance QA but asks to speed up a production website → automatically include `@WebPerformance` and runtime/browser verification because they are required by the task.
 5. User explicitly says ads and live theme must not change → every selected specialist inherits that constraint; no agent may expand scope.
 6. A required capability is unavailable in the runtime → use the closest qualified available path, state the limitation honestly, and never pretend the unavailable specialist executed.

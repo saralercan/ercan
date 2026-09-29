@@ -3,7 +3,7 @@
 Status: active
 Version: 1.0
 Date: 2026-09-24
-Scope: all 89 Vinterro One runtime agents
+Scope: all Vinterro One runtime agents in the live `ercan_os_agents` registry
 
 ## Objective
 

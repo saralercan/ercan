@@ -1,6 +1,6 @@
 ---
 name: continual-expertise-engine
-description: Maintain source-backed, current, principal-level expertise for all 89 Vinterro One runtime agents. Use when improving agents, refreshing knowledge, researching current platform/domain practice, or when a selected specialist needs current authoritative evidence.
+description: Maintain source-backed, current, principal-level expertise for all Vinterro One runtime agents in the live registry. Use when improving agents, refreshing knowledge, researching current platform/domain practice, or when a selected specialist needs current authoritative evidence.
 ---
 
 # Continual Expertise Engine

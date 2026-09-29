@@ -140,22 +140,36 @@ def main() -> int:
         if source_heading not in source_text:
             fail(f"stable source pack missing numbered authority profile: {source_heading}", failures)
 
-    # Production runtime layer: 89 agents
+    # Production runtime layer: derive the inventory size from the versioned mirror.
     runtime = json.loads(read(RUNTIME_PATH))
     runtime_agents = runtime.get("agents", [])
     runtime_names = [a.get("name") for a in runtime_agents]
-    if runtime.get("runtime_agent_count") != 89:
-        fail(f"runtime_agent_count must be 89, got {runtime.get('runtime_agent_count')!r}", failures)
-    if len(runtime_agents) != 89 or len(set(runtime_names)) != 89:
-        fail(f"runtime inventory must contain 89 unique agents; count={len(runtime_agents)}, unique={len(set(runtime_names))}", failures)
-    if [a.get("id") for a in runtime_agents] != list(range(1, 90)):
-        fail("runtime agent IDs must be exactly 1..89", failures)
+    runtime_count = runtime.get("runtime_agent_count")
+    if not isinstance(runtime_count, int) or runtime_count < 1:
+        fail(f"runtime_agent_count must be a positive integer, got {runtime_count!r}", failures)
+    elif len(runtime_agents) != runtime_count:
+        fail(f"runtime inventory count disagrees with runtime_agent_count: {len(runtime_agents)} != {runtime_count}", failures)
+    if len(set(runtime_names)) != len(runtime_agents):
+        fail(f"runtime inventory agent names must be unique; count={len(runtime_agents)}, unique={len(set(runtime_names))}", failures)
+    runtime_ids = [a.get("id") for a in runtime_agents]
+    if any(value is None for value in runtime_ids) or len(set(runtime_ids)) != len(runtime_ids):
+        fail("runtime agent IDs must be present and unique", failures)
 
     activation = runtime.get("activation_contract", {})
     if activation.get("default_state") != "STANDBY":
         fail("runtime activation default_state must be STANDBY", failures)
     if activation.get("never_broadcast_all") is not True:
         fail("runtime master trigger must never broadcast all agents", failures)
+    activation_text = activation.get("behavior", "").lower()
+    for needle in (
+        "complete non-redundant pod",
+        "project lead",
+        "independent QA/reviewer",
+        "Do not optimize for minimum headcount",
+        "literal full-registry fan-out",
+    ):
+        if needle.lower() not in activation_text:
+            fail(f"runtime activation contract missing routing rule: {needle}", failures)
 
     compat = runtime.get("runtime_compatibility", {})
     for surface in ("openai_codex", "claude_code", "vinterro_one"):
@@ -171,14 +185,24 @@ def main() -> int:
     expertise = json.loads(read(EXPERTISE_MATRIX_PATH))
     source_profiles = expertise.get("profiles", [])
     source_names = [p.get("name") for p in source_profiles]
-    if expertise.get("agent_count") != 89:
-        fail(f"expertise matrix agent_count must be 89, got {expertise.get('agent_count')!r}", failures)
-    if len(source_profiles) != 89 or len(set(source_names)) != 89:
-        fail(f"expertise source matrix must contain 89 unique profiles; count={len(source_profiles)}, unique={len(set(source_names))}", failures)
-    if source_names != runtime_names:
+    matrix_count = expertise.get("agent_count")
+    if not isinstance(matrix_count, int) or matrix_count < 1:
+        fail(f"expertise matrix agent_count must be a positive integer, got {matrix_count!r}", failures)
+    elif len(source_profiles) != matrix_count:
+        fail(f"expertise profile count disagrees with agent_count: {len(source_profiles)} != {matrix_count}", failures)
+    if isinstance(runtime_count, int) and isinstance(matrix_count, int) and runtime_count != matrix_count:
+        fail(f"runtime/expertise count drift: runtime={runtime_count}, expertise={matrix_count}", failures)
+    if len(set(source_names)) != len(source_profiles):
+        fail(f"expertise source profile names must be unique; count={len(source_profiles)}, unique={len(set(source_names))}", failures)
+    if set(source_names) != set(runtime_names):
         missing = [n for n in runtime_names if n not in source_names]
         extra = [n for n in source_names if n not in runtime_names]
-        fail(f"expertise matrix must exactly follow runtime inventory order; missing={missing}, extra={extra}", failures)
+        fail(f"expertise matrix must exactly cover runtime inventory; missing={missing}, extra={extra}", failures)
+    source_ids = [p.get("id") for p in source_profiles]
+    if any(value is None for value in source_ids) or len(set(source_ids)) != len(source_ids):
+        fail("expertise profile IDs must be present and unique", failures)
+    if dict(zip(runtime_names, runtime_ids)) != dict(zip(source_names, source_ids)):
+        fail("runtime/expertise IDs must join exactly by agent name", failures)
 
     for p in source_profiles:
         name = p.get("name", "<unknown>")
@@ -233,9 +257,9 @@ def main() -> int:
         "GITHUB_SPECIALIST_EXPANSION_V3.md": ["AGENCY_EXCELLENCE_STANDARD.md", "AGENT_CHAMPIONSHIP_SUITE_V2.md"],
         "AGENT_SCOREBOARD.md": ["AGENT_EXCELLENCE_MANIFEST.json"],
         "GITHUB_SPECIALIST_SCOREBOARD_V3.md": ["AGENT_EXCELLENCE_MANIFEST.json"],
-        "AGENCY_EXCELLENCE_STANDARD.md": ["world-class agency target", "Vinterro One 89-agent runtime contract"],
-        "PORTABLE_AGENT_RUNTIME.md": ["89 active agents", "STANDBY", "AGENT_EXPERTISE_SOURCE_MATRIX.json"],
-        "AGENT_CONTINUAL_EXPERTISE_ENGINE.md": ["all 89 Vinterro One runtime agents", "Shopify deep-specialist requirement", "ercan_os_agent_expertise_profiles", "record_agent_learning"],
+        "AGENCY_EXCELLENCE_STANDARD.md": ["world-class agency target", "live `ercan_os_agents` registry", "complete non-redundant materially relevant pod"],
+        "PORTABLE_AGENT_RUNTIME.md": ["Production runtime count is read from the live `ercan_os_agents` registry", "STANDBY", "AGENT_EXPERTISE_SOURCE_MATRIX.json", "complete non-redundant pod"],
+        "AGENT_CONTINUAL_EXPERTISE_ENGINE.md": ["all Vinterro One runtime agents", "Shopify deep-specialist requirement", "ercan_os_agent_expertise_profiles", "record_agent_learning"],
     }
     for surface, needles in required_refs.items():
         text = governance[surface]
@@ -250,8 +274,8 @@ def main() -> int:
 
     print("Agency Excellence coverage: PASS")
     print("Stable architectural identities: 52/52")
-    print("Vinterro One runtime agents: 89/89")
-    print("Runtime source/expertise profiles: 89/89")
+    print(f"Vinterro One runtime agents: {len(runtime_agents)}/{runtime_count}")
+    print(f"Runtime source/expertise profiles: {len(source_profiles)}/{matrix_count}")
     print("Portable adapters: Codex + Claude + Vinterro One")
     print("Finance Expert: present")
     print("E-commerce Expert: present")

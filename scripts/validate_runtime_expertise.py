@@ -69,31 +69,58 @@ def main() -> int:
 
     agents = runtime.get("agents", [])
     profiles = matrix.get("profiles", [])
+    runtime_count = runtime.get("runtime_agent_count")
+    matrix_count = matrix.get("agent_count")
 
-    if runtime.get("runtime_agent_count") != 89:
-        fail(f"runtime_agent_count must be 89, got {runtime.get('runtime_agent_count')}", failures)
-    if len(agents) != 89:
-        fail(f"runtime manifest must contain 89 agents, got {len(agents)}", failures)
-    if matrix.get("agent_count") != 89:
-        fail(f"expertise matrix agent_count must be 89, got {matrix.get('agent_count')}", failures)
-    if len(profiles) != 89:
-        fail(f"expertise matrix must contain 89 profiles, got {len(profiles)}", failures)
+    if not isinstance(runtime_count, int) or runtime_count < 1:
+        fail(f"runtime_agent_count must be a positive integer, got {runtime_count!r}", failures)
+    elif len(agents) != runtime_count:
+        fail(f"runtime manifest count disagrees with runtime_agent_count: {len(agents)} != {runtime_count}", failures)
+    if not isinstance(matrix_count, int) or matrix_count < 1:
+        fail(f"expertise matrix agent_count must be a positive integer, got {matrix_count!r}", failures)
+    elif len(profiles) != matrix_count:
+        fail(f"expertise profile count disagrees with agent_count: {len(profiles)} != {matrix_count}", failures)
+    if isinstance(runtime_count, int) and isinstance(matrix_count, int) and runtime_count != matrix_count:
+        fail(f"runtime/matrix count drift: runtime={runtime_count}, expertise={matrix_count}", failures)
 
     runtime_names = [a.get("name") for a in agents]
     profile_names = [p.get("name") for p in profiles]
-    if len(set(runtime_names)) != 89:
+    if len(set(runtime_names)) != len(agents):
         fail("runtime agent names are not unique", failures)
-    if len(set(profile_names)) != 89:
+    if len(set(profile_names)) != len(profiles):
         fail("expertise profile names are not unique", failures)
-    if runtime_names != profile_names:
+    if set(runtime_names) != set(profile_names):
         missing = [n for n in runtime_names if n not in profile_names]
         extra = [n for n in profile_names if n not in runtime_names]
-        fail(f"runtime/expertise order or membership drift; missing={missing}, extra={extra}", failures)
+        fail(f"runtime/expertise membership drift; missing={missing}, extra={extra}", failures)
 
-    if [a.get("id") for a in agents] != list(range(1, 90)):
-        fail("runtime manifest IDs must be exactly 1..89", failures)
-    if [p.get("id") for p in profiles] != list(range(1, 90)):
-        fail("expertise profile IDs must be exactly 1..89", failures)
+    runtime_ids = [a.get("id") for a in agents]
+    profile_ids = [p.get("id") for p in profiles]
+    if any(value is None for value in runtime_ids) or len(set(runtime_ids)) != len(runtime_ids):
+        fail("runtime manifest IDs must be present and unique", failures)
+    if any(value is None for value in profile_ids) or len(set(profile_ids)) != len(profile_ids):
+        fail("expertise profile IDs must be present and unique", failures)
+    runtime_id_by_name = dict(zip(runtime_names, runtime_ids))
+    profile_id_by_name = dict(zip(profile_names, profile_ids))
+    if runtime_id_by_name != profile_id_by_name:
+        fail("runtime/expertise IDs must join exactly by agent name", failures)
+
+    source_of_truth = runtime.get("source_of_truth", "")
+    if "live" not in source_of_truth.lower() or "ercan_os_agents" not in source_of_truth:
+        fail("runtime manifest must identify the live ercan_os_agents registry as source of truth", failures)
+    activation = runtime.get("activation_contract") or {}
+    activation_text = activation.get("behavior", "").lower()
+    for needle in (
+        "complete non-redundant pod",
+        "project lead",
+        "independent QA/reviewer",
+        "Do not optimize for minimum headcount",
+        "literal full-registry fan-out",
+    ):
+        if needle.lower() not in activation_text:
+            fail(f"runtime activation contract missing routing rule: {needle}", failures)
+    if activation.get("never_broadcast_all") is not True:
+        fail("runtime activation contract must prohibit literal full-registry fan-out", failures)
 
     runtime_name_set = set(runtime_names)
     for agent in agents:
@@ -177,10 +204,11 @@ def main() -> int:
 
     engine = ENGINE.read_text(encoding="utf-8")
     portable = PORTABLE.read_text(encoding="utf-8")
+    portable_lower = portable.lower()
     agents_contract = ROOT_AGENTS.read_text(encoding="utf-8")
 
     for needle in (
-        "Scope: all 89 Vinterro One runtime agents",
+        "Scope: all Vinterro One runtime agents",
         "Research the whole internet",
         "Shopify deep-specialist requirement",
         "Source authority tiers",
@@ -191,10 +219,13 @@ def main() -> int:
     for needle in (
         "AGENT_CONTINUAL_EXPERTISE_ENGINE.md",
         "AGENT_EXPERTISE_SOURCE_MATRIX.json",
-        "89 active agents",
+        "Production runtime count is read from the live `ercan_os_agents` registry",
+        "complete non-redundant pod",
+        "Do not optimize for minimum headcount",
+        "ChatGPT/OpenAI, Codex, Claude and Vinterro One",
         "STANDBY",
     ):
-        if needle not in portable:
+        if needle.lower() not in portable_lower:
             fail(f"portable runtime missing expertise reference: {needle}", failures)
 
     for needle in (
@@ -212,8 +243,8 @@ def main() -> int:
         return 1
 
     print("Runtime expertise validator: PASS")
-    print("Runtime agents: 89/89")
-    print("Expertise profiles: 89/89")
+    print(f"Runtime agents: {len(agents)}/{runtime_count}")
+    print(f"Expertise profiles: {len(profiles)}/{matrix_count}")
     print("Portable adapters: Codex + Claude + Vinterro One")
     print("Handoffs: valid")
     print("Source packs: deep domain coverage present")

@@ -97,4 +97,4 @@ For v3 specialists, a static `PASS` in `GITHUB_SPECIALIST_SCOREBOARD_V3.md` mean
 - Total named stable routing identities: **52**.
 - Dynamic one-off worker roles are not counted unless promoted into one of these stable tiers.
 
-Stable count does not equal execution fan-out. `@Orchestrator` always selects the minimum sufficient qualified pod for the active task. “Tüm ajanları çalıştır” means all materially relevant qualified specialists, not all 52 identities.
+Stable count does not equal execution fan-out. For ordinary scoped work, `@Orchestrator` may select a task-specific qualified pod. Under the explicit “Tüm ajanları çalıştır” master trigger, it activates the complete non-redundant pod of every materially relevant qualified specialist, including the project lead and independent QA/reviewer—not all 52 identities and not a literal registry fan-out.
