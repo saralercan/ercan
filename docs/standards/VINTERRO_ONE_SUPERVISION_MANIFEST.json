@@ -8,9 +8,9 @@
     "operator_reported_current_agent_count": 103,
     "hardcode_count_for_enforcement": false,
     "unknown_agent_policy": "route_to_general_supervisor_and_require_independent_review_for_R1_plus",
-    "portable_mirror_count_observed": 89,
+    "portable_mirror_count_observed": 103,
     "live_operator_reported_count": 103,
-    "resync_required_when_live_access_available": true,
+    "resync_required_when_live_access_available": false,
     "never_fabricate_missing_agents": true
   },
   "invariants": {
