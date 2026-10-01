@@ -1,0 +1,27 @@
+{
+  "name": "vinterro-one",
+  "version": "1.0.0",
+  "description": "Run Vinterro One routing, project lead selection, specialist pods, independent QA and portable agent contracts inside Codex.",
+  "author": {
+    "name": "Vinterro Digital"
+  },
+  "repository": "https://github.com/saralercan/ercan",
+  "keywords": [
+    "vinterro-one",
+    "codex",
+    "agents",
+    "orchestration",
+    "multi-agent"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Vinterro One",
+    "shortDescription": "Use Vinterro One agents in Codex",
+    "longDescription": "Routes Codex work through the Vinterro One project lead, materially relevant specialist agents, supervision rules and independent QA using the canonical versioned runtime manifest.",
+    "invocationExamples": [
+      "Vinterro One ile bu görevi çalıştır.",
+      "Tüm ajanları çalıştır ve bu projeyi düzelt.",
+      "/agent Drag&Drop Mail Ajanı ile bu thread'i incele."
+    ]
+  }
+}
