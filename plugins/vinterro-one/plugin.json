@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "vinterro-one",
+  "version": "1.0.0",
+  "description": "Use the Vinterro One multi-agent operating system from Codex with project-aware specialist routing, supervision, QA and portable agent contracts.",
+  "author": {
+    "name": "Vinterro Digital"
+  },
+  "repository": "https://github.com/saralercan/ercan",
+  "keywords": [
+    "vinterro-one",
+    "codex",
+    "agents",
+    "orchestration",
+    "multi-agent",
+    "qa",
+    "shopify",
+    "email"
+  ]
+}

@@ -8,6 +8,22 @@ This document defines how OpenAI Codex should execute Ercan OS tasks when workin
 
 Codex must treat repository knowledge as the source of truth and load only the task-relevant instructions. Start from root `AGENTS.md`, then the agent registry, the matching project adapter, and only the standards/skills needed for the current task.
 
+
+## Vinterro One plugin activation
+
+Vinterro One is available to Codex as a repo plugin:
+
+- plugin: `plugins/vinterro-one/`
+- marketplace: `.agents/plugins/marketplace.json`
+- Codex enablement: `.codex/config.toml`
+- primary skill: `vinterro-one-router`
+
+The skill triggers on Vinterro One, `/agent`, named Vinterro One agents, and the qualified-agent master trigger. It must preserve the same project lead, ACTIVE/STANDBY, supervision, security and external-action evidence contracts as the native runtime.
+
+When installed in another repository, use the plugin-bundled reference files if the host repo does not carry the Vinterro One control-plane standards. Host-project rules remain authoritative for local do-not-touch constraints and project-specific implementation details.
+
+A live Vinterro One/Supabase connector is optional, not required for portable Codex routing. If one is already authorized, use it only for the narrow live agent/project/supervision state needed by the task. Do not broaden database access merely because the connector exists.
+
 ## Qualified-agent routing
 
 When the user says **“tüm ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent, Codex must interpret the request as **automatic qualified-agent routing** and load `docs/standards/QUALIFIED_AGENT_ROUTING.md`.
