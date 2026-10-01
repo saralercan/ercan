@@ -44,3 +44,26 @@ Completion: `VERIFIED` only after required implementation + independent browser/
 
 ## Web Builder Capability Pack
 For material storefront generation/modernization, visual editing, localization, media optimization, PWA/offline, frontend-health, browser-operator or web-security work, load `.agents/skills/web-builder-capability-pack/SKILL.md`. Keep `@ShopifyExpert` as the platform owner. Use ShopifyStorefront/HeadlessCommerce lanes only when the inspected task requires them; Hydrogen is not a default. WordPress lanes do not apply to DragDrop unless a separate verified WordPress surface is explicitly introduced.
+
+
+## Customer service & mail runtime
+
+For any customer/designer/brand/partner communication task, load `docs/standards/DRAGDROP_MAIL_AGENT.md` and `.agents/skills/dragdrop-mail-agent/SKILL.md`.
+
+Runtime owners:
+- `Drag&Drop Müşteri Temsilcisi Ajanı` — inbound context, intent, onboarding, product-intake and truthful operational response.
+- `Drag&Drop Mail Ajanı` — Gmail drafting/execution, same-thread reply integrity and post-send evidence.
+
+Canonical product onboarding workbook:
+`DragDrop_Standart_Urun_Yukleme_Sablonu.xlsx`
+
+Product photos are supplied separately through Google Drive or WeTransfer, with filenames mapped to SKU/product code.
+
+Same-thread rule:
+- read the full Gmail thread;
+- show the production draft to the user;
+- require explicit approval before real send;
+- use the actual inbound Gmail message id as `reply_message_id`;
+- verify SENT, raw From = `Drag&Drop <info@draganddrop.tr>`, BCC empty and thread id integrity.
+
+When `tüm ajanları çalıştır` or equivalent is used on a relevant Drag&Drop mail/customer task, both runtime agents are mandatory members of the qualified ACTIVE pod with `@DragDrop` and independent mail QA.

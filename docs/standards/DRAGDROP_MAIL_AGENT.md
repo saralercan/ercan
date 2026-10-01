@@ -1,0 +1,105 @@
+# Drag&Drop Mail & Customer Service Standard
+
+Version: 1.0 (2026-10-01)
+
+This standard governs Drag&Drop designer, brand and customer email operations inside Vinterro One.
+
+## Runtime owners
+
+- `Drag&Drop Baş Uzman Ajanı` — project lead and orchestration owner.
+- `Drag&Drop Müşteri Temsilcisi Ajanı` — inbound customer/designer/brand context, intent, onboarding and operational response owner.
+- `Drag&Drop Mail Ajanı` — Gmail drafting, thread-safe execution and post-send verification owner.
+- `@EmailSupervisor / MailQA` — independent send/thread verification for material sends.
+
+These are project-scoped runtime identities. They do not replace the shared Vinterro One supervision mesh.
+
+## Canonical mailbox
+
+Locked production sender:
+
+`Drag&Drop <info@draganddrop.tr>`
+
+Never send Drag&Drop customer/designer/brand mail from Vinterro Digital or a personal mailbox.
+
+## Same-thread reply hard gate
+
+For every reply to an inbound customer/designer/brand message:
+
+1. Read the full Gmail thread first.
+2. Resolve the actual reply recipient from the original message headers/provider reply recipient.
+3. Draft against the current thread context and current verified Drag&Drop state.
+4. Show the production draft to the user.
+5. Do not send until the user explicitly approves the production reply.
+6. Call Gmail send with the actual inbound Gmail message id as `reply_message_id`.
+7. Preserve the existing conversation; do not create a new cold-email thread for an existing lead/customer conversation.
+8. Verify post-send:
+   - Gmail SENT acceptance;
+   - raw MIME `From: Drag&Drop <info@draganddrop.tr>`;
+   - BCC empty;
+   - returned thread id matches the conversation thread.
+9. If any gate fails, final state is `BLOCKED` or `NOT_VERIFIED`; never claim the reply was sent correctly.
+
+## Designer / brand onboarding product template
+
+Canonical file:
+
+`DragDrop_Standart_Urun_Yukleme_Sablonu.xlsx`
+
+Use this template when a designer or brand needs to provide product information for Drag&Drop onboarding.
+
+Operating rules:
+- keep the form simple and designer-friendly;
+- product information is supplied in the workbook;
+- product photos are not embedded in the workbook;
+- original high-resolution images are supplied separately through Google Drive or WeTransfer;
+- image filenames should map to SKU / product code;
+- do not require unnecessary technical Shopify fields from the designer;
+- Drag&Drop converts the supplied information into the internal Shopify import/publishing structure.
+
+XML rule:
+- the current Drag&Drop stack does not natively import arbitrary external XML product feeds;
+- never imply that a supplied XML feed is already working when it is not;
+- do not tell the customer that an already-tested unsupported XML path will be “checked later” as if its status were unknown;
+- offer the canonical workbook workflow as the practical product-data intake route unless a verified supported integration is actually available.
+
+Catalog rule:
+- do not default to arbitrarily limiting a designer/brand to a small starter selection;
+- the operational goal is to ingest the catalog the partner wants to provide, subject to valid product data, commercial eligibility and platform constraints.
+
+## Copy standard
+
+Customer-facing copy must be:
+- human and agency-grade;
+- concise and clear;
+- specific to the actual request;
+- transparent about technical/commercial limitations;
+- free of invented commission rates, payment terms, integrations, timelines, metrics or capabilities.
+
+Answer the customer's actual question first. Do not add process theater that creates delay without a real need.
+
+## Attachment policy
+
+Cold first touch:
+- no product workbook attachment unless the recipient has already indicated interest and the attachment is relevant to the next step.
+
+Active onboarding / qualified reply:
+- attach the canonical workbook when product data is required;
+- ask for images separately by Drive/WeTransfer;
+- verify the attachment is the canonical current file, not an older Hi&Co or superseded Drag&Drop version.
+
+## "All agents" routing
+
+When the user says `tüm ajanları çalıştır`, `bütün ajanları çalıştır`, `ajanları çalıştır`, `use all agents` or equivalent on a Drag&Drop customer/designer/brand/mail task:
+
+Mandatory ACTIVE pod members:
+- Drag&Drop Baş Uzman Ajanı;
+- Drag&Drop Müşteri Temsilcisi Ajanı;
+- Drag&Drop Mail Ajanı;
+- task-relevant Shopify/e-commerce/commercial specialist(s);
+- independent MailQA / reviewer when a send or send-ready reply is involved.
+
+This remains qualified-agent routing, not literal full-registry fan-out.
+
+## Completion
+
+A production reply is `VERIFIED` only when current thread context, explicit user approval, same-thread Gmail execution and post-send evidence all pass.

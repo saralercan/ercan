@@ -2,7 +2,7 @@
 
 All listed agents inherit root `AGENTS.md`, `AGENCY_EXCELLENCE_STANDARD.md`, `AGENT_CONTINUAL_EXPERTISE_ENGINE.md`, their per-agent profile in `AGENT_EXPERTISE_SOURCE_MATRIX.json`, `AGENT_ENGINEERING.md`, task-relevant domain standards and their project adapter under `projects/`. Stable/JIT specialists inherit the principal-level craft, source, verification and delivery bar through their stable owners. This registry defines routing focus, not separate constitutions.
 
-## Live runtime mirror additions — 90–103
+## Live runtime mirror additions — 90–105
 
 These are **production runtime identities** mirrored from the authenticated Vinterro One `ercan_os_agents` registry. They do not change the separate 52 stable routing-identity architecture. Runtime numbering here follows the canonical mirror order; the live total remains dynamic and may grow beyond 103.
 
@@ -22,12 +22,14 @@ These are **production runtime identities** mirrored from the authenticated Vint
 | 101 | Vinterro Studio Baş Uzman Ajanı | Vinterro Studio project lead; Shopify, catalog, design products, merchandising, CRO, content and sales performance. |
 | 102 | Vinterro One Security Director | Organization-wide security owner and release gate for threat modeling, IAM/auth, RLS, secrets, OAuth/API security, supply-chain, CI/CD and cloud security; Security Auditor remains independent. |
 | 103 | Contact Recovery Research Agent | Read-only contact-recovery research for bounced/delayed/obsolete outreach addresses; identity resolution, current-domain/contact verification, provenance and suppression-safe handoff. |
+| 104 | Drag&Drop Müşteri Temsilcisi Ajanı | Drag&Drop customer/designer/brand communication, onboarding, product-intake, current-state truthfulness and handoff to the mail executor. |
+| 105 | Drag&Drop Mail Ajanı | Drag&Drop Gmail reply executor; locked sender, same-thread reply_message_id execution, explicit user approval and post-send SENT/From/BCC/thread QA. |
 
 Mirror authority:
 - runtime membership/count: live `public.ercan_os_agents`;
 - expertise membership/count: live `public.ercan_os_agent_expertise_profiles`;
 - repository mirrors: `VINTERRO_RUNTIME_AGENT_MANIFEST.json` and `AGENT_EXPERTISE_SOURCE_MATRIX.json`;
-- repo validation must reject a regression below this synchronized 103-agent floor or loss of any of these 14 identities.
+- repo validation must reject a regression below this synchronized 105-agent floor or loss of any of these 16 identities.
 
 
 ## @Orchestrator
@@ -110,6 +112,23 @@ Recovery:
 - `bana örnek gönder` means a real test email from `info@vinterro.digital` to `ercansaral@gmail.com`.
 
 Load `.agents/skills/vinterro-mail-agent/SKILL.md` + `docs/standards/VINTERRO_MAIL_AGENT.md` + `docs/standards/MAIL_ENGINEERING.md`; load `.agents/skills/editorial-writing-capability-pack/SKILL.md` for material outreach/reply copy and `.agents/skills/email-delivery-qa/SKILL.md` for execution verification.
+
+## Drag&Drop customer/mail runtime aliases
+
+These aliases resolve to the live project-scoped runtime identities and follow `docs/standards/DRAGDROP_MAIL_AGENT.md`:
+
+- `@DragDropCustomerService` -> `Drag&Drop Müşteri Temsilcisi Ajanı`
+- `@DragDropMailAgent` -> `Drag&Drop Mail Ajanı`
+
+Entry triggers include Drag&Drop inbound customer/designer/brand replies, onboarding, product-information requests, product workbook delivery, example/test sends and thread QA.
+
+Canonical reply flow:
+`FULL THREAD -> INTENT -> CURRENT-STATE FACT CHECK -> DRAFT -> USER APPROVAL -> SAME-THREAD SEND(reply_message_id) -> SENT/FROM/BCC/THREAD QA -> NEXT ACTION`
+
+Canonical product workbook:
+`DragDrop_Standart_Urun_Yukleme_Sablonu.xlsx`
+
+On a relevant Drag&Drop mail/customer task plus the master trigger `tüm ajanları çalıştır` (or equivalent), both runtime identities are mandatory ACTIVE qualified-pod members alongside the Drag&Drop project lead and independent MailQA/reviewer.
 
 ## Digital specialist JIT aliases
 These aliases expose deeper expertise while mapping onto existing stable owners; they **do not** increase the stable routing identity count.

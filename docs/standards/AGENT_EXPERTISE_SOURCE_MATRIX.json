@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-29",
-  "agent_count": 103,
+  "generated_at": "2026-10-01",
+  "agent_count": 105,
   "philosophy": "Broad continuous discovery, narrow verified ingestion. Research the web deeply, but never equate volume with truth or expertise.",
   "global_sources": {
     "discovery": [
@@ -11557,6 +11557,173 @@
         "thesis_policy": "Theses are Tier-3 academic evidence for hypotheses, methods, edge cases and evaluation design; they are not normative platform authority.",
         "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works into prompts or repositories."
       }
+    },
+    {
+      "id": 104,
+      "name": "Drag&Drop Müşteri Temsilcisi Ajanı",
+      "role": "customer_service_specialist",
+      "family": "project_operations",
+      "source_tiers": {
+        "primary": [
+          "current Drag&Drop project context and live Shopify state",
+          "full Gmail customer/designer/brand thread",
+          "official Shopify documentation for catalog/platform facts"
+        ],
+        "canonical_github": [
+          "saralercan/draganddrop-pro",
+          "saralercan/ercan"
+        ],
+        "reviewed_secondary": [
+          "high-quality customer-service and commerce operations sources when useful"
+        ]
+      },
+      "research_topics": [
+        "Drag&Drop customer/designer/brand communication and onboarding",
+        "product intake, catalog readiness, Shopify constraints and truthful customer response"
+      ],
+      "continual_queries": [
+        "Drag&Drop current customer onboarding Shopify product import supported methods",
+        "current Gmail thread customer intent product onboarding status"
+      ],
+      "ingestion_rules": [
+        "Full thread and current project truth outrank stale assumptions.",
+        "Do not invent commercial terms, integrations or capabilities.",
+        "Use the canonical product workbook and separate image handoff when product data is required.",
+        "Material replies require independent review before VERIFIED."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 3,
+        "event_triggers": [
+          "inbound customer/designer/brand reply",
+          "Shopify platform change",
+          "user correction",
+          "onboarding process change"
+        ],
+        "stale_after_days": 9
+      },
+      "mastery_gate": {
+        "structural": "thread context + project truth + onboarding standard present",
+        "behavioral": "complete representative customer onboarding reply with independent QA",
+        "comparative": "only after reproducible service-quality benchmark"
+      },
+      "source_packs": [
+        "shopify",
+        "ecommerce",
+        "content_editorial",
+        "qa",
+        "academic_research"
+      ],
+      "depth_contract": {
+        "discovery": "Use current project truth, full Gmail thread, official Shopify docs and only task-relevant external research.",
+        "ingestion": "Distill verified customer/onboarding facts into concise response and next action.",
+        "freshness": "Re-check thread and platform state at task time.",
+        "verification": "Independent QA required for production send-sensitive completion."
+      },
+      "required_evidence": [
+        "full thread before reply",
+        "current technical/commercial evidence",
+        "canonical workbook when product intake is requested",
+        "explicit user approval before production send",
+        "independent mail/thread QA for VERIFIED"
+      ],
+      "academic_queries": [
+        "customer service ecommerce onboarding human factors empirical evaluation systematic review"
+      ],
+      "thesis_queries": [
+        "ecommerce customer onboarding service design human computer interaction thesis dissertation"
+      ],
+      "academic_ingestion": {
+        "evidence_priority": "project/official > canonical implementation > peer-reviewed/thesis > preprint/working paper > discovery/community",
+        "preserve_limitations": true,
+        "require_original_source_for_material_claims": true,
+        "thesis_policy": "Academic sources can improve service/onboarding design but never override current project/platform facts.",
+        "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works."
+      }
+    },
+    {
+      "id": 105,
+      "name": "Drag&Drop Mail Ajanı",
+      "role": "mail_agent",
+      "family": "mail_operations",
+      "source_tiers": {
+        "primary": [
+          "full Gmail thread and provider message/thread ids",
+          "current Drag&Drop mailbox state",
+          "Vinterro One Drag&Drop mail standard",
+          "official Gmail/provider behavior when volatile"
+        ],
+        "canonical_github": [
+          "saralercan/ercan"
+        ],
+        "reviewed_secondary": [
+          "high-quality email operations/deliverability engineering sources when relevant"
+        ]
+      },
+      "research_topics": [
+        "same-thread Gmail replies, sender integrity and post-send verification",
+        "Drag&Drop customer/designer/brand email execution"
+      ],
+      "continual_queries": [
+        "Gmail reply thread integrity reply_message_id current behavior",
+        "email sender MIME SENT thread verification best practices"
+      ],
+      "ingestion_rules": [
+        "The full Gmail thread is mandatory before reply.",
+        "Use real inbound message id as reply_message_id.",
+        "Locked sender is info@draganddrop.tr.",
+        "No production reply before explicit user approval.",
+        "SENT acceptance is not inbox delivery; verify raw From, BCC and thread integrity."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 2,
+        "event_triggers": [
+          "production reply task",
+          "Gmail connector/API change",
+          "send verification failure",
+          "user correction"
+        ],
+        "stale_after_days": 7
+      },
+      "mastery_gate": {
+        "structural": "mailbox + same-thread + approval + QA contract present",
+        "behavioral": "execute representative same-thread reply with full post-send evidence",
+        "comparative": "only after reproducible mail regression benchmark"
+      },
+      "source_packs": [
+        "mail",
+        "content_editorial",
+        "qa",
+        "security",
+        "academic_research"
+      ],
+      "depth_contract": {
+        "discovery": "Use current Gmail/provider evidence and the canonical Drag&Drop mail standard.",
+        "ingestion": "Distill only execution-relevant thread and delivery facts.",
+        "freshness": "Re-check provider/thread state immediately before production send.",
+        "verification": "Require independent MailQA and post-send evidence."
+      },
+      "required_evidence": [
+        "full Gmail thread",
+        "actual source message id",
+        "explicit user approval",
+        "SENT acceptance",
+        "raw MIME From verification",
+        "empty BCC",
+        "same returned thread id"
+      ],
+      "academic_queries": [
+        "email conversation threading human factors customer communication empirical evaluation systematic review"
+      ],
+      "thesis_queries": [
+        "email interaction design customer service messaging human computer interaction thesis dissertation"
+      ],
+      "academic_ingestion": {
+        "evidence_priority": "provider/project truth > canonical implementation > peer-reviewed/thesis > secondary",
+        "preserve_limitations": true,
+        "require_original_source_for_material_claims": true,
+        "thesis_policy": "Academic evidence may improve messaging workflows but never overrides provider execution truth.",
+        "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works."
+      }
     }
   ],
   "source_pack_catalog": {
@@ -11959,8 +12126,8 @@
   },
   "live_registry_sync": {
     "table": "public.ercan_os_agent_expertise_profiles",
-    "verified_live_count": 103,
-    "verified_at": "2026-09-29",
+    "verified_live_count": 105,
+    "verified_at": "2026-10-01",
     "verification": "authenticated Vinterro One Supabase registry"
   },
   "academic_evidence": {
