@@ -11627,10 +11627,12 @@
         "independent mail/thread QA for VERIFIED"
       ],
       "academic_queries": [
-        "customer service ecommerce onboarding human factors empirical evaluation systematic review"
+        "customer service ecommerce onboarding human factors empirical evaluation systematic review",
+        "online marketplace seller onboarding service recovery trust customer experience peer reviewed"
       ],
       "thesis_queries": [
-        "ecommerce customer onboarding service design human computer interaction thesis dissertation"
+        "ecommerce customer onboarding service design human computer interaction thesis dissertation",
+        "online marketplace seller onboarding customer support service design thesis dissertation"
       ],
       "academic_ingestion": {
         "evidence_priority": "project/official > canonical implementation > peer-reviewed/thesis > preprint/working paper > discovery/community",
@@ -11712,10 +11714,12 @@
         "same returned thread id"
       ],
       "academic_queries": [
-        "email conversation threading human factors customer communication empirical evaluation systematic review"
+        "email conversation threading human factors customer communication empirical evaluation systematic review",
+        "email deliverability reply threading customer support communication human computer interaction peer reviewed"
       ],
       "thesis_queries": [
-        "email interaction design customer service messaging human computer interaction thesis dissertation"
+        "email interaction design customer service messaging human computer interaction thesis dissertation",
+        "email threading service communication trust customer experience thesis dissertation"
       ],
       "academic_ingestion": {
         "evidence_priority": "provider/project truth > canonical implementation > peer-reviewed/thesis > secondary",
