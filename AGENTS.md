@@ -84,6 +84,26 @@ Near-match variants such as 760/780px containers, alternate padding, altered lin
 
 Before any **production first-touch** Vinterro Digital send, the selected pod must also pass the account-level atomic dedupe gate from `docs/standards/VINTERRO_MAIL_AGENT.md`: normalize business identity across brand/location/current+previous domain/all known emails/aliases/store+booking URLs/Gmail history, then acquire a claim in `public.vinterro_outreach_account_claims` immediately before Gmail send. A different email address never creates a new lead. Claim conflict or unavailable live claim store => `BLOCKED`; do not send. Parallel research is allowed, but production sends require independent atomic claims. Historical Gmail evidence remains authoritative and can suppress a send even when the claim table has no row.
 
+## Drag&Drop customer/mail hard gate — Vinterro One
+
+Any task involving **Drag&Drop customer, designer, brand or partner email**, including `Drag&Drop Mail Ajanı`, `@DragDropMailAgent`, `Drag&Drop Müşteri Temsilcisi Ajanı`, `@DragDropCustomerService`, inbound reply, onboarding, product-information request, attachment workflow, or test/example send, MUST load:
+
+1. `.agents/skills/dragdrop-mail-agent/SKILL.md`
+2. `docs/standards/DRAGDROP_MAIL_AGENT.md`
+3. `projects/dragdrop/AGENTS.md`
+4. `docs/evals/DRAGDROP_MAIL_AGENT_REGRESSION.md` when send/thread QA or regression is material.
+
+Hard rules:
+- locked sender: `Drag&Drop <info@draganddrop.tr>`;
+- existing conversations are replied to in the same Gmail thread using the real inbound Gmail message id as `reply_message_id`;
+- production reply send requires explicit user approval;
+- post-send verification must confirm SENT, raw From, empty BCC and thread integrity;
+- canonical designer/brand product workbook is `DragDrop_Standart_Urun_Yukleme_Sablonu.xlsx`;
+- product images are requested separately through Google Drive or WeTransfer;
+- never claim arbitrary XML import support when current evidence shows it is unsupported.
+
+For a relevant Drag&Drop mail/customer task, the master trigger `tüm ajanları çalıştır` (and equivalents) MUST include Drag&Drop Baş Uzman Ajanı, Drag&Drop Müşteri Temsilcisi Ajanı and Drag&Drop Mail Ajanı in the qualified ACTIVE pod, plus independent MailQA/reviewer for send-sensitive work.
+
 ## “All agents” / qualified-agent routing contract
 
 User commands such as **“tüm ajanları çalıştır”**, **“bütün ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent do not mean execute every registered runtime agent. They are an intent alias for **automatic qualified-agent routing** across the live Vinterro One runtime inventory.
