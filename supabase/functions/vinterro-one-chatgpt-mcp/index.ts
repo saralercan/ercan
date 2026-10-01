@@ -189,21 +189,25 @@ function createServer(supabase: SupabaseClientLike, authHeader: string) {
       annotations: { readOnlyHint: true, destructiveHint: false },
     },
     async ({ run_id }) => {
-      const { data: supervision, error } = await supabase
-        .from('vinterro_one_supervision_runs')
-        .select('*')
-        .eq('run_id', run_id)
-        .maybeSingle()
-      if (error) return errorResult('Could not read supervision state', error)
-      if (!supervision) return errorResult(`Supervision not found for run: ${run_id}`)
-
-      const [{ data: reviews, error: reviewError }, { data: events, error: eventError }] = await Promise.all([
-        supabase.from('vinterro_one_supervision_reviews').select('*').eq('supervision_id', supervision.id).order('created_at'),
-        supabase.from('vinterro_one_supervision_events').select('*').eq('supervision_id', supervision.id).order('created_at'),
-      ])
-      if (reviewError) return errorResult('Could not read supervision reviews', reviewError)
-      if (eventError) return errorResult('Could not read supervision events', eventError)
-      return textResult({ ok: true, supervision, reviews: reviews ?? [], events: events ?? [] })
+      try {
+        const response = await fetch(`${SUPABASE_URL}/functions/v1/vinterro-one-supervision`, {
+          method: 'POST',
+          headers: {
+            Authorization: authHeader,
+            apikey: ANON_KEY,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ action: 'get_supervision', run_id }),
+          signal: AbortSignal.timeout(30000),
+        })
+        const data = await response.json().catch(() => ({}))
+        if (!response.ok) {
+          return errorResult(String(data?.error || `Vinterro One supervision HTTP ${response.status}`), data)
+        }
+        return textResult(data)
+      } catch (error) {
+        return errorResult(error instanceof Error ? error.message : String(error))
+      }
     },
   )
 
