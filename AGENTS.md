@@ -116,6 +116,14 @@ When Codex is working in this repository:
 - a live connector may refine current agent health/status/version, but the versioned plugin/runtime contract remains the safe portable fallback;
 - never claim a live agent run merely because the Codex plugin contract was loaded.
 
+## Dynamic all-project Codex coverage
+
+Codex/Vinterro One project coverage is driven by `docs/standards/VINTERRO_PROJECT_REGISTRY.json` plus the live Vinterro One registry when authorized. The live `ercan_os_projects` + `ercan_os_agents` state is authoritative for current active projects and project-scoped agents.
+
+A dedicated `projects/<slug>/AGENTS.md` is optional enrichment, not a prerequisite for Vinterro One membership. When an active project has no dedicated adapter, load `projects/_runtime/AGENTS.md` + `projects/_runtime/PROJECT.md`, then route through its current project lead, materially relevant project-scoped agents, qualified global specialists, independent QA/reviewer and applicable supervision/release gates.
+
+Never restrict Codex to a hard-coded subset such as Drag&Drop, Vinterro Digital, Go Ayvalık or Ayvalık Vibes. New active projects in the live registry inherit Vinterro One routing immediately. Never hardcode the project or runtime-agent count into routing semantics.
+
 ## “All agents” / qualified-agent routing contract
 
 User commands such as **“tüm ajanları çalıştır”**, **“bütün ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent do not mean execute every registered runtime agent. They are an intent alias for **automatic qualified-agent routing** across the live Vinterro One runtime inventory.
