@@ -6,18 +6,24 @@ on:
       - 'AGENTS.md'
       - 'CLAUDE.md'
       - 'docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json'
+      - 'docs/standards/VINTERRO_PROJECT_REGISTRY.json'
       - 'docs/standards/PORTABLE_AGENT_RUNTIME.md'
       - 'docs/standards/AGENT_CONTINUAL_EXPERTISE_ENGINE.md'
       - 'docs/standards/AGENT_EXPERTISE_SOURCE_MATRIX.json'
       - 'docs/standards/PLATFORM_EXPERT_TRAINING.md'
       - 'docs/standards/SHOPIFY_EXPERT_SOURCE_PACK.md'
       - 'docs/standards/AGENT_REGISTRY.md'
+      - 'projects/**/AGENTS.md'
+      - 'projects/**/PROJECT.md'
+      - 'plugins/vinterro-one/**'
+      - '.codex/config.toml'
       - '.agents/skills/portable-agent-router/**'
       - '.agents/skills/finance-specialist/**'
       - '.agents/skills/ecommerce-specialist/**'
       - '.claude/agents/vinterro-router.md'
       - 'scripts/validate_runtime_expertise.py'
       - 'scripts/validate_academic_expertise.py'
+      - 'scripts/validate_vinterro_codex_project_routing.py'
       - 'docs/research/ACADEMIC_SOURCE_CATALOG_2026-09-29.md'
       - 'docs/standards/ACADEMIC_RESEARCH_SOURCE_PACK.md'
       - '.github/workflows/runtime-expertise.yml'
@@ -31,6 +37,11 @@ on:
       - '.claude/agents/**'
       - 'scripts/validate_runtime_expertise.py'
       - 'scripts/validate_academic_expertise.py'
+      - 'scripts/validate_vinterro_codex_project_routing.py'
+      - 'projects/**/AGENTS.md'
+      - 'projects/**/PROJECT.md'
+      - 'plugins/vinterro-one/**'
+      - '.codex/config.toml'
       - 'docs/research/ACADEMIC_SOURCE_CATALOG_2026-09-29.md'
       - '.github/workflows/runtime-expertise.yml'
 
@@ -50,3 +61,5 @@ jobs:
         run: python3 scripts/validate_runtime_expertise.py
       - name: Validate academic/thesis expertise coverage
         run: python3 scripts/validate_academic_expertise.py
+      - name: Validate Codex all-project routing coverage
+        run: python3 scripts/validate_vinterro_codex_project_routing.py
