@@ -1,8 +1,8 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-09-29",
+  "generated_at": "2026-10-01",
   "source_of_truth": "Vinterro One live ercan_os_agents registry",
-  "runtime_agent_count": 103,
+  "runtime_agent_count": 105,
   "activation_contract": {
     "default_state": "STANDBY",
     "master_trigger": [
@@ -4344,6 +4344,98 @@
         "vinterro_one": true
       },
       "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
+    },
+    {
+      "id": 104,
+      "name": "Drag&Drop Müşteri Temsilcisi Ajanı",
+      "role": "customer_service_specialist",
+      "family": "project_operations",
+      "status": "active",
+      "version": "1.0.0",
+      "health": 100,
+      "instructions": "Drag&Drop customer/designer/brand communication and onboarding owner. Read the full Gmail thread, verify current technical/commercial facts, use the canonical product workbook DragDrop_Standart_Urun_Yukleme_Sablonu.xlsx when product data is needed, request images separately by Google Drive/WeTransfer, and hand actual Gmail execution to Drag&Drop Mail Ajanı. Production replies require explicit user approval. On relevant 'tüm ajanları çalıştır' requests this agent is mandatory in the qualified ACTIVE pod.",
+      "tools": [
+        "gmail",
+        "files",
+        "knowledge",
+        "shopify",
+        "project_orchestration"
+      ],
+      "permissions": {
+        "scope": "single_project",
+        "can_draft": true,
+        "production_send": "explicit_user_approval_only",
+        "same_thread_required": true,
+        "canonical_product_template": "DragDrop_Standart_Urun_Yukleme_Sablonu.xlsx"
+      },
+      "handoffs": [
+        "Drag&Drop Mail Ajanı",
+        "Drag&Drop Baş Uzman Ajanı",
+        "E-commerce Expert Agent",
+        "Shopify Agent",
+        "QA Agent"
+      ],
+      "limits": {
+        "max_steps": 18,
+        "max_retries": 3,
+        "max_cost_usd": 2
+      },
+      "activation": "jit",
+      "default_state": "STANDBY",
+      "excellence_standard": "AGENCY_EXCELLENCE_STANDARD.md",
+      "continual_expertise": true,
+      "adapters": {
+        "codex": true,
+        "claude": true,
+        "vinterro_one": true
+      },
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
+    },
+    {
+      "id": 105,
+      "name": "Drag&Drop Mail Ajanı",
+      "role": "mail_agent",
+      "family": "mail_operations",
+      "status": "active",
+      "version": "1.0.0",
+      "health": 100,
+      "instructions": "Drag&Drop Gmail execution owner. Locked sender is Drag&Drop <info@draganddrop.tr>. Existing inbound conversations must be answered in the same thread using the actual inbound Gmail message id as reply_message_id. Read full thread, draft, show the user, require explicit approval, send only in-thread, then verify SENT, raw From, empty BCC and returned thread id. Canonical onboarding workbook is DragDrop_Standart_Urun_Yukleme_Sablonu.xlsx. On relevant 'tüm ajanları çalıştır' requests this agent is mandatory in the qualified ACTIVE pod.",
+      "tools": [
+        "gmail",
+        "files",
+        "knowledge",
+        "project_orchestration"
+      ],
+      "permissions": {
+        "scope": "single_project",
+        "mailbox": "info@draganddrop.tr",
+        "bcc_allowed": false,
+        "production_send": "explicit_user_approval_only",
+        "same_thread_required": true,
+        "canonical_product_template": "DragDrop_Standart_Urun_Yukleme_Sablonu.xlsx",
+        "post_send_verification_required": true
+      },
+      "handoffs": [
+        "Drag&Drop Müşteri Temsilcisi Ajanı",
+        "Drag&Drop Baş Uzman Ajanı",
+        "MailQA",
+        "QA Agent"
+      ],
+      "limits": {
+        "max_steps": 20,
+        "max_retries": 3,
+        "max_cost_usd": 2
+      },
+      "activation": "jit",
+      "default_state": "STANDBY",
+      "excellence_standard": "AGENCY_EXCELLENCE_STANDARD.md",
+      "continual_expertise": true,
+      "adapters": {
+        "codex": true,
+        "claude": true,
+        "vinterro_one": true
+      },
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json"
     }
   ],
   "product_name": "Vinterro One",
@@ -4356,9 +4448,9 @@
   },
   "live_registry_sync": {
     "table": "public.ercan_os_agents",
-    "verified_live_count": 103,
-    "verified_expertise_profile_count": 103,
-    "verified_at": "2026-09-29",
+    "verified_live_count": 105,
+    "verified_expertise_profile_count": 105,
+    "verified_at": "2026-10-01",
     "verification": "authenticated Vinterro One Supabase registry"
   }
 }
