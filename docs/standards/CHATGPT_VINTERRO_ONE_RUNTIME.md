@@ -62,6 +62,20 @@ Read tools:
 
 The bridge is intentionally read-first. External writes remain with the actual connected provider/tool and its approval/security gates.
 
+## Current connection readiness — 2026-10-01
+
+Verified backend state:
+- `ercan-os-api` live routing supports dynamic project resolution, project-lead-first routing and no fixed active-agent ceiling.
+- `vinterro-one-chatgpt-mcp` is deployed as an OAuth-protected, user/RLS-scoped, read-first MCP bridge.
+- MCP protected-resource metadata resolves successfully.
+- Project JWKS is asymmetric ES256 and available.
+
+Current OAuth/UI gate:
+- Supabase OAuth 2.1 server discovery currently reports `feature_disabled`.
+- Therefore the remote MCP bridge is **backend-ready but not yet authorizable from ChatGPT**.
+- Do not call MCP connection `VERIFIED` until OAuth 2.1 server + authorization consent path + required client registration are enabled and a real ChatGPT authorization/tool scan succeeds.
+- On ChatGPT plans/workspaces without custom MCP attachment, use the connected Supabase app/plugin live-registry route instead. This is a supported Vinterro One runtime path, not a degraded agent-selection contract.
+
 ## Required routing behavior
 
 Before substantial Vinterro One project work, resolve the route from current task evidence.
