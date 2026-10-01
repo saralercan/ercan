@@ -149,7 +149,7 @@ def main() -> int:
             fail(f"AGENTS.md missing dynamic project coverage rule: {needle}", failures)
 
     fallback_needles = (
-        "project Baş Uzman Ajanı",
+        "activate its current project lead first",
         "complete materially relevant ACTIVE pod",
         "independent reviewer/QA",
         "Release Gate",
