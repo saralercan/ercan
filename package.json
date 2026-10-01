@@ -7,7 +7,8 @@
     "test": "node --test services/vinterro-sales-worker/worker.test.mjs",
     "test:supervision": "node --test services/vinterro-supervision/supervision.test.mjs",
     "validate:supervision": "python3 scripts/validate_vinterro_one_supervision.py",
-    "test:all": "npm test && npm run test:supervision && npm run validate:supervision"
+    "test:all": "npm test && npm run test:supervision && npm run validate:supervision && npm run validate:codex-routing",
+    "validate:codex-routing": "python3 scripts/validate_vinterro_codex_project_routing.py"
   },
   "engines": {
     "node": ">=20"
