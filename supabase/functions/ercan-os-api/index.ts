@@ -645,7 +645,7 @@ Deno.serve(async (req: Request) => {
         agent: {
           id: agent.id,
           name: agent.name,
-          role: 'research',
+          role: agent.role,
           specialist_role: agent.role,
           instructions: [String(agent.instructions || ''), expertiseInstruction].join('\n\n')
         },

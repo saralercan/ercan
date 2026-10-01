@@ -116,11 +116,14 @@ def main() -> int:
 
     if "const maxActive = masterMode ? 8 : 5" in control:
         fail("live control-plane source regressed to fixed 5/8-agent ceiling", failures)
+    if "role: 'research'" in control:
+        fail("live control-plane must return the actual primary specialist role, not a hard-coded research role", failures)
     for needle in (
         "function resolveProject(",
         "projectLead",
         "no-fixed-agent-cap",
         "selectedProjectId = routing.project?.id || body.project_id || null",
+        "role: agent.role",
         "Vinterro One Security Director",
         "Security Auditor",
     ):
