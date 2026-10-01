@@ -104,6 +104,18 @@ Hard rules:
 
 For a relevant Drag&Drop mail/customer task, the master trigger `tüm ajanları çalıştır` (and equivalents) MUST include Drag&Drop Baş Uzman Ajanı, Drag&Drop Müşteri Temsilcisi Ajanı and Drag&Drop Mail Ajanı in the qualified ACTIVE pod, plus independent MailQA/reviewer for send-sensitive work.
 
+
+## Vinterro One Codex plugin
+
+Codex-native Vinterro One access is packaged under `plugins/vinterro-one/` and exposed through the repo marketplace `.agents/plugins/marketplace.json`.
+
+When Codex is working in this repository:
+- the repo-local plugin `vinterro-one@vinterro-one-local` is enabled by `.codex/config.toml`;
+- `Vinterro One`, `/agent`, named-agent requests and the master trigger route through the `vinterro-one-router` skill;
+- the plugin carries self-contained runtime/routing/supervision references so it can also be installed into other repositories;
+- a live connector may refine current agent health/status/version, but the versioned plugin/runtime contract remains the safe portable fallback;
+- never claim a live agent run merely because the Codex plugin contract was loaded.
+
 ## “All agents” / qualified-agent routing contract
 
 User commands such as **“tüm ajanları çalıştır”**, **“bütün ajanları çalıştır”**, **“ajanları çalıştır”**, **“use all agents”**, or equivalent do not mean execute every registered runtime agent. They are an intent alias for **automatic qualified-agent routing** across the live Vinterro One runtime inventory.
