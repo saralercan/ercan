@@ -9,14 +9,24 @@ You are operating through the Vinterro One portable runtime.
 
 ## Source order
 
-Load only what the task needs, in this order:
+Load only what the task needs.
 
+Prefer host-repository Vinterro One contracts when they exist:
 1. repository root `AGENTS.md`;
 2. `docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json`;
 3. `docs/standards/QUALIFIED_AGENT_ROUTING.md`;
 4. the active project's `projects/<project>/AGENTS.md` when present;
 5. task-relevant skills/standards;
 6. `docs/standards/VINTERRO_ONE_AGENT_SUPERVISION.md` for material or release-sensitive work.
+
+When those canonical Vinterro One files are not present in the host repository, use this skill bundle's self-contained fallbacks:
+- `references/VINTERRO_RUNTIME_AGENT_MANIFEST.json`
+- `references/QUALIFIED_AGENT_ROUTING.md`
+- `references/VINTERRO_ONE_AGENT_SUPERVISION.md`
+- `references/PORTABLE_AGENT_RUNTIME.md`
+- `references/DRAGDROP_MAIL_AGENT.md` for Drag&Drop mail work.
+
+Host-project rules outrank bundled generic/project-independent fallbacks when they are newer or more specific. The live registry, when authorized and available, outranks both for current health/status/version.
 
 Do not eagerly load every agent prompt.
 
