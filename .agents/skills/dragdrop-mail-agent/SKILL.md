@@ -21,6 +21,8 @@ Load in this order:
 
 ## Core execution
 
+Locked sender: `Drag&Drop <info@draganddrop.tr>`.
+
 For an inbound reply:
 - read the full thread;
 - classify intent and current stage;
