@@ -68,7 +68,12 @@ When the live control-plane connector is unavailable:
 
 When the live connector is available, live registry/state may refine the repo snapshot for current health/status/version, but it must not silently weaken project standards.
 
-## Provider adapters
+## ChatGPT live-connection priority
+
+For ChatGPT/GPT, connection preference is: Vinterro One ChatGPT MCP -> connected Supabase app/plugin -> versioned GitHub/repository mirror. The first available authorized source determines current-state fidelity, but all three preserve the same routing, project, expertise, supervision and completion contracts.
+
+The live ChatGPT MCP is `vinterro-one-chatgpt-mcp`; it exposes read-first route/status/agent/project/supervision tools. When a ChatGPT plan/workspace cannot attach custom MCP apps, the authorized Supabase app/plugin is the live-registry fallback. Do not treat an unavailable custom MCP feature as a Vinterro One outage.
+
 
 ### OpenAI / GPT / Codex
 

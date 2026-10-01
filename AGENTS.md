@@ -116,6 +116,12 @@ When Codex is working in this repository:
 - a live connector may refine current agent health/status/version, but the versioned plugin/runtime contract remains the safe portable fallback;
 - never claim a live agent run merely because the Codex plugin contract was loaded.
 
+## ChatGPT / GPT Vinterro One hard route
+
+ChatGPT/OpenAI must use the same Vinterro One routing contract as Codex. Load `docs/standards/CHATGPT_VINTERRO_ONE_RUNTIME.md` for substantial Vinterro One work. Prefer the authenticated `vinterro-one-chatgpt-mcp` live bridge when the ChatGPT account/workspace supports custom MCP; otherwise use the authorized Supabase app/plugin to read the live registry, then the GitHub portable mirror as final fallback.
+
+The absence of custom MCP support on a ChatGPT plan does not authorize a fake live connection and does not reduce the specialist pod. Every route still resolves project lead -> complete materially relevant project/global specialists -> independent QA/supervision -> applicable release gate. Never use the historical fixed 5/8-agent ceiling.
+
 ## Dynamic all-project Codex coverage
 
 Codex/Vinterro One project coverage is driven by `docs/standards/VINTERRO_PROJECT_REGISTRY.json` plus the live Vinterro One registry when authorized. The live `ercan_os_projects` + `ercan_os_agents` state is authoritative for current active projects and project-scoped agents.
