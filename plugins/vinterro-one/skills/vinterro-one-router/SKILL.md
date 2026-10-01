@@ -63,6 +63,9 @@ Treat `/agent <name>`, `@<agent>`, or a clear named-agent request as an explicit
 
 Resolve the requested identity against the live registry first when available, otherwise the portable manifest. Keep its permissions, project scope, handoffs and QA gates.
 
+
+Codex compatibility invariant: project coverage **must never be limited to hard-coded examples**. For the master trigger, activate the **complete qualified global specialist/QA/risk pod** together with the current project lead and materially relevant project-scoped specialists. These phrases are part of the shared regression contract and apply equally to ChatGPT/OpenAI.
+
 ## Project lead rule
 
 Project coverage is dynamic. Never limit routing to hard-coded examples.
