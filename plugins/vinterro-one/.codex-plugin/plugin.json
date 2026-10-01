@@ -1,12 +1,14 @@
 {
   "name": "vinterro-one",
-  "version": "1.0.0",
-  "description": "Run Vinterro One routing, project lead selection, specialist pods, independent QA and portable agent contracts inside Codex.",
+  "version": "1.2.0",
+  "description": "Run Vinterro One routing, dynamic all-project lead selection, complete materially relevant specialist pods, independent QA and shared ChatGPT/OpenAI/Codex portable agent contracts.",
   "author": {
     "name": "Vinterro Digital"
   },
   "repository": "https://github.com/saralercan/ercan",
   "keywords": [
+    "openai",
+    "chatgpt",
     "vinterro-one",
     "codex",
     "agents",
@@ -16,8 +18,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Vinterro One",
-    "shortDescription": "Use Vinterro One agents in Codex",
-    "longDescription": "Routes Codex work through the Vinterro One project lead, materially relevant specialist agents, supervision rules and independent QA using the canonical versioned runtime manifest.",
+    "shortDescription": "Use Vinterro One agents in Codex with shared GPT runtime parity",
+    "longDescription": "Routes Codex work through the same Vinterro One live/portable project, specialist, supervision and QA contract used by ChatGPT/OpenAI and the native runtime.",
     "invocationExamples": [
       "Vinterro One ile bu görevi çalıştır.",
       "Tüm ajanları çalıştır ve bu projeyi düzelt.",
