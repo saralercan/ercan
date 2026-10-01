@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "system": "Vinterro One",
+  "snapshot_date": "2026-10-01",
+  "authority": {
+    "live": "public.ercan_os_projects + public.ercan_os_agents",
+    "portable_mirror": "this file",
+    "rule": "When an authorized live registry is available, live active project/agent state outranks this portable mirror."
+  },
+  "routing_contract": {
+    "all_active_projects_supported": true,
+    "dedicated_adapter_required": false,
+    "fallback_adapter": "projects/_runtime",
+    "master_trigger": "Activate the complete materially relevant ACTIVE pod: project lead + distinct project-scoped specialists + qualified global specialists + independent QA/reviewer + risk/release gates as needed. Never literal full-registry fan-out."
+  },
+  "projects": [
+    {
+      "runtime_slug": "vinterro-digital",
+      "canonical_slug": "vinterro-digital",
+      "name": "Vinterro Digital",
+      "lead_agent": "Vinterro Digital Baş Uzman Ajanı",
+      "adapter": "projects/vinterro-digital",
+      "adapter_type": "dedicated"
+    },
+    {
+      "runtime_slug": "drag-drop",
+      "canonical_slug": "dragdrop",
+      "name": "Drag&Drop",
+      "lead_agent": "Drag&Drop Baş Uzman Ajanı",
+      "adapter": "projects/dragdrop",
+      "adapter_type": "dedicated"
+    },
+    {
+      "runtime_slug": "ayval-k-vibes",
+      "canonical_slug": "ayvalik-vibes",
+      "name": "Ayvalık Vibes",
+      "lead_agent": "Ayvalık Vibes Baş Uzman Ajanı",
+      "adapter": "projects/ayvalik-vibes",
+      "adapter_type": "dedicated"
+    },
+    {
+      "runtime_slug": "go-ayval-k",
+      "canonical_slug": "goayvalik",
+      "name": "Go Ayvalık",
+      "lead_agent": "Go Ayvalık Baş Uzman Ajanı",
+      "adapter": "projects/goayvalik",
+      "adapter_type": "dedicated"
+    },
+    {
+      "runtime_slug": "ayval-k-reklam",
+      "canonical_slug": "ayvalik-reklam",
+      "name": "Ayvalık Reklam",
+      "lead_agent": "Ayvalık Reklam Baş Uzman Ajanı",
+      "adapter": "projects/_runtime",
+      "adapter_type": "runtime_fallback"
+    },
+    {
+      "runtime_slug": "vinterro-kesif",
+      "canonical_slug": "vinterro-kesif",
+      "name": "Vinterro Keşif",
+      "lead_agent": "Vinterro Keşif Agent",
+      "adapter": "projects/_runtime",
+      "adapter_type": "runtime_fallback"
+    },
+    {
+      "runtime_slug": "vinterro-studio",
+      "canonical_slug": "vinterro-studio",
+      "name": "Vinterro Studio",
+      "lead_agent": "Vinterro Studio Baş Uzman Ajanı",
+      "adapter": "projects/_runtime",
+      "adapter_type": "runtime_fallback"
+    },
+    {
+      "runtime_slug": "localroot",
+      "canonical_slug": "localroot",
+      "name": "LocalRoot",
+      "lead_agent": "LocalRoot Baş Uzman Ajanı",
+      "adapter": "projects/_runtime",
+      "adapter_type": "runtime_fallback"
+    },
+    {
+      "runtime_slug": "dukkan-ayvalik",
+      "canonical_slug": "dukkan-ayvalik",
+      "name": "Dükkan Ayvalık",
+      "lead_agent": "Dükkan Ayvalık Baş Uzman Ajanı",
+      "adapter": "projects/_runtime",
+      "adapter_type": "runtime_fallback"
+    },
+    {
+      "runtime_slug": "cotti-cotti",
+      "canonical_slug": "cotti-cotti",
+      "name": "Cotti Cotti",
+      "lead_agent": "Cotti Cotti Baş Uzman Ajanı",
+      "adapter": "projects/_runtime",
+      "adapter_type": "runtime_fallback"
+    },
+    {
+      "runtime_slug": "vinterro-social-os",
+      "canonical_slug": "vinterro-social-os",
+      "name": "Vinterro Social OS",
+      "lead_agent": "Vinterro Social OS Baş Uzman Ajanı",
+      "adapter": "projects/_runtime",
+      "adapter_type": "runtime_fallback"
+    },
+    {
+      "runtime_slug": "forme",
+      "canonical_slug": "forme",
+      "name": "FORMÉ",
+      "lead_agent": "FORMÉ Baş Uzman Ajanı",
+      "adapter": "projects/_runtime",
+      "adapter_type": "runtime_fallback"
+    },
+    {
+      "runtime_slug": "cicek-sahaf",
+      "canonical_slug": "cicek-sahaf",
+      "name": "Çiçek Sahaf",
+      "lead_agent": "Çiçek Sahaf Baş Uzman Ajanı",
+      "adapter": "projects/_runtime",
+      "adapter_type": "runtime_fallback"
+    }
+  ]
+}

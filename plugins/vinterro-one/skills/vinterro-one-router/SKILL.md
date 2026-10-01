@@ -13,13 +13,15 @@ Load only what the task needs.
 
 Prefer host-repository Vinterro One contracts when they exist:
 1. repository root `AGENTS.md`;
-2. `docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json`;
-3. `docs/standards/QUALIFIED_AGENT_ROUTING.md`;
-4. the active project's `projects/<project>/AGENTS.md` when present;
-5. task-relevant skills/standards;
-6. `docs/standards/VINTERRO_ONE_AGENT_SUPERVISION.md` for material or release-sensitive work.
+2. `docs/standards/VINTERRO_PROJECT_REGISTRY.json`;
+3. `docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json`;
+4. `docs/standards/QUALIFIED_AGENT_ROUTING.md`;
+5. the active project's dedicated `projects/<project>/AGENTS.md` when present, otherwise `projects/_runtime/AGENTS.md`;
+6. task-relevant skills/standards;
+7. `docs/standards/VINTERRO_ONE_AGENT_SUPERVISION.md` for material or release-sensitive work.
 
 When those canonical Vinterro One files are not present in the host repository, use this skill bundle's self-contained fallbacks:
+- `references/VINTERRO_PROJECT_REGISTRY.json`
 - `references/VINTERRO_RUNTIME_AGENT_MANIFEST.json`
 - `references/QUALIFIED_AGENT_ROUTING.md`
 - `references/VINTERRO_ONE_AGENT_SUPERVISION.md`
@@ -80,12 +82,18 @@ The repo mirror is a supported fallback, not a reason to block ordinary Codex wo
 
 ## Project lead rule
 
-When a project is identifiable, route through that project's single Baş Uzman Ajanı first. The project lead preserves project constraints and chooses the specialist pod.
+When a project is identifiable, resolve it from the live Vinterro One project registry when authorized and available; otherwise use `VINTERRO_PROJECT_REGISTRY.json`. Route through the current project lead first. The project lead preserves project constraints and chooses the specialist pod.
 
-Examples:
+Project coverage is dynamic and **must never be limited to hard-coded examples**. Dedicated filesystem adapters enrich project behavior but do not define whether a project belongs to Vinterro One. If a live/portable active project has no dedicated adapter, load `projects/_runtime/AGENTS.md` (or the bundled project-registry fallback when installed outside this repository) and continue routing.
+
+For the master trigger, add every project-scoped specialist with a distinct material contribution plus the complete qualified global specialist/QA/risk pod. Do not reduce routing to the lead alone, and do not literally fan out the entire registry.
+
+Examples only:
 - Drag&Drop -> Drag&Drop Baş Uzman Ajanı
 - Vinterro Digital -> Vinterro Digital Baş Uzman Ajanı
 - Go Ayvalık -> Go Ayvalık Baş Uzman Ajanı
+- FORMÉ -> FORMÉ Baş Uzman Ajanı
+- Vinterro Keşif -> Vinterro Keşif Agent
 
 ## Supervision
 
