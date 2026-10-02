@@ -1,5 +1,4 @@
 name,platform,source_url,record_type,verification,enrichment_status,outreach_status
-"267","Local Makers","","Doğrulandı","","needs_enrichment","blocked_until_enriched"
 "30 Kağıt İşleri","Local Makers","https://localmakers.com.tr/pages/makers","Maker / marka / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
 "-ve studio","Local Makers","https://localmakers.com.tr/pages/makers","Maker / marka / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
 "[IM]perfectionists","Local Makers","https://localmakers.com.tr/pages/makers","Maker / marka / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
@@ -267,5 +266,3 @@ name,platform,source_url,record_type,verification,enrichment_status,outreach_sta
 "Zeynep Akdemir Creative Studio","Local Makers","https://localmakers.com.tr/pages/makers","Maker / marka / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
 "Zone Design Store","Local Makers","https://localmakers.com.tr/pages/makers","Maker / marka / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
 "Zozo Cares","Local Makers","https://localmakers.com.tr/pages/makers","Maker / marka / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
-"Bağımsız maker/tasarım marketplace","Local Makers","","Evet","Public Makers dizini mevcut.","needs_enrichment","blocked_until_enriched"
-"https://localmakers.com.tr/pages/makers","Local Makers","","Makers public directory","","needs_enrichment","blocked_until_enriched"
