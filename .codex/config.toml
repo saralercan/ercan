@@ -11,6 +11,10 @@ When the user says 'tüm ajanları çalıştır', 'bütün ajanları çalıştı
 
 CODEX NATIVE SUBAGENT BRIDGE (2026-10-02): Vinterro One runtime identities are logical expert contracts; native Codex subagents are bounded execution threads. Use the [agents.*] custom roles declared below to execute exact Vinterro One contracts. Any named runtime agent may be delegated through vinterro_specialist (or the more specific project-lead/research/implementation/reviewer/security/language role) with the exact agent name included in the delegated task. Never attempt to open the whole registry concurrently. Keep at most the configured 8 spawned threads open. When a spawn reports an agent/thread limit, first wait for active work, close completed agent threads, then continue the remaining qualified pod in the next wave. A thread-limit condition is scheduling backpressure, not proof that Vinterro One agents are unavailable.
 
+
+
+VINTERRO DIGITAL MAIL HARD ROUTE: If the active task involves Vinterro Digital email/outreach/reply/example-send in any form — including /agent in mail context, mail ajanı, @MailAgent, Vinterro Digital ajanını çalıştır, tüm/bütün ajanları çalıştır with mail in scope, first-touch, follow-up, prospect/customer reply, proposal email, bounce recovery, or bana örnek gönder — route through the dedicated native role vinterro_mail_agent BEFORE any draft/render/send work. That role must load the canonical MailAgent skill, standard and HTML source. Generic orchestrator/specialist roles may assist, but they may not replace or bypass the dedicated mail route. Historical Gmail messages are evidence only and never a replacement visual template.
+
 Project coverage is dynamic. Resolve the active project against docs/standards/VINTERRO_PROJECT_REGISTRY.json and, when an authorized live Vinterro One registry is available, current public.ercan_os_projects/public.ercan_os_agents state. A dedicated projects/<slug>/AGENTS.md is optional enrichment; if it is absent, use projects/_runtime/AGENTS.md and continue. Never restrict Codex routing to a hard-coded subset of projects. Every active project inherits the same qualified-agent, independent-QA, supervision and release-gate semantics.
 
 For Shopify, WordPress or Wix implementation/architecture work, load docs/standards/PLATFORM_EXPERT_TRAINING.md and route through the matching stable expert identity in docs/standards/AGENT_REGISTRY.md: @ShopifyExpert, @WordPressExpert or @WixExpert. For material production work, use docs/evals/PLATFORM_EXPERT_CERTIFICATION.md as the competence/eval gate. Platform experts must inspect the actual project and then consult current official platform docs, schemas and the smallest relevant official skill source JIT; do not rely on stale model memory. Do not run all three platform experts unless the task genuinely spans all three platforms.
@@ -45,6 +49,11 @@ default_subagent_reasoning_effort = "medium"
 [agents.vinterro_orchestrator]
 description = "Coordinate Vinterro One routing, wave scheduling, supervision and final synthesis."
 config_file = "agents/vinterro-orchestrator.toml"
+
+
+[agents.vinterro_mail_agent]
+description = "Dedicated Vinterro Digital MailAgent bridge; mandatory canonical route for mail/outreach/reply/example-send tasks."
+config_file = "agents/vinterro-mail-agent.toml"
 
 [agents.vinterro_project_lead]
 description = "Execute an exact Vinterro One project-lead contract for the active project."

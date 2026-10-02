@@ -24,6 +24,11 @@ When the user says "tüm ajanları çalıştır", "bütün ajanları çalıştı
 - keep unrelated or redundant agents standby;
 - include an independent verifier when the output requires QA.
 
+
+## Vinterro Digital mail hard route
+
+If the active task includes Vinterro Digital email/outreach/reply/example-send work — including `/agent` in mail context, `mail ajanı`, `@MailAgent`, `Vinterro Digital ajanını çalıştır`, `tüm/bütün ajanları çalıştır` with mail in scope, first-touch, follow-up, prospect/customer reply, proposal email, bounce recovery, or `bana örnek gönder` — route the mail work through `.claude/agents/vinterro-mail-agent.md` before drafting/rendering/sending. General project or specialist routes may assist but may not replace this route. The canonical HTML/template/signature must never be reconstructed from memory or historical Gmail examples.
+
 Preserve provider-neutral agent mandates. Claude-specific tool syntax is an adapter, not a new source of truth.
 
 Finance work routes to Finance Expert Agent. Cross-platform commerce work routes to E-commerce Expert Agent, adding Shopify/WooCommerce/CRO/analytics/SEO/finance specialists only as relevant.
