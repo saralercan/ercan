@@ -65,12 +65,12 @@ The Orchestrator should:
 - start independent high-value workstreams first;
 - preserve one slot for independent QA/reviewer when practical;
 - wait for agents whose output is a dependency;
-- close completed native agent threads;
+- close completed agent threads;
 - start the next qualified wave;
 - never keep finished threads open merely to preserve history.
 
 If Codex reports `agent thread limit reached` or an equivalent concurrency refusal:
-1. do not conclude that Vinterro One is unavailable;
+1. a thread-limit condition is not proof that Vinterro One agents are unavailable;
 2. inspect current open agent work;
 3. wait for in-flight work that should finish;
 4. close completed threads;
