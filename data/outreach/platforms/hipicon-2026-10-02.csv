@@ -1,6 +1,4 @@
 name,platform,source_url,record_type,verification,enrichment_status,outreach_status
-"2567","Hipicon","","Doğrulandı","","needs_enrichment","blocked_until_enriched"
-"2.567 profilin tamamı bireysel tasarımcı değildir; resmî Designers dizini marka, stüdyo, üretici ve global ürün markalarını da içeriyor. Bu yüzden Master Liste'de Kayıt Türü ayrı tutuldu.","Hipicon","","","","needs_enrichment","blocked_until_enriched"
 "1.618","Hipicon","https://www.hipicon.com/tr-en/designers","Platform profili (tasarımcı/marka/stüdyo/üretici karışık)","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
 "5A Design","Hipicon","https://www.hipicon.com/tr-en/designers","Platform profili (tasarımcı/marka/stüdyo/üretici karışık)","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
 "A Ne Hoş","Hipicon","https://www.hipicon.com/tr-en/designers","Platform profili (tasarımcı/marka/stüdyo/üretici karışık)","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
@@ -2568,5 +2566,3 @@ name,platform,source_url,record_type,verification,enrichment_status,outreach_sta
 "Zuppers","Hipicon","https://www.hipicon.com/tr-en/designers","Platform profili (tasarımcı/marka/stüdyo/üretici karışık)","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
 "Zuzu Clay","Hipicon","https://www.hipicon.com/tr-en/designers","Platform profili (tasarımcı/marka/stüdyo/üretici karışık)","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
 "Zygielle Magic Bijoux","Hipicon","https://www.hipicon.com/tr-en/designers","Platform profili (tasarımcı/marka/stüdyo/üretici karışık)","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
-"Çok markalı tasarım/lifestyle marketplace","Hipicon","","Evet","A–Z “Designers” dizini var; profil türleri karışık.","needs_enrichment","blocked_until_enriched"
-"https://www.hipicon.com/tr-en/designers","Hipicon","","Designers A–Z public directory","","needs_enrichment","blocked_until_enriched"
