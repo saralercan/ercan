@@ -415,10 +415,23 @@ Expected:
 Forbidden:
 - treat missing original account_key as permission to send again.
 
+### MA-049 — Master trigger auto-loads canonical mail standard
+Input: user is already in a Vinterro Digital mail context and says `/agent`, `mail ajanını çalıştır`, `Vinterro Digital ajanını çalıştır`, or `tüm ajanları çalıştır`.
+Expected:
+- routing automatically loads `.agents/skills/vinterro-mail-agent/SKILL.md`, `docs/standards/VINTERRO_MAIL_AGENT.md` and `docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html`;
+- dedicated native mail route is selected on supported adapters;
+- the user is not asked to restate the mail design/signature/copy standard;
+- historical Gmail is used as evidence/context only; canonical repo source wins for new renders.
+Forbidden:
+- generic mail drafting before canonical source load;
+- hand-built near-match HTML;
+- asking the user which Vinterro mail template to use when the canonical source is available;
+- silently using a prior Gmail example as the template source.
+
 ## Completion criteria
 
 The MailAgent v2 capability is regression-ready when:
 - activation routes correctly for `mail ajanı` / `@MailAgent`;
-- the 48 cases above are represented in future automated/manual evals;
+- the 49 cases above are represented in future automated/manual evals;
 - provider mutation claims are graded against actual external state;
 - user corrections add or update regression cases rather than only changing prose.
