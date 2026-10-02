@@ -17,7 +17,7 @@ Branch: ayvalik-reklam-codex-recovery-2026-10-02
 Artifact: ayvalik-reklam-codex-recovery-2.5.3.zip
 Library: /Ayvalik Reklam Mac Dosyalari/ayvalik-reklam-codex-recovery-2.5.3.zip
 Library id: libfile_b046168c08c08191bfeb0b383702b4ff
-SHA-256: 2d490bb29e9fd1158786d382d069a499c01215e093fcaeda125498f348b77772
+SHA-256: d302ccb9a782c3d8e6ea1a36006956b80452eb9422385e7f0894688080a851b0
 
 Stable WordPress plugin folder:
 - ayvalik-reklam-codex-recovery
@@ -26,10 +26,21 @@ Stable WordPress plugin folder:
 - Zero-touch activation gate: when all managed sections are disabled (default), no frontend recovery JS is enqueued.
 - Activation alone therefore does not patch Header, Hero, Banner, Services, Projects, About, Contact or Footer.
 - Existing site content remains the source of truth until an administrator explicitly enables a section.
-- Default collection mode is append, not replace.
-- PHP 8.3 missing mode warning fixed.
 - Malformed nested option values are normalized instead of reaching the renderer as scalar/null values.
+- PHP 8.3 missing collection-mode warning fixed.
+- Recovery now claims both hidden admin_page and legacy parent page hooks for ayvalik-reklam-content, without touching global admin hooks.
 - Admin renderer is wrapped in Throwable recovery and logs exact exception details.
+
+## Existing-content import and safe sync
+- “Mevcut içeriği içe aktar” reads the current homepage from the same WordPress origin.
+- It only populates the form: it does not save, enable sections, or alter the public site.
+- Imported Service and Project/Gallery rows are enabled inside the form, while their parent sections remain disabled.
+- Default collection mode is sync:
+  - update existing cards by stable row index,
+  - append new rows after existing cards,
+  - do not delete unmatched existing cards.
+- Inactive intermediate rows do not shift later rows onto the wrong existing card.
+- Replace mode remains available but is not the safe default.
 
 ## Customer panel contract rendered and verified
 Navigation/sections:
@@ -50,9 +61,10 @@ Rendered default panel:
 - 45 media-picker controls
 - 48 textarea/description fields
 - two “add new record” workflows
+- live-content import button
 - client JS max: 50 rows
 - server sanitizer hard cap: 50 rows
-- mobile admin breakpoint: 960 px
+- mobile admin breakpoints: 960 px and 720 px
 
 ## Recovered public DOM contract
 Verified against the stored real Ayvalık Reklam preview:
@@ -82,19 +94,24 @@ Verified against the stored real Ayvalık Reklam preview:
 - service collection padded to 20
 - valid rows preserved
 - service sanitizer caps at 50
+- legacy parent page hook claimed
+- hidden admin page hook claimed
+- global admin hooks untouched
+- bare submenu slug removed
+- canonical submenu URL restored
 - rendered admin section/navigation contract
 - recovered frontend selector contract
 
 ## Important remaining gate
-This candidate has NOT yet been declared customer-final because the current ChatGPT session does not expose the Hostinger WordPress/Hosting MCP tools. The selected Hostinger connector currently exposes no scoped hosting_listWebsitesV1 / WordPress management actions here.
+This candidate is NOT customer-final yet because this ChatGPT session does not expose the Hostinger WordPress/Hosting MCP actions. The explicitly selected Hostinger connector skill is loaded, but scoped tools such as hosting_listWebsitesV1 and WordPress management/deploy actions are absent from the active tool surface.
 
 Before any Hostinger write:
 1. read current live state,
-2. name the exact site/account/resource,
-3. get one explicit confirmation for the write,
-4. preserve a rollback point,
+2. identify the exact site/account/resource from Hostinger list calls,
+3. preserve a rollback point,
+4. ask for one explicit confirmation naming the exact recovery-plugin write,
 5. deploy only the recovery plugin,
-6. verify wp-admin panel open/save/reload,
+6. verify wp-admin panel open/import/save/reload,
 7. verify public desktop/mobile rendering and all main service/contact flows,
 8. purge caches only after validation.
 
