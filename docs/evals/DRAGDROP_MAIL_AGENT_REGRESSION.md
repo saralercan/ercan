@@ -1,6 +1,6 @@
 # Drag&Drop Mail Agent Regression
 
-Version: 1.0 (2026-10-01)
+Version: 1.1 (2026-10-03)
 
 Purpose: prevent regressions in Drag&Drop customer/designer/brand email handling.
 
@@ -49,3 +49,36 @@ On a relevant Drag&Drop mail/customer task plus `tüm ajanları çalıştır`, t
 
 ### DD-MAIL-010 — send verification
 A production send is not VERIFIED until SENT acceptance, raw From, empty BCC and thread identity have been checked.
+
+
+### DD-MAIL-011 — Türkiye language default
+For a Türkiye-based brand/designer, default to Turkish. English requires evidence from the correspondent/context or a verified foreign-language recipient.
+
+Fail if English is chosen only because the brand name/site looks international.
+
+### DD-MAIL-012 — canonical HTML source
+HTML mail must load and preserve `docs/standards/DRAGDROP_MAIL_CANONICAL_TEMPLATE.html`.
+
+Fail on a hand-reconstructed near-match wrapper/footer. If the source cannot be read, expected state is `BLOCKED`.
+
+### DD-MAIL-013 — CTA visual system
+When HTML contains CTA buttons, each CTA must use the locked outlined-badge system: white surface, thin `#d7dfd8` border, ~12px radius, left outlined badge/icon area, strong label and `→`.
+
+Required canonical mappings:
+- `B2B | Kurumsal Siparişler →` -> `https://www.draganddrop.tr/pages/kurumsal-siparisler`
+- `PANEL | Tasarımcı Paneli →` -> `https://draganddrop.online/designer/dashboard`
+
+Fail on legacy solid-green buttons, unrelated pill styles or raw HTML links used in place of intended CTA buttons.
+
+### DD-MAIL-014 — body signoff
+Do not add `Sevgiler, Drag&Drop` between the body and canonical footer.
+
+Fail if the body duplicates the brand signoff before the footer.
+
+### DD-MAIL-015 — exact example send
+When the user says `bana örnek gönder`, send the exact production candidate from `Drag&Drop <info@draganddrop.tr>` to `ercansaral@gmail.com`.
+
+Verify SENT and raw From. This action must not send the real customer.
+
+### DD-MAIL-016 — human agency copy
+Reject generic AI/template language, process theater and unnecessary corporate filler. The reply must answer the actual customer/designer request with natural, context-aware agency language.
