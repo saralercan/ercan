@@ -116,6 +116,23 @@ When Codex is working in this repository:
 - a live connector may refine current agent health/status/version, but the versioned plugin/runtime contract remains the safe portable fallback;
 - never claim a live agent run merely because the Codex plugin contract was loaded.
 
+## Codex native agent execution bridge
+
+Codex must load `docs/standards/CODEX_NATIVE_AGENT_BRIDGE.md` for Vinterro One multi-agent execution.
+The live/runtime Vinterro One registry is a logical expert inventory, not a command to create one native thread per agent.
+
+Project-local `.codex/config.toml` declares a bounded native role pool and
+`agents.max_concurrent_threads_per_session = 8`. Any selected Vinterro One runtime identity can execute through
+the exact-match language role or the appropriate project-lead/research/implementation/reviewer/QA/security archetype;
+all other identities route through `vinterro_specialist` with the exact runtime agent name included in the delegated task.
+
+On `agent thread limit reached` or an equivalent refusal, Codex must not stop the Vinterro One workflow solely for that reason.
+Wait for relevant in-flight work, close completed agent threads, and schedule the remaining qualified pod in the next wave.
+Never retry-spam a saturated agent pool and never interpret a thread ceiling as evidence that the logical Vinterro One agents do not exist.
+
+Native subagent execution must be evidenced by the Codex runtime. Loading an agent contract alone is not proof that a separate
+native agent ran.
+
 ## ChatGPT / GPT Vinterro One hard route
 
 ChatGPT/OpenAI must use the same Vinterro One routing contract as Codex. Load `docs/standards/CHATGPT_VINTERRO_ONE_RUNTIME.md` for substantial Vinterro One work. Prefer the authenticated `vinterro-one-chatgpt-mcp` live bridge when the ChatGPT account/workspace supports custom MCP; otherwise use the authorized Supabase app/plugin to read the live registry, then the GitHub portable mirror as final fallback.
