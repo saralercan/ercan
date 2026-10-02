@@ -59,7 +59,7 @@ The live runtime count is dynamic. This supervision contract applies to every ac
 
 ## Vinterro Digital mail hard gate — Codex/OpenAI/Vinterro One
 
-Any task involving **Vinterro Digital email**, including `mail ajanı`, `@MailAgent`, `metin ajanı`, `@TextAgent`, outreach, follow-up, customer/prospect reply, proposal email, bounce recovery, or `bana örnek gönder`, MUST load these files before drafting or rendering:
+Any task involving **Vinterro Digital email**, including `/agent` when the current context is Vinterro Digital mail, `mail ajanı`, `@MailAgent`, `Vinterro Digital ajanını çalıştır`, `tüm/bütün ajanları çalıştır` when mail is in scope, `metin ajanı`, `@TextAgent`, outreach, follow-up, customer/prospect reply, proposal email, bounce recovery, or `bana örnek gönder`, MUST load these files before drafting or rendering:
 
 1. `.agents/skills/vinterro-mail-agent/SKILL.md`
 2. `docs/standards/VINTERRO_MAIL_AGENT.md`
@@ -68,7 +68,7 @@ Any task involving **Vinterro Digital email**, including `mail ajanı`, `@MailAg
 
 This rule applies from the repository root even when Codex is not currently operating under `projects/vinterro-digital/`. Project-path discovery is not sufficient.
 
-The HTML wrapper and signature are a **locked source artifact**, not prose guidance. Do not reconstruct a visually similar email from memory. Render by preserving the canonical template and replacing only its body/compliance slots. If the canonical template cannot be read, the mail task is `BLOCKED`; do not improvise another wrapper or signature.
+The user must never be asked to restate or rediscover this standard in normal operation. Load it automatically from the canonical repo sources. The HTML wrapper and signature are a **locked source artifact**, not prose guidance. Do not reconstruct a visually similar email from memory. Render by preserving the canonical template and replacing only its body/compliance slots. If the canonical template cannot be read, the mail task is `BLOCKED`; do not improvise another wrapper or signature.
 
 Before any Vinterro Digital mail is considered send-ready, run the canonical mail QA gate. At minimum verify:
 - content container `770px`;
