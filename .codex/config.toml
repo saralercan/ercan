@@ -1,3 +1,4 @@
+#:schema https://developers.openai.com/codex/config-schema.json
 # Vinterro One — repository-local Codex configuration
 # Keep this file small. Stable execution policy lives in AGENTS.md and docs/standards/.
 
@@ -7,6 +8,8 @@ Treat the repository root AGENTS.md as the primary Vinterro One execution map an
 Every stable named agent is governed by docs/standards/WORLD_CLASS_AGENT_RESEARCH.md and docs/standards/AGENCY_EXCELLENCE_STANDARD.md. Stable Core identities 1-21 use docs/research/AGENT_SOURCE_PACKS.md; GitHub Specialist v3 identities 22-52 use docs/research/SPECIALIST_EXCELLENCE_SOURCE_PACKS.md. Use docs/standards/AGENT_EXCELLENCE_MANIFEST.json for the canonical 1-52 principal mandate, source authority, remediation, hard-fail, championship and independent-verification coverage. For material or volatile work, load only the matching JIT source section and re-check current primary evidence rather than relying on stale model memory. For any runtime specialist selection, consult docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json and docs/standards/AGENT_EXPERTISE_SOURCE_MATRIX.json JIT; runtime roles are STANDBY by default and the live `ercan_os_agents` registry remains the count authority. Use .agents/skills/expert-research-refresh/SKILL.md when a source pack is stale, a new paper/standard/advisory materially changes practice, or the user asks to deepen agent expertise. For material certification/comparative evaluation, use docs/evals/WORLD_CLASS_AGENT_BENCHMARK_SUITE.md together with the relevant platform/domain eval. Before any real behavioral/external benchmark run, also load docs/evals/BENCHMARK_RUNTIME_CONTRACT.md, docs/evals/BENCHMARK_COMPUTE_POLICY.md, docs/evals/EXTERNAL_BENCHMARK_MATRIX.md and benchmarks/manifest.json. Treat Inspect AI as an optional neutral evaluation runner, never as authority over a benchmark's canonical scoring/version contract. Paid/cloud benchmark execution must remain manual-only, explicit-confirmation gated, isolated from production credentials, and use the benchmark project's canonical evaluation path where available. Never promote NOT_RUN to a score without actual execution evidence, and do not claim an agent is perfect or objectively best-in-world without dated reproducible comparative benchmark evidence.
 
 When the user says 'tüm ajanları çalıştır', 'bütün ajanları çalıştır', 'ajanları çalıştır', 'use all agents', or equivalent, interpret it as automatic qualified-agent routing — never as literal full-registry fan-out. Load docs/standards/QUALIFIED_AGENT_ROUTING.md. Detect the active project and task, infer the capabilities required, and activate the complete non-redundant pod of every materially contributing specialist/workstream, including the project lead and independent QA/reviewer. Do not optimize for minimum headcount. The user should not need to name specialists individually. Select roles by project fit, task competence, tool/data fit, dependency fit, risk fit and verification fit. Include required specialists even when the user did not name them; exclude unrelated/redundant agents even when the user said 'all agents'. Apply the same contract across ChatGPT/OpenAI, Codex and Vinterro One. Never claim an unavailable or unexecuted specialist actually ran.
+
+CODEX NATIVE SUBAGENT BRIDGE (2026-10-02): Vinterro One runtime identities are logical expert contracts; native Codex subagents are bounded execution threads. Use the [agents.*] custom roles declared below to execute exact Vinterro One contracts. Any named runtime agent may be delegated through vinterro_specialist (or the more specific project-lead/research/implementation/reviewer/security/language role) with the exact agent name included in the delegated task. Never attempt to open the whole registry concurrently. Keep at most the configured 8 spawned threads open. When a spawn reports an agent/thread limit, first wait for active work, close completed agent threads, then continue the remaining qualified pod in the next wave. A thread-limit condition is scheduling backpressure, not proof that Vinterro One agents are unavailable.
 
 Project coverage is dynamic. Resolve the active project against docs/standards/VINTERRO_PROJECT_REGISTRY.json and, when an authorized live Vinterro One registry is available, current public.ercan_os_projects/public.ercan_os_agents state. A dedicated projects/<slug>/AGENTS.md is optional enrichment; if it is absent, use projects/_runtime/AGENTS.md and continue. Never restrict Codex routing to a hard-coded subset of projects. Every active project inherits the same qualified-agent, independent-QA, supervision and release-gate semantics.
 
@@ -27,3 +30,74 @@ Preserve project do-not-touch constraints across all selected workstreams. Prefe
 # Vinterro One repo-local Codex plugin
 [plugins."vinterro-one@vinterro-one-local"]
 enabled = true
+
+
+# Native Codex multi-agent bridge for Vinterro One.
+# Vinterro One has a larger logical registry; Codex executes the complete relevant pod
+# through these native role archetypes in bounded waves rather than opening every runtime
+# identity as a simultaneous thread.
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 8
+interrupt_message = true
+default_subagent_reasoning_effort = "medium"
+
+[agents.vinterro_orchestrator]
+description = "Coordinate Vinterro One routing, wave scheduling, supervision and final synthesis."
+config_file = "agents/vinterro-orchestrator.toml"
+
+[agents.vinterro_project_lead]
+description = "Execute an exact Vinterro One project-lead contract for the active project."
+config_file = "agents/vinterro-project-lead.toml"
+
+[agents.vinterro_specialist]
+description = "Execute any exact named Vinterro One specialist contract from the runtime manifest."
+config_file = "agents/vinterro-specialist.toml"
+
+[agents.vinterro_researcher]
+description = "Independent source-backed research lane for a named Vinterro One research specialist."
+config_file = "agents/vinterro-researcher.toml"
+
+[agents.vinterro_implementer]
+description = "Scoped implementation lane for a named Vinterro One developer/platform specialist."
+config_file = "agents/vinterro-implementer.toml"
+
+[agents.vinterro_reviewer]
+description = "Independent reviewer that tries to falsify producer claims and inspects direct evidence."
+config_file = "agents/vinterro-reviewer.toml"
+
+[agents.vinterro_qa]
+description = "Independent QA/release-validation lane for Vinterro One."
+config_file = "agents/vinterro-qa.toml"
+
+[agents.vinterro_security]
+description = "Independent Vinterro One security review/implementation lane for security-sensitive work."
+config_file = "agents/vinterro-security.toml"
+
+[agents.language_en]
+description = "English Language & Localization Specialist."
+config_file = "agents/language-en.toml"
+
+[agents.language_bg]
+description = "Bulgarian Language & Localization Specialist."
+config_file = "agents/language-bg.toml"
+
+[agents.language_es]
+description = "Spanish Language & Localization Specialist."
+config_file = "agents/language-es.toml"
+
+[agents.language_el]
+description = "Greek Language & Localization Specialist."
+config_file = "agents/language-el.toml"
+
+[agents.language_de]
+description = "German Language & Localization Specialist."
+config_file = "agents/language-de.toml"
+
+[agents.language_fr]
+description = "French Language & Localization Specialist."
+config_file = "agents/language-fr.toml"
+
+[agents.multilingual_qa]
+description = "Independent multilingual QA for English, Bulgarian, Spanish, Greek, German and French."
+config_file = "agents/multilingual-qa.toml"
