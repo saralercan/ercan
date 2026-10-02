@@ -29,6 +29,12 @@ For an identifiable project:
 
 For `tüm ajanları çalıştır`, `bütün ajanları çalıştır`, `use all agents` and equivalents, build the complete materially relevant ACTIVE pod. Do not literally execute the whole registry and do not minimize the pod when additional non-redundant specialists materially improve the result.
 
+## Human-language localization
+
+English, Bulgarian, Spanish, Greek, German and French translation/localization routes to the corresponding global Language & Localization Specialist. Material multilingual output also routes to `Multilingual Localization QA Auditor` as an independent reviewer. Use `docs/standards/MULTILINGUAL_LOCALIZATION_AGENT_STANDARD.md`.
+
+Language localization is cross-project capability: it applies even when a project has no dedicated filesystem adapter.
+
 ## Platform and source safety
 - Never infer a project's implementation platform only from its name or historical context.
 - Inspect the current repository/provider/source before mutation.
