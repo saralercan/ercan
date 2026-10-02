@@ -1,6 +1,6 @@
 # Drag&Drop Mail & Customer Service Standard
 
-Version: 1.0 (2026-10-01)
+Version: 1.1 (2026-10-03)
 
 This standard governs Drag&Drop designer, brand and customer email operations inside Vinterro One.
 
@@ -66,10 +66,57 @@ Catalog rule:
 - do not default to arbitrarily limiting a designer/brand to a small starter selection;
 - the operational goal is to ingest the catalog the partner wants to provide, subject to valid product data, commercial eligibility and platform constraints.
 
+## Canonical email visual template
+
+Locked source artifact:
+
+`docs/standards/DRAGDROP_MAIL_CANONICAL_TEMPLATE.html`
+
+The HTML wrapper, divider, footer and CTA construction are source artifacts, not approximate prose guidance. Do not recreate a visually similar email from memory. If the canonical template cannot be loaded, HTML mail rendering is `BLOCKED`.
+
+Canonical visual rules:
+- outer background: `#f5f5f3`;
+- outer padding: `32px 16px`;
+- card: white, max-width `680px`, border `1px solid #e8e8e5`;
+- header padding: `42px 46px 18px`;
+- header brand: `Drag&Drop`, 24px bold;
+- descriptor: `DESIGN MARKETPLACE`, 10px, tracked;
+- divider: `1px #c82020`;
+- body padding: `34px 46px 12px`, 16px, line-height 1.75;
+- footer uses the exact source-template structure and wording;
+- do not add `Sevgiler, Drag&Drop` between body and footer.
+
+### Locked CTA system
+
+Every HTML link that is intentionally presented as a CTA button uses the same visual language:
+- white background;
+- `1px solid #d7dfd8` border;
+- about `12px` radius;
+- left-side small outlined badge/icon area in `#10291f`;
+- strong CTA text plus `→`;
+- no solid-green legacy button, unrelated pill style or exposed raw URL in HTML when a CTA is intended.
+
+Canonical CTAs:
+- `B2B | Kurumsal Siparişler →` -> `https://www.draganddrop.tr/pages/kurumsal-siparisler`
+- `PANEL | Tasarımcı Paneli →` -> `https://draganddrop.online/designer/dashboard`
+
+Additional CTA badges may use short context labels such as `WEB`, `FORM` or `KATALOG`, but the same button shell is mandatory.
+
+### Example/test-send behavior
+
+`bana örnek gönder` means:
+- send the exact production candidate to `ercansaral@gmail.com`;
+- sender remains `Drag&Drop <info@draganddrop.tr>`;
+- text, HTML, CTA design and intended attachments must match the production candidate 1:1;
+- verify SENT and raw MIME From;
+- do not send the real customer until the user separately approves production send.
+
 ## Copy standard
 
 Customer-facing copy must be:
 - human and agency-grade;
+- written like a real Drag&Drop agency/customer-service employee, not an AI template;
+- Turkish by default for Türkiye-based brands/designers unless the correspondent clearly communicates in English or a foreign-language recipient is verified;
 - concise and clear;
 - specific to the actual request;
 - transparent about technical/commercial limitations;
