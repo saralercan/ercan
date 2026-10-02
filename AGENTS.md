@@ -1,6 +1,6 @@
 # Vinterro One — Shared Agent Contract
 
-Version: 5.2 (2026-09-29)
+Version: 5.3 (2026-10-03)
 
 This repository is the shared control-plane reference for Vinterro One agents. Every project agent and specialist must load this file first, then the shared registry, `docs/standards/AGENCY_EXCELLENCE_STANDARD.md`, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
 
@@ -90,8 +90,9 @@ Any task involving **Drag&Drop customer, designer, brand or partner email**, inc
 
 1. `.agents/skills/dragdrop-mail-agent/SKILL.md`
 2. `docs/standards/DRAGDROP_MAIL_AGENT.md`
-3. `projects/dragdrop/AGENTS.md`
-4. `docs/evals/DRAGDROP_MAIL_AGENT_REGRESSION.md` when send/thread QA or regression is material.
+3. `docs/standards/DRAGDROP_MAIL_CANONICAL_TEMPLATE.html`
+4. `projects/dragdrop/AGENTS.md`
+5. `docs/evals/DRAGDROP_MAIL_AGENT_REGRESSION.md` when send/thread QA or regression is material.
 
 Hard rules:
 - locked sender: `Drag&Drop <info@draganddrop.tr>`;
@@ -101,6 +102,13 @@ Hard rules:
 - canonical designer/brand product workbook is `DragDrop_Standart_Urun_Yukleme_Sablonu.xlsx`;
 - product images are requested separately through Google Drive or WeTransfer;
 - never claim arbitrary XML import support when current evidence shows it is unsupported.
+- Türkiye merkezli marka/tasarımcı iletişiminde varsayılan dil Türkçedir; İngilizce ancak muhatap açıkça İngilizce iletişim kuruyorsa veya yabancı muhatap olduğu doğrulanmışsa kullanılır.
+- customer-facing copy must read like a real Drag&Drop agency/customer-service employee: human, concise, context-aware and commercially precise; generic AI phrasing, process theater and template-heavy filler fail QA.
+- the canonical HTML wrapper/footer MUST be rendered from `docs/standards/DRAGDROP_MAIL_CANONICAL_TEMPLATE.html`; do not rebuild a near-match from memory.
+- all HTML CTA buttons use the locked outlined-badge system: white background, thin `#d7dfd8` border, about 12px radius, small outlined badge/icon area on the left, strong CTA label plus `→` on the right.
+- B2B CTA is `B2B | Kurumsal Siparişler →` linking to `https://www.draganddrop.tr/pages/kurumsal-siparisler`; designer-panel CTA is `PANEL | Tasarımcı Paneli →` linking to `https://draganddrop.online/designer/dashboard`.
+- body copy does not add `Sevgiler, Drag&Drop`; the body flows directly into the locked footer.
+- `bana örnek gönder` means send the exact production candidate to `ercansaral@gmail.com` from `Drag&Drop <info@draganddrop.tr>`, then verify SENT/raw From; it is never approval to send the real customer.
 
 For a relevant Drag&Drop mail/customer task, the master trigger `tüm ajanları çalıştır` (and equivalents) MUST include Drag&Drop Baş Uzman Ajanı, Drag&Drop Müşteri Temsilcisi Ajanı and Drag&Drop Mail Ajanı in the qualified ACTIVE pod, plus independent MailQA/reviewer for send-sensitive work.
 
