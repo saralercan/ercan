@@ -31,6 +31,9 @@ on:
       - 'scripts/validate_multilingual_localization_agents.py'
       - 'scripts/validate_academic_expertise.py'
       - 'scripts/validate_vinterro_codex_project_routing.py'
+      - 'scripts/validate_codex_native_agent_bridge.py'
+      - 'docs/standards/CODEX_NATIVE_AGENT_BRIDGE.md'
+      - '.codex/agents/**'
       - 'scripts/validate_vinterro_chatgpt_runtime.py'
       - 'docs/research/ACADEMIC_SOURCE_CATALOG_2026-09-29.md'
       - 'docs/standards/ACADEMIC_RESEARCH_SOURCE_PACK.md'
@@ -49,6 +52,8 @@ on:
       - 'scripts/validate_multilingual_localization_agents.py'
       - 'scripts/validate_academic_expertise.py'
       - 'scripts/validate_vinterro_codex_project_routing.py'
+      - 'scripts/validate_codex_native_agent_bridge.py'
+      - '.codex/agents/**'
       - 'projects/**/AGENTS.md'
       - 'projects/**/PROJECT.md'
       - 'plugins/vinterro-one/**'
@@ -76,5 +81,7 @@ jobs:
         run: python3 scripts/validate_academic_expertise.py
       - name: Validate Codex all-project routing coverage
         run: python3 scripts/validate_vinterro_codex_project_routing.py
+      - name: Validate Codex native agent bridge
+        run: python3 scripts/validate_codex_native_agent_bridge.py
       - name: Validate ChatGPT Vinterro One runtime
         run: python3 scripts/validate_vinterro_chatgpt_runtime.py
