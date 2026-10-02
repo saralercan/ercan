@@ -15,6 +15,8 @@ This is deliberately **not** an unbounded claim that every internet page or thes
 - Havaldar et al. (ACL 2025), **Towards Style Alignment in Cross-Cultural Translation** — cultural/style misalignment and politeness loss; motivates an explicit pragmatic/style QA pass. https://aclanthology.org/2025.acl-long.1550/
 - Yao et al. (EMNLP 2024 Findings), **Benchmarking Machine Translation with Cultural Awareness** — pragmatic quality for culture-specific items; motivates culture-aware evaluation separate from grammar. https://aclanthology.org/2024.findings-emnlp.765/
 - University of Surrey PhD (2026), **Quality Estimation for Machine Translation in Low-Resource Settings** — multilingual transfer, QE and limits of zero-shot/in-context LLM quality estimation. https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Quality-Estimation-for-Machine-Translation-in/991146796302346
+- Semenov et al. (WMT 2025), **Findings of the WMT25 Terminology Translation Task: Terminology is Useful Especially for Good MTs** — evaluates overall quality, terminology accuracy and consistency; correct terminology improves quality, including English→German and English→Spanish tracks. https://aclanthology.org/2025.wmt-1.30/
+- Grubišić & Korencic (WMT 2025), **IRB-MT at WMT25 Terminology Translation Task: Metric-guided Multi-agent Approach** — demonstrates an agentic translation-revision workflow with terminology-aware quality selection. https://aclanthology.org/2025.wmt-1.110/
 - Current academic source discovery also included thesis/dissertation repositories in the Vinterro `academic_research` pack (OpenAlex, Crossref, OpenAIRE, CORE, OATD, MIT, Stanford, Harvard, TU Delft, Aalto, ETH, YÖK).
 
 ## Current language/locale authority sources
@@ -49,10 +51,11 @@ Language-specific:
 1. Evaluate error spans/categories, not only one aggregate “quality” score.
 2. Use document/thread context for professional translation.
 3. Separate semantic accuracy, terminology, style/register and cultural/pragmatic alignment.
-4. Preserve factual invariants before stylistic adaptation.
-5. Resolve locale and forms of address explicitly.
-6. Maintain project/client terminology and test terminology consistency.
-7. Require an independent linguistic QA identity for material output.
-8. Escalate high-stakes certified translation to qualified human/domain review.
-9. Treat archived benchmarks as historical evidence, not maintained implementation guidance.
-10. Re-check volatile language/style/terminology sources on task entry and periodic refresh.
+4. Treat terminology adherence as its own measurable release dimension; maintain glossaries and consistency across the document.
+5. Use producer/revision/reviewer separation for material translation rather than one agent self-certifying its own output.
+6. Preserve factual invariants before stylistic adaptation.
+7. Resolve locale and forms of address explicitly.
+8. Require an independent linguistic QA identity for material output.
+9. Escalate high-stakes certified translation to qualified human/domain review.
+10. Treat archived benchmarks as historical evidence, not maintained implementation guidance.
+11. Re-check volatile language/style/terminology sources on task entry and periodic refresh.
