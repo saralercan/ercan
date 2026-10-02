@@ -43,7 +43,7 @@ SHOPIFY_REQUIRED_PRIMARY = {
 # Known synchronized production floor from the authenticated live registry.
 # This is a regression floor for the repo mirror, not a fixed routing total:
 # the live runtime may grow beyond it.
-LIVE_MIRROR_BASELINE_COUNT = 103
+LIVE_MIRROR_BASELINE_COUNT = 112
 LIVE_MIRROR_REQUIRED_NAMES = {
     "Ayvalık Reklam Baş Uzman Ajanı",
     "Ayvalık Vibes Baş Uzman Ajanı",
@@ -59,6 +59,13 @@ LIVE_MIRROR_REQUIRED_NAMES = {
     "Vinterro Studio Baş Uzman Ajanı",
     "Vinterro One Security Director",
     "Contact Recovery Research Agent",
+    "English Language & Localization Specialist",
+    "Bulgarian Language & Localization Specialist",
+    "Spanish Language & Localization Specialist",
+    "Greek Language & Localization Specialist",
+    "German Language & Localization Specialist",
+    "French Language & Localization Specialist",
+    "Multilingual Localization QA Auditor",
 }
 
 SHOPIFY_REQUIRED_GITHUB = {
@@ -254,7 +261,7 @@ def main() -> int:
         fail("Shopify Agent research curriculum is not deep enough", failures)
 
     packs = matrix.get("source_pack_catalog") or {}
-    for pack in ("shopify", "wordpress", "web_engineering", "javascript", "security", "qa", "seo", "ecommerce", "finance", "growth_ads", "content_editorial", "design", "agent_runtime", "local_discovery", "devops", "analytics", "research", "academic_research"):
+    for pack in ("shopify", "wordpress", "web_engineering", "javascript", "security", "qa", "seo", "ecommerce", "finance", "growth_ads", "content_editorial", "design", "agent_runtime", "local_discovery", "devops", "analytics", "research", "academic_research", "language_localization"):
         if pack not in packs:
             fail(f"missing source pack catalog entry: {pack}", failures)
 

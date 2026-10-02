@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-01",
-  "agent_count": 105,
+  "generated_at": "2026-10-02T14:30:00Z",
+  "agent_count": 112,
   "philosophy": "Broad continuous discovery, narrow verified ingestion. Research the web deeply, but never equate volume with truth or expertise.",
   "global_sources": {
     "discovery": [
@@ -11728,6 +11728,808 @@
         "thesis_policy": "Academic evidence may improve messaging workflows but never overrides provider execution truth.",
         "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works."
       }
+    },
+    {
+      "id": 106,
+      "name": "English Language & Localization Specialist",
+      "role": "english_localization",
+      "family": "language_localization",
+      "source_tiers": {
+        "primary": [
+          "https://style-guide.europa.eu/",
+          "https://iate.europa.eu/",
+          "https://www.w3.org/International/",
+          "https://cldr.unicode.org/",
+          "https://learn.microsoft.com/globalization/",
+          "https://aclanthology.org/2024.tacl-1.54/",
+          "https://aclanthology.org/2025.wmt-1.22/",
+          "https://aclanthology.org/2025.acl-long.1550/",
+          "https://aclanthology.org/2024.findings-emnlp.765/",
+          "https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Quality-Estimation-for-Machine-Translation-in/991146796302346",
+          "https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style",
+          "https://aclanthology.org/2025.wmt-1.30/",
+          "https://aclanthology.org/2025.wmt-1.110/"
+        ],
+        "canonical_github": [
+          "Unbabel/COMET",
+          "google-research/mt-metrics-eval",
+          "mjpost/sacrebleu",
+          "Helsinki-NLP/OPUS-MT-train",
+          "unicode-org/cldr",
+          "w3c/i18n-drafts"
+        ],
+        "reviewed_secondary": [
+          "https://aclanthology.org/",
+          "https://www.microsoft.com/en-us/language",
+          "https://www.w3.org/International/articles/"
+        ]
+      },
+      "research_topics": [
+        "English professional translation and localization",
+        "document-context translation and discourse consistency",
+        "terminology management and domain consistency",
+        "cultural and pragmatic adaptation",
+        "commercial/editorial register and politeness",
+        "machine translation evaluation, quality estimation and error-span analysis",
+        "terminology-constrained translation and terminology consistency",
+        "multi-agent translation revision and independent quality selection"
+      ],
+      "continual_queries": [
+        "English current official grammar style terminology professional writing localization",
+        "English translation localization cultural pragmatics terminology quality assurance",
+        "English machine translation document context quality estimation current research",
+        "English localization business communication regional locale conventions"
+      ],
+      "ingestion_rules": [
+        "Project/client source text and glossary outrank generic style guidance.",
+        "Official language and terminology authorities outrank secondary commentary.",
+        "Canonical active repositories are implementation evidence; archived repositories are historical evidence only.",
+        "Preserve source facts, numbers, names, URLs, negation, offers and placeholders before stylistic adaptation.",
+        "Peer-reviewed research and theses inform methods/evals but do not override current official language rules.",
+        "Record locale and date/version context for volatile guidance and terminology."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 14,
+        "event_triggers": [
+          "target language task",
+          "official authority or terminology update",
+          "new target locale/market",
+          "benchmark/eval failure",
+          "user correction"
+        ],
+        "stale_after_days": 42
+      },
+      "mastery_gate": {
+        "structural": "official language sources + current MT/localization research + independent QA hard-fails present",
+        "behavioral": "complete representative translation/localization tasks and pass independent multilingual QA",
+        "comparative": "only after reproducible evaluation against a relevant baseline and human-reviewed samples"
+      },
+      "source_packs": [
+        "language_localization",
+        "content_editorial",
+        "research",
+        "academic_research"
+      ],
+      "depth_contract": {
+        "discovery": "Search official language/terminology authorities, WMT/ACL research, current canonical repositories and thesis repositories until marginal value drops.",
+        "ingestion": "Distill verified language/locale rules, terminology patterns, error taxonomies and regression cases; never copy bulk copyrighted corpora.",
+        "freshness": "Re-check official style/terminology and volatile tooling at task time or on update events.",
+        "verification": "Material target-language output needs source-invariant checks and independent multilingual QA."
+      },
+      "required_evidence": [
+        "canonical source text/project glossary when supplied",
+        "at least one current official language/terminology authority for disputed usage when available",
+        "locale/register decision for materially regional language choices",
+        "factual invariant comparison for numbers, names, URLs, offers and negation",
+        "independent multilingual QA for material external-facing output",
+        "peer-reviewed or thesis provenance for promoted evaluation methodology"
+      ],
+      "academic_queries": [
+        "English machine translation localization quality estimation document context terminology cultural pragmatics peer reviewed",
+        "English translation evaluation MQM error span human evaluation cross cultural communication",
+        "English professional translation business communication register politeness multilingual NLP"
+      ],
+      "thesis_queries": [
+        "English machine translation localization quality estimation thesis dissertation",
+        "English terminology domain adaptation translation thesis dissertation university",
+        "English cross cultural pragmatics translation thesis multilingual"
+      ],
+      "academic_ingestion": {
+        "evidence_priority": "project/official > canonical implementation > peer-reviewed/thesis > preprint/working paper > discovery/community",
+        "preserve_limitations": true,
+        "require_original_source_for_material_claims": true,
+        "thesis_policy": "Theses are Tier-3 academic evidence for methods, edge cases and evaluation design; they are not normative language authority.",
+        "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works into prompts or repositories."
+      }
+    },
+    {
+      "id": 107,
+      "name": "Bulgarian Language & Localization Specialist",
+      "role": "bulgarian_localization",
+      "family": "language_localization",
+      "source_tiers": {
+        "primary": [
+          "https://style-guide.europa.eu/",
+          "https://iate.europa.eu/",
+          "https://www.w3.org/International/",
+          "https://cldr.unicode.org/",
+          "https://learn.microsoft.com/globalization/",
+          "https://aclanthology.org/2024.tacl-1.54/",
+          "https://aclanthology.org/2025.wmt-1.22/",
+          "https://aclanthology.org/2025.acl-long.1550/",
+          "https://aclanthology.org/2024.findings-emnlp.765/",
+          "https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Quality-Estimation-for-Machine-Translation-in/991146796302346",
+          "https://ibl.bas.bg/",
+          "https://aclanthology.org/2025.wmt-1.30/",
+          "https://aclanthology.org/2025.wmt-1.110/"
+        ],
+        "canonical_github": [
+          "Unbabel/COMET",
+          "google-research/mt-metrics-eval",
+          "mjpost/sacrebleu",
+          "Helsinki-NLP/OPUS-MT-train",
+          "unicode-org/cldr",
+          "w3c/i18n-drafts"
+        ],
+        "reviewed_secondary": [
+          "https://aclanthology.org/",
+          "https://www.microsoft.com/en-us/language",
+          "https://www.w3.org/International/articles/"
+        ]
+      },
+      "research_topics": [
+        "Bulgarian professional translation and localization",
+        "document-context translation and discourse consistency",
+        "terminology management and domain consistency",
+        "cultural and pragmatic adaptation",
+        "commercial/editorial register and politeness",
+        "machine translation evaluation, quality estimation and error-span analysis",
+        "terminology-constrained translation and terminology consistency",
+        "multi-agent translation revision and independent quality selection"
+      ],
+      "continual_queries": [
+        "Bulgarian current official grammar style terminology professional writing localization",
+        "Bulgarian translation localization cultural pragmatics terminology quality assurance",
+        "Bulgarian machine translation document context quality estimation current research",
+        "Bulgarian localization business communication regional locale conventions"
+      ],
+      "ingestion_rules": [
+        "Project/client source text and glossary outrank generic style guidance.",
+        "Official language and terminology authorities outrank secondary commentary.",
+        "Canonical active repositories are implementation evidence; archived repositories are historical evidence only.",
+        "Preserve source facts, numbers, names, URLs, negation, offers and placeholders before stylistic adaptation.",
+        "Peer-reviewed research and theses inform methods/evals but do not override current official language rules.",
+        "Record locale and date/version context for volatile guidance and terminology."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 14,
+        "event_triggers": [
+          "target language task",
+          "official authority or terminology update",
+          "new target locale/market",
+          "benchmark/eval failure",
+          "user correction"
+        ],
+        "stale_after_days": 42
+      },
+      "mastery_gate": {
+        "structural": "official language sources + current MT/localization research + independent QA hard-fails present",
+        "behavioral": "complete representative translation/localization tasks and pass independent multilingual QA",
+        "comparative": "only after reproducible evaluation against a relevant baseline and human-reviewed samples"
+      },
+      "source_packs": [
+        "language_localization",
+        "content_editorial",
+        "research",
+        "academic_research"
+      ],
+      "depth_contract": {
+        "discovery": "Search official language/terminology authorities, WMT/ACL research, current canonical repositories and thesis repositories until marginal value drops.",
+        "ingestion": "Distill verified language/locale rules, terminology patterns, error taxonomies and regression cases; never copy bulk copyrighted corpora.",
+        "freshness": "Re-check official style/terminology and volatile tooling at task time or on update events.",
+        "verification": "Material target-language output needs source-invariant checks and independent multilingual QA."
+      },
+      "required_evidence": [
+        "canonical source text/project glossary when supplied",
+        "at least one current official language/terminology authority for disputed usage when available",
+        "locale/register decision for materially regional language choices",
+        "factual invariant comparison for numbers, names, URLs, offers and negation",
+        "independent multilingual QA for material external-facing output",
+        "peer-reviewed or thesis provenance for promoted evaluation methodology"
+      ],
+      "academic_queries": [
+        "Bulgarian machine translation localization quality estimation document context terminology cultural pragmatics peer reviewed",
+        "Bulgarian translation evaluation MQM error span human evaluation cross cultural communication",
+        "Bulgarian professional translation business communication register politeness multilingual NLP"
+      ],
+      "thesis_queries": [
+        "Bulgarian machine translation localization quality estimation thesis dissertation",
+        "Bulgarian terminology domain adaptation translation thesis dissertation university",
+        "Bulgarian cross cultural pragmatics translation thesis multilingual"
+      ],
+      "academic_ingestion": {
+        "evidence_priority": "project/official > canonical implementation > peer-reviewed/thesis > preprint/working paper > discovery/community",
+        "preserve_limitations": true,
+        "require_original_source_for_material_claims": true,
+        "thesis_policy": "Theses are Tier-3 academic evidence for methods, edge cases and evaluation design; they are not normative language authority.",
+        "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works into prompts or repositories."
+      }
+    },
+    {
+      "id": 108,
+      "name": "Spanish Language & Localization Specialist",
+      "role": "spanish_localization",
+      "family": "language_localization",
+      "source_tiers": {
+        "primary": [
+          "https://style-guide.europa.eu/",
+          "https://iate.europa.eu/",
+          "https://www.w3.org/International/",
+          "https://cldr.unicode.org/",
+          "https://learn.microsoft.com/globalization/",
+          "https://aclanthology.org/2024.tacl-1.54/",
+          "https://aclanthology.org/2025.wmt-1.22/",
+          "https://aclanthology.org/2025.acl-long.1550/",
+          "https://aclanthology.org/2024.findings-emnlp.765/",
+          "https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Quality-Estimation-for-Machine-Translation-in/991146796302346",
+          "https://www.rae.es/",
+          "https://www.rae.es/dpd/",
+          "https://aclanthology.org/2025.wmt-1.30/",
+          "https://aclanthology.org/2025.wmt-1.110/"
+        ],
+        "canonical_github": [
+          "Unbabel/COMET",
+          "google-research/mt-metrics-eval",
+          "mjpost/sacrebleu",
+          "Helsinki-NLP/OPUS-MT-train",
+          "unicode-org/cldr",
+          "w3c/i18n-drafts"
+        ],
+        "reviewed_secondary": [
+          "https://aclanthology.org/",
+          "https://www.microsoft.com/en-us/language",
+          "https://www.w3.org/International/articles/"
+        ]
+      },
+      "research_topics": [
+        "Spanish professional translation and localization",
+        "document-context translation and discourse consistency",
+        "terminology management and domain consistency",
+        "cultural and pragmatic adaptation",
+        "commercial/editorial register and politeness",
+        "machine translation evaluation, quality estimation and error-span analysis",
+        "terminology-constrained translation and terminology consistency",
+        "multi-agent translation revision and independent quality selection"
+      ],
+      "continual_queries": [
+        "Spanish current official grammar style terminology professional writing localization",
+        "Spanish translation localization cultural pragmatics terminology quality assurance",
+        "Spanish machine translation document context quality estimation current research",
+        "Spanish localization business communication regional locale conventions"
+      ],
+      "ingestion_rules": [
+        "Project/client source text and glossary outrank generic style guidance.",
+        "Official language and terminology authorities outrank secondary commentary.",
+        "Canonical active repositories are implementation evidence; archived repositories are historical evidence only.",
+        "Preserve source facts, numbers, names, URLs, negation, offers and placeholders before stylistic adaptation.",
+        "Peer-reviewed research and theses inform methods/evals but do not override current official language rules.",
+        "Record locale and date/version context for volatile guidance and terminology."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 14,
+        "event_triggers": [
+          "target language task",
+          "official authority or terminology update",
+          "new target locale/market",
+          "benchmark/eval failure",
+          "user correction"
+        ],
+        "stale_after_days": 42
+      },
+      "mastery_gate": {
+        "structural": "official language sources + current MT/localization research + independent QA hard-fails present",
+        "behavioral": "complete representative translation/localization tasks and pass independent multilingual QA",
+        "comparative": "only after reproducible evaluation against a relevant baseline and human-reviewed samples"
+      },
+      "source_packs": [
+        "language_localization",
+        "content_editorial",
+        "research",
+        "academic_research"
+      ],
+      "depth_contract": {
+        "discovery": "Search official language/terminology authorities, WMT/ACL research, current canonical repositories and thesis repositories until marginal value drops.",
+        "ingestion": "Distill verified language/locale rules, terminology patterns, error taxonomies and regression cases; never copy bulk copyrighted corpora.",
+        "freshness": "Re-check official style/terminology and volatile tooling at task time or on update events.",
+        "verification": "Material target-language output needs source-invariant checks and independent multilingual QA."
+      },
+      "required_evidence": [
+        "canonical source text/project glossary when supplied",
+        "at least one current official language/terminology authority for disputed usage when available",
+        "locale/register decision for materially regional language choices",
+        "factual invariant comparison for numbers, names, URLs, offers and negation",
+        "independent multilingual QA for material external-facing output",
+        "peer-reviewed or thesis provenance for promoted evaluation methodology"
+      ],
+      "academic_queries": [
+        "Spanish machine translation localization quality estimation document context terminology cultural pragmatics peer reviewed",
+        "Spanish translation evaluation MQM error span human evaluation cross cultural communication",
+        "Spanish professional translation business communication register politeness multilingual NLP"
+      ],
+      "thesis_queries": [
+        "Spanish machine translation localization quality estimation thesis dissertation",
+        "Spanish terminology domain adaptation translation thesis dissertation university",
+        "Spanish cross cultural pragmatics translation thesis multilingual"
+      ],
+      "academic_ingestion": {
+        "evidence_priority": "project/official > canonical implementation > peer-reviewed/thesis > preprint/working paper > discovery/community",
+        "preserve_limitations": true,
+        "require_original_source_for_material_claims": true,
+        "thesis_policy": "Theses are Tier-3 academic evidence for methods, edge cases and evaluation design; they are not normative language authority.",
+        "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works into prompts or repositories."
+      }
+    },
+    {
+      "id": 109,
+      "name": "Greek Language & Localization Specialist",
+      "role": "greek_localization",
+      "family": "language_localization",
+      "source_tiers": {
+        "primary": [
+          "https://style-guide.europa.eu/",
+          "https://iate.europa.eu/",
+          "https://www.w3.org/International/",
+          "https://cldr.unicode.org/",
+          "https://learn.microsoft.com/globalization/",
+          "https://aclanthology.org/2024.tacl-1.54/",
+          "https://aclanthology.org/2025.wmt-1.22/",
+          "https://aclanthology.org/2025.acl-long.1550/",
+          "https://aclanthology.org/2024.findings-emnlp.765/",
+          "https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Quality-Estimation-for-Machine-Translation-in/991146796302346",
+          "https://www.greek-language.gr/",
+          "https://aclanthology.org/2025.wmt-1.30/",
+          "https://aclanthology.org/2025.wmt-1.110/"
+        ],
+        "canonical_github": [
+          "Unbabel/COMET",
+          "google-research/mt-metrics-eval",
+          "mjpost/sacrebleu",
+          "Helsinki-NLP/OPUS-MT-train",
+          "unicode-org/cldr",
+          "w3c/i18n-drafts"
+        ],
+        "reviewed_secondary": [
+          "https://aclanthology.org/",
+          "https://www.microsoft.com/en-us/language",
+          "https://www.w3.org/International/articles/"
+        ]
+      },
+      "research_topics": [
+        "Greek professional translation and localization",
+        "document-context translation and discourse consistency",
+        "terminology management and domain consistency",
+        "cultural and pragmatic adaptation",
+        "commercial/editorial register and politeness",
+        "machine translation evaluation, quality estimation and error-span analysis",
+        "terminology-constrained translation and terminology consistency",
+        "multi-agent translation revision and independent quality selection"
+      ],
+      "continual_queries": [
+        "Greek current official grammar style terminology professional writing localization",
+        "Greek translation localization cultural pragmatics terminology quality assurance",
+        "Greek machine translation document context quality estimation current research",
+        "Greek localization business communication regional locale conventions"
+      ],
+      "ingestion_rules": [
+        "Project/client source text and glossary outrank generic style guidance.",
+        "Official language and terminology authorities outrank secondary commentary.",
+        "Canonical active repositories are implementation evidence; archived repositories are historical evidence only.",
+        "Preserve source facts, numbers, names, URLs, negation, offers and placeholders before stylistic adaptation.",
+        "Peer-reviewed research and theses inform methods/evals but do not override current official language rules.",
+        "Record locale and date/version context for volatile guidance and terminology."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 14,
+        "event_triggers": [
+          "target language task",
+          "official authority or terminology update",
+          "new target locale/market",
+          "benchmark/eval failure",
+          "user correction"
+        ],
+        "stale_after_days": 42
+      },
+      "mastery_gate": {
+        "structural": "official language sources + current MT/localization research + independent QA hard-fails present",
+        "behavioral": "complete representative translation/localization tasks and pass independent multilingual QA",
+        "comparative": "only after reproducible evaluation against a relevant baseline and human-reviewed samples"
+      },
+      "source_packs": [
+        "language_localization",
+        "content_editorial",
+        "research",
+        "academic_research"
+      ],
+      "depth_contract": {
+        "discovery": "Search official language/terminology authorities, WMT/ACL research, current canonical repositories and thesis repositories until marginal value drops.",
+        "ingestion": "Distill verified language/locale rules, terminology patterns, error taxonomies and regression cases; never copy bulk copyrighted corpora.",
+        "freshness": "Re-check official style/terminology and volatile tooling at task time or on update events.",
+        "verification": "Material target-language output needs source-invariant checks and independent multilingual QA."
+      },
+      "required_evidence": [
+        "canonical source text/project glossary when supplied",
+        "at least one current official language/terminology authority for disputed usage when available",
+        "locale/register decision for materially regional language choices",
+        "factual invariant comparison for numbers, names, URLs, offers and negation",
+        "independent multilingual QA for material external-facing output",
+        "peer-reviewed or thesis provenance for promoted evaluation methodology"
+      ],
+      "academic_queries": [
+        "Greek machine translation localization quality estimation document context terminology cultural pragmatics peer reviewed",
+        "Greek translation evaluation MQM error span human evaluation cross cultural communication",
+        "Greek professional translation business communication register politeness multilingual NLP"
+      ],
+      "thesis_queries": [
+        "Greek machine translation localization quality estimation thesis dissertation",
+        "Greek terminology domain adaptation translation thesis dissertation university",
+        "Greek cross cultural pragmatics translation thesis multilingual"
+      ],
+      "academic_ingestion": {
+        "evidence_priority": "project/official > canonical implementation > peer-reviewed/thesis > preprint/working paper > discovery/community",
+        "preserve_limitations": true,
+        "require_original_source_for_material_claims": true,
+        "thesis_policy": "Theses are Tier-3 academic evidence for methods, edge cases and evaluation design; they are not normative language authority.",
+        "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works into prompts or repositories."
+      }
+    },
+    {
+      "id": 110,
+      "name": "German Language & Localization Specialist",
+      "role": "german_localization",
+      "family": "language_localization",
+      "source_tiers": {
+        "primary": [
+          "https://style-guide.europa.eu/",
+          "https://iate.europa.eu/",
+          "https://www.w3.org/International/",
+          "https://cldr.unicode.org/",
+          "https://learn.microsoft.com/globalization/",
+          "https://aclanthology.org/2024.tacl-1.54/",
+          "https://aclanthology.org/2025.wmt-1.22/",
+          "https://aclanthology.org/2025.acl-long.1550/",
+          "https://aclanthology.org/2024.findings-emnlp.765/",
+          "https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Quality-Estimation-for-Machine-Translation-in/991146796302346",
+          "https://www.rechtschreibrat.com/DOX/RfdR_Amtliches-Regelwerk_2024.pdf",
+          "https://www.duden.de/sprachwissen/rechtschreibregeln",
+          "https://aclanthology.org/2025.wmt-1.30/",
+          "https://aclanthology.org/2025.wmt-1.110/"
+        ],
+        "canonical_github": [
+          "Unbabel/COMET",
+          "google-research/mt-metrics-eval",
+          "mjpost/sacrebleu",
+          "Helsinki-NLP/OPUS-MT-train",
+          "unicode-org/cldr",
+          "w3c/i18n-drafts"
+        ],
+        "reviewed_secondary": [
+          "https://aclanthology.org/",
+          "https://www.microsoft.com/en-us/language",
+          "https://www.w3.org/International/articles/"
+        ]
+      },
+      "research_topics": [
+        "German professional translation and localization",
+        "document-context translation and discourse consistency",
+        "terminology management and domain consistency",
+        "cultural and pragmatic adaptation",
+        "commercial/editorial register and politeness",
+        "machine translation evaluation, quality estimation and error-span analysis",
+        "terminology-constrained translation and terminology consistency",
+        "multi-agent translation revision and independent quality selection"
+      ],
+      "continual_queries": [
+        "German current official grammar style terminology professional writing localization",
+        "German translation localization cultural pragmatics terminology quality assurance",
+        "German machine translation document context quality estimation current research",
+        "German localization business communication regional locale conventions"
+      ],
+      "ingestion_rules": [
+        "Project/client source text and glossary outrank generic style guidance.",
+        "Official language and terminology authorities outrank secondary commentary.",
+        "Canonical active repositories are implementation evidence; archived repositories are historical evidence only.",
+        "Preserve source facts, numbers, names, URLs, negation, offers and placeholders before stylistic adaptation.",
+        "Peer-reviewed research and theses inform methods/evals but do not override current official language rules.",
+        "Record locale and date/version context for volatile guidance and terminology."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 14,
+        "event_triggers": [
+          "target language task",
+          "official authority or terminology update",
+          "new target locale/market",
+          "benchmark/eval failure",
+          "user correction"
+        ],
+        "stale_after_days": 42
+      },
+      "mastery_gate": {
+        "structural": "official language sources + current MT/localization research + independent QA hard-fails present",
+        "behavioral": "complete representative translation/localization tasks and pass independent multilingual QA",
+        "comparative": "only after reproducible evaluation against a relevant baseline and human-reviewed samples"
+      },
+      "source_packs": [
+        "language_localization",
+        "content_editorial",
+        "research",
+        "academic_research"
+      ],
+      "depth_contract": {
+        "discovery": "Search official language/terminology authorities, WMT/ACL research, current canonical repositories and thesis repositories until marginal value drops.",
+        "ingestion": "Distill verified language/locale rules, terminology patterns, error taxonomies and regression cases; never copy bulk copyrighted corpora.",
+        "freshness": "Re-check official style/terminology and volatile tooling at task time or on update events.",
+        "verification": "Material target-language output needs source-invariant checks and independent multilingual QA."
+      },
+      "required_evidence": [
+        "canonical source text/project glossary when supplied",
+        "at least one current official language/terminology authority for disputed usage when available",
+        "locale/register decision for materially regional language choices",
+        "factual invariant comparison for numbers, names, URLs, offers and negation",
+        "independent multilingual QA for material external-facing output",
+        "peer-reviewed or thesis provenance for promoted evaluation methodology"
+      ],
+      "academic_queries": [
+        "German machine translation localization quality estimation document context terminology cultural pragmatics peer reviewed",
+        "German translation evaluation MQM error span human evaluation cross cultural communication",
+        "German professional translation business communication register politeness multilingual NLP"
+      ],
+      "thesis_queries": [
+        "German machine translation localization quality estimation thesis dissertation",
+        "German terminology domain adaptation translation thesis dissertation university",
+        "German cross cultural pragmatics translation thesis multilingual"
+      ],
+      "academic_ingestion": {
+        "evidence_priority": "project/official > canonical implementation > peer-reviewed/thesis > preprint/working paper > discovery/community",
+        "preserve_limitations": true,
+        "require_original_source_for_material_claims": true,
+        "thesis_policy": "Theses are Tier-3 academic evidence for methods, edge cases and evaluation design; they are not normative language authority.",
+        "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works into prompts or repositories."
+      }
+    },
+    {
+      "id": 111,
+      "name": "French Language & Localization Specialist",
+      "role": "french_localization",
+      "family": "language_localization",
+      "source_tiers": {
+        "primary": [
+          "https://style-guide.europa.eu/",
+          "https://iate.europa.eu/",
+          "https://www.w3.org/International/",
+          "https://cldr.unicode.org/",
+          "https://learn.microsoft.com/globalization/",
+          "https://aclanthology.org/2024.tacl-1.54/",
+          "https://aclanthology.org/2025.wmt-1.22/",
+          "https://aclanthology.org/2025.acl-long.1550/",
+          "https://aclanthology.org/2024.findings-emnlp.765/",
+          "https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Quality-Estimation-for-Machine-Translation-in/991146796302346",
+          "https://www.culture.fr/franceterme",
+          "https://www.dictionnaire-academie.fr/",
+          "https://aclanthology.org/2025.wmt-1.30/",
+          "https://aclanthology.org/2025.wmt-1.110/"
+        ],
+        "canonical_github": [
+          "Unbabel/COMET",
+          "google-research/mt-metrics-eval",
+          "mjpost/sacrebleu",
+          "Helsinki-NLP/OPUS-MT-train",
+          "unicode-org/cldr",
+          "w3c/i18n-drafts"
+        ],
+        "reviewed_secondary": [
+          "https://aclanthology.org/",
+          "https://www.microsoft.com/en-us/language",
+          "https://www.w3.org/International/articles/"
+        ]
+      },
+      "research_topics": [
+        "French professional translation and localization",
+        "document-context translation and discourse consistency",
+        "terminology management and domain consistency",
+        "cultural and pragmatic adaptation",
+        "commercial/editorial register and politeness",
+        "machine translation evaluation, quality estimation and error-span analysis",
+        "terminology-constrained translation and terminology consistency",
+        "multi-agent translation revision and independent quality selection"
+      ],
+      "continual_queries": [
+        "French current official grammar style terminology professional writing localization",
+        "French translation localization cultural pragmatics terminology quality assurance",
+        "French machine translation document context quality estimation current research",
+        "French localization business communication regional locale conventions"
+      ],
+      "ingestion_rules": [
+        "Project/client source text and glossary outrank generic style guidance.",
+        "Official language and terminology authorities outrank secondary commentary.",
+        "Canonical active repositories are implementation evidence; archived repositories are historical evidence only.",
+        "Preserve source facts, numbers, names, URLs, negation, offers and placeholders before stylistic adaptation.",
+        "Peer-reviewed research and theses inform methods/evals but do not override current official language rules.",
+        "Record locale and date/version context for volatile guidance and terminology."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 14,
+        "event_triggers": [
+          "target language task",
+          "official authority or terminology update",
+          "new target locale/market",
+          "benchmark/eval failure",
+          "user correction"
+        ],
+        "stale_after_days": 42
+      },
+      "mastery_gate": {
+        "structural": "official language sources + current MT/localization research + independent QA hard-fails present",
+        "behavioral": "complete representative translation/localization tasks and pass independent multilingual QA",
+        "comparative": "only after reproducible evaluation against a relevant baseline and human-reviewed samples"
+      },
+      "source_packs": [
+        "language_localization",
+        "content_editorial",
+        "research",
+        "academic_research"
+      ],
+      "depth_contract": {
+        "discovery": "Search official language/terminology authorities, WMT/ACL research, current canonical repositories and thesis repositories until marginal value drops.",
+        "ingestion": "Distill verified language/locale rules, terminology patterns, error taxonomies and regression cases; never copy bulk copyrighted corpora.",
+        "freshness": "Re-check official style/terminology and volatile tooling at task time or on update events.",
+        "verification": "Material target-language output needs source-invariant checks and independent multilingual QA."
+      },
+      "required_evidence": [
+        "canonical source text/project glossary when supplied",
+        "at least one current official language/terminology authority for disputed usage when available",
+        "locale/register decision for materially regional language choices",
+        "factual invariant comparison for numbers, names, URLs, offers and negation",
+        "independent multilingual QA for material external-facing output",
+        "peer-reviewed or thesis provenance for promoted evaluation methodology"
+      ],
+      "academic_queries": [
+        "French machine translation localization quality estimation document context terminology cultural pragmatics peer reviewed",
+        "French translation evaluation MQM error span human evaluation cross cultural communication",
+        "French professional translation business communication register politeness multilingual NLP"
+      ],
+      "thesis_queries": [
+        "French machine translation localization quality estimation thesis dissertation",
+        "French terminology domain adaptation translation thesis dissertation university",
+        "French cross cultural pragmatics translation thesis multilingual"
+      ],
+      "academic_ingestion": {
+        "evidence_priority": "project/official > canonical implementation > peer-reviewed/thesis > preprint/working paper > discovery/community",
+        "preserve_limitations": true,
+        "require_original_source_for_material_claims": true,
+        "thesis_policy": "Theses are Tier-3 academic evidence for methods, edge cases and evaluation design; they are not normative language authority.",
+        "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works into prompts or repositories."
+      }
+    },
+    {
+      "id": 112,
+      "name": "Multilingual Localization QA Auditor",
+      "role": "multilingual_localization_qa",
+      "family": "language_localization",
+      "source_tiers": {
+        "primary": [
+          "https://style-guide.europa.eu/",
+          "https://iate.europa.eu/",
+          "https://www.w3.org/International/",
+          "https://cldr.unicode.org/",
+          "https://learn.microsoft.com/globalization/",
+          "https://aclanthology.org/2024.tacl-1.54/",
+          "https://aclanthology.org/2025.wmt-1.22/",
+          "https://aclanthology.org/2025.acl-long.1550/",
+          "https://aclanthology.org/2024.findings-emnlp.765/",
+          "https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Quality-Estimation-for-Machine-Translation-in/991146796302346",
+          "https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style",
+          "https://ibl.bas.bg/",
+          "https://www.rae.es/",
+          "https://www.rae.es/dpd/",
+          "https://www.greek-language.gr/",
+          "https://www.rechtschreibrat.com/DOX/RfdR_Amtliches-Regelwerk_2024.pdf",
+          "https://www.culture.fr/franceterme",
+          "https://www.dictionnaire-academie.fr/",
+          "https://aclanthology.org/2025.wmt-1.30/",
+          "https://aclanthology.org/2025.wmt-1.110/"
+        ],
+        "canonical_github": [
+          "Unbabel/COMET",
+          "google-research/mt-metrics-eval",
+          "mjpost/sacrebleu",
+          "Helsinki-NLP/OPUS-MT-train",
+          "unicode-org/cldr",
+          "w3c/i18n-drafts"
+        ],
+        "reviewed_secondary": [
+          "https://aclanthology.org/",
+          "https://www.microsoft.com/en-us/language",
+          "https://www.w3.org/International/articles/"
+        ]
+      },
+      "research_topics": [
+        "Multilingual QA professional translation and localization",
+        "document-context translation and discourse consistency",
+        "terminology management and domain consistency",
+        "cultural and pragmatic adaptation",
+        "commercial/editorial register and politeness",
+        "machine translation evaluation, quality estimation and error-span analysis",
+        "terminology-constrained translation and terminology consistency",
+        "multi-agent translation revision and independent quality selection"
+      ],
+      "continual_queries": [
+        "Multilingual QA current official grammar style terminology professional writing localization",
+        "Multilingual QA translation localization cultural pragmatics terminology quality assurance",
+        "Multilingual QA machine translation document context quality estimation current research",
+        "Multilingual QA localization business communication regional locale conventions"
+      ],
+      "ingestion_rules": [
+        "Project/client source text and glossary outrank generic style guidance.",
+        "Official language and terminology authorities outrank secondary commentary.",
+        "Canonical active repositories are implementation evidence; archived repositories are historical evidence only.",
+        "Preserve source facts, numbers, names, URLs, negation, offers and placeholders before stylistic adaptation.",
+        "Peer-reviewed research and theses inform methods/evals but do not override current official language rules.",
+        "Record locale and date/version context for volatile guidance and terminology."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 7,
+        "event_triggers": [
+          "target language task",
+          "official authority or terminology update",
+          "new target locale/market",
+          "benchmark/eval failure",
+          "user correction"
+        ],
+        "stale_after_days": 21
+      },
+      "mastery_gate": {
+        "structural": "official language sources + current MT/localization research + independent QA hard-fails present",
+        "behavioral": "complete representative translation/localization tasks and pass independent multilingual QA",
+        "comparative": "only after reproducible evaluation against a relevant baseline and human-reviewed samples"
+      },
+      "source_packs": [
+        "language_localization",
+        "content_editorial",
+        "research",
+        "academic_research",
+        "qa"
+      ],
+      "depth_contract": {
+        "discovery": "Search official language/terminology authorities, WMT/ACL research, current canonical repositories and thesis repositories until marginal value drops.",
+        "ingestion": "Distill verified language/locale rules, terminology patterns, error taxonomies and regression cases; never copy bulk copyrighted corpora.",
+        "freshness": "Re-check official style/terminology and volatile tooling at task time or on update events.",
+        "verification": "Material target-language output needs source-invariant checks and independent multilingual QA."
+      },
+      "required_evidence": [
+        "canonical source text/project glossary when supplied",
+        "at least one current official language/terminology authority for disputed usage when available",
+        "locale/register decision for materially regional language choices",
+        "factual invariant comparison for numbers, names, URLs, offers and negation",
+        "independent multilingual QA for material external-facing output",
+        "peer-reviewed or thesis provenance for promoted evaluation methodology"
+      ],
+      "academic_queries": [
+        "Multilingual QA machine translation localization quality estimation document context terminology cultural pragmatics peer reviewed",
+        "Multilingual QA translation evaluation MQM error span human evaluation cross cultural communication",
+        "Multilingual QA professional translation business communication register politeness multilingual NLP"
+      ],
+      "thesis_queries": [
+        "Multilingual QA machine translation localization quality estimation thesis dissertation",
+        "Multilingual QA terminology domain adaptation translation thesis dissertation university",
+        "Multilingual QA cross cultural pragmatics translation thesis multilingual"
+      ],
+      "academic_ingestion": {
+        "evidence_priority": "project/official > canonical implementation > peer-reviewed/thesis > preprint/working paper > discovery/community",
+        "preserve_limitations": true,
+        "require_original_source_for_material_claims": true,
+        "thesis_policy": "Theses are Tier-3 academic evidence for methods, edge cases and evaluation design; they are not normative language authority.",
+        "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works into prompts or repositories."
+      }
     }
   ],
   "source_pack_catalog": {
@@ -12107,10 +12909,43 @@
         "OATD"
       ],
       "evidence_rule": "Discovery indexes locate evidence. Papers/theses remain bounded evidence with population/task limitations; consequential implementation claims require original-source inspection and task-environment verification."
+    },
+    "language_localization": {
+      "primary": [
+        "https://style-guide.europa.eu/",
+        "https://iate.europa.eu/",
+        "https://www.w3.org/International/",
+        "https://cldr.unicode.org/",
+        "https://learn.microsoft.com/globalization/",
+        "https://www.rae.es/",
+        "https://www.greek-language.gr/",
+        "https://ibl.bas.bg/",
+        "https://www.rechtschreibrat.com/DOX/RfdR_Amtliches-Regelwerk_2024.pdf",
+        "https://www.culture.fr/franceterme",
+        "https://www.dictionnaire-academie.fr/"
+      ],
+      "github": [
+        "Unbabel/COMET",
+        "google-research/mt-metrics-eval",
+        "mjpost/sacrebleu",
+        "Helsinki-NLP/OPUS-MT-train",
+        "unicode-org/cldr",
+        "w3c/i18n-drafts"
+      ],
+      "secondary": [
+        "https://aclanthology.org/2024.tacl-1.54/",
+        "https://aclanthology.org/2025.wmt-1.22/",
+        "https://aclanthology.org/2025.acl-long.1550/",
+        "https://aclanthology.org/2024.findings-emnlp.765/",
+        "https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Quality-Estimation-for-Machine-Translation-in/991146796302346",
+        "https://aclanthology.org/2025.wmt-1.30/",
+        "https://aclanthology.org/2025.wmt-1.110/"
+      ],
+      "rule": "Treat language work as locale-aware localization with source-invariant preservation and independent linguistic QA; official authorities outrank academic/practitioner evidence for normative usage."
     }
   },
   "coverage_contract": {
-    "profiles": 105,
+    "profiles": 112,
     "every_profile_requires": [
       "source_packs",
       "source_tiers.primary",
@@ -12130,9 +12965,9 @@
   },
   "live_registry_sync": {
     "table": "public.ercan_os_agent_expertise_profiles",
-    "verified_live_count": 105,
-    "verified_at": "2026-10-01",
-    "verification": "authenticated Vinterro One Supabase registry"
+    "verified_live_count": 112,
+    "verified_at": "2026-10-02",
+    "verification": "authenticated Vinterro One Supabase registry after multilingual localization pod activation"
   },
   "academic_evidence": {
     "enabled": true,

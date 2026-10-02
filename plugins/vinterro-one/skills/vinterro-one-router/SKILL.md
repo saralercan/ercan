@@ -66,6 +66,34 @@ Resolve the requested identity against the live registry first when available, o
 
 Codex compatibility invariant: project coverage **must never be limited to hard-coded examples**. For the master trigger, activate the **complete qualified global specialist/QA/risk pod** together with the current project lead and materially relevant project-scoped specialists. These phrases are part of the shared regression contract and apply equally to ChatGPT/OpenAI.
 
+## Human-language localization
+
+When the task includes translation, localization, multilingual commercial copy, proofreading or terminology work in English, Bulgarian, Spanish, Greek, German or French:
+- activate the dedicated Language & Localization Specialist for every required target language;
+- activate `Multilingual Localization QA Auditor` for material external-facing output;
+- preserve the normal project lead and supervision chain;
+- use `MULTILINGUAL_LOCALIZATION_AGENT_STANDARD.md` when the repository/reference bundle is available;
+- do not use `Language Freshness Agent` as a substitute; that identity tracks programming/framework language freshness.
+
+The language specialists are global and apply to every project, not only Vinterro Digital.
+
+## Codex native bridge
+
+When running in Codex with native multi-agent support, use the custom roles declared in `.codex/config.toml`
+and `.codex/agents/*.toml`. Load `docs/standards/CODEX_NATIVE_AGENT_BRIDGE.md`.
+
+Vinterro One runtime identities are logical expert contracts; Codex native agents are bounded execution threads.
+Map the exact selected Vinterro One identity into the most specific native role. Any identity without a more specific
+role uses `vinterro_specialist` and the delegated task MUST include the exact runtime agent name.
+
+Do not open the entire runtime registry concurrently. Respect `agents.max_concurrent_threads_per_session`.
+If Codex reports an agent/thread limit, treat it as scheduling backpressure: wait for in-flight dependencies,
+close completed native agent threads, then continue the remaining qualified pod in the next wave.
+Do not conclude that the Vinterro One agents are unavailable merely because a spawn hit the thread ceiling.
+
+If the current Codex surface does not expose native multi-agent execution, follow the selected logical specialist
+contracts in the main execution context and state that no independent native subagent execution was evidenced.
+
 ## Project lead rule
 
 Project coverage is dynamic. Never limit routing to hard-coded examples.

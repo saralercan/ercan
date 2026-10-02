@@ -23,10 +23,17 @@ on:
       - '.agents/skills/portable-agent-router/**'
       - '.agents/skills/finance-specialist/**'
       - '.agents/skills/ecommerce-specialist/**'
+      - '.agents/skills/multilingual-localization-specialists/**'
+      - 'docs/standards/MULTILINGUAL_LOCALIZATION_AGENT_STANDARD.md'
+      - 'docs/evals/MULTILINGUAL_LOCALIZATION_REGRESSION.md'
       - '.claude/agents/vinterro-router.md'
       - 'scripts/validate_runtime_expertise.py'
+      - 'scripts/validate_multilingual_localization_agents.py'
       - 'scripts/validate_academic_expertise.py'
       - 'scripts/validate_vinterro_codex_project_routing.py'
+      - 'scripts/validate_codex_native_agent_bridge.py'
+      - 'docs/standards/CODEX_NATIVE_AGENT_BRIDGE.md'
+      - '.codex/agents/**'
       - 'scripts/validate_vinterro_chatgpt_runtime.py'
       - 'docs/research/ACADEMIC_SOURCE_CATALOG_2026-09-29.md'
       - 'docs/standards/ACADEMIC_RESEARCH_SOURCE_PACK.md'
@@ -42,8 +49,11 @@ on:
       - '.agents/skills/**'
       - '.claude/agents/**'
       - 'scripts/validate_runtime_expertise.py'
+      - 'scripts/validate_multilingual_localization_agents.py'
       - 'scripts/validate_academic_expertise.py'
       - 'scripts/validate_vinterro_codex_project_routing.py'
+      - 'scripts/validate_codex_native_agent_bridge.py'
+      - '.codex/agents/**'
       - 'projects/**/AGENTS.md'
       - 'projects/**/PROJECT.md'
       - 'plugins/vinterro-one/**'
@@ -65,9 +75,13 @@ jobs:
           python-version: '3.12'
       - name: Validate live-runtime expertise coverage
         run: python3 scripts/validate_runtime_expertise.py
+      - name: Validate multilingual localization agent pod
+        run: python3 scripts/validate_multilingual_localization_agents.py
       - name: Validate academic/thesis expertise coverage
         run: python3 scripts/validate_academic_expertise.py
       - name: Validate Codex all-project routing coverage
         run: python3 scripts/validate_vinterro_codex_project_routing.py
+      - name: Validate Codex native agent bridge
+        run: python3 scripts/validate_codex_native_agent_bridge.py
       - name: Validate ChatGPT Vinterro One runtime
         run: python3 scripts/validate_vinterro_chatgpt_runtime.py

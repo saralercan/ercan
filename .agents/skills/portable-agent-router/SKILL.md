@@ -33,6 +33,14 @@ Do not rely on generic `MAIL_ENGINEERING.md` alone for Vinterro Digital commerci
 
 Route copy work through the Vinterro Text/Copy lane, delivery/dedupe through MailAgent/Outreach/Gmail, and visual/template compliance through independent MailQA. A draft is not send-ready until canonical template tokens and signature are verified.
 
+## Human-language localization
+
+For English, Bulgarian, Spanish, Greek, German or French translation/localization, load `.agents/skills/multilingual-localization-specialists/SKILL.md` and `docs/standards/MULTILINGUAL_LOCALIZATION_AGENT_STANDARD.md`.
+
+Route each target language to its dedicated Language & Localization Specialist. Material customer-facing/public multilingual output additionally requires `Multilingual Localization QA Auditor` as an independent reviewer. The existing `Language Freshness Agent` is for programming/framework language freshness and does not replace human-language specialists.
+
+For multilingual tasks, activate every target-language specialist materially required by the deliverable; do not collapse all languages into one generic translation lane.
+
 ## Finance
 
 Use `Finance Expert Agent` for FP&A, budgeting, cash flow, margin/unit economics, forecasts, financial statements, scenario analysis and financial model review.
