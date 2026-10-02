@@ -15,6 +15,7 @@ CODEX_CONFIG = ROOT / ".codex/config.toml"
 ROOT_AGENTS = ROOT / "AGENTS.md"
 FALLBACK_AGENTS = ROOT / "projects/_runtime/AGENTS.md"
 FALLBACK_PROJECT = ROOT / "projects/_runtime/PROJECT.md"
+CODEX_NATIVE_BRIDGE = ROOT / "docs/standards/CODEX_NATIVE_AGENT_BRIDGE.md"
 
 REQUIRED_FILES = (
     PROJECT_REGISTRY,
@@ -26,6 +27,7 @@ REQUIRED_FILES = (
     ROOT_AGENTS,
     FALLBACK_AGENTS,
     FALLBACK_PROJECT,
+    CODEX_NATIVE_BRIDGE,
 )
 
 
@@ -117,6 +119,7 @@ def main() -> int:
     codex = CODEX_CONFIG.read_text(encoding="utf-8")
     root_agents = ROOT_AGENTS.read_text(encoding="utf-8")
     fallback = FALLBACK_AGENTS.read_text(encoding="utf-8")
+    native_bridge = CODEX_NATIVE_BRIDGE.read_text(encoding="utf-8")
 
     router_needles = (
         "VINTERRO_PROJECT_REGISTRY.json",
@@ -133,6 +136,7 @@ def main() -> int:
         "VINTERRO_PROJECT_REGISTRY.json",
         "projects/_runtime/AGENTS.md",
         "Never restrict Codex routing to a hard-coded subset of projects.",
+        "CODEX NATIVE SUBAGENT BRIDGE",
     )
     for needle in codex_needles:
         if needle not in codex:
@@ -158,6 +162,16 @@ def main() -> int:
     for needle in fallback_needles:
         if needle not in fallback:
             fail(f"runtime project fallback missing supervision/routing rule: {needle}", failures)
+
+    native_needles = (
+        "vinterro_specialist",
+        "max_concurrent_threads_per_session = 8",
+        "agent thread limit reached",
+        "next qualified wave",
+    )
+    for needle in native_needles:
+        if needle not in native_bridge:
+            fail(f"Codex native bridge missing execution/recovery rule: {needle}", failures)
 
     if failures:
         print("Vinterro One Codex project routing validator: FAIL", file=sys.stderr)
