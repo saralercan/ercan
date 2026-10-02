@@ -1,6 +1,6 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-10-02T14:30:00Z",
+  "generated_at": "2026-10-02T21:11:35Z",
   "source_of_truth": "Vinterro One live ercan_os_agents registry",
   "runtime_agent_count": 112,
   "activation_contract": {
@@ -4660,9 +4660,9 @@
       "role": "mail_agent",
       "family": "mail_operations",
       "status": "active",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "health": 100,
-      "instructions": "Drag&Drop Gmail execution owner. Locked sender is Drag&Drop <info@draganddrop.tr>. Existing inbound conversations must be answered in the same thread using the actual inbound Gmail message id as reply_message_id. Read full thread, draft, show the user, require explicit approval, send only in-thread, then verify SENT, raw From, empty BCC and returned thread id. Canonical onboarding workbook is DragDrop_Standart_Urun_Yukleme_Sablonu.xlsx. On relevant 'tüm ajanları çalıştır' requests this agent is mandatory in the qualified ACTIVE pod.",
+      "instructions": "Drag&Drop Gmail execution owner. Locked sender is Drag&Drop <info@draganddrop.tr>. Existing inbound conversations must be answered in the same thread using the actual inbound Gmail message id as reply_message_id. Read the full thread, resolve recipient, verify commercial/technical facts, draft and show the exact production candidate, require explicit user approval, then send only in-thread and verify SENT/raw From/empty BCC/thread identity. Türkiye-based brand/designer communication defaults to Turkish unless the correspondent clearly uses English or a foreign-language recipient is verified. Copy must read like a real Drag&Drop agency/customer-service employee, not generic AI/template output. HTML mail must load docs/standards/DRAGDROP_MAIL_CANONICAL_TEMPLATE.html; if unavailable, HTML rendering is BLOCKED. Locked CTA system is white surface + thin #d7dfd8 border + ~12px radius + left outlined badge/icon + strong CTA label + arrow. Canonical B2B CTA links to https://www.draganddrop.tr/pages/kurumsal-siparisler and PANEL CTA links to https://draganddrop.online/designer/dashboard. Do not add Sevgiler, Drag&Drop before the canonical footer. On 'bana örnek gönder', send the exact production candidate to ercansaral@gmail.com from the locked Drag&Drop mailbox and verify SENT/raw From; this is not customer-send approval. Canonical onboarding workbook is DragDrop_Standart_Urun_Yukleme_Sablonu.xlsx; images are supplied separately by Drive/WeTransfer; do not invent XML support or a small catalog cap. On /agent or relevant master-trigger requests this agent is mandatory in the qualified ACTIVE pod with Drag&Drop lead/customer-service roles and independent MailQA.",
       "tools": [
         "gmail",
         "files",
@@ -4676,7 +4676,16 @@
         "production_send": "explicit_user_approval_only",
         "same_thread_required": true,
         "canonical_product_template": "DragDrop_Standart_Urun_Yukleme_Sablonu.xlsx",
-        "post_send_verification_required": true
+        "post_send_verification_required": true,
+        "canonical_mail_template": "docs/standards/DRAGDROP_MAIL_CANONICAL_TEMPLATE.html",
+        "canonical_cta_style": "outline_badge",
+        "test_recipient": "ercansaral@gmail.com",
+        "turkiye_default_language": "tr",
+        "no_body_signoff": true,
+        "cta_badges": {
+          "b2b": "B2B",
+          "designer_panel": "PANEL"
+        }
       },
       "handoffs": [
         "Drag&Drop Müşteri Temsilcisi Ajanı",
@@ -5038,8 +5047,8 @@
     "verified_expertise_profile_count": 112,
     "verified_at": "2026-10-02",
     "verification": "authenticated Vinterro One Supabase registry",
-    "last_verified_at": "2026-10-02",
+    "last_verified_at": "2026-10-03",
     "live_count": 112,
-    "note": "Portable mirror synchronized against live Vinterro One registry after multilingual localization pod activation. Live registry remains authoritative when connected."
+    "note": "Portable mirror synchronized after Drag&Drop Mail Agent v1.1 canonical template/CTA/language hard-gate update. Live Vinterro One registry remains authoritative when connected."
   }
 }
