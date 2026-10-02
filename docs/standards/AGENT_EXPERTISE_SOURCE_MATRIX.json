@@ -11746,7 +11746,9 @@
           "https://aclanthology.org/2025.acl-long.1550/",
           "https://aclanthology.org/2024.findings-emnlp.765/",
           "https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Quality-Estimation-for-Machine-Translation-in/991146796302346",
-          "https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style"
+          "https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style",
+          "https://aclanthology.org/2025.wmt-1.30/",
+          "https://aclanthology.org/2025.wmt-1.110/"
         ],
         "canonical_github": [
           "Unbabel/COMET",
@@ -11768,7 +11770,9 @@
         "terminology management and domain consistency",
         "cultural and pragmatic adaptation",
         "commercial/editorial register and politeness",
-        "machine translation evaluation, quality estimation and error-span analysis"
+        "machine translation evaluation, quality estimation and error-span analysis",
+        "terminology-constrained translation and terminology consistency",
+        "multi-agent translation revision and independent quality selection"
       ],
       "continual_queries": [
         "English current official grammar style terminology professional writing localization",
@@ -11855,7 +11859,9 @@
           "https://aclanthology.org/2025.acl-long.1550/",
           "https://aclanthology.org/2024.findings-emnlp.765/",
           "https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Quality-Estimation-for-Machine-Translation-in/991146796302346",
-          "https://ibl.bas.bg/"
+          "https://ibl.bas.bg/",
+          "https://aclanthology.org/2025.wmt-1.30/",
+          "https://aclanthology.org/2025.wmt-1.110/"
         ],
         "canonical_github": [
           "Unbabel/COMET",
@@ -11877,7 +11883,9 @@
         "terminology management and domain consistency",
         "cultural and pragmatic adaptation",
         "commercial/editorial register and politeness",
-        "machine translation evaluation, quality estimation and error-span analysis"
+        "machine translation evaluation, quality estimation and error-span analysis",
+        "terminology-constrained translation and terminology consistency",
+        "multi-agent translation revision and independent quality selection"
       ],
       "continual_queries": [
         "Bulgarian current official grammar style terminology professional writing localization",
@@ -11965,7 +11973,9 @@
           "https://aclanthology.org/2024.findings-emnlp.765/",
           "https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Quality-Estimation-for-Machine-Translation-in/991146796302346",
           "https://www.rae.es/",
-          "https://www.rae.es/dpd/"
+          "https://www.rae.es/dpd/",
+          "https://aclanthology.org/2025.wmt-1.30/",
+          "https://aclanthology.org/2025.wmt-1.110/"
         ],
         "canonical_github": [
           "Unbabel/COMET",
@@ -11987,7 +11997,9 @@
         "terminology management and domain consistency",
         "cultural and pragmatic adaptation",
         "commercial/editorial register and politeness",
-        "machine translation evaluation, quality estimation and error-span analysis"
+        "machine translation evaluation, quality estimation and error-span analysis",
+        "terminology-constrained translation and terminology consistency",
+        "multi-agent translation revision and independent quality selection"
       ],
       "continual_queries": [
         "Spanish current official grammar style terminology professional writing localization",
@@ -12074,7 +12086,9 @@
           "https://aclanthology.org/2025.acl-long.1550/",
           "https://aclanthology.org/2024.findings-emnlp.765/",
           "https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Quality-Estimation-for-Machine-Translation-in/991146796302346",
-          "https://www.greek-language.gr/"
+          "https://www.greek-language.gr/",
+          "https://aclanthology.org/2025.wmt-1.30/",
+          "https://aclanthology.org/2025.wmt-1.110/"
         ],
         "canonical_github": [
           "Unbabel/COMET",
@@ -12096,7 +12110,9 @@
         "terminology management and domain consistency",
         "cultural and pragmatic adaptation",
         "commercial/editorial register and politeness",
-        "machine translation evaluation, quality estimation and error-span analysis"
+        "machine translation evaluation, quality estimation and error-span analysis",
+        "terminology-constrained translation and terminology consistency",
+        "multi-agent translation revision and independent quality selection"
       ],
       "continual_queries": [
         "Greek current official grammar style terminology professional writing localization",
@@ -12184,7 +12200,9 @@
           "https://aclanthology.org/2024.findings-emnlp.765/",
           "https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Quality-Estimation-for-Machine-Translation-in/991146796302346",
           "https://www.rechtschreibrat.com/DOX/RfdR_Amtliches-Regelwerk_2024.pdf",
-          "https://www.duden.de/sprachwissen/rechtschreibregeln"
+          "https://www.duden.de/sprachwissen/rechtschreibregeln",
+          "https://aclanthology.org/2025.wmt-1.30/",
+          "https://aclanthology.org/2025.wmt-1.110/"
         ],
         "canonical_github": [
           "Unbabel/COMET",
@@ -12206,7 +12224,9 @@
         "terminology management and domain consistency",
         "cultural and pragmatic adaptation",
         "commercial/editorial register and politeness",
-        "machine translation evaluation, quality estimation and error-span analysis"
+        "machine translation evaluation, quality estimation and error-span analysis",
+        "terminology-constrained translation and terminology consistency",
+        "multi-agent translation revision and independent quality selection"
       ],
       "continual_queries": [
         "German current official grammar style terminology professional writing localization",
@@ -12294,7 +12314,9 @@
           "https://aclanthology.org/2024.findings-emnlp.765/",
           "https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Quality-Estimation-for-Machine-Translation-in/991146796302346",
           "https://www.culture.fr/franceterme",
-          "https://www.dictionnaire-academie.fr/"
+          "https://www.dictionnaire-academie.fr/",
+          "https://aclanthology.org/2025.wmt-1.30/",
+          "https://aclanthology.org/2025.wmt-1.110/"
         ],
         "canonical_github": [
           "Unbabel/COMET",
@@ -12316,7 +12338,9 @@
         "terminology management and domain consistency",
         "cultural and pragmatic adaptation",
         "commercial/editorial register and politeness",
-        "machine translation evaluation, quality estimation and error-span analysis"
+        "machine translation evaluation, quality estimation and error-span analysis",
+        "terminology-constrained translation and terminology consistency",
+        "multi-agent translation revision and independent quality selection"
       ],
       "continual_queries": [
         "French current official grammar style terminology professional writing localization",
@@ -12410,7 +12434,9 @@
           "https://www.greek-language.gr/",
           "https://www.rechtschreibrat.com/DOX/RfdR_Amtliches-Regelwerk_2024.pdf",
           "https://www.culture.fr/franceterme",
-          "https://www.dictionnaire-academie.fr/"
+          "https://www.dictionnaire-academie.fr/",
+          "https://aclanthology.org/2025.wmt-1.30/",
+          "https://aclanthology.org/2025.wmt-1.110/"
         ],
         "canonical_github": [
           "Unbabel/COMET",
@@ -12432,7 +12458,9 @@
         "terminology management and domain consistency",
         "cultural and pragmatic adaptation",
         "commercial/editorial register and politeness",
-        "machine translation evaluation, quality estimation and error-span analysis"
+        "machine translation evaluation, quality estimation and error-span analysis",
+        "terminology-constrained translation and terminology consistency",
+        "multi-agent translation revision and independent quality selection"
       ],
       "continual_queries": [
         "Multilingual QA current official grammar style terminology professional writing localization",
@@ -12909,7 +12937,9 @@
         "https://aclanthology.org/2025.wmt-1.22/",
         "https://aclanthology.org/2025.acl-long.1550/",
         "https://aclanthology.org/2024.findings-emnlp.765/",
-        "https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Quality-Estimation-for-Machine-Translation-in/991146796302346"
+        "https://openresearch.surrey.ac.uk/esploro/outputs/doctoral/Quality-Estimation-for-Machine-Translation-in/991146796302346",
+        "https://aclanthology.org/2025.wmt-1.30/",
+        "https://aclanthology.org/2025.wmt-1.110/"
       ],
       "rule": "Treat language work as locale-aware localization with source-invariant preservation and independent linguistic QA; official authorities outrank academic/practitioner evidence for normative usage."
     }
