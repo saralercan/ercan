@@ -69,7 +69,7 @@ The Orchestrator should:
 - start the next qualified wave;
 - never keep finished threads open merely to preserve history.
 
-If Codex reports `agent thread limit reached` or an equivalent concurrency refusal:
+If Codex reports `agent thread limit reached`, an `agent/thread limit` error, or an equivalent concurrency refusal:
 1. a thread-limit condition is not proof that Vinterro One agents are unavailable;
 2. inspect current open agent work;
 3. wait for in-flight work that should finish;
