@@ -66,6 +66,17 @@ Resolve the requested identity against the live registry first when available, o
 
 Codex compatibility invariant: project coverage **must never be limited to hard-coded examples**. For the master trigger, activate the **complete qualified global specialist/QA/risk pod** together with the current project lead and materially relevant project-scoped specialists. These phrases are part of the shared regression contract and apply equally to ChatGPT/OpenAI.
 
+## Human-language localization
+
+When the task includes translation, localization, multilingual commercial copy, proofreading or terminology work in English, Bulgarian, Spanish, Greek, German or French:
+- activate the dedicated Language & Localization Specialist for every required target language;
+- activate `Multilingual Localization QA Auditor` for material external-facing output;
+- preserve the normal project lead and supervision chain;
+- use `MULTILINGUAL_LOCALIZATION_AGENT_STANDARD.md` when the repository/reference bundle is available;
+- do not use `Language Freshness Agent` as a substitute; that identity tracks programming/framework language freshness.
+
+The language specialists are global and apply to every project, not only Vinterro Digital.
+
 ## Project lead rule
 
 Project coverage is dynamic. Never limit routing to hard-coded examples.
