@@ -1,5 +1,4 @@
 name,platform,source_url,record_type,verification,enrichment_status,outreach_status
-"271","NowShopFun","","Doğrulandı","","needs_enrichment","blocked_until_enriched"
 "&klevering","NowShopFun","https://nowshopfun.com/pages/brands","Marka / tasarımcı / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
 "101 Copenhagen","NowShopFun","https://nowshopfun.com/pages/brands","Marka / tasarımcı / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
 "22 Maggio Istanbul","NowShopFun","https://nowshopfun.com/pages/brands","Marka / tasarımcı / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
@@ -271,5 +270,3 @@ name,platform,source_url,record_type,verification,enrichment_status,outreach_sta
 "ZeyArt","NowShopFun","https://nowshopfun.com/pages/brands","Marka / tasarımcı / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
 "Zeynep Karataş Ceramics","NowShopFun","https://nowshopfun.com/pages/brands","Marka / tasarımcı / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
 "Zoa Collection","NowShopFun","https://nowshopfun.com/pages/brands","Marka / tasarımcı / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
-"Çok markalı tasarım/mobilya/lifestyle retailer","NowShopFun","","Evet (public brands/tasarımcılar dizini)","Public dizin; yerli stüdyolarla uluslararası markaları birlikte listeliyor.","needs_enrichment","blocked_until_enriched"
-"https://nowshopfun.com/pages/brands","NowShopFun","","Tasarımcıları / Brands public directory","","needs_enrichment","blocked_until_enriched"
