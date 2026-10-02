@@ -1,5 +1,4 @@
 name,platform,source_url,record_type,verification,enrichment_status,outreach_status
-"197","Hiandco","","Doğrulandı","","needs_enrichment","blocked_until_enriched"
 "1.618","Hiandco","https://www.hiandco.tr/markalar","Marka / tasarımcı / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
 "5LampDesign","Hiandco","https://www.hiandco.tr/markalar","Marka / tasarımcı / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
 "Arete Design","Hiandco","https://www.hiandco.tr/markalar","Marka / tasarımcı / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
@@ -197,5 +196,3 @@ name,platform,source_url,record_type,verification,enrichment_status,outreach_sta
 "Yenesse Design","Hiandco","https://www.hiandco.tr/markalar","Marka / tasarımcı / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
 "Yumsel Seramik","Hiandco","https://www.hiandco.tr/markalar","Marka / tasarımcı / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
 "Zuzu Clay","Hiandco","https://www.hiandco.tr/markalar","Marka / tasarımcı / stüdyo profili","Resmî public dizinden doğrulandı","needs_enrichment","blocked_until_enriched"
-"Çok markalı tasarım/lifestyle marketplace","Hiandco","","Evet","Public Markalar dizini mevcut.","needs_enrichment","blocked_until_enriched"
-"https://www.hiandco.tr/markalar","Hiandco","","Markalar public directory","","needs_enrichment","blocked_until_enriched"
