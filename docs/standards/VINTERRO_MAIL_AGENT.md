@@ -1,7 +1,7 @@
 # Vinterro Sales Super Agent — Mail Alias Standard
 
 Status: active  
-Version: 2.4 (2026-09-29)
+Version: 2.5 (2026-10-05)
 
 This standard defines the `@MailAgent` user-facing routing contract into the canonical **Vinterro One → Sales · AutoGTM → Vinterro Sales Super Agent** commercial system. It must not create a second prospect, outreach or CRM source of truth.
 
@@ -463,32 +463,39 @@ The source template is derived from the user-approved Gmail reference message `1
 ### Locked design tokens
 
 These values are exact and must not drift:
-- white page/background;
-- outer presentation table: `width:100%`;
-- centered outer cell padding: `32px 18px`;
-- content container: `width="770"`, `width:100%; max-width:770px; margin:0 auto;`;
-- content alignment: left;
+- outer page/background: `#f5f5f3`;
+- outer table padding: `32px 16px`;
+- card: white, `max-width:680px`, border `1px solid #e8e8e5`;
+- header padding: `42px 46px 18px`;
+- header brand: `24px`, weight `700`, letter-spacing `-.5px`, color `#191919`;
+- header descriptor: `10px`, letter-spacing `2.4px`, color `#737373`;
+- header divider: exactly `1px #e31b23`, inside `0 46px` horizontal padding;
+- body padding: `34px 46px 12px`;
+- body alignment: left;
 - body font: `Arial, Helvetica, sans-serif`;
 - body size: `16px`;
-- body line-height: `1.72`;
+- body line-height: `1.75`;
 - body color: `#191919`;
 - normal paragraph margin: `0 0 20px 0`;
-- final body paragraph margin before compliance/signature: `0 0 28px 0`;
-- optional test/opt-out/compliance line: `12px`, `1.55`, `#a0a0a0`, margin `0 0 14px 0`;
-- divider: exactly `1px`, `#e31b23`, full width, margin `0 0 18px 0`;
-- signature brand line: `16px`, `1.4`, weight `700`, `#191919`, margin `0 0 4px 0`;
-- tagline: `12px`, `1.5`, letter-spacing `1.4px`, uppercase, `#4a4a4a`, margin `0 0 6px 0`;
-- contact line: `14px`, `1.55`, `#191919`, margin `0 0 5px 0`;
-- services line: `13px`, `1.55`, `#9a9a9a`, margin `0`.
+- optional test/opt-out/compliance line: `12px`, `1.55`, `#a0a0a0`;
+- footer divider: exactly `1px #e31b23`, footer-divider cell padding `18px 46px 0`;
+- footer padding: `24px 46px 30px`;
+- footer brand: `18px`, weight `700`, color `#191919`;
+- footer descriptor: `10px`, letter-spacing `2px`, color `#555555`;
+- footer contact/services block: `13px`, `1.7`, color `#222222`;
+- `vinterro.digital` remains a clickable link to `https://vinterro.digital/`;
+- optional CTA shell: white background, `1px solid #d9d9d6`, `12px` radius, 14px semibold text, outlined `WEB` badge in `#191919`.
 
 ### Rendering rules
 
 - The renderer changes message content, language and optional compliance text only; it does not redesign the shell.
 - Never synthesize a "close enough" version from memory.
-- A 760px container, different outer padding, different signature typography, a centered message body, colored/card backgrounds, extra decorative blocks or a different divider are non-conforming.
-- Active prospect/customer replies use the same shell and signature. The cold-outreach/test disclaimer is omitted for a warm reply unless it is genuinely required.
+- The approved production shell is the 680px bordered white card on #f5f5f3, with branded header, red header/footer dividers and locked footer.
+- Active prospect/customer replies use the same shell and footer. The cold-outreach/test disclaimer is omitted for a warm reply unless genuinely required.
 - Cold outreach uses an appropriate localized opt-out/compliance line in the locked gray style.
 - `bana örnek gönder` uses this same canonical HTML and sends from `info@vinterro.digital` to `ercansaral@gmail.com`.
+- A Vinterro website CTA is optional; when used, it must use the locked CTA shell from the canonical template.
+- Cards nested inside the body, unrelated background colors, altered footer hierarchy or Drag&Drop brand text are non-conforming.
 - Any intentional visual redesign requires explicit user approval followed by an update to this source template, this standard and the regression suite in the same change.
 
 ## Conversation language and copy standard
