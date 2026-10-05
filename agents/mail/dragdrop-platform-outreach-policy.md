@@ -19,11 +19,13 @@ Mail Agent MUST NOT send a cold email until the record has:
 - Personalized to real product / collection / craft / material / region.
 - Explain why Drag&Drop is contacting this brand.
 - Position B2C + relevant B2B opportunity.
-- May state there is no monthly fixed fee / listing fee.
-- Do NOT state commission % or payout timing in first cold touch.
+- State the current verified standard sales commission: **30%**.
+- State there is no monthly fixed fee / listing fee.
+- Do NOT invent or state payout timing unless a current verified written commercial rule exists for that recipient/workflow.
+- Do not add other unverified numeric commercial terms.
 - No BCC; one-by-one send.
 - From must be: Drag&Drop <info@draganddrop.tr>.
-- Commercial terms are shared after interest or when directly asked.
+- The verified 30% commission and no-fixed/no-listing-fee model may be stated in first touch; any additional commercial detail is shared only when verified and relevant.
 
 ## Enrichment fields
 email, phone, website, instagram, region, country, product_category, products, brand_story, relationship_status, outreach_status, enrichment_status.
