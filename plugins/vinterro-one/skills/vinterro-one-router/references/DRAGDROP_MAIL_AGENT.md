@@ -1,6 +1,6 @@
 # Drag&Drop Mail & Customer Service Standard
 
-Version: 1.0 (2026-10-01)
+Version: 1.1 (2026-10-06)
 
 This standard governs Drag&Drop designer, brand and customer email operations inside Vinterro One.
 
@@ -76,6 +76,88 @@ Customer-facing copy must be:
 - free of invented commission rates, payment terms, integrations, timelines, metrics or capabilities.
 
 Answer the customer's actual question first. Do not add process theater that creates delay without a real need.
+
+### Commission wording hard rule
+
+For designer / brand outreach and onboarding:
+- use the currently approved customer-facing standard commission line: `Our standard commission is 10%.` (or the Turkish equivalent);
+- do not present a Türkiye-vs-Europe / domestic-vs-international commission comparison in the customer email;
+- do not expose internal segmentation logic unless the user explicitly asks for it in that exact message;
+- state only the commission relevant to the recipient;
+- if a specific signed contract or current user instruction conflicts with the default, the specific verified term wins.
+
+### Canonical Drag&Drop branded email template
+
+This is the default visual mail template for Drag&Drop designer / brand / customer communication unless the user explicitly asks for a different format.
+
+Visual shell:
+- background: `#f5f5f3`;
+- centered white email card, max width `680px`;
+- card border: `1px solid #e8e8e5`;
+- primary font: Arial / Helvetica / sans-serif;
+- header padding: `42px 46px 18px`;
+- brand title: `Drag&Drop`, 24px, bold;
+- eyebrow: `DESIGN MARKETPLACE`, 10px, uppercase tracking;
+- thin red divider: `#c82020`;
+- body padding: `34px 46px 12px`;
+- body size / rhythm: 16px, line-height about 1.75;
+- footer repeats the red divider, Drag&Drop brand name, DESIGN MARKETPLACE, `info@draganddrop.tr`, `draganddrop.tr`, and the standard service line.
+
+Canonical English footer service line:
+`Independent Designers · Design Objects · Dropshipping · Corporate Orders`
+
+Canonical Turkish footer service line:
+`Bağımsız Tasarımcılar · Tasarım Ürünleri · Dropshipping · Kurumsal Siparişler`
+
+CTA/button style:
+- white background;
+- dark green text `#10291f`;
+- border `#d7dfd8`;
+- rounded 12px;
+- compact badge at left;
+- labels may include `B2B`, `B2C`, `PANEL`, or another short context-specific badge.
+
+Canonical CTA destinations:
+- B2B / Corporate Orders: `https://www.draganddrop.tr/pages/kurumsal-siparisler`
+- B2C / Join / Share Available Editions: `https://www.draganddrop.tr/pages/bize-katilin`
+- Designer Panel: `https://draganddrop.online/designer/dashboard`
+
+### Designer / brand reply content blocks
+
+For qualified designer / brand replies, include the materially relevant blocks rather than only a generic sales paragraph.
+
+Use when relevant:
+- marketplace / operating model;
+- B2C presentation and editorial discovery;
+- B2B / Corporate Orders;
+- Designer Panel;
+- product, price, stock, variants and image management;
+- own-order visibility;
+- shipping / finance / payout visibility when verified for the panel;
+- private studio-to-Drag&Drop communication area when verified;
+- onboarding / available-editions CTA;
+- cross-border fulfilment where relevant;
+- transparent statement of current market scale instead of inflated metrics.
+
+Designer Panel explanation standard:
+`After onboarding, each studio receives access to the Drag&Drop Designer Panel. From the panel, the studio can manage its own products, descriptions, prices, stock, variants and images; add new products; follow its own orders and relevant operational/financial status; and contact Drag&Drop through the private studio communication area.`
+
+Do not promise capabilities that are not currently verified in the live panel.
+
+### Canonical HTML skeleton
+
+Use email-client-safe table HTML and inline CSS. The structural order is:
+
+1. outer `#f5f5f3` background;
+2. centered 680px white card;
+3. Drag&Drop header + DESIGN MARKETPLACE;
+4. red divider;
+5. personalized body;
+6. relevant CTA blocks (B2B / PANEL / B2C);
+7. red divider;
+8. canonical footer.
+
+Do not send the branded template as plain text when the Gmail action supports `html_body`. Provide a plain-text fallback, but treat the HTML version as the production visual.
 
 ## Attachment policy
 
