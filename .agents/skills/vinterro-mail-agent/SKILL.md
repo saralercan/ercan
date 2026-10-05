@@ -339,12 +339,12 @@ This is a **hard visual contract**, not a style suggestion. It also locks the si
 - replace only the body/compliance slots; do not reconstruct the wrapper from memory;
 - preserve the exact locked geometry and signature;
 - body content remains left-aligned;
-- use the 770px container, never a 760px or other near-match variant;
-- preserve outer padding `32px 18px`;
-- preserve body typography `Arial/Helvetica, 16px, 1.72, #191919`;
-- preserve the 1px `#e31b23` divider and exact signature sizes/colors/spacing;
+- use the approved 680px bordered white card on `#f5f5f3`;
+- preserve outer padding `32px 16px`, header padding `42px 46px 18px`, body padding `34px 46px 12px`, and footer padding `24px 46px 30px`;
+- preserve body typography `Arial/Helvetica, 16px, 1.75, #191919`;
+- preserve both 1px `#e31b23` dividers, the 24px Vinterro header brand and exact footer typography/colors/spacing;
 - the gray 12px compliance/test line is conditional: include the appropriate localized opt-out/test line for cold/test outreach; omit it for an active warm prospect/customer reply unless required;
-- do not center body copy, add cards/background fills, change divider color, restyle the signature, or introduce a second template without explicit user approval.
+- do not center body copy, add nested decorative cards, change the approved #f5f5f3 outer background, change divider color, restyle the footer, or introduce a second template without explicit user approval.
 - do not rewrite the signature HTML manually even when the visible text looks identical; preserve the exact source-template signature fragment and links.
 - before provider send, validate the rendered HTML with `python3 scripts/validate_vinterro_mail_html.py --file <rendered.html>` when a rendered file exists; otherwise MailQA must verify equivalent raw-MIME tokens after the test/first send.
 
