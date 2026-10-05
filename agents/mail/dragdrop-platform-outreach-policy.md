@@ -25,7 +25,7 @@ Mail Agent MUST NOT send a cold email until the record has:
 - Do not add other unverified numeric commercial terms.
 - No BCC; one-by-one send.
 - From must be: Drag&Drop <info@draganddrop.tr>.
-- Commercial terms are shared after interest or when directly asked.
+- The verified 30% commission and no-fixed/no-listing-fee model may be stated in first touch; any additional commercial detail is shared only when verified and relevant.
 
 ## Enrichment fields
 email, phone, website, instagram, region, country, product_category, products, brand_story, relationship_status, outreach_status, enrichment_status.
