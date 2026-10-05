@@ -1,35 +1,57 @@
 <!--
 Vinterro Digital canonical customer/outreach email shell.
-Source-of-truth visual reference: Gmail message 1a0e9810c78905e0
-Subject: [TEST] Vinterro Digital — Outreach Mail Tasarım Kontrolü
-Locked: 2026-09-29
+User-approved production redesign based on the Drag&Drop MailAgent card hierarchy, adapted to Vinterro Digital identity.
+Approved visual reference: Gmail message 1a10a011f3d653e1
+Subject: TASARIM TESTİ — Mola Cunda | Vinterro Digital × Drag&Drop mail düzeni
+Locked: 2026-10-05
 
-Do not change geometry, typography, divider or signature without an explicit user-approved standard update.
-BODY_HTML must use left-aligned paragraphs; default paragraph margin is 0 0 20px 0 and the final body paragraph is 0 0 28px 0.
+Do not change geometry, typography, divider, footer or CTA language without an explicit user-approved standard update.
+BODY_HTML must use left-aligned paragraphs; normal paragraph margin is 0 0 20px 0.
 COMPLIANCE_HTML is conditional:
 - test/cold outreach: localized test/opt-out line using the locked 12px / 1.55 / #a0a0a0 style;
 - active customer/prospect replies: omit unless legally/operationally required.
+Optional CTA HTML may be placed inside BODY_HTML and must use the locked CTA shell documented below.
 -->
 <!doctype html>
 <html>
-  <body style="margin:0;padding:0;background:#ffffff;">
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background:#ffffff;margin:0;padding:0;">
+  <body style="margin:0;padding:0;background:#f5f5f3;font-family:Arial,Helvetica,sans-serif;color:#111111;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;background:#f5f5f3;padding:32px 16px;margin:0;">
       <tr>
-        <td align="center" style="padding:32px 18px;">
-          <table role="presentation" width="770" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:770px;margin:0 auto;background:#ffffff;">
+        <td align="center">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:680px;background:#ffffff;border:1px solid #e8e8e5;margin:0 auto;">
             <tr>
-              <td align="left" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.72;color:#191919;text-align:left;">
+              <td style="padding:42px 46px 18px;">
+                <div style="font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;font-weight:700;letter-spacing:-.5px;color:#191919;">Vinterro Digital</div>
+                <div style="margin-top:7px;font-family:Arial,Helvetica,sans-serif;font-size:10px;line-height:1.5;letter-spacing:2.4px;color:#737373;">CREATIVITY GROWTH STUDIO</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0 46px;">
+                <div style="height:1px;line-height:1px;background:#e31b23;width:100%;">&nbsp;</div>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" style="padding:34px 46px 12px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.75;color:#191919;text-align:left;">
                 {{BODY_HTML}}
 
                 {{COMPLIANCE_HTML}}
-
-                <div style="height:1px;line-height:1px;background:#e31b23;width:100%;margin:0 0 18px 0;">&nbsp;</div>
-
-                <div style="text-align:left;">
-                  <div style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.4;font-weight:700;color:#191919;margin:0 0 4px 0;">Vinterro Digital</div>
-                  <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.5;letter-spacing:1.4px;text-transform:uppercase;color:#4a4a4a;margin:0 0 6px 0;">CREATIVITY GROWTH STUDIO</div>
-                  <div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.55;color:#191919;margin:0 0 5px 0;"><a href="mailto:info@vinterro.digital" style="color:#191919;text-decoration:none;">info@vinterro.digital</a> · <a href="https://vinterro.digital/" style="color:#191919;text-decoration:none;">vinterro.digital</a></div>
-                  <div style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.55;color:#9a9a9a;margin:0;">Strategy &amp; Brand · Digital Products &amp; Web · Commerce · Growth · Automation</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:18px 46px 0;">
+                <div style="height:1px;line-height:1px;background:#e31b23;width:100%;">&nbsp;</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:24px 46px 30px;text-align:left;">
+                <div style="font-family:Arial,Helvetica,sans-serif;font-size:18px;line-height:1.4;font-weight:700;color:#191919;">Vinterro Digital</div>
+                <div style="margin-top:4px;font-family:Arial,Helvetica,sans-serif;font-size:10px;line-height:1.5;letter-spacing:2px;color:#555555;">CREATIVITY GROWTH STUDIO</div>
+                <div style="margin-top:16px;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.7;color:#222222;">
+                  <a href="mailto:info@vinterro.digital" style="color:#222222;text-decoration:none;">info@vinterro.digital</a>
+                  ·
+                  <a href="https://vinterro.digital/" target="_blank" style="color:#222222;text-decoration:none;">vinterro.digital</a>
+                  <br>
+                  Strategy &amp; Brand · Digital Products &amp; Web · Commerce · Growth · Automation
                 </div>
               </td>
             </tr>
@@ -37,5 +59,20 @@ COMPLIANCE_HTML is conditional:
         </td>
       </tr>
     </table>
+
+    <!--
+    LOCKED OPTIONAL CTA SHELL
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 22px 0;"><tr><td>
+      <a href="https://vinterro.digital/" target="_blank" style="display:inline-block;background:#ffffff;color:#191919;text-decoration:none;padding:10px 16px;border-radius:12px;border:1px solid #d9d9d6;font-size:14px;font-weight:600;line-height:1.4;">
+        <span style="display:inline-block;margin-right:10px;padding:2px 7px;border:1px solid #191919;border-radius:6px;font-size:10px;line-height:1.25;letter-spacing:.5px;font-weight:700;vertical-align:1px;">WEB</span>Vinterro Digital →
+      </a>
+    </td></tr></table>
+
+    RULES
+    - Replace only {{BODY_HTML}} and {{COMPLIANCE_HTML}}.
+    - Do not add a personal signoff before the footer.
+    - Keep Vinterro Digital identity; do not use Drag&Drop brand text/colors.
+    - Any CTA intentionally rendered as a button must use the locked optional CTA shell.
+    -->
   </body>
 </html>
