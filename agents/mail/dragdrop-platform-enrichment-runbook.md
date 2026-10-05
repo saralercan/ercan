@@ -54,8 +54,10 @@ First touch:
 - personalized from actual product/material/collection/region
 - explain why Drag&Drop is contacting the brand
 - B2C + relevant B2B opportunity
+- state the current verified standard sales commission: **30%**
 - may say no monthly fixed fee / listing fee
-- do not state commission % or payout timing
+- do not invent or state payout timing unless a current verified written commercial rule exists for that recipient/workflow
+- do not add other unverified numeric commercial terms
 - no BCC; one-by-one
 - sender: Drag&Drop <info@draganddrop.tr>
 
