@@ -279,16 +279,18 @@ Forbidden:
 Input: any Vinterro Digital first-touch, follow-up, active-lead reply or example/test email.
 Expected:
 - render from `docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html`;
-- 770px max-width container;
-- outer padding `32px 18px`;
-- left-aligned 16px / 1.72 / #191919 body;
-- 1px #e31b23 divider;
-- exact locked Vinterro signature typography, colors and spacing.
+- outer background `#f5f5f3`;
+- 680px max-width white card with `1px solid #e8e8e5` border;
+- outer padding `32px 16px`;
+- header padding `42px 46px 18px`, 24px Vinterro brand and 10px tracked descriptor;
+- left-aligned 16px / 1.75 / #191919 body with `34px 46px 12px` padding;
+- exact #e31b23 header and footer dividers;
+- exact locked Vinterro footer hierarchy, typography, colors and links.
 Forbidden:
-- 760px or another near-match width;
+- legacy 770px borderless white-page shell;
 - centered body copy;
-- altered divider/signature;
-- card/background redesign;
+- altered divider/footer hierarchy;
+- Drag&Drop brand text or colors;
 - reconstructing the shell from memory instead of loading the canonical source.
 
 ### MA-032 — Example-send uses canonical HTML
@@ -343,26 +345,23 @@ Expected:
 Forbidden:
 - infer 760px/15px/11px or any alternate token set from an old Gmail message and silently treat it as canonical.
 
-### MA-037 — Signature links and exact tokens
+### MA-037 — Footer links and exact card tokens
 Input: render a Vinterro Digital email from canonical template.
 Expected:
-- 770px container;
-- outer padding 32px 18px;
-- body 16px / 1.72 / #191919;
-- brand 16px;
-- tagline 12px with 1.4px letter-spacing;
-- contact 14px;
-- services 13px;
-- exact 1px #e31b23 divider;
+- 680px card, #f5f5f3 outer background, #ffffff card, #e8e8e5 border;
+- outer padding 32px 16px;
+- header brand 24px; descriptor 10px with 2.4px tracking;
+- body 16px / 1.75 / #191919 with 34px 46px 12px padding;
+- footer brand 18px; footer descriptor 10px; contact/services block 13px;
+- exact 1px #e31b23 header and footer dividers;
 - info@vinterro.digital mailto link;
 - vinterro.digital links to https://vinterro.digital/.
 Forbidden:
-- 760px container;
-- brand 15px;
-- tagline 11px;
-- contact 13px;
-- services 12px;
-- plain-text non-clickable site URL.
+- legacy 770px borderless shell;
+- wrong outer/card colors;
+- 16px legacy footer brand;
+- plain-text non-clickable site URL;
+- Drag&Drop brand/footer text.
 
 ### MA-038 — Same account, different email
 If prior first-touch exists for one mailbox and another public mailbox resolves to the same business, block a new first-touch.
@@ -428,10 +427,21 @@ Forbidden:
 - asking the user which Vinterro mail template to use when the canonical source is available;
 - silently using a prior Gmail example as the template source.
 
+### MA-050 — Approved card redesign persists
+Input: user approved the Vinterro Digital design test based on Drag&Drop MailAgent layout and authorized production outreach.
+Expected:
+- new production first-touch renders use the Vinterro card-layout canonical source;
+- the visual hierarchy matches the approved test: gray outer background, white bordered card, Vinterro header, red dividers, spacious body, locked Vinterro footer;
+- copy remains recipient-specific and Vinterro-branded;
+- approval does not permit reverting to the legacy borderless shell.
+Forbidden:
+- silently reverting to the legacy 770px template;
+- copying Drag&Drop brand identity into Vinterro emails.
+
 ## Completion criteria
 
 The MailAgent v2 capability is regression-ready when:
 - activation routes correctly for `mail ajanı` / `@MailAgent`;
-- the 49 cases above are represented in future automated/manual evals;
+- the 50 cases above are represented in future automated/manual evals;
 - provider mutation claims are graded against actual external state;
 - user corrections add or update regression cases rather than only changing prose.
