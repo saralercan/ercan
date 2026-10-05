@@ -97,10 +97,10 @@ Every HTML link that is intentionally presented as a CTA button uses the same vi
 - no solid-green legacy button, unrelated pill style or exposed raw URL in HTML when a CTA is intended.
 
 Canonical CTAs:
-- `B2B | Kurumsal Siparişler →` -> `https://www.draganddrop.tr/pages/kurumsal-siparisler`
-- `PANEL | Tasarımcı Paneli →` -> `https://draganddrop.online/designer/dashboard`
+- Turkish B2B: `B2B | Kurumsal Siparişler →` -> `https://www.draganddrop.tr/pages/kurumsal-siparisler`
+- Turkish panel: `PANEL | Tasarımcı Paneli →` -> `https://draganddrop.online/designer/dashboard`
 
-Additional CTA badges may use short context labels such as `WEB`, `FORM` or `KATALOG`, but the same button shell is mandatory.
+For non-Turkish recipient locales, the badge, destination URL and locked visual shell remain unchanged; the visible CTA label is localized into the verified recipient language. Additional CTA badges may use short context labels such as `WEB`, `FORM` or `KATALOG`, but the same button shell is mandatory.
 
 ### Example/test-send behavior
 
@@ -111,12 +111,25 @@ Additional CTA badges may use short context labels such as `WEB`, `FORM` or `KAT
 - verify SENT and raw MIME From;
 - do not send the real customer until the user separately approves production send.
 
+## Locale routing hard gate
+
+Before drafting any first-touch or reply, resolve `recipient_locale` from current evidence:
+1. verified business country;
+2. official website/contact-page language;
+3. current Gmail thread language, when a conversation already exists.
+
+Cold outreach uses the recipient's verified local business language by default. Country examples include Türkiye→Turkish, Greece→Greek, Bulgaria→Bulgarian, Germany/Austria→German, Italy→Italian, France→French, Spain→Spanish, Romania→Romanian, Georgia→Georgian, Sweden→Swedish, Norway→Norwegian, Denmark→Danish and Finland→Finnish.
+
+For multilingual countries/brands, use the language evidenced by the official site/contact channel or the correspondent. English is not the default foreign-outreach language. It is permitted only when the brand/correspondent clearly uses English, explicitly requests English, or no exact local-language route can be verified. When the user requires local-language outreach and the locale cannot be verified, production send is `BLOCKED` rather than silently falling back to English.
+
+Every non-Türkiye production mail must route through the exact-match locale specialist / `@LocalizationEditor` and an independent same-language copy reviewer before MailQA/release. The canonical HTML wrapper remains unchanged; only body/compliance slots and visible CTA labels are localized.
+
 ## Copy standard
 
 Customer-facing copy must be:
 - human and agency-grade;
 - written like a real Drag&Drop agency/customer-service employee, not an AI template;
-- Turkish by default for Türkiye-based brands/designers unless the correspondent clearly communicates in English or a foreign-language recipient is verified;
+- compliant with the Locale routing hard gate above;
 - concise and clear;
 - specific to the actual request;
 - transparent about technical/commercial limitations;
@@ -142,8 +155,9 @@ Mandatory ACTIVE pod members:
 - Drag&Drop Baş Uzman Ajanı;
 - Drag&Drop Müşteri Temsilcisi Ajanı;
 - Drag&Drop Mail Ajanı;
+- exact-match locale specialist / `@LocalizationEditor` for every non-Türkiye recipient;
 - task-relevant Shopify/e-commerce/commercial specialist(s);
-- independent MailQA / reviewer when a send or send-ready reply is involved.
+- independent same-language copy reviewer plus MailQA / reviewer when a send or send-ready reply is involved.
 
 This remains qualified-agent routing, not literal full-registry fan-out.
 
