@@ -71,10 +71,11 @@ This rule applies from the repository root even when Codex is not currently oper
 The user must never be asked to restate or rediscover this standard in normal operation. Load it automatically from the canonical repo sources. The HTML wrapper and signature are a **locked source artifact**, not prose guidance. Do not reconstruct a visually similar email from memory. Render by preserving the canonical template and replacing only its body/compliance slots. If the canonical template cannot be read, the mail task is `BLOCKED`; do not improvise another wrapper or signature.
 
 Before any Vinterro Digital mail is considered send-ready, run the canonical mail QA gate. At minimum verify:
-- content container `770px`;
-- outer padding `32px 18px`;
-- left-aligned Arial/Helvetica body at `16px / 1.72 / #191919`;
-- exact `1px #e31b23` divider;
+- outer background `#f5f5f3` and white bordered card at `max-width:680px`;
+- outer padding `32px 16px`;
+- Vinterro header at `42px 46px 18px`;
+- left-aligned Arial/Helvetica body at `16px / 1.75 / #191919` with `34px 46px 12px` padding;
+- exact `1px #e31b23` header and footer dividers;
 - exact Vinterro Digital card layout, header/footer typography, spacing, contact line and services line from the source template;
 - `vinterro.digital` links to `https://vinterro.digital/`;
 - copy follows the evidence-grounded Vinterro MailAgent/TextAgent contract;
