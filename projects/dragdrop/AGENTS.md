@@ -36,7 +36,8 @@ The machine-readable candidate map is `docs/standards/GITHUB_SPECIALIST_MANIFEST
 - Shopify-owned order/account/customer notifications remain platform-native unless a custom app/backend workflow materially requires another mail transport.
 - Do not send mail from storefront Liquid/JS. B2B/designer/custom workflow mail belongs in the app/backend/service layer and follows `MAIL_ENGINEERING.md` with idempotency, safe testing and delivery-event handling as relevant.
 - Drag&Drop customer/designer/brand email routes through `@DragDropCustomerService` + `@DragDropMailAgent`; it must load `docs/standards/DRAGDROP_MAIL_AGENT.md` and the locked `docs/standards/DRAGDROP_MAIL_CANONICAL_TEMPLATE.html` before rendering HTML.
-- Türkiye-based brand/designer mail defaults to Turkish; canonical B2B/PANEL CTA styling and exact same-thread/approval/post-send QA rules are mandatory.
+- Drag&Drop mail is country/recipient-locale routed: Türkiye→Turkish; verified foreign recipients use their verified local business language by default. English is not the generic foreign fallback when an exact local-language route is available. Multilingual-country/brand cases follow official-site/contact or thread evidence.
+- Every non-Türkiye mail activates the exact-match locale specialist / `@LocalizationEditor` plus independent same-language copy QA; canonical B2B/PANEL CTA styling and exact same-thread/approval/post-send QA rules remain mandatory.
 - Notification-template changes preserve current Shopify variables/localization and are preview/tested before live use.
 
 ## Project memory priority
@@ -68,4 +69,4 @@ Same-thread rule:
 - use the actual inbound Gmail message id as `reply_message_id`;
 - verify SENT, raw From = `Drag&Drop <info@draganddrop.tr>`, BCC empty and thread id integrity.
 
-When `tüm ajanları çalıştır` or equivalent is used on a relevant Drag&Drop mail/customer task, both runtime agents are mandatory members of the qualified ACTIVE pod with `@DragDrop` and independent mail QA.
+When `tüm ajanları çalıştır` or equivalent is used on a relevant Drag&Drop mail/customer task, both runtime agents are mandatory members of the qualified ACTIVE pod with `@DragDrop` and independent mail QA. For any non-Türkiye recipient, add the exact-match locale specialist / `@LocalizationEditor` and independent same-language copy reviewer as mandatory ACTIVE members.
