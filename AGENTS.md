@@ -75,7 +75,7 @@ Before any Vinterro Digital mail is considered send-ready, run the canonical mai
 - outer padding `32px 18px`;
 - left-aligned Arial/Helvetica body at `16px / 1.72 / #191919`;
 - exact `1px #e31b23` divider;
-- exact Vinterro Digital signature typography, spacing, contact line and services line from the source template;
+- exact Vinterro Digital card layout, header/footer typography, spacing, contact line and services line from the source template;
 - `vinterro.digital` links to `https://vinterro.digital/`;
 - copy follows the evidence-grounded Vinterro MailAgent/TextAgent contract;
 - test command `bana örnek gönder` means a real test send from `info@vinterro.digital` to `ercansaral@gmail.com` plus SENT/raw-MIME verification.
