@@ -82,3 +82,22 @@ Verify SENT and raw From. This action must not send the real customer.
 
 ### DD-MAIL-016 — human agency copy
 Reject generic AI/template language, process theater and unnecessary corporate filler. The reply must answer the actual customer/designer request with natural, context-aware agency language.
+
+### DD-MAIL-017 — country / recipient-locale routing
+For cold outreach, resolve the recipient locale from verified business country plus official-site/contact evidence.
+
+Expected defaults include Türkiye→Turkish, Greece→Greek, Bulgaria→Bulgarian, Germany/Austria→German, Italy→Italian, France→French, Spain→Spanish, Romania→Romanian, Georgia→Georgian, Sweden→Swedish, Norway→Norwegian, Denmark→Danish and Finland→Finnish.
+
+For multilingual countries or brands, use the language evidenced by the official contact surface or current thread.
+
+Fail if a verified non-Türkiye recipient is sent generic English merely because the mail agent lacks locale routing. If local-language outreach is required and the locale cannot be verified, expected state is BLOCKED.
+
+### DD-MAIL-018 — non-Türkiye locale specialist gate
+For every non-Türkiye production mail, the ACTIVE pod must include the exact-match locale specialist / `@LocalizationEditor` and an independent same-language copy reviewer before MailQA/release.
+
+Fail if MailAgent alone writes and self-approves the foreign-language copy.
+
+### DD-MAIL-019 — localized CTA label, locked shell
+For non-Turkish recipient locales, keep canonical CTA badge, destination URL and visual shell unchanged, but localize the visible CTA label into the verified recipient language.
+
+Fail if the mail body is localized but the intended CTA label remains in an unrelated language, or if localization changes the locked CTA shell/URL.

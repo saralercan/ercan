@@ -29,7 +29,11 @@ For an inbound reply:
 - classify intent and current stage;
 - resolve the actual reply recipient;
 - verify relevant technical/commercial facts;
-- for Türkiye-based brands/designers default to Turkish unless the correspondent clearly uses English or a foreign-language recipient is verified;
+- resolve the recipient locale before drafting from verified business country, official-site/contact language and current thread language;
+- cold outreach MUST use the recipient's verified local business language by default, not English-by-default. Examples: Türkiye→Turkish, Greece→Greek, Bulgaria→Bulgarian, Germany/Austria→German, Italy→Italian, France→French, Spain→Spanish, Romania→Romanian, Georgia→Georgian, Sweden→Swedish, Norway→Norwegian, Denmark→Danish, Finland→Finnish;
+- for multilingual countries or brands, use the locale actually evidenced by the brand's official site/contact channel or current correspondence;
+- English is allowed only when the brand/correspondent clearly uses English, the recipient explicitly prefers English, or no exact local-language route can be verified. If the user has required local-language outreach and the locale cannot be verified, production send is BLOCKED rather than silently falling back to English;
+- route non-Türkiye mail through the exact-match locale specialist / `@LocalizationEditor` and require same-language copy QA before send;
 - write like a real Drag&Drop agency/customer-service employee: human, concise, contextual and commercially precise; reject generic AI/template phrasing;
 - show the exact production draft to the user;
 - send only after explicit approval;
@@ -56,8 +60,9 @@ CTA contract:
 - white background, thin `#d7dfd8` border, ~12px radius;
 - small outlined badge/icon area on the left;
 - strong CTA label plus `→` on the right;
-- B2B: `B2B | Kurumsal Siparişler →` -> `https://www.draganddrop.tr/pages/kurumsal-siparisler`;
-- panel: `PANEL | Tasarımcı Paneli →` -> `https://draganddrop.online/designer/dashboard`;
+- B2B canonical Turkish label: `B2B | Kurumsal Siparişler →` -> `https://www.draganddrop.tr/pages/kurumsal-siparisler`;
+- panel canonical Turkish label: `PANEL | Tasarımcı Paneli →` -> `https://draganddrop.online/designer/dashboard`;
+- for non-Turkish recipient locales, keep the badge, URL and locked visual shell unchanged but localize the visible CTA label into the recipient locale;
 - new CTA badges may use short labels such as `WEB`, `FORM`, `KATALOG` but must keep the same visual system;
 - do not fall back to solid green buttons, unrelated pill styles or visible raw links in HTML mail when a CTA is intended. Plain-text fallback may contain the URL.
 
@@ -83,7 +88,7 @@ When the user says `bana örnek gönder`:
 
 ## Master trigger
 
-On `/agent`, `tüm ajanları çalıştır` (or equivalent), activate Drag&Drop Baş Uzman Ajanı, Drag&Drop Müşteri Temsilcisi Ajanı, Drag&Drop Mail Ajanı and independent MailQA/reviewer whenever the task materially includes Drag&Drop customer/designer/brand communication or email.
+On `/agent`, `tüm ajanları çalıştır` (or equivalent), activate Drag&Drop Baş Uzman Ajanı, Drag&Drop Müşteri Temsilcisi Ajanı, Drag&Drop Mail Ajanı and independent MailQA/reviewer whenever the task materially includes Drag&Drop customer/designer/brand communication or email. For any non-Türkiye recipient, the exact-match locale specialist / `@LocalizationEditor` is also mandatory ACTIVE; same-language review is required before send.
 
 ## QA
 
