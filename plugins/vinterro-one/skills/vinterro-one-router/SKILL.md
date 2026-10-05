@@ -30,6 +30,14 @@ When canonical repo files are unavailable, use this skill bundle's self-containe
 
 Do not eagerly load every agent prompt.
 
+### Drag&Drop mail routing invariant
+
+For any Drag&Drop customer, designer, brand, onboarding or Gmail task:
+- activate `Drag&Drop Baş Uzman Ajanı`, `Drag&Drop Müşteri Temsilcisi Ajanı` and `Drag&Drop Mail Ajanı`;
+- load `references/DRAGDROP_MAIL_AGENT.md` before drafting or sending;
+- use its canonical branded HTML email template, CTA structure, sender/thread approval gates and current commission wording rules;
+- include independent MailQA for send-ready or production sends.
+
 ## ChatGPT/OpenAI behavior
 
 When a Vinterro One MCP app is connected, call `vinterro_route_task` before substantial project work or a master-trigger request.
