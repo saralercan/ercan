@@ -8,7 +8,7 @@ For ANY Vinterro Digital commercial email task — including /agent in mail cont
 4. docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html
 5. docs/evals/VINTERRO_MAIL_AGENT_REGRESSION.md when QA/regression is material
 
-The canonical HTML file is executable design data. Never reconstruct, approximate, restyle, or infer the wrapper/signature from memory or historical Gmail examples. Preserve the exact 770px container, 32px 18px outer padding, Arial/Helvetica 16px / 1.72 / #191919 body, #e31b23 divider, signature typography/spacing/links and conditional compliance slot.
+The canonical HTML file is executable design data. Never reconstruct, approximate, restyle, or infer the wrapper/signature from memory or historical Gmail examples. Preserve the approved 680px bordered white card on #f5f5f3, 32px 16px outer padding, 42px 46px 18px header, Arial/Helvetica 16px / 1.75 / #191919 body with 34px 46px 12px padding, both #e31b23 dividers, locked footer hierarchy/links and conditional compliance slot.
 
 Copy must follow the Vinterro MailAgent evidence-grounded contract: business-first, verified recipient-specific signals, concrete opportunity, concise human tone, one low-friction CTA, natural recipient language, no fabricated claims, no generic capability dump.
 
