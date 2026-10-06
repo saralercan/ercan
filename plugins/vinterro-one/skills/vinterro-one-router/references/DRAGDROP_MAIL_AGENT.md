@@ -1,6 +1,6 @@
 # Drag&Drop Mail & Customer Service Standard
 
-Version: 1.1 (2026-10-06)
+Version: 1.2 (2026-10-06)
 
 This standard governs Drag&Drop designer, brand and customer email operations inside Vinterro One.
 
@@ -80,10 +80,12 @@ Answer the customer's actual question first. Do not add process theater that cre
 ### Commission wording hard rule
 
 For designer / brand outreach and onboarding:
-- use the currently approved customer-facing standard commission line: `Our standard commission is 10%.` (or the Turkish equivalent);
-- do not present a Türkiye-vs-Europe / domestic-vs-international commission comparison in the customer email;
-- do not expose internal segmentation logic unless the user explicitly asks for it in that exact message;
-- state only the commission relevant to the recipient;
+- Türkiye-based designers / brands use a standard commission rate of **30%**;
+- designers / brands based outside Türkiye use a standard commission rate of **10%**;
+- classify the rate by the designer / brand's verified legal or tax establishment, not by the customer's delivery country;
+- in customer-facing email, state only the rate relevant to that recipient; do not add a domestic-vs-international comparison unless the user explicitly asks for it;
+- for a Türkiye-based recipient, use: `Standart satış komisyonumuz %30'dur.`;
+- for a non-Türkiye recipient, use: `Our standard commission is 10%.` (or the appropriate local-language equivalent);
 - if a specific signed contract or current user instruction conflicts with the default, the specific verified term wins.
 
 ### Canonical Drag&Drop branded email template
