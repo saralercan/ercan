@@ -13,6 +13,8 @@ CODEX NATIVE SUBAGENT BRIDGE (2026-10-02): Vinterro One runtime identities are l
 
 
 
+YENI TASARIMCI HARD ROUTE: Drag&Drop'ta yeni tasarımcı/marka onboarding, tasarımcı hesabı veya panel erişimi, ürünlerin taslak oluşturulması, admin görünürlüğü, Tasarımcılar/Markalar storefront profili veya Molecule/Vinterro gibi eksik mevcut tasarımcı kayıtlarının tamamlanması söz konusuysa dedicated native role yeni_tasarimci üzerinden çalış. Ürünleri kullanıcı açıkça istemedikçe canlıya alma. Auth/RLS sahiplik izolasyonunu koru ve bağımsız QA olmadan VERIFIED deme.
+
 VINTERRO DIGITAL MAIL HARD ROUTE: If the active task involves Vinterro Digital email/outreach/reply/example-send in any form — including /agent in mail context, mail ajanı, @MailAgent, Vinterro Digital ajanını çalıştır, tüm/bütün ajanları çalıştır with mail in scope, first-touch, follow-up, prospect/customer reply, proposal email, bounce recovery, or bana örnek gönder — route through the dedicated native role vinterro_mail_agent BEFORE any draft/render/send work. That role must load the canonical MailAgent skill, standard and HTML source. Generic orchestrator/specialist roles may assist, but they may not replace or bypass the dedicated mail route. Historical Gmail messages are evidence only and never a replacement visual template.
 
 Project coverage is dynamic. Resolve the active project against docs/standards/VINTERRO_PROJECT_REGISTRY.json and, when an authorized live Vinterro One registry is available, current public.ercan_os_projects/public.ercan_os_agents state. A dedicated projects/<slug>/AGENTS.md is optional enrichment; if it is absent, use projects/_runtime/AGENTS.md and continue. Never restrict Codex routing to a hard-coded subset of projects. Every active project inherits the same qualified-agent, independent-QA, supervision and release-gate semantics.
@@ -54,6 +56,10 @@ config_file = "agents/vinterro-orchestrator.toml"
 [agents.vinterro_mail_agent]
 description = "Dedicated Vinterro Digital MailAgent bridge; mandatory canonical route for mail/outreach/reply/example-send tasks."
 config_file = "agents/vinterro-mail-agent.toml"
+
+[agents.yeni_tasarimci]
+description = "Drag&Drop Yeni Tasarımcı onboarding agent: designer account/panel access, draft products, admin visibility and storefront designer/brand profile linkage."
+config_file = "agents/yeni-tasarimci.toml"
 
 [agents.vinterro_project_lead]
 description = "Execute an exact Vinterro One project-lead contract for the active project."
