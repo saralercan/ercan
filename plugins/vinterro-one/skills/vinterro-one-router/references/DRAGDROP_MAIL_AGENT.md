@@ -1,12 +1,13 @@
 # Drag&Drop Mail & Customer Service Standard
 
-Version: 1.2 (2026-10-06)
+Version: 1.3 (2026-10-07)
 
 This standard governs Drag&Drop designer, brand and customer email operations inside Vinterro One.
 
 ## Runtime owners
 
 - `Drag&Drop Baş Uzman Ajanı` — project lead and orchestration owner.
+- `Drag&Drop Outreach Ajanı` — cold first-touch designer/brand outreach, alphabetical campaign selection, Gmail dedupe and tanışma-mail personalization owner.
 - `Drag&Drop Müşteri Temsilcisi Ajanı` — inbound customer/designer/brand context, intent, onboarding and operational response owner.
 - `Drag&Drop Mail Ajanı` — Gmail drafting, thread-safe execution and post-send verification owner.
 - `@EmailSupervisor / MailQA` — independent send/thread verification for material sends.
@@ -38,6 +39,27 @@ For every reply to an inbound customer/designer/brand message:
    - BCC empty;
    - returned thread id matches the conversation thread.
 9. If any gate fails, final state is `BLOCKED` or `NOT_VERIFIED`; never claim the reply was sent correctly.
+
+## Cold first-touch / Tanışma Maili hard route
+
+Canonical skill: `.agents/skills/dragdrop-outreach-intro/SKILL.md` (portable plugin equivalent: `dragdrop-outreach-intro`).
+
+For any cold first-touch designer/brand outreach:
+- activate `Drag&Drop Outreach Ajanı` together with `Drag&Drop Mail Ajanı` and independent MailQA;
+- inspect real product/collection evidence before writing the personalized opening;
+- never imply prior contact/research history without evidence; do not use unsupported `yeniden inceledik`, `uzun süredir takip ediyoruz` or similar phrasing;
+- write at experienced human brand-partnerships/designer-relations level, not generic AI copy;
+- separate B2C and B2B opportunity blocks;
+- state that Drag&Drop is Türkiye-based but sells internationally, explicitly emphasizing active European sales and suitable Europe-internal / Türkiye-Europe / wider international routes;
+- for Türkiye-established partners state the verified 30% standard commission and no monthly fixed/listing fee; for non-Türkiye partners use the current verified foreign-partner rate below;
+- explain operational ownership for stock, order forwarding, preparation/packing/shipping, digital storefront, payment flow, sales process and customer communication;
+- preserve canonical B2C Bize Katılın + B2B Kurumsal Siparişler CTAs;
+- dedupe every candidate against Gmail SENT by brand + exact email + domain, plus bounce/opt-out/relationship suppression;
+- when using a source Excel/list alphabetically, skip non-clean rows and continue until the requested number of unique clean recipients is reached.
+
+When the user requests an example, send the first clean real candidate to `ercansaral@gmail.com` from `info@draganddrop.tr` using the exact production candidate and canonical HTML. Production remains blocked until the user approves the batch/send. Once a specific batch is explicitly approved, per-recipient re-approval is not required unless a material exception changes terms, locale, relationship state or risk.
+
+If the recipient replies or an existing active thread is found, cold-outreach ownership ends and the workflow moves to `Drag&Drop Müşteri Temsilcisi Ajanı` + `Drag&Drop Mail Ajanı` in that same Gmail thread.
 
 ## Designer / brand onboarding product template
 
@@ -177,6 +199,7 @@ When the user says `tüm ajanları çalıştır`, `bütün ajanları çalıştı
 
 Mandatory ACTIVE pod members:
 - Drag&Drop Baş Uzman Ajanı;
+- Drag&Drop Outreach Ajanı when cold first-touch/outreach is in scope;
 - Drag&Drop Müşteri Temsilcisi Ajanı;
 - Drag&Drop Mail Ajanı;
 - task-relevant Shopify/e-commerce/commercial specialist(s);
