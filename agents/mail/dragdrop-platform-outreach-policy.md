@@ -5,6 +5,9 @@ Generated: 2026-10-02
 ## Scope
 Sources: Hipicon, Local Makers, Hi&Co, NowShopFun.
 
+Canonical first-touch skill: `.agents/skills/dragdrop-outreach-intro/SKILL.md`
+Owner agent: `Drag&Drop Outreach Ajanı`
+
 ## Hard gates
 Mail Agent MUST NOT send a cold email until the record has:
 - verified public/business email
@@ -17,8 +20,11 @@ Mail Agent MUST NOT send a cold email until the record has:
 
 ## First-touch standard
 - Personalized to real product / collection / craft / material / region.
+- Never use unsupported prior-contact language such as “yeniden inceledik” or “uzun süredir takip ediyoruz”.
+- Write in a natural, agency-grade brand-partnerships/designer-relations voice; generic AI/template phrasing is rejected.
 - Explain why Drag&Drop is contacting this brand.
 - Position B2C + relevant B2B opportunity.
+- State that Drag&Drop is Türkiye-based but sells internationally, with an explicit emphasis on active European sales and suitable Europe-internal / Türkiye-Europe / wider international routes.
 - State the current verified standard sales commission: **30%**.
 - State there is no monthly fixed fee / listing fee.
 - Do NOT invent or state payout timing unless a current verified written commercial rule exists for that recipient/workflow.
