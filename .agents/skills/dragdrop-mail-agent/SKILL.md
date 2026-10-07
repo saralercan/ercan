@@ -66,6 +66,15 @@ CTA contract:
 - new CTA badges may use short labels such as `WEB`, `FORM`, `KATALOG` but must keep the same visual system;
 - do not fall back to solid green buttons, unrelated pill styles or visible raw links in HTML mail when a CTA is intended. Plain-text fallback may contain the URL.
 
+## Cold first-touch outreach handoff
+
+When the task is a cold first-touch designer/brand campaign, alphabetical Excel/list outreach, `bana örnek gönder` for first-touch, or an approved cold-outreach batch:
+- activate `Drag&Drop Outreach Ajanı`;
+- load `.agents/skills/dragdrop-outreach-intro/SKILL.md`;
+- let that skill own candidate order, Gmail dedupe, verified product personalization and the standard first-touch commercial body;
+- keep this Mail Agent responsible for canonical HTML rendering, sender integrity and post-send provider verification;
+- once a reply/existing active conversation is found, stop cold-outreach ownership and continue in-thread under Customer Service + Mail Agent.
+
 ## Product onboarding
 
 Canonical workbook: `DragDrop_Standart_Urun_Yukleme_Sablonu.xlsx`.
