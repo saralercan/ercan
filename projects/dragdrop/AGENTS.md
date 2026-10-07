@@ -54,8 +54,11 @@ For material storefront generation/modernization, visual editing, localization, 
 For any customer/designer/brand/partner communication task, load `docs/standards/DRAGDROP_MAIL_AGENT.md` and `.agents/skills/dragdrop-mail-agent/SKILL.md`.
 
 Runtime owners:
+- `Drag&Drop Outreach Ajanı` — cold first-touch designer/brand selection, alphabetical list progression, Gmail dedupe, verified product personalization and tanışma mail standard owner.
 - `Drag&Drop Müşteri Temsilcisi Ajanı` — inbound context, intent, onboarding, product-intake and truthful operational response.
 - `Drag&Drop Mail Ajanı` — Gmail drafting/execution, same-thread reply integrity and post-send evidence.
+
+Cold first-touch / tanışma outreach MUST load `.agents/skills/dragdrop-outreach-intro/SKILL.md`. Once a recipient replies or an active conversation is detected, ownership moves to Müşteri Temsilcisi + Mail Ajanı and the existing Gmail thread is preserved.
 
 Canonical product onboarding workbook:
 `DragDrop_Standart_Urun_Yukleme_Sablonu.xlsx`
