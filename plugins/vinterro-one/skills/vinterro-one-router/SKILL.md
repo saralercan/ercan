@@ -38,6 +38,17 @@ For any Drag&Drop customer, designer, brand, onboarding or Gmail task:
 - use its canonical branded HTML email template, CTA structure, sender/thread approval gates and current commission wording rules;
 - include independent MailQA for send-ready or production sends.
 
+### Drag&Drop outreach / tanışma invariant
+
+For cold first-touch designer/brand outreach, alphabetical Excel/list campaigns, outreach example sends or approved cold-outreach batches:
+- additionally activate `Drag&Drop Outreach Ajanı`;
+- load the plugin skill `dragdrop-outreach-intro`;
+- require real product/collection evidence for the personalized opening;
+- prohibit unsupported prior-contact language;
+- require Gmail SENT dedupe by brand + exact email + domain;
+- preserve the Türkiye-based / especially-Europe-active sales positioning, correct recipient commission, B2C+B2B structure and canonical CTA system;
+- once a reply/existing conversation is detected, hand off from Outreach to Customer Service + Mail Agent in the same thread.
+
 ## ChatGPT/OpenAI behavior
 
 When a Vinterro One MCP app is connected, call `vinterro_route_task` before substantial project work or a master-trigger request.
