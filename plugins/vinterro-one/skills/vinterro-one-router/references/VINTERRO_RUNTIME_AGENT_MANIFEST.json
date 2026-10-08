@@ -4751,7 +4751,7 @@
         "Drag&Drop Müşteri Temsilcisi Ajanı",
         "Drag&Drop Baş Uzman Ajanı",
         "QA Agent",
-        "Localization Editor"
+        "Multilingual Localization QA Auditor"
       ],
       "limits": {
         "max_steps": 20,
