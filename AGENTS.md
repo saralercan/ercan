@@ -32,6 +32,7 @@ Canonical audit/coverage:
 - GitHub Specialist Expansion v3 stable identities for web/app/social/SEO/Meta/branding are registered in `docs/standards/AGENT_REGISTRY.md` and governed by `docs/standards/GITHUB_SPECIALIST_EXPANSION_V3.md`.
 - `@DragDrop` — Shopify/e-commerce project agent → `projects/dragdrop/AGENTS.md`.
 - `@VinterroDigital` — agency/brand/web/social project agent → `projects/vinterro-digital/AGENTS.md`.
+- `@SalesIntelligence` / `Sales Intelligence Agent` / `Satış İstihbarat Ajanı` — Vinterro Digital company/prospect intelligence, public-business enrichment, missing/broken website opportunity audit, account-level dedupe, qualification/scoring and outreach-ready evidence handoff → `docs/standards/VINTERRO_SALES_INTELLIGENCE_AGENT.md` + `.agents/skills/sales-intelligence-discovery/SKILL.md`.
 - `@AyvalıkVibes` — editorial/local/social/WordPress project agent → `projects/ayvalik-vibes/AGENTS.md`.
 - `@GoAyvalık` — local guide/app/web project agent → `projects/goayvalik/AGENTS.md`.
 - `@FinanceExpert` / `Finance Expert Agent` — FP&A, budgets, cash flow, margins, unit economics, forecasts, scenarios and financial-model review → `.agents/skills/finance-specialist/SKILL.md`.
@@ -56,6 +57,19 @@ Non-negotiable supervision rules:
 - final states remain `VERIFIED`, `PARTIAL`, `BLOCKED`, or `NOT_VERIFIED`.
 
 The live runtime count is dynamic. This supervision contract applies to every active Vinterro One runtime agent—including a 103+ inventory—without hardcoding the count or creating one permanent reviewer clone per worker.
+
+## Sales Intelligence hard route — Vinterro One
+
+Any task involving **sales intelligence**, including `satış istihbarat`, `Sales Intelligence Agent`, `potansiyel müşteri bul`, prospect/company discovery or enrichment, Vinterro Keşif-to-sales prospecting, `web sitesi olmayan işletmeleri bul`, `web sitesi bozuk işletmeleri bul`, technographic/digital-maturity scans, account-level prospect dedupe, lead qualification/scoring or outreach-ready evidence packets, MUST load:
+
+1. `docs/standards/VINTERRO_SALES_INTELLIGENCE_AGENT.md`
+2. `.agents/skills/sales-intelligence-discovery/SKILL.md`
+3. `.agents/skills/website-opportunity-audit/SKILL.md` when website condition is material
+4. `.agents/skills/sales-lead-qualification/SKILL.md`
+5. `.agents/skills/sales-intelligence-handoff/SKILL.md`
+6. `docs/evals/VINTERRO_SALES_INTELLIGENCE_REGRESSION.md` for material QA
+
+The Sales Intelligence Agent is research/qualification-only: it may discover, enrich, classify, dedupe, score and prepare evidence packets, but it MUST NOT send email/DM, guess contacts, use hidden/private personal data, silently spend third-party enrichment credits or perform intrusive website/security testing. A different email/domain never creates a new account. Qualified first-touch handoff flows to `Vinterro Digital Outreach Ajanı -> Vinterro Digital Mail Ajanı -> MailQA` under the existing account-claim/Gmail/template/approval gates.
 
 ## Vinterro Digital mail hard gate — Codex/OpenAI/Vinterro One
 
