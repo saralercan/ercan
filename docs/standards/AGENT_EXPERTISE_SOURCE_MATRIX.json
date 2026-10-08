@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-02T14:30:00Z",
-  "agent_count": 112,
+  "generated_at": "2026-10-08T00:45:00Z",
+  "agent_count": 116,
   "philosophy": "Broad continuous discovery, narrow verified ingestion. Research the web deeply, but never equate volume with truth or expertise.",
   "global_sources": {
     "discovery": [
@@ -12529,6 +12529,360 @@
         "require_original_source_for_material_claims": true,
         "thesis_policy": "Theses are Tier-3 academic evidence for methods, edge cases and evaluation design; they are not normative language authority.",
         "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works into prompts or repositories."
+      }
+    },
+    {
+      "id": 113,
+      "name": "Drag&Drop Outreach Ajanı",
+      "role": "outreach_specialist",
+      "family": "mail_operations",
+      "source_tiers": {
+        "primary": [
+          "current Drag&Drop source list/workbook",
+          "official designer/brand websites and product/collection pages",
+          "Gmail SENT/thread/bounce/opt-out evidence",
+          "canonical Drag&Drop mail/outreach standards"
+        ],
+        "canonical_github": [
+          "saralercan/ercan"
+        ],
+        "reviewed_secondary": [
+          "official brand social profiles when product evidence is missing from the website"
+        ]
+      },
+      "research_topics": [
+        "cold first-touch designer/brand outreach",
+        "verified product personalization",
+        "Gmail dedupe and locale-safe campaign execution"
+      ],
+      "continual_queries": [
+        "designer brand current product collection official website",
+        "Drag&Drop outreach Gmail duplicate brand email domain",
+        "recipient legal establishment commission locale"
+      ],
+      "ingestion_rules": [
+        "Never invent product/collection facts.",
+        "Never imply unsupported prior contact.",
+        "Different email/domain does not bypass same-brand history.",
+        "Foreign outreach requires verified local language + QA."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 2,
+        "event_triggers": [
+          "approved outreach batch",
+          "source-list update",
+          "Gmail state change",
+          "user correction"
+        ],
+        "stale_after_days": 7
+      },
+      "mastery_gate": {
+        "structural": "selection + personalization + dedupe + locale + mail-standard contract",
+        "behavioral": "pass representative cold-outreach batch regression with SENT evidence",
+        "comparative": "only after reproducible outreach-quality benchmark"
+      },
+      "source_packs": [
+        "mail",
+        "content_editorial",
+        "sales",
+        "language_localization",
+        "qa"
+      ],
+      "depth_contract": {
+        "discovery": "Verify recipient identity, products and public business contact before drafting.",
+        "ingestion": "Store only source-backed personalization and suppression-safe state.",
+        "freshness": "Recheck Gmail and public product evidence before send.",
+        "verification": "Independent MailQA for production send."
+      },
+      "required_evidence": [
+        "verified brand identity",
+        "real product/collection signal",
+        "Gmail SENT/dedupe state",
+        "correct locale/commission",
+        "post-send provider evidence"
+      ],
+      "academic_queries": [
+        "B2B cold outreach personalization trust conversion human factors peer reviewed"
+      ],
+      "thesis_queries": [
+        "B2B sales outreach personalization digital trust thesis dissertation"
+      ],
+      "academic_ingestion": {
+        "evidence_priority": "project/official > canonical implementation > peer-reviewed/thesis > preprint/working paper > discovery/community",
+        "preserve_limitations": true,
+        "require_original_source_for_material_claims": true,
+        "thesis_policy": "Academic evidence can improve methods and evaluation design but never overrides current provider/project truth.",
+        "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works."
+      }
+    },
+    {
+      "id": 114,
+      "name": "Vinterro Digital Outreach Ajanı",
+      "role": "outreach_orchestrator",
+      "family": "mail_operations",
+      "source_tiers": {
+        "primary": [
+          "Vinterro One AutoGTM/CRM/outreach state",
+          "Gmail SENT/thread/reply/bounce/opt-out evidence",
+          "official prospect business sources",
+          "canonical Vinterro Digital mail/outreach standards"
+        ],
+        "canonical_github": [
+          "saralercan/ercan"
+        ],
+        "reviewed_secondary": [
+          "reputable public business profiles used only as corroboration"
+        ]
+      },
+      "research_topics": [
+        "Vinterro Digital first-touch orchestration",
+        "account-level dedupe and suppression",
+        "prospect-specific evidence and locale routing"
+      ],
+      "continual_queries": [
+        "Vinterro prospect current official business website contact",
+        "Gmail account duplicate outreach history",
+        "recipient locale business language outreach"
+      ],
+      "ingestion_rules": [
+        "Account identity outranks recipient email.",
+        "Do not lower qualification bar to fill quota.",
+        "Inbound replies require user approval and same-thread execution.",
+        "MailAgent owns provider send truth."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 1,
+        "event_triggers": [
+          "outreach batch",
+          "reply/bounce/opt-out",
+          "contact/domain change",
+          "user correction"
+        ],
+        "stale_after_days": 3
+      },
+      "mastery_gate": {
+        "structural": "dedupe + evidence + locale + MailAgent handoff contract",
+        "behavioral": "pass first-touch/reply/suppression regression suite",
+        "comparative": "only after reproducible outreach benchmark"
+      },
+      "source_packs": [
+        "sales",
+        "mail",
+        "content_editorial",
+        "language_localization",
+        "qa"
+      ],
+      "depth_contract": {
+        "discovery": "Use current company evidence and canonical Vinterro state.",
+        "ingestion": "Retain provenance, identity aliases and contact history.",
+        "freshness": "Recheck Gmail/account state immediately before send.",
+        "verification": "MailQA and provider evidence are required."
+      },
+      "required_evidence": [
+        "account identity",
+        "current opportunity evidence",
+        "public contact provenance",
+        "Gmail/CRM duplicate state",
+        "locale",
+        "MailQA"
+      ],
+      "academic_queries": [
+        "B2B sales prospecting account deduplication personalization human factors peer reviewed"
+      ],
+      "thesis_queries": [
+        "sales intelligence CRM deduplication outreach personalization thesis dissertation"
+      ],
+      "academic_ingestion": {
+        "evidence_priority": "project/official > canonical implementation > peer-reviewed/thesis > preprint/working paper > discovery/community",
+        "preserve_limitations": true,
+        "require_original_source_for_material_claims": true,
+        "thesis_policy": "Academic evidence can improve methods and evaluation design but never overrides current provider/project truth.",
+        "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works."
+      }
+    },
+    {
+      "id": 115,
+      "name": "Vinterro Digital Mail Ajanı",
+      "role": "mail_agent",
+      "family": "mail_operations",
+      "source_tiers": {
+        "primary": [
+          "docs/standards/VINTERRO_MAIL_AGENT.md",
+          "docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html",
+          "Gmail provider message/thread/SENT/raw MIME state",
+          "vinterro_outreach_account_claims"
+        ],
+        "canonical_github": [
+          "saralercan/ercan"
+        ],
+        "reviewed_secondary": [
+          "official Gmail/provider documentation when volatile"
+        ]
+      },
+      "research_topics": [
+        "canonical Vinterro mail rendering",
+        "Gmail send/thread integrity",
+        "first-touch atomic account claim",
+        "SENT verification and reply approval"
+      ],
+      "continual_queries": [
+        "Gmail reply thread message id provider behavior",
+        "email raw MIME From BCC thread verification",
+        "Vinterro first-touch account claim dedupe"
+      ],
+      "ingestion_rules": [
+        "Canonical template is executable source data.",
+        "No first-touch without account claim and Gmail history QA.",
+        "No autonomous inbound reply send.",
+        "SENT acceptance is not inbox delivery."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 2,
+        "event_triggers": [
+          "production send",
+          "Gmail connector/API change",
+          "template change",
+          "send verification failure"
+        ],
+        "stale_after_days": 7
+      },
+      "mastery_gate": {
+        "structural": "template + account claim + thread + approval + QA contract",
+        "behavioral": "pass canonical Vinterro mail regression with provider evidence",
+        "comparative": "only after reproducible mail benchmark"
+      },
+      "source_packs": [
+        "mail",
+        "qa",
+        "security",
+        "content_editorial"
+      ],
+      "depth_contract": {
+        "discovery": "Use current provider and canonical repo sources.",
+        "ingestion": "Distill execution-relevant send/thread/claim truth.",
+        "freshness": "Recheck provider/account state immediately before send.",
+        "verification": "Independent MailQA + raw provider evidence."
+      },
+      "required_evidence": [
+        "canonical HTML source",
+        "account claim/dedupe state",
+        "Gmail source message/thread id when replying",
+        "SENT acceptance",
+        "raw From/BCC/thread verification"
+      ],
+      "academic_queries": [
+        "email conversation threading deliverability human factors peer reviewed"
+      ],
+      "thesis_queries": [
+        "email customer communication trust threading thesis dissertation"
+      ],
+      "academic_ingestion": {
+        "evidence_priority": "project/official > canonical implementation > peer-reviewed/thesis > preprint/working paper > discovery/community",
+        "preserve_limitations": true,
+        "require_original_source_for_material_claims": true,
+        "thesis_policy": "Academic evidence can improve methods and evaluation design but never overrides current provider/project truth.",
+        "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works."
+      }
+    },
+    {
+      "id": 116,
+      "name": "Sales Intelligence Agent",
+      "role": "sales_intelligence",
+      "family": "sales_intelligence",
+      "source_tiers": {
+        "primary": [
+          "official owned business websites and digital properties",
+          "official business social profiles",
+          "official government/chamber/tourism/business directories",
+          "connected Vinterro Keşif, AutoGTM, CRM and Gmail history"
+        ],
+        "canonical_github": [
+          "saralercan/ercan",
+          "GoogleChrome/lighthouse",
+          "microsoft/playwright"
+        ],
+        "reviewed_secondary": [
+          "reputable booking/marketplace business profiles",
+          "current search/map evidence used for discovery/corroboration",
+          "MDN, web.dev and W3C guidance for normal-user web behavior"
+        ]
+      },
+      "research_topics": [
+        "company/prospect discovery and enrichment",
+        "account identity resolution",
+        "public business contact provenance",
+        "passive website availability and commercial-journey audit",
+        "account-level dedupe",
+        "lead qualification/scoring and outreach evidence handoff"
+      ],
+      "continual_queries": [
+        "business official website contact location current",
+        "business no owned website official social public email",
+        "domain redirect TLS homepage booking contact current status",
+        "B2B prospect qualification website digital maturity sales signal"
+      ],
+      "ingestion_rules": [
+        "Use public business data and authorized connected state only.",
+        "Never guess email or use hidden/private personal contacts.",
+        "Credit-consuming third-party enrichment requires prior explicit user approval.",
+        "Website checks are passive normal-user only; no intrusion.",
+        "A different email/domain never creates a fresh account.",
+        "Recheck website state within 24 hours of production outreach."
+      ],
+      "refresh_policy": {
+        "scheduled_days": 1,
+        "event_triggers": [
+          "new discovery campaign",
+          "website-state campaign",
+          "contact/domain change",
+          "Gmail/CRM history change",
+          "user correction"
+        ],
+        "stale_after_days": 2
+      },
+      "mastery_gate": {
+        "structural": "discovery + website audit + dedupe + scoring + handoff contracts present",
+        "behavioral": "pass VINTERRO_SALES_INTELLIGENCE_REGRESSION with independent reviewer",
+        "comparative": "only after reproducible precision/recall and lead-quality benchmark"
+      },
+      "source_packs": [
+        "sales",
+        "research",
+        "local_discovery",
+        "web",
+        "mail",
+        "qa",
+        "academic_research"
+      ],
+      "depth_contract": {
+        "discovery": "Search enough public/official sources to resolve account identity and opportunity without pretending bounded coverage is exhaustive.",
+        "ingestion": "Store only evidence-backed business/contact/web-state claims with provenance and confidence.",
+        "freshness": "Recheck volatile website/contact/account state at task time and within 24h of outreach.",
+        "verification": "Independent QA checks material identity, opportunity, contact and dedupe claims before OUTREACH_READY."
+      },
+      "required_evidence": [
+        "canonical business identity and location",
+        "official/public source provenance",
+        "website status evidence when material",
+        "public business contact provenance",
+        "Gmail/CRM/AutoGTM account dedupe state",
+        "visible score components and qualification reason",
+        "recommended language and outreach angle"
+      ],
+      "academic_queries": [
+        "sales intelligence B2B prospect qualification entity resolution data quality lead scoring peer reviewed",
+        "website quality digital maturity small business conversion usability empirical evaluation"
+      ],
+      "thesis_queries": [
+        "B2B sales intelligence lead scoring CRM entity resolution thesis dissertation",
+        "SME website digital maturity usability conversion thesis dissertation"
+      ],
+      "academic_ingestion": {
+        "evidence_priority": "project/official > canonical implementation > peer-reviewed/thesis > preprint/working paper > discovery/community",
+        "preserve_limitations": true,
+        "require_original_source_for_material_claims": true,
+        "thesis_policy": "Academic evidence can improve methods and evaluation design but never overrides current provider/project truth.",
+        "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works."
       }
     }
   ],
