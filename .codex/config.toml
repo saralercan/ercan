@@ -128,3 +128,8 @@ config_file = "agents/language-fr.toml"
 [agents.multilingual_qa]
 description = "Independent multilingual QA for English, Bulgarian, Spanish, Greek, German and French."
 config_file = "agents/multilingual-qa.toml"
+
+
+[agents.vinterro_outreach]
+description = "Dedicated Vinterro Digital Outreach Agent: evidence-grounded first-touch, dedupe-safe execution and immutable locked outreach template."
+config_file = "agents/vinterro-outreach.toml"
