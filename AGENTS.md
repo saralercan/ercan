@@ -444,3 +444,9 @@ A public/community skill is a software/instruction supply-chain dependency. Revi
 
 ## Central reusable CI
 Projects may call the reusable workflows in `.github/workflows/` as a baseline, including `reusable-search-discovery.yml`, `reusable-email-quality.yml`, `reusable-design-system-quality.yml`, `reusable-agent-quality.yml`, Shopify/WordPress/web quality and creative quality workflows, then add project-specific checks. Required status checks/rulesets should protect production branches when the repository supports them.
+
+## Locked outreach template route — 2026-10-08
+
+Vinterro Digital first-touch/outreach MUST use `docs/standards/VINTERRO_OUTREACH_CANONICAL_TEMPLATE.html` as the only outreach shell. This is the locked source for the user-approved reference `ÖRNEK — Vinterro Digital | GERÇEK GÖNDERİDEN ALINAN ŞABLON`. Trigger aliases include `Vinterro outreach ajanını çalıştır`, `vinterro.outreach ajanını çalıştır`, `interro outreach ajanını çalıştır`, and equivalent first-touch requests.
+
+Drag&Drop cold outreach MUST use `docs/standards/DRAGDROP_OUTREACH_CANONICAL_TEMPLATE.html`, which is the brand adaptation of the same geometry. No agent may choose, infer or rebuild an alternate outreach wrapper. MailQA must fail template drift before send.
