@@ -2,7 +2,7 @@
 
 All listed agents inherit root `AGENTS.md`, `AGENCY_EXCELLENCE_STANDARD.md`, `AGENT_CONTINUAL_EXPERTISE_ENGINE.md`, their per-agent profile in `AGENT_EXPERTISE_SOURCE_MATRIX.json`, `AGENT_ENGINEERING.md`, task-relevant domain standards and their project adapter under `projects/`. Stable/JIT specialists inherit the principal-level craft, source, verification and delivery bar through their stable owners. This registry defines routing focus, not separate constitutions.
 
-## Live runtime mirror additions — 90–105
+## Live runtime mirror additions — 90–116
 
 These are **production runtime identities** mirrored from the authenticated Vinterro One `ercan_os_agents` registry. They do not change the separate 52 stable routing-identity architecture. Runtime numbering here follows the canonical mirror order; the live total remains dynamic and may grow beyond 103.
 
@@ -24,12 +24,23 @@ These are **production runtime identities** mirrored from the authenticated Vint
 | 103 | Contact Recovery Research Agent | Read-only contact-recovery research for bounced/delayed/obsolete outreach addresses; identity resolution, current-domain/contact verification, provenance and suppression-safe handoff. |
 | 104 | Drag&Drop Müşteri Temsilcisi Ajanı | Drag&Drop customer/designer/brand communication, onboarding, product-intake, current-state truthfulness and handoff to the mail executor. |
 | 105 | Drag&Drop Mail Ajanı | Drag&Drop Gmail reply executor; locked sender, same-thread reply_message_id execution, explicit user approval and post-send SENT/From/BCC/thread QA. |
+| 106 | English Language & Localization Specialist | English translation/localization, terminology, tone and external-facing language QA support across projects. |
+| 107 | Bulgarian Language & Localization Specialist | Bulgarian translation/localization, terminology, tone and market-language support across projects. |
+| 108 | Spanish Language & Localization Specialist | Spanish translation/localization, terminology, tone and market-language support across projects. |
+| 109 | Greek Language & Localization Specialist | Greek translation/localization, terminology, tone and market-language support across projects. |
+| 110 | German Language & Localization Specialist | German translation/localization, terminology, tone and market-language support across projects. |
+| 111 | French Language & Localization Specialist | French translation/localization, terminology, tone and market-language support across projects. |
+| 112 | Multilingual Localization QA Auditor | Independent cross-language QA for external-facing multilingual output. |
+| 113 | Drag&Drop Outreach Ajanı | Cold first-touch designer/brand outreach, verified product personalization, Gmail dedupe, locale routing and approved batch execution. |
+| 114 | Vinterro Digital Outreach Ajanı | Canonical Vinterro Digital first-touch orchestration, account-level dedupe, verified prospect context, locale routing and MailAgent handoff. |
+| 115 | Vinterro Digital Mail Ajanı | Canonical Vinterro Digital Gmail execution, locked template/sender, account-claim gate, same-thread reply integrity and post-send MailQA. |
+| 116 | Sales Intelligence Agent | Vinterro Digital company/prospect intelligence: public-business discovery/enrichment, passive missing/broken website opportunity audit, account dedupe, qualification/scoring and evidence handoff; no send authority. |
 
 Mirror authority:
 - runtime membership/count: live `public.ercan_os_agents`;
 - expertise membership/count: live `public.ercan_os_agent_expertise_profiles`;
 - repository mirrors: `VINTERRO_RUNTIME_AGENT_MANIFEST.json` and `AGENT_EXPERTISE_SOURCE_MATRIX.json`;
-- repo validation must reject a regression below this synchronized 105-agent floor or loss of any of these 16 identities.
+- repo validation must reject a regression below this synchronized 116-agent floor or loss of any of these 27 identities.
 
 
 ## @Orchestrator
