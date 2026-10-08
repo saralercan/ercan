@@ -13308,7 +13308,7 @@
     }
   },
   "coverage_contract": {
-    "profiles": 112,
+    "profiles": 116,
     "every_profile_requires": [
       "source_packs",
       "source_tiers.primary",
