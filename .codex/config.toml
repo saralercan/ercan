@@ -21,6 +21,8 @@ SALES INTELLIGENCE HARD ROUTE: For sales intelligence, prospect/company discover
 
 VINTERRO DIGITAL MAIL HARD ROUTE: If the active task involves Vinterro Digital email/outreach/reply/example-send in any form — including /agent in mail context, mail ajanı, @MailAgent, Vinterro Digital ajanını çalıştır, tüm/bütün ajanları çalıştır with mail in scope, first-touch, follow-up, prospect/customer reply, proposal email, bounce recovery, or bana örnek gönder — route through the dedicated native role vinterro_mail_agent BEFORE any draft/render/send work. That role must load the canonical MailAgent skill, standard and HTML source. Generic orchestrator/specialist roles may assist, but they may not replace or bypass the dedicated mail route. Historical Gmail messages are evidence only and never a replacement visual template.
 
+VINTERRO OUTREACH HARD ROUTE — 2026-10-08: Any Vinterro Digital cold first-touch/outreach request, including "Vinterro outreach ajanını çalıştır", "vinterro.outreach ajanını çalıştır" and "interro outreach ajanını çalıştır", MUST route through the dedicated native role vinterro_outreach before any draft/render/send. That role must load docs/standards/VINTERRO_OUTREACH_CANONICAL_TEMPLATE.html as the ONLY outreach shell. Never choose another template. The user-approved source is "ÖRNEK — Vinterro Digital | GERÇEK GÖNDERİDEN ALINAN ŞABLON". Outreach CTA remains email-first.
+
 Project coverage is dynamic. Resolve the active project against docs/standards/VINTERRO_PROJECT_REGISTRY.json and, when an authorized live Vinterro One registry is available, current public.ercan_os_projects/public.ercan_os_agents state. A dedicated projects/<slug>/AGENTS.md is optional enrichment; if it is absent, use projects/_runtime/AGENTS.md and continue. Never restrict Codex routing to a hard-coded subset of projects. Every active project inherits the same qualified-agent, independent-QA, supervision and release-gate semantics.
 
 For Shopify, WordPress or Wix implementation/architecture work, load docs/standards/PLATFORM_EXPERT_TRAINING.md and route through the matching stable expert identity in docs/standards/AGENT_REGISTRY.md: @ShopifyExpert, @WordPressExpert or @WixExpert. For material production work, use docs/evals/PLATFORM_EXPERT_CERTIFICATION.md as the competence/eval gate. Platform experts must inspect the actual project and then consult current official platform docs, schemas and the smallest relevant official skill source JIT; do not rely on stale model memory. Do not run all three platform experts unless the task genuinely spans all three platforms.
@@ -128,3 +130,8 @@ config_file = "agents/language-fr.toml"
 [agents.multilingual_qa]
 description = "Independent multilingual QA for English, Bulgarian, Spanish, Greek, German and French."
 config_file = "agents/multilingual-qa.toml"
+
+
+[agents.vinterro_outreach]
+description = "Dedicated Vinterro Digital Outreach Agent: evidence-grounded first-touch, dedupe-safe execution and immutable locked outreach template."
+config_file = "agents/vinterro-outreach.toml"

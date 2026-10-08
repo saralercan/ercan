@@ -491,3 +491,23 @@ Completion states:
 - `NOT VERIFIED`
 
 Never report a send, reply, social DM, stage transition or follow-up as completed without corresponding provider/account/evidence state.
+
+
+## Locked outreach template route — 2026-10-08
+
+For cold first-touch / Vinterro Digital outreach, the only allowed visual source is:
+`docs/standards/VINTERRO_OUTREACH_CANONICAL_TEMPLATE.html`
+
+Canonical reference:
+`ÖRNEK — Vinterro Digital | GERÇEK GÖNDERİDEN ALINAN ŞABLON`
+
+Trigger aliases include `Vinterro outreach ajanını çalıştır`, `vinterro.outreach ajanını çalıştır`, `interro outreach ajanını çalıştır`, and equivalent Vinterro Digital first-touch requests.
+
+Hard rules:
+- do not select another template;
+- do not rebuild from memory;
+- do not modify geometry, spacing, typography, dividers, CTA shell, compliance placement or footer;
+- only recipient-specific content and documented localization tokens may change;
+- outreach CTA is email-first; no meeting/call CTA by default;
+- body does not add a second signoff before the canonical footer;
+- if the file cannot be loaded exactly, block the send rather than improvising.
