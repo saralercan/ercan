@@ -1,8 +1,8 @@
 {
   "schema_version": "1.1",
-  "generated_at": "2026-10-07T00:00:00Z",
+  "generated_at": "2026-10-08T00:45:00Z",
   "source_of_truth": "Vinterro One live ercan_os_agents registry",
-  "runtime_agent_count": 113,
+  "runtime_agent_count": 116,
   "activation_contract": {
     "default_state": "STANDBY",
     "master_trigger": [
@@ -4773,6 +4773,149 @@
       "expertise_state": "SOURCE_MAPPED"
     },
     {
+      "id": 116,
+      "name": "Sales Intelligence Agent",
+      "role": "sales_intelligence",
+      "family": "sales_intelligence",
+      "version": "1.0.0",
+      "instructions": "Vinterro One Sales · AutoGTM specialist for company-level sales intelligence. Discover and enrich prospects from public business evidence; resolve account identity; verify owned digital presence; classify missing, unavailable, broken or commercially weak websites using passive normal-user checks only; verify public business contacts; dedupe at account level against Gmail/CRM/AutoGTM/outreach claims; qualify and score; prepare evidence packets for Vinterro Digital Outreach Ajanı. Never send email or DM, guess contacts, use hidden/private personal data, silently spend third-party enrichment credits, lower qualification quality to fill quota, or perform intrusive security testing. A different email/domain never creates a fresh account. Recheck website-state evidence within 24 hours of outreach.",
+      "tools": [
+        "web",
+        "research",
+        "gmail",
+        "vinterro_kesif",
+        "autogtm",
+        "knowledge",
+        "browser_qa"
+      ],
+      "permissions": {
+        "scope": "vinterro_digital_sales_intelligence",
+        "production_send": false,
+        "public_business_data_only": true,
+        "private_personal_contact_enrichment": false,
+        "credit_consuming_enrichment": "explicit_user_approval_required",
+        "website_checks": "passive_normal_user_only",
+        "account_level_dedupe_required": true
+      },
+      "handoffs": [
+        "Vinterro Keşif Agent",
+        "Contact Recovery Research Agent",
+        "Vinterro Digital Outreach Ajanı",
+        "Vinterro Digital Mail Ajanı",
+        "Vinterro Digital Baş Uzman Ajanı",
+        "QA Auditor",
+        "Multilingual Localization QA Auditor",
+        "Developer Agent",
+        "Performance Agent"
+      ],
+      "limits": {
+        "max_steps": 24,
+        "max_retries": 2,
+        "max_cost_usd": 2
+      },
+      "status": "active",
+      "health": 100,
+      "activation": "jit",
+      "default_state": "STANDBY",
+      "excellence_standard": "AGENCY_EXCELLENCE_STANDARD.md",
+      "continual_expertise": true,
+      "adapters": {
+        "codex": true,
+        "claude": true,
+        "vinterro_one": true,
+        "chatgpt": true,
+        "openai": true
+      },
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json",
+      "expertise_state": "SOURCE_MAPPED"
+    },
+    {
+      "id": 115,
+      "name": "Vinterro Digital Mail Ajanı",
+      "role": "mail_agent",
+      "family": "mail_operations",
+      "version": "1.0.0",
+      "instructions": "Use .agents/skills/vinterro-mail-agent/SKILL.md and docs/standards/VINTERRO_MAIL_AGENT.md. Render only docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html. Sender info@vinterro.digital only. Fail closed on dedupe/claim/template QA. Never auto-send inbound replies. For every inbound reply: read the original Gmail message first, use authoritative Reply-To/From, send only with reply_message_id equal to the triggering inbound message ID, preserve the exact Gmail thread, and verify post-send provider evidence.",
+      "tools": [
+        "gmail",
+        "vinterro_one",
+        "canonical_mail_skill"
+      ],
+      "permissions": {
+        "production_send_requires_mailqa": true,
+        "inbound_reply_requires_user_approval": true
+      },
+      "handoffs": [
+        "Vinterro Digital Baş Uzman Ajanı",
+        "QA Auditor",
+        "Multilingual Localization QA Auditor"
+      ],
+      "limits": {
+        "max_steps": 20,
+        "max_retries": 2,
+        "max_cost_usd": 2
+      },
+      "status": "active",
+      "health": 100,
+      "activation": "jit",
+      "default_state": "STANDBY",
+      "excellence_standard": "AGENCY_EXCELLENCE_STANDARD.md",
+      "continual_expertise": true,
+      "adapters": {
+        "codex": true,
+        "claude": true,
+        "vinterro_one": true,
+        "chatgpt": true,
+        "openai": true
+      },
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json",
+      "expertise_state": "SOURCE_MAPPED"
+    },
+    {
+      "id": 114,
+      "name": "Vinterro Digital Outreach Ajanı",
+      "role": "outreach_orchestrator",
+      "family": "mail_operations",
+      "version": "1.0.0",
+      "instructions": "Run Vinterro Digital outreach through canonical Vinterro One state. Enforce account-level dedupe, verified public contacts, prospect-specific copy, locale language, canonical Vinterro mail standard/template and independent MailQA. Do not lower quality to fill quota. Inbound customer/prospect replies require user approval and must be sent only as Gmail replies in the exact originating thread using the source message ID; never open a new thread for replies.",
+      "tools": [
+        "gmail",
+        "vinterro_one",
+        "canonical_mail_skill"
+      ],
+      "permissions": {
+        "production_send_requires_mailqa": true,
+        "inbound_reply_requires_user_approval": true
+      },
+      "handoffs": [
+        "Sales Intelligence Agent",
+        "Vinterro Keşif Agent",
+        "Contact Recovery Research Agent",
+        "Vinterro Digital Mail Ajanı",
+        "QA Auditor"
+      ],
+      "limits": {
+        "max_steps": 20,
+        "max_retries": 2,
+        "max_cost_usd": 2
+      },
+      "status": "active",
+      "health": 100,
+      "activation": "jit",
+      "default_state": "STANDBY",
+      "excellence_standard": "AGENCY_EXCELLENCE_STANDARD.md",
+      "continual_expertise": true,
+      "adapters": {
+        "codex": true,
+        "claude": true,
+        "vinterro_one": true,
+        "chatgpt": true,
+        "openai": true
+      },
+      "authority_map": "AGENT_EXPERTISE_SOURCE_MATRIX.json",
+      "expertise_state": "SOURCE_MAPPED"
+    },
+    {
       "id": 106,
       "name": "English Language & Localization Specialist",
       "role": "english_localization",
@@ -5105,12 +5248,12 @@
   },
   "live_registry_sync": {
     "table": "public.ercan_os_agents",
-    "verified_live_count": 115,
-    "verified_expertise_profile_count": 113,
-    "verified_at": "2026-10-07",
+    "verified_live_count": 116,
+    "verified_expertise_profile_count": 116,
+    "verified_at": "2026-10-08",
     "verification": "authenticated Vinterro One Supabase registry",
-    "last_verified_at": "2026-10-07",
-    "live_count": 115,
-    "note": "Portable mirror updated with Drag&Drop Outreach Ajanı and dragdrop-outreach-intro skill. Live Vinterro One registry remains authoritative when connected; live registry currently contains additional runtime identities beyond the portable bundle."
+    "last_verified_at": "2026-10-08",
+    "live_count": 116,
+    "note": "Portable mirror synchronized with live Vinterro One registry through Sales Intelligence Agent v1.0.0; agent and expertise-profile counts verified 116/116."
   }
 }
