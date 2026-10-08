@@ -139,3 +139,11 @@ Mandatory reviewer focus:
 - locale is correct.
 
 Use `VERIFIED` only when the relevant selection, copy, dedupe and send evidence all pass.
+
+
+## Canonical outreach shell lock — 2026-10-08
+
+Drag&Drop outreach uses `docs/standards/DRAGDROP_OUTREACH_CANONICAL_TEMPLATE.html`.
+That file is the brand adaptation of the locked Vinterro outreach geometry from `docs/standards/VINTERRO_OUTREACH_CANONICAL_TEMPLATE.html`.
+
+Do not choose `DRAGDROP_MAIL_CANONICAL_TEMPLATE.html` as an alternate cold-outreach shell and do not restyle/rebuild from memory. Preserve the 1:1 geometry, spacing, typography, divider placement, footer hierarchy and outlined CTA shell. Only Drag&Drop brand tokens, recipient-specific content, localized visible CTA labels and compliance text may change.
