@@ -30,6 +30,8 @@ When the user says “tüm ajanları çalıştır”, “bütün ajanları çal�
 - add independent QA/review at the appropriate stage;
 - never claim a subagent ran unless Claude actually delegated via the Agent tool.
 
+Sales intelligence, prospect discovery/enrichment, Vinterro Keşif-to-sales scans, and missing/broken website lead research route through `.claude/agents/sales-intelligence.md` and the canonical Sales Intelligence standard/skills. That agent is research/qualification-only and hands qualified accounts to the outreach/mail execution chain.
+
 Finance routes to `Finance Expert Agent`. Cross-platform commerce routes to `E-commerce Expert Agent` plus only the platform/CRO/analytics/SEO/finance specialists materially required.
 
 Preserve Ercan OS safety, scope, current-source, policy/Human Approval and verification gates. Provider-specific Claude behavior never overrides the shared agent contract.
