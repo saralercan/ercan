@@ -12586,7 +12586,8 @@
         "content_editorial",
         "sales",
         "language_localization",
-        "qa"
+        "qa",
+        "academic_research"
       ],
       "depth_contract": {
         "discovery": "Verify recipient identity, products and public business contact before drafting.",
@@ -12602,10 +12603,12 @@
         "post-send provider evidence"
       ],
       "academic_queries": [
-        "B2B cold outreach personalization trust conversion human factors peer reviewed"
+        "B2B cold outreach personalization trust conversion human factors peer reviewed",
+        "sales email personalization recipient relevance response rate field experiment systematic review"
       ],
       "thesis_queries": [
-        "B2B sales outreach personalization digital trust thesis dissertation"
+        "B2B sales outreach personalization digital trust thesis dissertation",
+        "cold email personalization buyer response digital marketing master thesis doctoral dissertation"
       ],
       "academic_ingestion": {
         "evidence_priority": "project/official > canonical implementation > peer-reviewed/thesis > preprint/working paper > discovery/community",
@@ -12670,7 +12673,8 @@
         "mail",
         "content_editorial",
         "language_localization",
-        "qa"
+        "qa",
+        "academic_research"
       ],
       "depth_contract": {
         "discovery": "Use current company evidence and canonical Vinterro state.",
@@ -12687,10 +12691,12 @@
         "MailQA"
       ],
       "academic_queries": [
-        "B2B sales prospecting account deduplication personalization human factors peer reviewed"
+        "B2B sales prospecting account deduplication personalization human factors peer reviewed",
+        "CRM entity resolution duplicate detection sales prospecting data quality empirical evaluation"
       ],
       "thesis_queries": [
-        "sales intelligence CRM deduplication outreach personalization thesis dissertation"
+        "sales intelligence CRM deduplication outreach personalization thesis dissertation",
+        "B2B prospecting CRM entity resolution lead qualification master thesis doctoral dissertation"
       ],
       "academic_ingestion": {
         "evidence_priority": "project/official > canonical implementation > peer-reviewed/thesis > preprint/working paper > discovery/community",
@@ -12755,7 +12761,8 @@
         "mail",
         "qa",
         "security",
-        "content_editorial"
+        "content_editorial",
+        "academic_research"
       ],
       "depth_contract": {
         "discovery": "Use current provider and canonical repo sources.",
@@ -12771,10 +12778,12 @@
         "raw From/BCC/thread verification"
       ],
       "academic_queries": [
-        "email conversation threading deliverability human factors peer reviewed"
+        "email conversation threading deliverability human factors peer reviewed",
+        "transactional email thread integrity sender authentication deliverability customer communication empirical study"
       ],
       "thesis_queries": [
-        "email customer communication trust threading thesis dissertation"
+        "email customer communication trust threading thesis dissertation",
+        "email deliverability conversation threading customer service human computer interaction thesis dissertation"
       ],
       "academic_ingestion": {
         "evidence_priority": "project/official > canonical implementation > peer-reviewed/thesis > preprint/working paper > discovery/community",
@@ -13319,9 +13328,9 @@
   },
   "live_registry_sync": {
     "table": "public.ercan_os_agent_expertise_profiles",
-    "verified_live_count": 112,
-    "verified_at": "2026-10-02",
-    "verification": "authenticated Vinterro One Supabase registry after multilingual localization pod activation"
+    "verified_live_count": 116,
+    "verified_at": "2026-10-08",
+    "verification": "authenticated Vinterro One Supabase registry; agents and expertise profiles verified 116/116"
   },
   "academic_evidence": {
     "enabled": true,
