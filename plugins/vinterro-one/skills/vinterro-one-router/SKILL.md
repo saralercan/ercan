@@ -49,6 +49,15 @@ For cold first-touch designer/brand outreach, alphabetical Excel/list campaigns,
 - preserve the Türkiye-based / especially-Europe-active sales positioning, correct recipient commission, B2C+B2B structure and canonical CTA system;
 - once a reply/existing conversation is detected, hand off from Outreach to Customer Service + Mail Agent in the same thread.
 
+### Sales intelligence invariant
+
+For sales intelligence, prospect/company discovery or enrichment, Vinterro Keşif-to-sales scans, missing/broken website prospecting, technographic/digital-maturity research, account-level prospect dedupe, qualification/scoring or outreach-ready evidence packets:
+- activate `Sales Intelligence Agent` plus the Vinterro Digital project lead when material;
+- load plugin skills `sales-intelligence-discovery`, `website-opportunity-audit` when website state matters, `sales-lead-qualification`, and `sales-intelligence-handoff`;
+- preserve public-business evidence, passive website checks, no-guessed-contact, no-private-contact and explicit-approval-for-credit-consuming-enrichment rules;
+- never let Sales Intelligence send email/DM;
+- hand `OUTREACH_READY` accounts to Vinterro Digital Outreach Ajanı + Vinterro Digital Mail Ajanı under canonical dedupe/template/MailQA gates.
+
 ## ChatGPT/OpenAI behavior
 
 When a Vinterro One MCP app is connected, call `vinterro_route_task` before substantial project work or a master-trigger request.
