@@ -17,6 +17,8 @@ YENI TASARIMCI HARD ROUTE: Drag&Drop'ta yeni tasarımcı/marka onboarding, tasar
 
 DRAGDROP OUTREACH HARD ROUTE: For Drag&Drop cold first-touch designer/brand outreach, alphabetical Excel/list campaigns, outreach example sends, or approved outreach batches, route through the dedicated native role dragdrop_outreach before drafting or sending. It must load .agents/skills/dragdrop-outreach-intro/SKILL.md plus the Drag&Drop Mail Agent canonical template/standard. It owns first-touch selection, verified product personalization, Europe/international positioning and Gmail-history dedupe. Existing conversations/replies hand off to Drag&Drop Customer Service + Mail Agent.
 
+SALES INTELLIGENCE HARD ROUTE: For sales intelligence, prospect/company discovery or enrichment, Vinterro Keşif-to-sales prospecting, missing/broken website prospecting, technographic/digital-maturity scans, account-level prospect dedupe, lead qualification/scoring or outreach-ready evidence packets, route through the dedicated native role sales_intelligence. It must load docs/standards/VINTERRO_SALES_INTELLIGENCE_AGENT.md plus the four canonical Sales Intelligence skills and regression gate. It is research/qualification-only: no email/DM send, no guessed/private contacts, no silent credit-consuming enrichment, no intrusive web/security testing. Qualified accounts hand off to Vinterro Digital Outreach Ajanı + Vinterro Digital Mail Ajanı.
+
 VINTERRO DIGITAL MAIL HARD ROUTE: If the active task involves Vinterro Digital email/outreach/reply/example-send in any form — including /agent in mail context, mail ajanı, @MailAgent, Vinterro Digital ajanını çalıştır, tüm/bütün ajanları çalıştır with mail in scope, first-touch, follow-up, prospect/customer reply, proposal email, bounce recovery, or bana örnek gönder — route through the dedicated native role vinterro_mail_agent BEFORE any draft/render/send work. That role must load the canonical MailAgent skill, standard and HTML source. Generic orchestrator/specialist roles may assist, but they may not replace or bypass the dedicated mail route. Historical Gmail messages are evidence only and never a replacement visual template.
 
 Project coverage is dynamic. Resolve the active project against docs/standards/VINTERRO_PROJECT_REGISTRY.json and, when an authorized live Vinterro One registry is available, current public.ercan_os_projects/public.ercan_os_agents state. A dedicated projects/<slug>/AGENTS.md is optional enrichment; if it is absent, use projects/_runtime/AGENTS.md and continue. Never restrict Codex routing to a hard-coded subset of projects. Every active project inherits the same qualified-agent, independent-QA, supervision and release-gate semantics.
@@ -58,6 +60,10 @@ config_file = "agents/vinterro-orchestrator.toml"
 [agents.vinterro_mail_agent]
 description = "Dedicated Vinterro Digital MailAgent bridge; mandatory canonical route for mail/outreach/reply/example-send tasks."
 config_file = "agents/vinterro-mail-agent.toml"
+
+[agents.sales_intelligence]
+description = "Dedicated Vinterro One Sales Intelligence Agent: company/prospect discovery, public-business enrichment, passive website opportunity audit, account dedupe, qualification/scoring and outreach handoff."
+config_file = "agents/sales-intelligence.toml"
 
 [agents.yeni_tasarimci]
 description = "Drag&Drop Yeni Tasarımcı onboarding agent: designer account/panel access, draft products, admin visibility and storefront designer/brand profile linkage."
