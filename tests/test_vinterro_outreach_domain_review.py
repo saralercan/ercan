@@ -2,7 +2,7 @@
 from pathlib import Path
 import unittest
 
-SQL=(Path(__file__).resolve().parents[1]/"supabase/vinterro-first-touch-domain-review-20261009.sql").read_text(encoding="utf-8").lower()
+SQL=(Path(__file__).resolve().parents[1]/"supabase/vinterro-first-touch-domain-review-complete-20261009.sql").read_text(encoding="utf-8").lower()
 
 class HistoricalDomainReview(unittest.TestCase):
     def test_existing_release_gate_precedes_domain_check(self):
@@ -17,21 +17,29 @@ class HistoricalDomainReview(unittest.TestCase):
     def test_review_is_not_auto_claim(self):
         self.assertIn("'allowed',false", SQL)
         self.assertIn("manual_review_required",SQL)
-        self.assertIn("never an automatic",SQL)
+        self.assertIn("manual review",SQL)
         self.assertIn("review_domain",SQL)
 
     def test_shared_email_providers_not_assumed_same_business(self):
         for domain in ("gmail.com","outlook.com","hotmail.com","yahoo.com","icloud.com","booking.com","qq.com"):
             self.assertIn("'"+domain+"'",SQL)
 
-    def test_supports_canonical_domain_or_primary_email_domain(self):
-        self.assertIn("coalesce(v_domain,nullif(split_part(coalesce(v_email,''),'@',2),''))",SQL)
-        self.assertIn("split_part(e.recipient_email,'@',2) = v_review_domain",SQL)
+    def test_supports_canonical_domain_and_all_aliases(self):
+        self.assertIn("select v_domain as domain_name",SQL)
+        self.assertIn("from unnest(v_emails) as addr",SQL)
+        self.assertIn("split_part(e.recipient_email,'@',2)=candidate_domain",SQL)
+        self.assertIn("v_review_domains := array",SQL)
 
     def test_no_release_or_send_side_effect(self):
         self.assertNotIn("outreach_first_touch_release_gate','open'",SQL)
         self.assertNotIn("gmail.send",SQL)
         self.assertNotIn("delete from",SQL)
+
+    def test_legacy_sql_is_nonexecutable(self):
+        retired=(Path(__file__).resolve().parents[1]/"supabase/vinterro-first-touch-domain-review-20261009.sql").read_text()
+        self.assertEqual([], [line for line in retired.splitlines() if line.strip() and not line.lstrip().startswith("--")])
+        self.assertIn("NO-OP",retired)
+
 
 if __name__=="__main__":
     unittest.main()
