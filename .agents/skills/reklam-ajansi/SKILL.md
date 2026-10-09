@@ -14,6 +14,10 @@ Kullanıcıya görünen ajan adı **Reklam Ajansı**. Önceki `Paid Media Intell
 - **Uyumluluk:** Google/Meta reklam ilkeleri, consent, gizlilik, KVKK/GDPR, abartılı vaatler ve pazar uygunluğu
 - **Küresel araştırma:** 72 farklı uluslararası kaynak, 27 taslak uygulamalı değerlendirme, orijinal dil ve güncel bilgi doğrulaması
 
+## Kanıtlı iş akışı (planning-only)
+
+Birden fazla uzmanlık veya kampanya/ölçüm/gizlilik sorusu geldiğinde `docs/agents/REKLAM_AJANSI_EVIDENCE_WORKFLOW.md` ve salt-okunur `scripts/plan_reklam_ajansi_workflow.py` ile `intake → skill araştırmaları → synthesis → bağımsız QA → gerekiyorsa insan onayı` grafiği tasarla. Kanıtı bulunmayan her aşama `NOT_STARTED`/`NOT_PERFORMED` kalır. Üç sınırı aşan uzmanlık eşleşmeleri `deferred_skill_ids` ile görünür; sessizce tamamlandı sayılmaz. Bu dosyalar plan üretir, reklam API'sine gitmez ve işçi çalıştırmaz.
+
 ## Alt skill yönlendirmesi — 9 bağımsız uzmanlık, tek kimlik
 
 İlk olarak `docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json` yükle; salt-okunur test/planning uygulaması `python3 scripts/route_reklam_ajansi_subskills.py "<görev>"`. Yönlendirme kullanıcı niyetine göre birincil skill ve en çok iki destek skill döndürür. Çıktı bir **plan**dır, yürütme kanıtı değildir.
