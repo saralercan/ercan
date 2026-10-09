@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "name": "Reklam Ajansı · Alt Skill Yönlendiricisi",
   "canonical_agent_name": "Reklam Ajansı",
   "canonical_agent_id": "b2acac02-29d7-418c-9f04-24552e947776",
@@ -460,5 +460,24 @@
         "compliance-privacy"
       ]
     }
-  ]
+  ],
+  "workflow_contract": {
+    "documentation": "docs/agents/REKLAM_AJANSI_EVIDENCE_WORKFLOW.md",
+    "planner": "scripts/plan_reklam_ajansi_workflow.py",
+    "supported_stages": [
+      "intake",
+      "skill_workstream",
+      "evidence_merge",
+      "independent_external_review",
+      "explicit_scope_bound_approval"
+    ],
+    "maximum_selected_specialties": 3,
+    "overflow_behavior": "DEFER_AND_REPORT_SCOPE_SPLIT",
+    "offline_status": "PLAN_ONLY_NO_REMOTE_EFFECTS",
+    "actual_executor_required_for_any_real_run": true,
+    "actual_qa_receipt_required_before_pass": true,
+    "explicit_human_approval_required_for_mutations": true,
+    "email_first_touch_gate": "BLOCKED",
+    "paid_ad_account_write_gate": "BLOCKED"
+  }
 }
