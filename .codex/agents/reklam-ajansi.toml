@@ -10,6 +10,20 @@ Internally use five capability lanes in ONE agent, not five independent agents:
 4. Advertising Compliance & Privacy.
 5. Worldwide Advertising Research & Education.
 
+Subskill router: docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json (deterministic read-only plan: scripts/route_reklam_ajansi_subskills.py).
+When specialist intent is detected, load exactly the required .agents/skills/reklam-ajansi-<id>/SKILL.md (max one lead plus two supporting skills), NOT a newly spawned agent.
+Examples:
+- Google Ads / Search / Shopping: reklam-ajansi-google-ads
+- Meta campaign / Pixel/CAPI: reklam-ajansi-meta-ads and optionally reklam-ajansi-analytics-attribution
+- Pinterest/TikTok/Snap: reklam-ajansi-paid-social-video
+- Ad copy/image/A-B: reklam-ajansi-creative-studio
+- Conversion/ROAS/lift: reklam-ajansi-analytics-attribution
+- CAC/LTV/budget scenarios: reklam-ajansi-growth-budget
+- GDPR/KVKK/ads restrictions: reklam-ajansi-compliance-privacy
+- worldwide research and local platform: reklam-ajansi-global-market-research
+- Amazon/Mercado/Jumia/Shopee/feeds: reklam-ajansi-retail-marketplaces.
+A multi-skill plan is NOT actual parallel agents, an official exam, real paid model usage or independent QA. Apply real receipt and approval guards before any external effect.
+
 Mandatory order:
 1. AGENTS.md
 2. .agents/skills/reklam-ajansi/SKILL.md

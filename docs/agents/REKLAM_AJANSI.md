@@ -12,6 +12,25 @@ Bu ajan, önceki beş bağımsız pazarlama ajanının kullanıcıya görünen t
 4. Reklam uyumluluğu: GDPR/KVKK, rıza, Google/Meta ilkeleri, reklam iddiaları, hedef pazar erişimi
 5. Küresel eğitim ve pazar araştırması: akademik makaleler/tezler, resmî Skillshop/Blueprint, açık kaynak MMM/geo test ve yerel platform belgeleri
 
+## Alt skill mimarisi (9 ayrı yetkinlik)
+
+Yönlendirme tanımı: `docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json`.
+Öneri üretme komutu (ağ/ajans harcaması YOK): `python3 scripts/route_reklam_ajansi_subskills.py "Meta Pixel Purchase CAPI kontrol et"`.
+
+| Alt skill | Kapsam |
+|---|---|
+| [reklam-ajansi-google-ads](../../.agents/skills/reklam-ajansi-google-ads/SKILL.md) | Search, Shopping, PMax, Google keyword araştırması |
+| [reklam-ajansi-meta-ads](../../.agents/skills/reklam-ajansi-meta-ads/SKILL.md) | Meta kampanya, reklam seti, Pixel/CAPI |
+| [reklam-ajansi-paid-social-video](../../.agents/skills/reklam-ajansi-paid-social-video/SKILL.md) | Pinterest, TikTok, mobil video |
+| [reklam-ajansi-creative-studio](../../.agents/skills/reklam-ajansi-creative-studio/SKILL.md) | Kreatif, görsel, metin ve A/B |
+| [reklam-ajansi-analytics-attribution](../../.agents/skills/reklam-ajansi-analytics-attribution/SKILL.md) | GA4, Shopify, dönüşüm/atıf ve nedensellik |
+| [reklam-ajansi-growth-budget](../../.agents/skills/reklam-ajansi-growth-budget/SKILL.md) | Bütçe senaryosu, CAC/LTV, büyüme |
+| [reklam-ajansi-compliance-privacy](../../.agents/skills/reklam-ajansi-compliance-privacy/SKILL.md) | KVKK/GDPR, platform kuralları |
+| [reklam-ajansi-global-market-research](../../.agents/skills/reklam-ajansi-global-market-research/SKILL.md) | Dünya pazarları, ülke bazlı eğitim, tez |
+| [reklam-ajansi-retail-marketplaces](../../.agents/skills/reklam-ajansi-retail-marketplaces/SKILL.md) | Merchant, Amazon, Shopee, Mercado, Jumia |
+
+Alt skiller tek ana ajanın iç uzmanlığıdır: tek kimlik ve bir kullanıcı yanıtı korunur. Skill'ler farklı araştırma/kreatif işlerini mantıksal olarak paralel planlayabilir; gerçek paralel AI yürütme yalnız canlı yürütücü ve kanıtlı run kayıtlarıyla mümkündür. Başarı testi/sınav PASS olmadan uzmanlık tamamlandı denmez. Diğer (bağımsız) QA Agent güvenlik kapısının parçası olmaya devam eder.
+
 ## Kalite kapıları
 
 - **Kaynak güveni:** resmî güncel doküman > bakım gören birinci el GitHub kaynağı > hakemli akademik > tez/preprint (açık etiket) > topluluk tartışması (araştırma ipucu).

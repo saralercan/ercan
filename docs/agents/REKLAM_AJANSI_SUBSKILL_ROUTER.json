@@ -1,0 +1,464 @@
+{
+  "schema_version": "1.0.0",
+  "name": "Reklam Ajansı · Alt Skill Yönlendiricisi",
+  "canonical_agent_name": "Reklam Ajansı",
+  "canonical_agent_id": "b2acac02-29d7-418c-9f04-24552e947776",
+  "legacy_agents_archived": 4,
+  "total_runtime_agent_identities_created": 0,
+  "skills": [
+    {
+      "id": "google-ads",
+      "label": "Google Ads / Search / PMax",
+      "path": ".agents/skills/reklam-ajansi-google-ads/SKILL.md",
+      "scope": "Google Ads kampanyası, arama, anahtar kelime, Shopping ve Merchant audit",
+      "priority": 1,
+      "signals": {
+        "strong": [
+          "google ads",
+          "adwords",
+          "pmax",
+          "performance max",
+          "keyword planner",
+          "google shopping",
+          "google alışveriş",
+          "search campaign"
+        ],
+        "context": [
+          "arama reklam",
+          "anahtar kelime",
+          "negatif kelime",
+          "search terms",
+          "google",
+          "reklam grubu",
+          "pmax",
+          "merchant center"
+        ]
+      },
+      "common_companions": [
+        "analytics-attribution",
+        "retail-marketplaces"
+      ],
+      "independent_reviewer_candidates": [
+        "QA Agent",
+        "Analytics & Attribution Agent"
+      ],
+      "execution_authority": "read_research_and_approved_workspace_drafts_only",
+      "actual_run_status": "NOT_EXECUTED",
+      "source_training_state": "CURATED_NOT_CERTIFIED"
+    },
+    {
+      "id": "meta-ads",
+      "label": "Meta Ads / Facebook / Instagram",
+      "path": ".agents/skills/reklam-ajansi-meta-ads/SKILL.md",
+      "scope": "Meta kampanya yapısı, Pixel/CAPI, ad set ve kampanya taslağı",
+      "priority": 2,
+      "signals": {
+        "strong": [
+          "meta ads",
+          "facebook reklam",
+          "instagram reklam",
+          "ads manager",
+          "advantage+",
+          "facebook ads",
+          "meta pixel",
+          "reklam seti"
+        ],
+        "context": [
+          "meta",
+          "instagram",
+          "facebook",
+          "pixel",
+          "capi",
+          "purchase event",
+          "reklam seti"
+        ]
+      },
+      "common_companions": [
+        "analytics-attribution",
+        "creative-studio"
+      ],
+      "independent_reviewer_candidates": [
+        "QA Agent",
+        "Analytics & Attribution Agent"
+      ],
+      "execution_authority": "read_research_and_approved_workspace_drafts_only",
+      "actual_run_status": "NOT_EXECUTED",
+      "source_training_state": "CURATED_NOT_CERTIFIED"
+    },
+    {
+      "id": "paid-social-video",
+      "label": "Pinterest / TikTok / Short Video",
+      "path": ".agents/skills/reklam-ajansi-paid-social-video/SKILL.md",
+      "scope": "Pinterest/TikTok/Snapchat native kısa video reklam ve Pin brief",
+      "priority": 3,
+      "signals": {
+        "strong": [
+          "pinterest",
+          "tiktok",
+          "snapchat",
+          "sponsored pin",
+          "reels reklam",
+          "video ads",
+          "pin reklam"
+        ],
+        "context": [
+          "reels",
+          "shorts",
+          "vertical video",
+          "video reklam",
+          "9:16",
+          "pin",
+          "story"
+        ]
+      },
+      "common_companions": [
+        "creative-studio",
+        "compliance-privacy"
+      ],
+      "independent_reviewer_candidates": [
+        "QA Agent",
+        "Creative QA & Brand Consistency Agent"
+      ],
+      "execution_authority": "read_research_and_approved_workspace_drafts_only",
+      "actual_run_status": "NOT_EXECUTED",
+      "source_training_state": "CURATED_NOT_CERTIFIED"
+    },
+    {
+      "id": "creative-studio",
+      "label": "Creative Studio / Copywriting",
+      "path": ".agents/skills/reklam-ajansi-creative-studio/SKILL.md",
+      "scope": "Özgün reklam tasarımı, fotoğraf, metin, CTA, varyasyon ve A/B",
+      "priority": 4,
+      "signals": {
+        "strong": [
+          "kreatif tasarım",
+          "creative studio",
+          "reklam görseli",
+          "reklam metni",
+          "copywriting",
+          "banner tasarım",
+          "video senaryo"
+        ],
+        "context": [
+          "görsel",
+          "grafik",
+          "fotoğraf",
+          "başlık",
+          "cta",
+          "storyboard",
+          "a/b test",
+          "copy",
+          "kreatif",
+          "tasarım"
+        ]
+      },
+      "common_companions": [
+        "compliance-privacy",
+        "paid-social-video"
+      ],
+      "independent_reviewer_candidates": [
+        "Creative QA & Brand Consistency Agent",
+        "QA Agent"
+      ],
+      "execution_authority": "read_research_and_approved_workspace_drafts_only",
+      "actual_run_status": "NOT_EXECUTED",
+      "source_training_state": "CURATED_NOT_CERTIFIED"
+    },
+    {
+      "id": "analytics-attribution",
+      "label": "Measurement / Analytics / ROAS",
+      "path": ".agents/skills/reklam-ajansi-analytics-attribution/SKILL.md",
+      "scope": "GA4, Pixel/CAPI, Shopify Purchase, ROAS, attribution ve incrementality",
+      "priority": 5,
+      "signals": {
+        "strong": [
+          "ga4",
+          "attribution",
+          "purchase ölçüm",
+          "conversion tracking",
+          "dönüşüm ölçüm",
+          "incrementality",
+          "iROAS",
+          "analytics audit",
+          "server side tracking"
+        ],
+        "context": [
+          "purchase",
+          "dönüşüm",
+          "ölçüm",
+          "roas",
+          "cpa",
+          "pixel",
+          "capi",
+          "utm",
+          "event_id",
+          "conversion",
+          "analytics"
+        ]
+      },
+      "common_companions": [
+        "compliance-privacy",
+        "growth-budget"
+      ],
+      "independent_reviewer_candidates": [
+        "Analytics & Attribution Agent",
+        "QA Agent"
+      ],
+      "execution_authority": "read_research_and_approved_workspace_drafts_only",
+      "actual_run_status": "NOT_EXECUTED",
+      "source_training_state": "CURATED_NOT_CERTIFIED"
+    },
+    {
+      "id": "growth-budget",
+      "label": "Growth / Budget / Unit Economics",
+      "path": ".agents/skills/reklam-ajansi-growth-budget/SKILL.md",
+      "scope": "CAC/LTV, büyüme stratejisi, bütçe optimizasyon senaryoları",
+      "priority": 6,
+      "signals": {
+        "strong": [
+          "bütçe",
+          "budget",
+          "unit economics",
+          "media mix",
+          "budget allocation",
+          "growth plan",
+          "büyüme planı",
+          "cpa hedefi"
+        ],
+        "context": [
+          "kârlılık",
+          "kar marjı",
+          "cac",
+          "ltv",
+          "ltc",
+          "funnel",
+          "scale",
+          "büyüme",
+          "profit",
+          "roas hedef",
+          "budget"
+        ]
+      },
+      "common_companions": [
+        "analytics-attribution",
+        "compliance-privacy"
+      ],
+      "independent_reviewer_candidates": [
+        "Finance Expert Agent",
+        "QA Agent"
+      ],
+      "execution_authority": "read_research_and_approved_workspace_drafts_only",
+      "actual_run_status": "NOT_EXECUTED",
+      "source_training_state": "CURATED_NOT_CERTIFIED"
+    },
+    {
+      "id": "compliance-privacy",
+      "label": "Compliance / Privacy / Policy",
+      "path": ".agents/skills/reklam-ajansi-compliance-privacy/SKILL.md",
+      "scope": "Reklam reddi, ülke politikaları, KVKK/GDPR, Consent, PII",
+      "priority": 7,
+      "signals": {
+        "strong": [
+          "kvkk",
+          "gdpr",
+          "consent",
+          "privacy",
+          "gizlilik",
+          "reklam reddi",
+          "hesap askıya",
+          "audience upload",
+          "müşteri verisi",
+          "pazarlama izni"
+        ],
+        "context": [
+          "policy",
+          "politika",
+          "uyumluluk",
+          "rıza",
+          "izin",
+          "sensitive",
+          "kişisel veri",
+          "hukuk",
+          "yasa"
+        ]
+      },
+      "common_companions": [
+        "global-market-research"
+      ],
+      "independent_reviewer_candidates": [
+        "Security & License Agent",
+        "Human Approval Agent"
+      ],
+      "execution_authority": "read_research_and_approved_workspace_drafts_only",
+      "actual_run_status": "NOT_EXECUTED",
+      "source_training_state": "CURATED_NOT_CERTIFIED"
+    },
+    {
+      "id": "global-market-research",
+      "label": "Global Market Intelligence / Research",
+      "path": ".agents/skills/reklam-ajansi-global-market-research/SKILL.md",
+      "scope": "Japonya/Kore/LATAM/Afrika/EU yerel reklam araştırması ve makale/tez",
+      "priority": 8,
+      "signals": {
+        "strong": [
+          "japonya",
+          "japan",
+          "kore",
+          "korea",
+          "latam",
+          "latin america",
+          "latin amerika",
+          "uluslararası",
+          "yurt dışı",
+          "yurtdışı",
+          "worldwide",
+          "küresel",
+          "tez",
+          "makale",
+          "akademik",
+          "arxiv",
+          "meridian",
+          "robyn",
+          "geolift"
+        ],
+        "context": [
+          "global",
+          "uluslararası",
+          "avrupa",
+          "amerika",
+          "afrika",
+          "çin",
+          "hindistan",
+          "yunanistan",
+          "arabic",
+          "japanese",
+          "korean",
+          "yandex",
+          "naver",
+          "kakao",
+          "research",
+          "source"
+        ]
+      },
+      "common_companions": [
+        "retail-marketplaces",
+        "compliance-privacy"
+      ],
+      "independent_reviewer_candidates": [
+        "Multilingual Localization QA Auditor",
+        "Research Agent"
+      ],
+      "execution_authority": "read_research_and_approved_workspace_drafts_only",
+      "actual_run_status": "NOT_EXECUTED",
+      "source_training_state": "CURATED_NOT_CERTIFIED"
+    },
+    {
+      "id": "retail-marketplaces",
+      "label": "Retail Media / Marketplace Ads",
+      "path": ".agents/skills/reklam-ajansi-retail-marketplaces/SKILL.md",
+      "scope": "Merchant Center, katalog/feed ve Amazon/Mercado/Shopee/Flipkart/Jumia",
+      "priority": 9,
+      "signals": {
+        "strong": [
+          "merchant center",
+          "shopping feed",
+          "retail media",
+          "amazon ads",
+          "mercado ads",
+          "sponsored products",
+          "shopee",
+          "flipkart",
+          "jumia",
+          "noon",
+          "pazaryeri reklam"
+        ],
+        "context": [
+          "shopping",
+          "feed",
+          "merchant",
+          "katalog",
+          "catalog",
+          "ürün reklam",
+          "sponsorlu ürünler",
+          "amazon",
+          "mercado",
+          "pazaryeri"
+        ]
+      },
+      "common_companions": [
+        "google-ads",
+        "global-market-research"
+      ],
+      "independent_reviewer_candidates": [
+        "Local SEO & Merchant Agent",
+        "E-commerce Expert Agent"
+      ],
+      "execution_authority": "read_research_and_approved_workspace_drafts_only",
+      "actual_run_status": "NOT_EXECUTED",
+      "source_training_state": "CURATED_NOT_CERTIFIED"
+    }
+  ],
+  "orchestration": {
+    "user_facing_owner_count": 1,
+    "select_max": 3,
+    "default_skill": "reklam-ajansi",
+    "plan_research_in_parallel_if_independent": true,
+    "parallel_execution_requires_verified_workers": true,
+    "emit_research_plan_as_not_executed": true,
+    "external_independent_qa_agent_required": true,
+    "never_self_approve": true,
+    "request_only_authorized_tool_calls": true,
+    "live_media_mutations_require_separate_human_approval": true,
+    "first_touch_gmail_release_gate": "BLOCKED",
+    "credential_or_billable_call_must_not_be_implied": true,
+    "do_not_duplicate_skills": true
+  },
+  "shared_sources": [
+    "docs/agents/REKLAM_AJANSI.md",
+    "docs/academy/VINTERRO_PAID_MEDIA_ACADEMY_TR.md",
+    "docs/academy/VINTERRO_GLOBAL_PAID_MEDIA_ACADEMY_TR.md",
+    "docs/academy/WORLDWIDE_PAID_MEDIA_SOURCES_2026.json"
+  ],
+  "activation_samples": [
+    {
+      "query": "Google Ads anahtar kelime ve negatif kelime çalışması",
+      "expected": [
+        "google-ads"
+      ]
+    },
+    {
+      "query": "Meta Pixel Purchase ve CAPI kontrol et",
+      "expected": [
+        "meta-ads",
+        "analytics-attribution"
+      ]
+    },
+    {
+      "query": "Pinterest için gerçek ürün görselleri ve CTA hazırla",
+      "expected": [
+        "paid-social-video",
+        "creative-studio"
+      ]
+    },
+    {
+      "query": "Bütçe dağılımı ve ROAS stratejisi",
+      "expected": [
+        "growth-budget",
+        "analytics-attribution"
+      ]
+    },
+    {
+      "query": "Japonya pazarında Shopping reklam uygunluğunu araştır",
+      "expected": [
+        "global-market-research",
+        "retail-marketplaces"
+      ]
+    },
+    {
+      "query": "KVKK ve reklam politikası uygunluğunu denetle",
+      "expected": [
+        "compliance-privacy"
+      ]
+    }
+  ]
+}

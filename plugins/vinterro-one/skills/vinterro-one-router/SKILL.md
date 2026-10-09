@@ -12,6 +12,10 @@ Use the strongest currently authorized Vinterro One source:
 
 Do not pretend a stronger connection exists than the current surface actually provides.
 
+## Reklam Ajansı skill dispatch
+
+Requests for paid advertising, Google Ads, Meta/Instagram Ads, Pinterest/TikTok, creatives, attribution/Purchase, advertising budget, consent compliance, worldwide advertising research or retail media route to the **single** live `Reklam Ajansı` agent. Read `docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json` and load the relevant `.agents/skills/reklam-ajansi-<id>/SKILL.md` for the task (at most three). Parent: `.agents/skills/reklam-ajansi/SKILL.md`, with master `docs/agents/REKLAM_AJANSI.md`. Do **not** reactivate the five retired specialist identities; they are internal capability lanes. Route planning is read-only and does not start model workers. Account mutation, ad launch, budget change, audience upload, customer data or cold outreach remains approval/verified-execution gated. Independent QA belongs to separate reviewer agents.
+
 ## Source order
 
 Load only what the task needs.
