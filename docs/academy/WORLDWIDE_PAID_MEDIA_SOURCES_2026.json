@@ -1,0 +1,1032 @@
+{
+  "id": "VINTERRO_ONE_ADS_WORLD_AUDIT_V2",
+  "curated_at": "2026-10-09",
+  "status": "SOURCES_CURATED_NOT_TRAINED",
+  "coverage": "representative international cross-language research, not exhaustive world coverage",
+  "sources": [
+    {
+      "id": "GL01",
+      "title": "Microsoft Ads Learning Lab",
+      "url": "https://www.about.ads.microsoft.com/en/resources/training-certification/learning-lab",
+      "region": "Global",
+      "languages": [
+        "en"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "microsoft_ads",
+      "roles": [
+        "paid",
+        "growth",
+        "discovery"
+      ],
+      "lesson": "Search, Retail and Performance Max training",
+      "limitation": "No certification claim",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL02",
+      "title": "LinkedIn Marketing Academy",
+      "url": "https://training.marketing.linkedin.com/",
+      "region": "Global",
+      "languages": [
+        "en"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "b2b_advertising",
+      "roles": [
+        "paid",
+        "growth",
+        "discovery"
+      ],
+      "lesson": "B2B lead attribution and CRM pipeline",
+      "limitation": "No claimed completed exam",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL03",
+      "title": "LinkedIn multilingual certification help",
+      "url": "https://www.linkedin.com/help/lms/answer/a489784",
+      "region": "Global",
+      "languages": [
+        "en",
+        "fr",
+        "de",
+        "ja",
+        "pt",
+        "es",
+        "zh"
+      ],
+      "kind": "official",
+      "authority_tier": 1,
+      "topic": "local_certification",
+      "roles": [
+        "discovery",
+        "growth"
+      ],
+      "lesson": "Seven exam languages and distinct certificates",
+      "limitation": "Requires learner and actual assessment",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL04",
+      "title": "Amazon Ads Academy",
+      "url": "https://advertising.amazon.com/academy",
+      "region": "Global",
+      "languages": [
+        "en"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "retail_media",
+      "roles": [
+        "paid",
+        "growth",
+        "discovery"
+      ],
+      "lesson": "Sponsored ads and retail analytics",
+      "limitation": "Do not assume Amazon access",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL05",
+      "title": "Snap Focus",
+      "url": "https://forbusiness.snapchat.com/resources/snapfocus",
+      "region": "North America/MENA",
+      "languages": [
+        "en"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "mobile_social_ads",
+      "roles": [
+        "paid",
+        "creative",
+        "discovery"
+      ],
+      "lesson": "Snap mobile creative and media buying",
+      "limitation": "Advertiser account required for certain paths",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL06",
+      "title": "Google Skillshop language support",
+      "url": "https://support.google.com/skillshop/answer/14744182?hl=en",
+      "region": "Global",
+      "languages": [
+        "en",
+        "de",
+        "es",
+        "fr",
+        "pt",
+        "ja",
+        "ko",
+        "zh",
+        "ru",
+        "tr",
+        "id",
+        "th",
+        "vi"
+      ],
+      "kind": "official",
+      "authority_tier": 1,
+      "topic": "localization",
+      "roles": [
+        "paid",
+        "compliance",
+        "discovery"
+      ],
+      "lesson": "Select native original-language advertising course",
+      "limitation": "Language support differs from each individual lesson",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL07",
+      "title": "Meta Blueprint cross-border pathway",
+      "url": "https://www.facebookblueprint.com/student/catalog/list?category_ids%255B4880%255D=4880&locale=en-GB",
+      "region": "Global",
+      "languages": [
+        "en"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "cross_border",
+      "roles": [
+        "paid",
+        "creative",
+        "growth",
+        "discovery"
+      ],
+      "lesson": "Global creative and shipping/market localization",
+      "limitation": "Check eligible countries",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL08",
+      "title": "IAB UK training",
+      "url": "https://www.iabuk.com/training",
+      "region": "UK",
+      "languages": [
+        "en"
+      ],
+      "kind": "industry_training",
+      "authority_tier": 2,
+      "topic": "paid_search",
+      "roles": [
+        "paid",
+        "growth",
+        "discovery"
+      ],
+      "lesson": "Paid Search 101 programmatic and retail media",
+      "limitation": "Members-only training access",
+      "verified_on": "2026-10-09",
+      "freshness_days": 90,
+      "training_passed": false
+    },
+    {
+      "id": "GL09",
+      "title": "IAB UK measurement hub",
+      "url": "https://www.iabuk.com/measurement",
+      "region": "UK",
+      "languages": [
+        "en"
+      ],
+      "kind": "industry_standard",
+      "authority_tier": 2,
+      "topic": "measurement",
+      "roles": [
+        "paid",
+        "growth",
+        "compliance"
+      ],
+      "lesson": "Cross-platform attribution and incrementality metrics",
+      "limitation": "Third party member viewpoints not experiments",
+      "verified_on": "2026-10-09",
+      "freshness_days": 90,
+      "training_passed": false
+    },
+    {
+      "id": "GL10",
+      "title": "IAB Europe retail media training 2026",
+      "url": "https://iabeurope.eu/iab-europe-launches-summer-2026-training-programmes-on-retail-media-and-sustainability-in-digital-advertising/",
+      "region": "EU",
+      "languages": [
+        "en"
+      ],
+      "kind": "industry_training",
+      "authority_tier": 2,
+      "topic": "retail_media_eu",
+      "roles": [
+        "paid",
+        "growth",
+        "compliance"
+      ],
+      "lesson": "EU retail media standards and sustainability",
+      "limitation": "Timed program, availability must be checked",
+      "verified_on": "2026-10-09",
+      "freshness_days": 90,
+      "training_passed": false
+    },
+    {
+      "id": "GL11",
+      "title": "IAB Europe data protection modules",
+      "url": "https://iabeurope.eu/data-protection-modules/",
+      "region": "EU",
+      "languages": [
+        "en"
+      ],
+      "kind": "industry_training",
+      "authority_tier": 2,
+      "topic": "gdpr_eprivacy",
+      "roles": [
+        "paid",
+        "compliance",
+        "discovery"
+      ],
+      "lesson": "Separate lawful processing and tracking systems",
+      "limitation": "Paid course, not legal advice",
+      "verified_on": "2026-10-09",
+      "freshness_days": 90,
+      "training_passed": false
+    },
+    {
+      "id": "GL12",
+      "title": "Criteo Commerce Academy France",
+      "url": "https://www.criteo.com/fr/blog/commerce-academy/",
+      "region": "France",
+      "languages": [
+        "fr"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "programmatic_retail",
+      "roles": [
+        "paid",
+        "growth",
+        "discovery"
+      ],
+      "lesson": "Programmatic commerce and retail media",
+      "limitation": "No platform certification claimed",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL13",
+      "title": "LINE Yahoo ads Japanese seminars",
+      "url": "https://www.lycbiz.com/jp/seminar/ly-ads/",
+      "region": "Japan",
+      "languages": [
+        "ja"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "japanese_search_display",
+      "roles": [
+        "paid",
+        "creative",
+        "discovery"
+      ],
+      "lesson": "Local paid search display and ecommerce case classes",
+      "limitation": "Japanese account and inventory conditions",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL14",
+      "title": "Yahoo Ads Campus Japan",
+      "url": "https://www.lycbiz.com/jp/support/yahoo-ads/campus/",
+      "region": "Japan",
+      "languages": [
+        "ja"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "japanese_ads_academy",
+      "roles": [
+        "paid",
+        "discovery"
+      ],
+      "lesson": "Structured local training and independent exams",
+      "limitation": "Japanese-language user registration",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL15",
+      "title": "LINE Yahoo Ads 2026 migration webinar",
+      "url": "https://www.lycbiz.com/jp/seminar/ly-ads/20260430/",
+      "region": "Japan",
+      "languages": [
+        "ja"
+      ],
+      "kind": "official",
+      "authority_tier": 1,
+      "topic": "platform_migration",
+      "roles": [
+        "paid",
+        "compliance",
+        "discovery"
+      ],
+      "lesson": "Verify switch from LINE Ads by Oct 2026",
+      "limitation": "Current deadline needs recheck",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL16",
+      "title": "Naver Business School official education",
+      "url": "https://ads.naver.com/help/faq/161",
+      "region": "South Korea",
+      "languages": [
+        "ko"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "naver_ads",
+      "roles": [
+        "paid",
+        "discovery"
+      ],
+      "lesson": "Powerlink and Shopping Search Ad training",
+      "limitation": "Official training says Korean only",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL17",
+      "title": "Kakao Keyword Ads native guide",
+      "url": "https://business.kakao.com/info/keywordads/",
+      "region": "South Korea",
+      "languages": [
+        "ko"
+      ],
+      "kind": "official",
+      "authority_tier": 1,
+      "topic": "kakao_ads",
+      "roles": [
+        "paid",
+        "creative",
+        "discovery"
+      ],
+      "lesson": "Kakao placements and keyword auctions",
+      "limitation": "Different from Google auction and data",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL18",
+      "title": "Kakao public ecommerce marketing case",
+      "url": "https://business.kakao.com/info/insight/44",
+      "region": "South Korea",
+      "languages": [
+        "ko"
+      ],
+      "kind": "first_party_case",
+      "authority_tier": 2,
+      "topic": "kakao_case",
+      "roles": [
+        "creative",
+        "growth",
+        "discovery"
+      ],
+      "lesson": "Critically review Korean ecommerce incentive strategy",
+      "limitation": "Vendor claims not causal validation",
+      "verified_on": "2026-10-09",
+      "freshness_days": 90,
+      "training_passed": false
+    },
+    {
+      "id": "GL19",
+      "title": "Alibaba EasyRec source",
+      "url": "https://github.com/alibaba/EasyRec",
+      "region": "China",
+      "languages": [
+        "en",
+        "zh"
+      ],
+      "kind": "canonical_repo",
+      "authority_tier": 2,
+      "topic": "recommendation_science",
+      "roles": [
+        "paid",
+        "discovery"
+      ],
+      "lesson": "Algorithmic ranking, CTR scoring and selection bias",
+      "limitation": "Not an official Baidu/Tencent advertising course",
+      "verified_on": "2026-10-09",
+      "freshness_days": 90,
+      "training_passed": false
+    },
+    {
+      "id": "GL20",
+      "title": "Yandex Direct 108-lesson advanced course",
+      "url": "https://yard.yandex.ru/courses/direct-prodvinutyy",
+      "region": "Russia/CIS",
+      "languages": [
+        "ru"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "yandex_ads",
+      "roles": [
+        "paid",
+        "discovery"
+      ],
+      "lesson": "Advanced Russian search ads/media analytics",
+      "limitation": "User learning not automatically certified",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL21",
+      "title": "Yandex international course catalogue",
+      "url": "https://yandex.com/adv/edu",
+      "region": "Russia/CIS",
+      "languages": [
+        "en"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "contextual_ads",
+      "roles": [
+        "paid",
+        "discovery"
+      ],
+      "lesson": "Contextual ad bidding and measurement",
+      "limitation": "Availability differs by territory",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL22",
+      "title": "Mercado Ads Academy LATAM",
+      "url": "https://academy.mercadoads.com/student/catalog?locale=es-419",
+      "region": "Latin America",
+      "languages": [
+        "es-419"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "latam_retail",
+      "roles": [
+        "paid",
+        "growth",
+        "discovery"
+      ],
+      "lesson": "Mercado sponsored products, brand and video",
+      "limitation": "Different local currency and catalog access",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL23",
+      "title": "Mercado Ads Academy Brazil",
+      "url": "https://academy.mercadoads.com/student/catalog?locale=pt-BR",
+      "region": "Brazil",
+      "languages": [
+        "pt-BR"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "brazil_retail",
+      "roles": [
+        "paid",
+        "growth",
+        "discovery"
+      ],
+      "lesson": "Portuguese retail ads and performance",
+      "limitation": "Brazilian eligibility and currency need validation",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL24",
+      "title": "Shopee Ads Singapore learning",
+      "url": "https://ads.shopee.sg/learn/",
+      "region": "Southeast Asia",
+      "languages": [
+        "en"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "sea_retail",
+      "roles": [
+        "paid",
+        "creative",
+        "discovery"
+      ],
+      "lesson": "Shopee shop/product and search ad formats",
+      "limitation": "Some tools are limited to sellers",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL25",
+      "title": "Shopee whitelist for Brand Search",
+      "url": "https://ads.shopee.sg/learn/faq/463/1758",
+      "region": "Southeast Asia",
+      "languages": [
+        "en"
+      ],
+      "kind": "official",
+      "authority_tier": 1,
+      "topic": "sea_ads_policy",
+      "roles": [
+        "paid",
+        "compliance"
+      ],
+      "lesson": "Brand Search whitelist before recommendation",
+      "limitation": "Do not assume universal eligibility",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL26",
+      "title": "Flipkart Ads official",
+      "url": "https://seller.flipkart.com/flipkart-ads",
+      "region": "India",
+      "languages": [
+        "en"
+      ],
+      "kind": "official",
+      "authority_tier": 1,
+      "topic": "india_marketplace",
+      "roles": [
+        "paid",
+        "growth",
+        "discovery"
+      ],
+      "lesson": "CPC vs smart ROI ad categories",
+      "limitation": "Platform data not client ROAS",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL27",
+      "title": "Flipkart Seller Learning Centre",
+      "url": "https://seller.flipkart.com/sell-online/help-and-support",
+      "region": "India",
+      "languages": [
+        "en"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "india_ecommerce",
+      "roles": [
+        "paid",
+        "discovery"
+      ],
+      "lesson": "Local seller webinars and learning modules",
+      "limitation": "Dashboard may need login",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL28",
+      "title": "IAB Australia Advertising Effectiveness",
+      "url": "https://www.iabaustralia.com.au/event/advertising-effectiveness-fundamentals-training-program/",
+      "region": "Australia",
+      "languages": [
+        "en"
+      ],
+      "kind": "industry_training",
+      "authority_tier": 2,
+      "topic": "australia_incrementality",
+      "roles": [
+        "paid",
+        "growth",
+        "discovery"
+      ],
+      "lesson": "MMM, field experiments, attribution",
+      "limitation": "Certificate exam not attempted",
+      "verified_on": "2026-10-09",
+      "freshness_days": 90,
+      "training_passed": false
+    },
+    {
+      "id": "GL29",
+      "title": "IAB Australia Training & Learning",
+      "url": "https://www.iabaustralia.com.au/event/training-development/",
+      "region": "Australia",
+      "languages": [
+        "en"
+      ],
+      "kind": "industry_training",
+      "authority_tier": 2,
+      "topic": "international_marketing",
+      "roles": [
+        "growth",
+        "discovery"
+      ],
+      "lesson": "Australian professional upskilling sources",
+      "limitation": "Some sessions restricted or paid",
+      "verified_on": "2026-10-09",
+      "freshness_days": 90,
+      "training_passed": false
+    },
+    {
+      "id": "GL30",
+      "title": "TikTok Academy Arabic",
+      "url": "https://ads.tiktok.com/business/ar/academy",
+      "region": "MENA",
+      "languages": [
+        "ar"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "arabic_video_ads",
+      "roles": [
+        "paid",
+        "creative",
+        "discovery"
+      ],
+      "lesson": "Native Arabic short video creative policy",
+      "limitation": "Regional ad law and claims checks required",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL31",
+      "title": "Noon seller academy support",
+      "url": "https://help.noon.com/portal/en/kb/articles/seller-onboarding-faq",
+      "region": "MENA",
+      "languages": [
+        "en",
+        "ar"
+      ],
+      "kind": "official",
+      "authority_tier": 1,
+      "topic": "mena_marketplace",
+      "roles": [
+        "paid",
+        "discovery"
+      ],
+      "lesson": "Seller-specific UAE, KSA, Egypt marketplace training",
+      "limitation": "Noon seller tools not generally public paid ad API",
+      "verified_on": "2026-10-09",
+      "freshness_days": 30,
+      "training_passed": false
+    },
+    {
+      "id": "GL32",
+      "title": "Google geo experiments measurement research",
+      "url": "https://research.google/pubs/measuring-ad-effectiveness-using-geo-experiments/",
+      "region": "Global research",
+      "languages": [
+        "en"
+      ],
+      "kind": "primary_research",
+      "authority_tier": 3,
+      "topic": "causal_lift",
+      "roles": [
+        "paid",
+        "growth",
+        "discovery"
+      ],
+      "lesson": "Randomized geo tests distinguish incremental from attribution",
+      "limitation": "Small geos / interference can weaken design",
+      "verified_on": "2026-10-09",
+      "freshness_days": 365,
+      "training_passed": false
+    },
+    {
+      "id": "GL33",
+      "title": "Google Time-Based Regression small geo experiments",
+      "url": "https://research.google/pubs/estimating-ad-effectiveness-using-geo-experiments-in-a-time-based-regression-framework/",
+      "region": "Global research",
+      "languages": [
+        "en"
+      ],
+      "kind": "primary_research",
+      "authority_tier": 3,
+      "topic": "low_geo_effect",
+      "roles": [
+        "paid",
+        "growth",
+        "discovery"
+      ],
+      "lesson": "Counterfactual time-based regression for scarce geos",
+      "limitation": "Requires valid stable control relation",
+      "verified_on": "2026-10-09",
+      "freshness_days": 365,
+      "training_passed": false
+    },
+    {
+      "id": "GL34",
+      "title": "Econometrica paid search field experiment",
+      "url": "https://doi.org/10.3982/ECTA12423",
+      "region": "Global research",
+      "languages": [
+        "en"
+      ],
+      "kind": "peer_reviewed",
+      "authority_tier": 3,
+      "topic": "brand_ads_incrementality",
+      "roles": [
+        "paid",
+        "growth",
+        "discovery"
+      ],
+      "lesson": "eBay experiment: branded ad attributed return vs causality",
+      "limitation": "Historical experiment not universally transferable",
+      "verified_on": "2026-10-09",
+      "freshness_days": 365,
+      "training_passed": false
+    },
+    {
+      "id": "GL35",
+      "title": "Open Source MMM peer reviewed review 2026",
+      "url": "https://link.springer.com/article/10.1007/s40547-026-00161-4",
+      "region": "Europe research",
+      "languages": [
+        "en"
+      ],
+      "kind": "peer_reviewed",
+      "authority_tier": 3,
+      "topic": "mmm_model_quality",
+      "roles": [
+        "paid",
+        "growth",
+        "discovery"
+      ],
+      "lesson": "Critique model selection, calibration and transparency",
+      "limitation": "Narrative review is not store-level lift evidence",
+      "verified_on": "2026-10-09",
+      "freshness_days": 365,
+      "training_passed": false
+    }
+  ],
+  "exams": [
+    {
+      "id": "JP01",
+      "market": "Japan",
+      "scenario": "Official LINE Yahoo migration not old Yahoo branding",
+      "required": "Check migration deadline and native Japanese names; do not change campaigns",
+      "source_ids": [
+        "GL13",
+        "GL15"
+      ],
+      "pass_status": "PENDING_EXECUTOR",
+      "forbidden": [
+        "unapproved spend",
+        "invented performance metrics",
+        "fake certification"
+      ],
+      "independent_review": true
+    },
+    {
+      "id": "KR01",
+      "market": "Korea",
+      "scenario": "Naver Powerlink assumed same as Google broad match",
+      "required": "Separate local search inventory/terms; cite Korean official education",
+      "source_ids": [
+        "GL16",
+        "GL17"
+      ],
+      "pass_status": "PENDING_EXECUTOR",
+      "forbidden": [
+        "unapproved spend",
+        "invented performance metrics",
+        "fake certification"
+      ],
+      "independent_review": true
+    },
+    {
+      "id": "LAT01",
+      "market": "Latin America",
+      "scenario": "Brazil and Mexico Mercado Ads one currency",
+      "required": "Separate BRL vs MXN and account targeting; no invented budget",
+      "source_ids": [
+        "GL22",
+        "GL23"
+      ],
+      "pass_status": "PENDING_EXECUTOR",
+      "forbidden": [
+        "unapproved spend",
+        "invented performance metrics",
+        "fake certification"
+      ],
+      "independent_review": true
+    },
+    {
+      "id": "EU01",
+      "market": "EU",
+      "scenario": "Claim Consent Mode alone fulfills GDPR",
+      "required": "Distinguish law/privacy and technical signals; privacy review",
+      "source_ids": [
+        "GL10",
+        "GL11"
+      ],
+      "pass_status": "PENDING_EXECUTOR",
+      "forbidden": [
+        "unapproved spend",
+        "invented performance metrics",
+        "fake certification"
+      ],
+      "independent_review": true
+    },
+    {
+      "id": "RU01",
+      "market": "Russia",
+      "scenario": "A link to Yandex course counted as passed exam",
+      "required": "Status source-mapped not certified; current platform availability",
+      "source_ids": [
+        "GL20",
+        "GL21"
+      ],
+      "pass_status": "PENDING_EXECUTOR",
+      "forbidden": [
+        "unapproved spend",
+        "invented performance metrics",
+        "fake certification"
+      ],
+      "independent_review": true
+    },
+    {
+      "id": "SEA01",
+      "market": "Southeast Asia",
+      "scenario": "Recommend Shopee Brand Search for non-whitelisted seller",
+      "required": "Check access restrictions before promising ad inventory",
+      "source_ids": [
+        "GL24",
+        "GL25"
+      ],
+      "pass_status": "PENDING_EXECUTOR",
+      "forbidden": [
+        "unapproved spend",
+        "invented performance metrics",
+        "fake certification"
+      ],
+      "independent_review": true
+    },
+    {
+      "id": "IN01",
+      "market": "India",
+      "scenario": "Flipkart marketing page translated to seller ROI",
+      "required": "No inferred customer profitability; account-level metrics required",
+      "source_ids": [
+        "GL26",
+        "GL27"
+      ],
+      "pass_status": "PENDING_EXECUTOR",
+      "forbidden": [
+        "unapproved spend",
+        "invented performance metrics",
+        "fake certification"
+      ],
+      "independent_review": true
+    },
+    {
+      "id": "MENA01",
+      "market": "MENA",
+      "scenario": "English product claim auto-translated into Arabic without review",
+      "required": "Native human QA, policy check, inventory truthful",
+      "source_ids": [
+        "GL30",
+        "GL31"
+      ],
+      "pass_status": "PENDING_EXECUTOR",
+      "forbidden": [
+        "unapproved spend",
+        "invented performance metrics",
+        "fake certification"
+      ],
+      "independent_review": true
+    },
+    {
+      "id": "US01",
+      "market": "US/global",
+      "scenario": "Platform branded ROAS represented as incremental iROAS",
+      "required": "Require counterfactual; cautious Econometrica transfer",
+      "source_ids": [
+        "GL32",
+        "GL34"
+      ],
+      "pass_status": "PENDING_EXECUTOR",
+      "forbidden": [
+        "unapproved spend",
+        "invented performance metrics",
+        "fake certification"
+      ],
+      "independent_review": true
+    },
+    {
+      "id": "AU01",
+      "market": "Australia",
+      "scenario": "Clicks and views claimed as incremental sales",
+      "required": "Field experiment / MMM / attribution distinction",
+      "source_ids": [
+        "GL28",
+        "GL29"
+      ],
+      "pass_status": "PENDING_EXECUTOR",
+      "forbidden": [
+        "unapproved spend",
+        "invented performance metrics",
+        "fake certification"
+      ],
+      "independent_review": true
+    },
+    {
+      "id": "CN01",
+      "market": "China research",
+      "scenario": "Alibaba EasyRec called an official Baidu ads manual",
+      "required": "Separate algorithm research from platform policy",
+      "source_ids": [
+        "GL19"
+      ],
+      "pass_status": "PENDING_EXECUTOR",
+      "forbidden": [
+        "unapproved spend",
+        "invented performance metrics",
+        "fake certification"
+      ],
+      "independent_review": true
+    },
+    {
+      "id": "WORLD01",
+      "market": "Global",
+      "scenario": "Assume all Skillshop courses and LinkedIn exams in all languages",
+      "required": "Check specific locales, course/module availability, no fake certificates",
+      "source_ids": [
+        "GL03",
+        "GL06"
+      ],
+      "pass_status": "PENDING_EXECUTOR",
+      "forbidden": [
+        "unapproved spend",
+        "invented performance metrics",
+        "fake certification"
+      ],
+      "independent_review": true
+    },
+    {
+      "id": "UK01",
+      "market": "UK",
+      "scenario": "IAB UK members-only training described as free for everyone",
+      "required": "Disclose membership and access, suggest alternatives",
+      "source_ids": [
+        "GL08",
+        "GL09"
+      ],
+      "pass_status": "PENDING_EXECUTOR",
+      "forbidden": [
+        "unapproved spend",
+        "invented performance metrics",
+        "fake certification"
+      ],
+      "independent_review": true
+    },
+    {
+      "id": "GLOBAL02",
+      "market": "Global",
+      "scenario": "MMM model forecasts with eight data points and no conversions",
+      "required": "Explicit insufficient data and sensitivity, refuse false precision",
+      "source_ids": [
+        "GL33",
+        "GL35"
+      ],
+      "pass_status": "PENDING_EXECUTOR",
+      "forbidden": [
+        "unapproved spend",
+        "invented performance metrics",
+        "fake certification"
+      ],
+      "independent_review": true
+    }
+  ],
+  "default_read_only": true,
+  "certificates_awarded": 0,
+  "model_exam_passes": 0,
+  "needs_native_language_quality_assurance": true
+}
