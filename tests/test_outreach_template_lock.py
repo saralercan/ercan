@@ -103,5 +103,19 @@ class LockedOutreachTests(unittest.TestCase):
             locked_source("vinterro", ROOT / "nonexistent-directory")
 
 
+    def test_rpc_release_gate_and_serialized_claim_are_preserved(self):
+        path = ROOT / "supabase" / "outreach-first-touch-prepare-transaction-lock.sql"
+        source = path.read_text(encoding="utf-8")
+        self.assertIn("first_touch_release_gate_blocked", source)
+        self.assertIn("pg_advisory_xact_lock", source)
+        self.assertIn("vinterro_outreach_account_claims", source)
+        self.assertIn("send_attempt_token", source)
+        self.assertIn("return jsonb_build_object('allowed',false", source)
+        gate_pos = source.index("first_touch_release_gate_blocked")
+        lock_pos = source.index("pg_advisory_xact_lock")
+        lookup_pos = source.index("into v_existing")
+        self.assertLess(gate_pos, lock_pos)
+        self.assertLess(lock_pos, lookup_pos)
+
 if __name__ == "__main__":
     unittest.main()
