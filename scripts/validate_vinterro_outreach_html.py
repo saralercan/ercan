@@ -106,8 +106,12 @@ class _AllowedBodyParser(HTMLParser):
                 raise OutreachTemplateBlocked("unapproved link target")
             uri = attr["href"].strip()
             scheme = urlsplit(uri).scheme.lower()
+            try:
+                decoded_uri = unquote_to_bytes(uri).decode("utf-8", errors="strict")
+            except UnicodeError as exc:
+                raise OutreachTemplateBlocked("non-UTF8 BODY_HTML link") from exc
             if scheme not in ("https", "http", "mailto") or any(
-                ord(char) < 32 or ord(char) == 127 for char in uri
+                ord(char) < 32 or ord(char) == 127 for char in decoded_uri
             ):
                 raise OutreachTemplateBlocked("unsafe BODY_HTML link")
             if scheme in ("https", "http") and not urlsplit(uri).netloc:
@@ -145,7 +149,7 @@ def validate_body_html(body: str) -> None:
         parser.close()
     except (ValueError, TypeError) as exc:
         raise OutreachTemplateBlocked("invalid BODY_HTML") from exc
-    if parser.stack or not parser.paragraphs:
+    if parser.stack or not parser.paragraphs or parser.rawdata.strip():
         raise OutreachTemplateBlocked("missing paragraphs or unbalanced BODY_HTML")
 
 
