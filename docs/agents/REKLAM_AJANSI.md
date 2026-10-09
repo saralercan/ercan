@@ -35,6 +35,10 @@ Alt skiller tek ana ajanın iç uzmanlığıdır: tek kimlik ve bir kullanıcı 
 
 `docs/agents/REKLAM_AJANSI_EVIDENCE_WORKFLOW.md` standardına göre `python3 scripts/plan_reklam_ajansi_workflow.py "Meta Ads Pixel Purchase CAPI kontrol et"` komutu salt-okunur bir görev grafiği, her uzmanlık için teslimat kanıtı, ortak sentez ve bağımsız reviewer gereksinimi oluşturur. Üçten fazla alan eşleşirse kapsam `deferred_skill_ids` üzerinden yeniden bölünür. `PLAN_ONLY_NO_REMOTE_EFFECTS` sonucu reklam hesabı, model çalıştırma veya QA PASS iddiası değildir. Yayınlama/bütçe/kişisel veri işlemleri için insan onayı ve canlı yürütücü zorunluluğu korunur.
 
+## Kalıcı Vinterro One ana çağrı kuralı
+
+Kullanıcı **“tüm ajanları çalıştır”**, **“bütün ajanları çalıştır”**, **“Vinterro One çalıştır”** veya eşdeğer komut verirse `@Orchestrator` her zaman tek **Reklam Ajansı** ve **9 alt skill'in tamamını** otomatik dahil eder. `docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json` global_invocation planı burada zorunludur; sıradan tek görevlerde ise en fazla 3 ilgili alt skill seçme kuralı geçerlidir. Ana çağrıda ilgisiz uzmanlıklar `SCOPE_CHECK_ONLY` olarak değerlendirilir ve dış sisteme müdahale etmez. Gerçek AI yürütücü/bağımsız QA kanıtı bulunmuyorsa tüm iş akışlarının durumu `NOT_STARTED` kalır; reklam yayını, bütçe, Gmail ve müşteri verisi güvenlik kapıları ayrıca korunur.
+
 ## Kalite kapıları
 
 - **Kaynak güveni:** resmî güncel doküman > bakım gören birinci el GitHub kaynağı > hakemli akademik > tez/preprint (açık etiket) > topluluk tartışması (araştırma ipucu).
