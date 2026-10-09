@@ -23,6 +23,12 @@ The user is not expected to know whether a task needs a Shopify Engineer, Visual
 
 A user may still explicitly request or exclude a named specialist. Explicit task constraints override automatic roster selection where safe and feasible.
 
+## Permanent global invocation: Reklam Ajansı and nine skills
+
+All commands `tüm ajanları çalıştır`, `bütün ajanları çalıştır`, `Vinterro One çalıştır`, `Vinterro One'ı çalıştır`, `use all agents`, `run Vinterro One`, and equivalents MUST enroll the one canonical active **Reklam Ajansı** and its **complete nine-subskill roster**, independently of whether paid advertising was explicitly named in the user's goal. This intentional agency-inclusion exception does not require all other 112 active runtime agents to execute. It is a scoped check for advertising-related dependencies and risks, not automatic permission to perform unrelated campaign work.
+
+Read `docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json`, plan via `scripts/plan_reklam_ajansi_workflow.py`, and include all 9 expert IDs in the global plan. Material scopes are workstream plans; nonmatching subskills must be labelled `SCOPE_CHECK_ONLY`. For task-specific ordinary routing the 3-subskill bound remains; global invocations override only this internal selection cap. No duplicate standalone ad agents or fake parallel model runs. An independent QA/reviewer and explicit approval gates remain separate. A queued plan is NOT execution, completion, or certification; absence of real worker evidence must be reported.
+
 ## Routing sequence
 
 For every “all agents” intent, run this selection sequence before execution:

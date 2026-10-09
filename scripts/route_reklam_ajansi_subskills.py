@@ -22,6 +22,10 @@ def _contains(text: str, phrase: str) -> bool:
 
 def route(task: str, *, max_skills: int | None = None) -> dict:
     manifest = json.loads(REGISTRY.read_text(encoding="utf-8"))
+    global_contract = manifest["global_invocation"]
+    global_invocation = bool(global_contract["enabled"] and any(
+        _contains(task, phrase) for phrase in global_contract["phrases"]
+    ))
     limit = int(manifest["orchestration"]["select_max"])
     if max_skills is not None:
         limit = min(limit, max(1, max_skills))
@@ -37,10 +41,33 @@ def route(task: str, *, max_skills: int | None = None) -> dict:
                             "_priority": skill["priority"],
                             "reviewer_candidates": skill["independent_reviewer_candidates"]})
     matches.sort(key=lambda x: (-x["score"], x["_priority"], x["id"]))
-    chosen = matches[:limit]
-    # Preserve every matching but unselected expertise as a visible scope gap.
-    # No silently dropped task segments and no invented extra worker slots.
-    deferred = [{"id": x["id"], "score": x["score"]} for x in matches[limit:]]
+    if global_invocation:
+        # The user's GLOBAL invocation specifically asks to include Reklam Ajansı
+        # AND its entire nine-skill capability roster. Normal tasks stay capped.
+        # Nonmatching skills are explicit SCOPE_CHECK_ONLY, not pretend execution.
+        by_id = {item["id"]: item for item in matches}
+        chosen = []
+        for skill in sorted(manifest["skills"], key=lambda x: x["priority"]):
+            item = by_id.get(skill["id"])
+            if item is None:
+                item = {
+                    "id": skill["id"], "label": skill["label"],
+                    "path": skill["path"], "score": 0,
+                    "evidence": {"strong": [], "context": []},
+                    "_priority": skill["priority"],
+                    "reviewer_candidates": skill["independent_reviewer_candidates"],
+                }
+            item["participation"] = (
+                "MATERIAL_WORKSTREAM" if item["score"] > 0 else "SCOPE_CHECK_ONLY"
+            )
+            chosen.append(item)
+        deferred = []
+    else:
+        chosen = matches[:limit]
+        for item in chosen:
+            item["participation"] = "MATERIAL_WORKSTREAM"
+        # Preserve every matching but unselected expertise as a visible gap.
+        deferred = [{"id": x["id"], "score": x["score"]} for x in matches[limit:]]
     for item in chosen:
         item.pop("_priority", None)
     requested_mutation = any(_contains(task, term) for term in (
@@ -55,6 +82,12 @@ def route(task: str, *, max_skills: int | None = None) -> dict:
         "task": task,
         "selected": chosen,
         "deferred_matches": deferred,
+        "global_invocation": global_invocation,
+        "global_inclusion_contract": (
+            "ALL_NINE_IN_PLAN_ONE_CANONICAL_AGENT" if global_invocation
+            else "TASK_QUALIFIED_MAX_THREE"
+        ),
+        "parent_agent_included": global_invocation,
         "fallback_parent_skill": "reklam-ajansi" if not chosen else None,
         "execution_state": "NOT_EXECUTED_PLANNING_ONLY",
         "real_parallel_workers_verified": False,

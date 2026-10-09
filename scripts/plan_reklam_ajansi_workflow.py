@@ -67,8 +67,10 @@ def plan(task: str) -> dict:
     selected = chosen["selected"]
     if any(item["id"] not in ids for item in selected):
         raise ValueError("Unregistered skill selected")
-    if len(selected) > 3:
+    if len(selected) > 3 and not chosen["global_invocation"]:
         raise ValueError("More than three scopes: split the task")
+    if chosen["global_invocation"] and len(selected) != 9:
+        raise ValueError("Global Vinterro One dispatch must include all nine skills")
 
     requested_write = chosen["requested_live_mutation"] or _matches_any(task, WRITE_ACTION_TERMS)
     sensitive_data = _matches_any(task, SENSITIVE_DATA_TERMS)
@@ -85,6 +87,8 @@ def plan(task: str) -> dict:
             "skill_file": skill["path"],
             "depends_on": ["intake"],
             "status": "NOT_STARTED",
+            "participation": item["participation"],
+            "scope_assessment_only": item["participation"] == "SCOPE_CHECK_ONLY",
             "can_be_parallelized_after_verified_worker_connection": True,
             "evidence_required": [
                 "Cited, dated official or primary sources, refreshed for task market",
@@ -190,7 +194,18 @@ def plan(task: str) -> dict:
         "canonical_agent_id": manifest["canonical_agent_id"],
         "task": task,
         "mode": "PLAN_ONLY_NO_REMOTE_EFFECTS",
+        "global_invocation": chosen["global_invocation"],
+        "global_inclusion_contract": chosen["global_inclusion_contract"],
+        "parent_agent_included": chosen["parent_agent_included"],
         "workstreams": len(skill_stages),
+        "scope_check_only_skills": [
+            item["id"] for item in selected
+            if item["participation"] == "SCOPE_CHECK_ONLY"
+        ],
+        "material_skill_ids": [
+            item["id"] for item in selected
+            if item["participation"] == "MATERIAL_WORKSTREAM"
+        ],
         "selected_skill_ids": [s["id"] for s in selected],
         "deferred_skill_ids": [s["id"] for s in chosen.get("deferred_matches", [])],
         "scope_split_recommended": bool(chosen.get("deferred_matches")),

@@ -1,0 +1,37 @@
+name: Vinterro All-Agent Reklam Ajansı Auto Inclusion QA
+
+on:
+  pull_request:
+    paths:
+      - 'AGENTS.md'
+      - 'docs/standards/QUALIFIED_AGENT_ROUTING.md'
+      - 'plugins/vinterro-one/skills/vinterro-one-router/SKILL.md'
+      - 'docs/agents/REKLAM_AJANSI*'
+      - '.agents/skills/reklam-ajansi/SKILL.md'
+      - '.codex/agents/reklam-ajansi.toml'
+      - 'scripts/route_reklam_ajansi_subskills.py'
+      - 'scripts/plan_reklam_ajansi_workflow.py'
+      - 'tests/test_reklam_ajansi_global_dispatch.py'
+      - '.github/workflows/reklam-ajansi-global-dispatch-qa.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'scripts/route_reklam_ajansi_subskills.py'
+      - 'scripts/plan_reklam_ajansi_workflow.py'
+      - 'tests/test_reklam_ajansi_global_dispatch.py'
+      - 'docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json'
+      - '.github/workflows/reklam-ajansi-global-dispatch-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  global-dispatch-invariants:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Verify all-agents dispatch and 9-skill inclusion safety
+        run: python3 -m unittest discover -s tests -p 'test_reklam_ajansi_global_dispatch.py' -v
+      - name: Full system regression
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
