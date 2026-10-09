@@ -1,0 +1,27 @@
+name: Gmail SENT Suppression QA
+
+on:
+  pull_request:
+    paths:
+      - 'supabase/outreach-gmail-sent-evidence-20261009.sql'
+      - 'tests/test_gmail_sent_evidence_policy.py'
+      - '.github/workflows/gmail-sent-evidence-qa.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'supabase/outreach-gmail-sent-evidence-20261009.sql'
+      - 'tests/test_gmail_sent_evidence_policy.py'
+      - '.github/workflows/gmail-sent-evidence-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  evidence-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Verify private evidence storage and hard gate
+        run: python3 -m unittest discover -s tests -p 'test_gmail_sent_evidence_policy.py' -v
