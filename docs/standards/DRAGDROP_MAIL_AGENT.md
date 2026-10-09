@@ -90,6 +90,8 @@ Catalog rule:
 
 ## Canonical email visual template
 
+For cold first-touch outreach, the **only** approved 1:1 shell is `docs/standards/DRAGDROP_OUTREACH_CANONICAL_TEMPLATE.html`. The general mail template below is for non-cold correspondence and must never replace the outreach shell.
+
 Locked source artifact:
 
 `docs/standards/DRAGDROP_MAIL_CANONICAL_TEMPLATE.html`
