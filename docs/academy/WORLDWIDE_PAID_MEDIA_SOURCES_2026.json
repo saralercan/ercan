@@ -784,6 +784,94 @@
       "verified_on": "2026-10-09",
       "freshness_days": 365,
       "training_passed": false
+    },
+    {
+      "id": "GL36",
+      "title": "Jumia Nigeria Seller Academy",
+      "url": "https://vendorhub.jumia.com.ng/seller-academy/",
+      "region": "Sub-Saharan Africa / Nigeria",
+      "languages": [
+        "en"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "africa_jumia_ads_training",
+      "roles": [
+        "paid",
+        "creative",
+        "discovery"
+      ],
+      "lesson": "Use Nigeria marketplace seller education, product listing and ads reporting modules",
+      "limitation": "Registered seller access and current marketplace eligibility may differ",
+      "verified_on": "2026-10-09",
+      "freshness_days": 14,
+      "training_passed": false
+    },
+    {
+      "id": "GL37",
+      "title": "Jumia Sponsored Products Courses",
+      "url": "https://vendorhub.jumia.com.ng/seller-academy/sponsored-products/",
+      "region": "Sub-Saharan Africa / Nigeria",
+      "languages": [
+        "en"
+      ],
+      "kind": "official_course",
+      "authority_tier": 1,
+      "topic": "africa_jumia_sponsored_products",
+      "roles": [
+        "paid",
+        "growth",
+        "discovery"
+      ],
+      "lesson": "Understand Jumia Sponsored Products CPC, ad group and reporting tutorials",
+      "limitation": "No ad spend or access is granted by reading videos",
+      "verified_on": "2026-10-09",
+      "freshness_days": 14,
+      "training_passed": false
+    },
+    {
+      "id": "GL38",
+      "title": "Jumia Sponsored Products 3-unit Eligibility guidance",
+      "url": "https://vendorhub.jumia.com.ng/getting-started-with-sponsored-products-on-jumia-ads-eligibility-access-and-budget-3/",
+      "region": "Sub-Saharan Africa / Nigeria",
+      "languages": [
+        "en"
+      ],
+      "kind": "official",
+      "authority_tier": 1,
+      "topic": "africa_jumia_eligibility",
+      "roles": [
+        "paid",
+        "compliance",
+        "discovery"
+      ],
+      "lesson": "Evaluate country and stock eligibility from official current guidance",
+      "limitation": "Official Jumia page gives a different minimum stock number from an older official page; treat as unresolved",
+      "verified_on": "2026-10-09",
+      "freshness_days": 14,
+      "training_passed": false
+    },
+    {
+      "id": "GL39",
+      "title": "Jumia Sponsored Products 2-unit Eligibility guidance",
+      "url": "https://vendorhub.jumia.com.ng/getting-started-with-sponsored-products-on-jumia-ads-eligibility-access-and-budget-2/",
+      "region": "Sub-Saharan Africa / Nigeria",
+      "languages": [
+        "en"
+      ],
+      "kind": "official",
+      "authority_tier": 1,
+      "topic": "africa_jumia_policy_conflict",
+      "roles": [
+        "paid",
+        "compliance",
+        "discovery"
+      ],
+      "lesson": "Spot contradictory rules in two official product eligibility versions",
+      "limitation": "Stale vs revised policy unresolved; recheck latest seller portal before recommendation",
+      "verified_on": "2026-10-09",
+      "freshness_days": 14,
+      "training_passed": false
     }
   ],
   "exams": [
@@ -1021,6 +1109,25 @@
         "unapproved spend",
         "invented performance metrics",
         "fake certification"
+      ],
+      "independent_review": true
+    },
+    {
+      "id": "AFR01",
+      "market": "Nigeria / Sub-Saharan Africa",
+      "scenario": "Two official Jumia Sponsored Products pages disagree whether a seller needs 2 or 3 units of stock to advertise",
+      "required": "Flag official documentation conflict, check latest Nigeria Vendor Center rule and product eligibility instead of asserting 2 or 3 universally",
+      "source_ids": [
+        "GL37",
+        "GL38",
+        "GL39"
+      ],
+      "pass_status": "PENDING_EXECUTOR",
+      "forbidden": [
+        "unapproved spend",
+        "invented performance metrics",
+        "fake certification",
+        "silently choose one conflicting number"
       ],
       "independent_review": true
     }
