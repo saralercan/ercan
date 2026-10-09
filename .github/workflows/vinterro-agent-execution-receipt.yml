@@ -1,0 +1,32 @@
+name: Vinterro Verified Executor Gate QA
+
+on:
+  pull_request:
+    paths:
+      - 'supabase/vinterro-agent-execution-receipt-gate-20261009.sql'
+      - 'supabase/functions/ercan-os-api/index.ts'
+      - 'supabase/functions/vinterro-one-supervision/index.ts'
+      - 'tests/test_vinterro_agent_execution_receipt.py'
+      - '.github/workflows/vinterro-agent-execution-receipt.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'supabase/vinterro-agent-execution-receipt-gate-20261009.sql'
+      - 'supabase/functions/ercan-os-api/index.ts'
+      - 'supabase/functions/vinterro-one-supervision/index.ts'
+      - 'tests/test_vinterro_agent_execution_receipt.py'
+      - '.github/workflows/vinterro-agent-execution-receipt.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  execution-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Verify backed execution and supervision invariants
+        run: python3 -m unittest discover -s tests -p 'test_vinterro_agent_execution_receipt.py' -v
+      - name: Run complete regression corpus
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
