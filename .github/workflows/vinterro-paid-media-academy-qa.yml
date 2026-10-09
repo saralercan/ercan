@@ -1,0 +1,28 @@
+name: Vinterro Paid Media Academy QA
+
+on:
+  pull_request:
+    paths:
+      - 'docs/academy/PAID_MEDIA_RESEARCH_CURRICULUM_2026.json'
+      - 'docs/academy/VINTERRO_PAID_MEDIA_ACADEMY_TR.md'
+      - 'tests/test_vinterro_paid_media_academy.py'
+      - '.github/workflows/vinterro-paid-media-academy-qa.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'docs/academy/PAID_MEDIA_RESEARCH_CURRICULUM_2026.json'
+      - 'docs/academy/VINTERRO_PAID_MEDIA_ACADEMY_TR.md'
+      - 'tests/test_vinterro_paid_media_academy.py'
+      - '.github/workflows/vinterro-paid-media-academy-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  academy-source-and-exam-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: QA citations curricula risk gates and evaluation contracts
+        run: python3 -m unittest discover -s tests -p 'test_vinterro_paid_media_academy.py' -v
