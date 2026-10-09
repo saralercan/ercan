@@ -1,0 +1,27 @@
+name: Vinterro Run Observability Trigger QA
+
+on:
+  pull_request:
+    paths:
+      - 'supabase/ercan-os-run-observability-column-fix.sql'
+      - 'tests/test_ercan_run_observability_trigger.py'
+      - '.github/workflows/vinterro-run-observability.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'supabase/ercan-os-run-observability-column-fix.sql'
+      - 'tests/test_ercan_run_observability_trigger.py'
+      - '.github/workflows/vinterro-run-observability.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  trigger-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Validate run observability trigger regression
+        run: python3 -m unittest discover -s tests -p 'test_ercan_run_observability_trigger.py' -v
