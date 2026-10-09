@@ -127,6 +127,10 @@ class LockedOutreachTests(unittest.TestCase):
             "<div>Başka bir şablon</div>",
             '<p>Merhaba</p><a href="javascript:alert(1)">Tıkla</a>',
             '<p>Merhaba</p><a href="https://test.example" style="font-size:30px">Tıkla</a>',
+            '<p>Merhaba</p><a href="mailto:foo%0D%0ABcc@evil.example">Tıkla</a>',
+            '<p>Merhaba</p><a href="https://example.org/%00">Tıkla</a>',
+            '<p>Merhaba</p><a href="https://example.org/%C3%28">Tıkla</a>',
+            '<p>Merhaba</p><scrip',
         ]
         for bad in bad_bodies:
             with self.subTest(body=bad), self.assertRaises(OutreachTemplateBlocked):
