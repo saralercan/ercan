@@ -16,6 +16,10 @@ Do not pretend a stronger connection exists than the current surface actually pr
 
 Requests for paid advertising, Google Ads, Meta/Instagram Ads, Pinterest/TikTok, creatives, attribution/Purchase, advertising budget, consent compliance, worldwide advertising research or retail media route to the **single** live `Reklam Ajansı` agent. Read `docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json` and load the relevant `.agents/skills/reklam-ajansi-<id>/SKILL.md` for the task (at most three). Parent: `.agents/skills/reklam-ajansi/SKILL.md`, with master `docs/agents/REKLAM_AJANSI.md`. Do **not** reactivate the five retired specialist identities; they are internal capability lanes. Route planning is read-only and does not start model workers. Account mutation, ad launch, budget change, audience upload, customer data or cold outreach remains approval/verified-execution gated. Independent QA belongs to separate reviewer agents.
 
+### Mandatory Reklam Ajansı for ALL agents / Vinterro One start
+
+The explicit phrases **`tüm ajanları çalıştır`**, **`bütün ajanları çalıştır`**, **`Vinterro One çalıştır`**, **`Vinterro One'ı çalıştır`**, **`run all agents`** and equivalent master invocations automatically include **one Reklam Ajansı parent plus its full nine-subskill roster**, even if the user did not name ads. This is a permanent global exception to the normal 3-skill task selector. Use `docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json` global_invocation and `scripts/plan_reklam_ajansi_workflow.py`. Every skill must appear: task-matching scopes as MATERIAL_WORKSTREAM; unrelated skills as SCOPE_CHECK_ONLY (no unnecessary remote effects). Other specialists are still task-qualified; do not fan out whole registry. Include independent QA, do not self-certify, never equate a plan with running parallel workers, and never bypass the ads/Gmail release gates.
+
 ## Source order
 
 Load only what the task needs.
