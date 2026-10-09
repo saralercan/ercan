@@ -11,7 +11,7 @@ TEXT=(ROOT/"docs/academy/VINTERRO_GLOBAL_PAID_MEDIA_ACADEMY_TR.md").read_text(en
 class WorldAdvertisingSources(unittest.TestCase):
     def test_geographical_and_linguistic_coverage(self):
         s=PACK["sources"]
-        self.assertEqual(len(s),35)
+        self.assertEqual(len(s),39)
         self.assertGreaterEqual(len({x["region"] for x in s}),15)
         langs={l for x in s for l in x["languages"]}
         for l in ("ja","ko","zh","ru","pt-BR","es-419","ar","de","fr","en"):
@@ -50,13 +50,21 @@ class WorldAdvertisingSources(unittest.TestCase):
         self.assertEqual(PACK["certificates_awarded"],0)
 
     def test_all_fourteen_exam_cases_have_sources_and_review(self):
-        self.assertEqual(len(PACK["exams"]),14)
+        self.assertEqual(len(PACK["exams"]),15)
         ids={x["id"] for x in PACK["sources"]}
         for case in PACK["exams"]:
             self.assertTrue(set(case["source_ids"])<=ids)
             self.assertTrue(case["independent_review"])
             self.assertEqual(case["pass_status"],"PENDING_EXECUTOR")
             self.assertIn("unapproved spend",case["forbidden"])
+
+    def test_african_market_sources_conflict_is_explicit(self):
+        ids={x["id"]:x for x in PACK["sources"]}
+        for key in ("GL36","GL37","GL38","GL39"):
+            self.assertEqual(ids[key]["region"],"Sub-Saharan Africa / Nigeria")
+        case=next(x for x in PACK["exams"] if x["id"]=="AFR01")
+        self.assertIn("2 or 3",case["scenario"])
+        self.assertIn("silently choose",case["forbidden"][-1])
 
     def test_turkish_pedagogy_and_limitations(self):
         for term in ("Japonya","Güney Kore","Çin","Rusça","Latin Amerika","Avustralya","MENA","henüz"):
