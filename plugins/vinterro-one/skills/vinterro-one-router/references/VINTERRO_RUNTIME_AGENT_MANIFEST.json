@@ -2059,7 +2059,7 @@
       "role": "web_research",
       "family": "web_growth",
       "status": "active",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "health": 100,
       "instructions": "Reklam Ajansı: one worldwide advertising agency agent with internal media buying, creative, growth, compliance and source-science lanes. Consult docs/agents/REKLAM_AJANSI.md, user approved brand facts and latest official platform rules. Default to read-only research and workspace drafts; NEVER spend, publish ads, change budget, billing, targeting or upload audiences without explicit approval and verified live account rights. Require separate independent QA; never self-certify real model examinations, Google/Meta certifications or measured ad lift. All former specialist agent names redirect to Reklam Ajansı. Global Gmail first-touch remains BLOCKED.",
       "tools": [
@@ -2115,7 +2115,59 @@
           51,
           53,
           54
-        ]
+        ],
+        "subskills_router": "docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json",
+        "subskills_version": "1.0.0",
+        "subskill_count": 9,
+        "subskills": [
+          {
+            "id": "google-ads",
+            "path": ".agents/skills/reklam-ajansi-google-ads/SKILL.md",
+            "execution_status": "ROUTING_ONLY"
+          },
+          {
+            "id": "meta-ads",
+            "path": ".agents/skills/reklam-ajansi-meta-ads/SKILL.md",
+            "execution_status": "ROUTING_ONLY"
+          },
+          {
+            "id": "paid-social-video",
+            "path": ".agents/skills/reklam-ajansi-paid-social-video/SKILL.md",
+            "execution_status": "ROUTING_ONLY"
+          },
+          {
+            "id": "creative-studio",
+            "path": ".agents/skills/reklam-ajansi-creative-studio/SKILL.md",
+            "execution_status": "ROUTING_ONLY"
+          },
+          {
+            "id": "analytics-attribution",
+            "path": ".agents/skills/reklam-ajansi-analytics-attribution/SKILL.md",
+            "execution_status": "ROUTING_ONLY"
+          },
+          {
+            "id": "growth-budget",
+            "path": ".agents/skills/reklam-ajansi-growth-budget/SKILL.md",
+            "execution_status": "ROUTING_ONLY"
+          },
+          {
+            "id": "compliance-privacy",
+            "path": ".agents/skills/reklam-ajansi-compliance-privacy/SKILL.md",
+            "execution_status": "ROUTING_ONLY"
+          },
+          {
+            "id": "global-market-research",
+            "path": ".agents/skills/reklam-ajansi-global-market-research/SKILL.md",
+            "execution_status": "ROUTING_ONLY"
+          },
+          {
+            "id": "retail-marketplaces",
+            "path": ".agents/skills/reklam-ajansi-retail-marketplaces/SKILL.md",
+            "execution_status": "ROUTING_ONLY"
+          }
+        ],
+        "execution_proof_required": true,
+        "ads_account_writes_approved": false
       },
       "adapters": {
         "codex": true,
@@ -5294,13 +5346,15 @@
     "verified_expertise_profile_count": 116,
     "verified_at": "2026-10-08",
     "verification": "authenticated Vinterro One Supabase registry",
-    "last_verified_at": "2026-10-08",
+    "last_verified_at": "2026-10-09",
     "live_count": 116,
-    "note": "Schema migration leaves 116 historical registry rows, but makes four specialists inactive and routes them into one active Reklam Ajansı.",
+    "note": "Synced one live Reklam Ajansı v2.1.0 with nine source-linked subskills. Four archived agents retain rows; verified worker and actual skill exams still pending.",
     "planned_source_change": "PR to activate only after Supabase live atomic migration",
     "expected_active_count": 112,
     "expected_canonical_advertising_agent": "Reklam Ajansı",
-    "previous_verified_live_count": 116
+    "previous_verified_live_count": 116,
+    "canonical_advertising_agent_version": "2.1.0",
+    "canonical_subskills_verified": 9
   },
   "active_agent_count": 112,
   "canonical_advertising_agent": {
@@ -5325,6 +5379,10 @@
     "media_mutation_permission": false,
     "approved_research_sources": 72,
     "qualification_exams_registered": 27,
-    "qualification_exams_passed": 0
+    "qualification_exams_passed": 0,
+    "version": "2.1.0",
+    "subskills_router": "docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json",
+    "active_subskills": 9,
+    "subskill_runtime_status": "CONFIGURED_AWAITING_VERIFIED_WORKER"
   }
 }
