@@ -31,6 +31,10 @@ Yönlendirme tanımı: `docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json`.
 
 Alt skiller tek ana ajanın iç uzmanlığıdır: tek kimlik ve bir kullanıcı yanıtı korunur. Skill'ler farklı araştırma/kreatif işlerini mantıksal olarak paralel planlayabilir; gerçek paralel AI yürütme yalnız canlı yürütücü ve kanıtlı run kayıtlarıyla mümkündür. Başarı testi/sınav PASS olmadan uzmanlık tamamlandı denmez. Diğer (bağımsız) QA Agent güvenlik kapısının parçası olmaya devam eder.
 
+## Kanıtlı çoklu-skill iş akışı
+
+`docs/agents/REKLAM_AJANSI_EVIDENCE_WORKFLOW.md` standardına göre `python3 scripts/plan_reklam_ajansi_workflow.py "Meta Ads Pixel Purchase CAPI kontrol et"` komutu salt-okunur bir görev grafiği, her uzmanlık için teslimat kanıtı, ortak sentez ve bağımsız reviewer gereksinimi oluşturur. Üçten fazla alan eşleşirse kapsam `deferred_skill_ids` üzerinden yeniden bölünür. `PLAN_ONLY_NO_REMOTE_EFFECTS` sonucu reklam hesabı, model çalıştırma veya QA PASS iddiası değildir. Yayınlama/bütçe/kişisel veri işlemleri için insan onayı ve canlı yürütücü zorunluluğu korunur.
+
 ## Kalite kapıları
 
 - **Kaynak güveni:** resmî güncel doküman > bakım gören birinci el GitHub kaynağı > hakemli akademik > tez/preprint (açık etiket) > topluluk tartışması (araştırma ipucu).

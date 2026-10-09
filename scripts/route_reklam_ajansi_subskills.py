@@ -38,6 +38,9 @@ def route(task: str, *, max_skills: int | None = None) -> dict:
                             "reviewer_candidates": skill["independent_reviewer_candidates"]})
     matches.sort(key=lambda x: (-x["score"], x["_priority"], x["id"]))
     chosen = matches[:limit]
+    # Preserve every matching but unselected expertise as a visible scope gap.
+    # No silently dropped task segments and no invented extra worker slots.
+    deferred = [{"id": x["id"], "score": x["score"]} for x in matches[limit:]]
     for item in chosen:
         item.pop("_priority", None)
     requested_mutation = any(_contains(task, term) for term in (
@@ -51,6 +54,7 @@ def route(task: str, *, max_skills: int | None = None) -> dict:
         "agent_id": manifest["canonical_agent_id"],
         "task": task,
         "selected": chosen,
+        "deferred_matches": deferred,
         "fallback_parent_skill": "reklam-ajansi" if not chosen else None,
         "execution_state": "NOT_EXECUTED_PLANNING_ONLY",
         "real_parallel_workers_verified": False,
