@@ -1,0 +1,26 @@
+name: Vinterro Paid Media Expert Discussion QA
+
+on:
+  pull_request:
+    paths:
+      - 'docs/academy/PAID_MEDIA_PUBLIC_DISCUSSION_CASES_2026.md'
+      - 'tests/test_vinterro_paid_media_discussions.py'
+      - '.github/workflows/vinterro-paid-media-discussions-qa.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'docs/academy/PAID_MEDIA_PUBLIC_DISCUSSION_CASES_2026.md'
+      - 'tests/test_vinterro_paid_media_discussions.py'
+      - '.github/workflows/vinterro-paid-media-discussions-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify-discussion-provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Verify public discussion learning stays non-authoritative
+        run: python3 -m unittest discover -s tests -p 'test_vinterro_paid_media_discussions.py' -v
