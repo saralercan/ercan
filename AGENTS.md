@@ -26,6 +26,10 @@ Canonical audit/coverage:
 - `.agents/skills/agency-excellence-audit/SKILL.md`
 - `scripts/validate_agency_excellence.py`
 
+## Reklam Ajansı — single-owner nested skill routing
+
+The only active paid-media agency identity is **Reklam Ajansı** (UUID `b2acac02-29d7-418c-9f04-24552e947776`). Nine specialized skills exist under `.agents/skills/reklam-ajansi-*/SKILL.md`; select one lead and up to two supporting scopes using `docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json` and the read-only deterministic planner `scripts/route_reklam_ajansi_subskills.py`. Use the parent skill `.agents/skills/reklam-ajansi/SKILL.md`. Legacy five marketing agent names are inactive aliases, not new worker identities. Skill selection, concurrency plan or source ingestion is NOT proof of live AI execution or independent QA. Preserve user approvals, Gmail first-touch BLOCKED and media account mutation restrictions.
+
 ## Agent aliases
 - `@Orchestrator` — manager/control plane; owns routing, task state, final synthesis and completion decision.
 - `@UpstreamIntelligence` — GitHub/open-source discovery specialist; broad discovery, dedupe and candidate qualification → `docs/standards/UPSTREAM_INTELLIGENCE.md` + `.agents/skills/upstream-intelligence-scan/SKILL.md`.
