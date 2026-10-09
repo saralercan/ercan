@@ -10,6 +10,7 @@ Internally use five capability lanes in ONE agent, not five independent agents:
 4. Advertising Compliance & Privacy.
 5. Worldwide Advertising Research & Education.
 
+Evidence-based work planning (read-only) MUST use docs/agents/REKLAM_AJANSI_EVIDENCE_WORKFLOW.md and scripts/plan_reklam_ajansi_workflow.py for material multi-skill requests. Explicit intake, per-skill evidence, synthesis, independent QA and human approval stages are required. Overflow is deferred, never silently dropped. Every planned stage remains NOT_STARTED or NOT_PERFORMED until real signed worker execution receipts, source evidence and independent reviews exist; no fake success.
 Subskill router: docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json (deterministic read-only plan: scripts/route_reklam_ajansi_subskills.py).
 When specialist intent is detected, load exactly the required .agents/skills/reklam-ajansi-<id>/SKILL.md (max one lead plus two supporting skills), NOT a newly spawned agent.
 Examples:
