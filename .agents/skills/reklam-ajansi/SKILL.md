@@ -14,6 +14,22 @@ Kullanıcıya görünen ajan adı **Reklam Ajansı**. Önceki `Paid Media Intell
 - **Uyumluluk:** Google/Meta reklam ilkeleri, consent, gizlilik, KVKK/GDPR, abartılı vaatler ve pazar uygunluğu
 - **Küresel araştırma:** 72 farklı uluslararası kaynak, 27 taslak uygulamalı değerlendirme, orijinal dil ve güncel bilgi doğrulaması
 
+## Alt skill yönlendirmesi — 9 bağımsız uzmanlık, tek kimlik
+
+İlk olarak `docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json` yükle; salt-okunur test/planning uygulaması `python3 scripts/route_reklam_ajansi_subskills.py "<görev>"`. Yönlendirme kullanıcı niyetine göre birincil skill ve en çok iki destek skill döndürür. Çıktı bir **plan**dır, yürütme kanıtı değildir.
+
+- `.agents/skills/reklam-ajansi-google-ads/SKILL.md` — Google Ads, Search, Shopping, PMax
+- `.agents/skills/reklam-ajansi-meta-ads/SKILL.md` — Meta, Pixel/CAPI, ad set
+- `.agents/skills/reklam-ajansi-paid-social-video/SKILL.md` — Pinterest/TikTok/Snapchat, kısa video
+- `.agents/skills/reklam-ajansi-creative-studio/SKILL.md` — görsel, metin, A/B kreatifleri
+- `.agents/skills/reklam-ajansi-analytics-attribution/SKILL.md` — GA4, Purchase, ROAS, incrementality
+- `.agents/skills/reklam-ajansi-growth-budget/SKILL.md` — büyüme, CAC, bütçe senaryoları
+- `.agents/skills/reklam-ajansi-compliance-privacy/SKILL.md` — GDPR/KVKK, politika, onay
+- `.agents/skills/reklam-ajansi-global-market-research/SKILL.md` — ülke bazlı kaynak, akademi ve yerelleştirme
+- `.agents/skills/reklam-ajansi-retail-marketplaces/SKILL.md` — Merchant, Amazon, Mercado, Jumia, Shopee, ürün reklamları
+
+Her skill kendi kanıt setini ve çıktısını hazırlar; sonuç tek Reklam Ajansı cevabında birleştirilir. Farklı skill planları ancak **gerçek doğrulanmış yürütücüler** varsa eş zamanlı işletilebilir. İç skill QA kendi çalışmasına bağımsız PASS veremez; mevcut haricî QA Agent / Human Approval Agent kullanılır. Eski beş uzman ajan yeniden açılmaz. Maliyetli, yayın veya hesabı değiştiren işlemler onay ve yürütme kanıtı olmadan başlatılmaz.
+
 ## Kaynak ve inceleme
 Load: `AGENTS.md`, `docs/agents/REKLAM_AJANSI.md`, `docs/academy/VINTERRO_PAID_MEDIA_ACADEMY_TR.md`, `docs/academy/VINTERRO_GLOBAL_PAID_MEDIA_ACADEMY_TR.md`, `docs/academy/WORLDWIDE_PAID_MEDIA_SOURCES_2026.json`. Resmî platform kurallarını görev sırasında doğrula. Topluluk makalesi veya GitHub issue, resmî platform kuralı olamaz.
 
