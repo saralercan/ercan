@@ -98,6 +98,67 @@ class LockedOutreachTests(unittest.TestCase):
                 {**VINTERRO, "MAILTO_SUBJECT_ENCODED": "Hello world"},
             )
 
+    def test_real_approved_mime_paragraph_format_is_allowed(self):
+        variables = {
+            **VINTERRO,
+            "BODY_HTML": (
+                '<p style="margin:0 0 20px 0;">Merhaba <strong>Marka</strong> ekibi,</p>'
+                '<p style="margin:0 0 20px 0;">'
+                'Siteniz hakkında iki somut nokta:<br> birinci<br /> ikinci.'
+                '</p>'
+            ),
+        }
+        html = render_exact("vinterro", variables)
+        verify_exact("vinterro", variables, html)
+        self.assertIn("Merhaba <strong>Marka</strong>", html)
+
+    def test_unsafe_html_cannot_break_approved_outer_shell(self):
+        bad_bodies = [
+            "<p>Merhaba</p></td></tr><table><tr><td>injection</td></tr></table>",
+            "<p>Merhaba</p><script>alert(1)</script>",
+            '<p style="width:2000px;">Geniş</p>',
+            "<p>Merhaba</p><img src='https://example.org/pixel'>",
+            "<p>Merhaba</p><style>table{display:none}</style>",
+            '<p onclick="alert(1)">Merhaba</p>',
+            "<p>Merhaba</p><iframe src='https://example.org'></iframe>",
+            "<p>Merhaba",
+            "<p>Merhaba</p><!-- hide content -->",
+            '<p>Merhaba</p><p><p>Nested</p></p>',
+            "<div>Başka bir şablon</div>",
+            '<p>Merhaba</p><a href="javascript:alert(1)">Tıkla</a>',
+            '<p>Merhaba</p><a href="https://test.example" style="font-size:30px">Tıkla</a>',
+            '<p>Merhaba</p><a href="mailto:foo%0D%0ABcc@evil.example">Tıkla</a>',
+            '<p>Merhaba</p><a href="https://example.org/%00">Tıkla</a>',
+            '<p>Merhaba</p><a href="https://example.org/%C3%28">Tıkla</a>',
+            '<p>Merhaba</p><scrip',
+        ]
+        for bad in bad_bodies:
+            with self.subTest(body=bad), self.assertRaises(OutreachTemplateBlocked):
+                render_exact("vinterro", {**VINTERRO, "BODY_HTML": bad})
+
+    def test_approved_mailto_and_unsafe_encoded_subjects(self):
+        for good in ("Firsatlari%20konusalim", "Teklif%20i%C3%A7in%20yan%C4%B1t"):
+            with self.subTest(approved=good):
+                html = render_exact(
+                    "vinterro", {**VINTERRO, "MAILTO_SUBJECT_ENCODED": good}
+                )
+                self.assertIn(good, html)
+        for bad in ("%0D%0ABcc%3Aevil%40example.org", "%", "%GG", "%00",
+                    "%C3%28", "%7F"):
+            with self.subTest(blocked=bad), self.assertRaises(OutreachTemplateBlocked):
+                render_exact(
+                    "vinterro", {**VINTERRO, "MAILTO_SUBJECT_ENCODED": bad}
+                )
+
+    def test_http_mailto_body_links_without_attributes_allowed(self):
+        body = (
+            '<p>Detaylar için <a href="https://vinterro.digital/" target="_blank">'
+            'web sitesini</a> ziyaret edin ya da '
+            '<a href="mailto:info@vinterro.digital">bize yanıt verin</a>.</p>'
+        )
+        html = render_exact("vinterro", {**VINTERRO, "BODY_HTML": body})
+        self.assertIn(body, html)
+
     def test_missing_source_fails_closed(self):
         with self.assertRaises(OutreachTemplateBlocked):
             locked_source("vinterro", ROOT / "nonexistent-directory")
