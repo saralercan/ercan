@@ -15,7 +15,7 @@ This skill owns **cold first-touch / tanışma outreach** only. Once a recipient
 2. `projects/dragdrop/AGENTS.md`
 3. `.agents/skills/dragdrop-mail-agent/SKILL.md`
 4. `docs/standards/DRAGDROP_MAIL_AGENT.md`
-5. `docs/standards/DRAGDROP_MAIL_CANONICAL_TEMPLATE.html`
+5. `docs/standards/DRAGDROP_OUTREACH_CANONICAL_TEMPLATE.html`
 6. this skill
 7. current source list / Excel and Gmail SENT evidence
 8. current public product/collection evidence when the source list does not already provide enough verified product detail
@@ -92,7 +92,7 @@ Follow the Drag&Drop Mail Agent locale gate.
 
 Locked sender: `Drag&Drop <info@draganddrop.tr>`.
 
-Use the canonical branded HTML shell from `docs/standards/DRAGDROP_MAIL_CANONICAL_TEMPLATE.html`; do not rebuild it from memory.
+Use the canonical branded HTML shell from `docs/standards/DRAGDROP_OUTREACH_CANONICAL_TEMPLATE.html`; do not rebuild it from memory.
 
 Required CTAs:
 - B2C / Bize Katılın -> `https://www.draganddrop.tr/pages/bize-katilin`
