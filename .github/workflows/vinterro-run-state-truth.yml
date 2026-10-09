@@ -1,0 +1,27 @@
+name: Vinterro Run State Truth QA
+
+on:
+  pull_request:
+    paths:
+      - 'supabase/functions/ercan-os-api/index.ts'
+      - 'tests/test_vinterro_run_state_truth.py'
+      - '.github/workflows/vinterro-run-state-truth.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'supabase/functions/ercan-os-api/index.ts'
+      - 'tests/test_vinterro_run_state_truth.py'
+      - '.github/workflows/vinterro-run-state-truth.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  state-machine-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Test run lifecycle does not overstate execution
+        run: python3 -m unittest discover -s tests -p 'test_vinterro_run_state_truth.py' -v
