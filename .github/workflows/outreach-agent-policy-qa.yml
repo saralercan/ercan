@@ -1,0 +1,43 @@
+name: Outreach Agent Routing QA
+
+on:
+  pull_request:
+    paths:
+      - 'AGENTS.md'
+      - '.codex/agents/vinterro-outreach.toml'
+      - '.codex/agents/vinterro-mail-agent.toml'
+      - '.codex/agents/dragdrop-outreach.toml'
+      - '.agents/skills/vinterro-mail-agent/SKILL.md'
+      - '.agents/skills/dragdrop-outreach-intro/SKILL.md'
+      - '.agents/skills/dragdrop-mail-agent/SKILL.md'
+      - 'docs/standards/VINTERRO_MAIL_AGENT.md'
+      - 'docs/standards/DRAGDROP_MAIL_AGENT.md'
+      - 'tests/test_outreach_agent_policy.py'
+      - '.github/workflows/outreach-agent-policy-qa.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'AGENTS.md'
+      - '.codex/agents/vinterro-outreach.toml'
+      - '.codex/agents/vinterro-mail-agent.toml'
+      - '.codex/agents/dragdrop-outreach.toml'
+      - '.agents/skills/vinterro-mail-agent/SKILL.md'
+      - '.agents/skills/dragdrop-outreach-intro/SKILL.md'
+      - '.agents/skills/dragdrop-mail-agent/SKILL.md'
+      - 'docs/standards/VINTERRO_MAIL_AGENT.md'
+      - 'docs/standards/DRAGDROP_MAIL_AGENT.md'
+      - 'tests/test_outreach_agent_policy.py'
+      - '.github/workflows/outreach-agent-policy-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  outreach-agent-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Test native Codex and agent skill routing
+        run: python3 -m unittest discover -s tests -p 'test_outreach_agent_policy.py' -v
