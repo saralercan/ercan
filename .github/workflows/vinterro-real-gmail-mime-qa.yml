@@ -1,0 +1,29 @@
+name: Approved Gmail MIME Geometry QA
+
+on:
+  pull_request:
+    paths:
+      - 'docs/standards/VINTERRO_OUTREACH_CANONICAL_TEMPLATE.html'
+      - 'tests/fixtures/vinterro_outreach_approved_real_mime_styles.json'
+      - 'tests/test_vinterro_approved_gmail_mime_geometry.py'
+      - '.github/workflows/vinterro-real-gmail-mime-qa.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'docs/standards/VINTERRO_OUTREACH_CANONICAL_TEMPLATE.html'
+      - 'tests/fixtures/vinterro_outreach_approved_real_mime_styles.json'
+      - 'tests/test_vinterro_approved_gmail_mime_geometry.py'
+      - '.github/workflows/vinterro-real-gmail-mime-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  real-reference-css:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Compare locked CSS with approved Gmail MIME snapshot
+        run: python3 -m unittest discover -s tests -p 'test_vinterro_approved_gmail_mime_geometry.py' -v
