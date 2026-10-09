@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "name": "Reklam Ajansı · Alt Skill Yönlendiricisi",
   "canonical_agent_name": "Reklam Ajansı",
   "canonical_agent_id": "b2acac02-29d7-418c-9f04-24552e947776",
@@ -479,5 +479,36 @@
     "explicit_human_approval_required_for_mutations": true,
     "email_first_touch_gate": "BLOCKED",
     "paid_ad_account_write_gate": "BLOCKED"
+  },
+  "global_invocation": {
+    "enabled": true,
+    "include_parent_agent": "Reklam Ajansı",
+    "canonical_agent_id": "b2acac02-29d7-418c-9f04-24552e947776",
+    "phrases": [
+      "tüm ajanları çalıştır",
+      "bütün ajanları çalıştır",
+      "ajanların hepsini çalıştır",
+      "vinterro one çalıştır",
+      "vinterro one'ı çalıştır",
+      "vinterro one'i çalıştır",
+      "vinterro one ajanlarını çalıştır",
+      "run all agents",
+      "use all agents",
+      "run vinterro one",
+      "start vinterro one"
+    ],
+    "automatically_include_all_subskills": true,
+    "subskills_count": 9,
+    "dispatch_mode": "ALL_NINE_IN_PLAN_ONE_CANONICAL_AGENT",
+    "participation_rule": "MATERIAL_WORKSTREAM_IF_TASK_MATCHES_ELSE_SCOPE_CHECK_NO_SIDE_EFFECTS",
+    "no_redundant_standalone_agents": true,
+    "ordinary_task_max_selected": 3,
+    "full_global_invocation_overrides_ordinary_max": true,
+    "execution_proof_required": true,
+    "independent_qa_required": true,
+    "billable_calls_without_authorized_worker": false,
+    "ad_account_mutation_authority": false,
+    "email_first_touch_gate": "BLOCKED",
+    "actual_workflow_status": "NOT_EXECUTED_NO_VERIFIED_WORKER"
   }
 }
