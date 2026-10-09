@@ -11,7 +11,7 @@ This file is a **user-facing alias/router**, not a second sales agent. Canonical
 
 Load:
 - `docs/standards/VINTERRO_MAIL_AGENT.md`
-- `docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html` — mandatory visual source of truth for every Vinterro Digital first-touch, follow-up, active-lead reply and test/example send
+- `docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html` — mandatory for non-outreach follow-up, active-lead reply and relevant non-cold test/example sends; cold first-touch uses only `docs/standards/VINTERRO_OUTREACH_CANONICAL_TEMPLATE.html`
 - `docs/standards/MAIL_ENGINEERING.md`
 - `.agents/skills/email-delivery-qa/SKILL.md`
 - `.agents/skills/founder-operations/SKILL.md`
@@ -492,6 +492,10 @@ Completion states:
 
 Never report a send, reply, social DM, stage transition or follow-up as completed without corresponding provider/account/evidence state.
 
+
+## Live first-touch block — 2026-10-09
+
+Before **any** Vinterro Digital first-touch/send-ready or first-touch example/test, query live `public.vinterro_sales_super_agent_state.health.outreach_first_touch_release_gate` (id `primary`). Only an explicit `OPEN` permits continuing with the existing Gmail-history + atomic prepare token controls. `BLOCKED`, missing, inaccessible or unknown means **no Gmail send**, including directly via connector/agent. Do not interpret the user saying “devam” or “tüm ajanları çalıştır” as release authorization. The current incident gate remains blocked pending Gmail/ledger reconciliation and independent QA.
 
 ## Locked outreach template route — 2026-10-08
 
