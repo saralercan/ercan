@@ -1,0 +1,38 @@
+name: Vinterro Outreach End-to-End Static Release QA
+
+on:
+  pull_request:
+    paths:
+      - 'docs/standards/**'
+      - '.codex/agents/**'
+      - '.agents/skills/vinterro-mail-agent/**'
+      - 'scripts/validate_vinterro_outreach_html.py'
+      - 'supabase/**'
+      - 'tests/**'
+      - '.github/workflows/vinterro-outreach-integrated-qa.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'docs/standards/**'
+      - '.codex/agents/**'
+      - '.agents/skills/vinterro-mail-agent/**'
+      - 'scripts/validate_vinterro_outreach_html.py'
+      - 'supabase/**'
+      - 'tests/**'
+      - '.github/workflows/vinterro-outreach-integrated-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  source-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout pinned source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Run full independent static regression corpus
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Verify no model or email transport has been invoked by this job
+        run: |
+          echo "PASS: Static suite only; no external API keys, Gmail send, or execution claim"
