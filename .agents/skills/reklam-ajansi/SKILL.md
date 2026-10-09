@@ -34,6 +34,10 @@ Birden fazla uzmanlık veya kampanya/ölçüm/gizlilik sorusu geldiğinde `docs/
 
 Her skill kendi kanıt setini ve çıktısını hazırlar; sonuç tek Reklam Ajansı cevabında birleştirilir. Farklı skill planları ancak **gerçek doğrulanmış yürütücüler** varsa eş zamanlı işletilebilir. İç skill QA kendi çalışmasına bağımsız PASS veremez; mevcut haricî QA Agent / Human Approval Agent kullanılır. Eski beş uzman ajan yeniden açılmaz. Maliyetli, yayın veya hesabı değiştiren işlemler onay ve yürütme kanıtı olmadan başlatılmaz.
 
+## Global Vinterro One çağrılarında dokuz alt skill zorunludur
+
+`tüm ajanları çalıştır`, `bütün ajanları çalıştır`, `Vinterro One çalıştır`, `Vinterro One'ı çalıştır` ve eşdeğer ana komutlarda Reklam Ajansı tek ebeveyn olarak dahil edilir. `docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json` global_invocation sözleşmesi ile **dokuz alt skill'in tamamı** planlanır. Bu özel durumda normal en fazla üç alt skill sınırı uygulanmaz. Göreve uygun olanlar `MATERIAL_WORKSTREAM`, uygun olmayanlar `SCOPE_CHECK_ONLY` olarak işaretlenir; bu, dokuz ayrı AI modelinin çalıştığı anlamına gelmez. `scripts/plan_reklam_ajansi_workflow.py` sonucu canlı yürütücü/harcama/QA yetkisi içermez. Reklam yayınlama, bütçe, Gmail ve kişisel veri güvenlik kapıları değişmez.
+
 ## Kaynak ve inceleme
 Load: `AGENTS.md`, `docs/agents/REKLAM_AJANSI.md`, `docs/academy/VINTERRO_PAID_MEDIA_ACADEMY_TR.md`, `docs/academy/VINTERRO_GLOBAL_PAID_MEDIA_ACADEMY_TR.md`, `docs/academy/WORLDWIDE_PAID_MEDIA_SOURCES_2026.json`. Resmî platform kurallarını görev sırasında doğrula. Topluluk makalesi veya GitHub issue, resmî platform kuralı olamaz.
 
