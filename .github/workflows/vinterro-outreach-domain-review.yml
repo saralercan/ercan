@@ -4,12 +4,14 @@ on:
   pull_request:
     paths:
       - 'supabase/vinterro-first-touch-domain-review-20261009.sql'
+      - 'supabase/vinterro-first-touch-domain-review-complete-20261009.sql'
       - 'tests/test_vinterro_outreach_domain_review.py'
       - '.github/workflows/vinterro-outreach-domain-review.yml'
   push:
     branches: [master]
     paths:
       - 'supabase/vinterro-first-touch-domain-review-20261009.sql'
+      - 'supabase/vinterro-first-touch-domain-review-complete-20261009.sql'
       - 'tests/test_vinterro_outreach_domain_review.py'
       - '.github/workflows/vinterro-outreach-domain-review.yml'
 
