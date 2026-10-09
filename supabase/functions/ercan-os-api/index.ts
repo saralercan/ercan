@@ -665,6 +665,21 @@ Deno.serve(async (req: Request) => {
     if (action === 'complete_ai_run') {
       const id = String(body.run_id ?? '')
       const { data: current, error: findError } = await userClient.from('ercan_os_runs').select('*').eq('id', id).eq('organization_id', orgId).single(); if (findError) throw findError
+      // A logged-in owner claiming a model result is not proof of execution.
+      // The registered, heartbeat-active backend worker must first record an
+      // immutable provider execution receipt with real nonzero token usage.
+      if (current.status !== 'running') {
+        return json({ ok: false, code: 'agent_run_not_running', error: 'No running verified worker task' }, 409)
+      }
+      const { data: hasReceipt, error: receiptError } = await admin.rpc(
+        'vinterro_has_agent_execution_receipt', { p_run_id: id }
+      )
+      if (receiptError || hasReceipt !== true) {
+        return json({
+          ok: false, code: 'agent_execution_receipt_required',
+          error: 'Registered worker/provider execution evidence is missing',
+        }, 409)
+      }
       const trace = Array.isArray(current.trace) ? current.trace : []
       const modelSucceeded = body.status === 'success'
       trace.push({ at: now(), event: modelSucceeded ? 'producer_claimed_completion' : 'model_error', model: body.model || 'openai/gpt-5.6-sol' })
