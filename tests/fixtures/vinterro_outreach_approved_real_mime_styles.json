@@ -1,0 +1,33 @@
+{
+  "reference_gmail_message_id": "1a11c21c960cc646",
+  "reference_subject": "ÖRNEK — Vinterro Digital | GERÇEK GÖNDERİDEN ALINAN ŞABLON",
+  "verified_date": "2026-10-09",
+  "canonical_template_blob_sha": "716f9fa7b1e11fd292c9801162db551bb3f77113",
+  "reference_html_style_count": 27,
+  "dynamic_body_style_count": 6,
+  "header_style_sequence": [
+    "margin:0;padding:0;background:#f5f5f3;font-family:Arial,Helvetica,sans-serif;color:#111111;",
+    "width:100%;background:#f5f5f3;padding:32px 16px;margin:0;",
+    "width:100%;max-width:680px;background:#ffffff;border:1px solid #e8e8e5;margin:0 auto;",
+    "padding:42px 46px 18px;",
+    "font-family:Arial,Helvetica,sans-serif;font-size:24px;line-height:1.25;font-weight:700;letter-spacing:-.5px;color:#191919;",
+    "margin-top:7px;font-family:Arial,Helvetica,sans-serif;font-size:10px;line-height:1.5;letter-spacing:2.4px;color:#737373;",
+    "padding:0 46px;",
+    "height:1px;line-height:1px;background:#e31b23;width:100%;",
+    "padding:34px 46px 12px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.75;color:#191919;text-align:left;"
+  ],
+  "cta_footer_style_sequence": [
+    "margin:0 0 22px 0;",
+    "display:inline-block;background:#ffffff;color:#191919;text-decoration:none;padding:10px 16px;border-radius:12px;border:1px solid #d9d9d6;font-size:14px;font-weight:600;line-height:1.4;",
+    "display:inline-block;margin-right:10px;padding:2px 7px;border:1px solid #191919;border-radius:6px;font-size:10px;line-height:1.25;letter-spacing:.5px;font-weight:700;vertical-align:1px;",
+    "margin:24px 0 14px 0;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.55;color:#a0a0a0;text-align:left;",
+    "padding:18px 46px 0;",
+    "height:1px;line-height:1px;background:#e31b23;width:100%;",
+    "padding:24px 46px 30px;text-align:left;",
+    "font-family:Arial,Helvetica,sans-serif;font-size:18px;line-height:1.4;font-weight:700;color:#191919;",
+    "margin-top:4px;font-family:Arial,Helvetica,sans-serif;font-size:10px;line-height:1.5;letter-spacing:2px;color:#555555;",
+    "margin-top:16px;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.7;color:#222222;",
+    "color:#222222;text-decoration:none;",
+    "color:#222222;text-decoration:none;"
+  ]
+}
