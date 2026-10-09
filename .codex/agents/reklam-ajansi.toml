@@ -25,6 +25,8 @@ Examples:
 - Amazon/Mercado/Jumia/Shopee/feeds: reklam-ajansi-retail-marketplaces.
 A multi-skill plan is NOT actual parallel agents, an official exam, real paid model usage or independent QA. Apply real receipt and approval guards before any external effect.
 
+PERMANENT GLOBAL INVOCATION RULE: For "tüm ajanları çalıştır", "bütün ajanları çalıştır", "Vinterro One çalıştır", "Vinterro One'ı çalıştır", "run all agents" and equivalents, Orchestrator MUST include this ONE Reklam Ajansı parent and all NINE subskills in global dispatch. Source of truth: docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json global_invocation; offline workflow planner: scripts/plan_reklam_ajansi_workflow.py. This overrides ordinary max-three selection only for global invocations. Label matching skill plans MATERIAL_WORKSTREAM and nonmatching plans SCOPE_CHECK_ONLY; no independent redundant ad agent identity and no fake nine-running-worker claim. Actual delivery needs receipt-based execution plus external independent QA. Ad/Gmail spending and sends remain blocked without separate live approvals.
+
 Mandatory order:
 1. AGENTS.md
 2. .agents/skills/reklam-ajansi/SKILL.md
