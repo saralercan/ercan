@@ -26,7 +26,7 @@ This skill owns **cold first-touch / tanışma outreach** only. Once a recipient
 2. Dil, Vinterro Digital’de çalışan deneyimli bir **brand partnerships / designer relations uzmanı** seviyesinde olacak: doğal, profesyonel, kişiselleştirilmiş ve satış odaklı. Generic AI/template phrasing yasaktır.
 3. B2C ve B2B fırsatları ayrı ve açık anlatılacak.
 4. Drag&Drop’un **Türkiye merkezli olduğu fakat özellikle Avrupa’ya aktif satış yaptığı** açıkça belirtilecek; Avrupa içi, Türkiye–Avrupa ve diğer uluslararası pazarlar kapsanacak.
-5. Türkiye merkezli iş birliklerinde **%30 komisyon**, aylık sabit ücret ve listeleme ücreti olmadığı belirtilecek. Türkiye dışı marka/tasarımcılar için güncel doğrulanmış standart oran `DRAGDROP_MAIL_AGENT.md` içindeki kurala göre uygulanır; yanlışlıkla %30 yazılmaz.
+5. **İlk tanışma mailinde hiçbir komisyon yüzdesi/oranı açıklanmayacak** (Türkiye %30 ve uluslararası %10 dahil). Bu oranlar dahili ticari koşullar olarak korunur; ancak alıcı ilgi gösterdiğinde veya şartları istediğinde doğru ülke/kuruluş modeli doğrulanarak paylaşılır. Aylık sabit ücret ve listeleme ücreti olmadığı doğruysa belirtilebilir; ilk teması oran pazarlığına çevirmeyin.
 6. Stok, sipariş, hazırlama/kargo ve Drag&Drop’un üstlendiği dijital vitrin, ödeme, satış ve müşteri iletişimi görevleri açık olacak.
 7. B2C **Bize Katılın** ve B2B **Kurumsal Siparişler** CTA’ları canonical Drag&Drop mail tasarımıyla korunacak.
 8. Mailin giriş paragrafı her tasarımcı/markanın **gerçek ürünlerine / koleksiyonuna / malzeme veya tasarım diline** göre özel yazılacak; gövde standardı korunacak.
@@ -67,7 +67,7 @@ The opening paragraph is always recipient-specific. The remaining commercial str
 - **B2C:** curated marketplace, relevant categories, New Arrivals/editorial discovery where genuinely applicable;
 - **International / Europe:** make clear that Drag&Drop is Türkiye-based but not Türkiye-only, with an explicit emphasis on active European sales and suitable Europe-internal / Türkiye-Europe / broader international routes;
 - **B2B:** Corporate Orders / project matching, using only project categories that plausibly fit the recipient;
-- **Commercial model:** correct commission by verified legal/tax establishment, no monthly fixed fee, no listing fee;
+- **Commercial model:** NEVER reveal any commission rate/percentage in first-touch emails. Verified domestic/international rates stay internal until interest or a direct request for commercial terms. If accurate, the absence of monthly fixed and listing fees may be noted succinctly;
 - **Operations:** stock remains with the brand; order is forwarded; product preparation/packing/shipping stay with the brand unless a verified specific arrangement says otherwise; Drag&Drop handles/supports the digital storefront, payment flow, sales process and customer communication;
 - **CTA:** B2C Bize Katılın + B2B Kurumsal Siparişler;
 - finish with a low-friction request for current catalogue/product list/collection link.
@@ -129,7 +129,7 @@ Mandatory reviewer focus:
 - no false prior-contact implication;
 - B2C/B2B separation;
 - Europe/international positioning present;
-- correct commission for recipient establishment;
+- no commission percentage/rate in first-touch (any market), with later commercial terms gated on explicit interest/request;
 - no monthly/listing fee claim drift;
 - operations split accurate;
 - CTA URLs/labels correct;
