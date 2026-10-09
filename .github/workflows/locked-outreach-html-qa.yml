@@ -7,6 +7,8 @@ on:
       - 'docs/standards/DRAGDROP_OUTREACH_CANONICAL_TEMPLATE.html'
       - 'scripts/validate_vinterro_outreach_html.py'
       - 'tests/test_outreach_template_lock.py'
+      - 'supabase/outreach-first-touch-release-gate.sql'
+      - 'supabase/outreach-first-touch-prepare-transaction-lock.sql'
       - '.github/workflows/locked-outreach-html-qa.yml'
   push:
     branches:
