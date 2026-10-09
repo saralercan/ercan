@@ -45,13 +45,14 @@ For every reply to an inbound customer/designer/brand message:
 Canonical skill: `.agents/skills/dragdrop-outreach-intro/SKILL.md` (portable plugin equivalent: `dragdrop-outreach-intro`).
 
 For any cold first-touch designer/brand outreach:
+- HARD GATE: subject, plain text and rendered HTML must not contain a commission rate/percentage. This includes existing unsent drafts. Do not auto-recontact already SENT recipients to correct prior commission disclosure;
 - activate `Drag&Drop Outreach Ajanı` together with `Drag&Drop Mail Ajanı` and independent MailQA;
 - inspect real product/collection evidence before writing the personalized opening;
 - never imply prior contact/research history without evidence; do not use unsupported `yeniden inceledik`, `uzun süredir takip ediyoruz` or similar phrasing;
 - write at experienced human brand-partnerships/designer-relations level, not generic AI copy;
 - separate B2C and B2B opportunity blocks;
 - state that Drag&Drop is Türkiye-based but sells internationally, explicitly emphasizing active European sales and suitable Europe-internal / Türkiye-Europe / wider international routes;
-- for Türkiye-established partners state the verified 30% standard commission and no monthly fixed/listing fee; for non-Türkiye partners use the current verified foreign-partner rate below;
+- NEVER disclose a commission percentage (including Türkiye's 30% or foreign-partner rates) in an unsolicited first-touch/tanışma email, in any locale. Keep verified rates internal; share the correct commercial rate only after the recipient expresses interest or requests the terms. No monthly fixed/listing fee may be mentioned if still accurate, but do not lead with commercial terms;
 - explain operational ownership for stock, order forwarding, preparation/packing/shipping, digital storefront, payment flow, sales process and customer communication;
 - preserve canonical B2C Bize Katılın + B2B Kurumsal Siparişler CTAs;
 - dedupe every candidate against Gmail SENT by brand + exact email + domain, plus bounce/opt-out/relationship suppression;
