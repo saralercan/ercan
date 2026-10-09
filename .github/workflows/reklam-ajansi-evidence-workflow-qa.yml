@@ -1,0 +1,35 @@
+name: Vinterro Reklam Ajansı Evidence Workflow QA
+
+on:
+  pull_request:
+    paths:
+      - 'docs/agents/REKLAM_AJANSI_EVIDENCE_WORKFLOW.md'
+      - 'scripts/plan_reklam_ajansi_workflow.py'
+      - 'scripts/route_reklam_ajansi_subskills.py'
+      - 'tests/test_reklam_ajansi_evidence_workflow.py'
+      - '.github/workflows/reklam-ajansi-evidence-workflow-qa.yml'
+      - 'docs/agents/REKLAM_AJANSI.md'
+      - '.agents/skills/reklam-ajansi/SKILL.md'
+      - '.codex/agents/reklam-ajansi.toml'
+  push:
+    branches: [master]
+    paths:
+      - 'docs/agents/REKLAM_AJANSI_EVIDENCE_WORKFLOW.md'
+      - 'scripts/plan_reklam_ajansi_workflow.py'
+      - 'scripts/route_reklam_ajansi_subskills.py'
+      - 'tests/test_reklam_ajansi_evidence_workflow.py'
+      - '.github/workflows/reklam-ajansi-evidence-workflow-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  evidence-workflow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Validate read-only workflow graph and evidence gates
+        run: python3 -m unittest discover -s tests -p 'test_reklam_ajansi_evidence_workflow.py' -v
+      - name: Run complete regression suite
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
