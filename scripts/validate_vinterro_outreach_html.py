@@ -143,6 +143,8 @@ class _AllowedBodyParser(HTMLParser):
 def validate_body_html(body: str) -> None:
     if len(body) > 12_000:
         raise OutreachTemplateBlocked("BODY_HTML exceeds reviewed length")
+    if body.rfind(chr(60)) > body.rfind(chr(62)):
+        raise OutreachTemplateBlocked("incomplete trailing BODY_HTML tag")
     parser = _AllowedBodyParser()
     try:
         parser.feed(body)
