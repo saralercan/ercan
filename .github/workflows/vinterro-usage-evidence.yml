@@ -1,0 +1,26 @@
+name: Vinterro Model Usage Evidence QA
+
+on:
+  pull_request:
+    paths:
+      - 'supabase/ercan-os-observability-verified-usage-20261009.sql'
+      - 'tests/test_ercan_usage_evidence.py'
+      - '.github/workflows/vinterro-usage-evidence.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'supabase/ercan-os-observability-verified-usage-20261009.sql'
+      - 'tests/test_ercan_usage_evidence.py'
+      - '.github/workflows/vinterro-usage-evidence.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Audit the usage/health evidence and fail-closed contracts
+        run: python3 -m unittest discover -s tests -p 'test_ercan_usage_evidence.py' -v
