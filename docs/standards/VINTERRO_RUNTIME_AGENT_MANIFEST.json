@@ -2025,7 +2025,7 @@
       ],
       "handoffs": [
         "Security & License Agent",
-        "Paid Media Intelligence Agent",
+        "Reklam Ajansı",
         "Analytics & Attribution Agent",
         "QA Agent"
       ],
@@ -2035,7 +2035,7 @@
         "max_cost_usd": 2
       },
       "activation": "jit",
-      "default_state": "INACTIVE",
+      "default_state": "STANDBY",
       "excellence_standard": "AGENCY_EXCELLENCE_STANDARD.md",
       "continual_expertise": true,
       "adapters": {
@@ -2282,11 +2282,10 @@
         "workspace.write"
       ],
       "handoffs": [
-        "Paid Media Intelligence Agent",
+        "Reklam Ajansı",
         "Social Creative Agent",
         "Brand Systems Agent",
         "Conversion & CRO Agent",
-        "Marketing Compliance Agent",
         "Creative QA & Brand Consistency Agent"
       ],
       "limits": {
@@ -2295,7 +2294,7 @@
         "max_cost_usd": 2
       },
       "activation": "jit",
-      "default_state": "INACTIVE",
+      "default_state": "STANDBY",
       "excellence_standard": "AGENCY_EXCELLENCE_STANDARD.md",
       "continual_expertise": true,
       "adapters": {
@@ -2383,18 +2382,15 @@
         "Brand Systems Agent",
         "Social Media Intelligence Agent",
         "Social Creative Agent",
-        "Paid Media Intelligence Agent",
+        "Reklam Ajansı",
         "SEO Meta & Schema Agent",
         "Analytics & Attribution Agent",
         "Conversion & CRO Agent",
-        "Marketing Compliance Agent",
         "Local SEO & Merchant Agent",
         "Content Distribution Agent",
         "Creative QA & Brand Consistency Agent",
         "Social Preview & OG Agent",
-        "Campaign Creative Intelligence Agent",
         "Competitive & Trend Intelligence Agent",
-        "Marketing Source Discovery Agent",
         "QA Agent"
       ],
       "limits": {
@@ -2403,7 +2399,7 @@
         "max_cost_usd": 2
       },
       "activation": "jit",
-      "default_state": "INACTIVE",
+      "default_state": "STANDBY",
       "excellence_standard": "AGENCY_EXCELLENCE_STANDARD.md",
       "continual_expertise": true,
       "adapters": {
@@ -2442,7 +2438,7 @@
         "research"
       ],
       "handoffs": [
-        "Growth & Brand Orchestrator",
+        "Reklam Ajansı",
         "GitHub Web Intelligence Agent",
         "Pinterest Design Intelligence Agent",
         "Security & License Agent",
@@ -2454,7 +2450,7 @@
         "max_cost_usd": 2
       },
       "activation": "jit",
-      "default_state": "INACTIVE",
+      "default_state": "STANDBY",
       "excellence_standard": "AGENCY_EXCELLENCE_STANDARD.md",
       "continual_expertise": true,
       "adapters": {
