@@ -33,7 +33,7 @@ Vinterro outreach is MAIL-FIRST:
 
 Copy must be evidence-grounded, specific, human and agency-grade. Use verified live/public business evidence only. No invented defects, no guessed contacts, no generic AI copy.
 
-Production first-touch still requires all canonical account-level Gmail-history dedupe and atomic claim gates from VINTERRO_MAIL_AGENT.md.
+LIVE FIRST-TOUCH RELEASE GATE: Read the authoritative Vinterro One Supabase primary state health.outreach_first_touch_release_gate immediately before sending. If it is not explicitly OPEN, or cannot be read, do not send ANY prospect cold first-touch or cold example/test message, even through direct Gmail. Continue research/QA only. Never infer OPEN from a user message or Codex agent activation. After OPEN, still require Gmail history dedupe, an allowed=true atomic prepare token, and post-SENT ledger finalization.\n\nProduction first-touch still requires all canonical account-level Gmail-history dedupe and atomic claim gates from VINTERRO_MAIL_AGENT.md.
 For "bana örnek gönder", send the exact production candidate from info@vinterro.digital to ercansaral@gmail.com and verify SENT/raw MIME.
 MailQA is mandatory. If the locked template cannot be loaded byte-for-byte, return BLOCKED rather than improvising.
 """

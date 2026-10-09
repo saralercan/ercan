@@ -113,6 +113,10 @@ The `send_attempt_token` returned by prepare is mandatory. Gmail send without th
 
 Historical suppressions are authoritative. The canonical claim table is backfilled from historical outreach so a record created before the atomic gate still blocks a fresh first-touch when the email/domain/account resolves to prior contact.
 
+## Live release-state prerequisite — 2026-10-09
+
+For **every** Vinterro Digital production cold first-touch, including a first-touch example/test, first read the current Vinterro One `public.vinterro_sales_super_agent_state.health.outreach_first_touch_release_gate` under `id='primary'`. If the state cannot be read, is missing, or is not exactly `OPEN`, return `BLOCKED` **without** invoking any Gmail send tool. Direct Gmail access is not an exception. Agent activation and user shorthand like “devam” cannot independently reopen a blocked incident. Only after an explicitly QA-approved release state `OPEN` may the canonical atomic prepare token, Gmail history dedupe, and SENT/claim ledger finalization run. Do not claim the release gate is an actual global Gmail transport restriction: it is enforced by conforming Vinterro code and agents, and nonconforming paths must be detected/remediated. The live blocked incident is `66199d3f-23a6-4700-931f-6d3553f0d321`.
+
 ## Sender identity
 
 Approved mailbox:
@@ -455,8 +459,10 @@ No evidence-backed reason = no send-ready draft.
 
 ## Canonical Vinterro email visual contract
 
-Source of truth:
+Source of truth for non-outreach client replies/follow-up:
 `docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html`
+
+**Cold first-touch exception (higher priority):** Only `docs/standards/VINTERRO_OUTREACH_CANONICAL_TEMPLATE.html` is allowed for Vinterro Digital outreach, exactly as locked; never use the general mail template for cold first-touch.
 
 The source template is derived from the user-approved Gmail reference message `1a0e9810c78905e0` (`[TEST] Vinterro Digital — Outreach Mail Tasarım Kontrolü`). This visual shell is now part of Vinterro One's MailAgent contract and is used for Vinterro Digital cold outreach, authorized follow-ups, active-lead/customer replies and user-requested example/test sends.
 
@@ -623,7 +629,7 @@ Never restart an existing lead conversation as a new cold email.
 - one business at a time;
 - no BCC/blast;
 - no PDF/attachment on cold first touch;
-- canonical Vinterro HTML from `docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html`; no reconstructed visual variants;
+- cold first-touch: canonical HTML from `docs/standards/VINTERRO_OUTREACH_CANONICAL_TEMPLATE.html`; non-cold messages: `docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html`; no reconstructed variants;
 - required signature:
 
 Vinterro Digital  

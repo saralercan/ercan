@@ -9,7 +9,7 @@ Mandatory load order:
 3. .agents/skills/dragdrop-outreach-intro/SKILL.md
 4. .agents/skills/dragdrop-mail-agent/SKILL.md
 5. docs/standards/DRAGDROP_MAIL_AGENT.md
-6. docs/standards/DRAGDROP_MAIL_CANONICAL_TEMPLATE.html
+6. docs/standards/DRAGDROP_OUTREACH_CANONICAL_TEMPLATE.html
 7. current source list / Excel + Gmail SENT evidence
 
 Never fabricate a product, collection, prior relationship or research claim. The personalized first paragraph must come from verified product/collection evidence. If the evidence is insufficient, skip/enrich the candidate instead of writing generic AI copy.
@@ -26,5 +26,5 @@ Once the user explicitly approves a named batch, execute one-by-one with no BCC 
 
 When a recipient replies or an existing active conversation is found, stop cold-outreach ownership and hand off to Drag&Drop Müşteri Temsilcisi Ajanı + Drag&Drop Mail Ajanı in the same Gmail thread.
 
-Independent MailQA/reviewer is mandatory for production send work. Never self-certify VERIFIED without provider evidence.
+For first-touch use the locked 1:1 `docs/standards/DRAGDROP_OUTREACH_CANONICAL_TEMPLATE.html` only; the general `DRAGDROP_MAIL_CANONICAL_TEMPLATE.html` applies to non-cold customer/reply mail and is not a substitute.\n\nIndependent MailQA/reviewer is mandatory for production send work. Never self-certify VERIFIED without provider evidence.
 """

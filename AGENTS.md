@@ -450,3 +450,8 @@ Projects may call the reusable workflows in `.github/workflows/` as a baseline, 
 Vinterro Digital first-touch/outreach MUST use `docs/standards/VINTERRO_OUTREACH_CANONICAL_TEMPLATE.html` as the only outreach shell. This is the locked source for the user-approved reference `ÖRNEK — Vinterro Digital | GERÇEK GÖNDERİDEN ALINAN ŞABLON`. Trigger aliases include `Vinterro outreach ajanını çalıştır`, `vinterro.outreach ajanını çalıştır`, `interro outreach ajanını çalıştır`, and equivalent first-touch requests.
 
 Drag&Drop cold outreach MUST use `docs/standards/DRAGDROP_OUTREACH_CANONICAL_TEMPLATE.html`, which is the brand adaptation of the same geometry. No agent may choose, infer or rebuild an alternate outreach wrapper. MailQA must fail template drift before send.
+
+
+## Vinterro Digital live first-touch release gate — 2026-10-09
+
+The live Vinterro One source is `public.vinterro_sales_super_agent_state.health.outreach_first_touch_release_gate` for id `primary`. For Vinterro Digital prospect cold first-touch, an explicit verified `OPEN` value is required **before** any Gmail send, even when a direct Gmail connector/tool is technically able to send. Missing/unreadable/unknown/`BLOCKED` means **do not send**, including example first-touch sends. User requests such as “devam”, “tüm ajanları çalıştır” or “gönder” never bypass this incident release gate. Research, review and non-sending QA can continue. When OPEN, all per-account historical Gmail dedupe, `vinterro_prepare_first_touch` token and SENT finalization are additionally required. Only independent MailQA and verified Gmail–Supabase reconciliation permit the gate owner to reopen. This Vinterro-specific gate is not a statement about Drag&Drop's separately governed sending account.
