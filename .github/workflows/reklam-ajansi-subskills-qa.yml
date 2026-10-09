@@ -1,0 +1,34 @@
+name: Vinterro Reklam Ajansı Subskills QA
+
+on:
+  pull_request:
+    paths:
+      - '.agents/skills/reklam-ajansi*/SKILL.md'
+      - '.codex/agents/reklam-ajansi.toml'
+      - 'docs/agents/REKLAM_AJANSI*'
+      - 'scripts/route_reklam_ajansi_subskills.py'
+      - 'tests/test_reklam_ajansi_subskills.py'
+      - '.github/workflows/reklam-ajansi-subskills-qa.yml'
+  push:
+    branches: [master]
+    paths:
+      - '.agents/skills/reklam-ajansi*/SKILL.md'
+      - '.codex/agents/reklam-ajansi.toml'
+      - 'docs/agents/REKLAM_AJANSI*'
+      - 'scripts/route_reklam_ajansi_subskills.py'
+      - 'tests/test_reklam_ajansi_subskills.py'
+      - '.github/workflows/reklam-ajansi-subskills-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Verify router, 9 skills, approval and provenance
+        run: python3 -m unittest discover -s tests -p 'test_reklam_ajansi_subskills.py' -v
+      - name: Full regression suite
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
