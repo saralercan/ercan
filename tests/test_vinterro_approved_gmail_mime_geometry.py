@@ -17,8 +17,8 @@ class ApprovedGmailMimeGeometry(unittest.TestCase):
     def setUpClass(cls):
         cls.snapshot=json.loads(SNAPSHOT.read_text(encoding="utf-8"))
         src=CANONICAL.read_text(encoding="utf-8")
-        src=re.sub(r"<!--[\\s\\S]*?-->","",src)
-        cls.styles=re.findall(r'\\bstyle="([^"]*)"',src)
+        src=re.sub(r"<!--[\s\S]*?-->","",src)
+        cls.styles=re.findall(r'\bstyle="([^"]*)"',src)
 
     def test_approved_gmail_message_provenance(self):
         self.assertEqual(self.snapshot["reference_gmail_message_id"],"1a11c21c960cc646")
