@@ -537,8 +537,10 @@ Deno.serve(async (req: Request) => {
       const routing = selectAgentPod(task, agents ?? [], requestedAction, projects ?? [], body.project_id || null)
       const agent = routing.primary; if (!agent) return json({ error: 'No active agent available' }, 409)
       const decision = await policyDecision(userClient, orgId, requestedAction)
-      const status = decision === 'deny' ? 'blocked' : decision === 'approval_required' ? 'awaiting_approval' : (action === 'start_ai_run' ? 'running' : 'success')
+      const status = decision === 'deny' ? 'blocked' : decision === 'approval_required' ? 'awaiting_approval' : 'queued'
       const started = Date.now()
+      // Routing and supervision planning are not model/worker execution. Never
+      // report a newly created run as successful or running without executor proof.
       const activeNames = routing.active.map((a: any) => a.name)
       const activeIds = routing.active.map((a: any) => a.id)
       const [{ data: expertiseProfiles }, { data: expertiseSources }, { data: expertiseHealth }] = await Promise.all([
@@ -615,7 +617,7 @@ Deno.serve(async (req: Request) => {
         project: routing.project ? { id: routing.project.id, name: routing.project.name, slug: routing.project.slug } : null,
       }
       const selectedProjectId = routing.project?.id || body.project_id || null
-      const { data: run, error: runError } = await userClient.from('ercan_os_runs').insert({ organization_id: orgId, project_id: selectedProjectId, agent_id: agent.id, task, status, requested_by: user.id, output: status === 'success' ? { message: `Control plane routed task to ${agent.name} with relevant specialist pod.`, runtime: 'supabase-edge-deterministic', requested_action: requestedAction, routing: routingOutput } : { decision, requested_action: requestedAction, routing: routingOutput }, trace, latency_ms: Date.now() - started, completed_at: status === 'success' || status === 'blocked' ? now() : null }).select().single(); if (runError) throw runError
+      const { data: run, error: runError } = await userClient.from('ercan_os_runs').insert({ organization_id: orgId, project_id: selectedProjectId, agent_id: agent.id, task, status, requested_by: user.id, output: { decision, requested_action: requestedAction, routing: routingOutput, execution: status === 'queued' ? 'not_started' : 'not_permitted' }, trace, latency_ms: Date.now() - started, completed_at: status === 'blocked' ? now() : null }).select().single(); if (runError) throw runError
       let supervision = null
       if (status !== 'blocked') {
         try {
