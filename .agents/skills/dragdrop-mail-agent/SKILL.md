@@ -44,7 +44,7 @@ Never create a fresh thread for an existing inbound conversation.
 
 ## Canonical visual template
 
-The locked source is `docs/standards/DRAGDROP_MAIL_CANONICAL_TEMPLATE.html`.
+The general customer/reply locked source is `docs/standards/DRAGDROP_MAIL_CANONICAL_TEMPLATE.html`. For any cold first-touch/outreach (including the associated example), use only `docs/standards/DRAGDROP_OUTREACH_CANONICAL_TEMPLATE.html`; it carries the user-approved 1:1 Vinterro-derived geometry with Drag&Drop branding.
 
 Do not recreate a similar wrapper from memory. If the canonical source cannot be loaded, the HTML mail path is `BLOCKED`.
 
