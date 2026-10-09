@@ -147,3 +147,16 @@ Google'ın coğrafi deney araştırmaları, eBay'in markalı arama deneylerinin 
 Yalnızca kaynak listesi = bilgi envanteri, **uzmanlık veya sertifika değil**. Gerçek ajan çalışması ve denetimi için: yetkili yürütücü, güvenilir provider kullanım kaydı, kaynak referansları, bağımsız QA, sınavda kritik hata sıfır, kültürel/yerel dil kontrolü. Bu adımlar yapılmadan hiçbir ajana kampanya yayınlama, bütçe veya reklam hesabı değiştirme yetkisi verilmeyecek.
 
 **Vinterro One kayıt kaynağı:** docs/academy/WORLDWIDE_PAID_MEDIA_SOURCES_2026.json. **Önceki müfredat:** docs/academy/VINTERRO_PAID_MEDIA_ACADEMY_TR.md.
+
+## Sahra Altı Afrika — Nijerya Jumia reklamları
+
+Afrika yerel e-ticaret kaynakları da Atlas kapsamına eklendi. Jumia Seller Academy, Sponsored Products ve resmî stok/uygunluk kurallarının iki versiyonu öğrenme örneğidir. **Aynı kurumun iki sayfasında 2 ve 3 adet minimum stok şartı farklı yazıyor.** Ajan kesin sayı bildirmemeli; en güncel ülke-satıcı panelini doğrulamalı ve hata/çelişkiyi açıkça raporlamalı. Eski kurala dayalı kampanya oluşturulmamalıdır.
+
+| Kod | Kaynak | Öğrenme değeri |
+|---|---|---|
+| GL36 | [Jumia Nigeria Seller Academy](https://vendorhub.jumia.com.ng/seller-academy/) | Use Nigeria marketplace seller education, product listing and ads reporting modules; **Sınır:** Registered seller access and current marketplace eligibility may differ |
+| GL37 | [Jumia Sponsored Products Courses](https://vendorhub.jumia.com.ng/seller-academy/sponsored-products/) | Understand Jumia Sponsored Products CPC, ad group and reporting tutorials; **Sınır:** No ad spend or access is granted by reading videos |
+| GL38 | [Jumia Sponsored Products 3-unit Eligibility guidance](https://vendorhub.jumia.com.ng/getting-started-with-sponsored-products-on-jumia-ads-eligibility-access-and-budget-3/) | Evaluate country and stock eligibility from official current guidance; **Sınır:** Official Jumia page gives a different minimum stock number from an older official page; treat as unresolved |
+| GL39 | [Jumia Sponsored Products 2-unit Eligibility guidance](https://vendorhub.jumia.com.ng/getting-started-with-sponsored-products-on-jumia-ads-eligibility-access-and-budget-2/) | Spot contradictory rules in two official product eligibility versions; **Sınır:** Stale vs revised policy unresolved; recheck latest seller portal before recommendation |
+
+**AFR01 sınavı:** 2 ve 3 adet stok gereksinimi çeliştiğinde resmî kanıt, tarih ve panel kuralını karşılaştır; kampanya açma ve sayı uydurma. Durum: PENDING.
