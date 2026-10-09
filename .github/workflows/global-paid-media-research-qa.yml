@@ -1,0 +1,28 @@
+name: World Advertising Research Academy QA
+
+on:
+  pull_request:
+    paths:
+      - 'docs/academy/WORLDWIDE_PAID_MEDIA_SOURCES_2026.json'
+      - 'docs/academy/VINTERRO_GLOBAL_PAID_MEDIA_ACADEMY_TR.md'
+      - 'tests/test_global_paid_media_sources.py'
+      - '.github/workflows/global-paid-media-research-qa.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'docs/academy/WORLDWIDE_PAID_MEDIA_SOURCES_2026.json'
+      - 'docs/academy/VINTERRO_GLOBAL_PAID_MEDIA_ACADEMY_TR.md'
+      - 'tests/test_global_paid_media_sources.py'
+      - '.github/workflows/global-paid-media-research-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  global-sources-and-training-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Verify sources, translations, geographic coverage and gated certification
+        run: python3 -m unittest discover -s tests -p 'test_global_paid_media_sources.py' -v
