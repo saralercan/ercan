@@ -62,6 +62,10 @@ Birleştirme aşamasında:
 4. Bağımsız reviewer, oluşturan ana ajan değildir. Görüş ayrılığı Arbiter’a çıkar.
 5. Kullanıcı onayı teknik erişimi, yasal dayanağı veya bütçe sınırını tek başına doğrulamaz.
 
+## Ana Vinterro One çağrısı: tüm dokuz uzmanlık
+
+`tüm ajanları çalıştır` veya `Vinterro One çalıştır` komutlarında bir reklam görevi açıkça belirtilmese bile, Reklam Ajansı ve 9 alt skill **tek ajan kimliği** altında yönlendirilir. Normal üç skill sınırı bu ana komutlarda geçerli değildir; her skill bir `NOT_STARTED` iş akışı kaydı olarak listelenir ve `participation` ya `MATERIAL_WORKSTREAM` ya da `SCOPE_CHECK_ONLY` olur. Reklam dışı işlerle ilgisiz skill'ler reklam hesabına dokunmaz. Yalnızca gerçek yetkili işçi/denetçi çalışması kayda geçtiğinde tamamlanmış sayılır.
+
 ## Canlı yayın sınırı
 
 - **Reklam yayımlama/durdurma/aktifleştirme, teklif/bütçe değiştirme, müşterinin kişisel verilerini yükleme, ödeme/faturalandırma değiştirme:** her zaman ayrı açık onay, doğru hesabın erişim izni ve canlı release gate.
