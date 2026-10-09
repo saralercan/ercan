@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-08T00:45:00Z",
+  "generated_at": "2026-10-09T16:55:00+03:00",
   "agent_count": 116,
   "philosophy": "Broad continuous discovery, narrow verified ingestion. Research the web deeply, but never equate volume with truth or expertise.",
   "global_sources": {
@@ -5556,11 +5556,15 @@
         "require_original_source_for_material_claims": true,
         "thesis_policy": "Theses are Tier-3 academic evidence for hypotheses, methods, edge cases and evaluation design; they are not normative platform authority.",
         "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works into prompts or repositories."
+      },
+      "historical_consolidation": {
+        "archived_into": "Reklam Ajansı",
+        "source_profile_preserved": true
       }
     },
     {
       "id": 47,
-      "name": "Paid Media Intelligence Agent",
+      "name": "Reklam Ajansı",
       "role": "web_research",
       "family": "web_growth",
       "source_tiers": {
@@ -5622,9 +5626,25 @@
       },
       "research_topics": [
         "web research",
+        "Review marketing implementations for consent, privacy, platform policy, tracking safety, claims, accessibility and campaign-risk boundaries",
+        "Never treat third-party growth tactics as authoritative",
+        "Escalate risky writes or regulated claims to Human Approval",
         "Research Google Ads, Meta ads, Pinterest ads and paid-media best practices, campaign structure, creative requirements, measurement and testing",
         "Default to read-only/validate-only reasoning",
-        "live campaign mutations remain approval-gated"
+        "live campaign mutations remain approval-gated",
+        "Translate campaign goals into channel-specific creative systems for paid and organic media",
+        "Research current platform creative guidance and Pinterest trend evidence, then specify concept, hook, hierarchy, aspect ratios, copy, CTA, variants and landing-page continuity",
+        "Never publish or spend without policy/approval",
+        "Lead the marketing/brand production pod for website and app work",
+        "Decompose brand, social, paid media, SEO/meta/schema, analytics, CRO, local SEO, content distribution and creative QA tasks",
+        "Use live web/GitHub/Pinterest evidence when useful",
+        "Maintain a live discovery layer for website production, branding, social media, advertising, SEO/meta/schema, analytics and CRO sources",
+        "Search GitHub, official platform docs and public Pinterest/business references at task time",
+        "evaluate freshness, maintenance, license, security and relevance before recommending adoption",
+        "Global multilingual advertising academy",
+        "Google/Meta/Pinterest/TikTok/Microsoft/Amazon Ads and native marketplace platforms",
+        "Creative Studio, Growth & Brand, Marketing Compliance, Worldwide Research, MMM and causal lift",
+        "No campaign mutation or self-certified QA"
       ],
       "continual_queries": [
         "Paid Media Intelligence Agent current official documentation changelog deprecations best practices",
@@ -5652,14 +5672,17 @@
       "mastery_gate": {
         "structural": "source map + current upstreams + hard-fails present",
         "behavioral": "complete a representative real task and independent QA",
-        "comparative": "only after reproducible benchmark against a relevant baseline"
+        "comparative": "only after reproducible benchmark against a relevant baseline",
+        "qualification": "27 cases registered, zero real model exams passed; independent reviewer and verified executor receipt required"
       },
       "source_packs": [
         "seo",
         "growth_ads",
         "agent_runtime",
         "research",
-        "academic_research"
+        "academic_research",
+        "design",
+        "local_discovery"
       ],
       "depth_contract": {
         "discovery": "Expand queries across official docs, changelogs, canonical repositories, issues/releases/advisories, maintainer engineering articles and reputable secondary evidence until marginal value drops.",
@@ -5675,12 +5698,28 @@
         "runtime/test/QA evidence before promoting implementation guidance"
       ],
       "academic_queries": [
+        "Marketing Compliance Agent web engineering UX accessibility performance search information retrieval empirical evaluation systematic review",
+        "web research Review marketing implementations for consent, privacy, platform policy, tracking safety, claims, accessibility and campaign-risk boundaries Never treat third-party growth tactics as authoritative peer reviewed benchmark reproducibility human factors",
         "Paid Media Intelligence Agent web engineering UX accessibility performance search information retrieval empirical evaluation systematic review",
-        "web research Research Google Ads, Meta ads, Pinterest ads and paid-media best practices, campaign structure, creative requirements, measurement and testing Default to read-only/validate-only reasoning peer reviewed benchmark reproducibility human factors"
+        "web research Research Google Ads, Meta ads, Pinterest ads and paid-media best practices, campaign structure, creative requirements, measurement and testing Default to read-only/validate-only reasoning peer reviewed benchmark reproducibility human factors",
+        "Campaign Creative Intelligence Agent web engineering UX accessibility performance search information retrieval empirical evaluation systematic review",
+        "web research Translate campaign goals into channel-specific creative systems for paid and organic media Research current platform creative guidance and Pinterest trend evidence, then specify concept, hook, hierarchy, aspect ratios, copy, CTA, variants and landing-page continuity peer reviewed benchmark reproducibility human factors",
+        "Growth & Brand Orchestrator web engineering UX accessibility performance search information retrieval empirical evaluation systematic review",
+        "web research Lead the marketing/brand production pod for website and app work Decompose brand, social, paid media, SEO/meta/schema, analytics, CRO, local SEO, content distribution and creative QA tasks peer reviewed benchmark reproducibility human factors",
+        "Marketing Source Discovery Agent web engineering UX accessibility performance search information retrieval empirical evaluation systematic review",
+        "web research Maintain a live discovery layer for website production, branding, social media, advertising, SEO/meta/schema, analytics and CRO sources Search GitHub, official platform docs and public Pinterest/business references at task time peer reviewed benchmark reproducibility human factors"
       ],
       "thesis_queries": [
+        "Marketing Compliance Agent web engineering UX accessibility performance search information retrieval thesis dissertation MIT TU Delft Aalto ETH",
+        "web research Review marketing implementations for consent, privacy, platform policy, tracking safety, claims, accessibility and campaign-risk boundaries Never treat third-party growth tactics as authoritative master thesis doctoral thesis human AI software systems",
         "Paid Media Intelligence Agent web engineering UX accessibility performance search information retrieval thesis dissertation MIT TU Delft Aalto ETH",
-        "web research Research Google Ads, Meta ads, Pinterest ads and paid-media best practices, campaign structure, creative requirements, measurement and testing Default to read-only/validate-only reasoning master thesis doctoral thesis human AI software systems"
+        "web research Research Google Ads, Meta ads, Pinterest ads and paid-media best practices, campaign structure, creative requirements, measurement and testing Default to read-only/validate-only reasoning master thesis doctoral thesis human AI software systems",
+        "Campaign Creative Intelligence Agent web engineering UX accessibility performance search information retrieval thesis dissertation MIT TU Delft Aalto ETH",
+        "web research Translate campaign goals into channel-specific creative systems for paid and organic media Research current platform creative guidance and Pinterest trend evidence, then specify concept, hook, hierarchy, aspect ratios, copy, CTA, variants and landing-page continuity master thesis doctoral thesis human AI software systems",
+        "Growth & Brand Orchestrator web engineering UX accessibility performance search information retrieval thesis dissertation MIT TU Delft Aalto ETH",
+        "web research Lead the marketing/brand production pod for website and app work Decompose brand, social, paid media, SEO/meta/schema, analytics, CRO, local SEO, content distribution and creative QA tasks master thesis doctoral thesis human AI software systems",
+        "Marketing Source Discovery Agent web engineering UX accessibility performance search information retrieval thesis dissertation MIT TU Delft Aalto ETH",
+        "web research Maintain a live discovery layer for website production, branding, social media, advertising, SEO/meta/schema, analytics and CRO sources Search GitHub, official platform docs and public Pinterest/business references at task time master thesis doctoral thesis human AI software systems"
       ],
       "academic_ingestion": {
         "evidence_priority": "project/official > canonical implementation > peer-reviewed/thesis > preprint/working paper > discovery/community",
@@ -5688,7 +5727,14 @@
         "require_original_source_for_material_claims": true,
         "thesis_policy": "Theses are Tier-3 academic evidence for hypotheses, methods, edge cases and evaluation design; they are not normative platform authority.",
         "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works into prompts or repositories."
-      }
+      },
+      "agency_internal_lanes": [
+        "Paid Media Intelligence Agent",
+        "Campaign Creative Intelligence Agent",
+        "Growth & Brand Orchestrator",
+        "Marketing Compliance Agent",
+        "Marketing Source Discovery Agent"
+      ]
     },
     {
       "id": 48,
@@ -6203,6 +6249,10 @@
         "require_original_source_for_material_claims": true,
         "thesis_policy": "Theses are Tier-3 academic evidence for hypotheses, methods, edge cases and evaluation design; they are not normative platform authority.",
         "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works into prompts or repositories."
+      },
+      "historical_consolidation": {
+        "archived_into": "Reklam Ajansı",
+        "source_profile_preserved": true
       }
     },
     {
@@ -6453,6 +6503,10 @@
         "require_original_source_for_material_claims": true,
         "thesis_policy": "Theses are Tier-3 academic evidence for hypotheses, methods, edge cases and evaluation design; they are not normative platform authority.",
         "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works into prompts or repositories."
+      },
+      "historical_consolidation": {
+        "archived_into": "Reklam Ajansı",
+        "source_profile_preserved": true
       }
     },
     {
@@ -6584,6 +6638,10 @@
         "require_original_source_for_material_claims": true,
         "thesis_policy": "Theses are Tier-3 academic evidence for hypotheses, methods, edge cases and evaluation design; they are not normative platform authority.",
         "copyright_policy": "Store metadata, provenance and concise distilled learning; do not copy full copyrighted works into prompts or repositories."
+      },
+      "historical_consolidation": {
+        "archived_into": "Reklam Ajansı",
+        "source_profile_preserved": true
       }
     },
     {
@@ -13337,5 +13395,24 @@
     "source_pack": "ACADEMIC_RESEARCH_SOURCE_PACK.md",
     "policy": "High-recall discovery; narrow source-backed ingestion. Academic evidence informs hypotheses, evaluation and architecture but never overrides current project truth or normative platform authority.",
     "copyright": "Persist metadata, provenance, short distilled findings and evaluation implications; do not redistribute copyrighted full text without license permission."
+  },
+  "canonical_advertising_agency": {
+    "name": "Reklam Ajansı",
+    "runtime_numeric_profile_id": 47,
+    "archived_specialist_names": [
+      "Campaign Creative Intelligence Agent",
+      "Growth & Brand Orchestrator",
+      "Marketing Compliance Agent",
+      "Marketing Source Discovery Agent"
+    ],
+    "source_packs": [
+      "seo",
+      "growth_ads",
+      "agent_runtime",
+      "research",
+      "academic_research",
+      "design",
+      "local_discovery"
+    ]
   }
 }

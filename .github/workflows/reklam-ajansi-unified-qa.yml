@@ -1,0 +1,36 @@
+name: Vinterro Reklam Ajansı Consolidation QA
+
+on:
+  pull_request:
+    paths:
+      - 'supabase/reklam-ajansi-unified-five-agents-20261009.sql'
+      - '.codex/agents/reklam-ajansi.toml'
+      - '.agents/skills/reklam-ajansi/SKILL.md'
+      - 'docs/agents/REKLAM_AJANSI.md'
+      - 'docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json'
+      - 'tests/test_reklam_ajansi_unified.py'
+      - '.github/workflows/reklam-ajansi-unified-qa.yml'
+  push:
+    branches: [master]
+    paths:
+      - 'supabase/reklam-ajansi-unified-five-agents-20261009.sql'
+      - '.codex/agents/reklam-ajansi.toml'
+      - '.agents/skills/reklam-ajansi/SKILL.md'
+      - 'docs/agents/REKLAM_AJANSI.md'
+      - 'docs/standards/VINTERRO_RUNTIME_AGENT_MANIFEST.json'
+      - 'tests/test_reklam_ajansi_unified.py'
+      - '.github/workflows/reklam-ajansi-unified-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  consolidation-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Verify one-agent routing, lossless sources and execution safety
+        run: python3 -m unittest discover -s tests -p 'test_reklam_ajansi_unified.py' -v
+      - name: Verify full project agent and education contracts
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
