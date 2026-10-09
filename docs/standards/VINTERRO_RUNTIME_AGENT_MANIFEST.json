@@ -2117,7 +2117,7 @@
           54
         ],
         "subskills_router": "docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json",
-        "subskills_version": "1.0.0",
+        "subskills_version": "1.1.0",
         "subskill_count": 9,
         "subskills": [
           {
@@ -2167,7 +2167,31 @@
           }
         ],
         "execution_proof_required": true,
-        "ads_account_writes_approved": false
+        "ads_account_writes_approved": false,
+        "workflow_file": "docs/agents/REKLAM_AJANSI_EVIDENCE_WORKFLOW.md",
+        "workflow_planner": "scripts/plan_reklam_ajansi_workflow.py",
+        "workflow_contract": {
+          "documentation": "docs/agents/REKLAM_AJANSI_EVIDENCE_WORKFLOW.md",
+          "planner": "scripts/plan_reklam_ajansi_workflow.py",
+          "supported_stages": [
+            "intake",
+            "skill_workstream",
+            "evidence_merge",
+            "independent_external_review",
+            "explicit_scope_bound_approval"
+          ],
+          "maximum_selected_specialties": 3,
+          "overflow_behavior": "DEFER_AND_REPORT_SCOPE_SPLIT",
+          "offline_status": "PLAN_ONLY_NO_REMOTE_EFFECTS",
+          "actual_executor_required_for_any_real_run": true,
+          "actual_qa_receipt_required_before_pass": true,
+          "explicit_human_approval_required_for_mutations": true,
+          "email_first_touch_gate": "BLOCKED",
+          "paid_ad_account_write_gate": "BLOCKED"
+        },
+        "workflow_status": "PLAN_ONLY_NO_REMOTE_EFFECTS",
+        "verified_provider_execution": false,
+        "external_independent_qa_completed": false
       },
       "adapters": {
         "codex": true,
@@ -5348,13 +5372,16 @@
     "verification": "authenticated Vinterro One Supabase registry",
     "last_verified_at": "2026-10-09",
     "live_count": 116,
-    "note": "Synced one live Reklam Ajansı v2.1.0 with nine source-linked subskills. Four archived agents retain rows; verified worker and actual skill exams still pending.",
+    "note": "Live profile and two mirrored runtime manifests both register nine Reklam Ajansı subskills router v1.1.0 and offline evidence workflow; runtime worker still not verified.",
     "planned_source_change": "PR to activate only after Supabase live atomic migration",
     "expected_active_count": 112,
     "expected_canonical_advertising_agent": "Reklam Ajansı",
     "previous_verified_live_count": 116,
     "canonical_advertising_agent_version": "2.1.0",
-    "canonical_subskills_verified": 9
+    "canonical_subskills_verified": 9,
+    "canonical_subskills_router_version": "1.1.0",
+    "evidence_workflow_live_profile_registered": true,
+    "latest_sync_date": "2026-10-09"
   },
   "active_agent_count": 112,
   "canonical_advertising_agent": {
@@ -5383,6 +5410,27 @@
     "version": "2.1.0",
     "subskills_router": "docs/agents/REKLAM_AJANSI_SUBSKILL_ROUTER.json",
     "active_subskills": 9,
-    "subskill_runtime_status": "CONFIGURED_AWAITING_VERIFIED_WORKER"
+    "subskill_runtime_status": "CONFIGURED_AWAITING_VERIFIED_WORKER",
+    "subskills_router_version": "1.1.0",
+    "evidence_workflow_contract": {
+      "documentation": "docs/agents/REKLAM_AJANSI_EVIDENCE_WORKFLOW.md",
+      "planner": "scripts/plan_reklam_ajansi_workflow.py",
+      "supported_stages": [
+        "intake",
+        "skill_workstream",
+        "evidence_merge",
+        "independent_external_review",
+        "explicit_scope_bound_approval"
+      ],
+      "maximum_selected_specialties": 3,
+      "overflow_behavior": "DEFER_AND_REPORT_SCOPE_SPLIT",
+      "offline_status": "PLAN_ONLY_NO_REMOTE_EFFECTS",
+      "actual_executor_required_for_any_real_run": true,
+      "actual_qa_receipt_required_before_pass": true,
+      "explicit_human_approval_required_for_mutations": true,
+      "email_first_touch_gate": "BLOCKED",
+      "paid_ad_account_write_gate": "BLOCKED"
+    },
+    "workflow_release_status": "BLOCKED_UNTIL_WORKER_QA_AND_HUMAN_APPROVAL"
   }
 }
