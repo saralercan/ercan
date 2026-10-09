@@ -1,0 +1,34 @@
+name: Locked outreach HTML QA
+
+on:
+  pull_request:
+    paths:
+      - 'docs/standards/VINTERRO_OUTREACH_CANONICAL_TEMPLATE.html'
+      - 'docs/standards/DRAGDROP_OUTREACH_CANONICAL_TEMPLATE.html'
+      - 'scripts/validate_vinterro_outreach_html.py'
+      - 'tests/test_outreach_template_lock.py'
+      - 'supabase/outreach-first-touch-release-gate.sql'
+      - 'supabase/outreach-first-touch-prepare-transaction-lock.sql'
+      - '.github/workflows/locked-outreach-html-qa.yml'
+  push:
+    branches:
+      - master
+    paths:
+      - 'docs/standards/VINTERRO_OUTREACH_CANONICAL_TEMPLATE.html'
+      - 'docs/standards/DRAGDROP_OUTREACH_CANONICAL_TEMPLATE.html'
+      - 'scripts/validate_vinterro_outreach_html.py'
+      - 'tests/test_outreach_template_lock.py'
+      - '.github/workflows/locked-outreach-html-qa.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  locked-html-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout pinned source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Check user-approved locked template and renderer tests
+        run: python3 -m unittest discover -s tests -p 'test_outreach_template_lock.py' -v
