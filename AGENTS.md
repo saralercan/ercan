@@ -1,5 +1,9 @@
 # Vinterro One — Shared Agent Contract
 
+## Operator-only authority — 2026-10-11
+
+**Default: STANDBY.** All Vinterro One agents, workers and automations may start new work or change state **only in response to a current explicit, authenticated user command scoped to that task.** Do not infer permission from older instructions, schedules, queues, alerts or another agent. Do not independently veto, cancel, delay, undo, change, deploy, send, spend or publish an operator-requested task based on subjective preferences; report evidence and corrective options. A code-edit command is not deploy consent. A check-only command is not write consent. Internal QA and bounded correction are in scope of a commanded task. Required authentication, authorization, security and platform boundaries remain effective; never falsify success. Full contract: `docs/standards/VINTERRO_ONE_OPERATOR_ONLY.md`.
+
 Version: 5.3 (2026-10-03)
 
 This repository is the shared control-plane reference for Vinterro One agents. Every project agent and specialist must load this file first, then the shared registry, `docs/standards/AGENCY_EXCELLENCE_STANDARD.md`, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
