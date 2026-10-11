@@ -34,6 +34,6 @@ test("worker is passive by default and refuses ticks without a trusted user comm
 test("worker source must not schedule recurring or boot-time dispatch", async () => {
   const { readFile } = await import("node:fs/promises");
   const source = await readFile(new URL("./worker.mjs", import.meta.url), "utf8");
-  assert.doesNotMatch(source, /setInterval\\s*\\(/);
-  assert.doesNotMatch(source, /void tickSafely\\s*\\(/);
+  assert.doesNotMatch(source, /setInterval\s*\(/);
+  assert.doesNotMatch(source, /void tickSafely\s*\(/);
 });
