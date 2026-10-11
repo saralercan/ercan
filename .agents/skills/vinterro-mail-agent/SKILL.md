@@ -493,9 +493,11 @@ Completion states:
 Never report a send, reply, social DM, stage transition or follow-up as completed without corresponding provider/account/evidence state.
 
 
-## Live first-touch block — 2026-10-09
+## User-directed first-touch safety — 2026-10-11
 
-Before **any** Vinterro Digital first-touch/send-ready or first-touch example/test, query live `public.vinterro_sales_super_agent_state.health.outreach_first_touch_release_gate` (id `primary`). Only an explicit `OPEN` permits continuing with the existing Gmail-history + atomic prepare token controls. `BLOCKED`, missing, inaccessible or unknown means **no Gmail send**, including directly via connector/agent. Do not interpret the user saying “devam” or “tüm ajanları çalıştır” as release authorization. The current incident gate remains blocked pending Gmail/ledger reconciliation and independent QA.
+The historical campaign-wide `outreach_first_touch_release_gate` OPEN/BLOCKED switch was retired in Supabase and must not be read, restored, or used to demand new Vinterro One approval. A user's explicit campaign command can authorize work while the Vinterro One runtime remains inactive. This does **not** waive the independent first-touch prerequisites: Supabase `outreach_first_touch_review_status='CLEARED'`, `outreach_platform_channel_safety_verified=true`, and `mail_domain_authentication_gate='PASS'` must be supported by actual evidence for the sending channel. If any is not verified, research/draft/reconcile only, with no direct external Gmail send or alternate provider workaround.
+
+Every real send additionally requires a confirmed current official business email, account-level alias/domain/history/opt-out/bounce suppression, `public.vinterro_prepare_first_touch` `allowed=true` atomic token, canonical HTML MailQA, individual `info@vinterro.digital` send with no BCC/attachment, and real Gmail SENT/raw MIME evidence with claim finalization. Provider safety blocks may never be circumvented. Never send an inbound prospect reply without separate user approval.
 
 ## Locked outreach template route — 2026-10-08
 
