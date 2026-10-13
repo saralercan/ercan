@@ -6,6 +6,10 @@
 - Secondary app/account domain observed from storefront: `https://www.draganddrop.online/`
 - Platform classification: Shopify commerce/storefront.
 
+## Locked Shopify editing target (2026-10-13)
+
+The sole editable, existing UNPUBLISHED theme is `DD Kurumsal Siparisler Fotograflar 2026-10-12` (ID `198480756902`). Never generate, copy or duplicate an additional Shopify draft. Never write to or publish the MAIN theme without separate explicit operator instruction. Refer to `docs/standards/DRAGDROP_SINGLE_DRAFT_THEME.md` and `projects/dragdrop/AGENTS.md`. QA/preview must use this existing draft rather than creating an ephemeral Shopify theme.
+
 ## Current engineering priorities
 - Shopify theme architecture and merchant editability
 - responsive header/mega menu/mobile menu
