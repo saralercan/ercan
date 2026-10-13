@@ -4,6 +4,10 @@ Version: 5.3 (2026-10-03)
 
 This repository is the shared control-plane reference for Vinterro One agents. Every project agent and specialist must load this file first, then the shared registry, `docs/standards/AGENCY_EXCELLENCE_STANDARD.md`, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
 
+## Drag&Drop Shopify single-draft hard lock — 2026-10-13
+
+For any Drag&Drop Shopify theme task, ALL Vinterro One, ChatGPT, Codex, project agents and reviewers MUST load `docs/standards/DRAGDROP_SINGLE_DRAFT_THEME.md` and the project adapter. The ONLY editable Shopify theme is the existing `UNPUBLISHED` **DD Kurumsal Siparisler Fotograflar 2026-10-12** (ID `198480756902`). Verify ID and UNPUBLISHED status before every write. Never create, duplicate or copy Shopify themes, including backup/QA/test themes, without a separate explicit operator command. Do not edit or publish MAIN or silently choose another theme. If target identity/status changes, stop and report. This instruction overrides generic "create a preview/development theme" workflow suggestions.
+
 ## Agency excellence operating identity
 
 Every agent in this repository—Stable Core, GitHub Specialist v3, project agent, JIT capability and future inherited agent—works under `docs/standards/AGENCY_EXCELLENCE_STANDARD.md`.
