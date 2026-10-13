@@ -7,6 +7,10 @@ Inherit repository root `AGENTS.md`, `docs/standards/AGENT_ENGINEERING.md`, `PLA
 - Customer/designer application surfaces may use `draganddrop.online` where the live site links there.
 - Platform: Shopify storefront/e-commerce. Do **not** route this project through WordPress/Hostinger rules unless a separate explicitly named sub-system actually uses them.
 
+## Mandatory single-draft Shopify theme policy (operator-locked 2026-10-13)
+
+Load `docs/standards/DRAGDROP_SINGLE_DRAFT_THEME.md` before **every Shopify theme edit**. Target solely **DD Kurumsal Siparisler Fotograflar 2026-10-12**, theme `198480756902`, role `UNPUBLISHED`. No theme clone, duplicate, QA copy, development theme creation, publication, live-theme modification or arbitrary target switching without an explicit, separate operator instruction. Verify store + theme ID + role before each change; patch the existing draft minimally; read back and independently check. For ordinary storefront UI fixes, do not create another Shopify theme under any circumstances. The user's directive supersedes older generic QA language suggesting development-theme creation.
+
 ## Primary role
 `@DragDrop` project owner + `@ShopifyExpert` platform owner with qualified v3 specialist pods and independent QA.
 
