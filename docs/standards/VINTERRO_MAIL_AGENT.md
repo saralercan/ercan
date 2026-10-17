@@ -113,9 +113,11 @@ The `send_attempt_token` returned by prepare is mandatory. Gmail send without th
 
 Historical suppressions are authoritative. The canonical claim table is backfilled from historical outreach so a record created before the atomic gate still blocks a fresh first-touch when the email/domain/account resolves to prior contact.
 
-## Live release-state prerequisite — 2026-10-09
+## User-directed first-touch checks — 2026-10-11
 
-For **every** Vinterro Digital production cold first-touch, including a first-touch example/test, first read the current Vinterro One `public.vinterro_sales_super_agent_state.health.outreach_first_touch_release_gate` under `id='primary'`. If the state cannot be read, is missing, or is not exactly `OPEN`, return `BLOCKED` **without** invoking any Gmail send tool. Direct Gmail access is not an exception. Agent activation and user shorthand like “devam” cannot independently reopen a blocked incident. Only after an explicitly QA-approved release state `OPEN` may the canonical atomic prepare token, Gmail history dedupe, and SENT/claim ledger finalization run. Do not claim the release gate is an actual global Gmail transport restriction: it is enforced by conforming Vinterro code and agents, and nonconforming paths must be detected/remediated. The live blocked incident is `66199d3f-23a6-4700-931f-6d3553f0d321`.
+The historic Vinterro One-wide `outreach_first_touch_release_gate` OPEN/BLOCKED flag is **retired**; do not read it or recreate it. The user may authorize a MailAgent campaign independently of the inactive Vinterro One executor. This is not a second permission request. Before each real first-touch, verify independent safety facts from the canonical Supabase state: `outreach_first_touch_review_status='CLEARED'`, `outreach_platform_channel_safety_verified=true`, and `mail_domain_authentication_gate='PASS'`. If a fact is missing, do not send: reconcile the identity and provider evidence without bypass attempts. Independent Gmail provider/platform restrictions remain binding.
+
+Then verify official public business contact, account/brand/domain/alias dedupe against all Gmail SENT/thread/replies/DSN/opt-out and historical claims; call `public.vinterro_prepare_first_touch` and require `allowed=true` with atomic token. Send only from `info@vinterro.digital`, as an individual approved first-touch with the canonical HTML, no BCC/attachments. Confirm real Gmail SENT/raw MIME and finalize the claim. Never send inbound prospect replies without explicit user approval. Historic duplicate incidents remain in the evidence trail; deleting the obsolete global flag does not erase them.
 
 ## Sender identity
 
