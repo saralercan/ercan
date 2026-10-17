@@ -1,0 +1,20 @@
+name: Vinterro One Operator Command Contract
+on:
+  pull_request:
+    paths:
+      - 'AGENTS.md'
+      - 'docs/standards/VINTERRO_ONE_OPERATOR_ONLY.md'
+      - 'services/vinterro-sales-worker/**'
+      - '.github/workflows/vinterro-one-operator-command-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-operator-command-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Run isolated worker contract tests without starting a service
+        run: node --test services/vinterro-sales-worker/worker.test.mjs

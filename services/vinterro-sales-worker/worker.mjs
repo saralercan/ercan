@@ -18,7 +18,20 @@ export function configOk() {
   );
 }
 
-export async function runTick(fetchImpl = fetch) {
+// Defense in depth: only a trusted, authenticated front door may attest
+// a fresh operator instruction. Never trust a browser-provided attestation.
+export function hasOperatorCommand(command, now = Date.now()) {
+  if (!command || command.origin !== "authenticated_user" || command.verifiedByTrustedBoundary !== true || command.replayProtectionConfirmed !== true) return false;
+  if (typeof command.userId !== "string" || command.userId.trim().length === 0) return false;
+  if (typeof command.commandId !== "string" || !/^[a-zA-Z0-9._:-]{8,128}$/.test(command.commandId)) return false;
+  if (command.action !== "vinterro.sales.tick") return false;
+  const issued = Date.parse(command.issuedAt);
+  const expires = Date.parse(command.expiresAt);
+  return Number.isFinite(issued) && Number.isFinite(expires) && issued <= now + 30000 && now < expires && expires > issued && expires - issued <= 6 * 60 * 60 * 1000;
+}
+
+export async function runTick(fetchImpl = fetch, command = null) {
+  if (!hasOperatorCommand(command)) throw new Error("explicit_operator_command_required");
   if (!configOk()) {
     throw new Error("worker_misconfigured");
   }
@@ -83,7 +96,8 @@ async function tickSafely() {
 export function createHealthServer() {
   return http.createServer((req, res) => {
     if (req.method === "GET" && req.url === "/health") {
-      const healthy = configOk() && Boolean(lastSuccessAt);
+      // STANDBY is healthy when correctly configured; do not claim an active run.
+      const healthy = configOk();
       res.writeHead(healthy ? 200 : 503, {
         "content-type": "application/json; charset=utf-8",
         "cache-control": "no-store",
@@ -91,6 +105,8 @@ export function createHealthServer() {
       });
       res.end(JSON.stringify({
         ok: healthy,
+        mode: "operator_only_standby",
+        active: false,
         worker_id: WORKER_ID,
         configured: configOk(),
         in_flight: inFlight,
@@ -121,16 +137,13 @@ export function startWorker() {
     }));
   });
 
-  if (configOk()) {
-    void tickSafely();
-    setInterval(() => void tickSafely(), TICK_INTERVAL_MS).unref();
-  } else {
-    console.error(JSON.stringify({
-      level: "error",
-      event: "worker_misconfigured",
-      worker_id: WORKER_ID
-    }));
-  }
+  // No timer and no boot-time tick. Only an authenticated manual command
+  // routed through a trusted caller may invoke runTick(fetchImpl, command).
+  console.log(JSON.stringify({
+    level: configOk() ? "info" : "error",
+    event: configOk() ? "worker_standby_operator_only" : "worker_misconfigured",
+    worker_id: WORKER_ID
+  }));
 
   return server;
 }
