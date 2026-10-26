@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "Vinterro Digital Creative Presentation Default",
+  "version": "1.0.0",
+  "adopted_on": "2026-10-26",
+  "reference": "SkiHub_QA_Vinterro_Creative_2026-10-26",
+  "status": "operator-approved-default-not-live-brand-token-audit",
+  "scope": [
+    "presentation",
+    "pptx",
+    "report",
+    "qa-report",
+    "pitch-deck",
+    "proposal-deck",
+    "pdf",
+    "html-report",
+    "executive-deck"
+  ],
+  "fontFamilies": {
+    "primary": [
+      "Inter",
+      "Noto Sans",
+      "Arial",
+      "sans-serif"
+    ],
+    "editorial": [
+      "Georgia",
+      "serif"
+    ]
+  },
+  "colors": {
+    "ink": "#111317",
+    "navy": "#19222E",
+    "paper": "#FFFEFA",
+    "cream": "#F7F5F0",
+    "mint": "#BFF8AE",
+    "ice": "#D6E5E5",
+    "lime": "#DDFF64",
+    "blue": "#5C74EF",
+    "coral": "#F37C62",
+    "pink": "#F7CBCA",
+    "violet": "#AD9CFF",
+    "muted": "#6B7277",
+    "hairline": "#DCDEDB"
+  },
+  "spacingPx": {
+    "base": 8,
+    "reportSectionMin": 40,
+    "reportSectionMax": 64,
+    "cardGapMin": 12,
+    "cardGapMax": 20,
+    "cardPaddingMin": 22,
+    "cardPaddingMax": 32
+  },
+  "layout": {
+    "defaultSlideAspectRatio": "16:9",
+    "slideHorizontalSafeMarginPercent": [
+      5,
+      7
+    ],
+    "reportDesktopMaxWidthPx": 1640,
+    "reportSidebarPx": 210,
+    "roundedRadiusPx": 18
+  },
+  "rules": {
+    "realEvidenceOnly": true,
+    "nativeEditablePptxWhenRequested": true,
+    "humanArtDirectedNoGenericAiTemplates": true,
+    "allSlidesRenderedAndVisuallyReviewed": true,
+    "independentQa": true,
+    "statusColorsAlsoTextLabeled": true,
+    "clientBrandOverride": true,
+    "neverLoseContent": true
+  }
+}
