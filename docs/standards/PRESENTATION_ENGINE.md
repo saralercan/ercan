@@ -6,6 +6,11 @@ Date: 2026-09-23
 Purpose: govern creation, revision, export and QA of presentations, PowerPoint decks, pitch decks, proposal decks, report decks and academic/scientific slide decks in Ercan OS.
 
 JIT skill: `.agents/skills/presentation-agent-pack/SKILL.md`
+Default visual/creative standard (operator-approved 2026-10-26): `docs/standards/VINTERRO_PRESENTATION_CREATIVE_STYLE.md`
+Machine-readable design tokens: `docs/standards/VINTERRO_PRESENTATION_CREATIVE_TOKENS.json`
+Creative presentation QA: `docs/evals/VINTERRO_PRESENTATION_CREATIVE_REGRESSION.md`
+
+**Persistent default:** Every subsequent presentation, proposal, deck, visual audit/QA report or presentation-style PDF/HTML MUST use the SkiHub QA Vinterro Creative v3-derived design system as the starting art direction. Client brand, user-specified template and higher-priority correctness/accessibility/editability requirements take precedence. Never simplify away evidence, tests or factual content to fit the look. Different slide/report types require different layouts; do not copy one page mechanically.
 Upstream review: `docs/upstream/scans/2026-09-23-presentation-agent-scan.md`
 Latest specialist expansion: `docs/upstream/scans/2026-09-24-presentation-studio-agent-v2.md`
 Regression eval: `docs/evals/PRESENTATION_ENGINE_REGRESSION.md`

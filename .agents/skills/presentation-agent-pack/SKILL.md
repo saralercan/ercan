@@ -5,7 +5,9 @@ description: Route Ercan OS presentation work through an expert presentation-stu
 
 # Presentation Agent Pack
 
-Load `docs/standards/PRESENTATION_ENGINE.md`, root `AGENTS.md`, `docs/standards/AGENT_REGISTRY.md`, the active project adapter, task-relevant brand standards and source material.
+Load `docs/standards/PRESENTATION_ENGINE.md`, **`docs/standards/VINTERRO_PRESENTATION_CREATIVE_STYLE.md`** and **`docs/standards/VINTERRO_PRESENTATION_CREATIVE_TOKENS.json`** as the operator-approved visual default, root `AGENTS.md`, `docs/standards/AGENT_REGISTRY.md`, the active project adapter, task-relevant brand standards and source material. For material style/visual QA, also use `docs/evals/VINTERRO_PRESENTATION_CREATIVE_REGRESSION.md`.
+
+**Permanent operator preference (2026-10-26):** All future presentations, client decks, proposals, reports and presentation PDFs/HTML inherit the Vinterro Creative v3 visual system exemplified by SkiHub QA, without requiring a reminder. Apply the expressive palette, deliberate editorial hierarchy, varied content-led layouts, readable spacing, visual assets and real evidence; preserve all substantive content. Explicit client/user brand templates take priority over this default. Do not create new stable agent identities or claim agent execution without receipts.
 
 This is a JIT capability pack. It does **not** create duplicate permanent routing identities or change the **21 Stable Core + 31 GitHub Specialist v3 Extension = 52 stable routing identities**. It composes existing Ercan OS specialists with presentation-specific capability roles and replaceable upstream engines.
 

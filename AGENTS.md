@@ -2,6 +2,10 @@
 
 Version: 5.3 (2026-10-03)
 
+## Permanent creative presentation default — 2026-10-26
+
+All Vinterro One/ChatGPT/Codex presentation-related requests (`/agent`, `@Presentation`, PowerPoint, pitch, customer proposal, QA/report presentation, PDF/HTML presentation) MUST route through `.agents/skills/presentation-agent-pack/SKILL.md` and load `docs/standards/PRESENTATION_ENGINE.md` + `docs/standards/VINTERRO_PRESENTATION_CREATIVE_STYLE.md` + `docs/standards/VINTERRO_PRESENTATION_CREATIVE_TOKENS.json`. The operator-approved SkiHub QA Vinterro Creative v3 direction is the default for **all future presentations**, without further reminders. Prioritize colorful editorial human art direction, consistent spacing, evidence-preserving content, independent visual QA and native editability as requested. An explicit customer/user brand or existing mandatory template overrides palette/layout choices; safety, factual integrity, accessibility and format obligations never yield to decoration. Read `docs/evals/VINTERRO_PRESENTATION_CREATIVE_REGRESSION.md` when reviewing outputs. This is a routing/style rule only; it does not dispatch agents or authorize an external action by itself.
+
 This repository is the shared control-plane reference for Vinterro One agents. Every project agent and specialist must load this file first, then the shared registry, `docs/standards/AGENCY_EXCELLENCE_STANDARD.md`, the matching `projects/<slug>/AGENTS.md` adapter, relevant standards under `docs/standards/`, and finally task-local evidence. More specific project/path rules override general implementation guidance, but never override safety, honesty, scope-preservation, or verification gates.
 
 ## Drag&Drop Shopify single-draft hard lock — 2026-10-13
