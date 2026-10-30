@@ -20,6 +20,14 @@ This skill owns **cold first-touch / tanışma outreach** only. Once a recipient
 7. current source list / Excel and Gmail SENT evidence
 8. current public product/collection evidence when the source list does not already provide enough verified product detail
 
+## Canonical 24 Ekim 2026 ilk temas — permanent override (2026-10-30)
+
+**SOURCE OF TRUTH:** `docs/standards/DRAGDROP_OUTREACH_CANONICAL_TEMPLATE.html` is now the HTML and body of the successful Notaret first contact (`SENT` Gmail id `1a16e962e68a72e7`, 24 Oct 2026). Its entire common body, CTA shell and footer are LOCKED; only `[[MARKA_ADI]]` and `[[DOGRULANMIS_MARKA_URUN_GIRISI]]` may be customized from verified official sources. Do not append the old expanded commercial-model/operations paragraphs, newly invented European sales guarantees, commission figures, or other legacy standard copy. This rule supersedes any conflicting earlier first-touch body recommendations below while preserving mandatory authenticity, language, opt-out, dedupe, permission and QA gates.
+
+For a verified non-Turkish locale, adapt the complete 24 Oct meaning consistently in one language only after review; do not insert mixed-language fragments. This source remains authoritative across new conversations that load the Drag&Drop agents.
+
+User authorization for a named group is not a way to bypass provider blocks or ignored opt-outs. Never re-attempt a blocked send through another channel/format. Source edits do not deploy or send anything.
+
 ## Locked operating rules
 
 1. İlk temas mailinde gerçek ürün/koleksiyon incelenmiş olacak. Geçmiş temas yoksa “yeniden inceledik”, “uzun süredir takip ediyoruz” gibi geçmiş temas ima eden ifadeler kullanılmayacak.
