@@ -40,6 +40,17 @@ For every reply to an inbound customer/designer/brand message:
    - returned thread id matches the conversation thread.
 9. If any gate fails, final state is `BLOCKED` or `NOT_VERIFIED`; never claim the reply was sent correctly.
 
+## 24 Ekim 2026 kilitli ilk tanışma e-postası — KALICI ÖNCELİK (2026-10-30)
+
+Bu bölüm, ilk temas/tanışma e-postasında önceki 8 Ekim gövde kurgusunun, zorunlu komisyon/operasyon/aktif Avrupa vaadi paragrafı ekleme eğiliminin ve alternatif şablon kullanımının **yerine geçer**.
+
+- **Tek kanonik dosya:** `docs/standards/DRAGDROP_OUTREACH_CANONICAL_TEMPLATE.html`. Bu dosya 24 Ekim'de `info@notaret.com` adresine gönderilen ve olumlu yanıt alan `SENT` kaydı `1a16e962e68a72e7` kaynak alınarak birebir HTML kabuk ve gövdeyle kilitlenmiştir. Kullanıcı farklı bir sohbet penceresinde de Drag&Drop ilk tanışma maili veya `gönder` dese bile önce bu dosyayı yükle.
+- **Sadece iki değişken:** `[[MARKA_ADI]]` ve resmî marka/ürün kaynağına dayalı `[[DOGRULANMIS_MARKA_URUN_GIRISI]]`. Başlık, CTA, B2C / B2B / Avrupa metni, görsel kabuk, iki kırmızı ayraç, RET, imza ve tüm bağlantılar değiştirilmez. Dil uyarlaması gerekirse aynı anlamı/biçimi koruyan ayrı çeviri ve ön-onay gerekir; Türkçe-İngilizce karışık gönderilmez.
+- **İlk temasta rakam ekleme yok:** Komisyon, KDV, ödeme takvimi, kargo taahhüdü, distribütörlük yetkisi veya doğrulanmamış satış/ülke garantisi ekleme. İş modelinin kesin koşulları sadece ilgilenen markayla mevcut yazışma zincirinde konuşulur.
+- **Marka ilişkisi QA:** Gmail SENT geçmişi (marka + alan adı + tam adres), gelen yanıt, ret/opt-out, kabul, toplantı, mevcut iş birliği, bounce ve daha önce engellenen gönderim kontrol edilmeden yeni ilk temas yok. Yanıt verenlerle yalnız bağlama uygun mevcut zincirden devam edilir. “Küratörlü değerlendirme / seçilme” gibi muhatabın markasını yargılayan dilin itiraz gördüğü kayıtlar için yeniden temas yapılmaz.
+- **Gönderim yetkisi:** Kullanıcının açıkça onayladığı 20'lik grup gibi sınırlı talep ancak aday/yerelleştirme/içerik QA ve mevcut dış mesaj kontrolleri geçerse işlenebilir. Engellenmiş Gmail gönderimini başka yöntem, hesap, biçim veya aracıyla aşma. Her başarılı gönderimi gerçek `SENT` kaydıyla doğrula; `SENT` teslim/olumlu yanıt değildir. Bu kaynak değişikliği kendi başına e-posta gönderimi veya ajan/deploy çalıştırmaz.
+- **Kaynak arşivi:** ChatGPT Library `/DragDrop_Outreach_24Ekim/DragDrop_24Ekim_Notaret_ORIJINAL.html`, `DragDrop_24Ekim_ANA_SABLON_KILITLI.html`, `DRAGDROP_24EKIM_SABLON_KURALLARI.md`. GitHub bu kanonik dosya ve ajan standardı, yeni sohbetlerde esas alınacaktır.
+
 ## Cold first-touch / Tanışma Maili hard route
 
 Canonical skill: `.agents/skills/dragdrop-outreach-intro/SKILL.md` (portable plugin equivalent: `dragdrop-outreach-intro`).
@@ -58,7 +69,7 @@ For any cold first-touch designer/brand outreach:
 - dedupe every candidate against Gmail SENT by brand + exact email + domain, plus bounce/opt-out/relationship suppression;
 - when using a source Excel/list alphabetically, skip non-clean rows and continue until the requested number of unique clean recipients is reached.
 
-When the user requests an example, send the first clean real candidate to `ercansaral@gmail.com` from `info@draganddrop.tr` using the exact production candidate and canonical HTML. Production remains blocked until the user approves the batch/send. Once a specific batch is explicitly approved, per-recipient re-approval is not required unless a material exception changes terms, locale, relationship state or risk.
+When the user requests an example, prepare the 24 Ekim 2026 canonical first-touch preview for the user; if external sending is explicitly requested, honor the current provider safety/send gates before attempting any send. Production remains blocked until the user approves the batch/send. Once a specific batch is explicitly approved, per-recipient re-approval is not required unless a material exception changes terms, locale, relationship state or risk.
 
 If the recipient replies or an existing active thread is found, cold-outreach ownership ends and the workflow moves to `Drag&Drop Müşteri Temsilcisi Ajanı` + `Drag&Drop Mail Ajanı` in that same Gmail thread.
 
