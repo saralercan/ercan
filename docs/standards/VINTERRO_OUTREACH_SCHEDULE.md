@@ -1,7 +1,7 @@
 # Vinterro Digital Outreach Schedule & Copy Policy
 
 Status: active  
-Version: 1.0 (2026-09-29)  
+Version: 2.0 (2026-10-30)  
 Timezone: Europe/Istanbul
 
 This file is the canonical shared rule for **Vinterro One → Sales · AutoGTM → Vinterro Sales Super Agent** outreach scheduling and for the copy produced by the Mail and Text/Copy agents. It does not create a second campaign database, queue or CRM source of truth.
@@ -13,29 +13,33 @@ Run two daily first-touch outreach slots:
 - **08:00 Europe/Istanbul**
 - **20:00 Europe/Istanbul**
 
-Each slot has a separate quota of **10 successful, new, qualified businesses per region**.
+Each slot may contact **up to 30 new, distinct, verified, qualified businesses per region**. Targets are conditional on candidate quality, independent account/identity review, provider/platform permission and the mandatory per-message atomic prepare token.
 
-Canonical regions:
+Canonical 12 non-overlapping regions:
 
 1. Türkiye
-2. Yunanistan geneli
+2. Yunanistan anakarası / geneli (**Sisam, Midilli, Sakız ve Kos hariç**)
 3. Tiflis / Gürcistan
-4. Sisam
-5. Midilli
-6. Sakız
+4. Sisam / Samos
+5. Midilli / Lesvos
+6. Sakız / Chios
 7. İstanköy / Kos
 8. Bulgaristan
 9. Romanya
+10. Almanya
+11. Fransa
+12. Dubai / Birleşik Arap Emirlikleri
 
 Therefore:
 
-- per slot target: **90 successful first-touch emails**
-- daily target: **180 successful first-touch emails**
-- 08:00 cohort and 20:00 cohort must contain different businesses
+- per slot maximum target: **360** new qualified first-touch Gmail SENT records
+- daily maximum target: **720**, subject to genuine eligibility and platform permission
+- 08:00 and 20:00 cohorts must contain different businesses
 - an overage in one region never fills another region's quota
-- a failed/bounced/unresolved-delay message does not count as a successful quota unit
+- previous SENT, reply, bounce, opt-out, alias/domain/account conflict, or ambiguous delivery blocks another initial contact
+- failed/bounced/unresolved-delay messages do not count as successfully delivered quota units
 
-If a region does not have enough genuinely qualified, publicly contactable businesses, leave that region short and report the real gap. Never weaken qualification merely to fill quota.
+**Keep the recurring outreach schedule in place unless the user explicitly stops it.** If sending is prohibited or the per-message permission returns `allowed=false` or lacks a valid token, continue permitted research, dedupe, copy and draft QA without sending. Never bypass provider/platform controls. Never restart the Vinterro One executor without explicit user authorization. Send only from `info@vinterro.digital`; no BCC or first-touch attachments. Customer replies require separate explicit approval.
 
 ## Shared ownership
 
@@ -144,11 +148,14 @@ Language:
 - Greek regions: natural professional Greek;
 - Tiflis / Gürcistan: professional English unless a better verified locale is explicitly selected;
 - Bulgaristan: natural professional Bulgarian;
-- Romanya: natural professional Romanian.
+- Romanya: natural professional Romanian;
+- Almanya: natural professional German;
+- Fransa: natural professional French;
+- Dubai / BAE: professional English, or natural Arabic where appropriate.
 
 Use the canonical Vinterro Digital email visual shell and signature defined in:
 - `docs/standards/VINTERRO_MAIL_AGENT.md`
-- `docs/standards/VINTERRO_MAIL_CANONICAL_TEMPLATE.html`
+- `docs/standards/VINTERRO_OUTREACH_CANONICAL_TEMPLATE.html` (locked, approved outreach HTML)
 
 ## Slot execution and QA
 
@@ -160,11 +167,15 @@ For each region and slot:
 4. inspect the first real SENT message for that region/slot;
 5. verify sender, body alignment, signature, personalization, explicit web action, relevant Google/Meta offer and CTA;
 6. if the first-send QA is malformed or generic, stop the remaining sends for that region/slot;
-7. verify each send in Gmail SENT;
+7. verify each send in Gmail SENT, then record message ID, thread ID, time and raw MIME evidence;
 8. reconcile new DSN/bounce/failure/delay events;
 9. replace failed quota units only with a completely new qualified business from the same region;
 10. do not resend to the bounced business under another email address;
 11. update the canonical account/activity ledger.
+
+## Mandatory pre-send permission
+
+For each candidate, reconcile Gmail SENT, prior claims, bounce and opt-out at business, domain, brand, alias and all known email levels. The canonical `public.vinterro_prepare_first_touch(...)` must return `allowed=true` and a valid `send_attempt_token` for that individual message. Independently confirm sender account/alias, current provider/channel permission, and domain authentication. If any requirement fails, do not send and do not record success; research and permitted draft QA may continue. The historical release-switch convention is retired and must not be restored.
 
 ## Success accounting
 
