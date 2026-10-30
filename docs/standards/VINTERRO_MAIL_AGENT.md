@@ -53,19 +53,15 @@ The behavior is project-level and should remain consistent across chats when rep
 
 Load `docs/standards/VINTERRO_OUTREACH_SCHEDULE.md` for every scheduled or user-invoked Vinterro Digital first-touch outreach run.
 
-The canonical daily contract is:
-- 08:00 Europe/Istanbul: 10 successful new qualified businesses per region;
-- 20:00 Europe/Istanbul: 10 successful new qualified businesses per region;
-- regions: Türkiye, Yunanistan geneli, Tiflis/Gürcistan, Sisam, Midilli, Sakız, İstanköy/Kos, Bulgaristan, Romanya;
-- 90 successful first-touch emails per slot, 180 per day when all regional quotas can be truthfully satisfied;
-- morning and evening cohorts must use different businesses;
-- quotas are region-local and cannot be borrowed across regions;
-- hard bounce/failure and unresolved delay do not count toward success;
-- replacement must be a completely new qualified business from the same region;
-- never weaken qualification or bypass account-level dedupe to fill quota.
+- Slots: 08:00 and 20:00, Europe/Istanbul, daily.
+- Regions: Türkiye; Yunanistan anakarası/geneli excluding Sisam/Midilli/Sakız/Kos; Tiflis/Gürcistan; Sisam; Midilli; Sakız; Kos; Bulgaristan; Romanya; Almanya; Fransa; Dubai/BAE.
+- Up to 30 genuinely new, unique, qualified and verified businesses per region per slot; maximum target 360/slot, 720/day, conditional on eligibility and platform permission.
+- Region quotas cannot transfer; morning and evening accounts must be distinct. Gmail SENT acceptance is evidence of submission, not proof of delivery.
+- Language: TR, EL, EN for Georgia, BG, RO, DE, FR, EN or suitable AR for Dubai.
+- User's recurring instruction remains active unless explicitly stopped; sending restrictions must never be bypassed. Continue research and permitted drafts when send is unavailable.
+- Do not restart the Vinterro One executor without explicit user permission. Replies to incoming customers require separate explicit approval.
 
-The same file is the source of truth for the outreach Text/Copy Agent so scheduling, evidence, language and copy standards cannot drift between agents.
-
+The schedule file is the source of truth for the outreach Text/Copy Agent as well.
 
 ## Account-level atomic dedupe hard gate
 
@@ -113,9 +109,11 @@ The `send_attempt_token` returned by prepare is mandatory. Gmail send without th
 
 Historical suppressions are authoritative. The canonical claim table is backfilled from historical outreach so a record created before the atomic gate still blocks a fresh first-touch when the email/domain/account resolves to prior contact.
 
-## Live release-state prerequisite — 2026-10-09
+## Current independent first-touch prerequisites
 
-For **every** Vinterro Digital production cold first-touch, including a first-touch example/test, first read the current Vinterro One `public.vinterro_sales_super_agent_state.health.outreach_first_touch_release_gate` under `id='primary'`. If the state cannot be read, is missing, or is not exactly `OPEN`, return `BLOCKED` **without** invoking any Gmail send tool. Direct Gmail access is not an exception. Agent activation and user shorthand like “devam” cannot independently reopen a blocked incident. Only after an explicitly QA-approved release state `OPEN` may the canonical atomic prepare token, Gmail history dedupe, and SENT/claim ledger finalization run. Do not claim the release gate is an actual global Gmail transport restriction: it is enforced by conforming Vinterro code and agents, and nonconforming paths must be detected/remediated. The live blocked incident is `66199d3f-23a6-4700-931f-6d3553f0d321`.
+For every new first-touch message, verify current independent sender-account and alias review, trusted Gmail provider/channel permission, current domain authentication, full Gmail and account-level dedupe, and an atomic `public.vinterro_prepare_first_touch(...)` result containing `allowed=true` and a valid `send_attempt_token`. If any prerequisite is absent, unclear or denied, do not invoke Gmail send. Continue qualified research, identity reconciliation and permitted draft/MIME QA; never count a draft as SENT. Respect platform and provider restrictions. The retired historical release-switch convention must not be reintroduced.
+
+After a real send, read Gmail SENT, preserve message ID, thread ID, timestamp and MIME evidence, and finalize the canonical claim/ledger. Never send an inbound reply without separate explicit user approval.
 
 ## Sender identity
 
