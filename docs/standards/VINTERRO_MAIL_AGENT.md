@@ -49,6 +49,20 @@ The phrases `mail ajanı`, `@MailAgent`, `Vinterro Digital outreach çalıştır
 
 The behavior is project-level and should remain consistent across chats when repository/project context is available.
 
+## Operator-commanded outbound sending — 2026-10-11
+
+This separates **user authority to request a send** from **technical permission to deliver a particular message**. There is no permanent autonomous sending authorization.
+
+- **Default standby:** no new sends, queued-run retries, follow-ups, campaign continuation or automatic dispatch without a fresh authenticated operator instruction naming the sender, target/scope and requested action. A request to draft or inspect is not consent to send. A user stop instruction is respected until explicitly lifted.
+- **One command, one bounded campaign:** within an expressly authorized 10/50/250-message batch, agents may run copy QA, dedupe, preflight and permitted provider-limited processing without asking the operator for each individual send. The authorized maximum is not a guaranteed delivery count. Stop when the authorized batch scope is exhausted.
+- **Separate lanes:** first-time commercial outreach, same-thread customer reply and owner-addressed test mail are distinct operations. Never treat a failed first-touch check as proof that all read-only work, drafting or unrelated non-cold-mail channels must stop. Existing specific send restrictions on any lane remain in force until separately reviewed and changed.
+- **First-touch remains protected:** each prospect must pass historical Gmail/CRM reconciliation, account-level atomic claim, opt-out/bounce suppression, recipient/business identity review, sender SPF/DKIM/DMARC and provider restrictions. First-touch release must be explicitly verified OPEN before its RPC permits an outbound message. Do not route around that check with direct Gmail or a different agent.
+- **Pause and readiness are separate:** owner pause is controlled only by the operator; an agent or migration cannot infer, set or clear it from a security finding. REVIEW_REQUIRED describes a release review, not an owner pause. A user-disabled executor cannot be silently changed. Only an authenticated, narrowly scoped operator action can start an eligible run.
+- **Isolate failures:** record per-recipient reasons such as duplicate, opt-out, invalid identity, authentication failure, provider quota or transient delivery uncertainty. Do not mark an entire unrelated campaign blocked due to one recipient, or retry an uncertain send until SENT/thread history has been reconciled.
+- **Evidence and reporting:** distinguish DRAFTED, READY, ATTEMPTED, SENT, REJECTED, BOUNCED, SUPPRESSED and REVIEW_REQUIRED. Never count a draft or an ambiguous Gmail tool response as sent. Preserve provider receipts and immutable audit events. Never promise delivery based solely on code/test status.
+
+Source changes alone do not open production sending or authorize deployment. The operator-only dispatcher, actual release readiness, sender DNS authentication and provider compliance must be verified independently in production.
+
 ## Canonical outreach schedule and quota policy
 
 Load `docs/standards/VINTERRO_OUTREACH_SCHEDULE.md` for every scheduled or user-invoked Vinterro Digital first-touch outreach run.

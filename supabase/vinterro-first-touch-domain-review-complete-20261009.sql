@@ -1,7 +1,7 @@
 -- Vinterro Digital: comprehensive corporate-domain manual review for canonical website AND all supplied mailboxes.
 -- Supersedes superseded first version in PR #125, which was merged but not applied.
 -- Does not send Gmail, auto-merge brands, or mark domain as a verified account identity.
--- Existing global release gate remains BLOCKED.
+-- Global first-touch release remains REVIEW_REQUIRED pending independent verification.
 create index if not exists outreach_gmail_sent_evidence_domain_idx
 on vinterro_internal.outreach_gmail_sent_evidence ((split_part(recipient_email,'@',2)));
 
@@ -29,14 +29,25 @@ begin
     return jsonb_build_object('allowed',false,'reason','invalid_identity');
   end if;
 
-  -- Fail closed at canonical send boundary. A flag cannot itself block
-  -- direct Gmail access; every conforming first-touch path must call this.
+  -- Only an explicit owner action may pause the overall outreach workflow.
+  -- Provider-channel and identity checks remain separate and fail closed for
+  -- actual first-touch sends; this RPC never auto-writes a pause/block state.
+  if coalesce((
+      select lower(health->>'outreach_owner_paused') = 'true'
+      from public.vinterro_sales_super_agent_state
+      where id = 'primary'
+    ), false) then
+    return jsonb_build_object('allowed',false,'reason','outreach_paused_by_owner');
+  end if;
+
+  -- REVIEW_REQUIRED is the neutral unverified status, not an owner pause.
+  -- Only a separately verified release=OPEN can reach atomic dedupe.
   if coalesce((
       select health->>'outreach_first_touch_release_gate'
       from public.vinterro_sales_super_agent_state
       where id = 'primary'
-    ), 'BLOCKED') <> 'OPEN' then
-    return jsonb_build_object('allowed',false,'reason','first_touch_release_gate_blocked');
+    ), 'REVIEW_REQUIRED') <> 'OPEN' then
+    return jsonb_build_object('allowed',false,'reason','first_touch_verification_required');
   end if;
 
   -- Serialize prepare across distinct keys/alias sets so two parallel
