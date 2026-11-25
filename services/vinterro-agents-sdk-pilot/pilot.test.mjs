@@ -15,13 +15,27 @@ test("synthetic handoff verified and never marked production execution", async (
     assert.equal(options.maxTurns, 3);
     assert.equal(agent.handoffs.length, 1);
     assert.equal(agent.tools, undefined);
-    return { finalOutput: nonce, lastAgent: agent.handoffs[0] };
+    return { finalOutput: nonce, lastAgent: agent.handoffs[0], lastResponseId: "resp_mock_only", state: { usage: {requests:2,inputTokens:12,outputTokens:5} } };
   }}));
   assert.equal(result.status, "passed");
   assert.equal(result.production_execution, false);
+  assert.equal(result.provider_request_id,"resp_mock_only");
+  assert.equal(result.requests,2);
 });
 test("a fabricated or wrong final answer fails closed", async () => {
   await assert.rejects(smoke(env, async () => ({ Agent, run: async (agent) => ({
     finalOutput: "wrong", lastAgent: agent.handoffs[0]
   }) })), /handoff_or_output_not_verified/);
+});
+
+test("matching output without provider evidence fails closed", async () => {
+  await assert.rejects(smoke(env, async () => ({ Agent, run: async (agent, nonce) => ({
+    finalOutput: nonce, lastAgent: agent.handoffs[0]
+  }) })), /provider_evidence_missing/);
+});
+test("single request cannot prove a two-agent handoff", async () => {
+  await assert.rejects(smoke(env, async () => ({ Agent, run: async (agent, nonce) => ({
+    finalOutput: nonce, lastAgent: agent.handoffs[0], lastResponseId:"resp_mock",
+    state:{usage:{requests:1,inputTokens:5,outputTokens:3}}
+  }) })), /provider_evidence_missing/);
 });
