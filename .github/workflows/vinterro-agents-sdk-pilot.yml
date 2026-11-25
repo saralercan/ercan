@@ -31,7 +31,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: node --input-type=module -e 'import { Agent, run } from "@openai/agents"; if(typeof Agent !== "function" || typeof run !== "function") process.exit(1); const reviewer = new Agent({name:"Reviewer", instructions:"Synthetic test only"}); new Agent({name:"Coordinator",handoffs:[reviewer]});'
       - uses: actions/upload-artifact@v4
