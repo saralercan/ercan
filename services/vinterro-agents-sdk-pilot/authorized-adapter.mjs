@@ -28,3 +28,26 @@ export async function executeAuthorized({runId, workerId, rpc, provider, release
       receipt.independent_supervision_required !== true) throw Error("receipt_unverified");
   return {status:"under_review",execution_verified:false,receipt_recorded:true};
 }
+
+// Optional isolated entry point: reserve a bounded allowance atomically before
+// invoking the provider. The reservation backend must reject duplicate run IDs
+// durably; an ambiguous reservation or provider failure is never refunded here.
+// The provider must enforce the supplied limits before making any API request.
+export async function executeBudgeted({reserve, maxInputTokens, maxOutputTokens, provider, ...options}) {
+  if (typeof reserve !== "function" || typeof provider !== "function" ||
+      !Number.isSafeInteger(maxInputTokens) || maxInputTokens <= 0 ||
+      !Number.isSafeInteger(maxOutputTokens) || maxOutputTokens <= 0 ||
+      !Number.isSafeInteger(maxInputTokens + maxOutputTokens)) throw Error("invalid_budget");
+  return executeAuthorized({...options, provider: async ({runId,workerId}) => {
+    const limits = {runId,workerId,maxInputTokens,maxOutputTokens};
+    const grant = await reserve({...limits});
+    if (grant?.approved !== true || grant.runId !== runId ||
+        grant.workerId !== workerId || grant.maxInputTokens !== maxInputTokens ||
+        grant.maxOutputTokens !== maxOutputTokens) throw Error("budget_denied");
+    const result = await provider({...limits});
+    if (!Number.isSafeInteger(result?.inputTokens) || result.inputTokens > maxInputTokens ||
+        !Number.isSafeInteger(result?.outputTokens) || result.outputTokens > maxOutputTokens)
+      throw Error("budget_exceeded");
+    return result;
+  }});
+}
