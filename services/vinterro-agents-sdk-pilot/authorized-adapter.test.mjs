@@ -56,3 +56,20 @@ test("receipt transport failure never retries provider or receipt", async()=>{
   assert.equal(attempts,1);
   assert.equal(calls.length,3);
 });
+
+test("receipt must match run and require independent supervision", async()=>{
+  const valid={ok:true,run_id:runId,status:"under_review",independent_supervision_required:true};
+  for(const override of [{run_id:"other"},{status:"completed"},{independent_supervision_required:false},{ok:false}]){
+    let attempts=0;
+    await assert.rejects(executeAuthorized({runId,workerId,releaseApproved:true,
+      provider:async()=>{attempts++;return proof},
+      rpc:async(name)=>name.includes("submit")?{...valid,...override}:runId}),/receipt_unverified/);
+    assert.equal(attempts,1);
+  }
+});
+test("invalid configuration fails before any queue or provider call", async()=>{
+  for(const override of [{runId:"invalid"},{workerId:"!"},{rpc:null},{provider:null}]){
+    await assert.rejects(executeAuthorized({runId,workerId,releaseApproved:true,
+      rpc:()=>assert.fail("unexpected RPC"),provider:()=>assert.fail("unexpected provider"),...override}),/invalid_config/);
+  }
+});
