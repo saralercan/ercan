@@ -4,7 +4,8 @@
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 export async function executeAuthorized({runId, workerId, rpc, provider, releaseApproved=false}) {
   if (releaseApproved !== true) throw Error("release_gate_closed");
-  if (!UUID.test(runId) || !/^[a-z0-9_.-]{3,128}$/i.test(workerId) ||
+  if (typeof runId !== "string" || typeof workerId !== "string" ||
+      !UUID.test(runId) || !/^[a-z0-9_.-]{3,128}$/i.test(workerId) ||
       typeof rpc !== "function" || typeof provider !== "function") throw Error("invalid_config");
   await rpc("vinterro_agent_worker_heartbeat", {p_worker_id: workerId});
   const claimed = await rpc("vinterro_agent_claim_authorized_run",{p_run_id:runId,p_worker_id:workerId});
@@ -17,7 +18,7 @@ export async function executeAuthorized({runId, workerId, rpc, provider, release
       typeof p.requestId !== "string" || p.requestId.trim().length < 3 ||
       !Number.isSafeInteger(p.inputTokens) || p.inputTokens < 0 ||
       !Number.isSafeInteger(p.outputTokens) || p.outputTokens < 0 ||
-      p.inputTokens+p.outputTokens <= 0 ||
+      !Number.isSafeInteger(p.inputTokens+p.outputTokens) || p.inputTokens+p.outputTokens <= 0 ||
       typeof p.text !== "string" || !p.text.trim() || p.text.length>16000) throw Error("invalid_provider_evidence");
   const receipt = await rpc("vinterro_agent_submit_provider_result",{
     p_run_id:runId,p_worker_id:workerId,p_provider:p.provider,p_model:p.model,
