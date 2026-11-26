@@ -73,3 +73,17 @@ test("invalid configuration fails before any queue or provider call", async()=>{
       rpc:()=>assert.fail("unexpected RPC"),provider:()=>assert.fail("unexpected provider"),...override}),/invalid_config/);
   }
 });
+
+test("coerced identifiers are rejected before RPC", async()=>{
+  for(const override of [{runId:[runId]},{workerId:[workerId]},{workerId:123}]){
+    await assert.rejects(executeAuthorized({runId,workerId,releaseApproved:true,
+      rpc:()=>assert.fail("unexpected RPC"),provider:()=>assert.fail("unexpected provider"),...override}),/invalid_config/);
+  }
+});
+test("unsafe combined token total cannot submit receipt", async()=>{
+  const calls=[];
+  await assert.rejects(executeAuthorized({runId,workerId,releaseApproved:true,
+    provider:async()=>({...proof,inputTokens:Number.MAX_SAFE_INTEGER,outputTokens:1}),
+    rpc:async(name)=>{calls.push(name);return runId}}),/invalid_provider_evidence/);
+  assert.equal(calls.length,2);
+});
