@@ -31,3 +31,28 @@ test("uncertain receipt is not retried or marked successful",async()=>{
   await assert.rejects(executeAuthorized({runId,workerId,releaseApproved:true,provider:async()=>proof,rpc:async(name)=>{calls.push(name);return name.includes("claim")?runId:null}}),/receipt_unverified/);
   assert.equal(calls.length,3);
 });
+
+
+test("mismatched claim never invokes provider or submits receipt", async()=>{
+  const calls=[];
+  await assert.rejects(executeAuthorized({runId,workerId,releaseApproved:true,
+    provider:()=>assert.fail("provider must not run"),
+    rpc:async(name)=>{calls.push(name);return "b1234567-1234-4123-8123-123456789abc"}}),/claim_mismatch/);
+  assert.deepEqual(calls,["vinterro_agent_worker_heartbeat","vinterro_agent_claim_authorized_run"]);
+});
+test("provider failure never retries or submits receipt", async()=>{
+  const calls=[]; let attempts=0;
+  await assert.rejects(executeAuthorized({runId,workerId,releaseApproved:true,
+    provider:async()=>{attempts++;throw Error("ambiguous_provider_failure")},
+    rpc:async(name)=>{calls.push(name);return runId}}),/ambiguous_provider_failure/);
+  assert.equal(attempts,1);
+  assert.equal(calls.length,2);
+});
+test("receipt transport failure never retries provider or receipt", async()=>{
+  const calls=[]; let attempts=0;
+  await assert.rejects(executeAuthorized({runId,workerId,releaseApproved:true,
+    provider:async()=>{attempts++;return proof},
+    rpc:async(name)=>{calls.push(name);if(name.includes("submit"))throw Error("ambiguous_receipt_failure");return runId}}),/ambiguous_receipt_failure/);
+  assert.equal(attempts,1);
+  assert.equal(calls.length,3);
+});
