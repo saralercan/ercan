@@ -1,3 +1,5 @@
+import { createHash } from "node:crypto";
+import { verifySignedEvidence } from "./signed-evidence.mjs";
 // Explicit, pre-authorized single-run adapter. No queue scan or release bypass.
 // The caller must provide authenticated backend RPC and a separately approved
 // provider implementation. A receipt means under_review, never completed.
@@ -48,6 +50,20 @@ export async function executeBudgeted({reserve, maxInputTokens, maxOutputTokens,
     if (!Number.isSafeInteger(result?.inputTokens) || result.inputTokens > maxInputTokens ||
         !Number.isSafeInteger(result?.outputTokens) || result.outputTokens > maxOutputTokens)
       throw Error("budget_exceeded");
+    return result;
+  }});
+}
+
+// Opt-in signed path: verify trusted evidence before submitting any receipt.
+export async function executeSignedBudgeted({publicKey, provider, ...options}) {
+  if (!publicKey || typeof provider !== "function") throw Error("invalid_signature_config");
+  return executeBudgeted({...options, provider: async limits => {
+    const result = await provider({...limits});
+    if (typeof result?.text !== "string" || !verifySignedEvidence({
+      evidence: result.evidence, signature: result.signature, publicKey,
+      expected: {runId:limits.runId, workerId:limits.workerId, requestId:result.requestId,
+        outputSha256:createHash("sha256").update(result.text, "utf8").digest("hex")}
+    })) throw Error("invalid_signed_evidence");
     return result;
   }});
 }
