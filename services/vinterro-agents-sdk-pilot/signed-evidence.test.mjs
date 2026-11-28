@@ -49,3 +49,21 @@ test("signed budgeted adapter submits only authentic output for the claimed run"
     }
   }
 });
+
+import { verifySignedEvidenceV2 } from "./signed-evidence.mjs";
+test("V2 authenticates accounting and rejects V1 downgrade", () => {
+  const {publicKey, privateKey} = generateKeyPairSync("ed25519");
+  const evidence = {runId:"synthetic-run",workerId:"worker-one",requestId:"request-one",
+    outputSha256:"a".repeat(64),provider:"openai-api",model:"test-model",inputTokens:5,outputTokens:3};
+  const signature = sign(null, Buffer.from(JSON.stringify(["vinterro-receipt-v2",...Object.values(evidence)])),privateKey).toString("base64url");
+  const args = {evidence,signature,publicKey,expected:{...evidence}};
+  assert.equal(verifySignedEvidenceV2(args),true);
+  for (const [field,value] of Object.entries({model:"other-model",provider:"other",inputTokens:4,outputTokens:2,inputTokensInvalid:-1})) {
+    const changed = {...evidence,[field === "inputTokensInvalid" ? "inputTokens" : field]:value};
+    assert.equal(verifySignedEvidenceV2({...args,evidence:changed,expected:changed}),false);
+    assert.equal(verifySignedEvidenceV2({...args,expected:changed}),false);
+  }
+  const v1 = sign(null,Buffer.from(JSON.stringify(["vinterro-receipt-v1",...Object.values(evidence).slice(0,4)])),privateKey).toString("base64url");
+  assert.equal(verifySignedEvidenceV2({...args,signature:v1}),false);
+  assert.equal(verifySignedEvidenceV2({...args,publicKey:generateKeyPairSync("ed25519").publicKey}),false);
+});
