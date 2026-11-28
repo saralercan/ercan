@@ -79,3 +79,31 @@ test("V2 rejects malformed and non-Ed25519 trust keys before any side effect", a
     assert.equal(calls, 0);
   }
 });
+
+test("V2 receipt uses the same provider values that were signed", async () => {
+  const {publicKey, privateKey} = generateKeyPairSync("ed25519");
+  const runId = "a1234567-1234-4123-8123-123456789abc", workerId = "test-worker";
+  const evidence = {runId, workerId, requestId:"test-response",
+    outputSha256:createHash("sha256").update("synthetic").digest("hex"),
+    provider:"openai-api", model:"test-model", inputTokens:5, outputTokens:3};
+  const signature = sign(null, Buffer.from(JSON.stringify(["vinterro-receipt-v2",
+    runId,workerId,evidence.requestId,evidence.outputSha256,evidence.provider,evidence.model,5,3])),
+    privateKey).toString("base64url");
+  let reads = 0;
+  const receipts = [];
+  const result = await executeSignedBudgetedV2({runId,workerId,publicKey,releaseApproved:true,
+    maxInputTokens:5,maxOutputTokens:3,reserve:async x=>({...x,approved:true}),
+    provider:async()=>({...evidence,text:"synthetic",evidence,signature,
+      get model(){ return ++reads === 1 ? "test-model" : "tampered-model"; }}),
+    rpc:async(name,args)=>{
+      if(name.includes("submit")){
+        receipts.push(args);
+        return {ok:true,run_id:runId,status:"under_review",independent_supervision_required:true};
+      }
+      return runId;
+    }});
+  assert.equal(result.status,"under_review");
+  assert.equal(reads,1);
+  assert.equal(receipts.length,1);
+  assert.equal(receipts[0].p_model,"test-model");
+});
