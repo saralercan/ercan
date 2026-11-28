@@ -77,7 +77,13 @@ export async function executeSignedBudgetedV2({publicKey, provider, ...options})
     if (publicKey.asymmetricKeyType !== "ed25519") throw Error("wrong_key_type");
   } catch { throw Error("invalid_signature_config"); }
   return executeBudgeted({...options, provider: async limits => {
-    const result = await provider({...limits});
+    const raw = await provider({...limits});
+    // Snapshot provider fields once: verification and receipt must use identical values.
+    const result = Object.freeze({
+      provider:raw?.provider, model:raw?.model, requestId:raw?.requestId,
+      inputTokens:raw?.inputTokens, outputTokens:raw?.outputTokens, text:raw?.text,
+      evidence:raw?.evidence, signature:raw?.signature
+    });
     if (typeof result?.text !== "string" || !verifySignedEvidenceV2({
       evidence: result.evidence, signature: result.signature, publicKey,
       expected: {runId:limits.runId, workerId:limits.workerId, requestId:result.requestId,
