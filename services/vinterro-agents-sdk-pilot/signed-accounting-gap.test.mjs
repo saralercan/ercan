@@ -65,3 +65,17 @@ test("V2 adapter accepts authentic accounting and rejects mutations before recei
     }
   }
 });
+
+test("V2 rejects malformed and non-Ed25519 trust keys before any side effect", async () => {
+  const { publicKey } = generateKeyPairSync("ec", { namedCurve: "prime256v1" });
+  for (const key of ["not-a-key", publicKey]) {
+    let calls = 0;
+    const unexpected = async () => { calls++; throw Error("unexpected_side_effect"); };
+    await assert.rejects(() => executeSignedBudgetedV2({
+      runId:"a1234567-1234-4123-8123-123456789abc", workerId:"test-worker",
+      publicKey:key, releaseApproved:true, maxInputTokens:5, maxOutputTokens:3,
+      reserve:unexpected, provider:unexpected, rpc:unexpected
+    }), /invalid_signature_config/);
+    assert.equal(calls, 0);
+  }
+});
