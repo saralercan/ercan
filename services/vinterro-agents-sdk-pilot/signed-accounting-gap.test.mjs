@@ -1,0 +1,109 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { generateKeyPairSync, sign, createHash } from "node:crypto";
+import { executeSignedBudgeted, executeSignedBudgetedV2 } from "./authorized-adapter.mjs";
+
+// Characterize the v1 signature coverage without touching a real provider or queue.
+// A future version must reject these mutations; this test records the current gap.
+test("v1 receipt does not authenticate model or token accounting", async () => {
+  const { publicKey, privateKey } = generateKeyPairSync("ed25519");
+  const runId = "a1234567-1234-4123-8123-123456789abc", workerId = "test-worker";
+  const proof = { provider: "openai-api", model: "test-model", requestId: "test-response",
+    inputTokens: 5, outputTokens: 3, text: "synthetic" };
+  const evidence = { runId, workerId, requestId: proof.requestId,
+    outputSha256: createHash("sha256").update(proof.text).digest("hex") };
+  const signature = sign(null, Buffer.from(JSON.stringify(["vinterro-receipt-v1",
+    runId, workerId, proof.requestId, evidence.outputSha256])), privateKey).toString("base64url");
+  for (const mutation of [{ model: "other-model" }, { inputTokens: 4 }, { outputTokens: 2 }]) {
+    const receipts = [];
+    const result = await executeSignedBudgeted({ runId, workerId, publicKey, releaseApproved: true,
+      maxInputTokens: 5, maxOutputTokens: 3, reserve: async x => ({ ...x, approved: true }),
+      provider: async () => ({ ...proof, ...mutation, evidence, signature }),
+      rpc: async (name, args) => {
+        if (name.includes("submit")) {
+          receipts.push(args);
+          return { ok: true, run_id: runId, status: "under_review", independent_supervision_required: true };
+        }
+        return runId;
+      } });
+    assert.equal(result.status, "under_review");
+    assert.equal(receipts.length, 1);
+    const [field, value] = Object.entries(mutation)[0];
+    assert.equal(receipts[0][{ model: "p_model", inputTokens: "p_input_tokens", outputTokens: "p_output_tokens" }[field]], value);
+  }
+});
+
+test("V2 adapter accepts authentic accounting and rejects mutations before receipt", async () => {
+  const { publicKey, privateKey } = generateKeyPairSync("ed25519");
+  const runId = "a1234567-1234-4123-8123-123456789abc", workerId = "test-worker";
+  const proof = {provider:"openai-api", model:"test-model", requestId:"test-response",
+    inputTokens:5, outputTokens:3, text:"synthetic"};
+  const evidence = {runId, workerId, requestId:proof.requestId,
+    outputSha256:createHash("sha256").update(proof.text).digest("hex"),
+    provider:proof.provider, model:proof.model, inputTokens:5, outputTokens:3};
+  const signature = sign(null, Buffer.from(JSON.stringify(["vinterro-receipt-v2",
+    runId,workerId,proof.requestId,evidence.outputSha256,proof.provider,proof.model,5,3])),
+    privateKey).toString("base64url");
+  for (const mutation of [{}, {model:"other-model"}, {inputTokens:4}, {outputTokens:2}, {text:"changed"}]) {
+    const receipts = [];
+    const run = () => executeSignedBudgetedV2({runId,workerId,publicKey,releaseApproved:true,
+      maxInputTokens:5,maxOutputTokens:3,reserve:async x=>({...x,approved:true}),
+      provider:async()=>({...proof,...mutation,evidence,signature}),
+      rpc:async(name,args)=>{
+        if(name.includes("submit")) {
+          receipts.push(args);
+          return {ok:true,run_id:runId,status:"under_review",independent_supervision_required:true};
+        }
+        return runId;
+      }});
+    if(Object.keys(mutation).length) {
+      await assert.rejects(run, /invalid_signed_evidence/);
+      assert.equal(receipts.length,0);
+    } else {
+      assert.equal((await run()).status,"under_review");
+      assert.equal(receipts.length,1);
+    }
+  }
+});
+
+test("V2 rejects malformed and non-Ed25519 trust keys before any side effect", async () => {
+  const { publicKey } = generateKeyPairSync("ec", { namedCurve: "prime256v1" });
+  for (const key of ["not-a-key", publicKey]) {
+    let calls = 0;
+    const unexpected = async () => { calls++; throw Error("unexpected_side_effect"); };
+    await assert.rejects(() => executeSignedBudgetedV2({
+      runId:"a1234567-1234-4123-8123-123456789abc", workerId:"test-worker",
+      publicKey:key, releaseApproved:true, maxInputTokens:5, maxOutputTokens:3,
+      reserve:unexpected, provider:unexpected, rpc:unexpected
+    }), /invalid_signature_config/);
+    assert.equal(calls, 0);
+  }
+});
+
+test("V2 receipt uses the same provider values that were signed", async () => {
+  const {publicKey, privateKey} = generateKeyPairSync("ed25519");
+  const runId = "a1234567-1234-4123-8123-123456789abc", workerId = "test-worker";
+  const evidence = {runId, workerId, requestId:"test-response",
+    outputSha256:createHash("sha256").update("synthetic").digest("hex"),
+    provider:"openai-api", model:"test-model", inputTokens:5, outputTokens:3};
+  const signature = sign(null, Buffer.from(JSON.stringify(["vinterro-receipt-v2",
+    runId,workerId,evidence.requestId,evidence.outputSha256,evidence.provider,evidence.model,5,3])),
+    privateKey).toString("base64url");
+  let reads = 0;
+  const receipts = [];
+  const result = await executeSignedBudgetedV2({runId,workerId,publicKey,releaseApproved:true,
+    maxInputTokens:5,maxOutputTokens:3,reserve:async x=>({...x,approved:true}),
+    provider:async()=>({...evidence,text:"synthetic",evidence,signature,
+      get model(){ return ++reads === 1 ? "test-model" : "tampered-model"; }}),
+    rpc:async(name,args)=>{
+      if(name.includes("submit")){
+        receipts.push(args);
+        return {ok:true,run_id:runId,status:"under_review",independent_supervision_required:true};
+      }
+      return runId;
+    }});
+  assert.equal(result.status,"under_review");
+  assert.equal(reads,1);
+  assert.equal(receipts.length,1);
+  assert.equal(receipts[0].p_model,"test-model");
+});
