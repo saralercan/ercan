@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { verifySignedEvidence } from "./signed-evidence.mjs";
+import { verifySignedEvidence, verifySignedEvidenceV2 } from "./signed-evidence.mjs";
 // Explicit, pre-authorized single-run adapter. No queue scan or release bypass.
 // The caller must provide authenticated backend RPC and a separately approved
 // provider implementation. A receipt means under_review, never completed.
@@ -63,6 +63,22 @@ export async function executeSignedBudgeted({publicKey, provider, ...options}) {
       evidence: result.evidence, signature: result.signature, publicKey,
       expected: {runId:limits.runId, workerId:limits.workerId, requestId:result.requestId,
         outputSha256:createHash("sha256").update(result.text, "utf8").digest("hex")}
+    })) throw Error("invalid_signed_evidence");
+    return result;
+  }});
+}
+
+// V2 is an explicit isolated path; legacy callers are not silently migrated.
+export async function executeSignedBudgetedV2({publicKey, provider, ...options}) {
+  if (!publicKey || typeof provider !== "function") throw Error("invalid_signature_config");
+  return executeBudgeted({...options, provider: async limits => {
+    const result = await provider({...limits});
+    if (typeof result?.text !== "string" || !verifySignedEvidenceV2({
+      evidence: result.evidence, signature: result.signature, publicKey,
+      expected: {runId:limits.runId, workerId:limits.workerId, requestId:result.requestId,
+        outputSha256:createHash("sha256").update(result.text, "utf8").digest("hex"),
+        provider:result.provider, model:result.model,
+        inputTokens:result.inputTokens, outputTokens:result.outputTokens}
     })) throw Error("invalid_signed_evidence");
     return result;
   }});
