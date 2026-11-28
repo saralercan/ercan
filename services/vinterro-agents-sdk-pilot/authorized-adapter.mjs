@@ -1,4 +1,4 @@
-import { createHash } from "node:crypto";
+import { createHash, createPublicKey } from "node:crypto";
 import { verifySignedEvidence, verifySignedEvidenceV2 } from "./signed-evidence.mjs";
 // Explicit, pre-authorized single-run adapter. No queue scan or release bypass.
 // The caller must provide authenticated backend RPC and a separately approved
@@ -71,6 +71,11 @@ export async function executeSignedBudgeted({publicKey, provider, ...options}) {
 // V2 is an explicit isolated path; legacy callers are not silently migrated.
 export async function executeSignedBudgetedV2({publicKey, provider, ...options}) {
   if (!publicKey || typeof provider !== "function") throw Error("invalid_signature_config");
+  // Reject invalid trust configuration before heartbeat, claim or budget reservation.
+  try {
+    publicKey = publicKey?.type === "public" ? publicKey : createPublicKey(publicKey);
+    if (publicKey.asymmetricKeyType !== "ed25519") throw Error("wrong_key_type");
+  } catch { throw Error("invalid_signature_config"); }
   return executeBudgeted({...options, provider: async limits => {
     const result = await provider({...limits});
     if (typeof result?.text !== "string" || !verifySignedEvidenceV2({
